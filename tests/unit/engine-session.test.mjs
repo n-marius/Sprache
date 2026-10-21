@@ -145,3 +145,23 @@ test('Review-Session: fällige zuerst, sonst schwächste; ohne Karten → Lektio
   assert.ok(summary.reviewedWords > 0);
   assert.equal(summary.kind, 'review');
 });
+
+test('Typ-Vielfalt: max. 2 gleiche Typen hintereinander, kein Typ > ~35 %', () => {
+  for (const lessonId of ['a1-1-01', 'a1-1-02']) {
+    setDay('2026-10-21');
+    const app = makeApp();
+    if (lessonId === 'a1-1-02') play(createLessonSession(app, 'a1-1-01', { seed: 99 }), ok);
+    for (let seed = 1; seed <= 12; seed++) {
+      const ex = exercises(createLessonSession(app, lessonId, { seed }).items);
+      const types = ex.map(i => i.ex.type);
+      for (let i = 2; i < types.length; i++) {
+        assert.ok(!(types[i] === types[i - 1] && types[i] === types[i - 2]), `${lessonId}/${seed}: 3× ${types[i]}: ${types.join(',')}`);
+      }
+      const count = {};
+      for (const t of types) count[t] = (count[t] || 0) + 1;
+      for (const [t, n] of Object.entries(count)) assert.ok(n <= Math.ceil(0.35 * types.length), `${lessonId}/${seed}: ${t} ${n}/${types.length}`);
+      const first8 = types.slice(0, 8).filter(t => t === 'listening').length;
+      assert.ok(first8 <= 3, `${lessonId}/${seed}: ${first8} Höraufgaben unter den ersten 8`);
+    }
+  }
+});

@@ -5,8 +5,10 @@ import { defaultState } from '../../js/store.js';
 import { setClock } from '../../js/engine/util.js';
 
 const ROOT = path.resolve(import.meta.dirname, '../..');
-const FIX = path.join(ROOT, 'tests/fixtures');
+let FIX = path.join(ROOT, 'tests/fixtures');
 const read = f => JSON.parse(fs.readFileSync(path.join(FIX, f), 'utf8'));
+/** Inhaltsordner wechseln (z. B. 'content' für echte Inhalte). */
+export function useBase(base) { FIX = path.join(ROOT, base); }
 
 /** Feste Uhr: lokale Zeit 'YYYY-MM-DD' um hh:mm. */
 export function setDay(day, hh = 12, mm = 0) {
@@ -25,7 +27,7 @@ export function makeContent() {
   const vocabById = new Map();
   for (const meta of lessonList) {
     if (meta.status !== 'ready' || !meta.file) continue;
-    const data = read(meta.file);
+    let data; try { data = read(meta.file); } catch { meta.status = 'error'; continue; }
     data.grammar ||= []; data.vocab ||= []; data.exercises ||= [];
     meta.data = data;
     lessons.set(meta.id, data);

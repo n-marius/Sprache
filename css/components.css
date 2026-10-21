@@ -149,6 +149,7 @@
   border-top: .5px solid var(--separator);
 }
 .list-row.has-icon + .list-row.has-icon::before { left: 60px; }
+a.list-row { color: var(--label); }
 button.list-row:active, a.list-row:active, .list-row.is-tappable:active { background: var(--surface-3); }
 .list-row .row-icon {
   flex: none; width: 30px; height: 30px; border-radius: 7px;

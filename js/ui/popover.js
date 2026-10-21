@@ -309,7 +309,7 @@ function place(el, wordEl) {
   el.style.maxWidth = width + 'px';
   el.style.left = '0px'; el.style.top = '0px';
   const r = wordRect(wordEl);
-  const w = Math.min(el.offsetWidth, width);
+  const w = Math.min(Math.ceil(parseFloat(getComputedStyle(el).width) || el.offsetWidth), width);
   el.style.width = w + 'px';
   let hgt = el.offsetHeight;
 

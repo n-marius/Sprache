@@ -14,6 +14,30 @@ export const REVIEW_SHARE = 0.25;       // Anteil alter/fälliger Elemente in Le
 export const MAX_EXTRA_ATTEMPTS = 2;    // Zusatzversuche je Fehler-Item
 export const DAILY_REVIEW_LIMIT = 60;
 const HEAVY = new Set(['chat', 'reading', 'order_dialog']);
+export const MAX_TYPE_SHARE = 0.35;     // kein Aufgabentyp mit mehr als ~35 % Anteil
+export const MAX_TYPE_RUN = 2;          // höchstens 2 gleiche Typen direkt hintereinander
+const ART_TYPE = { 'mc-uk-de': 'mc_translate', 'mc-de-uk': 'mc_translate', heard: 'listening', meaning: 'listening',
+  pic: 'picture_choice', pairs: 'match_pairs', 'build-uk-de': 'build_sentence', 'build-de-uk': 'build_sentence', speak: 'speak' };
+const ART_STAGE = { recognize: ['mc-uk-de', 'pic', 'meaning', 'heard', 'pairs', 'build-uk-de'], recall: ['mc-de-uk', 'heard'], produce: ['speak', 'build-de-uk'] };
+
+/** Mehr als MAX_TYPE_RUN gleiche Typen hintereinander auflösen (spätere Aufgabe anderen Typs vorziehen). */
+export function limitRuns(seq, maxRun = MAX_TYPE_RUN) {
+  const a = seq.slice();
+  const type = it => it?.ex?.type;
+  for (let i = maxRun; i < a.length; i++) {
+    let run = true;
+    for (let k = 1; k <= maxRun; k++) if (type(a[i - k]) !== type(a[i])) { run = false; break; }
+    if (!run) continue;
+    const j = a.findIndex((x, n) => n > i && type(x) !== type(a[i]));
+    if (j >= 0) { const [x] = a.splice(j, 1); a.splice(i, 0, x); continue; }
+    // kein späteres Element anderen Typs: dieses Element weiter vorn zwischen zwei andere Typen setzen
+    const t = type(a[i]);
+    for (let k = i - maxRun - 1; k > 0; k--) {
+      if (type(a[k - 1]) !== t && type(a[k]) !== t) { const [x] = a.splice(i, 1); a.splice(k, 0, x); break; }
+    }
+  }
+  return a;
+}
 
 function cfgOf(app, opts) {
   const s = app.store.state.settings || {};
@@ -158,8 +182,28 @@ export function createLessonSession(app, lessonId, opts = {}) {
       return { ex, cat: srs.exerciseCategory(ex), seen: exSeen[ex.id]?.n || 0, dueEx: !!ec && srs.isDue(ec, today),
         ids: srs.exVocab(ex).filter(id => lessonVocabIds.has(id)), r: rng() };
     });
+  // Typ-Vielfalt: Anteil je Typ begrenzen, bereits häufige Typen abwerten
+  const typeCap = Math.max(2, Math.floor(MAX_TYPE_SHARE * cfg.size));
+  const typeCount = {};
+  for (const it of old) typeCount[it.ex.type] = (typeCount[it.ex.type] || 0) + 1;
+  // Höraufgaben ~20–25 % (Research §6.1), alle anderen Typen höchstens ~35 %
+  const listenCap = Math.max(2, Math.floor(0.25 * cfg.size));
+  const capped = t => (typeCount[t] || 0) >= (t === 'listening' ? listenCap : typeCap);
   const score = (e, stage) => e.seen * 10 - (e.dueEx ? 4 : 0) + (e.ex.difficulty || 1) * 1.5
-    + (stage === 'recognize' && HEAVY.has(e.ex.type) ? 4 : 0) + e.r * 4;
+    + (stage === 'recognize' && HEAVY.has(e.ex.type) ? 4 : 0) + e.r * 4 + (typeCount[e.ex.type] || 0) * 3;
+  /** Generierte Aufgabe mit möglichst seltenem Typ (Stufe, sonst leichtere Stufen). */
+  const genDiverse = (v, stage, avoidArts = new Set()) => {
+    const order = STAGES.slice(0, STAGES.indexOf(stage) + 1).reverse();
+    for (const allowCapped of [false, true]) {
+      for (const st of order) {
+        const arts = ART_STAGE[st].filter(a => !avoidArts.has(a) && (allowCapped || !capped(ART_TYPE[a])))
+          .map(a => ({ a, w: (typeCount[ART_TYPE[a]] || 0) + (ART_TYPE[a] === 'listening' ? 0.75 : 0) + rng() * 1.5 }))
+          .sort((x, y) => x.w - y.w);
+        for (const { a } of arts) { const g = generate(app, v, a, { pool, rng }); if (g) return g; }
+      }
+    }
+    return generateForStage(app, v, stage, { pool, rng });
+  };
   const core = [];
   const taken = new Set();
   const cover = new Map();
@@ -174,6 +218,7 @@ export function createLessonSession(app, lessonId, opts = {}) {
     usedKeys.add(item.key);
     item._p = p;
     core.push(item);
+    typeCount[item.ex.type] = (typeCount[item.ex.type] || 0) + 1;
     for (const id of srs.exVocab(item.ex)) if (newRank.has(id)) (cover.get(id) || cover.set(id, new Set()).get(id)).add(item.stage);
     return true;
   };
@@ -183,18 +228,29 @@ export function createLessonSession(app, lessonId, opts = {}) {
         if (core.length >= C) break;
         if (cover.get(v.id)?.has(stage)) continue;
         const p = newRank.get(v.id) + 2 * si;
-        const cands = info.filter(e => !taken.has(e) && e.cat === stage && e.ids.includes(v.id))
+        // keine Aufgabe, die (noch) viel später eingeführte Wörter mitbringt → Stufenfolge je Wort bleibt erhalten
+        const rv = newRank.get(v.id);
+        const cands = info.filter(e => !taken.has(e) && e.cat === stage && e.ids.includes(v.id) && !capped(e.ex.type)
+            && e.ids.every(id => !newRank.has(id) || newRank.get(id) <= rv + 1))
           .sort((a, b) => score(a, stage) - score(b, stage));
-        if (cands.length) { taken.add(cands[0]); add(exItem(cands[0].ex, lessonId, stage), Math.max(p, prioOf(cands[0].ids, stage))); continue; }
-        const g = generateForStage(app, v, stage, { pool, rng });
+        // Lektionsaufgabe, wenn ihr Typ nicht schon dominiert; sonst generierte Aufgabe seltenen Typs
+        if (cands.length && (typeCount[cands[0].ex.type] || 0) <= Math.min(...Object.values(ART_TYPE).map(t => typeCount[t] || 0)) + 2) {
+          taken.add(cands[0]); add(exItem(cands[0].ex, lessonId, stage), Math.max(p, prioOf(cands[0].ids, stage))); continue;
+        }
+        const g = genDiverse(v, stage);
         if (g) add(exItem(g, lessonId), p);
+        else if (cands.length) { taken.add(cands[0]); add(exItem(cands[0].ex, lessonId, stage), Math.max(p, prioOf(cands[0].ids, stage))); }
       }
     }
   }
   // Auffüllen: wenig gesehene Lektionsaufgaben, dann generierte zu schwachen Lektionsvokabeln
-  const rest = info.filter(e => !taken.has(e)).sort((a, b) => score(a, a.cat) - score(b, b.cat));
-  for (const e of rest) {
+  for (;;) {
     if (core.length >= C) break;
+    const rest = info.filter(e => !taken.has(e));
+    if (!rest.length) break;
+    const open = rest.filter(e => !capped(e.ex.type));
+    const e = (open.length ? open : rest).reduce((b, x) => (score(x, x.cat) < score(b, b.cat) ? x : b));
+    if (!open.length && !opts.type) break; // alle Typen am Limit → mit generierten Aufgaben seltener Typen auffüllen
     taken.add(e);
     const pNew = prioOf(e.ids, e.cat);
     const p = pNew >= 0 ? pNew + 0.5 : STAGES.indexOf(e.cat) * (maxP / 3) + rng() * (maxP / 2);
@@ -208,7 +264,7 @@ export function createLessonSession(app, lessonId, opts = {}) {
       for (const { v } of weak) {
         if (core.length >= C) break;
         const stage = cards[v.id] ? stageForCard(cards[v.id], rng) : STAGES[round];
-        const g = generateForStage(app, v, stage, { pool, rng, avoid: new Set(core.filter(i => i.generated && i.ex.source_vocab === v.id).map(i => i.ex.id.split('-').slice(2).join('-'))) });
+        const g = genDiverse(v, stage, new Set(core.filter(i => i.generated && i.ex.source_vocab === v.id).map(i => i.ex.id.slice(`g-${v.id}-`.length))));
         if (g) add(exItem(g, lessonId), STAGES.indexOf(srs.exerciseCategory(g)) * (maxP / 3) + rng() * maxP / 2);
       }
     }
@@ -228,6 +284,8 @@ export function createLessonSession(app, lessonId, opts = {}) {
     }
     seq = out;
   }
+
+  seq = limitRuns(seq);
 
   // ---- Einführungen direkt vor der ersten Übung des Worts
   const items = [];

@@ -608,11 +608,234 @@
    "de": "jetzt",
    "pos": "adv",
    "info": ""
+  },
+  {
+   "uk": "па́ні",
+   "lemma": "па́ні",
+   "de": "Frau (Anrede vor dem Namen)",
+   "pos": "noun",
+   "info": "f., indekl.; па́ні Ната́лія"
+  },
+  {
+   "uk": "під’ї́зд",
+   "lemma": "під’ї́зд",
+   "de": "Hauseingang, Treppenhaus",
+   "pos": "noun",
+   "info": "m., Nom. Sg."
+  },
+  {
+   "uk": "пе́рший",
+   "lemma": "пе́рший",
+   "de": "erster",
+   "pos": "adj",
+   "info": "m. Nom. Sg."
+  },
+  {
+   "uk": "кафе́",
+   "lemma": "кафе́",
+   "de": "Café",
+   "pos": "noun",
+   "info": "n., indekl."
+  },
+  {
+   "uk": "о́фіс",
+   "lemma": "о́фіс",
+   "de": "Büro",
+   "pos": "noun",
+   "info": "m., Nom. Sg."
   }
  ],
  "exercises": [
   {
    "id": "e01",
+   "type": "reading",
+   "vocab": [
+    "dobryi_ranok",
+    "yak",
+    "vy",
+    "duzhe",
+    "diakuiu",
+    "pryvit",
+    "yak_spravy",
+    "normalno",
+    "a_ty",
+    "tezh",
+    "dobryi_den",
+    "pohano"
+   ],
+   "difficulty": 1,
+   "title_uk": "Пе́рший день",
+   "text_uk": "🏠 Під’ї́зд\nПа́ні Ната́лія: До́брий ра́нок, як ви?\nМа́ркус: Ду́же до́бре, дя́кую!\n☕ Кафе́\nТара́с: Приві́т, як спра́ви?\nМа́ркус: Норма́льно, а ти?\nТара́с: Теж норма́льно!\n💼 О́фіс\nОкса́на: До́брий день, як ви?\nМа́ркус: До́бре, дя́кую, а ви?\nОкса́на: Теж до́бре, дя́кую.",
+   "text_de": "Markus’ erster Tag in Kyjiw. Hauseingang – Frau Natalija (Vermieterin): Guten Morgen, wie geht es Ihnen? – Markus: Sehr gut, danke! Café – Taras (Student, arbeitet im Café): Hallo, wie geht’s? – Markus: Ganz gut, und dir? – Taras: Auch ganz gut! Büro – Oksana (Kollegin): Guten Tag, wie geht es Ihnen? – Markus: Gut, danke, und Ihnen? – Oksana: Auch gut, danke.",
+   "questions": [
+    {
+     "q_uk": "Тара́с: «ти» чи «ви»?",
+     "q_de": "Taras: „ти“ oder „ви“?",
+     "kind": "mc",
+     "options": [
+      "«ти»",
+      "«ви»",
+      "«я»"
+     ]
+    },
+    {
+     "q_uk": "Па́ні Ната́лія: «Приві́т!»",
+     "q_de": "Frau Natalija sagt: „Приві́т!“",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Па́ні Ната́лія: Як ви? – Ма́ркус: …",
+     "q_de": "Was antwortet Markus Frau Natalija?",
+     "kind": "mc",
+     "options": [
+      "Ду́же до́бре, дя́кую!",
+      "Норма́льно, а ти?",
+      "Пога́но."
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус і Окса́на – «ви».",
+     "q_de": "Markus und Oksana sagen „ви“ zueinander.",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Окса́на: «Як спра́ви?» чи «Як ви?»",
+     "q_de": "Oksana fragt: „Як спра́ви?“ oder „Як ви?“",
+     "kind": "mc",
+     "options": [
+      "«Як ви?»",
+      "«Як спра́ви?»",
+      "«А ти?»"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "type": "true_false",
+   "vocab": [
+    "ty",
+    "pryvit",
+    "a_ty"
+   ],
+   "difficulty": 1,
+   "context_uk": "Тара́с: Приві́т, як спра́ви?\nМа́ркус: Норма́льно, а ти?",
+   "context_de": "Im Café: Taras (Student, duzt alle) und Markus.",
+   "statement_uk": "Тут пра́вильно «ти».",
+   "answer": true,
+   "explanation_de": "Richtig: Taras duzt – Приві́т! und а ти? passen."
+  },
+  {
+   "id": "e03",
+   "type": "true_false",
+   "vocab": [
+    "vy",
+    "dobryi_ranok"
+   ],
+   "difficulty": 1,
+   "context_uk": "Па́ні Ната́лія: До́брий ра́нок, як ви?\nМа́ркус: Ду́же до́бре, дя́кую!",
+   "context_de": "Im Hauseingang: Frau Natalija (ca. 65, Vermieterin) und Markus.",
+   "statement_uk": "Тут пра́вильно «ти».",
+   "answer": false,
+   "explanation_de": "Falsch: Frau Natalija und Markus siezen sich – hier passt ви (Як ви?)."
+  },
+  {
+   "id": "e04",
+   "type": "mc_translate",
+   "vocab": [
+    "pryvit",
+    "yak_spravy"
+   ],
+   "difficulty": 1,
+   "dir": "uk-de",
+   "prompt": "Приві́т, як спра́ви?",
+   "options": [
+    "Hallo, wie geht’s?",
+    "Guten Tag, wie geht es Ihnen?",
+    "Tschüss, bis bald!",
+    "Hallo, und dir?"
+   ]
+  },
+  {
+   "id": "e05",
+   "type": "cloze",
+   "vocab": [
+    "dobryi_ranok",
+    "vy"
+   ],
+   "difficulty": 1,
+   "text": "Па́ні Ната́лія: До́брий {{ра́нок}}, як ви?",
+   "options": [
+    [
+     "ра́нок",
+     "ве́чір",
+     "ла́ска"
+    ]
+   ],
+   "translation_de": "Frau Natalija: Guten Morgen, wie geht es Ihnen?"
+  },
+  {
+   "id": "e06",
+   "type": "cloze",
+   "vocab": [
+    "a_ty",
+    "ty",
+    "normalno"
+   ],
+   "difficulty": 1,
+   "text": "Ма́ркус: Норма́льно, а {{ти}}?",
+   "options": [
+    [
+     "ти",
+     "ви",
+     "я"
+    ]
+   ],
+   "translation_de": "Markus (zu Taras): Ganz gut, und dir?",
+   "hint_de": "Taras duzt – also ти."
+  },
+  {
+   "id": "e07",
+   "type": "cloze",
+   "vocab": [
+    "vy",
+    "dobre",
+    "dobryi_den"
+   ],
+   "difficulty": 2,
+   "text": "Окса́на: До́брий день, як ви? – Ма́ркус: До́бре, дя́кую, а {{ви}}?",
+   "options": [
+    [
+     "ви",
+     "ти",
+     "я"
+    ]
+   ],
+   "translation_de": "Oksana: Guten Tag, wie geht es Ihnen? – Markus: Gut, danke, und Ihnen?",
+   "hint_de": "Wer „Як ви?“ fragt, bekommt „а ви?“ zurück."
+  },
+  {
+   "id": "e08",
+   "type": "mc_translate",
+   "vocab": [
+    "tezh",
+    "dobre",
+    "diakuiu"
+   ],
+   "difficulty": 1,
+   "dir": "uk-de",
+   "prompt": "Теж до́бре, дя́кую.",
+   "options": [
+    "Auch gut, danke.",
+    "Sehr gut, danke.",
+    "Gut, danke. Und dir?",
+    "Ganz gut, danke."
+   ]
+  },
+  {
+   "id": "e09",
    "type": "picture_choice",
    "vocab": [
     "pryvit"
@@ -635,23 +858,7 @@
    ]
   },
   {
-   "id": "e02",
-   "type": "mc_translate",
-   "vocab": [
-    "pryvit"
-   ],
-   "difficulty": 1,
-   "dir": "uk-de",
-   "prompt": "Приві́т!",
-   "options": [
-    "Hallo!",
-    "Tschüss!",
-    "Guten Abend!",
-    "Danke!"
-   ]
-  },
-  {
-   "id": "e03",
+   "id": "e10",
    "type": "picture_choice",
    "vocab": [
     "dobryi_ranok"
@@ -674,7 +881,7 @@
    ]
   },
   {
-   "id": "e04",
+   "id": "e11",
    "type": "match_pairs",
    "vocab": [
     "pryvit",
@@ -708,7 +915,7 @@
    ]
   },
   {
-   "id": "e05",
+   "id": "e12",
    "type": "listening",
    "vocab": [
     "dobryi_vechir"
@@ -724,7 +931,7 @@
    ]
   },
   {
-   "id": "e06",
+   "id": "e13",
    "type": "mc_translate",
    "vocab": [
     "dobryi_vechir",
@@ -743,7 +950,7 @@
    ]
   },
   {
-   "id": "e07",
+   "id": "e14",
    "type": "picture_choice",
    "vocab": [
     "pohano"
@@ -766,7 +973,7 @@
    ]
   },
   {
-   "id": "e08",
+   "id": "e15",
    "type": "match_pairs",
    "vocab": [
     "ya",
@@ -805,56 +1012,7 @@
    ]
   },
   {
-   "id": "e09",
-   "type": "listening",
-   "vocab": [
-    "yak_spravy",
-    "yak"
-   ],
-   "difficulty": 1,
-   "audio_uk": "Як спра́ви?",
-   "mode": "choose_meaning",
-   "options": [
-    "Wie geht’s?",
-    "Und du?",
-    "Danke, gut.",
-    "Auf Wiedersehen!"
-   ]
-  },
-  {
-   "id": "e10",
-   "type": "mc_translate",
-   "vocab": [
-    "diakuiu",
-    "duzhe"
-   ],
-   "difficulty": 1,
-   "dir": "uk-de",
-   "prompt": "Ду́же дя́кую!",
-   "options": [
-    "Vielen Dank!",
-    "Sehr gut!",
-    "Bitte schön!",
-    "Gute Nacht!"
-   ]
-  },
-  {
-   "id": "e11",
-   "type": "true_false",
-   "vocab": [
-    "ty",
-    "pryvit",
-    "a_ty"
-   ],
-   "difficulty": 1,
-   "context_uk": "Тара́с: Приві́т! Як спра́ви?\nАндрі́й: До́бре! А ти?",
-   "context_de": "Taras: Hallo! Wie geht’s? – Andrij: Gut! Und dir? (Taras und Andrij sind Freunde.)",
-   "statement_uk": "Тут пра́вильно «ти».",
-   "answer": true,
-   "explanation_de": "Richtig: Freunde duzen sich – Приві́т! und А ти? passen."
-  },
-  {
-   "id": "e12",
+   "id": "e16",
    "type": "picture_choice",
    "vocab": [
     "na_dobranich"
@@ -877,7 +1035,7 @@
    ]
   },
   {
-   "id": "e13",
+   "id": "e17",
    "type": "match_pairs",
    "vocab": [
     "diakuiu",
@@ -915,25 +1073,7 @@
    ]
   },
   {
-   "id": "e14",
-   "type": "mc_translate",
-   "vocab": [
-    "pohano",
-    "dobre",
-    "normalno"
-   ],
-   "difficulty": 1,
-   "dir": "uk-de",
-   "prompt": "Пога́но.",
-   "options": [
-    "Schlecht.",
-    "Gut.",
-    "Ganz gut.",
-    "Sehr."
-   ]
-  },
-  {
-   "id": "e15",
+   "id": "e18",
    "type": "cloze",
    "vocab": [
     "yak_spravy",
@@ -952,7 +1092,7 @@
    "translation_de": "– Wie geht’s? – Gut, danke."
   },
   {
-   "id": "e16",
+   "id": "e19",
    "type": "mc_translate",
    "vocab": [
     "a_ty",
@@ -960,7 +1100,7 @@
    ],
    "difficulty": 1,
    "dir": "de-uk",
-   "prompt": "Und du? / Und dir? (zu einem Freund)",
+   "prompt": "Und du? / Und dir? (zu Taras)",
    "options": [
     "А ти?",
     "А ви?",
@@ -969,47 +1109,7 @@
    ]
   },
   {
-   "id": "e17",
-   "type": "cloze",
-   "vocab": [
-    "a_ty",
-    "ty",
-    "normalno"
-   ],
-   "difficulty": 2,
-   "text": "Норма́льно, дя́кую. А {{ти}}?",
-   "options": [
-    [
-     "ти",
-     "ви",
-     "я"
-    ]
-   ],
-   "translation_de": "Ganz gut, danke. Und dir? (zu einer Freundin)",
-   "hint_de": "Freundin → Duzen."
-  },
-  {
-   "id": "e18",
-   "type": "cloze",
-   "vocab": [
-    "vy",
-    "dobre",
-    "dobryi_den"
-   ],
-   "difficulty": 2,
-   "text": "– До́брий день! Як ви? – До́бре, дя́кую. А {{ви}}?",
-   "options": [
-    [
-     "ви",
-     "ти",
-     "я"
-    ]
-   ],
-   "translation_de": "– Guten Tag! Wie geht es Ihnen? – Gut, danke. Und Ihnen?",
-   "hint_de": "Siezen: Wer „Як ви?“ fragt, bekommt „А ви?“ zurück."
-  },
-  {
-   "id": "e19",
+   "id": "e20",
    "type": "listening",
    "vocab": [
     "buvai"
@@ -1024,7 +1124,7 @@
    ]
   },
   {
-   "id": "e20",
+   "id": "e21",
    "type": "mc_translate",
    "vocab": [
     "buvai",
@@ -1043,7 +1143,7 @@
    "hint_de": "Mehrere Personen → ви-Form."
   },
   {
-   "id": "e21",
+   "id": "e22",
    "type": "cloze",
    "vocab": [
     "bud_laska",
@@ -1059,21 +1159,6 @@
     ]
    ],
    "translation_de": "– Danke! – Bitte schön!"
-  },
-  {
-   "id": "e22",
-   "type": "listening",
-   "vocab": [
-    "dobryi_den"
-   ],
-   "difficulty": 1,
-   "audio_uk": "До́брий день!",
-   "mode": "choose_heard",
-   "options": [
-    "До́брий день!",
-    "До́брий ве́чір!",
-    "До́бре, дя́кую!"
-   ]
   },
   {
    "id": "e23",
@@ -1112,20 +1197,6 @@
   },
   {
    "id": "e25",
-   "type": "true_false",
-   "vocab": [
-    "vy",
-    "dobryi_den"
-   ],
-   "difficulty": 2,
-   "context_uk": "Іва́н: До́брий день! Як ви?\nОле́на: До́бре, дя́кую. А ви?",
-   "context_de": "Iwan: Guten Tag! Wie geht es Ihnen? – Olena: Gut, danke. Und Ihnen? (Iwan ist Kunde, Olena arbeitet in der Bank; sie kennen sich kaum.)",
-   "statement_uk": "Тут пра́вильно «ти».",
-   "answer": false,
-   "explanation_de": "Falsch: Kunde und Bankangestellte siezen sich – hier passt ви (Як ви? / А ви?)."
-  },
-  {
-   "id": "e26",
    "type": "listening",
    "vocab": [
     "vybachte"
@@ -1140,7 +1211,7 @@
    ]
   },
   {
-   "id": "e27",
+   "id": "e26",
    "type": "cloze",
    "vocab": [
     "do_pobachennia",
@@ -1158,7 +1229,7 @@
    "translation_de": "Vielen Dank! Auf Wiedersehen!"
   },
   {
-   "id": "e28",
+   "id": "e27",
    "type": "listening",
    "vocab": [
     "normalno",
@@ -1176,99 +1247,39 @@
    ]
   },
   {
-   "id": "e29",
+   "id": "e28",
    "type": "true_false",
    "vocab": [
     "na_dobranich",
     "dobryi_ranok"
    ],
    "difficulty": 2,
-   "context_de": "8 Uhr morgens: Markus kommt ins Büro und grüßt eine Kollegin mit „На добра́ніч!“.",
+   "context_de": "8 Uhr morgens: Markus kommt ins Büro und grüßt Oksana mit „На добра́ніч!“.",
    "statement_uk": "«На добра́ніч!» – тут пра́вильно.",
    "answer": false,
    "explanation_de": "Falsch: На добра́ніч ist ein Abschied spät abends. Morgens grüßt man mit До́брий ра́нок!"
   },
   {
-   "id": "e30",
+   "id": "e29",
    "type": "cloze",
    "vocab": [
+    "ya",
     "tezh",
-    "dobre",
     "a_ty"
    ],
    "difficulty": 2,
-   "text": "– До́бре. А ти? – {{Теж}} до́бре.",
+   "text": "– Норма́льно. А ти? – {{Я}} теж.",
    "options": [
     [
-     "Теж",
-     "Будь",
-     "Бува́й"
+     "Я",
+     "Ти",
+     "Ви"
     ]
    ],
-   "translation_de": "– Gut. Und dir? – Auch gut."
+   "translation_de": "– Ganz gut. Und dir? – Mir auch. (wörtl. „Ich auch.“)"
   },
   {
-   "id": "e31",
-   "type": "picture_choice",
-   "vocab": [
-    "dobre",
-    "diakuiu"
-   ],
-   "difficulty": 1,
-   "prompt_uk": "До́бре, дя́кую!",
-   "options": [
-    {
-     "emoji": "👍",
-     "de": "gut"
-    },
-    {
-     "emoji": "👎",
-     "de": "schlecht"
-    },
-    {
-     "emoji": "🌙",
-     "de": "Nacht"
-    }
-   ]
-  },
-  {
-   "id": "e32",
-   "type": "mc_translate",
-   "vocab": [
-    "vybachte",
-    "vy"
-   ],
-   "difficulty": 2,
-   "dir": "uk-de",
-   "prompt": "Ви́бачте!",
-   "options": [
-    "Entschuldigen Sie!",
-    "Danke!",
-    "Bitte!",
-    "Auf Wiedersehen!"
-   ]
-  },
-  {
-   "id": "e33",
-   "type": "cloze",
-   "vocab": [
-    "duzhe",
-    "dobre",
-    "yak_spravy"
-   ],
-   "difficulty": 2,
-   "text": "– Як спра́ви? – {{Ду́же}} до́бре!",
-   "options": [
-    [
-     "Ду́же",
-     "Будь",
-     "Бува́й"
-    ]
-   ],
-   "translation_de": "– Wie geht’s? – Sehr gut!"
-  },
-  {
-   "id": "e34",
+   "id": "e30",
    "type": "true_false",
    "vocab": [
     "vybachte",
@@ -1281,7 +1292,25 @@
    "explanation_de": "Falsch: Unbekannte Erwachsene siezt man – also Ви́бачте! Ви́бач! nur zu Personen, die man duzt."
   },
   {
-   "id": "e35",
+   "id": "e31",
+   "type": "mc_translate",
+   "vocab": [
+    "ni",
+    "diakuiu",
+    "tak"
+   ],
+   "difficulty": 2,
+   "dir": "de-uk",
+   "prompt": "Nein, danke.",
+   "options": [
+    "Ні, дя́кую.",
+    "Так, дя́кую.",
+    "Ду́же дя́кую.",
+    "Теж, дя́кую."
+   ]
+  },
+  {
+   "id": "e32",
    "type": "build_sentence",
    "vocab": [
     "dobryi_ranok",
@@ -1297,7 +1326,7 @@
    ]
   },
   {
-   "id": "e36",
+   "id": "e33",
    "type": "speak",
    "vocab": [
     "pryvit",
@@ -1308,7 +1337,7 @@
    "de": "Hallo! Wie geht’s?"
   },
   {
-   "id": "e37",
+   "id": "e34",
    "type": "build_sentence",
    "vocab": [
     "dobre",
@@ -1328,7 +1357,7 @@
    ]
   },
   {
-   "id": "e38",
+   "id": "e35",
    "type": "listening",
    "vocab": [
     "pryvit",
@@ -1345,17 +1374,19 @@
    ]
   },
   {
-   "id": "e39",
+   "id": "e36",
    "type": "speak",
    "vocab": [
-    "dobryi_vechir"
+    "dobryi_vechir",
+    "yak",
+    "vy"
    ],
    "difficulty": 1,
-   "uk": "До́брий ве́чір!",
-   "de": "Guten Abend!"
+   "uk": "До́брий ве́чір! Як ви?",
+   "de": "Guten Abend! Wie geht es Ihnen?"
   },
   {
-   "id": "e40",
+   "id": "e37",
    "type": "build_sentence",
    "vocab": [
     "duzhe",
@@ -1376,18 +1407,7 @@
    ]
   },
   {
-   "id": "e41",
-   "type": "speak",
-   "vocab": [
-    "duzhe",
-    "diakuiu"
-   ],
-   "difficulty": 1,
-   "uk": "Ду́же дя́кую!",
-   "de": "Vielen Dank!"
-  },
-  {
-   "id": "e42",
+   "id": "e38",
    "type": "build_sentence",
    "vocab": [
     "tezh",
@@ -1407,7 +1427,7 @@
    ]
   },
   {
-   "id": "e43",
+   "id": "e39",
    "type": "build_sentence",
    "vocab": [
     "do_pobachennia",
@@ -1426,7 +1446,7 @@
    ]
   },
   {
-   "id": "e44",
+   "id": "e40",
    "type": "speak",
    "vocab": [
     "normalno",
@@ -1438,7 +1458,7 @@
    "de": "Ganz gut, danke. Und dir?"
   },
   {
-   "id": "e45",
+   "id": "e41",
    "type": "listening",
    "vocab": [
     "dobre",
@@ -1455,7 +1475,7 @@
    ]
   },
   {
-   "id": "e46",
+   "id": "e42",
    "type": "build_sentence",
    "vocab": [
     "diakuiu",
@@ -1472,7 +1492,7 @@
    ]
   },
   {
-   "id": "e47",
+   "id": "e43",
    "type": "speak",
    "vocab": [
     "ni",
@@ -1484,7 +1504,7 @@
    "de": "Nein, danke. Auf Wiedersehen!"
   },
   {
-   "id": "e48",
+   "id": "e44",
    "type": "build_sentence",
    "vocab": [
     "tak",
@@ -1500,7 +1520,7 @@
    ]
   },
   {
-   "id": "e49",
+   "id": "e45",
    "type": "speak",
    "vocab": [
     "vybachte",
@@ -1511,23 +1531,7 @@
    "de": "Entschuldigung! Guten Tag! (Sie)"
   },
   {
-   "id": "e50",
-   "type": "build_sentence",
-   "vocab": [
-    "normalno",
-    "vy"
-   ],
-   "difficulty": 2,
-   "dir": "de-uk",
-   "prompt": "Ganz gut. Und Ihnen?",
-   "answer": "Норма́льно. А ви?",
-   "distractors": [
-    "ти",
-    "пога́но"
-   ]
-  },
-  {
-   "id": "e51",
+   "id": "e46",
    "type": "speak",
    "vocab": [
     "ya",
@@ -1535,10 +1539,10 @@
    ],
    "difficulty": 1,
    "uk": "Я теж.",
-   "de": "Ich auch."
+   "de": "Ich auch. / Mir auch."
   },
   {
-   "id": "e52",
+   "id": "e47",
    "type": "speak",
    "vocab": [
     "buvai",
@@ -1549,34 +1553,34 @@
    "de": "Tschüss! Gute Nacht! (du)"
   },
   {
-   "id": "e53",
+   "id": "e48",
    "type": "true_false",
    "vocab": [
     "bud_laska",
     "diakuiu"
    ],
    "difficulty": 2,
-   "context_uk": "Тара́с: Ду́же дя́кую!\nОле́на: Будь ла́ска!",
-   "context_de": "Taras: Vielen Dank! – Olena: Bitte schön! (Olena hat Taras geholfen.)",
+   "context_uk": "Ма́ркус: Ду́же дя́кую!\nТара́с: Будь ла́ска!",
+   "context_de": "Taras bringt Markus im Café den Kaffee.",
    "statement_uk": "«Будь ла́ска!» – тут пра́вильно.",
    "answer": true,
    "explanation_de": "Richtig: Будь ла́ска ist auch die Antwort auf Dank („bitte schön, gern geschehen“)."
   },
   {
-   "id": "e54",
+   "id": "e49",
    "type": "true_false",
    "vocab": [
     "dobryi_vechir"
    ],
    "difficulty": 2,
-   "context_uk": "Ма́ркус: До́брий ве́чір!\nОкса́на: До́брий ве́чір! Як спра́ви?",
-   "context_de": "Markus: Guten Abend! – Oksana: Guten Abend! Wie geht’s?",
+   "context_uk": "Ма́ркус: До́брий ве́чір!\nПа́ні Ната́лія: До́брий ве́чір! Як спра́ви?",
+   "context_de": "Markus kommt nach Hause und trifft Frau Natalija im Hauseingang.",
    "statement_uk": "За́раз ра́нок.",
    "answer": false,
    "explanation_de": "Falsch: Beide grüßen mit До́брий ве́чір – es ist Abend (ве́чір), nicht Morgen (ра́нок)."
   },
   {
-   "id": "e55",
+   "id": "e50",
    "type": "chat",
    "vocab": [
     "pryvit",
@@ -1586,10 +1590,10 @@
     "buvai"
    ],
    "difficulty": 2,
-   "scenario_de": "Abends trifft man den Freund Taras auf der Straße. Freunde duzen sich.",
+   "scenario_de": "Morgens im Café neben dem Büro: Taras (Student, arbeitet hier) duzt alle. Ziel: grüßen, kurz plaudern, sich verabschieden.",
    "partner": {
     "name": "Тара́с",
-    "emoji": "👨"
+    "emoji": "🧑"
    },
    "turns": [
     {
@@ -1607,7 +1611,7 @@
       {
        "uk": "До́брий день! До́бре. А ви?",
        "de": "Guten Tag! Gut. Und Ihnen?",
-       "feedback_de": "Zu förmlich: Taras ist ein Freund – also ти (А ти?)."
+       "feedback_de": "Zu förmlich: Taras duzt – also ти (А ти?)."
       },
       {
        "uk": "На добра́ніч! До́бре.",
@@ -1630,8 +1634,8 @@
       },
       {
        "uk": "Бува́йте!",
-       "de": "Tschüss! (zu mehreren/Sie)",
-       "feedback_de": "Бува́йте sagt man zu mehreren Personen. Zu einem Freund: Бува́й!"
+       "de": "Tschüss! (zu mehreren)",
+       "feedback_de": "Бува́йте sagt man zu mehreren Personen. Zu Taras: Бува́й!"
       },
       {
        "uk": "Будь ла́ска!",
@@ -1643,7 +1647,7 @@
    ]
   },
   {
-   "id": "e56",
+   "id": "e51",
    "type": "order_dialog",
    "vocab": [
     "pryvit",
@@ -1672,10 +1676,10 @@
    ]
   },
   {
-   "id": "e57",
+   "id": "e52",
    "type": "chat",
    "vocab": [
-    "dobryi_den",
+    "dobryi_ranok",
     "vy",
     "dobre",
     "do_pobachennia",
@@ -1683,33 +1687,33 @@
     "buvai"
    ],
    "difficulty": 3,
-   "scenario_de": "10 Uhr, Bürgeramt: Frau Kowalenko am Schalter, man kennt sich nicht. Höflich bleiben (ви).",
+   "scenario_de": "8 Uhr im Hauseingang: Frau Natalija (ca. 65, Markus’ Vermieterin) wohnt nebenan und siezt. Ziel: höflich grüßen, antworten, sich verabschieden.",
    "partner": {
-    "name": "Оле́на Ковале́нко",
-    "emoji": "👩‍💼"
+    "name": "Па́ні Ната́лія",
+    "emoji": "👵"
    },
    "turns": [
     {
      "who": "bot",
-     "uk": "До́брий день!",
-     "de": "Guten Tag!"
+     "uk": "До́брий ра́нок!",
+     "de": "Guten Morgen!"
     },
     {
      "who": "me",
      "options": [
       {
-       "uk": "До́брий день!",
-       "de": "Guten Tag!"
+       "uk": "До́брий ра́нок!",
+       "de": "Guten Morgen!"
       },
       {
        "uk": "Приві́т!",
        "de": "Hallo!",
-       "feedback_de": "Приві́т ist informell – am Schalter: До́брий день!"
+       "feedback_de": "Приві́т ist informell – zu Frau Natalija: До́брий ра́нок!"
       },
       {
        "uk": "До́брий ве́чір!",
        "de": "Guten Abend!",
-       "feedback_de": "Es ist 10 Uhr morgens – До́брий ве́чір passt erst abends."
+       "feedback_de": "Es ist 8 Uhr morgens – До́брий ве́чір passt erst abends."
       }
      ]
     },
@@ -1728,7 +1732,7 @@
       {
        "uk": "До́бре, дя́кую. А ти?",
        "de": "Gut, danke. Und dir?",
-       "feedback_de": "Am Schalter wird gesiezt: А ви?"
+       "feedback_de": "Frau Natalija wird gesiezt: А ви?"
       },
       {
        "uk": "Будь ла́ска. А ви?",
@@ -1752,7 +1756,7 @@
       {
        "uk": "Бува́й!",
        "de": "Tschüss!",
-       "feedback_de": "Бува́й ist informell und für eine Person, die man duzt."
+       "feedback_de": "Бува́й ist informell – nur zu Personen, die man duzt."
       },
       {
        "uk": "Приві́т!",
@@ -1764,7 +1768,7 @@
    ]
   },
   {
-   "id": "e58",
+   "id": "e53",
    "type": "order_dialog",
    "vocab": [
     "dobryi_den",
@@ -1798,7 +1802,7 @@
    ]
   },
   {
-   "id": "e59",
+   "id": "e54",
    "type": "chat",
    "vocab": [
     "vybachte",
@@ -1807,9 +1811,9 @@
     "bud_laska"
    ],
    "difficulty": 2,
-   "scenario_de": "Im Flur eines Bürogebäudes stößt man versehentlich mit einem unbekannten Herrn zusammen.",
+   "scenario_de": "Im Büroflur stößt man versehentlich mit einem Herrn zusammen – es ist Herr Bondarenko, der Büroleiter (formell, siezt). Ziel: sich entschuldigen und höflich verabschieden.",
    "partner": {
-    "name": "Іва́н Мельни́к",
+    "name": "Ві́ктор Бондаре́нко",
     "emoji": "👨‍💼"
    },
    "turns": [
@@ -1828,7 +1832,7 @@
       {
        "uk": "Ви́бач!",
        "de": "Entschuldige!",
-       "feedback_de": "Ein Unbekannter wird gesiezt: Ви́бачте!"
+       "feedback_de": "Der Büroleiter wird gesiezt: Ви́бачте!"
       },
       {
        "uk": "Дя́кую!",
@@ -1869,7 +1873,7 @@
    ]
   },
   {
-   "id": "e60",
+   "id": "e55",
    "type": "order_dialog",
    "vocab": [
     "vybachte",
@@ -1897,27 +1901,28 @@
    ]
   },
   {
-   "id": "e61",
+   "id": "e56",
    "type": "chat",
    "vocab": [
     "pryvit",
     "vybachte",
     "ty",
+    "pohano",
     "normalno",
     "na_dobranich",
     "buvai"
    ],
    "difficulty": 3,
-   "scenario_de": "19 Uhr, Café: Die Freundin Oksana kommt zu spät zum Treffen. Freunde duzen sich.",
+   "scenario_de": "Spät abends vor dem Café: Taras hat Feierabend, rennt aus der Tür und stößt fast mit einem zusammen. Er duzt. Ziel: freundlich reagieren und sich verabschieden.",
    "partner": {
-    "name": "Окса́на",
-    "emoji": "👩"
+    "name": "Тара́с",
+    "emoji": "🧑"
    },
    "turns": [
     {
      "who": "bot",
-     "uk": "Приві́т! Ой, ви́бач!",
-     "de": "Hallo! Oh, entschuldige!"
+     "uk": "Ой, ви́бач! Приві́т!",
+     "de": "Oh, entschuldige! Hallo!"
     },
     {
      "who": "me",
@@ -1929,19 +1934,19 @@
       {
        "uk": "Приві́т! Ви́бачте.",
        "de": "Hallo! Entschuldigen Sie.",
-       "feedback_de": "Oksana entschuldigt sich, nicht man selbst – und unter Freunden ist ви́бачте zu förmlich. Antwort: Нічо́го."
+       "feedback_de": "Taras entschuldigt sich, nicht man selbst – und ви́бачте ist hier zu förmlich. Antwort: Нічо́го."
       },
       {
        "uk": "До поба́чення! Нічо́го.",
        "de": "Auf Wiedersehen! Macht nichts.",
-       "feedback_de": "До поба́чення ist ein Abschied – Oksana ist gerade angekommen."
+       "feedback_de": "Erst grüßen: Taras hat gerade „Приві́т!“ gesagt."
       }
      ]
     },
     {
      "who": "bot",
-     "uk": "Як спра́ви?",
-     "de": "Wie geht’s?"
+     "uk": "Як ти?",
+     "de": "Wie geht’s dir?"
     },
     {
      "who": "me",
@@ -1953,7 +1958,7 @@
       {
        "uk": "Норма́льно. А ви?",
        "de": "Ganz gut. Und Ihnen?",
-       "feedback_de": "Oksana ist eine Freundin – also ти: А ти?"
+       "feedback_de": "Taras duzt – also ти: А ти?"
       },
       {
        "uk": "Так. А ти?",
@@ -1964,8 +1969,8 @@
     },
     {
      "who": "bot",
-     "uk": "Ду́же до́бре! … Ну, бува́й! На добра́ніч!",
-     "de": "Sehr gut! … Na dann, tschüss! Gute Nacht!"
+     "uk": "Ой, пога́но … Ну, бува́й! На добра́ніч!",
+     "de": "Ach, schlecht … Na dann, tschüss! Gute Nacht!"
     },
     {
      "who": "me",
@@ -1981,144 +1986,81 @@
       },
       {
        "uk": "Бува́йте! На добра́ніч!",
-       "de": "Tschüss (ihr/Sie)! Gute Nacht!",
-       "feedback_de": "Zu einer Freundin: Бува́й! (Бува́йте zu mehreren)."
+       "de": "Tschüss (ihr)! Gute Nacht!",
+       "feedback_de": "Zu einer Person, die man duzt: Бува́й! (Бува́йте zu mehreren)."
       }
      ]
     }
    ]
   },
   {
-   "id": "e62",
-   "type": "speak",
-   "vocab": [
-    "tak",
-    "diakuiu"
-   ],
-   "difficulty": 1,
-   "uk": "Так, дя́кую. Все до́бре.",
-   "de": "Ja, danke. Alles gut."
-  },
-  {
-   "id": "e63",
+   "id": "e57",
    "type": "reading",
    "vocab": [
-    "pryvit",
-    "yak_spravy",
-    "normalno",
-    "a_ty",
-    "tezh",
+    "vybachte",
+    "tak",
+    "duzhe",
+    "diakuiu",
+    "bud_laska",
+    "do_pobachennia",
     "buvai"
    ],
    "difficulty": 2,
-   "title_uk": "Приві́т!",
-   "text_uk": "Окса́на: Приві́т! Як спра́ви?\nТара́с: Приві́т! Норма́льно. А ти?\nОкса́на: Теж норма́льно. Бува́й!\nТара́с: Бува́й!",
-   "text_de": "Oksana: Hallo! Wie geht’s? – Taras: Hallo! Ganz gut. Und dir? – Oksana: Auch ganz gut. Tschüss! – Taras: Tschüss!",
+   "title_uk": "До поба́чення!",
+   "text_uk": "Окса́на: Все до́бре?\nМа́ркус: Так, все до́бре, ду́же дя́кую!\nОкса́на: Будь ла́ска!\nМа́ркус: До поба́чення!\nОкса́на: До поба́чення!",
+   "text_de": "Abends im Büro. Oksana hat Markus am ersten Tag geholfen. Oksana: Alles gut? – Markus: Ja, alles gut, vielen Dank! – Oksana: Bitte schön! – Markus: Auf Wiedersehen! – Oksana: Auf Wiedersehen!",
    "questions": [
     {
-     "q_uk": "Як спра́ви? – Тара́с: …",
-     "q_de": "Was antwortet Taras auf „Як спра́ви?“",
-     "kind": "mc",
-     "options": [
-      "Норма́льно.",
-      "Ду́же до́бре.",
-      "Пога́но."
-     ]
-    },
-    {
-     "q_uk": "Тут пра́вильно «ти».",
-     "q_de": "Hier ist „ти“ richtig.",
-     "kind": "tf",
-     "answer": true
-    },
-    {
-     "q_uk": "Окса́на: «До поба́чення!»",
-     "q_de": "Oksana sagt: „До поба́чення!“",
-     "kind": "tf",
-     "answer": false
-    }
-   ]
-  },
-  {
-   "id": "e64",
-   "type": "reading",
-   "vocab": [
-    "dobryi_ranok",
-    "yak",
-    "vy",
-    "duzhe",
-    "tezh"
-   ],
-   "difficulty": 2,
-   "title_uk": "Ра́нок",
-   "text_uk": "Оле́на Ковале́нко: До́брий ра́нок! Як ви?\nМа́ркус: До́брий ра́нок! Ду́же до́бре, дя́кую. А ви?\nОле́на Ковале́нко: Теж до́бре, дя́кую.",
-   "text_de": "Olena Kowalenko: Guten Morgen! Wie geht es Ihnen? – Markus: Guten Morgen! Sehr gut, danke. Und Ihnen? – Olena Kowalenko: Auch gut, danke.",
-   "questions": [
-    {
-     "q_uk": "За́раз …",
-     "q_de": "Jetzt ist …",
-     "kind": "mc",
-     "options": [
-      "ра́нок",
-      "ве́чір",
-      "ніч"
-     ]
-    },
-    {
-     "q_uk": "Тут пра́вильно «ви».",
-     "q_de": "Hier ist „ви“ richtig.",
-     "kind": "tf",
-     "answer": true
-    },
-    {
-     "q_uk": "Як ви? – Ма́ркус: …",
-     "q_de": "Was antwortet Markus auf „Як ви?“",
-     "kind": "mc",
-     "options": [
-      "Ду́же до́бре, дя́кую.",
-      "Пога́но.",
-      "Норма́льно."
-     ]
-    }
-   ]
-  },
-  {
-   "id": "e65",
-   "type": "reading",
-   "vocab": [
-    "dobryi_vechir",
-    "vybachte",
-    "diakuiu",
-    "bud_laska",
-    "na_dobranich"
-   ],
-   "difficulty": 3,
-   "title_uk": "До́брий ве́чір!",
-   "text_uk": "Іва́н: До́брий ве́чір! Ви́бачте!\nСофі́я: Нічо́го. До́брий ве́чір!\nІва́н: Ду́же дя́кую!\nСофі́я: Будь ла́ска!\nІва́н: На добра́ніч!",
-   "text_de": "Iwan: Guten Abend! Entschuldigen Sie! – Sofija: Macht nichts. Guten Abend! – Iwan: Vielen Dank! – Sofija: Bitte schön! – Iwan: Gute Nacht! (Iwan kommt zu spät zu einem Geschäftsessen; spät am Abend verabschiedet er sich.)",
-   "questions": [
-    {
-     "q_uk": "Іва́н: «Ви́бач!»",
-     "q_de": "Iwan sagt: „Ви́бач!“",
+     "q_uk": "Ма́ркус: «Ні, пога́но.»",
+     "q_de": "Markus sagt: „Nein, schlecht.“",
      "kind": "tf",
      "answer": false
     },
     {
-     "q_uk": "Ду́же дя́кую! – Софі́я: …",
-     "q_de": "Was antwortet Sofija auf „Ду́же дя́кую!“?",
+     "q_uk": "Ду́же дя́кую! – Окса́на: …",
+     "q_de": "Was antwortet Oksana auf „Ду́же дя́кую!“?",
      "kind": "mc",
      "options": [
       "Будь ла́ска!",
-      "До́брий ве́чір!",
-      "На добра́ніч!"
+      "Ви́бачте!",
+      "Приві́т!"
      ]
     },
     {
-     "q_uk": "Тут пра́вильно «ви».",
-     "q_de": "Hier ist „ви“ richtig.",
-     "kind": "tf",
-     "answer": true
+     "q_uk": "Окса́на: «До поба́чення!» чи «Бува́й!»?",
+     "q_de": "Sagt Oksana „До поба́чення!“ oder „Бува́й!“?",
+     "kind": "mc",
+     "options": [
+      "«До поба́чення!»",
+      "«Бува́й!»",
+      "«Бува́йте!»"
+     ]
     },
+    {
+     "q_uk": "Ма́ркус і Окса́на – «ти».",
+     "q_de": "Markus und Oksana sagen „ти“ zueinander.",
+     "kind": "tf",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "id": "e58",
+   "type": "reading",
+   "vocab": [
+    "dobryi_vechir",
+    "yak_spravy",
+    "duzhe",
+    "vy",
+    "tezh",
+    "na_dobranich",
+    "diakuiu"
+   ],
+   "difficulty": 3,
+   "title_uk": "До́брий ве́чір!",
+   "text_uk": "🏠 Під’ї́зд\nПа́ні Ната́лія: До́брий ве́чір, як спра́ви?\nМа́ркус: Ду́же до́бре, дя́кую! А ви?\nПа́ні Ната́лія: Теж до́бре. На добра́ніч!\nМа́ркус: Дя́кую, на добра́ніч!",
+   "text_de": "Spät abends kommt Markus nach Hause. Hauseingang – Frau Natalija: Guten Abend, wie geht’s? – Markus: Sehr gut, danke! Und Ihnen? – Frau Natalija: Auch gut. Gute Nacht! – Markus: Danke, gute Nacht!",
+   "questions": [
     {
      "q_uk": "За́раз …",
      "q_de": "Jetzt ist …",
@@ -2128,11 +2070,27 @@
       "ра́нок",
       "день"
      ]
+    },
+    {
+     "q_uk": "Ма́ркус і па́ні Ната́лія – «ви».",
+     "q_de": "Markus und Frau Natalija sagen „ви“ zueinander.",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Ма́ркус: «Дя́кую, …!»",
+     "q_de": "Markus sagt: „Дя́кую, …!“",
+     "kind": "mc",
+     "options": [
+      "на добра́ніч",
+      "до́брий ра́нок",
+      "приві́т"
+     ]
     }
    ]
   },
   {
-   "id": "e66",
+   "id": "e59",
    "type": "listening",
    "vocab": [
     "diakuiu",
@@ -2149,23 +2107,21 @@
    ]
   },
   {
-   "id": "e67",
-   "type": "cloze",
+   "id": "e60",
+   "type": "mc_translate",
    "vocab": [
-    "tak",
-    "ni",
-    "diakuiu"
+    "ya",
+    "tezh"
    ],
    "difficulty": 2,
-   "text": "– Все до́бре? – {{Так}}, дя́кую.",
+   "dir": "de-uk",
+   "prompt": "Ich auch.",
    "options": [
-    [
-     "Так",
-     "Як",
-     "Теж"
-    ]
-   ],
-   "translation_de": "– Alles gut? – Ja, danke."
+    "Я теж.",
+    "Ти теж.",
+    "Ви теж.",
+    "Я ду́же."
+   ]
   }
  ]
 }
