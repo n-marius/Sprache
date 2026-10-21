@@ -31,6 +31,10 @@ Alle Lektionen erzählen eine durchgehende Geschichte (narrativer Kontext, Compr
 | Frau Natalija | па́ні Ната́лія | Vermieterin von Markus’ Wohnung, Nachbarin | ca. 65; Rentnerin; spricht langsam und freundlich, siezt; geht gern auf den Markt |
 | Herr Wiktor Bondarenko | пан Ві́ктор Бондаре́нко | Leiter (керівни́к) des Kyjiwer Büros | ca. 55; formell, siezt |
 
+**Anrede unter den Figuren**: Oksana und Markus duzen sich (Oksana bietet es in a1-1-02 an); Taras duzt alle Gleichaltrigen und Markus; Frau Natalija und Herr Bondarenko werden gesiezt und siezen. Die lernende Person duzt Oksana und Taras, siezt Frau Natalija, Herrn Bondarenko, Mandanten, Passanten und Behörden.
+
+**Nebenfiguren** (bei Bedarf): Laura und Thomas (Лау́ра, То́мас) aus Österreich, Kollegen aus dem Sprachkurs; Herr Bondarenko stammt aus Kyjiw. Weitere Nebenfiguren (Passanten, Verkäufer, Beamte) ohne Namen oder mit Namen aus glossary-common.
+
 **Rolle der lernenden Person**: In `chat`-Aufgaben spricht die lernende Person als sie selbst – eine neue Kollegin bzw. ein neuer Kollege aus Deutschland im selben Büro (Geschlecht offen → keine geschlechtsmarkierten Ich-Formen). Markus ist eine Figur, nicht die lernende Person.
 
 **Episoden A1.1** (Ankertext/Leitdialog je Lektion):

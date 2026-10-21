@@ -83,7 +83,7 @@ function weekStrip(stats) {
     h('div', { class: 'v-week-days' }, stats.week.map(d => {
       const part = !d.met && d.done > 0 ? Math.min(1, d.done / stats.goal) : 0;
       return h('div', { class: ['v-day', d.met && 'is-met', d.isToday && 'is-today', d.frozen && 'is-frozen', d.future && 'is-future'] },
-        h('span', { class: 'v-day-dot', style: part ? { '--part': `${Math.round(part * 100)}%` } : null },
+        h('span', { class: 'v-day-dot', style: part ? sty({ '--part': `${Math.round(part * 100)}%` }) : null },
           d.met ? icon('check') : d.frozen ? icon('snow') : null),
         h('span', { class: 'v-day-label' }, d.label));
     })));
@@ -102,8 +102,8 @@ function heroCard(stats) {
       ring,
       h('div', { class: 'v-hero-text' },
         h('div', { class: 'v-hero-cap' }, 'Tagesziel'),
-        h('div', { class: 'v-hero-msg' }, msg),
-        streakBlock(stats.streak))),
+        h('div', { class: 'v-hero-msg' }, msg))),
+    streakBlock(stats.streak),
     weekStrip(stats));
 }
 

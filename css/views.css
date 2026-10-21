@@ -42,15 +42,16 @@
 .v-hero-msg { font-family: var(--font-rounded); font-size: var(--fs-title3); font-weight: 700; line-height: 1.2; margin-top: 2px; }
 
 .v-streak {
-  display: flex; align-items: center; gap: 10px; margin-top: var(--sp-3);
-  padding: 8px 10px; border-radius: var(--r-m);
+  position: relative;
+  display: flex; align-items: center; gap: 10px; margin-top: var(--sp-4);
+  padding: 10px 12px; border-radius: var(--r-m);
   background: rgba(255, 255, 255, .16);
 }
 .v-flame { display: grid; place-items: center; width: 34px; height: 34px; flex: none; color: rgba(255, 255, 255, .55); }
 .v-flame.is-lit { color: var(--orange); filter: drop-shadow(0 2px 6px rgba(255, 150, 0, .45)); }
 .v-flame svg { width: 28px; height: 28px; }
 .v-flame.is-lit svg { stroke: var(--yellow); }
-.v-streak-main { min-width: 0; flex: 1; line-height: 1.1; }
+.v-streak-main { min-width: 0; flex: 1; line-height: 1.15; display: flex; align-items: baseline; gap: 8px; }
 .v-streak-num { font-family: var(--font-rounded); font-size: 22px; font-weight: 800; }
 .v-streak-note { font-size: var(--fs-foot); opacity: .9; }
 .v-freezes { display: flex; gap: 4px; flex: none; }
@@ -69,13 +70,8 @@
   --part: 0%;
   width: 34px; height: 34px; border-radius: 50%;
   display: grid; place-items: center;
-  background: conic-gradient(rgba(255, 255, 255, .85) var(--part), rgba(255, 255, 255, .16) 0);
-  color: var(--green-ink);
-  position: relative;
+  background: conic-gradient(rgba(255, 255, 255, .7) var(--part), rgba(255, 255, 255, .16) 0);
 }
-.v-day-dot::after { content: ""; position: absolute; inset: 4px; border-radius: 50%; background: transparent; }
-.v-day:not(.is-met):not(.is-frozen) .v-day-dot { background: conic-gradient(rgba(255, 255, 255, .85) var(--part), rgba(255, 255, 255, .16) 0); }
-.v-day:not(.is-met):not(.is-frozen) .v-day-dot::after { background: color-mix(in srgb, var(--blue) 60%, var(--purple)); opacity: .0; }
 .v-day.is-met .v-day-dot { background: var(--yellow); color: #5A3E00; box-shadow: 0 3px 0 var(--yellow-edge); }
 .v-day.is-frozen .v-day-dot { background: #fff; color: var(--blue-ink); }
 .v-day.is-future .v-day-dot { background: rgba(255, 255, 255, .08); }
