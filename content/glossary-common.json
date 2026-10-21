@@ -196,8 +196,8 @@
   "info": ""
  },
  {
-  "uk": "відпові́дь",
-  "lemma": "відпові́дь",
+  "uk": "ві́дповідь",
+  "lemma": "ві́дповідь",
   "de": "Antwort",
   "pos": "noun",
   "info": "f., Nom./Akk. Sg."
@@ -246,10 +246,10 @@
  },
  {
   "uk": "заве́ршено",
-  "lemma": "заве́ршити",
+  "lemma": "заверши́ти",
   "de": "abgeschlossen",
   "pos": "verb",
-  "info": "unpersönliche Form auf -но · Inf. заве́ршити"
+  "info": "unpersönliche Form auf -но · Inf. заверши́ти"
  },
  {
   "uk": "молоде́ць",
@@ -280,11 +280,11 @@
   "info": "Akk. Sg. · Nom. поми́лка (f.)"
  },
  {
-  "uk": "натисни́",
-  "lemma": "натисну́ти",
+  "uk": "нати́сни",
+  "lemma": "нати́снути",
   "de": "drück! tippe!",
   "pos": "verb",
-  "info": "Imperativ 2. Sg. · Inf. натисну́ти"
+  "info": "Imperativ 2. Sg. · Inf. нати́снути"
  },
  {
   "uk": "пові́льно",
@@ -735,8 +735,8 @@
   "info": "männl. Vorname"
  },
  {
-  "uk": "Ла́ура",
-  "lemma": "Ла́ура",
+  "uk": "Лау́ра",
+  "lemma": "Лау́ра",
   "de": "Laura",
   "pos": "name",
   "info": "weibl. Vorname"
@@ -819,8 +819,8 @@
   "info": "Stadt (m.)"
  },
  {
-  "uk": "Гамбу́рг",
-  "lemma": "Гамбу́рг",
+  "uk": "Га́мбург",
+  "lemma": "Га́мбург",
   "de": "Hamburg",
   "pos": "name",
   "info": "Stadt (m.)"
@@ -840,8 +840,8 @@
   "info": "Land (f.)"
  },
  {
-  "uk": "Шве́йцарія",
-  "lemma": "Шве́йцарія",
+  "uk": "Швейца́рія",
+  "lemma": "Швейца́рія",
   "de": "Schweiz",
   "pos": "name",
   "info": "Land (f.)"

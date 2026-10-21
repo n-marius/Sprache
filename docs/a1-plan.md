@@ -111,7 +111,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | pan | пан | Herr (Anrede) | noun |
 | pani | па́ні | Frau (Anrede) | noun |
 | druh | друг | Freund | noun |
-| podruha | подру́га | Freundin | noun |
+| podruha | по́друга | Freundin | noun |
 
 ### a1-1-03 · Скі́льки? Чи́сла · Wie viel? Zahlen · theme `numbers`
 - **Can-do**: Ich kann von 0 bis 20 zählen. Ich kann eine Telefonnummer nennen und verstehen. Ich kann nach dem Alter fragen und mein Alter (bzw. das anderer) angeben.
@@ -236,7 +236,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-07 · Що ти лю́биш? · Was isst du gern? · theme `food`
 - **Can-do**: Ich kann sagen, was ich gern esse und trinke, und andere danach fragen. Ich kann über Mahlzeiten sprechen (Frühstück, Mittag-, Abendessen).
-- **Grammatik**: Präsens II. Konjugation: люби́ти – люблю́, лю́биш, лю́бить, лю́бимо, лю́бите, лю́блять (Einschub -л-); unregelmäßig ї́сти (їм, ї́си, їсть, їмо́, їсте́, їдя́ть) und пи́ти (п’ю, п’єш, п’є, п’ємо́, п’єте́, п’ють); Akk. (Wdh.); `люблю́` + Inf./Akk.
+- **Grammatik**: Präsens II. Konjugation: люби́ти – люблю́, лю́биш, лю́бить, лю́бимо, лю́бите, лю́блять (Einschub -л-); unregelmäßig ї́сти (їм, їси́, їсть, їмо́, їсте́, їдя́ть) und пи́ти (п’ю, п’єш, п’є, п’ємо́, п’єте́, п’ють); Akk. (Wdh.); `люблю́` + Inf./Akk.
 - **Redemittel**: Що ти лю́биш? – Я люблю́ ри́бу. · На сніда́нок я їм хліб із сиро́м. · Смачно́го! · Ду́же смачни́й борщ!
 
 | id | uk | de | pos |
@@ -289,7 +289,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | kupuvaty | купува́ти | kaufen | verb |
 | daite | Да́йте, будь ла́ска, … | Geben Sie mir bitte … | phrase |
 | doroho | до́рого | teuer | adv |
-| deshevo | деше́во | billig, günstig | adv |
+| deshevo | де́шево | billig, günstig | adv |
 | kilohram | кілогра́м | Kilogramm | noun |
 | kartka | ка́ртка | (Bank-)Karte | noun |
 | hotivka | готі́вка | Bargeld | noun |
@@ -325,13 +325,13 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 ### a1-1-10 · Де апте́ка? · Wo ist die Apotheke? · theme `city`
 - **Can-do**: Ich kann nach dem Weg fragen und einfache Wegbeschreibungen verstehen (geradeaus, rechts, links, nah, weit). Ich kann wichtige Orte in der Stadt benennen.
 - **Grammatik**: Lokativ: у/в (у ба́нку, в апте́ці, у па́рку) vs. на (на зупи́нці, на вокза́лі, на пло́щі); `до` + Gen. als Chunk (до вокза́лу, до апте́ки); höflicher Imperativ als Chunk: `Іді́ть пря́мо`.
-- **Redemittel**: Ви́бачте, де тут апте́ка? · Як дійти́ до вокза́лу? – Іді́ть пря́мо, по́тім пра́воруч. · Це дале́ко? – Ні, бли́зько.
+- **Redemittel**: Ви́бачте, де тут апте́ка? · Як дійти́ до вокза́лу? – Іді́ть пря́мо, по́тім право́руч. · Це дале́ко? – Ні, бли́зько.
 
 | id | uk | de | pos |
 |---|---|---|---|
 | apteka | апте́ка | Apotheke | noun |
 | bank | банк | Bank | noun |
-| likarnia | лі́карня | Krankenhaus | noun |
+| likarnia | ліка́рня | Krankenhaus | noun |
 | zupynka | зупи́нка | Haltestelle | noun |
 | vokzal | вокза́л | Bahnhof | noun |
 | metro | метро́ | U-Bahn, Metro | noun |
@@ -345,7 +345,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | yty | іти́ | gehen (zu Fuß) | verb |
 | yak_diity | Як дійти́ до …? | Wie komme ich (zu Fuß) zu …? | phrase |
 | priamo | пря́мо | geradeaus | adv |
-| pravoruch | пра́воруч | rechts | adv |
+| pravoruch | право́руч | rechts | adv |
 | livoruch | ліво́руч | links | adv |
 | daleko | дале́ко | weit (entfernt) | adv |
 | blyzko | бли́зько | nah | adv |
@@ -383,7 +383,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-12 · Сього́дні понеді́лок · Heute ist Montag · theme `calendar`
 - **Can-do**: Ich kann die Wochentage nennen und sagen, wann ich etwas mache (heute, morgen, am Montag …). Ich kann einfache Verabredungen treffen, zu- oder absagen.
-- **Grammatik**: Wochentage: `у/в` + Akk. (у понеді́лок, у сере́ду, у п’я́тницю, у субо́ту, в неді́лю – f. -а → -у!); ма́ти (ма́ю, ма́єш …: `Я ма́ю час`); могти́ (мо́жу, мо́жеш …); `Коли́?`.
+- **Grammatik**: Wochentage: `у/в` + Akk. (у понеді́лок, у се́реду, у п’я́тницю, у субо́ту, в неді́лю – f. -а → -у!); ма́ти (ма́ю, ма́єш …: `Я ма́ю час`); могти́ (мо́жу, мо́жеш …); `Коли́?`.
 - **Redemittel**: Яки́й сього́дні день? – Сього́дні середа́. · Ти ма́єш час у п’я́тницю? – На жаль, ні. (на жаль als Glossar) · Ході́мо ра́зом у кіно́! (ході́мо als Glossar)
 
 | id | uk | de | pos |
@@ -442,7 +442,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 ### a1-1-14 · В о́фісі · Im Büro · theme `office`
 - **Can-do**: Ich kann Gegenstände im Büro benennen und um etwas bitten. Ich kann höfliche Aufforderungen verstehen und verwenden (Kommen Sie herein, warten Sie bitte). Ich kann sagen, ob ich Zeit habe oder beschäftigt bin.
 - **Grammatik**: höflicher Imperativ (ви): -і́ть / -йте (Зачека́йте, Сіда́йте, Захо́дьте, Повторі́ть, Напиші́ть, Да́йте); ти-Imperativ zum Wiedererkennen (зачека́й, сіда́й); писа́ти (пишу́, пи́шеш), дзвони́ти (дзвоню́, дзво́ниш); `Чи мо́жете ви …?`.
-- **Redemittel**: Захо́дьте, будь ла́ска! Сіда́йте. · Хвили́нку! · Повторі́ть, будь ла́ска. · Ви́бачте, я за́раз зайня́тий/зайня́та. · Чи мо́жете ви допомогти́?
+- **Redemittel**: Захо́дьте, будь ла́ска! Сіда́йте. · Хвили́нку! · Повторі́ть, будь ла́ска. · Ви́бачте, я за́раз за́йнятий/за́йнята. · Чи мо́жете ви допомогти́?
 
 | id | uk | de | pos |
 |---|---|---|---|
@@ -463,7 +463,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | sidaite | Сіда́йте! | Setzen Sie sich! | phrase |
 | khvylynku | Хвили́нку! | Einen Moment! | phrase |
 | povtorit | Повторі́ть, будь ла́ска. | Wiederholen Sie bitte. | phrase |
-| zainiatyi | зайня́тий | beschäftigt, besetzt | adj |
+| zainiatyi | за́йнятий | beschäftigt, besetzt | adj |
 | hotovyi | гото́вий | fertig, bereit | adj |
 | terminovo | терміно́во | dringend | adv |
 
@@ -510,7 +510,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | a1-2-07 | У магази́ні о́дягу | Im Bekleidungsgeschäft | shopping | Größe, Farbe, Preis erfragen, anprobieren | Genitiv nach Zahlen und Mengen; цей/ця/це | Einkauf, Größen |
 | a1-2-08 | У рестора́ні | Im Restaurant | food | im Restaurant bestellen, reklamieren, bezahlen | нема́є + Gen.; без + Gen.; Plural Akk. (unbelebt) | Speisen, Getränke, Geschirr |
 | a1-2-09 | Здоро́в’я | Gesundheit | health | Beschwerden nennen, beim Arzt einfache Angaben machen | У ме́не боли́ть …; Dativ мені́/тобі́ (Wdh.) | Körperteile, Beschwerden |
-| a1-2-10 | Дати́ і мі́сяці | Daten und Monate | calendar | Datum, Geburtstag, Termine angeben | Ordinalzahlen n.; Genitiv der Monate (пе́ршого бе́резня) | Monate, Datum |
+| a1-2-10 | Да́ти і мі́сяці | Daten und Monate | calendar | Datum, Geburtstag, Termine angeben | Ordinalzahlen n.; Genitiv der Monate (пе́ршого бе́резня) | Monate, Datum |
 | a1-2-11 | Які́ вони́? | Wie sind sie? | people | Aussehen und Charakter einfach beschreiben | Adjektive Pl.; ду́же/не ду́же | Aussehen, Charakter |
 | a1-2-12 | Робо́чий день | Arbeitstag | office | Termine vereinbaren und verschieben, kurze E-Mail | Dativ Sg. (Personen); бу́ти у Präteritum | Termine, E-Mail, Büroalltag |
 | a1-2-13 | Банк і по́шта | Bank und Post | city | Konto, Geld abheben, Paket senden | Gen. Sg. (без, для, від); ві́дправити/отри́мати | Bank, Post |
@@ -522,7 +522,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | id | title_uk | title_de | theme | Ziele (Can-do) | Grammatik | Wortfelder |
 |---|---|---|---|---|---|---|
 | a1-3-01 | Пла́ни на вихідні́ | Pläne fürs Wochenende | hobby | Pläne machen und darüber sprechen | Futur: бу́ду + Inf., synthetisch (чита́тиму) | Freizeit, Verabredungen |
-| a1-3-02 | Подоро́ж | Die Reise | travel | Reise planen, Fahrkarte/Ticket buchen | Aspekt (Einführung: купува́ти/купи́ти) | Reise, Ticket, Gepäck |
+| a1-3-02 | По́дорож | Die Reise | travel | Reise planen, Fahrkarte/Ticket buchen | Aspekt (Einführung: купува́ти/купи́ти) | Reise, Ticket, Gepäck |
 | a1-3-03 | У готе́лі | Im Hotel | travel | ein- und auschecken, Probleme melden | Lok. Pl. Grundformen; чи + Frage | Hotel, Zimmerausstattung |
 | a1-3-04 | В апте́ці | In der Apotheke | health | Medikamente kaufen, Einnahme verstehen | Imperativ (Wdh.), Zahlwort + Gen. Pl. | Medikamente, Beschwerden |
 | a1-3-05 | Оре́нда кварти́ри | Wohnung mieten | home | Wohnungsanzeige verstehen, Mietvertrag-Grundbegriffe | Komparativ Grundform (бі́льший, деше́вший) | Miete, Vertrag, Nebenkosten |
@@ -555,7 +555,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 - Tipp: JSON per Python/Node-Skript erzeugen (kein Handescaping), z. B. Betonung im Quelltext als `+` hinter dem Vokal notieren und per Skript in U+0301 umwandeln (`ка+ва` → `ка́ва`); lateinische Buchstaben vorher ausschließen.
 - Deutsch: neutral und knapp, Lernende nicht siezen (Infinitiv-/Nominalstil, z. B. „Achtung: Akkusativ!“, „Hier passt ти, nicht ви.“). Typ-Anweisungen kommen aus `ui-strings.json`. In de→uk-Prompts Anrede markieren: „(du)“ bzw. „(Sie)“, wenn ти/ви sonst mehrdeutig wäre.
 - Ukrainische Anweisungen im ти-Imperativ (`Переклади́`, `Обери́`; nicht „Перекладі́“).
-- Geschlecht der lernenden Person ist unbekannt: Sätze in der Ich-Form ohne geschlechtsmarkierte Formen (keine Ich-Präteritumformen, kein `я зайня́тий/зайня́та` als einzige Lösung) – oder beide Formen über `accept` zulassen.
+- Geschlecht der lernenden Person ist unbekannt: Sätze in der Ich-Form ohne geschlechtsmarkierte Formen (keine Ich-Präteritumformen, kein `я за́йнятий/за́йнята` als einzige Lösung) – oder beide Formen über `accept` zulassen.
 
 ### Sprachqualität
 - Standardukrainisch, **keine Russismen/Surschyk** (siehe `docs/research-content.md`), natürliche, idiomatische Sätze, die Muttersprachler so sagen würden. Je Begriff eine gängige Form (keine Synonymketten).
@@ -886,7 +886,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     },
     {
      "id": "podruha",
-     "uk": "подру́га",
+     "uk": "по́друга",
      "de": "Freundin",
      "pos": "noun"
     }
@@ -1714,7 +1714,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     },
     {
      "id": "deshevo",
-     "uk": "деше́во",
+     "uk": "де́шево",
      "de": "billig, günstig",
      "pos": "adv"
     },
@@ -1886,7 +1886,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     },
     {
      "id": "likarnia",
-     "uk": "лі́карня",
+     "uk": "ліка́рня",
      "de": "Krankenhaus",
      "pos": "noun"
     },
@@ -1970,7 +1970,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     },
     {
      "id": "pravoruch",
-     "uk": "пра́воруч",
+     "uk": "право́руч",
      "de": "rechts",
      "pos": "adv"
     },
@@ -2518,7 +2518,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     },
     {
      "id": "zainiatyi",
-     "uk": "зайня́тий",
+     "uk": "за́йнятий",
      "de": "beschäftigt, besetzt",
      "pos": "adj"
     },
