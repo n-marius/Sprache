@@ -29,6 +29,8 @@ Unit-Tests: `node --test tests/unit/`
 | Meldungen | `js/services/reports.js`, `js/services/export.js`, `js/services/gist.js`, `js/ui/report-sheet.js`, `js/views/reports.js`, `css/reports.css` |
 | Einstellungen | `js/views/settings.js`, `css/settings.css` |
 | Animation | `js/ui/anim.js`, `css/animations.css` |
+| Story/Mining | `js/views/story.js`, `js/services/mining.js`, `css/story.css` |
+| Kern zusätzlich | `js/audio-mode.js`, `js/ui/audio-mode-sheet.js`, `js/engine/flow.js` |
 
 Routen zusätzlich: `#/trainer`, `#/trainer/session?dir=de-uk|uk-de|mixed&scope=due|all|lesson:<id>|hard&mode=card|choice|listen`,
 `#/words`, `#/library`, `#/explain/:id` (`?start=1` → nach dem Lesen „Lektion starten“), `#/dev/exercise?lesson=…&ex=…|type=…` (Entwickler-Testseite).
@@ -207,3 +209,30 @@ anim.viewIn(el)   // dezenter Einstieg bei Routenwechsel (vom Router aufgerufen)
 `VERSION` in `sw.js` = `APP_VERSION` in `js/config.js` (bei jeder Änderung beide erhöhen).
 Precache: `APP_ASSETS` + `content/curriculum.json`, `ui-strings.json`, `glossary-common.json` + alle Lektionsdateien aus dem Curriculum.
 Strategie: Cache-first für App-Assets, Stale-while-revalidate für Content. Neue Version → Hinweisleiste „Update verfügbar“.
+
+## Lektionsablauf (Immersion zuerst)
+`startLesson(app, id)` (js/engine/flow.js): beim ersten Start **Geschichte** (`#/story/:id?start=1`, Ankertext/Leitdialog mit Figuren,
+Tap-Glossar, Audio, Erschließen vor Aufdecken, neue Formen hervorgehoben, „Satz sammeln“) → **Erklärung** (`#/explain/:id?start=1`) →
+**Session**. Danach startet `startLesson` direkt die Session; Geschichte und Erklärung bleiben über Lektion/Bibliothek abrufbar.
+Abschluss-Hooks: `markStorySeen(app, id, {proceed})`, `markExplained(app, id, {proceed})`.
+
+### VORSCHLAG optionales Lektionsfeld `story` (noch nicht im Vertrag; App funktioniert ohne – Fallback: erste `reading`-Aufgabe bzw. erster `chat` als Ankertext)
+```json
+"story": {
+  "title_uk": "…", "title_de": "…", "scene_de": "Situation in 1–2 Sätzen",
+  "characters": [ { "name": "Окса́на", "emoji": "👩", "role_de": "Nachbarin, Studentin" } ],
+  "lines": [ { "who": "Окса́на", "uk": "…", "de": "…" }, { "uk": "Erzählzeile ohne who", "de": "…" } ],
+  "new": [ "ка́ву", "п’ю" ]
+}
+```
+`new` = in dieser Lektion neue Wortformen (Noticing-Hervorhebung, Erschließen vor Aufdecken); fehlt es, nimmt die App vocab + forms der Lektion.
+
+## Satz-Mining (`js/services/mining.js`)
+`state.mined = [{id, uk, de, lessonId, source, focus?, createdAt}]`; API `listMined, isMined, addMined, removeMined`.
+Gesammelte Sätze erscheinen im Vokabeltrainer als Satzkarten (eigene SRS-Karten `trainer`-Bereich).
+
+## „Gerade kein Ton“ (`js/audio-mode.js`, `js/ui/audio-mode-sheet.js`)
+`isListenOff(app)`, `isSpeakOff(app)`, `autoplayAllowed(app)`, `setAudioOff(app, {listen, speak, duration:'1h'|'tomorrow'|'forever'|'on'})`,
+Event `mova:audiomode` (window). Dauerhaft: `settings.listenOff/speakOff`; zeitweise: `state.meta.listenOffUntil/speakOffUntil`.
+Engine lässt listening/speak aus oder ersetzt sie durch Textvarianten (ohne SRS-Nachteil); ctx.listenOff/ctx.speakOff; keine Autoplays.
+UI: `openAudioModeSheet(app)` (Session-Kopf, Feedback-Leiste, Einstellungen, Trainer).

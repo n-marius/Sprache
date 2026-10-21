@@ -1,1 +1,58 @@
-/* Platzhalter – siehe docs/ARCHITECTURE.md */
+/* Lautsprecher-Button (js/ui/audio-button.js) – Duolingo-blau, rund. Präfix .speaker-btn */
+.speaker-btn {
+  position: relative;
+  display: inline-grid; place-items: center; flex: none;
+  width: 44px; height: 44px; border-radius: 50%;
+  color: var(--blue-ink); background: var(--sel-bg);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--dur-1) var(--ease-out), background-color var(--dur-1), opacity var(--dur-2), box-shadow var(--dur-1);
+}
+.speaker-btn svg { width: 22px; height: 22px; }
+.speaker-btn:active { transform: scale(.92); }
+.speaker-btn.is-playing { background: color-mix(in srgb, var(--blue) 24%, transparent); }
+
+/* s: dezentes Icon (Touch-Ziel bleibt ≥ 36px sichtbar, 44px über Pseudo-Fläche) */
+.speaker-btn.size-s { width: 36px; height: 36px; background: transparent; color: var(--blue); }
+.speaker-btn.size-s::before { content: ""; position: absolute; inset: -4px; border-radius: 50%; }
+.speaker-btn.size-s svg { width: 20px; height: 20px; }
+.speaker-btn.size-s:active, .speaker-btn.size-s.is-playing { background: var(--sel-bg); }
+
+/* l: großer blauer 3D-Button mit unterer Kante */
+.speaker-btn.size-l {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--blue); color: var(--on-color);
+  box-shadow: 0 5px 0 var(--blue-edge);
+  margin-bottom: 5px;
+}
+.speaker-btn.size-l svg { width: 34px; height: 34px; stroke-width: 2.2; }
+.speaker-btn.size-l:active { transform: translateY(5px); box-shadow: 0 0 0 var(--blue-edge); }
+.speaker-btn.size-l.is-playing { background: var(--blue); filter: brightness(1.06); }
+.speaker-btn.size-l.is-slow { width: 56px; height: 56px; }
+.speaker-btn.size-l.is-slow svg { width: 28px; height: 28px; }
+
+/* Wiedergabe: Schallbögen pulsieren + weicher Ring (ergänzt .anim-speaking aus animations.css) */
+.speaker-btn.is-playing .icon-speaker path + path { animation: spk-arcs 900ms ease-in-out infinite; }
+.speaker-btn.is-playing .icon-turtle { animation: spk-bob 900ms ease-in-out infinite; }
+.speaker-btn.is-playing { animation: spk-ring 1.2s var(--ease-out) infinite; }
+.speaker-btn.size-l.is-playing { animation: spk-ring-l 1.2s var(--ease-out) infinite; }
+@keyframes spk-arcs { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes spk-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
+@keyframes spk-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--blue) 40%, transparent); }
+  100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--blue) 0%, transparent); }
+}
+@keyframes spk-ring-l {
+  0% { box-shadow: 0 5px 0 var(--blue-edge), 0 0 0 0 color-mix(in srgb, var(--blue) 45%, transparent); }
+  100% { box-shadow: 0 5px 0 var(--blue-edge), 0 0 0 14px color-mix(in srgb, var(--blue) 0%, transparent); }
+}
+
+/* Hören aus: sichtbar, aber gedimmt (Klick spielt trotzdem) */
+.speaker-btn.is-muted:not(.is-playing) { opacity: .42; }
+
+@media (prefers-reduced-motion: reduce) {
+  .speaker-btn, .speaker-btn * { animation: none !important; transition: opacity var(--dur-1) !important; }
+  .speaker-btn.is-playing { box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 35%, transparent); }
+  .speaker-btn.size-l.is-playing { box-shadow: 0 5px 0 var(--blue-edge), 0 0 0 3px color-mix(in srgb, var(--blue) 35%, transparent); }
+}
+:root[data-motion="reduce"] .speaker-btn, :root[data-motion="reduce"] .speaker-btn * { animation: none !important; }
