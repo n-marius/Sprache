@@ -13,14 +13,28 @@ http://localhost:8080/?nosw                       → ohne Service Worker (Entwi
 Unit-Tests: `node --test tests/unit/`
 
 ## Dateien und Eigentümer (parallele Arbeit – nur eigene Dateien ändern!)
-| Bereich | Dateien | Eigentümer |
-|---|---|---|
-| Kern | `index.html`, `package.json`, `js/app-context.js`, `js/ui/theme.js`, `tests/e2e/smoke.mjs`, `tests/unit/fixtures.test.mjs`, `manifest.webmanifest`, `sw.js`, `js/main.js`, `js/config.js`, `js/router.js`, `js/store.js`, `js/content.js`, `js/lexicon.js`, `js/i18n.js`, `js/ui/dom.js`, `js/ui/shell.js`, `js/ui/haptics.js`, `css/tokens.css`, `css/base.css`, `css/components.css`, `icons/`, `tools/render-icons.mjs`, `.github/`, `tests/fixtures/` | Programmier-Agent (Koordination) |
-| (a) Aufgaben | `js/exercises/*.js`, `js/views/session.js`, `css/exercises.css` | Aufgaben-Agent |
-| (b) Engine | `js/engine/*.js`, `js/views/today.js`, `js/views/course.js`, `js/views/lesson.js`, `js/views/words.js`, `js/views/summary.js`, `css/views.css`, `tests/unit/engine-*.test.mjs` | Engine-Agent |
-| (c) Meldungen/Einstellungen | `js/services/reports.js`, `js/services/gist.js`, `js/services/export.js`, `js/ui/report-sheet.js`, `js/views/settings.js`, `js/views/reports.js`, `css/settings.css` | Melde-Agent |
-| (d) Audio/Blase | `js/services/tts.js`, `js/services/stt.js`, `js/ui/popover.js`, `js/ui/audio-button.js`, `css/popover.css` | Audio-Agent |
-| Animation | `js/ui/anim.js`, `css/animations.css` | Animations-Agent |
+| Paket | Dateien |
+|---|---|
+| Kern (Koordinator) | `index.html`, `manifest.webmanifest`, `sw.js`, `package.json`, `js/main.js`, `js/config.js`, `js/app-context.js`, `js/router.js`, `js/store.js`, `js/content.js`, `js/lexicon.js`, `js/i18n.js`, `js/ui/dom.js`, `js/ui/shell.js`, `js/ui/theme.js`, `js/ui/haptics.js`, `js/exercises/index.js`, `js/exercises/ctx.js`, `js/engine/flow.js`, `js/views/dev-exercise.js`, `css/tokens.css`, `css/base.css`, `css/components.css`, `icons/`, `tools/render-icons.mjs`, `.github/`, `tests/fixtures/`, `tests/e2e/smoke.mjs`, `tests/unit/fixtures.test.mjs`, `tests/unit/sw-assets.test.mjs` |
+| EX-A Auswahl | `js/exercises/common.js` (gemeinsame Helfer – nur ergänzen, nichts brechen), `mc_translate.js`, `picture_choice.js`, `true_false.js`, `listening.js`, `css/exercises.css` (inkl. Styles der common.js-Klassen) |
+| EX-B Bauen | `build_sentence.js`, `cloze.js`, `order_dialog.js`, `match_pairs.js`, `css/ex-build.css` |
+| EX-C Dialog | `chat.js`, `reading.js`, `speak.js`, `css/ex-dialog.css` |
+| Session | `js/views/session.js`, `css/session.css` |
+| Engine | `js/engine/srs.js`, `util.js`, `session.js`, `review-gen.js`, `progress.js`, `tests/unit/engine-*.test.mjs` |
+| Trainer | `js/engine/trainer.js`, `js/views/trainer.js`, `js/views/trainer-session.js`, `js/views/words.js`, `css/trainer.css`, `tests/unit/trainer-*.test.mjs` |
+| Kurs | `js/views/course.js`, `js/views/lesson.js`, `css/course.css` |
+| Erklärungen | `js/views/explain.js`, `js/views/library.js`, `css/explain.css` |
+| Heute | `js/views/today.js`, `js/views/summary.js`, `css/views.css` |
+| Audio/Blase | `js/services/tts.js`, `js/services/stt.js`, `js/ui/popover.js`, `js/ui/audio-button.js`, `css/popover.css`, `css/audio.css` |
+| Meldungen | `js/services/reports.js`, `js/services/export.js`, `js/services/gist.js`, `js/ui/report-sheet.js`, `js/views/reports.js`, `css/reports.css` |
+| Einstellungen | `js/views/settings.js`, `css/settings.css` |
+| Animation | `js/ui/anim.js`, `css/animations.css` |
+
+Routen zusätzlich: `#/trainer`, `#/trainer/session?dir=de-uk|uk-de|mixed&scope=due|all|lesson:<id>|hard&mode=card|choice|listen`,
+`#/words`, `#/library`, `#/explain/:id` (`?start=1` → nach dem Lesen „Lektion starten“), `#/dev/exercise?lesson=…&ex=…|type=…` (Entwickler-Testseite).
+Tabs: Heute · Kurs · Trainer · Wissen · Mehr. Lektionsstart immer über `startLesson(app, id)` aus `js/engine/flow.js`
+(zeigt beim ersten Mal die Erklärung; `markExplained(app, id)` setzt `state.lessons[id].explainedAt`).
+API-Stubs mit verbindlichen Signaturen: `js/engine/progress.js`, `js/services/export.js`, `js/services/gist.js`, `js/services/reports.js`.
 
 Wer eine Änderung in fremden Dateien braucht, meldet sie dem Koordinator (keine Direktänderung).
 Neue Dateien im eigenen Bereich sind erlaubt, müssen aber in `sw.js` → `APP_ASSETS` ergänzt werden

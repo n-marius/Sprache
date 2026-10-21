@@ -8,6 +8,90 @@
     "Ich kann Getränke bestellen.",
     "Ich kann sagen, was ich trinke."
   ],
+  "concepts": [
+    {
+      "id": "fx-akk-a",
+      "title_de": "Akkusativ von Wörtern auf -а"
+    },
+    {
+      "id": "fx-pyty",
+      "title_de": "Verb пи́ти im Präsens"
+    }
+  ],
+  "explanation": {
+    "title_de": "Im Café bestellen",
+    "intro_de": "Du lernst Getränke und das Verb пи́ти (trinken). Danach kannst du im Café bestellen.",
+    "sections": [
+      {
+        "heading_de": "Das Verb пи́ти",
+        "body_de": "Im Präsens ändert sich der Stamm: **п’ю**, **п’єш**, **п’є**. Der Apostroph trennt die Laute: man spricht „pju“.",
+        "table": {
+          "head": [
+            "Person",
+            "Form"
+          ],
+          "rows": [
+            [
+              "я",
+              "п’ю"
+            ],
+            [
+              "ти",
+              "п’єш"
+            ],
+            [
+              "він / вона́",
+              "п’є"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "uk": "Я п’ю чай.",
+            "de": "Ich trinke Tee."
+          },
+          {
+            "uk": "Ти п’єш молоко́?",
+            "de": "Trinkst du Milch?"
+          }
+        ]
+      },
+      {
+        "heading_de": "ка́ва → ка́ву",
+        "body_de": "Was man trinkt oder bestellt, steht im **Akkusativ**. Weibliche Wörter auf **-а** enden dann auf **-у**. Männliche Dinge wie чай und хліб bleiben gleich.",
+        "table": {
+          "head": [
+            "Nominativ",
+            "Akkusativ"
+          ],
+          "rows": [
+            [
+              "ка́ва",
+              "ка́ву"
+            ],
+            [
+              "вода́",
+              "во́ду"
+            ],
+            [
+              "чай",
+              "чай"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "uk": "Ка́ву, будь ла́ска.",
+            "de": "Einen Kaffee, bitte."
+          }
+        ]
+      }
+    ],
+    "summary_de": [
+      "я п’ю, ти п’єш, він п’є",
+      "-а → -у im Akkusativ"
+    ]
+  },
   "grammar": [
     {
       "title_de": "Akkusativ bei -а-Wörtern",

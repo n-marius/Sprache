@@ -330,18 +330,4 @@ body.is-fullscreen .toast { bottom: calc(var(--safe-bottom) + 120px); }
 /* Emoji in einheitlicher Größe */
 .emoji { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; line-height: 1; }
 
-/* ---------- Gemeinsame Aufgaben-Bausteine (js/exercises/common.js) ---------- */
-.ex-chipboard { display: grid; gap: var(--sp-6); }
-.ex-answer-line {
-  display: flex; flex-wrap: wrap; align-content: flex-start; gap: 8px;
-  min-height: 112px; padding: 6px 0;
-  /* Linien wie Duolingo: alle 56px eine Grundlinie */
-  background-image: linear-gradient(to bottom, transparent 54px, var(--separator-opaque) 54px, var(--separator-opaque) 56px);
-  background-size: 100% 56px;
-}
-.ex-answer-line .chip { margin-bottom: 4px; }
-.ex-bank { justify-content: center; }
-.ex-prompt { display: flex; align-items: center; gap: var(--sp-3); }
-.ex-prompt-text { font-size: var(--fs-uk-prompt); font-weight: 600; line-height: 1.3; }
-.ex-prompt-de .ex-prompt-text { color: var(--label); }
-.option-label { flex: 1; min-width: 0; }
+.option-label, .ex-option-label { flex: 1; min-width: 0; }

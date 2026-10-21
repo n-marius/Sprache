@@ -4,7 +4,8 @@ import { h, icon, clear } from './dom.js';
 export const TABS = [
   { id: 'today', label: 'Heute', icon: 'today', href: '#/today' },
   { id: 'course', label: 'Kurs', icon: 'course', href: '#/course' },
-  { id: 'words', label: 'Wörter', icon: 'words', href: '#/words' },
+  { id: 'trainer', label: 'Trainer', icon: 'words', href: '#/trainer' },
+  { id: 'library', label: 'Wissen', icon: 'book', href: '#/library' },
   { id: 'settings', label: 'Mehr', icon: 'settings', href: '#/settings' },
 ];
 

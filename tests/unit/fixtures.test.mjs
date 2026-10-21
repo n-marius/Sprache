@@ -45,10 +45,11 @@ for (const base of process.env.CHECK_CONTENT ? ['tests/fixtures', 'content'] : [
       seen.add(ex.type);
       assert.ok(ex.id && Array.isArray(ex.vocab), ex.id);
     }
+    for (const l of c.lessons.values()) assert.ok(l.explanation?.sections?.length && Array.isArray(l.concepts), `explanation/concepts fehlen: ${l.id}`);
     for (const t of TYPES) assert.ok(seen.has(t), `Typ fehlt: ${t}`);
     for (const [, s] of ukStrings([...c.lessons.values()])) {
-      assert.ok(!/[áéíóúýÁÉÍÓÚÝ]/.test(s), `vorkomponierter Akzent: ${s}`);
-      assert.ok(!/[ʼ']/.test(s), `falscher Apostroph: ${s}`);
+      assert.ok(!/[Ѐ-ӿ][áéíóúýÁÉÍÓÚÝ]|[áéíóúýÁÉÍÓÚÝ][Ѐ-ӿ]/.test(s), `vorkomponierter Akzent: ${s}`);
+      assert.ok(!/[Ѐ-ӿ][ʼ'][Ѐ-ӿ]/.test(s), `falscher Apostroph: ${s}`);
     }
   });
 }

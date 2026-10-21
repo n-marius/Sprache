@@ -8,6 +8,82 @@
     "Ich kann grüßen und mich verabschieden.",
     "Ich kann sagen, wie ich heiße."
   ],
+  "concepts": [
+    {
+      "id": "fx-gruss",
+      "title_de": "Grüßen und Verabschieden"
+    },
+    {
+      "id": "fx-mene-zvut",
+      "title_de": "Sich vorstellen mit мене́ звуть"
+    }
+  ],
+  "explanation": {
+    "title_de": "Grüßen und sich vorstellen",
+    "intro_de": "In dieser Lektion lernst du, wie man auf Ukrainisch grüßt, nach dem Befinden fragt und sagt, wie man heißt.",
+    "sections": [
+      {
+        "heading_de": "Grüßen und Verabschieden",
+        "body_de": "Für Freunde und Familie sagt man **приві́т**. **До́брий день** ist neutral und höflich – damit liegt man nie falsch.\n\nZum Abschied sagt man **до поба́чення** (wörtlich „bis zum Wiedersehen“).",
+        "table": {
+          "head": [
+            "Ukrainisch",
+            "Deutsch",
+            "Wann?"
+          ],
+          "rows": [
+            [
+              "приві́т",
+              "hallo",
+              "locker"
+            ],
+            [
+              "до́брий день",
+              "guten Tag",
+              "neutral"
+            ],
+            [
+              "до поба́чення",
+              "auf Wiedersehen",
+              "Abschied"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "uk": "Приві́т, Окса́но!",
+            "de": "Hallo, Oksana!"
+          },
+          {
+            "uk": "До́брий день!",
+            "de": "Guten Tag!"
+          }
+        ]
+      },
+      {
+        "heading_de": "Wie heißt du?",
+        "body_de": "**Мене́ звуть …** bedeutet wörtlich „mich nennt man …“. Die Frage lautet **Як тебе́ звуть?** Der Name selbst bleibt unverändert.",
+        "examples": [
+          {
+            "uk": "Як тебе́ звуть?",
+            "de": "Wie heißt du?"
+          },
+          {
+            "uk": "Мене́ звуть Тара́с.",
+            "de": "Ich heiße Taras."
+          }
+        ]
+      },
+      {
+        "heading_de": "Anrede mit Vokativ",
+        "body_de": "Wenn man jemanden direkt anspricht, ändert sich die Endung des Namens: Окса́на → **Окса́но**, Тара́с → **Тара́се**. Das ist hier nur eine feste Wendung – mehr dazu später."
+      }
+    ],
+    "summary_de": [
+      "приві́т = locker, до́брий день = höflich",
+      "Мене́ звуть … = Ich heiße …"
+    ]
+  },
   "grammar": [
     {
       "title_de": "Grüßen: привіт und добрий день",

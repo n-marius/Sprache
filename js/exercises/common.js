@@ -243,3 +243,21 @@ export function revealToggle({ labelShow = 'Übersetzung zeigen', labelHide = '�
 }
 
 export { h, ukText, deText, icon };
+
+/** Anweisungs-Key je Aufgabe (ui-strings), Fallback für Module ohne eigenes instructionKey(). */
+export function instructionKey(ex) {
+  switch (ex.type) {
+    case 'mc_translate': return 'choose_translation';
+    case 'build_sentence': return ex.dir === 'uk-de' ? 'translate_to_de' : 'translate_to_uk';
+    case 'cloze': return 'fill_gap';
+    case 'chat': return 'chat';
+    case 'reading': return 'read_and_answer';
+    case 'listening': return ex.mode === 'build' ? 'listen_and_build' : 'listen_and_choose';
+    case 'speak': return 'say_aloud';
+    case 'match_pairs': return 'match_pairs';
+    case 'picture_choice': return 'choose_picture';
+    case 'true_false': return 'true_false';
+    case 'order_dialog': return 'order_dialog';
+    default: return 'check';
+  }
+}

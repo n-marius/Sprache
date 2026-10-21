@@ -141,6 +141,7 @@ const glossary = [
   g('Ки́єва', 'Ки́їв', 'Kyjiw', 'name', 'Gen. · Nom. Ки́їв'),
   g('Льво́ва', 'Львів', 'Lwiw', 'name', 'Gen. · Nom. Львів'),
   g('Оде́си', 'Оде́са', 'Odesa', 'name', 'Gen. · Nom. Оде́са'),
+  g('Як', 'як', 'wie', 'adv', 'Fragewort'),
   g('Офіціа́нт', 'офіціа́нт', 'Kellner', 'noun', 'Nom. Sg. m.'),
 ];
 
@@ -148,6 +149,20 @@ const V = (id, uk, de, pos, info, emoji, ex, forms = []) => ({ id, uk, de, pos, 
 const lesson1 = {
   id: 'a1-1-01', phase: 'A1.1', title_uk: 'Приві́т!', title_de: 'Hallo!', theme: 'greetings',
   goals_de: ['Ich kann grüßen und mich verabschieden.', 'Ich kann sagen, wie ich heiße.'],
+  concepts: [{ id: 'fx-gruss', title_de: 'Grüßen und Verabschieden' }, { id: 'fx-mene-zvut', title_de: 'Sich vorstellen mit мене́ звуть' }],
+  explanation: {
+    title_de: 'Grüßen und sich vorstellen',
+    intro_de: 'In dieser Lektion lernst du, wie man auf Ukrainisch grüßt, nach dem Befinden fragt und sagt, wie man heißt.',
+    sections: [
+      { heading_de: 'Grüßen und Verabschieden', body_de: 'Für Freunde und Familie sagt man **приві́т**. **До́брий день** ist neutral und höflich – damit liegt man nie falsch.\n\nZum Abschied sagt man **до поба́чення** (wörtlich „bis zum Wiedersehen“).',
+        table: { head: ['Ukrainisch', 'Deutsch', 'Wann?'], rows: [['приві́т', 'hallo', 'locker'], ['до́брий день', 'guten Tag', 'neutral'], ['до поба́чення', 'auf Wiedersehen', 'Abschied']] },
+        examples: [{ uk: 'Приві́т, Окса́но!', de: 'Hallo, Oksana!' }, { uk: 'До́брий день!', de: 'Guten Tag!' }] },
+      { heading_de: 'Wie heißt du?', body_de: '**Мене́ звуть …** bedeutet wörtlich „mich nennt man …“. Die Frage lautet **Як тебе́ звуть?** Der Name selbst bleibt unverändert.',
+        examples: [{ uk: 'Як тебе́ звуть?', de: 'Wie heißt du?' }, { uk: 'Мене́ звуть Тара́с.', de: 'Ich heiße Taras.' }] },
+      { heading_de: 'Anrede mit Vokativ', body_de: 'Wenn man jemanden direkt anspricht, ändert sich die Endung des Namens: Окса́на → **Окса́но**, Тара́с → **Тара́се**. Das ist hier nur eine feste Wendung – mehr dazu später.' },
+    ],
+    summary_de: ['приві́т = locker, до́брий день = höflich', 'Мене́ звуть … = Ich heiße …'],
+  },
   grammar: [
     { title_de: 'Grüßen: привіт und добрий день', body_de: '**Приві́т** ist locker (Freunde, Familie). **До́брий день** ist neutral-höflich und passt immer. Zum Abschied sagt man **до поба́чення**.', examples: [{ uk: 'До́брий день!', de: 'Guten Tag!' }, { uk: 'Приві́т, Окса́но!', de: 'Hallo, Oksana!' }] },
     { title_de: 'Sich vorstellen', body_de: '**Мене́ звуть …** heißt wörtlich „mich nennt man …“. Das Verb steht in der 3. Person Plural, der Name bleibt im Nominativ.', examples: [{ uk: 'Мене́ звуть Тара́с.', de: 'Ich heiße Taras.' }] },
@@ -213,6 +228,20 @@ const lesson1 = {
 const lesson2 = {
   id: 'a1-1-02', phase: 'A1.1', title_uk: 'У кав’я́рні', title_de: 'Im Café', theme: 'cafe',
   goals_de: ['Ich kann Getränke bestellen.', 'Ich kann sagen, was ich trinke.'],
+  concepts: [{ id: 'fx-akk-a', title_de: 'Akkusativ von Wörtern auf -а' }, { id: 'fx-pyty', title_de: 'Verb пи́ти im Präsens' }],
+  explanation: {
+    title_de: 'Im Café bestellen',
+    intro_de: 'Du lernst Getränke und das Verb пи́ти (trinken). Danach kannst du im Café bestellen.',
+    sections: [
+      { heading_de: 'Das Verb пи́ти', body_de: 'Im Präsens ändert sich der Stamm: **п’ю**, **п’єш**, **п’є**. Der Apostroph trennt die Laute: man spricht „pju“.',
+        table: { head: ['Person', 'Form'], rows: [['я', 'п’ю'], ['ти', 'п’єш'], ['він / вона́', 'п’є']] },
+        examples: [{ uk: 'Я п’ю чай.', de: 'Ich trinke Tee.' }, { uk: 'Ти п’єш молоко́?', de: 'Trinkst du Milch?' }] },
+      { heading_de: 'ка́ва → ка́ву', body_de: 'Was man trinkt oder bestellt, steht im **Akkusativ**. Weibliche Wörter auf **-а** enden dann auf **-у**. Männliche Dinge wie чай und хліб bleiben gleich.',
+        table: { head: ['Nominativ', 'Akkusativ'], rows: [['ка́ва', 'ка́ву'], ['вода́', 'во́ду'], ['чай', 'чай']] },
+        examples: [{ uk: 'Ка́ву, будь ла́ска.', de: 'Einen Kaffee, bitte.' }] },
+    ],
+    summary_de: ['я п’ю, ти п’єш, він п’є', '-а → -у im Akkusativ'],
+  },
   grammar: [
     { title_de: 'Akkusativ bei -а-Wörtern', body_de: 'Feminine Wörter auf **-а** enden im Akkusativ auf **-у**: ка́ва → **ка́ву**, вода́ → **во́ду**. Maskuline Dinge wie чай bleiben gleich.', examples: [{ uk: 'Я п’ю ка́ву.', de: 'Ich trinke Kaffee.' }, { uk: 'Я п’ю чай.', de: 'Ich trinke Tee.' }] },
     { title_de: 'пи́ти – trinken', body_de: 'я **п’ю**, ти **п’єш**, він/вона́ **п’є**. Achte auf den Apostroph in **п’ю**.', examples: [{ uk: 'Ти п’єш молоко́?', de: 'Trinkst du Milch?' }] },
