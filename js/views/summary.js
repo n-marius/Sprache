@@ -5,7 +5,7 @@ import { anim } from '../ui/anim.js';
 import { speakerButton } from '../ui/audio-button.js';
 import { startLesson } from '../engine/flow.js';
 import { MASTERY_LABELS } from '../engine/progress.js';
-import { ringSvg } from './today.js';
+import { ringSvg, sty } from './today.js';
 
 function fmtTime(ms) {
   const s = Math.max(0, Math.round((ms || 0) / 1000));
@@ -14,7 +14,7 @@ function fmtTime(ms) {
 }
 
 function tile(label, color, ink, valueEl) {
-  return h('div', { class: 'v-tile', style: { '--c': color, '--c-ink': ink } },
+  return h('div', { class: 'v-tile', style: sty({ '--c': color, '--c-ink': ink }) },
     h('div', { class: 'v-tile-k' }, label), h('div', { class: 'v-tile-v num' }, valueEl));
 }
 
@@ -43,7 +43,7 @@ export function render(params, app) {
 
   // Meisterschaft vorher → nachher
   const mb = s.masteryLevelBefore, ma = s.masteryLevelAfter;
-  const mastery = h('div', { class: 'v-mastery', style: { '--before': `${Math.round((s.masteryBefore || 0) * 100)}%`, '--after': `${Math.round((s.masteryAfter || 0) * 100)}%` } },
+  const mastery = h('div', { class: 'v-mastery', style: sty({ '--before': `${Math.round((s.masteryBefore || 0) * 100)}%`, '--after': `${Math.round((s.masteryAfter || 0) * 100)}%` }) },
     h('span', { class: 'v-mastery-before' }), h('span', { class: 'v-mastery-after' }));
   const levelText = mb && ma
     ? (ma.level > mb.level ? `${MASTERY_LABELS[mb.level]} → ${MASTERY_LABELS[ma.level]}` : `Stufe ${ma.level} · ${ma.label}`)
@@ -55,7 +55,7 @@ export function render(params, app) {
 
   const rows = [];
   if (isLesson) rows.push(h('div', { class: 'v-sum-row' },
-    h('span', { class: 'v-cta-glyph emoji', style: { '--theme-c': anim.themeColor?.(theme) || 'var(--green)', width: '52px', height: '52px', fontSize: '28px', borderRadius: '16px' } }, anim.themeGlyph(theme)),
+    h('span', { class: 'v-cta-glyph emoji', style: sty({ '--theme-c': anim.themeColor?.(theme) || 'var(--green)', width: '52px', height: '52px', fontSize: '28px', borderRadius: '16px' }) }, anim.themeGlyph(theme)),
     h('div', { class: 'v-sum-row-main' },
       h('div', { class: 'v-sum-row-title' }, 'Meisterschaft', levelText ? h('span', { class: 't-2 t-foot' }, ` · ${levelText}`) : null),
       h('div', { class: 'v-sum-row-sub' }, `${Math.round((s.masteryBefore || 0) * 100)} % → ${Math.round((s.masteryAfter || 0) * 100)} %`),

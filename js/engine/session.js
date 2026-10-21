@@ -269,6 +269,10 @@ export function createLessonSession(app, lessonId, opts = {}) {
       }
     }
   }
+  // Zu wenig Lektionsstoff (z. B. Tageslimit neuer Wörter erreicht) → mit alten Elementen auffüllen
+  if (core.length < C && before.size && !opts.type) {
+    old = old.concat(oldItems(app, { n: C - core.length, lessonIds: before, today, rng, excludeKeys: usedKeys }));
+  }
   core.sort((a, b) => a._p - b._p);
   let seq = spread(core);
 

@@ -2,7 +2,7 @@
 // Forschung (docs/research-immersion.md): Input zuerst, Erschließen vor Aufdecken (2–4 neue Wörter), Noticing erst im
 // zweiten Durchgang, Satz-Mining, Shadowing (hören → nachsprechen → hören), Übersetzung nur auf Wunsch.
 import { h, ukText, deText, icon } from '../ui/dom.js';
-import { page, toast, segmented } from '../ui/shell.js';
+import { page, toast } from '../ui/shell.js';
 import { anim } from '../ui/anim.js';
 import { speakerButton } from '../ui/audio-button.js';
 import { normalizeWord, tokenize } from '../lib/uk-text.js';

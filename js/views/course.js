@@ -2,6 +2,7 @@
 import { page } from '../ui/shell.js';
 import { h, icon, ukText, formatDateDE } from '../ui/dom.js';
 import { anim } from '../ui/anim.js';
+import { sty } from './today.js';
 import { lessonMastery, isUnlocked, nextLesson, dueCount, pacing } from '../engine/progress.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -68,7 +69,7 @@ function lessonNode(app, meta, i, status, phaseColor) {
       : m.level >= 4 ? h('span', { class: 'v-node-crown' }, icon('star', { fill: true })) : null;
   return h('a', {
     class: ['v-node', `is-${status}`], href: `#/lesson/${encodeURIComponent(meta.id)}`,
-    style: { '--x': `${x}px`, '--theme-c': color, top: `${i * ROW}px` },
+    style: sty({ '--x': `${x}px`, '--theme-c': color, top: `${i * ROW}px` }),
     'aria-label': `Lektion ${meta.index + 1}: ${meta.title_de}${status === 'planned' ? ' (geplant)' : ''}`,
     dataset: { id: meta.id },
   },
@@ -87,7 +88,7 @@ function phaseInfo(app, p, idx, color) {
   const done = p.lessons.filter(l => app.store.state.lessons?.[l.id]?.completedAt).length;
   const frac = p.lessons.length ? done / p.lessons.length : 0;
   const mast = ready.length ? ready.reduce((s, l) => s + lessonMastery(app, l.id).fraction, 0) / p.lessons.length : 0;
-  return h('div', { class: 'v-phase-info', style: { '--phase-c': color } },
+  return h('div', { class: 'v-phase-info', style: sty({ '--phase-c': color }) },
     h('div', { class: 'v-phase-top' },
       h('span', { class: 'v-phase-id' }, p.id),
       h('span', { class: 'v-phase-dates' }, icon('calendar'), fmtRange(p))),
@@ -95,7 +96,7 @@ function phaseInfo(app, p, idx, color) {
     h('div', { class: 'v-phase-de' }, p.title_de),
     p.summary_de ? h('p', { class: 'v-phase-sum' }, p.summary_de) : null,
     h('div', { class: 'v-phase-progress' },
-      h('div', { class: 'progress is-thin' }, h('div', { class: 'progress-fill', style: { '--p': `${Math.round(frac * 100)}%`, background: '#fff' } })),
+      h('div', { class: 'progress is-thin' }, h('div', { class: 'progress-fill', style: sty({ '--p': `${Math.round(frac * 100)}%`, background: '#fff' }) })),
       h('div', { class: 'v-phase-stats' },
         h('span', h('strong', { class: 'num' }, String(done)), ` / ${p.lessons.length} Lektionen`),
         ready.length < p.lessons.length ? h('span', `${p.lessons.length - ready.length} geplant`) : h('span', `${Math.round(mast * 100)} % Meisterschaft`))));
@@ -113,7 +114,7 @@ export function render(params, app) {
     const path = h('div', { class: 'v-path', style: { height: `${p.lessons.length * ROW}px`, width: `${PATH_W}px` } },
       pathSvg(p.lessons.length, lastDone),
       p.lessons.map((l, i) => lessonNode(app, l, i, statuses[i], color)));
-    return h('section', { class: 'v-phase', style: { '--phase-c': color }, dataset: { phase: p.id } },
+    return h('section', { class: 'v-phase', style: sty({ '--phase-c': color }), dataset: { phase: p.id } },
       h('aside', { class: 'v-phase-aside' }, phaseInfo(app, p, idx, color)),
       h('div', { class: 'v-path-wrap' }, path));
   });

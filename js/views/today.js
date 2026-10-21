@@ -10,6 +10,12 @@ import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
+/** Style-Objekt (inkl. CSS-Variablen) → style-String (h() setzt Custom Properties per Object.assign nicht). */
+export function sty(obj) {
+  return Object.entries(obj).filter(([, v]) => v != null && v !== '')
+    .map(([k, v]) => `${k.startsWith('--') ? k : k.replace(/[A-Z]/g, m => '-' + m.toLowerCase())}:${v}`).join(';');
+}
+
 /** SVG-Ring (0..1). */
 export function ringSvg(fraction, { size = 120, stroke = 12, cls = '' } = {}) {
   const r = (size - stroke) / 2, c = 2 * Math.PI * r;
@@ -111,17 +117,17 @@ function ctaCard(app, stats) {
     const color = anim.themeColor ? anim.themeColor(meta.theme) : 'var(--green)';
     const n = (meta.index ?? 0) + 1;
     el.append(
-      h('a', { class: 'v-cta-lesson', href: `#/lesson/${encodeURIComponent(meta.id)}`, style: { '--theme-c': color } },
+      h('a', { class: 'v-cta-lesson', href: `#/lesson/${encodeURIComponent(meta.id)}`, style: sty({ '--theme-c': color }) },
         h('span', { class: 'v-cta-glyph emoji' }, anim.themeGlyph(meta.theme)),
         h('span', { class: 'v-cta-info' },
           h('span', { class: 'v-cta-cap' }, `${fresh ? 'Als Nächstes' : 'Weiter mit'} · Lektion ${n}`),
           ukText(meta.title_uk, { tap: false, cls: 'v-cta-title' }),
           h('span', { class: 'v-cta-de' }, meta.title_de),
-          h('span', { class: 'progress is-thin v-cta-bar' }, h('span', { class: 'progress-fill', style: { '--p': `${Math.round(m.fraction * 100)}%` } }))),
+          h('span', { class: 'progress is-thin v-cta-bar' }, h('span', { class: 'progress-fill', style: sty({ '--p': `${Math.round(m.fraction * 100)}%` }) }))),
         icon('chevron-right', { cls: 'v-cta-chev' })),
       h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block v-cta-go', on: { click: () => startLesson(app, meta.id) } },
         icon('play', { fill: true }), stats.newAvailable > 0 ? (fresh ? 'Lektion starten' : 'Weiterlernen') : 'Weiter üben'),
-      stats.reviewDay ? h('p', { class: 'v-cta-hint' }, 'Heute ist Wiederholungstag – erst das Fällige, dann Neues.') : null);
+      ...(stats.reviewDay ? [h('p', { class: 'v-cta-hint' }, 'Heute ist Wiederholungstag – erst das Fällige, dann Neues.')] : []));
   }
   const learned = vocabStats(app).introduced;
   const due = stats.dueCount;
@@ -149,7 +155,7 @@ function pacingCard(p) {
         h('div', { class: 't-foot t-2' }, `noch ${p.daysLeft} Tage`)),
       h('span', { class: ['badge', cls, 'v-pace-badge'] }, statusText)),
     h('div', { class: 'v-pace-bar' },
-      h('div', { class: 'progress' }, h('div', { class: 'progress-fill', style: { '--p': `${(p.fraction * 100).toFixed(1)}%` } })),
+      h('div', { class: 'progress' }, h('div', { class: 'progress-fill', style: sty({ '--p': `${(p.fraction * 100).toFixed(1)}%` }) })),
       h('span', { class: 'v-pace-mark', style: { left: `${(p.expectedFraction * 100).toFixed(1)}%` }, title: 'Soll heute' })),
     h('div', { class: 'v-pace-legend t-foot t-2' },
       h('span', h('strong', { class: 'num' }, `${p.lessonsDone}`), ` von ${p.lessonsTotal} Lektionen`),
@@ -163,7 +169,7 @@ function pacingCard(p) {
 }
 
 function statTile(label, value, sub, color, ic) {
-  return h('div', { class: 'v-stat', style: { '--c': color } },
+  return h('div', { class: 'v-stat', style: sty({ '--c': color }) },
     h('span', { class: 'v-stat-icon' }, icon(ic)),
     h('span', { class: 'v-stat-val num' }, value),
     h('span', { class: 'v-stat-label' }, label),
