@@ -1,0 +1,798 @@
+{
+ "id": "a1-1-02",
+ "phase": "A1.1",
+ "title_uk": "Як тебе́ зва́ти?",
+ "title_de": "Wie heißt du?",
+ "theme": "people",
+ "goals_de": [
+  "Ich kann mich mit Namen, Herkunft und Sprachen vorstellen.",
+  "Ich kann andere nach Namen und Herkunft fragen.",
+  "Ich kann sagen, dass ich etwas (nicht) verstehe."
+ ],
+ "concepts": [
+  {
+   "id": "nullkopula",
+   "title_de": "Kein „sein“ im Präsens: Я Ма́ркус. Це Окса́на."
+  },
+  {
+   "id": "pronomen-nom",
+   "title_de": "Personalpronomen im Nominativ"
+  },
+  {
+   "id": "verneinung-ne",
+   "title_de": "Verneinung mit не"
+  },
+  {
+   "id": "fragen-1",
+   "title_de": "Fragen: Intonation (Ja/Nein) und хто, що, зві́дки"
+  },
+  {
+   "id": "chunk-zvaty",
+   "title_de": "Chunk: Мене́ / тебе́ / вас / його́ / її́ зва́ти …"
+  },
+  {
+   "id": "chunk-z-krainy",
+   "title_de": "Chunk: Я з Німе́ччини / з Украї́ни / з А́встрії"
+  },
+  {
+   "id": "chunk-rozmovliaty",
+   "title_de": "Chunk: розмовля́ю / розмовля́єш / розмовля́єте украї́нською …; (не) розумі́ю"
+  }
+ ],
+ "explanation": {
+  "title_de": "Sich vorstellen: Name, Herkunft, Sprachen",
+  "intro_de": "Markus lernt im Kyjiwer Büro seine Kollegin Oksana und den Büroleiter Herrn Bondarenko kennen. Danach kann man sich mit Namen vorstellen, nach Herkunft und Sprachen fragen und sagen, dass man etwas nicht versteht. Dazu kommen Personalpronomen, Verneinung und einfache Fragen.",
+  "sections": [
+   {
+    "heading_de": "Kein „sein“ im Präsens",
+    "body_de": "Im Präsens fällt „sein“ im Ukrainischen einfach weg: **Я Ма́ркус.** = Ich (bin) Markus. **Це Окса́на.** = Das (ist) Oksana. **це** heißt „das/dies“ und bleibt immer gleich. Stehen zwei Nomen nebeneinander, schreibt man dazwischen einen Gedankenstrich: **Тара́с — друг.**",
+    "examples": [
+     {
+      "uk": "Я Ма́ркус.",
+      "de": "Ich bin Markus."
+     },
+     {
+      "uk": "Це пан Бондаре́нко.",
+      "de": "Das ist Herr Bondarenko."
+     },
+     {
+      "uk": "Ви па́ні Ковале́нко?",
+      "de": "Sind Sie Frau Kowalenko?"
+     },
+     {
+      "uk": "Тара́с — друг.",
+      "de": "Taras ist ein Freund."
+     }
+    ]
+   },
+   {
+    "heading_de": "Personalpronomen (Nominativ)",
+    "body_de": "Der **Nominativ** ist die Grundform – der Fall des Satzsubjekts (wer?). **ви** hat zwei Bedeutungen: höflich „Sie“ zu einer Person und „ihr“ zu mehreren. **вона́** ist „sie“ für eine Person, **вони́** „sie“ für mehrere. (воно́ = „es“ folgt mit dem Genus in Lektion 4.)",
+    "table": {
+     "head": [
+      "ukrainisch",
+      "deutsch"
+     ],
+     "rows": [
+      [
+       "я",
+       "ich"
+      ],
+      [
+       "ти",
+       "du (informell)"
+      ],
+      [
+       "він",
+       "er"
+      ],
+      [
+       "вона́",
+       "sie (eine Person)"
+      ],
+      [
+       "ми",
+       "wir"
+      ],
+      [
+       "ви",
+       "ihr; Sie (höflich)"
+      ],
+      [
+       "вони́",
+       "sie (mehrere)"
+      ]
+     ]
+    }
+   },
+   {
+    "heading_de": "Sich vorstellen: Мене́ зва́ти …",
+    "body_de": "**Мене́ зва́ти …** ist eine **feste Wendung** und heißt wörtlich „mich nennt man …“. Darum steht nicht я, sondern **мене́** (mich). Für Fragen tauscht man nur dieses erste Wort aus. Diese Formen (Akkusativ = Fall für „wen?“) werden hier als Ganzes gelernt; die Grammatik folgt später. Kürzer geht auch **Я Ма́ркус.** Auf eine Vorstellung antwortet man **Ду́же приє́мно!** (wörtl. „sehr angenehm“) = Freut mich!",
+    "table": {
+     "head": [
+      "über wen?",
+      "Frage",
+      "Antwort"
+     ],
+     "rows": [
+      [
+       "ich",
+       "–",
+       "**Мене́** зва́ти Ма́ркус."
+      ],
+      [
+       "du",
+       "Як **тебе́** зва́ти?",
+       "Мене́ зва́ти …"
+      ],
+      [
+       "Sie",
+       "Як **вас** зва́ти?",
+       "Мене́ зва́ти …"
+      ],
+      [
+       "er",
+       "Як **його́** зва́ти?",
+       "**Його́** зва́ти Тара́с."
+      ],
+      [
+       "sie",
+       "Як **її́** зва́ти?",
+       "**Її́** зва́ти Окса́на."
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Як вас зва́ти? – Мене́ зва́ти Ма́ркус Шмідт.",
+      "de": "Wie heißen Sie? – Ich heiße Markus Schmidt."
+     },
+     {
+      "uk": "Ду́же приє́мно!",
+      "de": "Freut mich!"
+     }
+    ]
+   },
+   {
+    "heading_de": "Herkunft: Я з …",
+    "body_de": "**Зві́дки ти?** / **Зві́дки ви?** = Woher kommst du / kommen Sie? Die Antwort ist eine **feste Wendung** mit **з** (aus). Der Ländername bekommt dabei eine andere Endung (Genitiv = Fall nach „aus/von“; systematisch erst in A1.2). Vorerst nur diese drei Formeln lernen. Für andere Personen bleibt die Formel gleich: **Вона́ з Украї́ни.**",
+    "table": {
+     "head": [
+      "Land",
+      "Ich komme aus …"
+     ],
+     "rows": [
+      [
+       "Німе́ччина (Deutschland)",
+       "Я **з Німе́ччини**."
+      ],
+      [
+       "Украї́на (Ukraine)",
+       "Я **з Украї́ни**."
+      ],
+      [
+       "А́встрія (Österreich)",
+       "Я **з А́встрії**."
+      ]
+     ]
+    }
+   },
+   {
+    "heading_de": "Sprachen und Verstehen",
+    "body_de": "**розмовля́ти** = (eine Sprache) sprechen, sich unterhalten; **розумі́ти** = verstehen. Vorerst nur die Formen für я, ти und ви als Formeln – die ganze Konjugation folgt in Lektion 5. Die Sprache steht als **украї́нською, німе́цькою, англі́йською** (wörtl. „auf …-isch“; feste Form, der Instrumental kommt in A1.2). **тро́хи** = ein bisschen.",
+    "table": {
+     "head": [
+      "",
+      "sprechen",
+      "verstehen"
+     ],
+     "rows": [
+      [
+       "я",
+       "розмовля́**ю**",
+       "розумі́**ю**"
+      ],
+      [
+       "ти",
+       "розмовля́**єш**",
+       "розумі́**єш**"
+      ],
+      [
+       "ви",
+       "розмовля́**єте**",
+       "розумі́**єте**"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Ти розмовля́єш украї́нською? – Тро́хи.",
+      "de": "Sprichst du Ukrainisch? – Ein bisschen."
+     },
+     {
+      "uk": "Я розмовля́ю німе́цькою й англі́йською.",
+      "de": "Ich spreche Deutsch und Englisch."
+     },
+     {
+      "uk": "Ви́бачте, я не розумі́ю.",
+      "de": "Entschuldigung, ich verstehe nicht."
+     }
+    ]
+   },
+   {
+    "heading_de": "Verneinung und Fragen",
+    "body_de": "**не** (nicht) steht direkt vor dem verneinten Wort: **Я не розумі́ю. Це не Окса́на. Я не з А́встрії.** Nicht verwechseln: **ні** = nein (als Antwort).\n\n**Ja/Nein-Fragen** entstehen nur durch die Stimme: Wortstellung wie in der Aussage, die Stimme steigt auf dem wichtigen Wort: **Ти з Украї́ни?** In formellen Fragen steht manchmal **чи** am Anfang: **Чи ви розмовля́єте англі́йською?** **Fragewörter** stehen vorn: **хто** (wer), **що** (was), **зві́дки** (woher), **як** (wie).",
+    "examples": [
+     {
+      "uk": "Хто це? – Це Окса́на.",
+      "de": "Wer ist das? – Das ist Oksana."
+     },
+     {
+      "uk": "Що це? – Це ка́ва.",
+      "de": "Was ist das? – Das ist Kaffee."
+     },
+     {
+      "uk": "Ти Тара́с? – Ні, я Ма́ркус.",
+      "de": "Bist du Taras? – Nein, ich bin Markus."
+     }
+    ]
+   },
+   {
+    "heading_de": "Anrede und Bekannte: пан, па́ні, друг, по́друга",
+    "body_de": "**пан** (Herr) und **па́ні** (Frau) stehen vor dem Familiennamen (auch vor dem Vornamen) und passen zum Siezen: **пан Бондаре́нко, па́ні Ковале́нко**. **па́ні** bleibt immer gleich. Spricht man jemanden direkt an, ändert sich die Form (Vokativ, erst in A1.2) – hier sprechen wir nur über Personen: **Це пан Бондаре́нко.** **друг** = Freund (befreundet), **по́друга** = Freundin: **Окса́на — по́друга.** („mein Freund“ folgt in Lektion 4.)"
+   }
+  ],
+  "summary_de": [
+   "Kein „sein“ im Präsens: Я Ма́ркус. Це Окса́на.",
+   "Мене́ / тебе́ / вас / його́ / її́ зва́ти … ist eine feste Wendung; nur das erste Wort wechselt.",
+   "Herkunft als Formel: Я з Німе́ччини / з Украї́ни / з А́встрії.",
+   "я розмовля́ю, ти розмовля́єш, ви розмовля́єте + украї́нською …; я (не) розумі́ю, ти розумі́єш, ви розумі́єте.",
+   "не = nicht (vor dem Wort), ні = nein.",
+   "Ja/Nein-Frage = Aussage mit steigender Stimme."
+  ]
+ },
+ "grammar": [
+  {
+   "title_de": "Ohne „sein“",
+   "body_de": "Im Präsens gibt es kein „bin/ist/sind“: Pronomen oder Name + Name/Nomen. Zwischen zwei Nomen steht ein Gedankenstrich.",
+   "examples": [
+    {
+     "uk": "Я Ма́ркус.",
+     "de": "Ich bin Markus."
+    },
+    {
+     "uk": "Це Окса́на.",
+     "de": "Das ist Oksana."
+    },
+    {
+     "uk": "Тара́с — друг.",
+     "de": "Taras ist ein Freund."
+    }
+   ]
+  },
+  {
+   "title_de": "не oder ні?",
+   "body_de": "**не** = nicht, steht direkt vor dem verneinten Wort. **ні** = nein, steht als Antwort am Satzanfang.",
+   "examples": [
+    {
+     "uk": "Я не розумі́ю.",
+     "de": "Ich verstehe nicht."
+    },
+    {
+     "uk": "Ні, я не з А́встрії.",
+     "de": "Nein, ich komme nicht aus Österreich."
+    }
+   ]
+  },
+  {
+   "title_de": "… зва́ти: nur das erste Wort wechselt",
+   "body_de": "мене́ (mich), тебе́ (dich), вас (Sie), його́ (ihn), її́ (sie) + зва́ти. Feste Wendung – wörtlich „mich nennt man“.",
+   "examples": [
+    {
+     "uk": "Мене́ зва́ти Ма́ркус.",
+     "de": "Ich heiße Markus."
+    },
+    {
+     "uk": "Як вас зва́ти?",
+     "de": "Wie heißen Sie?"
+    },
+    {
+     "uk": "Як її́ зва́ти?",
+     "de": "Wie heißt sie?"
+    }
+   ]
+  },
+  {
+   "title_de": "Sprachen",
+   "body_de": "я розмовля́ю, ти розмовля́єш, ви розмовля́єте + украї́нською / німе́цькою / англі́йською. Genauso: я розумі́ю, ти розумі́єш, ви розумі́єте.",
+   "examples": [
+    {
+     "uk": "Ви розмовля́єте англі́йською?",
+     "de": "Sprechen Sie Englisch?"
+    },
+    {
+     "uk": "Я тро́хи розмовля́ю украї́нською.",
+     "de": "Ich spreche ein bisschen Ukrainisch."
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  {
+   "id": "mene_zvaty",
+   "uk": "Мене́ зва́ти …",
+   "de": "Ich heiße …",
+   "pos": "phrase",
+   "info": "feste Wendung (wörtl. „mich nennt man …“)",
+   "example": {
+    "uk": "Мене́ зва́ти Ма́ркус.",
+    "de": "Ich heiße Markus."
+   }
+  },
+  {
+   "id": "yak_tebe_zvaty",
+   "uk": "Як тебе́ зва́ти?",
+   "de": "Wie heißt du?",
+   "pos": "phrase",
+   "info": "feste Wendung; informell (ти)",
+   "example": {
+    "uk": "Приві́т! Як тебе́ зва́ти?",
+    "de": "Hallo! Wie heißt du?"
+   }
+  },
+  {
+   "id": "yak_vas_zvaty",
+   "uk": "Як вас зва́ти?",
+   "de": "Wie heißen Sie?",
+   "pos": "phrase",
+   "info": "feste Wendung; höflich (ви), auch: Wie heißt ihr?",
+   "example": {
+    "uk": "До́брий день! Як вас зва́ти?",
+    "de": "Guten Tag! Wie heißen Sie?"
+   }
+  },
+  {
+   "id": "duzhe_pryiemno",
+   "uk": "Ду́же приє́мно!",
+   "de": "Freut mich!",
+   "pos": "phrase",
+   "info": "feste Wendung (wörtl. „sehr angenehm“)",
+   "emoji": "🤝",
+   "example": {
+    "uk": "Мене́ зва́ти Окса́на. – Ду́же приє́мно!",
+    "de": "Ich heiße Oksana. – Freut mich!"
+   }
+  },
+  {
+   "id": "vin",
+   "uk": "він",
+   "de": "er",
+   "pos": "pron",
+   "info": "Personalpronomen, 3. Sg. m.",
+   "example": {
+    "uk": "Це Ма́ркус. Він з Німе́ччини.",
+    "de": "Das ist Markus. Er kommt aus Deutschland."
+   }
+  },
+  {
+   "id": "vona",
+   "uk": "вона́",
+   "de": "sie (eine Person)",
+   "pos": "pron",
+   "info": "Personalpronomen, 3. Sg. f.",
+   "example": {
+    "uk": "Це Окса́на. Вона́ з Украї́ни.",
+    "de": "Das ist Oksana. Sie kommt aus der Ukraine."
+   }
+  },
+  {
+   "id": "my",
+   "uk": "ми",
+   "de": "wir",
+   "pos": "pron",
+   "info": "Personalpronomen, 1. Pl.",
+   "example": {
+    "uk": "Ми з Німе́ччини.",
+    "de": "Wir kommen aus Deutschland."
+   }
+  },
+  {
+   "id": "vony",
+   "uk": "вони́",
+   "de": "sie (mehrere)",
+   "pos": "pron",
+   "info": "Personalpronomen, 3. Pl.",
+   "example": {
+    "uk": "Лау́ра і То́мас з А́встрії. Вони́ — дру́зі.",
+    "de": "Laura und Thomas kommen aus Österreich. Sie sind Freunde."
+   }
+  },
+  {
+   "id": "khto",
+   "uk": "хто",
+   "de": "wer (Fragewort)",
+   "pos": "pron",
+   "info": "Fragewort für Personen",
+   "example": {
+    "uk": "Хто це? – Це пан Бондаре́нко.",
+    "de": "Wer ist das? – Das ist Herr Bondarenko."
+   }
+  },
+  {
+   "id": "shcho",
+   "uk": "що",
+   "de": "was (Fragewort)",
+   "pos": "pron",
+   "info": "Fragewort für Sachen; auch Konjunktion „dass“",
+   "example": {
+    "uk": "Що це? – Це ка́ва.",
+    "de": "Was ist das? – Das ist Kaffee."
+   }
+  },
+  {
+   "id": "tse",
+   "uk": "це",
+   "de": "das (ist), dies (ist)",
+   "pos": "pron",
+   "info": "unveränderlich; Це … = Das ist …",
+   "example": {
+    "uk": "Це Окса́на Ковале́нко.",
+    "de": "Das ist Oksana Kowalenko."
+   }
+  },
+  {
+   "id": "zvidky",
+   "uk": "зві́дки",
+   "de": "woher",
+   "pos": "adv",
+   "info": "Fragewort",
+   "example": {
+    "uk": "Зві́дки ти? – Я з Німе́ччини.",
+    "de": "Woher kommst du? – Aus Deutschland."
+   }
+  },
+  {
+   "id": "nimechchyna",
+   "uk": "Німе́ччина",
+   "de": "Deutschland",
+   "pos": "name",
+   "info": "f.; Я з Німе́ччини = Ich komme aus Deutschland.",
+   "emoji": "🇩🇪",
+   "example": {
+    "uk": "Ма́ркус з Німе́ччини.",
+    "de": "Markus kommt aus Deutschland."
+   },
+   "forms": [
+    {
+     "uk": "Німе́ччини",
+     "info": "Gen. Sg.; nur in з Німе́ччини (aus Deutschland)"
+    }
+   ]
+  },
+  {
+   "id": "ukraina",
+   "uk": "Украї́на",
+   "de": "Ukraine",
+   "pos": "name",
+   "info": "f.; Я з Украї́ни = Ich komme aus der Ukraine.",
+   "emoji": "🇺🇦",
+   "example": {
+    "uk": "Окса́на з Украї́ни.",
+    "de": "Oksana kommt aus der Ukraine."
+   },
+   "forms": [
+    {
+     "uk": "Украї́ни",
+     "info": "Gen. Sg.; nur in з Украї́ни (aus der Ukraine)"
+    }
+   ]
+  },
+  {
+   "id": "ne",
+   "uk": "не",
+   "de": "nicht",
+   "pos": "part",
+   "info": "steht direkt vor dem verneinten Wort",
+   "example": {
+    "uk": "Я не розумі́ю.",
+    "de": "Ich verstehe nicht."
+   }
+  },
+  {
+   "id": "rozmovliaty",
+   "uk": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "Inf.; bisher als Formeln: я розмовля́ю, ти розмовля́єш, ви розмовля́єте (Konjugation: Lektion 5)",
+   "example": {
+    "uk": "Я розмовля́ю німе́цькою.",
+    "de": "Ich spreche Deutsch."
+   },
+   "forms": [
+    {
+     "uk": "розмовля́ю",
+     "info": "1. Sg. Präs. (я)"
+    },
+    {
+     "uk": "розмовля́єш",
+     "info": "2. Sg. Präs. (ти)"
+    },
+    {
+     "uk": "розмовля́єте",
+     "info": "2. Pl. Präs. (ви)"
+    }
+   ]
+  },
+  {
+   "id": "ukrainskoiu",
+   "uk": "украї́нською",
+   "de": "(auf) Ukrainisch",
+   "pos": "adv",
+   "info": "feste Form (Instr. f. von украї́нська мо́ва); розмовля́ти украї́нською",
+   "emoji": "🇺🇦",
+   "example": {
+    "uk": "Ти розмовля́єш украї́нською?",
+    "de": "Sprichst du Ukrainisch?"
+   }
+  },
+  {
+   "id": "nimetskoiu",
+   "uk": "німе́цькою",
+   "de": "(auf) Deutsch",
+   "pos": "adv",
+   "info": "feste Form (Instr. f. von німе́цька мо́ва); розмовля́ти німе́цькою",
+   "emoji": "🇩🇪",
+   "example": {
+    "uk": "Ви розмовля́єте німе́цькою?",
+    "de": "Sprechen Sie Deutsch?"
+   }
+  },
+  {
+   "id": "anhliiskoiu",
+   "uk": "англі́йською",
+   "de": "(auf) Englisch",
+   "pos": "adv",
+   "info": "feste Form (Instr. f. von англі́йська мо́ва); розмовля́ти англі́йською",
+   "example": {
+    "uk": "Я розмовля́ю англі́йською.",
+    "de": "Ich spreche Englisch."
+   }
+  },
+  {
+   "id": "trokhy",
+   "uk": "тро́хи",
+   "de": "ein bisschen",
+   "pos": "adv",
+   "info": "",
+   "example": {
+    "uk": "Я тро́хи розмовля́ю украї́нською.",
+    "de": "Ich spreche ein bisschen Ukrainisch."
+   }
+  },
+  {
+   "id": "rozumity",
+   "uk": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "Inf.; bisher als Formeln: я розумі́ю, ти розумі́єш, ви розумі́єте (Konjugation: Lektion 5)",
+   "example": {
+    "uk": "Ви́бачте, я не розумі́ю.",
+    "de": "Entschuldigung, ich verstehe nicht."
+   },
+   "forms": [
+    {
+     "uk": "розумі́ю",
+     "info": "1. Sg. Präs. (я)"
+    },
+    {
+     "uk": "розумі́єш",
+     "info": "2. Sg. Präs. (ти)"
+    },
+    {
+     "uk": "розумі́єте",
+     "info": "2. Pl. Präs. (ви)"
+    }
+   ]
+  },
+  {
+   "id": "pan",
+   "uk": "пан",
+   "de": "Herr (Anrede)",
+   "pos": "noun",
+   "info": "m.; vor dem Namen: пан Бондаре́нко",
+   "example": {
+    "uk": "Це пан Бондаре́нко.",
+    "de": "Das ist Herr Bondarenko."
+   }
+  },
+  {
+   "id": "pani",
+   "uk": "па́ні",
+   "de": "Frau (Anrede)",
+   "pos": "noun",
+   "info": "f., unveränderlich; vor dem Namen: па́ні Ковале́нко",
+   "example": {
+    "uk": "Це па́ні Ковале́нко.",
+    "de": "Das ist Frau Kowalenko."
+   }
+  },
+  {
+   "id": "druh",
+   "uk": "друг",
+   "de": "Freund (befreundet)",
+   "pos": "noun",
+   "info": "m.; Pl. дру́зі",
+   "example": {
+    "uk": "Тара́с — друг.",
+    "de": "Taras ist ein Freund."
+   },
+   "forms": [
+    {
+     "uk": "дру́зі",
+     "info": "Nom. Pl."
+    }
+   ]
+  },
+  {
+   "id": "podruha",
+   "uk": "по́друга",
+   "de": "Freundin (befreundet)",
+   "pos": "noun",
+   "info": "f.",
+   "example": {
+    "uk": "Окса́на — по́друга.",
+    "de": "Oksana ist eine Freundin."
+   }
+  }
+ ],
+ "glossary": [
+  {
+   "uk": "мене́",
+   "lemma": "я",
+   "de": "mich",
+   "pos": "pron",
+   "info": "Akk. von я; hier nur in Мене́ зва́ти …"
+  },
+  {
+   "uk": "тебе́",
+   "lemma": "ти",
+   "de": "dich",
+   "pos": "pron",
+   "info": "Akk. von ти; hier nur in Як тебе́ зва́ти?"
+  },
+  {
+   "uk": "вас",
+   "lemma": "ви",
+   "de": "Sie; euch",
+   "pos": "pron",
+   "info": "Akk. von ви; hier nur in Як вас зва́ти?"
+  },
+  {
+   "uk": "його́",
+   "lemma": "він",
+   "de": "ihn",
+   "pos": "pron",
+   "info": "Akk. von він; hier nur in Як його́ зва́ти? (ab Lektion 4 auch „sein“)"
+  },
+  {
+   "uk": "її́",
+   "lemma": "вона́",
+   "de": "sie (Akk.)",
+   "pos": "pron",
+   "info": "Akk. von вона́; hier nur in Як її́ зва́ти? (ab Lektion 4 auch „ihr“)"
+  },
+  {
+   "uk": "зва́ти",
+   "lemma": "зва́ти",
+   "de": "nennen, rufen",
+   "pos": "verb",
+   "info": "Inf.; feste Wendung Мене́ зва́ти … = Ich heiße …"
+  },
+  {
+   "uk": "приє́мно",
+   "lemma": "приє́мно",
+   "de": "angenehm",
+   "pos": "adv",
+   "info": "in Ду́же приє́мно! = Freut mich!"
+  },
+  {
+   "uk": "А́встрії",
+   "lemma": "А́встрія",
+   "de": "Österreich",
+   "pos": "name",
+   "info": "Gen. Sg.; nur in з А́встрії (aus Österreich)"
+  },
+  {
+   "uk": "воно́",
+   "lemma": "воно́",
+   "de": "es",
+   "pos": "pron",
+   "info": "Personalpronomen, 3. Sg. n. (ab Lektion 4)"
+  },
+  {
+   "uk": "ка́ва",
+   "lemma": "ка́ва",
+   "de": "Kaffee",
+   "pos": "noun",
+   "info": "f., Nom. Sg."
+  },
+  {
+   "uk": "все",
+   "lemma": "все",
+   "de": "alles",
+   "pos": "pron",
+   "info": "Variante усе́; не все = nicht alles"
+  },
+  {
+   "uk": "ви́бач",
+   "lemma": "ви́бачити",
+   "de": "Entschuldigung! (zu einer Person, du)",
+   "pos": "verb",
+   "info": "Imperativ 2. Sg.; höflich: ви́бачте"
+  },
+  {
+   "uk": "Ві́ктор",
+   "lemma": "Ві́ктор",
+   "de": "Wiktor",
+   "pos": "name",
+   "info": "männl. Vorname"
+  },
+  {
+   "uk": "Бондаре́нко",
+   "lemma": "Бондаре́нко",
+   "de": "Bondarenko",
+   "pos": "name",
+   "info": "Familienname"
+  },
+  {
+   "uk": "мо́ва",
+   "lemma": "мо́ва",
+   "de": "Sprache",
+   "pos": "noun",
+   "info": "f., Nom. Sg."
+  },
+  {
+   "uk": "украї́нська",
+   "lemma": "украї́нська",
+   "de": "ukrainische",
+   "pos": "adj",
+   "info": "f. Nom. Sg.; украї́нська мо́ва = die ukrainische Sprache"
+  },
+  {
+   "uk": "німе́цька",
+   "lemma": "німе́цька",
+   "de": "deutsche",
+   "pos": "adj",
+   "info": "f. Nom. Sg.; німе́цька мо́ва = die deutsche Sprache"
+  },
+  {
+   "uk": "англі́йська",
+   "lemma": "англі́йська",
+   "de": "englische",
+   "pos": "adj",
+   "info": "f. Nom. Sg.; англі́йська мо́ва = die englische Sprache"
+  },
+  {
+   "uk": "до́брий",
+   "lemma": "до́брий",
+   "de": "gut",
+   "pos": "adj",
+   "info": "m. Nom. Sg.; in до́брий день / ве́чір"
+  },
+  {
+   "uk": "день",
+   "lemma": "день",
+   "de": "Tag",
+   "pos": "noun",
+   "info": "m., Nom. Sg."
+  },
+  {
+   "uk": "тут",
+   "lemma": "тут",
+   "de": "hier",
+   "pos": "adv",
+   "info": ""
+  }
+ ],
+ "exercises": []
+}

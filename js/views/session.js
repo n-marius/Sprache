@@ -280,8 +280,10 @@ export function render(params, app) {
     } else if (kind === 'bad') {
       glyph = h('div', { class: 'sess-fb-glyph is-bad' }, icon('x'));
       title = h('div', { class: 'sess-fb-title' }, ukText(T('correct_answer').uk, { tap: false }), hints ? h('span', { class: 'sess-fb-title-de' }, T('correct_answer').de) : null);
-      if (r.solution_uk) details.push(h('div', { class: 'sess-fb-sol is-strong' }, ukText(r.solution_uk), speakerButton(r.solution_uk, { size: 's' })));
-      if (r.solution_de) details.push(deText(r.solution_de, { tag: 'div', cls: 'sess-fb-de' }));
+      const deFirst = ex?.dir === 'uk-de' && r.solution_de; // Zielsprache Deutsch → deutsche Lösung hervorheben
+      if (deFirst) details.push(deText(r.solution_de, { tag: 'div', cls: 'sess-fb-sol is-strong' }));
+      if (r.solution_uk) details.push(h('div', { class: ['sess-fb-sol', !deFirst && 'is-strong'] }, ukText(r.solution_uk), speakerButton(r.solution_uk, { size: 's' })));
+      if (r.solution_de && !deFirst) details.push(deText(r.solution_de, { tag: 'div', cls: 'sess-fb-de' }));
       const expl = r.explanation_de || r.hint_de || ex?.explanation_de || ex?.hint_de;
       if (expl) details.push(h('div', { class: 'sess-fb-expl' }, icon('info'), h('span', null, expl)));
       haptic('error');

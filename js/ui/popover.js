@@ -4,6 +4,8 @@
 //  hidePopover()          schließen
 // Erschließungsmodus: Wort mit .is-new / [data-new] in einem Container [data-guess] → erst „Rate aus dem
 // Kontext“ + „Aufdecken“; danach .is-revealed und CustomEvent 'mova:wordreveal' {key, guessed:true} (bubbles).
+// Optional: container.__guessOptions = key => [{de, correct}] → 3 Optionen + „Keine Ahnung“ (falsch = folgenlos,
+// zeigt sofort die Lösung). Event-detail dann zusätzlich {correct, choice}; „Keine Ahnung“ → {guessed:false, correct:false}.
 import { h } from './dom.js';
 import { speakerButton } from './audio-button.js';
 import { normalizeWord, STRESS } from '../lib/uk-text.js';
@@ -128,15 +130,32 @@ function isGuessWord(w) {
   return !!w.closest('[data-guess]');
 }
 
-function reveal(el, wordEl) {
+function reveal(el, wordEl, extra = {}) {
   const key = wordEl.dataset.k || normalizeWord(wordEl.textContent || '');
   const scope = wordEl.closest('[data-guess]');
   wordEl.classList.add('is-revealed');
   if (scope) for (const w of scope.querySelectorAll('.w')) if (w.dataset.k === key) w.classList.add('is-revealed');
-  fill(el, wordEl, false);
+  fill(el, wordEl, false, extra.banner || null);
   place(el, wordEl);
   el.classList.add('is-revealing');
-  wordEl.dispatchEvent(new CustomEvent('mova:wordreveal', { bubbles: true, detail: { key, guessed: true } }));
+  const detail = { key, guessed: extra.guessed !== false };
+  if ('correct' in extra) detail.correct = extra.correct;
+  if (extra.choice != null) detail.choice = extra.choice;
+  wordEl.dispatchEvent(new CustomEvent('mova:wordreveal', { bubbles: true, detail }));
+}
+
+/** Optionale Mehrfachauswahl: container.__guessOptions(key) → [{de, correct}] (max. 3 angezeigt). */
+function guessOptions(wordEl) {
+  const scope = wordEl.closest('[data-guess]');
+  const fn = scope && scope.__guessOptions;
+  if (typeof fn !== 'function') return null;
+  let opts;
+  try { opts = fn(wordEl.dataset.k || normalizeWord(wordEl.textContent || '')); } catch (e) { console.warn(e); return null; }
+  if (!Array.isArray(opts)) return null;
+  opts = opts.filter(o => o && o.de).slice(0, 3);
+  if (opts.length < 2) return null;
+  if (!opts.some(o => o.correct)) return null;
+  return opts;
 }
 
 // ---------------------------------------------------------------- Inhalt
@@ -150,6 +169,7 @@ function matchCase(form, raw) {
   const first = raw.charAt(0);
   if (raw.length > 1 && raw === raw.toUpperCase() && raw !== raw.toLowerCase()) return form.toUpperCase();
   if (first && first === first.toUpperCase() && first !== first.toLowerCase()) return form.charAt(0).toUpperCase() + form.slice(1);
+  if (first && first === first.toLowerCase() && first !== first.toUpperCase()) return form.charAt(0).toLowerCase() + form.slice(1);
   return form;
 }
 
@@ -169,7 +189,7 @@ function group(entries) {
   return [...out.values()];
 }
 
-function fill(el, wordEl, guess) {
+function fill(el, wordEl, guess, banner = null) {
   const body = el.querySelector('.pop-body');
   body.replaceChildren();
   const raw = (wordEl.textContent || '').trim();
@@ -186,13 +206,36 @@ function fill(el, wordEl, guess) {
     speakerButton(head, { size: 's', label: 'Wort anhören' })));
 
   if (guess) {
-    const btn = h('button', { type: 'button', class: 'btn btn-blue pop-reveal', on: { click: e => { e.stopPropagation(); reveal(el, wordEl); } } }, 'Aufdecken');
-    body.append(
-      h('p', { class: 'pop-guess' }, h('span', { class: 'pop-guess-glyph', 'aria-hidden': 'true' }, '🤔'),
-        h('span', null, 'Was könnte das heißen? ', h('span', { class: 'pop-guess-sub' }, 'Rate aus dem Kontext.'))),
-      btn);
+    body.append(h('p', { class: 'pop-guess' }, h('span', { class: 'pop-guess-glyph', 'aria-hidden': 'true' }, '🤔'),
+      h('span', null, 'Was könnte das heißen? ', h('span', { class: 'pop-guess-sub' }, 'Rate aus dem Kontext.'))));
+    const opts = guessOptions(wordEl);
+    if (opts) {
+      let done = false;
+      const pick = (btn, o) => {
+        if (done) return;
+        done = true;
+        const ok = !!o?.correct;
+        if (btn) btn.classList.add(ok ? 'is-correct' : 'is-wrong');
+        for (const b of grid.querySelectorAll('.pop-opt')) { b.disabled = true; if (b.__opt?.correct && !ok && o) b.classList.add('is-solution'); }
+        const banner = !o ? null : ok
+          ? { kind: 'ok', text: 'Richtig geraten!' }
+          : { kind: 'bad', text: 'Nicht ganz – kein Problem.' };
+        setTimeout(() => { if (pop === el) reveal(el, wordEl, o ? { correct: ok, choice: o.de, banner } : { guessed: false, correct: false }); }, o ? (ok ? 520 : 760) : 0);
+      };
+      const grid = h('div', { class: 'pop-opts', role: 'group', 'aria-label': 'Bedeutung raten' });
+      for (const o of opts) {
+        const b = h('button', { type: 'button', class: 'pop-opt', lang: 'de', on: { click: e => { e.stopPropagation(); pick(b, o); } } }, o.de);
+        b.__opt = o;
+        grid.append(b);
+      }
+      body.append(grid, h('button', { type: 'button', class: 'pop-idk', on: { click: e => { e.stopPropagation(); pick(null, null); } } }, 'Keine Ahnung'));
+    } else {
+      body.append(h('button', { type: 'button', class: 'btn btn-blue pop-reveal', on: { click: e => { e.stopPropagation(); reveal(el, wordEl); } } }, 'Aufdecken'));
+    }
     return;
   }
+
+  if (banner) body.append(h('div', { class: ['pop-banner', `is-${banner.kind}`] }, banner.text));
 
   if (!groups.length) {
     body.append(h('p', { class: 'pop-missing' }, 'Nicht im Wörterbuch'));

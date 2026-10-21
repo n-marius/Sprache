@@ -1,1 +1,117 @@
-/* Platzhalter – wird vom zuständigen Agenten gefüllt (siehe docs/ARCHITECTURE.md). */
+/* Antipp-Übersetzungsblase (js/ui/popover.js). Präfix .pop- */
+.pop {
+  --pop-bg: var(--material-thick);
+  --pop-ax: 50%;
+  position: fixed; z-index: 800; left: 0; top: 0;
+  box-sizing: border-box;
+  max-width: 320px; min-width: 168px;
+  display: flex; flex-direction: column;
+  border-radius: 14px;
+  background: var(--pop-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  backdrop-filter: saturate(180%) blur(24px);
+  box-shadow: var(--shadow-3), 0 0 0 .5px var(--separator);
+  color: var(--label);
+  font-size: var(--fs-sub); line-height: 1.35;
+  opacity: 0; transform: scale(.88);
+  transition: opacity 160ms var(--ease-out), transform 220ms var(--ease-spring);
+  -webkit-user-select: none; user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.pop.is-in { opacity: 1; transform: none; }
+.pop.is-out { opacity: 0; transform: scale(.94); transition: opacity 130ms ease, transform 130ms ease; pointer-events: none; }
+
+/* Pfeil aufs Wort (eigenes Element mit eigenem Blur, damit er zur Fläche passt) */
+.pop-arrow {
+  position: absolute; left: calc(var(--pop-ax) - 10px); width: 20px; height: 9px;
+  background: var(--pop-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  backdrop-filter: saturate(180%) blur(24px);
+  pointer-events: none;
+}
+.pop[data-place="top"] .pop-arrow { top: 100%; clip-path: polygon(0 0, 100% 0, 58% 88%, 50% 100%, 42% 88%); }
+.pop[data-place="bottom"] .pop-arrow { bottom: 100%; clip-path: polygon(42% 12%, 50% 0, 58% 12%, 100% 100%, 0 100%); }
+
+.pop-body {
+  padding: 10px 12px 12px 14px;
+  overflow-y: auto; overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  border-radius: inherit;
+  min-height: 0;
+}
+
+.pop-head { display: flex; align-items: center; gap: 8px; min-height: 36px; }
+.pop-word {
+  font-family: var(--font-display);
+  font-size: var(--fs-title3); font-weight: 700; letter-spacing: -0.01em;
+  line-height: 1.2; overflow-wrap: anywhere;
+}
+.pop-spacer { flex: 1; }
+.pop-head .speaker-btn { margin-right: -6px; }
+.pop-tag {
+  flex: none; font-size: var(--fs-cap); font-weight: 600; line-height: 1;
+  padding: 4px 7px; border-radius: var(--r-pill);
+  color: var(--yellow-ink); background: color-mix(in srgb, var(--yellow) 20%, transparent);
+}
+
+.pop-entries { display: flex; flex-direction: column; margin-top: 4px; }
+.pop-entry { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; }
+.pop-entries.is-multi .pop-entry + .pop-entry { border-top: .5px solid var(--separator); padding-top: 8px; }
+.pop-emoji { flex: none; font-size: 26px; line-height: 1.1; width: 30px; text-align: center; }
+.pop-entry-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pop-form { font-size: var(--fs-sub); font-weight: 600; color: var(--label-2); }
+.pop-de-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.pop-de { font-size: var(--fs-headline); font-weight: 700; color: var(--label); overflow-wrap: anywhere; }
+.pop-pos {
+  font-size: var(--fs-cap); font-weight: 600; color: var(--label-2);
+  padding: 2px 6px; border-radius: 6px; background: var(--fill-2);
+}
+.pop-lemma { font-size: var(--fs-foot); color: var(--label-2); }
+.pop-lemma-uk { color: var(--label); font-weight: 600; }
+.pop-info { font-size: var(--fs-foot); color: var(--label-2); }
+.pop-missing { margin: 4px 0 0; font-size: var(--fs-sub); color: var(--label-2); }
+
+/* Ergebnis-Leiste nach Mehrfachauswahl */
+.pop-banner {
+  margin: 6px 0 2px; padding: 6px 10px; border-radius: var(--r-s);
+  font-size: var(--fs-foot); font-weight: 700;
+  border: 1.5px solid transparent;
+}
+.pop-banner.is-ok { color: var(--ok-ink); background: var(--ok-bg); border-color: var(--ok-border); }
+.pop-banner.is-bad { color: var(--label-2); background: var(--fill-2); border-color: var(--separator); }
+
+/* Erschließungsmodus */
+.pop-guess { display: flex; gap: 8px; align-items: flex-start; margin: 6px 0 10px; font-size: var(--fs-callout); font-weight: 600; }
+.pop-guess-glyph { font-size: 22px; line-height: 1; }
+.pop-guess-sub { display: block; font-weight: 400; color: var(--label-2); font-size: var(--fs-sub); }
+.pop-reveal { width: 100%; min-height: 44px; }
+.pop-opts { display: flex; flex-direction: column; gap: 8px; }
+.pop-opt {
+  min-height: 44px; padding: 8px 12px; text-align: left;
+  font-size: var(--fs-callout); font-weight: 600; color: var(--label);
+  background: var(--tile-bg); border: 2px solid var(--tile-border); border-radius: var(--r-m);
+  box-shadow: 0 3px 0 var(--tile-edge);
+  transition: transform 80ms ease, box-shadow 80ms ease, background-color var(--dur-1), border-color var(--dur-1);
+  touch-action: manipulation;
+}
+.pop-opt:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 0 0 var(--tile-edge); }
+.pop-opt:disabled { cursor: default; }
+.pop-opt.is-correct, .pop-opt.is-solution { color: var(--ok-ink); background: var(--ok-bg); border-color: var(--ok-border); box-shadow: 0 3px 0 var(--ok-border); }
+.pop-opt.is-wrong { color: var(--bad-ink); background: var(--bad-bg); border-color: var(--bad-border); box-shadow: 0 3px 0 var(--bad-border); }
+.pop-idk {
+  display: block; width: 100%; min-height: 44px; margin-top: 4px;
+  font-size: var(--fs-sub); font-weight: 600; color: var(--tint);
+}
+.pop-idk:active { opacity: .5; }
+.pop.is-revealing .pop-body > * { animation: pop-fade 220ms var(--ease-out); }
+@keyframes pop-fade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .pop { --pop-bg: var(--surface); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pop, .pop.is-out { transform: none !important; transition: opacity 120ms linear; }
+  .pop.is-revealing .pop-body > * { animation: none; }
+}
+:root[data-motion="reduce"] .pop { transform: none !important; transition: opacity 120ms linear; }
