@@ -1,0 +1,683 @@
+{
+  "id": "a1-1-02",
+  "phase": "A1.1",
+  "title_uk": "У кав’я́рні",
+  "title_de": "Im Café",
+  "theme": "cafe",
+  "goals_de": [
+    "Ich kann Getränke bestellen.",
+    "Ich kann sagen, was ich trinke."
+  ],
+  "grammar": [
+    {
+      "title_de": "Akkusativ bei -а-Wörtern",
+      "body_de": "Feminine Wörter auf **-а** enden im Akkusativ auf **-у**: ка́ва → **ка́ву**, вода́ → **во́ду**. Maskuline Dinge wie чай bleiben gleich.",
+      "examples": [
+        {
+          "uk": "Я п’ю ка́ву.",
+          "de": "Ich trinke Kaffee."
+        },
+        {
+          "uk": "Я п’ю чай.",
+          "de": "Ich trinke Tee."
+        }
+      ]
+    },
+    {
+      "title_de": "пи́ти – trinken",
+      "body_de": "я **п’ю**, ти **п’єш**, він/вона́ **п’є**. Achte auf den Apostroph in **п’ю**.",
+      "examples": [
+        {
+          "uk": "Ти п’єш молоко́?",
+          "de": "Trinkst du Milch?"
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "kava",
+      "uk": "ка́ва",
+      "de": "Kaffee",
+      "pos": "noun",
+      "info": "f.",
+      "emoji": "☕",
+      "example": {
+        "uk": "Я п’ю ка́ву.",
+        "de": "Ich trinke Kaffee."
+      },
+      "forms": [
+        {
+          "uk": "ка́ву",
+          "info": "Akk. Sg."
+        },
+        {
+          "uk": "Ка́ву",
+          "info": "Akk. Sg."
+        }
+      ]
+    },
+    {
+      "id": "chai",
+      "uk": "чай",
+      "de": "Tee",
+      "pos": "noun",
+      "info": "m.",
+      "emoji": "🍵",
+      "example": {
+        "uk": "Я п’ю чай.",
+        "de": "Ich trinke Tee."
+      },
+      "forms": []
+    },
+    {
+      "id": "voda",
+      "uk": "вода́",
+      "de": "Wasser",
+      "pos": "noun",
+      "info": "f.",
+      "emoji": "💧",
+      "example": {
+        "uk": "Я п’ю во́ду.",
+        "de": "Ich trinke Wasser."
+      },
+      "forms": [
+        {
+          "uk": "во́ду",
+          "info": "Akk. Sg."
+        }
+      ]
+    },
+    {
+      "id": "moloko",
+      "uk": "молоко́",
+      "de": "Milch",
+      "pos": "noun",
+      "info": "n.",
+      "emoji": "🥛",
+      "example": {
+        "uk": "Ти п’єш молоко́?",
+        "de": "Trinkst du Milch?"
+      },
+      "forms": [
+        {
+          "uk": "молоко́м",
+          "info": "Instr. Sg."
+        }
+      ]
+    },
+    {
+      "id": "khlib",
+      "uk": "хліб",
+      "de": "Brot",
+      "pos": "noun",
+      "info": "m.",
+      "emoji": "🍞",
+      "example": {
+        "uk": "Тут є хліб.",
+        "de": "Hier gibt es Brot."
+      },
+      "forms": []
+    },
+    {
+      "id": "pyty",
+      "uk": "пи́ти",
+      "de": "trinken",
+      "pos": "verb",
+      "info": "Inf., imperf.",
+      "example": {
+        "uk": "Що ви бу́дете пи́ти?",
+        "de": "Was möchten Sie trinken?"
+      },
+      "forms": [
+        {
+          "uk": "п’ю",
+          "info": "1. Sg. Präs."
+        },
+        {
+          "uk": "п’єш",
+          "info": "2. Sg. Präs."
+        },
+        {
+          "uk": "п’є",
+          "info": "3. Sg. Präs."
+        }
+      ]
+    },
+    {
+      "id": "khotity",
+      "uk": "хоті́ти",
+      "de": "wollen, möchten",
+      "pos": "verb",
+      "info": "Inf., imperf.",
+      "example": {
+        "uk": "Я хо́чу чай.",
+        "de": "Ich möchte Tee."
+      },
+      "forms": [
+        {
+          "uk": "хо́чу",
+          "info": "1. Sg. Präs."
+        },
+        {
+          "uk": "хо́чеш",
+          "info": "2. Sg. Präs."
+        },
+        {
+          "uk": "хо́че",
+          "info": "3. Sg. Präs."
+        }
+      ]
+    },
+    {
+      "id": "bud_laska",
+      "uk": "будь ла́ска",
+      "de": "bitte",
+      "pos": "phrase",
+      "info": "Bitte/Antwort auf Dank",
+      "emoji": "🙏",
+      "example": {
+        "uk": "Ка́ву, будь ла́ска.",
+        "de": "Einen Kaffee, bitte."
+      },
+      "forms": []
+    }
+  ],
+  "glossary": [
+    {
+      "uk": "будь",
+      "lemma": "бу́ти",
+      "de": "sei",
+      "pos": "verb",
+      "info": "Imp. 2. Sg. · in „будь ла́ска“"
+    },
+    {
+      "uk": "ла́ска",
+      "lemma": "ла́ска",
+      "de": "Güte",
+      "pos": "noun",
+      "info": "Nom. Sg. f. · in „будь ла́ска“"
+    },
+    {
+      "uk": "кав’я́рня",
+      "lemma": "кав’я́рня",
+      "de": "Café",
+      "pos": "noun",
+      "info": "Nom. Sg. f."
+    },
+    {
+      "uk": "кав’я́рні",
+      "lemma": "кав’я́рня",
+      "de": "Café",
+      "pos": "noun",
+      "info": "Lok. Sg. f."
+    },
+    {
+      "uk": "Будь",
+      "lemma": "бу́ти",
+      "de": "sei",
+      "pos": "verb",
+      "info": "Imp. 2. Sg. · „Будь ла́ска!“ = Bitte schön!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e01",
+      "type": "mc_translate",
+      "vocab": [
+        "kava"
+      ],
+      "difficulty": 1,
+      "dir": "de-uk",
+      "prompt": "der Kaffee",
+      "options": [
+        "ка́ва",
+        "чай",
+        "вода́",
+        "молоко́"
+      ]
+    },
+    {
+      "id": "e02",
+      "type": "mc_translate",
+      "vocab": [
+        "pyty",
+        "chai"
+      ],
+      "difficulty": 1,
+      "dir": "uk-de",
+      "prompt": "Я п’ю чай.",
+      "options": [
+        "Ich trinke Tee.",
+        "Ich trinke Kaffee.",
+        "Du trinkst Tee."
+      ]
+    },
+    {
+      "id": "e03",
+      "type": "build_sentence",
+      "vocab": [
+        "pyty",
+        "kava"
+      ],
+      "difficulty": 2,
+      "dir": "de-uk",
+      "prompt": "Ich trinke Kaffee.",
+      "answer": "Я п’ю ка́ву.",
+      "distractors": [
+        "ка́ва",
+        "ти",
+        "п’єш"
+      ]
+    },
+    {
+      "id": "e04",
+      "type": "build_sentence",
+      "vocab": [
+        "chai",
+        "bud_laska"
+      ],
+      "difficulty": 2,
+      "dir": "de-uk",
+      "prompt": "Einen Tee, bitte.",
+      "answer": "Чай, будь ла́ска.",
+      "distractors": [
+        "ка́ву",
+        "дя́кую"
+      ]
+    },
+    {
+      "id": "e05",
+      "type": "cloze",
+      "vocab": [
+        "pyty",
+        "voda"
+      ],
+      "difficulty": 2,
+      "text": "Я {{п’ю}} {{во́ду}}.",
+      "options": [
+        [
+          "п’ю",
+          "п’єш",
+          "пи́ти"
+        ],
+        [
+          "во́ду",
+          "вода́",
+          "молоко́м"
+        ]
+      ],
+      "translation_de": "Ich trinke Wasser."
+    },
+    {
+      "id": "e06",
+      "type": "cloze",
+      "vocab": [
+        "khotity"
+      ],
+      "difficulty": 2,
+      "text": "Ти {{хо́чеш}} ка́ву чи чай?",
+      "options": [
+        [
+          "хо́чеш",
+          "хо́чу",
+          "хоті́ти"
+        ]
+      ],
+      "translation_de": "Möchtest du Kaffee oder Tee?"
+    },
+    {
+      "id": "e07",
+      "type": "chat",
+      "vocab": [
+        "kava",
+        "bud_laska",
+        "moloko",
+        "dyakuyu"
+      ],
+      "difficulty": 2,
+      "scenario_de": "Du bestellst im Café.",
+      "partner": {
+        "name": "Офіціа́нт",
+        "emoji": "🧑"
+      },
+      "turns": [
+        {
+          "who": "bot",
+          "uk": "До́брий день! Що ви бу́дете пи́ти?",
+          "de": "Guten Tag! Was möchten Sie trinken?"
+        },
+        {
+          "who": "me",
+          "options": [
+            {
+              "uk": "Ка́ву, будь ла́ска.",
+              "de": "Einen Kaffee, bitte."
+            },
+            {
+              "uk": "Дя́кую, до поба́чення!",
+              "de": "Danke, auf Wiedersehen!",
+              "feedback_de": "Damit verabschiedest du dich – du wolltest doch bestellen."
+            }
+          ]
+        },
+        {
+          "who": "bot",
+          "uk": "З молоко́м?",
+          "de": "Mit Milch?"
+        },
+        {
+          "who": "me",
+          "options": [
+            {
+              "uk": "Так, з молоко́м.",
+              "de": "Ja, mit Milch."
+            },
+            {
+              "uk": "Так, хліб.",
+              "de": "Ja, Brot.",
+              "feedback_de": "Gefragt ist, ob du Milch möchtest."
+            }
+          ]
+        },
+        {
+          "who": "bot",
+          "uk": "Будь ла́ска!",
+          "de": "Bitte schön!"
+        },
+        {
+          "who": "me",
+          "options": [
+            {
+              "uk": "Дя́кую!",
+              "de": "Danke!"
+            },
+            {
+              "uk": "Ні.",
+              "de": "Nein.",
+              "feedback_de": "Hier bedankt man sich: дя́кую."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e08",
+      "type": "reading",
+      "vocab": [
+        "kava",
+        "chai",
+        "voda",
+        "pyty",
+        "khotity"
+      ],
+      "difficulty": 2,
+      "title_uk": "У кав’я́рні",
+      "text_uk": "Це кав’я́рня. Тут є ка́ва, чай і вода́. Окса́на п’є ка́ву з молоко́м. Тара́с хо́че чай. Він не п’є ка́ву.",
+      "text_de": "Das ist ein Café. Hier gibt es Kaffee, Tee und Wasser. Oksana trinkt Kaffee mit Milch. Taras möchte Tee. Er trinkt keinen Kaffee.",
+      "questions": [
+        {
+          "q_uk": "Що п’є Окса́на?",
+          "q_de": "Was trinkt Oksana?",
+          "kind": "mc",
+          "options": [
+            "Ка́ву з молоко́м.",
+            "Чай.",
+            "Во́ду."
+          ]
+        },
+        {
+          "q_uk": "Тара́с хо́че ка́ву.",
+          "q_de": "Taras möchte Kaffee.",
+          "kind": "tf",
+          "answer": false
+        },
+        {
+          "q_uk": "У кав’я́рні є вода́.",
+          "q_de": "Im Café gibt es Wasser.",
+          "kind": "tf",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "e09",
+      "type": "listening",
+      "vocab": [
+        "khotity",
+        "chai"
+      ],
+      "difficulty": 1,
+      "mode": "choose_meaning",
+      "audio_uk": "Я хо́чу чай.",
+      "options": [
+        "Ich möchte Tee.",
+        "Ich trinke Wasser.",
+        "Ich möchte Kaffee."
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "listening",
+      "vocab": [
+        "voda"
+      ],
+      "difficulty": 1,
+      "mode": "choose_heard",
+      "audio_uk": "во́ду",
+      "options": [
+        "во́ду",
+        "ка́ву",
+        "хліб"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "listening",
+      "vocab": [
+        "pyty",
+        "moloko"
+      ],
+      "difficulty": 2,
+      "mode": "build",
+      "audio_uk": "Ти п’єш молоко́?",
+      "distractors": [
+        "ка́ву",
+        "я"
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "speak",
+      "vocab": [
+        "kava",
+        "bud_laska"
+      ],
+      "difficulty": 1,
+      "uk": "Ка́ву, будь ла́ска.",
+      "de": "Einen Kaffee, bitte."
+    },
+    {
+      "id": "e13",
+      "type": "speak",
+      "vocab": [
+        "pyty",
+        "chai"
+      ],
+      "difficulty": 1,
+      "uk": "Я п’ю чай.",
+      "de": "Ich trinke Tee."
+    },
+    {
+      "id": "e14",
+      "type": "match_pairs",
+      "vocab": [
+        "kava",
+        "chai",
+        "voda",
+        "moloko",
+        "khlib"
+      ],
+      "difficulty": 1,
+      "pairs": [
+        {
+          "uk": "ка́ва",
+          "de": "Kaffee"
+        },
+        {
+          "uk": "чай",
+          "de": "Tee"
+        },
+        {
+          "uk": "вода́",
+          "de": "Wasser"
+        },
+        {
+          "uk": "молоко́",
+          "de": "Milch"
+        },
+        {
+          "uk": "хліб",
+          "de": "Brot"
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "picture_choice",
+      "vocab": [
+        "khlib"
+      ],
+      "difficulty": 1,
+      "prompt_uk": "хліб",
+      "options": [
+        {
+          "emoji": "🍞",
+          "de": "Brot"
+        },
+        {
+          "emoji": "🥛",
+          "de": "Milch"
+        },
+        {
+          "emoji": "☕",
+          "de": "Kaffee"
+        },
+        {
+          "emoji": "💧",
+          "de": "Wasser"
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "picture_choice",
+      "vocab": [
+        "moloko",
+        "pyty"
+      ],
+      "difficulty": 1,
+      "prompt_uk": "Я п’ю молоко́.",
+      "options": [
+        {
+          "emoji": "🥛",
+          "de": "Milch"
+        },
+        {
+          "emoji": "🍵",
+          "de": "Tee"
+        },
+        {
+          "emoji": "🍞",
+          "de": "Brot"
+        }
+      ]
+    },
+    {
+      "id": "e17",
+      "type": "true_false",
+      "vocab": [
+        "khotity",
+        "kava"
+      ],
+      "difficulty": 2,
+      "context_uk": "Окса́на: Я хо́чу ка́ву.",
+      "context_de": "Oksana: Ich möchte Kaffee.",
+      "statement_uk": "Окса́на хо́че чай.",
+      "answer": false,
+      "explanation_de": "Oksana möchte Kaffee (ка́ву), keinen Tee."
+    },
+    {
+      "id": "e18",
+      "type": "order_dialog",
+      "vocab": [
+        "kava",
+        "bud_laska",
+        "moloko"
+      ],
+      "difficulty": 2,
+      "lines": [
+        {
+          "uk": "До́брий день!",
+          "de": "Guten Tag!"
+        },
+        {
+          "uk": "До́брий день! Ка́ву, будь ла́ска.",
+          "de": "Guten Tag! Einen Kaffee, bitte."
+        },
+        {
+          "uk": "З молоко́м?",
+          "de": "Mit Milch?"
+        },
+        {
+          "uk": "Ні, дя́кую.",
+          "de": "Nein, danke."
+        }
+      ]
+    },
+    {
+      "id": "e19",
+      "type": "mc_translate",
+      "vocab": [
+        "voda"
+      ],
+      "difficulty": 1,
+      "dir": "de-uk",
+      "prompt": "das Wasser",
+      "options": [
+        "вода́",
+        "молоко́",
+        "хліб"
+      ]
+    },
+    {
+      "id": "e20",
+      "type": "mc_translate",
+      "vocab": [
+        "pryvit",
+        "kava",
+        "bud_laska"
+      ],
+      "difficulty": 2,
+      "dir": "uk-de",
+      "prompt": "Приві́т! Ка́ву, будь ла́ска.",
+      "options": [
+        "Hallo! Einen Kaffee, bitte.",
+        "Hallo! Einen Tee, bitte.",
+        "Danke! Einen Kaffee."
+      ]
+    },
+    {
+      "id": "e21",
+      "type": "true_false",
+      "vocab": [
+        "khlib"
+      ],
+      "difficulty": 1,
+      "statement_uk": "Хліб – це вода́.",
+      "context_de": "",
+      "answer": false,
+      "explanation_de": "хліб = Brot, вода́ = Wasser."
+    }
+  ]
+}

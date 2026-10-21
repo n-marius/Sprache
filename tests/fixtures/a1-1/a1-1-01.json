@@ -1,0 +1,614 @@
+{
+  "id": "a1-1-01",
+  "phase": "A1.1",
+  "title_uk": "Приві́т!",
+  "title_de": "Hallo!",
+  "theme": "greetings",
+  "goals_de": [
+    "Ich kann grüßen und mich verabschieden.",
+    "Ich kann sagen, wie ich heiße."
+  ],
+  "grammar": [
+    {
+      "title_de": "Grüßen: привіт und добрий день",
+      "body_de": "**Приві́т** ist locker (Freunde, Familie). **До́брий день** ist neutral-höflich und passt immer. Zum Abschied sagt man **до поба́чення**.",
+      "examples": [
+        {
+          "uk": "До́брий день!",
+          "de": "Guten Tag!"
+        },
+        {
+          "uk": "Приві́т, Окса́но!",
+          "de": "Hallo, Oksana!"
+        }
+      ]
+    },
+    {
+      "title_de": "Sich vorstellen",
+      "body_de": "**Мене́ звуть …** heißt wörtlich „mich nennt man …“. Das Verb steht in der 3. Person Plural, der Name bleibt im Nominativ.",
+      "examples": [
+        {
+          "uk": "Мене́ звуть Тара́с.",
+          "de": "Ich heiße Taras."
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "pryvit",
+      "uk": "приві́т",
+      "de": "hallo",
+      "pos": "interj",
+      "info": "informell",
+      "emoji": "👋",
+      "example": {
+        "uk": "Приві́т! Як спра́ви?",
+        "de": "Hallo! Wie geht’s?"
+      },
+      "forms": [
+        {
+          "uk": "Приві́т",
+          "info": "Gruß"
+        }
+      ]
+    },
+    {
+      "id": "dobryi_den",
+      "uk": "до́брий день",
+      "de": "guten Tag",
+      "pos": "phrase",
+      "info": "neutral-höflich",
+      "emoji": "☀️",
+      "example": {
+        "uk": "До́брий день!",
+        "de": "Guten Tag!"
+      },
+      "forms": []
+    },
+    {
+      "id": "dyakuyu",
+      "uk": "дя́кую",
+      "de": "danke",
+      "pos": "interj",
+      "info": "von дя́кувати, 1. Sg.",
+      "emoji": "🙏",
+      "example": {
+        "uk": "До́бре, дя́кую.",
+        "de": "Gut, danke."
+      },
+      "forms": []
+    },
+    {
+      "id": "tak",
+      "uk": "так",
+      "de": "ja",
+      "pos": "part",
+      "info": "Partikel",
+      "emoji": "✅",
+      "example": {
+        "uk": "Так, до́бре.",
+        "de": "Ja, gut."
+      },
+      "forms": []
+    },
+    {
+      "id": "ni",
+      "uk": "ні",
+      "de": "nein",
+      "pos": "part",
+      "info": "Partikel",
+      "emoji": "❌",
+      "example": {
+        "uk": "Ні, дя́кую.",
+        "de": "Nein, danke."
+      },
+      "forms": []
+    },
+    {
+      "id": "mene_zvut",
+      "uk": "мене́ звуть",
+      "de": "ich heiße",
+      "pos": "phrase",
+      "info": "wörtl. „mich nennt man“",
+      "example": {
+        "uk": "Мене́ звуть Окса́на.",
+        "de": "Ich heiße Oksana."
+      },
+      "forms": []
+    },
+    {
+      "id": "yak_spravy",
+      "uk": "як спра́ви",
+      "de": "wie geht’s",
+      "pos": "phrase",
+      "info": "informell",
+      "example": {
+        "uk": "Приві́т! Як спра́ви?",
+        "de": "Hallo! Wie geht’s?"
+      },
+      "forms": []
+    },
+    {
+      "id": "dobre",
+      "uk": "до́бре",
+      "de": "gut",
+      "pos": "adv",
+      "info": "Adverb",
+      "emoji": "👍",
+      "example": {
+        "uk": "До́бре, дя́кую!",
+        "de": "Gut, danke!"
+      },
+      "forms": []
+    },
+    {
+      "id": "do_pobachennia",
+      "uk": "до поба́чення",
+      "de": "auf Wiedersehen",
+      "pos": "phrase",
+      "info": "neutral",
+      "example": {
+        "uk": "До поба́чення, Тара́се!",
+        "de": "Auf Wiedersehen, Taras!"
+      },
+      "forms": []
+    }
+  ],
+  "glossary": [
+    {
+      "uk": "до́брий",
+      "lemma": "до́брий",
+      "de": "gut",
+      "pos": "adj",
+      "info": "Nom. Sg. m."
+    },
+    {
+      "uk": "день",
+      "lemma": "день",
+      "de": "Tag",
+      "pos": "noun",
+      "info": "Nom. Sg. m."
+    },
+    {
+      "uk": "мене́",
+      "lemma": "я",
+      "de": "mich",
+      "pos": "pron",
+      "info": "Akk./Gen. 1. Sg. · Nom. я"
+    },
+    {
+      "uk": "звуть",
+      "lemma": "зва́ти",
+      "de": "nennt man, heißen",
+      "pos": "verb",
+      "info": "3. Pl. Präs. · Inf. зва́ти"
+    },
+    {
+      "uk": "спра́ви",
+      "lemma": "спра́ва",
+      "de": "Angelegenheiten",
+      "pos": "noun",
+      "info": "Nom. Pl. f. · Nom. Sg. спра́ва"
+    },
+    {
+      "uk": "до",
+      "lemma": "до",
+      "de": "bis; zu",
+      "pos": "prep",
+      "info": "Präposition (+ Gen.)"
+    },
+    {
+      "uk": "поба́чення",
+      "lemma": "поба́чення",
+      "de": "Wiedersehen",
+      "pos": "noun",
+      "info": "Gen. Sg. n."
+    },
+    {
+      "uk": "Знайо́мство",
+      "lemma": "знайо́мство",
+      "de": "Kennenlernen",
+      "pos": "noun",
+      "info": "Nom. Sg. n."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "e01",
+      "type": "mc_translate",
+      "vocab": [
+        "pryvit"
+      ],
+      "difficulty": 1,
+      "dir": "de-uk",
+      "prompt": "Hallo!",
+      "options": [
+        "Приві́т!",
+        "Дя́кую!",
+        "До поба́чення!",
+        "Так."
+      ]
+    },
+    {
+      "id": "e02",
+      "type": "mc_translate",
+      "vocab": [
+        "dyakuyu"
+      ],
+      "difficulty": 1,
+      "dir": "uk-de",
+      "prompt": "Дя́кую!",
+      "options": [
+        "Danke!",
+        "Hallo!",
+        "Auf Wiedersehen!",
+        "Nein."
+      ]
+    },
+    {
+      "id": "e03",
+      "type": "build_sentence",
+      "vocab": [
+        "mene_zvut"
+      ],
+      "difficulty": 2,
+      "dir": "de-uk",
+      "prompt": "Ich heiße Taras.",
+      "answer": "Мене́ звуть Тара́с.",
+      "distractors": [
+        "як",
+        "до́бре",
+        "ти"
+      ]
+    },
+    {
+      "id": "e04",
+      "type": "build_sentence",
+      "vocab": [
+        "yak_spravy",
+        "pryvit"
+      ],
+      "difficulty": 2,
+      "dir": "uk-de",
+      "prompt": "Приві́т! Як спра́ви?",
+      "answer": "Hallo! Wie geht es dir?",
+      "accept": [
+        "Hallo! Wie geht’s?"
+      ],
+      "distractors": [
+        "gut",
+        "Tag",
+        "danke"
+      ]
+    },
+    {
+      "id": "e05",
+      "type": "cloze",
+      "vocab": [
+        "dobryi_den"
+      ],
+      "difficulty": 1,
+      "text": "До́брий {{день}}!",
+      "options": [
+        [
+          "день",
+          "ні",
+          "так"
+        ]
+      ],
+      "translation_de": "Guten Tag!"
+    },
+    {
+      "id": "e06",
+      "type": "cloze",
+      "vocab": [
+        "mene_zvut"
+      ],
+      "difficulty": 2,
+      "text": "{{Мене́}} звуть Окса́на. А як {{тебе́}} звуть?",
+      "options": [
+        [
+          "Мене́",
+          "Я",
+          "Ти"
+        ],
+        [
+          "тебе́",
+          "ти",
+          "я"
+        ]
+      ],
+      "translation_de": "Ich heiße Oksana. Und wie heißt du?",
+      "hint_de": "Nach „звуть“ steht der Akkusativ: мене́, тебе́."
+    },
+    {
+      "id": "e07",
+      "type": "chat",
+      "vocab": [
+        "pryvit",
+        "yak_spravy",
+        "dobre",
+        "dyakuyu",
+        "mene_zvut"
+      ],
+      "difficulty": 2,
+      "scenario_de": "Du triffst Oksana im Hof.",
+      "partner": {
+        "name": "Окса́на",
+        "emoji": "👩"
+      },
+      "turns": [
+        {
+          "who": "bot",
+          "uk": "Приві́т! Як спра́ви?",
+          "de": "Hallo! Wie geht’s?"
+        },
+        {
+          "who": "me",
+          "options": [
+            {
+              "uk": "До́бре, дя́кую! А в те́бе?",
+              "de": "Gut, danke! Und bei dir?"
+            },
+            {
+              "uk": "До поба́чення!",
+              "de": "Auf Wiedersehen!",
+              "feedback_de": "Das ist eine Verabschiedung – ihr habt euch gerade erst getroffen."
+            }
+          ]
+        },
+        {
+          "who": "bot",
+          "uk": "Тако́ж до́бре. Як тебе́ звуть?",
+          "de": "Auch gut. Wie heißt du?"
+        },
+        {
+          "who": "me",
+          "options": [
+            {
+              "uk": "Мене́ звуть Тара́с.",
+              "de": "Ich heiße Taras."
+            },
+            {
+              "uk": "Так, дя́кую.",
+              "de": "Ja, danke.",
+              "feedback_de": "Oksana fragt nach deinem Namen."
+            }
+          ]
+        },
+        {
+          "who": "bot",
+          "uk": "Ду́же приє́мно, Тара́се!",
+          "de": "Sehr angenehm, Taras!"
+        }
+      ]
+    },
+    {
+      "id": "e08",
+      "type": "reading",
+      "vocab": [
+        "pryvit",
+        "mene_zvut"
+      ],
+      "difficulty": 2,
+      "title_uk": "Знайо́мство",
+      "text_uk": "Приві́т! Мене́ звуть Окса́на. Я з Ки́єва. А це Тара́с. Він з Льво́ва. Ми дру́зі.",
+      "text_de": "Hallo! Ich heiße Oksana. Ich bin aus Kyjiw. Und das ist Taras. Er ist aus Lwiw. Wir sind Freunde.",
+      "questions": [
+        {
+          "q_uk": "Зві́дки Окса́на?",
+          "q_de": "Woher kommt Oksana?",
+          "kind": "mc",
+          "options": [
+            "З Ки́єва.",
+            "З Льво́ва.",
+            "З Оде́си."
+          ]
+        },
+        {
+          "q_uk": "Тара́с з Льво́ва.",
+          "q_de": "Taras ist aus Lwiw.",
+          "kind": "tf",
+          "answer": true
+        },
+        {
+          "q_uk": "Хто з Льво́ва?",
+          "q_de": "Wer ist aus Lwiw?",
+          "kind": "mc",
+          "options": [
+            "Тара́с",
+            "Окса́на",
+            "Ми"
+          ]
+        },
+        {
+          "q_uk": "Окса́на і Тара́с – не дру́зі.",
+          "q_de": "Oksana und Taras sind keine Freunde.",
+          "kind": "tf",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "e09",
+      "type": "listening",
+      "vocab": [
+        "dobryi_den"
+      ],
+      "difficulty": 1,
+      "mode": "choose_meaning",
+      "audio_uk": "До́брий день!",
+      "options": [
+        "Guten Tag!",
+        "Gute Nacht!",
+        "Danke!"
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "listening",
+      "vocab": [
+        "yak_spravy"
+      ],
+      "difficulty": 1,
+      "mode": "choose_heard",
+      "audio_uk": "Як спра́ви?",
+      "options": [
+        "Як спра́ви?",
+        "Як тебе́ звуть?",
+        "Так, до́бре."
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "listening",
+      "vocab": [
+        "mene_zvut"
+      ],
+      "difficulty": 2,
+      "mode": "build",
+      "audio_uk": "Мене́ звуть Окса́на.",
+      "distractors": [
+        "Тара́с",
+        "так"
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "speak",
+      "vocab": [
+        "pryvit",
+        "yak_spravy"
+      ],
+      "difficulty": 1,
+      "uk": "Приві́т! Як спра́ви?",
+      "de": "Hallo! Wie geht’s?"
+    },
+    {
+      "id": "e13",
+      "type": "speak",
+      "vocab": [
+        "do_pobachennia"
+      ],
+      "difficulty": 1,
+      "uk": "До поба́чення!",
+      "de": "Auf Wiedersehen!"
+    },
+    {
+      "id": "e14",
+      "type": "match_pairs",
+      "vocab": [
+        "pryvit",
+        "dyakuyu",
+        "tak",
+        "ni",
+        "dobre"
+      ],
+      "difficulty": 1,
+      "pairs": [
+        {
+          "uk": "приві́т",
+          "de": "hallo"
+        },
+        {
+          "uk": "дя́кую",
+          "de": "danke"
+        },
+        {
+          "uk": "так",
+          "de": "ja"
+        },
+        {
+          "uk": "ні",
+          "de": "nein"
+        },
+        {
+          "uk": "до́бре",
+          "de": "gut"
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "picture_choice",
+      "vocab": [
+        "dobre"
+      ],
+      "difficulty": 1,
+      "prompt_uk": "до́бре",
+      "options": [
+        {
+          "emoji": "👍",
+          "de": "gut"
+        },
+        {
+          "emoji": "👎",
+          "de": "schlecht"
+        },
+        {
+          "emoji": "👋",
+          "de": "hallo"
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "true_false",
+      "vocab": [
+        "pryvit",
+        "do_pobachennia"
+      ],
+      "difficulty": 2,
+      "context_uk": "Окса́на: Приві́т, Тара́се! Тара́с: Приві́т, Окса́но!",
+      "context_de": "Oksana: Hallo, Taras! Taras: Hallo, Oksana!",
+      "statement_uk": "Тара́с і Окса́на ка́жуть «до поба́чення».",
+      "answer": false,
+      "explanation_de": "Sie sagen „приві́т“ – sie begrüßen sich."
+    },
+    {
+      "id": "e17",
+      "type": "order_dialog",
+      "vocab": [
+        "pryvit",
+        "yak_spravy",
+        "dobre",
+        "do_pobachennia"
+      ],
+      "difficulty": 2,
+      "lines": [
+        {
+          "uk": "Приві́т!",
+          "de": "Hallo!"
+        },
+        {
+          "uk": "Приві́т! Як спра́ви?",
+          "de": "Hallo! Wie geht’s?"
+        },
+        {
+          "uk": "До́бре, дя́кую.",
+          "de": "Gut, danke."
+        },
+        {
+          "uk": "До поба́чення!",
+          "de": "Auf Wiedersehen!"
+        }
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "mc_translate",
+      "vocab": [
+        "ni"
+      ],
+      "difficulty": 1,
+      "dir": "de-uk",
+      "prompt": "Nein, danke.",
+      "options": [
+        "Ні, дя́кую.",
+        "Так, дя́кую.",
+        "Ні, до́бре."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+[
+ {
+  "uk": "переклади́",
+  "lemma": "перекла́сти",
+  "de": "übersetze!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. перекла́сти"
+ },
+ {
+  "uk": "украї́нською",
+  "lemma": "украї́нська",
+  "de": "(auf) Ukrainisch",
+  "pos": "adv",
+  "info": "Instr. f. von украї́нська (мо́ва)"
+ },
+ {
+  "uk": "німе́цькою",
+  "lemma": "німе́цька",
+  "de": "(auf) Deutsch",
+  "pos": "adv",
+  "info": "Instr. f. von німе́цька (мо́ва)"
+ },
+ {
+  "uk": "обери́",
+  "lemma": "обра́ти",
+  "de": "wähle!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. обра́ти"
+ },
+ {
+  "uk": "пра́вильний",
+  "lemma": "пра́вильний",
+  "de": "richtig",
+  "pos": "adj",
+  "info": "m. Nom./Akk. Sg."
+ },
+ {
+  "uk": "пра́вильна",
+  "lemma": "пра́вильний",
+  "de": "richtig",
+  "pos": "adj",
+  "info": "f. Nom. Sg."
+ },
+ {
+  "uk": "пра́вильному",
+  "lemma": "пра́вильний",
+  "de": "richtig",
+  "pos": "adj",
+  "info": "Lok. Sg. m./n."
+ },
+ {
+  "uk": "пра́вильно",
+  "lemma": "пра́вильно",
+  "de": "richtig",
+  "pos": "adv",
+  "info": ""
+ },
+ {
+  "uk": "непра́вильно",
+  "lemma": "непра́вильно",
+  "de": "falsch",
+  "pos": "adv",
+  "info": ""
+ },
+ {
+  "uk": "пере́клад",
+  "lemma": "пере́клад",
+  "de": "Übersetzung",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "склади́",
+  "lemma": "скла́сти",
+  "de": "bilde! (zusammensetzen)",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. скла́сти"
+ },
+ {
+  "uk": "ре́чення",
+  "lemma": "ре́чення",
+  "de": "Satz",
+  "pos": "noun",
+  "info": "n., Nom./Akk. Sg."
+ },
+ {
+  "uk": "запо́вни",
+  "lemma": "запо́внити",
+  "de": "fülle aus!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. запо́внити"
+ },
+ {
+  "uk": "про́пуск",
+  "lemma": "про́пуск",
+  "de": "Lücke",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "прочита́й",
+  "lemma": "прочита́ти",
+  "de": "lies!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. прочита́ти"
+ },
+ {
+  "uk": "відповіда́й",
+  "lemma": "відповіда́ти",
+  "de": "antworte!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. відповіда́ти"
+ },
+ {
+  "uk": "послу́хай",
+  "lemma": "послу́хати",
+  "de": "hör (dir an)!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. послу́хати"
+ },
+ {
+  "uk": "послу́хати",
+  "lemma": "послу́хати",
+  "de": "(an)hören",
+  "pos": "verb",
+  "info": "Inf. (vollendet)"
+ },
+ {
+  "uk": "скажи́",
+  "lemma": "сказа́ти",
+  "de": "sag!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. сказа́ти"
+ },
+ {
+  "uk": "вго́лос",
+  "lemma": "вго́лос",
+  "de": "laut (hörbar)",
+  "pos": "adv",
+  "info": ""
+ },
+ {
+  "uk": "знайди́",
+  "lemma": "знайти́",
+  "de": "finde!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. знайти́"
+ },
+ {
+  "uk": "па́ри",
+  "lemma": "па́ра",
+  "de": "Paare",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. · Nom. Sg. па́ра (f.)"
+ },
+ {
+  "uk": "карти́нку",
+  "lemma": "карти́нка",
+  "de": "Bild",
+  "pos": "noun",
+  "info": "Akk. Sg. · Nom. карти́нка (f.)"
+ },
+ {
+  "uk": "розмо́ва",
+  "lemma": "розмо́ва",
+  "de": "Gespräch",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "пра́вда",
+  "lemma": "пра́вда",
+  "de": "Wahrheit; (das ist) wahr",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "непра́вда",
+  "lemma": "непра́вда",
+  "de": "Unwahrheit; (das ist) falsch",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "переві́р",
+  "lemma": "переві́рити",
+  "de": "prüfe!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. переві́рити"
+ },
+ {
+  "uk": "да́лі",
+  "lemma": "да́лі",
+  "de": "weiter",
+  "pos": "adv",
+  "info": ""
+ },
+ {
+  "uk": "відпові́дь",
+  "lemma": "відпові́дь",
+  "de": "Antwort",
+  "pos": "noun",
+  "info": "f., Nom./Akk. Sg."
+ },
+ {
+  "uk": "нове́",
+  "lemma": "нови́й",
+  "de": "neu",
+  "pos": "adj",
+  "info": "n. Nom. Sg."
+ },
+ {
+  "uk": "нові́",
+  "lemma": "нови́й",
+  "de": "neu",
+  "pos": "adj",
+  "info": "Nom. Pl."
+ },
+ {
+  "uk": "сло́во",
+  "lemma": "сло́во",
+  "de": "Wort",
+  "pos": "noun",
+  "info": "n., Nom. Sg."
+ },
+ {
+  "uk": "слова́",
+  "lemma": "сло́во",
+  "de": "Wörter",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. · Nom. Sg. сло́во"
+ },
+ {
+  "uk": "повто́рення",
+  "lemma": "повто́рення",
+  "de": "Wiederholung",
+  "pos": "noun",
+  "info": "n., Nom. Sg."
+ },
+ {
+  "uk": "уро́к",
+  "lemma": "уро́к",
+  "de": "Lektion; Unterrichtsstunde",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "заве́ршено",
+  "lemma": "заве́ршити",
+  "de": "abgeschlossen",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. заве́ршити"
+ },
+ {
+  "uk": "молоде́ць",
+  "lemma": "молоде́ць",
+  "de": "gut gemacht! (wörtl. Prachtkerl)",
+  "pos": "interj",
+  "info": "Lob, für Männer und Frauen"
+ },
+ {
+  "uk": "пропусти́ти",
+  "lemma": "пропусти́ти",
+  "de": "überspringen",
+  "pos": "verb",
+  "info": "Inf."
+ },
+ {
+  "uk": "повідо́мити",
+  "lemma": "повідо́мити",
+  "de": "melden, mitteilen",
+  "pos": "verb",
+  "info": "Inf."
+ },
+ {
+  "uk": "поми́лку",
+  "lemma": "поми́лка",
+  "de": "Fehler",
+  "pos": "noun",
+  "info": "Akk. Sg. · Nom. поми́лка (f.)"
+ },
+ {
+  "uk": "натисни́",
+  "lemma": "натисну́ти",
+  "de": "drück! tippe!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. натисну́ти"
+ },
+ {
+  "uk": "пові́льно",
+  "lemma": "пові́льно",
+  "de": "langsam",
+  "pos": "adv",
+  "info": ""
+ },
+ {
+  "uk": "розста́в",
+  "lemma": "розста́вити",
+  "de": "ordne! stelle auf!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. розста́вити"
+ },
+ {
+  "uk": "ре́пліки",
+  "lemma": "ре́пліка",
+  "de": "Gesprächsbeiträge",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. · Nom. Sg. ре́пліка (f.)"
+ },
+ {
+  "uk": "поря́дку",
+  "lemma": "поря́док",
+  "de": "Reihenfolge, Ordnung",
+  "pos": "noun",
+  "info": "Lok. Sg. · Nom. поря́док (m.)"
+ },
+ {
+  "uk": "підка́зка",
+  "lemma": "підка́зка",
+  "de": "Hinweis, Tipp",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "грама́тика",
+  "lemma": "грама́тика",
+  "de": "Grammatik",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "текст",
+  "lemma": "текст",
+  "de": "Text",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "і",
+  "lemma": "і",
+  "de": "und",
+  "pos": "conj",
+  "info": "nach Konsonant; Varianten й, та"
+ },
+ {
+  "uk": "й",
+  "lemma": "й",
+  "de": "und",
+  "pos": "conj",
+  "info": "Variante von і nach Vokal"
+ },
+ {
+  "uk": "та",
+  "lemma": "та",
+  "de": "und",
+  "pos": "conj",
+  "info": "Variante von і"
+ },
+ {
+  "uk": "а",
+  "lemma": "а",
+  "de": "und; aber (Gegenüberstellung)",
+  "pos": "conj",
+  "info": ""
+ },
+ {
+  "uk": "але́",
+  "lemma": "але́",
+  "de": "aber",
+  "pos": "conj",
+  "info": ""
+ },
+ {
+  "uk": "або́",
+  "lemma": "або́",
+  "de": "oder",
+  "pos": "conj",
+  "info": ""
+ },
+ {
+  "uk": "бо",
+  "lemma": "бо",
+  "de": "denn, weil",
+  "pos": "conj",
+  "info": ""
+ },
+ {
+  "uk": "що",
+  "lemma": "що",
+  "de": "dass",
+  "pos": "conj",
+  "info": "Konjunktion; als Fragewort: „was“"
+ },
+ {
+  "uk": "щоб",
+  "lemma": "щоб",
+  "de": "um … zu; damit",
+  "pos": "conj",
+  "info": ""
+ },
+ {
+  "uk": "чи",
+  "lemma": "чи",
+  "de": "ob; Fragepartikel (Ja/Nein-Frage); oder (in Fragen)",
+  "pos": "part",
+  "info": ""
+ },
+ {
+  "uk": "ну",
+  "lemma": "ну",
+  "de": "na, nun",
+  "pos": "part",
+  "info": ""
+ },
+ {
+  "uk": "ж",
+  "lemma": "ж",
+  "de": "doch, ja (Verstärkung)",
+  "pos": "part",
+  "info": "Variante von же"
+ },
+ {
+  "uk": "же",
+  "lemma": "же",
+  "de": "doch, ja (Verstärkung)",
+  "pos": "part",
+  "info": ""
+ },
+ {
+  "uk": "о",
+  "lemma": "о",
+  "de": "oh",
+  "pos": "interj",
+  "info": ""
+ },
+ {
+  "uk": "ой",
+  "lemma": "ой",
+  "de": "oh, ach",
+  "pos": "interj",
+  "info": ""
+ },
+ {
+  "uk": "ага́",
+  "lemma": "ага́",
+  "de": "aha; ja",
+  "pos": "interj",
+  "info": ""
+ },
+ {
+  "uk": "у",
+  "lemma": "у",
+  "de": "in; bei (у ме́не = bei mir/ich habe)",
+  "pos": "prep",
+  "info": "+ Lok. (wo?), + Akk. (wohin?), + Gen. (bei); Variante в"
+ },
+ {
+  "uk": "в",
+  "lemma": "в",
+  "de": "in; bei",
+  "pos": "prep",
+  "info": "Variante von у (meist nach/vor Vokal)"
+ },
+ {
+  "uk": "на",
+  "lemma": "на",
+  "de": "auf; an; in; zu",
+  "pos": "prep",
+  "info": "+ Lok. (wo?), + Akk. (wohin?)"
+ },
+ {
+  "uk": "з",
+  "lemma": "з",
+  "de": "aus, von (+ Gen.); mit (+ Instr.)",
+  "pos": "prep",
+  "info": "Varianten із, зі"
+ },
+ {
+  "uk": "із",
+  "lemma": "із",
+  "de": "aus, von (+ Gen.); mit (+ Instr.)",
+  "pos": "prep",
+  "info": "Variante von з"
+ },
+ {
+  "uk": "зі",
+  "lemma": "зі",
+  "de": "aus, von (+ Gen.); mit (+ Instr.)",
+  "pos": "prep",
+  "info": "Variante von з vor Konsonantengruppen"
+ },
+ {
+  "uk": "до",
+  "lemma": "до",
+  "de": "zu; bis (+ Gen.)",
+  "pos": "prep",
+  "info": ""
+ },
+ {
+  "uk": "від",
+  "lemma": "від",
+  "de": "von (+ Gen.)",
+  "pos": "prep",
+  "info": ""
+ },
+ {
+  "uk": "про",
+  "lemma": "про",
+  "de": "über, von (+ Akk.)",
+  "pos": "prep",
+  "info": ""
+ },
+ {
+  "uk": "для",
+  "lemma": "для",
+  "de": "für (+ Gen.)",
+  "pos": "prep",
+  "info": ""
+ },
+ {
+  "uk": "без",
+  "lemma": "без",
+  "de": "ohne (+ Gen.)",
+  "pos": "prep",
+  "info": ""
+ },
+ {
+  "uk": "о",
+  "lemma": "о",
+  "de": "um (Uhrzeit, + Lok.)",
+  "pos": "prep",
+  "info": "vor Vokal: об"
+ },
+ {
+  "uk": "об",
+  "lemma": "об",
+  "de": "um (Uhrzeit, vor Vokal)",
+  "pos": "prep",
+  "info": "Variante von о"
+ },
+ {
+  "uk": "по",
+  "lemma": "по",
+  "de": "entlang; je; über (+ Lok./Akk.)",
+  "pos": "prep",
+  "info": ""
+ },
+ {
+  "uk": "за",
+  "lemma": "за",
+  "de": "hinter; für; in (Zeit)",
+  "pos": "prep",
+  "info": "+ Akk./Instr."
+ },
+ {
+  "uk": "Окса́на",
+  "lemma": "Окса́на",
+  "de": "Oksana",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Тара́с",
+  "lemma": "Тара́с",
+  "de": "Taras",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Оле́на",
+  "lemma": "Оле́на",
+  "de": "Olena",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Андрі́й",
+  "lemma": "Андрі́й",
+  "de": "Andrij",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Марі́я",
+  "lemma": "Марі́я",
+  "de": "Marija",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Іва́н",
+  "lemma": "Іва́н",
+  "de": "Iwan",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Петро́",
+  "lemma": "Петро́",
+  "de": "Petro",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Дмитро́",
+  "lemma": "Дмитро́",
+  "de": "Dmytro",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Софі́я",
+  "lemma": "Софі́я",
+  "de": "Sofija",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Ната́лія",
+  "lemma": "Ната́лія",
+  "de": "Natalija",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Богда́н",
+  "lemma": "Богда́н",
+  "de": "Bohdan",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Іри́на",
+  "lemma": "Іри́на",
+  "de": "Iryna",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Оле́г",
+  "lemma": "Оле́г",
+  "de": "Oleh",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Ю́рій",
+  "lemma": "Ю́рій",
+  "de": "Jurij",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Мар’я́на",
+  "lemma": "Мар’я́на",
+  "de": "Marjana",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Ле́ся",
+  "lemma": "Ле́ся",
+  "de": "Lessja",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Макси́м",
+  "lemma": "Макси́м",
+  "de": "Maksym",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Сергі́й",
+  "lemma": "Сергі́й",
+  "de": "Serhij",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Тетя́на",
+  "lemma": "Тетя́на",
+  "de": "Tetjana",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Світла́на",
+  "lemma": "Світла́на",
+  "de": "Switlana",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Ві́ктор",
+  "lemma": "Ві́ктор",
+  "de": "Wiktor",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Мико́ла",
+  "lemma": "Мико́ла",
+  "de": "Mykola",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "А́нна",
+  "lemma": "А́нна",
+  "de": "Anna",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Ма́ркус",
+  "lemma": "Ма́ркус",
+  "de": "Markus",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Ю́лія",
+  "lemma": "Ю́лія",
+  "de": "Julia",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "То́мас",
+  "lemma": "То́мас",
+  "de": "Thomas",
+  "pos": "name",
+  "info": "männl. Vorname"
+ },
+ {
+  "uk": "Ла́ура",
+  "lemma": "Ла́ура",
+  "de": "Laura",
+  "pos": "name",
+  "info": "weibl. Vorname"
+ },
+ {
+  "uk": "Шевче́нко",
+  "lemma": "Шевче́нко",
+  "de": "Schewtschenko",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Ковале́нко",
+  "lemma": "Ковале́нко",
+  "de": "Kowalenko",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Бондаре́нко",
+  "lemma": "Бондаре́нко",
+  "de": "Bondarenko",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Мельни́к",
+  "lemma": "Мельни́к",
+  "de": "Melnyk",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Шмідт",
+  "lemma": "Шмідт",
+  "de": "Schmidt",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Шне́йдер",
+  "lemma": "Шне́йдер",
+  "de": "Schneider",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Мю́ллер",
+  "lemma": "Мю́ллер",
+  "de": "Müller",
+  "pos": "name",
+  "info": "Familienname"
+ },
+ {
+  "uk": "Оде́са",
+  "lemma": "Оде́са",
+  "de": "Odesa",
+  "pos": "name",
+  "info": "Stadt (f.)"
+ },
+ {
+  "uk": "Ха́рків",
+  "lemma": "Ха́рків",
+  "de": "Charkiw",
+  "pos": "name",
+  "info": "Stadt (m.)"
+ },
+ {
+  "uk": "Дніпро́",
+  "lemma": "Дніпро́",
+  "de": "Dnipro",
+  "pos": "name",
+  "info": "Stadt; Fluss (m.)"
+ },
+ {
+  "uk": "Мю́нхен",
+  "lemma": "Мю́нхен",
+  "de": "München",
+  "pos": "name",
+  "info": "Stadt (m.)"
+ },
+ {
+  "uk": "Гамбу́рг",
+  "lemma": "Гамбу́рг",
+  "de": "Hamburg",
+  "pos": "name",
+  "info": "Stadt (m.)"
+ },
+ {
+  "uk": "Ві́день",
+  "lemma": "Ві́день",
+  "de": "Wien",
+  "pos": "name",
+  "info": "Stadt (m.)"
+ },
+ {
+  "uk": "А́встрія",
+  "lemma": "А́встрія",
+  "de": "Österreich",
+  "pos": "name",
+  "info": "Land (f.)"
+ },
+ {
+  "uk": "Шве́йцарія",
+  "lemma": "Шве́йцарія",
+  "de": "Schweiz",
+  "pos": "name",
+  "info": "Land (f.)"
+ },
+ {
+  "uk": "По́льща",
+  "lemma": "По́льща",
+  "de": "Polen",
+  "pos": "name",
+  "info": "Land (f.)"
+ }
+]

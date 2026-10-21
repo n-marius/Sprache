@@ -1,0 +1,134 @@
+{
+ "translate_to_uk": {
+  "uk": "Переклади́ украї́нською",
+  "de": "Ins Ukrainische übersetzen"
+ },
+ "translate_to_de": {
+  "uk": "Переклади́ німе́цькою",
+  "de": "Ins Deutsche übersetzen"
+ },
+ "choose_translation": {
+  "uk": "Обери́ пра́вильний пере́клад",
+  "de": "Richtige Übersetzung wählen"
+ },
+ "build_sentence": {
+  "uk": "Склади́ ре́чення",
+  "de": "Satz bilden"
+ },
+ "fill_gap": {
+  "uk": "Запо́вни про́пуск",
+  "de": "Lücke füllen"
+ },
+ "read_and_answer": {
+  "uk": "Прочита́й і відповіда́й",
+  "de": "Lesen und antworten"
+ },
+ "listen_and_choose": {
+  "uk": "Послу́хай і обери́",
+  "de": "Hören und wählen"
+ },
+ "listen_and_build": {
+  "uk": "Послу́хай і склади́ ре́чення",
+  "de": "Hören und Satz bilden"
+ },
+ "say_aloud": {
+  "uk": "Скажи́ вго́лос",
+  "de": "Laut sprechen"
+ },
+ "match_pairs": {
+  "uk": "Знайди́ па́ри",
+  "de": "Paare finden"
+ },
+ "choose_picture": {
+  "uk": "Обери́ карти́нку",
+  "de": "Bild wählen"
+ },
+ "chat": {
+  "uk": "Розмо́ва",
+  "de": "Gespräch"
+ },
+ "true_false": {
+  "uk": "Пра́вда чи непра́вда?",
+  "de": "Richtig oder falsch?"
+ },
+ "true": {
+  "uk": "Пра́вда",
+  "de": "Richtig"
+ },
+ "false": {
+  "uk": "Непра́вда",
+  "de": "Falsch"
+ },
+ "check": {
+  "uk": "Переві́р",
+  "de": "Prüfen"
+ },
+ "continue": {
+  "uk": "Да́лі",
+  "de": "Weiter"
+ },
+ "correct": {
+  "uk": "Пра́вильно!",
+  "de": "Richtig!"
+ },
+ "incorrect": {
+  "uk": "Непра́вильно",
+  "de": "Leider falsch"
+ },
+ "correct_answer": {
+  "uk": "Пра́вильна відпові́дь",
+  "de": "Richtige Antwort"
+ },
+ "new_word": {
+  "uk": "Нове́ сло́во",
+  "de": "Neues Wort"
+ },
+ "review": {
+  "uk": "Повто́рення",
+  "de": "Wiederholung"
+ },
+ "lesson_done": {
+  "uk": "Уро́к заве́ршено!",
+  "de": "Lektion abgeschlossen!"
+ },
+ "well_done": {
+  "uk": "Молоде́ць!",
+  "de": "Gut gemacht!"
+ },
+ "skip": {
+  "uk": "Пропусти́ти",
+  "de": "Überspringen"
+ },
+ "report": {
+  "uk": "Повідо́мити про поми́лку",
+  "de": "Fehler melden"
+ },
+ "tap_to_listen": {
+  "uk": "Натисни́, щоб послу́хати",
+  "de": "Zum Anhören tippen"
+ },
+ "slow": {
+  "uk": "Пові́льно",
+  "de": "Langsam"
+ },
+ "order_dialog": {
+  "uk": "Розста́в ре́пліки в пра́вильному поря́дку",
+  "de": "Gesprächszeilen ordnen"
+ },
+ "hint": {
+  "uk": "Підка́зка",
+  "de": "Tipp"
+ },
+ "grammar": {
+  "uk": "Грама́тика",
+  "de": "Grammatik"
+ },
+ "new_words": {
+  "uk": "Нові́ слова́",
+  "de": "Neue Wörter"
+ },
+ "lesson": {
+  "uk": "Уро́к",
+  "de": "Lektion"
+ }
+}

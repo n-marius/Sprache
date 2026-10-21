@@ -1,0 +1,218 @@
+/* Basis: Reset, Typografie, App-Gerüst (Tabbar, Seiten mit Large Title), Safe-Areas. */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  background: var(--bg-grouped);
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--label);
+  background: var(--bg-grouped);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior-y: none;
+  font-kerning: normal;
+}
+/* Kein Text-Markieren/Callout bei Bedienelementen (iOS) */
+button, .btn, .option, .chip, .tabbar, .list-row, .icon-btn, .w {
+  -webkit-user-select: none; user-select: none;
+  -webkit-touch-callout: none;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+input, textarea, select { font: inherit; font-size: max(16px, 1em); color: inherit; } /* ≥16px verhindert iOS-Zoom */
+img, svg { display: block; max-width: 100%; }
+a { color: var(--tint); text-decoration: none; }
+h1, h2, h3, h4, p { margin: 0; }
+:focus { outline: none; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--blue) 60%, transparent); outline-offset: 2px; border-radius: 8px; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Ukrainischer Text: Kombinationsakzente sauber, keine Silbentrennung mitten im Wort */
+.uk { font-feature-settings: "kern" 1; hyphens: manual; overflow-wrap: break-word; }
+.uk .w { border-radius: 4px; }
+.uk-tap .w { cursor: pointer; transition: background-color var(--dur-1); }
+.uk-tap .w:active, .uk-tap .w.is-active { background: var(--sel-bg); box-shadow: 0 0 0 2px var(--sel-bg); }
+.de { color: var(--label-2); }
+.hint-de { font-size: var(--fs-foot); color: var(--label-2); }
+
+/* Typo-Klassen */
+.t-largetitle { font-family: var(--font-display); font-size: var(--fs-largetitle); font-weight: 700; letter-spacing: .01em; line-height: 1.1; }
+.t-title1 { font-family: var(--font-display); font-size: var(--fs-title1); font-weight: 700; line-height: 1.15; }
+.t-title2 { font-family: var(--font-display); font-size: var(--fs-title2); font-weight: 700; line-height: 1.2; }
+.t-title3 { font-size: var(--fs-title3); font-weight: 600; line-height: 1.25; }
+.t-headline { font-size: var(--fs-headline); font-weight: 600; }
+.t-body { font-size: var(--fs-body); }
+.t-callout { font-size: var(--fs-callout); }
+.t-sub { font-size: var(--fs-sub); }
+.t-foot { font-size: var(--fs-foot); }
+.t-cap { font-size: var(--fs-cap); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+.t-2 { color: var(--label-2); }
+.t-3 { color: var(--label-3); }
+.t-rounded { font-family: var(--font-rounded); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- App-Gerüst ---------- */
+.app { min-height: 100dvh; }
+.view {
+  min-height: 100dvh;
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+  padding-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + var(--sp-6));
+}
+body.is-fullscreen .view { padding-bottom: 0; }
+body.is-fullscreen .tabbar { display: none; }
+
+/* Boot-Splash */
+.boot {
+  position: fixed; inset: 0; z-index: 1000;
+  display: grid; place-items: center;
+  background: var(--bg-grouped);
+  transition: opacity 300ms ease, visibility 300ms;
+}
+.boot-logo img { border-radius: 22%; box-shadow: var(--shadow-2); }
+.boot.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* Tabbar (iPhone: unten, Material mit Blur) */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  display: flex; justify-content: space-around; align-items: flex-start;
+  height: calc(var(--tabbar-h) + var(--safe-bottom));
+  padding: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
+  background: var(--material);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-top: .5px solid var(--separator);
+}
+.tab {
+  flex: 1 1 0; max-width: 140px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  height: var(--tabbar-h);
+  font-size: 10px; font-weight: 500; letter-spacing: .01em;
+  color: var(--label-2);
+}
+.tab svg { width: 26px; height: 26px; }
+.tab.is-active { color: var(--blue-ink); }
+.tab .tab-badge {
+  position: absolute; transform: translate(14px, -16px);
+  min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px;
+  background: var(--red); color: #fff; font-size: 12px; font-weight: 600; line-height: 18px; text-align: center;
+}
+.tab-icon { position: relative; }
+
+/* iPad hochkant: schwebende Kapsel-Tabbar */
+@media (min-width: 768px) {
+  .tabbar {
+    left: 50%; right: auto; bottom: calc(var(--safe-bottom) + 14px);
+    transform: translateX(-50%);
+    height: 60px; padding: 0 10px; gap: 4px;
+    border: .5px solid var(--separator);
+    border-radius: 30px;
+    box-shadow: var(--shadow-2);
+    align-items: center;
+  }
+  .tab { flex: 0 0 auto; width: 104px; height: 48px; border-radius: 24px; font-size: 11px; }
+  .tab.is-active { background: var(--fill-2); }
+  .view { padding-bottom: calc(60px + var(--safe-bottom) + 40px); }
+}
+/* iPad quer / großes Fenster: Seitenleiste */
+@media (min-width: 1100px) {
+  .tabbar {
+    top: 0; bottom: 0; left: 0; transform: none;
+    width: 240px; height: auto; border-radius: 0;
+    flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 2px;
+    padding: calc(var(--safe-top) + 64px) 12px 12px calc(var(--safe-left) + 12px);
+    border: 0; border-right: .5px solid var(--separator);
+    box-shadow: none;
+  }
+  .tabbar::before {
+    content: "Мова"; position: absolute; top: calc(var(--safe-top) + 18px); left: calc(var(--safe-left) + 24px);
+    font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: .01em; color: var(--label);
+  }
+  .tab { flex-direction: row; justify-content: flex-start; gap: 12px; width: auto; max-width: none; height: 44px; padding: 0 12px; font-size: 17px; border-radius: 10px; color: var(--label); }
+  .tab svg { width: 24px; height: 24px; color: var(--blue-ink); }
+  .tab.is-active { background: var(--blue); color: #fff; }
+  .tab.is-active svg { color: #fff; }
+  .tab .tab-badge { position: static; transform: none; margin-left: auto; }
+  .view { margin-left: 240px; padding-bottom: var(--sp-8); }
+  body.is-fullscreen .view { margin-left: 0; }
+}
+
+/* ---------- Seite mit Large Title ---------- */
+.page { min-height: 100%; }
+.navbar {
+  position: sticky; top: 0; z-index: 40;
+  height: calc(var(--navbar-h) + var(--safe-top));
+  padding: var(--safe-top) var(--gutter) 0;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  background: transparent;
+  border-bottom: .5px solid transparent;
+  transition: background-color var(--dur-2), border-color var(--dur-2);
+}
+.navbar.is-scrolled {
+  background: var(--material);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom-color: var(--separator);
+}
+.navbar-title {
+  font-size: var(--fs-headline); font-weight: 600; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  opacity: 0; transform: translateY(4px); transition: opacity var(--dur-2), transform var(--dur-2);
+}
+.navbar.is-scrolled .navbar-title, .navbar.always-title .navbar-title { opacity: 1; transform: none; }
+.navbar-leading { justify-self: start; display: flex; align-items: center; gap: 4px; }
+.navbar-trailing { justify-self: end; display: flex; align-items: center; gap: 8px; }
+.nav-back { display: inline-flex; align-items: center; gap: 2px; color: var(--tint); font-size: var(--fs-body); margin-left: -8px; padding: 8px; }
+.nav-back svg { width: 22px; height: 22px; }
+
+.page-header { padding: var(--sp-1) var(--gutter) var(--sp-3); }
+.page-header .t-largetitle { margin-bottom: 2px; }
+.page-header .page-subtitle { color: var(--label-2); font-size: var(--fs-sub); }
+.page-body { padding: 0 var(--gutter); }
+.page-body > * + * { margin-top: var(--sp-6); }
+
+.container { width: 100%; max-width: var(--content-max); margin: 0 auto; }
+@media (min-width: 768px) {
+  .page-header, .page-body { max-width: var(--content-wide); margin-left: auto; margin-right: auto; }
+  .page-header { padding-top: var(--sp-4); }
+}
+
+.section-title { font-size: var(--fs-title3); font-weight: 700; margin: 0 4px var(--sp-2); }
+.section-header { font-size: var(--fs-foot); color: var(--label-2); text-transform: uppercase; letter-spacing: .02em; margin: 0 var(--sp-4) 6px; }
+.section-footer { font-size: var(--fs-foot); color: var(--label-2); margin: 6px var(--sp-4) 0; line-height: 1.4; }
+
+/* Zweispaltiges Raster für iPad */
+.grid-2 { display: grid; gap: var(--sp-6); }
+@media (min-width: 768px) { .grid-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+
+.stack > * + * { margin-top: var(--sp-3); }
+.row { display: flex; align-items: center; gap: var(--sp-3); }
+.spacer { flex: 1; }
+.center { text-align: center; }
+
+/* Update-/Offline-Hinweisleiste */
+.banner {
+  position: fixed; z-index: 900; left: 50%; transform: translateX(-50%);
+  top: calc(var(--safe-top) + 8px);
+  width: min(560px, calc(100% - 24px));
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: 16px;
+  background: var(--material-thick);
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: var(--shadow-3);
+  font-size: var(--fs-sub);
+}
+.banner .spacer { flex: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
+}

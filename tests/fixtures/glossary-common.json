@@ -1,0 +1,562 @@
+[
+  {
+    "uk": "Перекладі́",
+    "lemma": "перекла́сти",
+    "de": "übersetze",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. перекла́сти"
+  },
+  {
+    "uk": "украї́нською",
+    "lemma": "украї́нська",
+    "de": "auf Ukrainisch",
+    "pos": "adj",
+    "info": "Instr. Sg. f. (мо́вою)"
+  },
+  {
+    "uk": "німе́цькою",
+    "lemma": "німе́цька",
+    "de": "auf Deutsch",
+    "pos": "adj",
+    "info": "Instr. Sg. f. (мо́вою)"
+  },
+  {
+    "uk": "Обери́",
+    "lemma": "обра́ти",
+    "de": "wähle",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. обра́ти"
+  },
+  {
+    "uk": "пра́вильний",
+    "lemma": "пра́вильний",
+    "de": "richtig",
+    "pos": "adj",
+    "info": "Nom./Akk. Sg. m."
+  },
+  {
+    "uk": "пра́вильна",
+    "lemma": "пра́вильний",
+    "de": "richtig",
+    "pos": "adj",
+    "info": "Nom. Sg. f."
+  },
+  {
+    "uk": "пра́вильному",
+    "lemma": "пра́вильний",
+    "de": "richtig",
+    "pos": "adj",
+    "info": "Lok. Sg. m."
+  },
+  {
+    "uk": "Пра́вильно",
+    "lemma": "пра́вильно",
+    "de": "richtig",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "Непра́вильно",
+    "lemma": "непра́вильно",
+    "de": "falsch",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "пере́клад",
+    "lemma": "пере́клад",
+    "de": "Übersetzung",
+    "pos": "noun",
+    "info": "Nom./Akk. Sg. m."
+  },
+  {
+    "uk": "Склади́",
+    "lemma": "скла́сти",
+    "de": "bilde, setze zusammen",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. скла́сти"
+  },
+  {
+    "uk": "ре́чення",
+    "lemma": "ре́чення",
+    "de": "Satz",
+    "pos": "noun",
+    "info": "Nom./Akk. Sg. n."
+  },
+  {
+    "uk": "Запо́вни",
+    "lemma": "запо́внити",
+    "de": "fülle aus",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. запо́внити"
+  },
+  {
+    "uk": "про́пуск",
+    "lemma": "про́пуск",
+    "de": "Lücke",
+    "pos": "noun",
+    "info": "Nom./Akk. Sg. m."
+  },
+  {
+    "uk": "Прочита́й",
+    "lemma": "прочита́ти",
+    "de": "lies",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. прочита́ти"
+  },
+  {
+    "uk": "дай",
+    "lemma": "да́ти",
+    "de": "gib",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. да́ти"
+  },
+  {
+    "uk": "ві́дповідь",
+    "lemma": "ві́дповідь",
+    "de": "Antwort",
+    "pos": "noun",
+    "info": "Nom./Akk. Sg. f."
+  },
+  {
+    "uk": "Послу́хай",
+    "lemma": "послу́хати",
+    "de": "hör zu",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. послу́хати"
+  },
+  {
+    "uk": "послу́хати",
+    "lemma": "послу́хати",
+    "de": "anhören",
+    "pos": "verb",
+    "info": "Infinitiv"
+  },
+  {
+    "uk": "Скажи́",
+    "lemma": "сказа́ти",
+    "de": "sag",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. сказа́ти"
+  },
+  {
+    "uk": "вго́лос",
+    "lemma": "вго́лос",
+    "de": "laut",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "Знайди́",
+    "lemma": "знайти́",
+    "de": "finde",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. знайти́"
+  },
+  {
+    "uk": "па́ри",
+    "lemma": "па́ра",
+    "de": "Paare",
+    "pos": "noun",
+    "info": "Nom./Akk. Pl. f. · Nom. Sg. па́ра"
+  },
+  {
+    "uk": "малю́нок",
+    "lemma": "малю́нок",
+    "de": "Bild",
+    "pos": "noun",
+    "info": "Nom./Akk. Sg. m."
+  },
+  {
+    "uk": "Поговори́",
+    "lemma": "поговори́ти",
+    "de": "unterhalte dich",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. поговори́ти"
+  },
+  {
+    "uk": "Пра́вда",
+    "lemma": "пра́вда",
+    "de": "Wahrheit; richtig",
+    "pos": "noun",
+    "info": "Nom. Sg. f."
+  },
+  {
+    "uk": "непра́вда",
+    "lemma": "непра́вда",
+    "de": "Unwahrheit; falsch",
+    "pos": "noun",
+    "info": "Nom. Sg. f."
+  },
+  {
+    "uk": "Переві́рити",
+    "lemma": "переві́рити",
+    "de": "prüfen",
+    "pos": "verb",
+    "info": "Infinitiv"
+  },
+  {
+    "uk": "Да́лі",
+    "lemma": "да́лі",
+    "de": "weiter",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "Нове́",
+    "lemma": "нови́й",
+    "de": "neu",
+    "pos": "adj",
+    "info": "Nom. Sg. n."
+  },
+  {
+    "uk": "сло́во",
+    "lemma": "сло́во",
+    "de": "Wort",
+    "pos": "noun",
+    "info": "Nom. Sg. n."
+  },
+  {
+    "uk": "Повто́рення",
+    "lemma": "повто́рення",
+    "de": "Wiederholung",
+    "pos": "noun",
+    "info": "Nom. Sg. n."
+  },
+  {
+    "uk": "Уро́к",
+    "lemma": "уро́к",
+    "de": "Lektion",
+    "pos": "noun",
+    "info": "Nom. Sg. m."
+  },
+  {
+    "uk": "заве́ршено",
+    "lemma": "заве́ршити",
+    "de": "abgeschlossen",
+    "pos": "verb",
+    "info": "unpersönliche Form (-но)"
+  },
+  {
+    "uk": "Молоде́ць",
+    "lemma": "молоде́ць",
+    "de": "gut gemacht!",
+    "pos": "interj",
+    "info": "wörtl. „Prachtkerl“"
+  },
+  {
+    "uk": "Пропусти́ти",
+    "lemma": "пропусти́ти",
+    "de": "überspringen",
+    "pos": "verb",
+    "info": "Infinitiv"
+  },
+  {
+    "uk": "Повідо́мити",
+    "lemma": "повідо́мити",
+    "de": "melden",
+    "pos": "verb",
+    "info": "Infinitiv"
+  },
+  {
+    "uk": "Торкни́ся",
+    "lemma": "торкну́тися",
+    "de": "tippe an",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. торкну́тися"
+  },
+  {
+    "uk": "щоб",
+    "lemma": "щоб",
+    "de": "um zu, damit",
+    "pos": "conj",
+    "info": "Konjunktion"
+  },
+  {
+    "uk": "Пові́льніше",
+    "lemma": "пові́льно",
+    "de": "langsamer",
+    "pos": "adv",
+    "info": "Komparativ von пові́льно"
+  },
+  {
+    "uk": "Розта́в",
+    "lemma": "розста́вити",
+    "de": "ordne",
+    "pos": "verb",
+    "info": "Imp. 2. Sg. · Inf. розста́вити"
+  },
+  {
+    "uk": "ре́пліки",
+    "lemma": "ре́пліка",
+    "de": "Repliken, Äußerungen",
+    "pos": "noun",
+    "info": "Akk. Pl. f."
+  },
+  {
+    "uk": "поря́дку",
+    "lemma": "поря́док",
+    "de": "Reihenfolge",
+    "pos": "noun",
+    "info": "Lok. Sg. m."
+  },
+  {
+    "uk": "і",
+    "lemma": "і",
+    "de": "und",
+    "pos": "conj",
+    "info": "Konjunktion"
+  },
+  {
+    "uk": "а",
+    "lemma": "а",
+    "de": "und, aber (Gegenüberstellung)",
+    "pos": "conj",
+    "info": "Konjunktion"
+  },
+  {
+    "uk": "чи",
+    "lemma": "чи",
+    "de": "oder; Fragepartikel",
+    "pos": "conj",
+    "info": "Konjunktion/Partikel"
+  },
+  {
+    "uk": "в",
+    "lemma": "в",
+    "de": "in; bei",
+    "pos": "prep",
+    "info": "Präposition (+ Lok./Akk./Gen.)"
+  },
+  {
+    "uk": "у",
+    "lemma": "у",
+    "de": "in; bei",
+    "pos": "prep",
+    "info": "Präposition (+ Lok./Akk./Gen.)"
+  },
+  {
+    "uk": "з",
+    "lemma": "з",
+    "de": "aus; mit",
+    "pos": "prep",
+    "info": "Präposition (+ Gen.: aus; + Instr.: mit)"
+  },
+  {
+    "uk": "не",
+    "lemma": "не",
+    "de": "nicht",
+    "pos": "part",
+    "info": "Verneinung"
+  },
+  {
+    "uk": "я",
+    "lemma": "я",
+    "de": "ich",
+    "pos": "pron",
+    "info": "Nom. 1. Sg."
+  },
+  {
+    "uk": "ти",
+    "lemma": "ти",
+    "de": "du",
+    "pos": "pron",
+    "info": "Nom. 2. Sg."
+  },
+  {
+    "uk": "він",
+    "lemma": "він",
+    "de": "er",
+    "pos": "pron",
+    "info": "Nom. 3. Sg. m."
+  },
+  {
+    "uk": "ми",
+    "lemma": "ми",
+    "de": "wir",
+    "pos": "pron",
+    "info": "Nom. 1. Pl."
+  },
+  {
+    "uk": "ви",
+    "lemma": "ви",
+    "de": "ihr; Sie",
+    "pos": "pron",
+    "info": "Nom. 2. Pl. / Höflichkeitsform"
+  },
+  {
+    "uk": "вона́",
+    "lemma": "вона́",
+    "de": "sie",
+    "pos": "pron",
+    "info": "Nom. 3. Sg. f."
+  },
+  {
+    "uk": "дя́кувати",
+    "lemma": "дя́кувати",
+    "de": "danken",
+    "pos": "verb",
+    "info": "Infinitiv, imperf."
+  },
+  {
+    "uk": "тебе́",
+    "lemma": "ти",
+    "de": "dich",
+    "pos": "pron",
+    "info": "Akk./Gen. 2. Sg."
+  },
+  {
+    "uk": "те́бе",
+    "lemma": "ти",
+    "de": "dich, dir (nach Präp.)",
+    "pos": "pron",
+    "info": "Gen. 2. Sg. nach Präposition"
+  },
+  {
+    "uk": "це",
+    "lemma": "це",
+    "de": "das, dies",
+    "pos": "pron",
+    "info": "Demonstrativ"
+  },
+  {
+    "uk": "що",
+    "lemma": "що",
+    "de": "was",
+    "pos": "pron",
+    "info": "Fragepronomen"
+  },
+  {
+    "uk": "хто",
+    "lemma": "хто",
+    "de": "wer",
+    "pos": "pron",
+    "info": "Fragepronomen"
+  },
+  {
+    "uk": "як",
+    "lemma": "як",
+    "de": "wie",
+    "pos": "adv",
+    "info": "Fragewort"
+  },
+  {
+    "uk": "зві́дки",
+    "lemma": "зві́дки",
+    "de": "woher",
+    "pos": "adv",
+    "info": "Fragewort"
+  },
+  {
+    "uk": "тут",
+    "lemma": "тут",
+    "de": "hier",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "є",
+    "lemma": "бу́ти",
+    "de": "es gibt; ist",
+    "pos": "verb",
+    "info": "3. Sg./Pl. Präs. · Inf. бу́ти"
+  },
+  {
+    "uk": "бу́дете",
+    "lemma": "бу́ти",
+    "de": "werdet (sein/nehmen)",
+    "pos": "verb",
+    "info": "2. Pl. Fut. · Inf. бу́ти"
+  },
+  {
+    "uk": "тако́ж",
+    "lemma": "тако́ж",
+    "de": "auch",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "ду́же",
+    "lemma": "ду́же",
+    "de": "sehr",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "приє́мно",
+    "lemma": "приє́мно",
+    "de": "angenehm",
+    "pos": "adv",
+    "info": "Adverb"
+  },
+  {
+    "uk": "ка́жуть",
+    "lemma": "каза́ти",
+    "de": "sagen",
+    "pos": "verb",
+    "info": "3. Pl. Präs. · Inf. каза́ти"
+  },
+  {
+    "uk": "дру́зі",
+    "lemma": "друг",
+    "de": "Freunde",
+    "pos": "noun",
+    "info": "Nom. Pl. m. · Nom. Sg. друг"
+  },
+  {
+    "uk": "Окса́на",
+    "lemma": "Окса́на",
+    "de": "Oksana",
+    "pos": "name",
+    "info": "weibl. Vorname, Nom."
+  },
+  {
+    "uk": "Окса́но",
+    "lemma": "Окса́на",
+    "de": "Oksana",
+    "pos": "name",
+    "info": "Vokativ (Anrede)"
+  },
+  {
+    "uk": "Тара́с",
+    "lemma": "Тара́с",
+    "de": "Taras",
+    "pos": "name",
+    "info": "männl. Vorname, Nom."
+  },
+  {
+    "uk": "Тара́се",
+    "lemma": "Тара́с",
+    "de": "Taras",
+    "pos": "name",
+    "info": "Vokativ (Anrede)"
+  },
+  {
+    "uk": "Ки́єва",
+    "lemma": "Ки́їв",
+    "de": "Kyjiw",
+    "pos": "name",
+    "info": "Gen. · Nom. Ки́їв"
+  },
+  {
+    "uk": "Льво́ва",
+    "lemma": "Львів",
+    "de": "Lwiw",
+    "pos": "name",
+    "info": "Gen. · Nom. Львів"
+  },
+  {
+    "uk": "Оде́си",
+    "lemma": "Оде́са",
+    "de": "Odesa",
+    "pos": "name",
+    "info": "Gen. · Nom. Оде́са"
+  },
+  {
+    "uk": "Офіціа́нт",
+    "lemma": "офіціа́нт",
+    "de": "Kellner",
+    "pos": "noun",
+    "info": "Nom. Sg. m."
+  }
+]

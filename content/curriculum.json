@@ -1,0 +1,760 @@
+{
+ "version": 1,
+ "targetDate": "2027-04-30",
+ "phases": [
+  {
+   "id": "A1.1",
+   "title_uk": "Пе́рші кро́ки",
+   "title_de": "Erste Schritte",
+   "start": "2026-10-21",
+   "end": "2026-12-31",
+   "summary_de": "Grundkontakt: begrüßen, vorstellen, Zahlen, Familie, Café und Essen, Einkaufen, Wohnung, Wege in der Stadt, Uhrzeit und Wochentage, Beruf und Büro, Dokumente bei Behörden. Grammatik: Präsens, Genus, Possessiva, Akkusativ und Lokativ als Grundmuster.",
+   "lessons": [
+    {
+     "id": "a1-1-01",
+     "file": "a1-1/a1-1-01.json",
+     "title_uk": "Приві́т!",
+     "title_de": "Hallo!",
+     "theme": "greetings",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann Menschen formell und informell begrüßen und mich verabschieden.",
+      "Ich kann fragen, wie es jemandem geht, und kurz antworten.",
+      "Ich kann mich bedanken, um etwas bitten und mich entschuldigen."
+     ]
+    },
+    {
+     "id": "a1-1-02",
+     "file": "a1-1/a1-1-02.json",
+     "title_uk": "Як тебе́ зва́ти?",
+     "title_de": "Wie heißt du?",
+     "theme": "people",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann mich mit Namen, Herkunft und Sprachen vorstellen.",
+      "Ich kann andere nach Namen und Herkunft fragen.",
+      "Ich kann sagen, dass ich etwas (nicht) verstehe."
+     ]
+    },
+    {
+     "id": "a1-1-03",
+     "file": "a1-1/a1-1-03.json",
+     "title_uk": "Скі́льки? Чи́сла",
+     "title_de": "Wie viel? Zahlen",
+     "theme": "numbers",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann von 0 bis 20 zählen.",
+      "Ich kann eine Telefonnummer nennen und verstehen.",
+      "Ich kann nach dem Alter fragen und mein Alter (bzw.",
+      "das anderer) angeben."
+     ]
+    },
+    {
+     "id": "a1-1-04",
+     "file": "a1-1/a1-1-04.json",
+     "title_uk": "Моя́ сім’я́",
+     "title_de": "Meine Familie",
+     "theme": "family",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann meine Familie vorstellen und einfache Fragen zur Familie stellen und beantworten.",
+      "Ich kann sagen, was/wen ich habe."
+     ]
+    },
+    {
+     "id": "a1-1-05",
+     "file": "a1-1/a1-1-05.json",
+     "title_uk": "Де ти живе́ш?",
+     "title_de": "Wo wohnst du?",
+     "theme": "people",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann sagen, wo ich wohne und arbeite, und andere danach fragen.",
+      "Ich kann sagen, welche Sprachen ich lerne und spreche.",
+      "Ich kann über einfache Tätigkeiten im Präsens sprechen."
+     ]
+    },
+    {
+     "id": "a1-1-06",
+     "file": "a1-1/a1-1-06.json",
+     "title_uk": "У кафе́",
+     "title_de": "Im Café",
+     "theme": "cafe",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann im Café Getränke und Kleinigkeiten bestellen, nachfragen und um die Rechnung bitten.",
+      "Ich kann einfache Wünsche äußern (ich möchte …)."
+     ]
+    },
+    {
+     "id": "a1-1-07",
+     "file": "a1-1/a1-1-07.json",
+     "title_uk": "Що ти лю́биш?",
+     "title_de": "Was isst du gern?",
+     "theme": "food",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann sagen, was ich gern esse und trinke, und andere danach fragen.",
+      "Ich kann über Mahlzeiten sprechen (Frühstück, Mittag-, Abendessen)."
+     ]
+    },
+    {
+     "id": "a1-1-08",
+     "file": "a1-1/a1-1-08.json",
+     "title_uk": "Скі́льки ко́штує?",
+     "title_de": "Was kostet das?",
+     "theme": "shopping",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann nach Preisen fragen und Preise verstehen.",
+      "Ich kann einfache Einkäufe machen (Menge, Bezahlung bar/Karte)."
+     ]
+    },
+    {
+     "id": "a1-1-09",
+     "file": "a1-1/a1-1-09.json",
+     "title_uk": "Моя́ кварти́ра",
+     "title_de": "Meine Wohnung",
+     "theme": "home",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann meine Wohnung und Zimmer einfach beschreiben.",
+      "Ich kann sagen und fragen, wo sich etwas befindet.",
+      "Ich kann einfache Eigenschaften nennen (groß, klein, neu, alt, schön, hell)."
+     ]
+    },
+    {
+     "id": "a1-1-10",
+     "file": "a1-1/a1-1-10.json",
+     "title_uk": "Де апте́ка?",
+     "title_de": "Wo ist die Apotheke?",
+     "theme": "city",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann nach dem Weg fragen und einfache Wegbeschreibungen verstehen (geradeaus, rechts, links, nah, weit).",
+      "Ich kann wichtige Orte in der Stadt benennen."
+     ]
+    },
+    {
+     "id": "a1-1-11",
+     "file": "a1-1/a1-1-11.json",
+     "title_uk": "Котра́ годи́на?",
+     "title_de": "Wie spät ist es?",
+     "theme": "time",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann nach der Uhrzeit fragen und volle Stunden angeben.",
+      "Ich kann sagen, um wie viel Uhr und zu welcher Tageszeit etwas stattfindet."
+     ]
+    },
+    {
+     "id": "a1-1-12",
+     "file": "a1-1/a1-1-12.json",
+     "title_uk": "Сього́дні понеді́лок",
+     "title_de": "Heute ist Montag",
+     "theme": "calendar",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann die Wochentage nennen und sagen, wann ich etwas mache (heute, morgen, am Montag …).",
+      "Ich kann einfache Verabredungen treffen, zu- oder absagen."
+     ]
+    },
+    {
+     "id": "a1-1-13",
+     "file": "a1-1/a1-1-13.json",
+     "title_uk": "Моя́ робо́та",
+     "title_de": "Mein Beruf",
+     "theme": "work",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann meinen Beruf nennen und andere nach ihrem Beruf fragen.",
+      "Ich kann sagen, wo ich arbeite, und meine Arbeit kurz bewerten (interessant, schwer)."
+     ]
+    },
+    {
+     "id": "a1-1-14",
+     "file": "a1-1/a1-1-14.json",
+     "title_uk": "В о́фісі",
+     "title_de": "Im Büro",
+     "theme": "office",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann Gegenstände im Büro benennen und um etwas bitten.",
+      "Ich kann höfliche Aufforderungen verstehen und verwenden (Kommen Sie herein, warten Sie bitte).",
+      "Ich kann sagen, ob ich Zeit habe oder beschäftigt bin."
+     ]
+    },
+    {
+     "id": "a1-1-15",
+     "file": "a1-1/a1-1-15.json",
+     "title_uk": "Ва́ші докуме́нти, будь ла́ска",
+     "title_de": "Ihre Dokumente, bitte",
+     "theme": "law",
+     "status": "ready",
+     "goals_de": [
+      "Ich kann in einfachen Formularen und am Schalter meine persönlichen Daten angeben (Vorname, Nachname, Adresse, Geburtsdatum, Staatsangehörigkeit).",
+      "Ich kann Dokumente vorzeigen und einfache Aufforderungen verstehen (Zeigen Sie …, Unterschreiben Sie …).",
+      "Ich kenne sehr grundlegende Begriffe aus Recht und Verwaltung."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A1.2",
+   "title_uk": "Повсякде́нне життя́",
+   "title_de": "Alltagsleben",
+   "start": "2027-01-01",
+   "end": "2027-02-28",
+   "summary_de": "Alltag erweitern: Tagesablauf, Verkehr, Wetter, Kleidung, Freizeit, Gesundheit, Daten, Bank und Post, Behördentermine. Grammatik: Präteritum, reflexive Verben, Genitiv-Grundgebrauch, Dativ in Wendungen.",
+   "lessons": [
+    {
+     "id": "a1-2-01",
+     "title_uk": "Мій день",
+     "title_de": "Mein Tag",
+     "theme": "time",
+     "status": "planned",
+     "goals_de": [
+      "Tagesablauf beschreiben",
+      "Uhrzeiten mit halb/Viertel"
+     ],
+     "grammar_de": [
+      "reflexive Verben (-ся): прокида́тися, вмива́тися",
+      "пів на …, чверть"
+     ],
+     "vocab_fields_de": [
+      "Tagesablauf",
+      "Körperpflege"
+     ]
+    },
+    {
+     "id": "a1-2-02",
+     "title_uk": "Тра́нспорт",
+     "title_de": "Verkehrsmittel",
+     "theme": "transport",
+     "status": "planned",
+     "goals_de": [
+      "Verkehrsmittel nennen, Fahrkarte kaufen, nach Abfahrt fragen"
+     ],
+     "grammar_de": [
+      "ї́хати vs. іти́",
+      "на + Lok. (на авто́бусі)",
+      "Bewegungsrichtung у/в + Akk."
+     ],
+     "vocab_fields_de": [
+      "Verkehr",
+      "Fahrkarten"
+     ]
+    },
+    {
+     "id": "a1-2-03",
+     "title_uk": "Пого́да",
+     "title_de": "Das Wetter",
+     "theme": "weather",
+     "status": "planned",
+     "goals_de": [
+      "Über Wetter und Jahreszeiten sprechen"
+     ],
+     "grammar_de": [
+      "unpersönliche Sätze (хо́лодно, тепло́)",
+      "Jahreszeiten (взи́мку, влі́тку)"
+     ],
+     "vocab_fields_de": [
+      "Wetter",
+      "Jahreszeiten",
+      "Temperatur"
+     ]
+    },
+    {
+     "id": "a1-2-04",
+     "title_uk": "Ко́лір і о́дяг",
+     "title_de": "Farben und Kleidung",
+     "theme": "clothes",
+     "status": "planned",
+     "goals_de": [
+      "Kleidung und Farben beschreiben"
+     ],
+     "grammar_de": [
+      "Adjektiv-Kongruenz inkl. Akk.",
+      "Plural Nom."
+     ],
+     "vocab_fields_de": [
+      "Farben",
+      "Kleidung"
+     ]
+    },
+    {
+     "id": "a1-2-05",
+     "title_uk": "Що ти роби́в учо́ра?",
+     "title_de": "Was hast du gestern gemacht?",
+     "theme": "time",
+     "status": "planned",
+     "goals_de": [
+      "Über Vergangenes berichten"
+     ],
+     "grammar_de": [
+      "Präteritum (-в, -ла, -ло, -ли)"
+     ],
+     "vocab_fields_de": [
+      "Alltagsaktivitäten"
+     ]
+    },
+    {
+     "id": "a1-2-06",
+     "title_uk": "Мої́ хо́бі",
+     "title_de": "Meine Hobbys",
+     "theme": "hobby",
+     "status": "planned",
+     "goals_de": [
+      "Freizeit und Vorlieben ausdrücken"
+     ],
+     "grammar_de": [
+      "мені́ подо́бається + Inf./Nom.",
+      "гра́ти в/на"
+     ],
+     "vocab_fields_de": [
+      "Freizeit",
+      "Sport",
+      "Musik"
+     ]
+    },
+    {
+     "id": "a1-2-07",
+     "title_uk": "У магази́ні о́дягу",
+     "title_de": "Im Bekleidungsgeschäft",
+     "theme": "shopping",
+     "status": "planned",
+     "goals_de": [
+      "Größe, Farbe, Preis erfragen, anprobieren"
+     ],
+     "grammar_de": [
+      "Genitiv nach Zahlen und Mengen",
+      "цей/ця/це"
+     ],
+     "vocab_fields_de": [
+      "Einkauf",
+      "Größen"
+     ]
+    },
+    {
+     "id": "a1-2-08",
+     "title_uk": "У рестора́ні",
+     "title_de": "Im Restaurant",
+     "theme": "food",
+     "status": "planned",
+     "goals_de": [
+      "Im Restaurant bestellen, reklamieren, bezahlen"
+     ],
+     "grammar_de": [
+      "нема́є + Gen.",
+      "без + Gen.",
+      "Plural Akk. (unbelebt)"
+     ],
+     "vocab_fields_de": [
+      "Speisen",
+      "Getränke",
+      "Geschirr"
+     ]
+    },
+    {
+     "id": "a1-2-09",
+     "title_uk": "Здоро́в’я",
+     "title_de": "Gesundheit",
+     "theme": "health",
+     "status": "planned",
+     "goals_de": [
+      "Beschwerden nennen, beim Arzt einfache Angaben machen"
+     ],
+     "grammar_de": [
+      "У ме́не боли́ть …",
+      "Dativ мені́/тобі́ (Wdh.)"
+     ],
+     "vocab_fields_de": [
+      "Körperteile",
+      "Beschwerden"
+     ]
+    },
+    {
+     "id": "a1-2-10",
+     "title_uk": "Дати́ і мі́сяці",
+     "title_de": "Daten und Monate",
+     "theme": "calendar",
+     "status": "planned",
+     "goals_de": [
+      "Datum, Geburtstag, Termine angeben"
+     ],
+     "grammar_de": [
+      "Ordinalzahlen n.",
+      "Genitiv der Monate (пе́ршого бе́резня)"
+     ],
+     "vocab_fields_de": [
+      "Monate",
+      "Datum"
+     ]
+    },
+    {
+     "id": "a1-2-11",
+     "title_uk": "Які́ вони́?",
+     "title_de": "Wie sind sie?",
+     "theme": "people",
+     "status": "planned",
+     "goals_de": [
+      "Aussehen und Charakter einfach beschreiben"
+     ],
+     "grammar_de": [
+      "Adjektive Pl.",
+      "ду́же/не ду́же"
+     ],
+     "vocab_fields_de": [
+      "Aussehen",
+      "Charakter"
+     ]
+    },
+    {
+     "id": "a1-2-12",
+     "title_uk": "Робо́чий день",
+     "title_de": "Arbeitstag",
+     "theme": "office",
+     "status": "planned",
+     "goals_de": [
+      "Termine vereinbaren und verschieben, kurze E-Mail"
+     ],
+     "grammar_de": [
+      "Dativ Sg. (Personen)",
+      "бу́ти у Präteritum"
+     ],
+     "vocab_fields_de": [
+      "Termine",
+      "E-Mail",
+      "Büroalltag"
+     ]
+    },
+    {
+     "id": "a1-2-13",
+     "title_uk": "Банк і по́шта",
+     "title_de": "Bank und Post",
+     "theme": "city",
+     "status": "planned",
+     "goals_de": [
+      "Konto, Geld abheben, Paket senden"
+     ],
+     "grammar_de": [
+      "Gen. Sg. (без, для, від)",
+      "ві́дправити/отри́мати"
+     ],
+     "vocab_fields_de": [
+      "Bank",
+      "Post"
+     ]
+    },
+    {
+     "id": "a1-2-14",
+     "title_uk": "Свята́",
+     "title_de": "Feste",
+     "theme": "calendar",
+     "status": "planned",
+     "goals_de": [
+      "Gratulieren, über Feste sprechen"
+     ],
+     "grammar_de": [
+      "Віта́ю з … (з + Instr.)",
+      "Wünsche (Бажа́ю …)"
+     ],
+     "vocab_fields_de": [
+      "Feiertage",
+      "Glückwünsche"
+     ]
+    },
+    {
+     "id": "a1-2-15",
+     "title_uk": "В устано́ві",
+     "title_de": "Auf dem Amt",
+     "theme": "law",
+     "status": "planned",
+     "goals_de": [
+      "Termin bei Behörde, nach Zuständigkeit fragen, Formular ausfüllen"
+     ],
+     "grammar_de": [
+      "Gen. bei Angaben (на ім’я́ …)",
+      "Modalität потрі́бно/тре́ба"
+     ],
+     "vocab_fields_de": [
+      "Behörde",
+      "Antrag",
+      "Fristen"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A1.3",
+   "title_uk": "Упе́внені кро́ки",
+   "title_de": "Sichere Schritte",
+   "start": "2027-03-01",
+   "end": "2027-04-30",
+   "summary_de": "Selbstständig handeln: Pläne, Reisen und Hotel, Apotheke, Wohnungsmiete, Einladungen, Bewerbung, Telefonate, Polizei, Kultur, Vergleiche; Abschlusswiederholung A1. Grammatik: Futur, Aspekt-Einführung, Komparativ.",
+   "lessons": [
+    {
+     "id": "a1-3-01",
+     "title_uk": "Пла́ни на вихідні́",
+     "title_de": "Pläne fürs Wochenende",
+     "theme": "hobby",
+     "status": "planned",
+     "goals_de": [
+      "Pläne machen und darüber sprechen"
+     ],
+     "grammar_de": [
+      "Futur: бу́ду + Inf., synthetisch (чита́тиму)"
+     ],
+     "vocab_fields_de": [
+      "Freizeit",
+      "Verabredungen"
+     ]
+    },
+    {
+     "id": "a1-3-02",
+     "title_uk": "Подоро́ж",
+     "title_de": "Die Reise",
+     "theme": "travel",
+     "status": "planned",
+     "goals_de": [
+      "Reise planen, Fahrkarte/Ticket buchen"
+     ],
+     "grammar_de": [
+      "Aspekt (Einführung: купува́ти/купи́ти)"
+     ],
+     "vocab_fields_de": [
+      "Reise",
+      "Ticket",
+      "Gepäck"
+     ]
+    },
+    {
+     "id": "a1-3-03",
+     "title_uk": "У готе́лі",
+     "title_de": "Im Hotel",
+     "theme": "travel",
+     "status": "planned",
+     "goals_de": [
+      "Ein- und auschecken, Probleme melden"
+     ],
+     "grammar_de": [
+      "Lok. Pl. Grundformen",
+      "чи + Frage"
+     ],
+     "vocab_fields_de": [
+      "Hotel",
+      "Zimmerausstattung"
+     ]
+    },
+    {
+     "id": "a1-3-04",
+     "title_uk": "В апте́ці",
+     "title_de": "In der Apotheke",
+     "theme": "health",
+     "status": "planned",
+     "goals_de": [
+      "Medikamente kaufen, Einnahme verstehen"
+     ],
+     "grammar_de": [
+      "Imperativ (Wdh.), Zahlwort + Gen. Pl."
+     ],
+     "vocab_fields_de": [
+      "Medikamente",
+      "Beschwerden"
+     ]
+    },
+    {
+     "id": "a1-3-05",
+     "title_uk": "Оре́нда кварти́ри",
+     "title_de": "Wohnung mieten",
+     "theme": "home",
+     "status": "planned",
+     "goals_de": [
+      "Wohnungsanzeige verstehen, Mietvertrag-Grundbegriffe"
+     ],
+     "grammar_de": [
+      "Komparativ Grundform (бі́льший, деше́вший)"
+     ],
+     "vocab_fields_de": [
+      "Miete",
+      "Vertrag",
+      "Nebenkosten"
+     ]
+    },
+    {
+     "id": "a1-3-06",
+     "title_uk": "Ха́тні спра́ви",
+     "title_de": "Hausarbeit",
+     "theme": "home",
+     "status": "planned",
+     "goals_de": [
+      "Hausarbeiten benennen, Aufgaben verteilen"
+     ],
+     "grammar_de": [
+      "Aspekt im Präteritum (роби́в/зроби́в)"
+     ],
+     "vocab_fields_de": [
+      "Haushalt"
+     ]
+    },
+    {
+     "id": "a1-3-07",
+     "title_uk": "Запро́шення",
+     "title_de": "Einladungen",
+     "theme": "people",
+     "status": "planned",
+     "goals_de": [
+      "Einladen, annehmen, ablehnen, telefonieren"
+     ],
+     "grammar_de": [
+      "Modalverben (хоті́ти, могти́, му́сити)"
+     ],
+     "vocab_fields_de": [
+      "Einladung",
+      "Telefon"
+     ]
+    },
+    {
+     "id": "a1-3-08",
+     "title_uk": "На ку́рсі",
+     "title_de": "Im Sprachkurs",
+     "theme": "school",
+     "status": "planned",
+     "goals_de": [
+      "Über Lernen sprechen, nachfragen"
+     ],
+     "grammar_de": [
+      "Instr. (з + Instr., Wdh.)",
+      "тому́ що/бо"
+     ],
+     "vocab_fields_de": [
+      "Schule",
+      "Kurs"
+     ]
+    },
+    {
+     "id": "a1-3-09",
+     "title_uk": "Співбе́сіда",
+     "title_de": "Vorstellungsgespräch",
+     "theme": "work",
+     "status": "planned",
+     "goals_de": [
+      "Sich bewerben, Lebenslauf-Grunddaten"
+     ],
+     "grammar_de": [
+      "Präteritum + Zeitangaben (з … до …)"
+     ],
+     "vocab_fields_de": [
+      "Bewerbung",
+      "Erfahrung"
+     ]
+    },
+    {
+     "id": "a1-3-10",
+     "title_uk": "Телефо́нна розмо́ва",
+     "title_de": "Telefonat im Beruf",
+     "theme": "office",
+     "status": "planned",
+     "goals_de": [
+      "Anruf annehmen, Nachricht hinterlassen"
+     ],
+     "grammar_de": [
+      "Dativ (Wdh.), Futur (Wdh.)"
+     ],
+     "vocab_fields_de": [
+      "Telefon",
+      "Nachricht"
+     ]
+    },
+    {
+     "id": "a1-3-11",
+     "title_uk": "У полі́ції",
+     "title_de": "Bei der Polizei",
+     "theme": "law",
+     "status": "planned",
+     "goals_de": [
+      "Verlust/Diebstahl melden, Personalien angeben"
+     ],
+     "grammar_de": [
+      "Präteritum + Akk.",
+      "Passiv-Chunks (вкра́ли)"
+     ],
+     "vocab_fields_de": [
+      "Polizei",
+      "Diebstahl",
+      "Rechte"
+     ]
+    },
+    {
+     "id": "a1-3-12",
+     "title_uk": "Культу́ра в мі́сті",
+     "title_de": "Kultur in der Stadt",
+     "theme": "city",
+     "status": "planned",
+     "goals_de": [
+      "Tickets kaufen, Veranstaltungen besprechen"
+     ],
+     "grammar_de": [
+      "Zeitangaben (о сьо́мій годи́ні), Wdh. Futur"
+     ],
+     "vocab_fields_de": [
+      "Theater",
+      "Museum",
+      "Konzert"
+     ]
+    },
+    {
+     "id": "a1-3-13",
+     "title_uk": "Приро́да",
+     "title_de": "Natur",
+     "theme": "weather",
+     "status": "planned",
+     "goals_de": [
+      "Natur und Ausflug beschreiben"
+     ],
+     "grammar_de": [
+      "Präpositionen des Ortes (над, під, бі́ля)"
+     ],
+     "vocab_fields_de": [
+      "Natur",
+      "Landschaft"
+     ]
+    },
+    {
+     "id": "a1-3-14",
+     "title_uk": "Порівня́ння",
+     "title_de": "Vergleiche",
+     "theme": "people",
+     "status": "planned",
+     "goals_de": [
+      "Dinge und Orte vergleichen"
+     ],
+     "grammar_de": [
+      "Komparativ/Superlativ (кра́щий, найкра́щий)"
+     ],
+     "vocab_fields_de": [
+      "Eigenschaften",
+      "Städte"
+     ]
+    },
+    {
+     "id": "a1-3-15",
+     "title_uk": "Пі́дсумок",
+     "title_de": "Abschluss A1",
+     "theme": "travel",
+     "status": "planned",
+     "goals_de": [
+      "Gesamtwiederholung, Prüfungsformate A1"
+     ],
+     "grammar_de": [
+      "Wiederholung aller A1-Strukturen"
+     ],
+     "vocab_fields_de": [
+      "gemischt"
+     ]
+    }
+   ]
+  }
+ ]
+}

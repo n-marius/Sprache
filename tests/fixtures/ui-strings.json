@@ -1,0 +1,114 @@
+{
+  "translate_to_uk": {
+    "uk": "Перекладі́ украї́нською",
+    "de": "Übersetze ins Ukrainische"
+  },
+  "translate_to_de": {
+    "uk": "Перекладі́ німе́цькою",
+    "de": "Übersetze ins Deutsche"
+  },
+  "choose_translation": {
+    "uk": "Обери́ пра́вильний пере́клад",
+    "de": "Wähle die richtige Übersetzung"
+  },
+  "build_sentence": {
+    "uk": "Склади́ ре́чення",
+    "de": "Bilde den Satz"
+  },
+  "fill_gap": {
+    "uk": "Запо́вни про́пуск",
+    "de": "Fülle die Lücke"
+  },
+  "read_and_answer": {
+    "uk": "Прочита́й і дай ві́дповідь",
+    "de": "Lies und antworte"
+  },
+  "listen_and_choose": {
+    "uk": "Послу́хай і обери́",
+    "de": "Hör zu und wähle"
+  },
+  "listen_and_build": {
+    "uk": "Послу́хай і склади́",
+    "de": "Hör zu und bilde den Satz"
+  },
+  "say_aloud": {
+    "uk": "Скажи́ вго́лос",
+    "de": "Sprich laut"
+  },
+  "match_pairs": {
+    "uk": "Знайди́ па́ри",
+    "de": "Finde die Paare"
+  },
+  "choose_picture": {
+    "uk": "Обери́ малю́нок",
+    "de": "Wähle das Bild"
+  },
+  "chat": {
+    "uk": "Поговори́",
+    "de": "Unterhalte dich"
+  },
+  "true_false": {
+    "uk": "Пра́вда чи непра́вда?",
+    "de": "Richtig oder falsch?"
+  },
+  "true": {
+    "uk": "Пра́вда",
+    "de": "Richtig"
+  },
+  "false": {
+    "uk": "Непра́вда",
+    "de": "Falsch"
+  },
+  "check": {
+    "uk": "Переві́рити",
+    "de": "Prüfen"
+  },
+  "continue": {
+    "uk": "Да́лі",
+    "de": "Weiter"
+  },
+  "correct": {
+    "uk": "Пра́вильно!",
+    "de": "Richtig!"
+  },
+  "incorrect": {
+    "uk": "Непра́вильно",
+    "de": "Nicht ganz"
+  },
+  "correct_answer": {
+    "uk": "Пра́вильна ві́дповідь:",
+    "de": "Richtige Antwort:"
+  },
+  "new_word": {
+    "uk": "Нове́ сло́во",
+    "de": "Neues Wort"
+  },
+  "review": {
+    "uk": "Повто́рення",
+    "de": "Wiederholung"
+  },
+  "lesson_done": {
+    "uk": "Уро́к заве́ршено!",
+    "de": "Lektion abgeschlossen!"
+  },
+  "well_done": {
+    "uk": "Молоде́ць!",
+    "de": "Gut gemacht!"
+  },
+  "skip": {
+    "uk": "Пропусти́ти",
+    "de": "Überspringen"
+  },
+  "report": {
+    "uk": "Повідо́мити",
+    "de": "Melden"
+  },
+  "tap_to_listen": {
+    "uk": "Торкни́ся, щоб послу́хати",
+    "de": "Tippen zum Anhören"
+  },
+  "slow": {
+    "uk": "Пові́льніше",
+    "de": "Langsamer"
+  }
+}

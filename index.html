@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <title>Мова – Ukrainisch lernen</title>
+  <meta name="description" content="Ukrainisch lernen bis A1 – Verstehen und Sprechen.">
+  <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Мова">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+  <link rel="stylesheet" href="css/exercises.css">
+  <link rel="stylesheet" href="css/popover.css">
+  <link rel="stylesheet" href="css/settings.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="modulepreload" href="js/main.js">
+  <script>
+    // Theme vor dem ersten Rendern setzen (kein Aufblitzen)
+    try {
+      var t = localStorage.getItem('mova.theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="app" class="app">
+    <main id="view" class="view" aria-live="polite"></main>
+    <nav id="tabbar" class="tabbar" aria-label="Navigation"></nav>
+  </div>
+  <div id="overlay-root"></div>
+  <div id="boot" class="boot" aria-hidden="true">
+    <div class="boot-logo">
+      <img src="icons/icon.svg" alt="" width="88" height="88">
+    </div>
+  </div>
+  <noscript>Diese App benötigt JavaScript.</noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

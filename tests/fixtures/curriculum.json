@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "targetDate": "2027-04-30",
+  "phases": [
+    {
+      "id": "A1.1",
+      "title_uk": "Пе́рші кро́ки",
+      "title_de": "Erste Schritte",
+      "start": "2026-10-21",
+      "end": "2026-12-31",
+      "summary_de": "Begrüßen, sich vorstellen, im Café bestellen.",
+      "lessons": [
+        {
+          "id": "a1-1-01",
+          "file": "a1-1/a1-1-01.json",
+          "title_uk": "Приві́т!",
+          "title_de": "Hallo!",
+          "theme": "greetings",
+          "status": "ready",
+          "goals_de": [
+            "Ich kann grüßen und mich verabschieden.",
+            "Ich kann sagen, wie ich heiße."
+          ]
+        },
+        {
+          "id": "a1-1-02",
+          "file": "a1-1/a1-1-02.json",
+          "title_uk": "У кав’я́рні",
+          "title_de": "Im Café",
+          "theme": "cafe",
+          "status": "ready",
+          "goals_de": [
+            "Ich kann Getränke bestellen.",
+            "Ich kann sagen, was ich trinke."
+          ]
+        },
+        {
+          "id": "a1-1-03",
+          "title_uk": "Моя́ сім’я́",
+          "title_de": "Meine Familie",
+          "theme": "family",
+          "status": "planned",
+          "goals_de": [
+            "Ich kann meine Familie vorstellen."
+          ],
+          "grammar_de": [
+            "Possessivpronomen мій/моя́/моє́"
+          ],
+          "vocab_fields_de": [
+            "Familie"
+          ]
+        },
+        {
+          "id": "a1-1-04",
+          "title_uk": "Чи́сла",
+          "title_de": "Zahlen",
+          "theme": "numbers",
+          "status": "planned",
+          "goals_de": [
+            "Ich kann bis 20 zählen."
+          ],
+          "grammar_de": [
+            "Zahlwörter 1–20"
+          ],
+          "vocab_fields_de": [
+            "Zahlen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A1.2",
+      "title_uk": "Щоде́нне життя́",
+      "title_de": "Alltag",
+      "start": "2027-01-01",
+      "end": "2027-02-28",
+      "summary_de": "Stadt, Einkaufen, Uhrzeit.",
+      "lessons": [
+        {
+          "id": "a1-2-01",
+          "title_uk": "У мі́сті",
+          "title_de": "In der Stadt",
+          "theme": "city",
+          "status": "planned",
+          "goals_de": [
+            "Ich kann nach dem Weg fragen."
+          ],
+          "grammar_de": [
+            "Lokativ"
+          ],
+          "vocab_fields_de": [
+            "Orte"
+          ]
+        },
+        {
+          "id": "a1-2-02",
+          "title_uk": "Поку́пки",
+          "title_de": "Einkaufen",
+          "theme": "shopping",
+          "status": "planned",
+          "goals_de": [
+            "Ich kann nach Preisen fragen."
+          ],
+          "grammar_de": [
+            "Akkusativ"
+          ],
+          "vocab_fields_de": [
+            "Lebensmittel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A1.3",
+      "title_uk": "Світ навко́ло",
+      "title_de": "Die Welt um mich",
+      "start": "2027-03-01",
+      "end": "2027-04-30",
+      "summary_de": "Reisen, Wetter, Gesundheit.",
+      "lessons": [
+        {
+          "id": "a1-3-01",
+          "title_uk": "Пого́да",
+          "title_de": "Wetter",
+          "theme": "weather",
+          "status": "planned",
+          "goals_de": [
+            "Ich kann über das Wetter sprechen."
+          ],
+          "grammar_de": [
+            "Adverbien"
+          ],
+          "vocab_fields_de": [
+            "Wetter"
+          ]
+        },
+        {
+          "id": "a1-3-02",
+          "title_uk": "Подоро́жі",
+          "title_de": "Reisen",
+          "theme": "travel",
+          "status": "planned",
+          "goals_de": [
+            "Ich kann ein Ticket kaufen."
+          ],
+          "grammar_de": [
+            "Futur"
+          ],
+          "vocab_fields_de": [
+            "Reisen"
+          ]
+        }
+      ]
+    }
+  ]
+}
