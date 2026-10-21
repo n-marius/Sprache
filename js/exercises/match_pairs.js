@@ -41,7 +41,7 @@ export function render(ex, ctx) {
     if (busy || done || isDone(lBtns[k])) return;
     selL = selL === k ? -1 : k;
     haptic('select');
-    if (selL >= 0 && ctx.settings?.autoplay !== false) ctx.app?.tts?.speak?.(left[k].uk)?.catch?.(() => {});
+    if (selL >= 0 && !ctx.listenOff && ctx.settings?.autoplay !== false) ctx.app?.tts?.speak?.(left[k].uk)?.catch?.(() => {});
     mark(); tryMatch();
   }
   function tapR(k) {

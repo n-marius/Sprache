@@ -73,7 +73,7 @@ export function render(ex, ctx) {
     if (locked || placed.includes(k)) return;
     placed.push(k);
     haptic('select');
-    if (ctx.settings?.autoplay !== false) ctx.app?.tts?.speak?.(bank[k].uk)?.catch?.(() => {});
+    if (!ctx.listenOff && ctx.settings?.autoplay !== false) ctx.app?.tts?.speak?.(bank[k].uk)?.catch?.(() => {});
     paint(placed.length - 1);
   }
   function unplace(pos) {

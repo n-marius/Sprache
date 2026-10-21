@@ -13,10 +13,56 @@ Verbindlich für die Lektions-Autoren. Datenformat: `docs/CONTRACT.md`. Recherch
 - **Spacing**: übernimmt die App (SRS aus `vocab`); Inhalte liefern dafür saubere Vokabeln mit Beispielsatz.
 - **Immersion**: Anweisungen/Fragen auf Ukrainisch mit einfachsten Wörtern; jedes ukrainische Wort ist per Tap auflösbar (Glossar).
 - **Sprachnorm**: Standardukrainisch, keine Russismen/Surschyk; je Begriff EINE gängige Form; Betonung (U+0301) auf jedem mehrsilbigen Wort; Apostroph ’ (U+2019).
+- **Immersiv statt Drill**: fortlaufende Geschichte mit festen Figuren, Ankertext je Lektion, Circling-Fragen auf Ukrainisch, aufgabenbasierte Chats, Noticing der neuen Formen, Erschließen aus dem Kontext (siehe „Methodik je Lektion“).
 - **Lernerprofil**: Experte (u. a. Jura) – erwachsene, sachliche Kontexte (Büro, Behörde, Reise), keine Kindersprache.
 - **Strikt aufbauende Grammatik**: Fälle und Verbformen werden nacheinander eingeführt (siehe „Grammatische Progression“). Produktiv verlangt wird nur, was erklärt ist; Vorgriffe nur als benannte Chunks.
 - **Erklärung vor der Übung**: Jede Lektion hat eine zusammenhängende deutsche `explanation` (Tabellen, Beispiele), die vor der Lektion gezeigt wird und danach abrufbar bleibt.
 - **Vokabeltrainer**: `vocab[].de` muss als Karteikarte allein verständlich sein (Klammerzusatz bei Mehrdeutigkeit), `info` mit Genus bzw. Konjugationsklasse/Stammformen.
+
+## Figuren und fortlaufende Geschichte (verbindlich für alle Lektionen)
+
+Alle Lektionen erzählen eine durchgehende Geschichte (narrativer Kontext, Comprehensible Input). Die Figuren tauchen immer wieder auf; jede Lektion hat einen **Ankertext/Leitdialog**, der die Episode erzählt.
+
+| Figur | uk | Rolle | feste Fakten |
+|---|---|---|---|
+| Markus Schmidt | Ма́ркус Шмідт | deutscher Jurist aus Berlin, arbeitet seit Oktober für ein halbes Jahr im Kyjiwer Büro einer Kanzlei, lernt Ukrainisch | ca. 40; Schwester Julia (Ю́лія) und Eltern in Berlin; trinkt Kaffee mit Milch, ohne Zucker |
+| Oksana Kowalenko | Окса́на Ковале́нко | ukrainische Anwältin (адвока́тка) im selben Büro, Markus’ Kollegin und Mentorin | aus Lwiw, wohnt in Kyjiw; Mann Andrij (Андрі́й, програмі́ст); Tochter Sofija (Софі́я, 7 Jahre); Kater Barsyk (Ба́рсик) |
+| Taras | Тара́с | Student, arbeitet im Café neben dem Büro | 22; studiert Jura; locker, duzt alle Gleichaltrigen |
+| Frau Natalija | па́ні Ната́лія | Vermieterin von Markus’ Wohnung, Nachbarin | ca. 65; Rentnerin; spricht langsam und freundlich, siezt; geht gern auf den Markt |
+| Herr Wiktor Bondarenko | пан Ві́ктор Бондаре́нко | Leiter (керівни́к) des Kyjiwer Büros | ca. 55; formell, siezt |
+
+**Rolle der lernenden Person**: In `chat`-Aufgaben spricht die lernende Person als sie selbst – eine neue Kollegin bzw. ein neuer Kollege aus Deutschland im selben Büro (Geschlecht offen → keine geschlechtsmarkierten Ich-Formen). Markus ist eine Figur, nicht die lernende Person.
+
+**Episoden A1.1** (Ankertext/Leitdialog je Lektion):
+| Lektion | Episode |
+|---|---|
+| a1-1-01 | Erster Tag in Kyjiw: Markus grüßt Taras im Café, Frau Natalija im Hausflur, Oksana im Büro (ти vs. ви). |
+| a1-1-02 | Vorstellungsrunde im Büro: Markus lernt Oksana und Herrn Bondarenko kennen; woher, welche Sprachen. |
+| a1-1-03 | Telefonnummern und Alter: Markus und Oksana tauschen Nummern; Sofija ist sieben. |
+| a1-1-04 | Familienfoto: Oksana zeigt ihre Familie, Markus erzählt von Julia und seinen Eltern. |
+| a1-1-05 | Wer wohnt wo? Oksana aus Lwiw lebt in Kyjiw, Markus wohnt jetzt hier, Taras liest und lernt viel. |
+| a1-1-06 | Im Café: Markus bestellt bei Taras; die lernende Person bestellt auch. |
+| a1-1-07 | Mittagessen mit Oksana; Abendessen bei Oksanas Familie (Смачно́го!). |
+| a1-1-08 | Auf dem Markt mit Frau Natalija: Preise, Kilos, Karte oder bar. |
+| a1-1-09 | Markus’ Wohnung bei Frau Natalija: Zimmer, Möbel, wo ist was? |
+| a1-1-10 | Markus sucht Apotheke und Bank; ein Passant erklärt den Weg. |
+| a1-1-11 | Ein Tag im Büro nach der Uhr: Termine um neun, um drei; Taras arbeitet abends. |
+| a1-1-12 | Wochenplanung: Besprechung am Dienstag, Oksana lädt am Freitag ins Kino ein. |
+| a1-1-13 | Party bei Oksana: Wer ist was von Beruf? (Andrij Programmierer, Taras Student, Markus Jurist). |
+| a1-1-14 | Hektischer Bürotag: Mandant kommt, Drucker kaputt, Herr Bondarenko in der Besprechung. |
+| a1-1-15 | Behördengang und Mietvertrag: Formular, Pass zeigen, unterschreiben beim Notar mit Frau Natalija. |
+
+A1.2/A1.3 setzen die Geschichte fort (Winter in Kyjiw, Reise nach Lwiw zu Oksanas Eltern, Krankheit, Feste, Projektende und Abschied im April).
+
+## Methodik je Lektion (verbindlich)
+
+1. **Ankertext/Leitdialog zuerst** (erste Aufgabe, Typ `reading`; 5–8 Sätze bzw. kurzer Dialog im Fließtext): erzählt die Episode mit dem neuen Wortschatz und den neuen Formen – verständlicher Input vor der Produktion.
+2. **Circling (TPRS-artig)**: direkt danach mehrere Fragen auf Ukrainisch zum Ankertext (`reading`-Fragen, `true_false`, `mc_translate uk-de` zu Sätzen aus dem Text), die dieselbe Struktur mit wechselnden Details abfragen (Хто …? Де …? Так чи ні? … чи …?).
+3. **Noticing / Input-Enhancement**: Die neue Form ist in `explanation`-Beispielen **fett** hervorgehoben; frühe `cloze`-Aufgaben greifen genau diese Formen aus dem Ankertext auf.
+4. **Erschließen und Vorhersagen**: einige Aufgaben, in denen Bedeutung aus dem Kontext erschlossen wird (`true_false` mit Kontext, „Was antwortet Oksana wohl?“ als `mc`/`chat`).
+5. **Aufgabenbasiert**: Die Chats sind echte Alltagsaufgaben mit Ziel (bestellen, Termin vereinbaren, Formular abgeben) – Erfolg = Ziel erreicht.
+6. **Ohne Ton lernbar**: Hören/Sprechen sind in der App abschaltbar. Alles, was `listening`/`speak` übt, muss zusätzlich in Textaufgaben (mc, cloze, build_sentence, match, chat …) vorkommen.
+7. **Produktion zuletzt steigern**: build_sentence/speak/chat mit frei kombinierten Sätzen erst nach Input und gelenkter Übung.
 
 ## Phasenüberblick
 

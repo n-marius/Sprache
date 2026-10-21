@@ -26,7 +26,7 @@ export function render(ex, ctx) {
       h('div', { class: 'exb-bubble' }, ukText(ex.prompt, { cls: 'exb-prompt-text' })));
   }
 
-  const builder = chipBuilder({ words, lang, ctx, onChange: has => ctx.setReady(has) });
+  const builder = chipBuilder({ words, lang, ctx, speak: lang === 'uk' && !ctx.listenOff, onChange: has => ctx.setReady(has) });
   const hint = hintDe(ex.hint_de, ctx, 'exb-hint');
 
   const el = h('div', { class: ['exb', 'exb-build', toUk ? 'is-to-uk' : 'is-to-de'] },

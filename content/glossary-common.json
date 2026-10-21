@@ -852,5 +852,12 @@
   "de": "Polen",
   "pos": "name",
   "info": "Land (f.)"
+ },
+ {
+  "uk": "Ба́рсик",
+  "lemma": "Ба́рсик",
+  "de": "Barsyk (Katzenname)",
+  "pos": "name",
+  "info": "Name eines Katers"
  }
 ]
