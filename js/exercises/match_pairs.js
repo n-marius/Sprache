@@ -30,7 +30,7 @@ export function render(ex, ctx) {
     h('div', { class: 'exb-match-col', role: 'group', 'aria-label': 'Ukrainisch' }, lBtns),
     h('div', { class: 'exb-match-col', role: 'group', 'aria-label': 'Deutsch' }, rBtns));
 
-  const isDone = b => b.classList.contains('is-matched');
+  const isDone = b => b.classList.contains('is-matched') || b.classList.contains('is-correct');
 
   function mark() {
     lBtns.forEach((b, k) => b.classList.toggle('is-selected', k === selL));

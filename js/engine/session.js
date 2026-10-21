@@ -6,7 +6,7 @@
 //      | { key, kind:'exercise', ex, lessonId, generated?, stage, review?, retry? }
 import * as srs from './srs.js';
 import { now, mulberry32, hashStr, shuffle, clamp } from './util.js';
-import { generate, generateForStage, defaultPool, stageForCard } from './review-gen.js';
+import { generate, generateForStage, defaultPool, stageForCard, adaptForAudio, audioModeOf } from './review-gen.js';
 import { dayKey, lessonMastery, applyStreak, nextLesson, MAX_NEW_PER_DAY, REVIEW_DAY_THRESHOLD } from './progress.js';
 
 export const STAGES = ['recognize', 'recall', 'produce'];
@@ -65,9 +65,9 @@ function oldItems(app, { n, lessonIds, today, rng, excludeKeys = new Set() }) {
   cands.sort((a, b) => (b.due - a.due) || (a.R - b.R) || (a.r - b.r));
   const out = [];
   const usedVocab = new Set();
-  for (const { v, c } of cands) {
+  for (let round = 0; round < 3 && out.length < n; round++) for (const { v, c } of cands) {
     if (out.length >= n) break;
-    if (usedVocab.has(v.id)) continue;
+    if (round === 0 && usedVocab.has(v.id)) continue;
     let item = null;
     if (rng() < 0.5) {
       const lesson = app.content.getLesson(v.lessonId);
@@ -253,7 +253,7 @@ export function createLessonSession(app, lessonId, opts = {}) {
 
   return runtime(app, {
     kind: 'lesson', lessonId, theme: lesson.theme, title_uk: lesson.title_uk, title_de: lesson.title_de,
-    items, rng, today, cfg, seed, pool,
+    items, rng, today, cfg, seed, pool, audioMode: opts.audioMode,
   });
 }
 
@@ -279,14 +279,17 @@ export function createReviewSession(app, opts = {}) {
   const lessonIds = new Set(app.content.readyLessons().map(l => l.id));
   const cands = all.map(v => ({ v, due: srs.isDue(cards[v.id], today), R: srs.retrievability(cards[v.id], today) }));
   const dueN = cands.filter(x => x.due).length;
-  let items = oldItems(app, { n: Math.min(cfg.size, Math.max(dueN ? Math.min(dueN, cap) : 0, cfg.size)), lessonIds, today, rng });
+  // oldItems sortiert fällige (niedrigste R) vor den schwächsten nicht fälligen. Tageslimit (60): ist es erreicht,
+  // wird die Session auf 10 Aufgaben gekürzt (freiwillige Extra-Runde statt Rückstau-Berg).
+  const n = cap > 0 ? cfg.size : Math.min(cfg.size, 10);
+  let items = oldItems(app, { n, lessonIds, today, rng });
   items = spread(shuffle(items, rng));
   const counts = {};
   for (const it of items) { const th = app.content.getLesson(it.lessonId)?.theme; if (th) counts[th] = (counts[th] || 0) + 1; }
   const theme = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || app.content.readyLessons()[0]?.theme || 'greetings';
   return runtime(app, {
     kind: 'review', lessonId: null, theme, title_uk: 'Повто́рення', title_de: 'Wiederholung',
-    items, rng, today, cfg, seed, dueCount: dueN,
+    items, rng, today, cfg, seed, dueCount: dueN, audioMode: opts.audioMode,
   });
 }
 
@@ -304,6 +307,23 @@ function runtime(app, m) {
   let extended = false;
   let summary = null;
   const masteryBefore = lessonId ? lessonMastery(app, lessonId) : null;
+  let mode = audioModeOf(app, m.audioMode);
+
+  /** Hör-/Sprechaufgabe an den Audio-Modus anpassen (Original bleibt in item.origEx erhalten). */
+  function applyAudio(it) {
+    if (it.kind !== 'exercise') return it;
+    const base = it.origEx || it.ex;
+    const a = adaptForAudio(app, base, mode, { rng, pool: m.pool });
+    if (!a) { it.suspended = true; return it; }
+    it.suspended = false;
+    if (a !== base) { it.origEx = base; it.ex = a; it.adapted = true; }
+    else if (it.origEx) { it.ex = base; delete it.origEx; it.adapted = false; }
+    it.generated = !!it.ex.generated;
+    if (!it.generated) delete it.generated;
+    it.stage = srs.exerciseCategory(it.ex);
+    return it;
+  }
+  for (const it of queue) applyAudio(it);
 
   function introduce(it) {
     const id = it.vocab.id;
@@ -333,6 +353,7 @@ function runtime(app, m) {
     };
     const gap = 3 + Math.floor(rng() * 3); // nach 3–5 Aufgaben
     const at = Math.min(queue.length, pos + gap);
+    applyAudio(copy);
     queue.splice(at, 0, copy);
     return copy;
   }
@@ -341,6 +362,7 @@ function runtime(app, m) {
     kind, lessonId, theme: m.theme, title_uk: m.title_uk, title_de: m.title_de, seed: m.seed,
     get items() { return queue.slice(); },
     next() {
+      while (pos < queue.length && queue[pos].suspended) pos++;
       if (pos >= queue.length) return null;
       const it = queue[pos++];
       if (it.kind === 'intro') introduce(it);
@@ -385,13 +407,25 @@ function runtime(app, m) {
     progress() {
       if (!queue.length) return 1;
       let done = 0;
-      for (let i = 0; i < pos; i++) { const it = queue[i]; if (it.kind !== 'exercise' || it._done) done++; }
-      return Math.min(1, done / queue.length);
+      let all = 0;
+      for (let i = 0; i < queue.length; i++) {
+        const it = queue[i];
+        if (it.suspended && !it._done) continue;
+        all++;
+        if (i < pos && (it.kind !== 'exercise' || it._done)) done++;
+      }
+      return all ? Math.min(1, done / all) : 1;
     },
-    remaining() { return queue.filter(it => it.kind === 'exercise' && !it._done).length; },
+    remaining() { return queue.filter(it => it.kind === 'exercise' && !it._done && !it.suspended).length; },
+    /** Nach Änderung von „Gerade kein Ton“: noch nicht gestellte Aufgaben neu anpassen/auslassen/wiederherstellen. */
+    refreshAudioMode(newMode) {
+      mode = audioModeOf(app, newMode);
+      for (let i = pos; i < queue.length; i++) if (!queue[i]._done) applyAudio(queue[i]);
+      return mode;
+    },
     finish() {
       if (summary) return summary;
-      const complete = pos >= queue.length;
+      const complete = !queue.slice(pos).some(it => !it.suspended);
       const iso = new Date(now()).toISOString();
       let firstCompletion = false;
       app.store.update(s => {

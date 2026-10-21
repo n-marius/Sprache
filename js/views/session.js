@@ -9,11 +9,17 @@ import { openReportSheet } from '../ui/report-sheet.js';
 import { getExercise, instructionFor } from '../exercises/index.js';
 import { makeCtx } from '../exercises/ctx.js';
 import { createLessonSession, createReviewSession } from '../engine/session.js';
+import { isListenOff, isSpeakOff, autoplayAllowed } from '../audio-mode.js';
+import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
 
 const POS_DE = {
   noun: 'Substantiv', verb: 'Verb', adj: 'Adjektiv', adv: 'Adverb', pron: 'Pronomen', num: 'Zahlwort',
   prep: 'Präposition', conj: 'Konjunktion', part: 'Partikel', interj: 'Ausruf', name: 'Name', phrase: 'Wendung',
 };
+
+// Aufgabentypen, die Ton brauchen → Prüffunktion „gerade aus?“
+const AUDIO_TYPES = { listening: isListenOff, speak: isSpeakOff };
+const audioOffFor = (type, app) => { try { return !!AUDIO_TYPES[type]?.(app); } catch { return false; } };
 
 const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
 const isReduced = () => {
@@ -53,7 +59,8 @@ export function render(params, app) {
   const progress = h('div', { class: 'progress sess-progress', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-label': 'Fortschritt' }, fill);
   const closeBtn = h('button', { type: 'button', class: 'icon-btn sess-close', 'aria-label': 'Session beenden', on: { click: () => askClose() } }, icon('close'));
   const flagBtn = h('button', { type: 'button', class: 'icon-btn sess-flag', 'aria-label': 'Fehler melden', on: { click: () => report() } }, icon('flag'));
-  const head = h('header', { class: 'sess-head' }, h('div', { class: 'sess-head-inner' }, closeBtn, progress, flagBtn));
+  const soundBtn = h('button', { type: 'button', class: 'icon-btn sess-sound', 'aria-label': 'Ton-Einstellungen („Gerade kein Ton“)', on: { click: () => openAudio() } }, icon('speaker'));
+  const head = h('header', { class: 'sess-head' }, h('div', { class: 'sess-head-inner' }, closeBtn, progress, soundBtn, flagBtn));
 
   const stage = h('div', { class: 'sess-stage' });
   const body = h('main', { class: 'sess-body' }, stage);
@@ -147,7 +154,6 @@ export function render(params, app) {
 
   async function showIntro(it, my) {
     const v = it.vocab || {};
-    const s = settings();
     const head = T('new_word');
     const forms = Array.isArray(v.forms) ? v.forms.filter(f => f && f.uk) : [];
     const meta = [POS_DE[v.pos] || v.pos, v.info].filter(Boolean).join(' · ');
@@ -158,7 +164,7 @@ export function render(params, app) {
         v.emoji ? h('div', { class: 'sess-emoji', 'aria-hidden': 'true' }, v.emoji) : null,
         h('div', { class: 'sess-word' }, ukText(v.uk, { tap: false })),
         h('div', { class: 'sess-speakers' },
-          speakerButton(v.uk, { size: 'l', autoplay: s.autoplay !== false }),
+          speakerButton(v.uk, { size: 'l', autoplay: safeAutoplay() }),
           speakerButton(v.uk, { size: 'm', slow: true })),
         h('div', { class: 'sess-trans' }, deText(v.de)),
         meta ? h('div', { class: 'sess-meta' }, meta) : null,
@@ -201,6 +207,7 @@ export function render(params, app) {
 
   async function showExercise(it, my) {
     const ex = it.ex;
+    if (audioOffFor(ex.type, app)) { skipAudioOff(it); return; }
     const m = await getExercise(ex.type);
     if (my !== token || destroyed) return;
     const key = instructionFor(ex, m);
@@ -220,7 +227,8 @@ export function render(params, app) {
       h('div', { class: 'sess-instr' },
         h('h2', { class: 'sess-instr-uk' }, ukText(instr.uk)),
         settings().showGermanHints !== false && instr.de ? h('div', { class: 'sess-instr-de' }, instr.de) : null),
-      h('div', { class: 'sess-ex-body' }, ctrl.el));
+      h('div', { class: 'sess-ex-body' }, ctrl.el),
+      AUDIO_TYPES[ex.type] ? noSoundLink() : null);
     itemEl = el;
     if (m.selfChecking) setAction(T('check').uk, 'btn-primary', { disabled: true, hidden: true });
     else setAction(T('check').uk, 'btn-primary', { disabled: !ready });
@@ -285,7 +293,8 @@ export function render(params, app) {
       if (r.solution_uk) details.push(h('div', { class: 'sess-fb-sol' }, ukText(r.solution_uk), speakerButton(r.solution_uk, { size: 's' })));
     }
     fbSlot.append(h('div', { class: 'sess-fb-row' }, glyph,
-      h('div', { class: 'sess-fb-text' }, title, details), reportLink));
+      h('div', { class: 'sess-fb-text' }, title, details,
+        AUDIO_TYPES[ex?.type] && kind !== 'neutral' ? noSoundLink('is-fb') : null), reportLink));
     foot.classList.add('has-fb', `is-${kind}`);
     setAction(T('continue').uk, kind === 'bad' ? 'btn-danger' : kind === 'ok' ? 'btn-primary' : 'btn-blue');
     syncFoot();
@@ -314,6 +323,39 @@ export function render(params, app) {
     try { const g = await import('../services/gist.js'); Promise.resolve(g.maybeAutoBackup?.(app)).catch(() => {}); } catch {}
     if (!destroyed) app.navigate('#/summary', { replace: true });
   }
+
+  // ---------- „Gerade kein Ton“ ----------
+  function safeAutoplay() { try { return autoplayAllowed(app); } catch { return settings().autoplay !== false; } }
+  function noSoundLink(cls = '') {
+    return h('button', { type: 'button', class: ['sess-nosound', cls], on: { click: () => openAudio() } }, icon('speaker'), 'Gerade kein Ton');
+  }
+  function openAudio() {
+    try { Promise.resolve(openAudioModeSheet(app)).catch(e => console.error(e)); } catch (e) { console.error(e); }
+  }
+  function syncSoundBtn() {
+    let off = false;
+    try { off = isListenOff(app) || isSpeakOff(app); } catch {}
+    soundBtn.classList.toggle('is-off', off);
+    soundBtn.setAttribute('aria-pressed', String(off));
+  }
+  /** Aktuelle Ton-Aufgabe ohne Bewertung überspringen. */
+  function skipAudioOff(it) {
+    if (destroyed || finished || it !== item) return;
+    phase = 'idle';
+    const res = { correct: false, skipped: true, audioOff: true, userAnswer: '', durationMs: Math.round(now() - t0) };
+    try { session.record(it, res); } catch (e) { console.error('session.record fehlgeschlagen', e); }
+    queueMicrotask(() => advance());
+  }
+  const onAudioMode = () => {
+    syncSoundBtn();
+    try { session.refreshAudioMode?.(); } catch (e) { console.error(e); }
+    if (item?.kind === 'exercise' && (phase === 'answer' || phase === 'checking') && audioOffFor(item.ex?.type, app)) {
+      try { app.tts?.stop?.(); } catch {}
+      skipAudioOff(item);
+    }
+  };
+  addEventListener('mova:audiomode', onAudioMode);
+  syncSoundBtn();
 
   // ---------- Kopf-Aktionen ----------
   async function askClose() {
@@ -378,6 +420,7 @@ export function render(params, app) {
     destroy() {
       destroyed = true; token++;
       document.removeEventListener('keydown', onKey);
+      removeEventListener('mova:audiomode', onAudioMode);
       try { ro?.disconnect(); } catch {}
       cleanupItem();
     },

@@ -27,13 +27,16 @@ export function defaultState() {
       gistBackup: false,
       newWordsPerSession: 5,
       sessionSize: 15,
+      listenOff: false,         // Hören dauerhaft aus
+      speakOff: false,          // Sprechen dauerhaft aus
     },
     lessons: {},
     srs: { vocab: {}, ex: {} },
     days: {},
     streak: { current: 0, best: 0, lastDay: null, freezes: 1, freezeUsed: [] },
     reports: [],
-    meta: { lastSyncAt: null, lastBackupAt: null, seenVersion: null },
+    meta: { lastSyncAt: null, lastBackupAt: null, seenVersion: null, listenOffUntil: null, speakOffUntil: null },
+    mined: [],                  // gesammelte Sätze (Satz-Mining) → Vokabeltrainer
   };
 }
 

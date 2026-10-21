@@ -19,14 +19,31 @@
   border-bottom: .5px solid var(--separator);
 }
 .sess-head-inner {
-  display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; gap: var(--sp-2);
+  display: grid; grid-template-columns: 44px 1fr 44px 44px; align-items: center; gap: var(--sp-1);
   height: 56px; max-width: calc(var(--sess-max) + 120px); margin: 0 auto;
 }
 .sess-head .icon-btn { width: 44px; height: 44px; color: var(--label-3); }
 .sess-head .icon-btn svg { width: 24px; height: 24px; }
 .sess-head .sess-close { color: var(--label-2); }
 .sess-head .icon-btn:active { background: var(--fill); }
-.sess-progress { height: 16px; }
+.sess-progress { height: 16px; margin: 0 var(--sp-2); }
+.sess-sound { position: relative; }
+.sess-sound.is-off { color: var(--label-3); opacity: .8; }
+.sess-sound.is-off::after { /* durchgestrichen */
+  content: ""; position: absolute; left: 50%; top: 50%; width: 28px; height: 2.5px; border-radius: 2px;
+  background: currentColor; transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: 0 0 0 1.5px var(--bg);
+}
+
+/* Link „Gerade kein Ton“ (unter Hör-/Sprechaufgaben und in der Feedback-Leiste) */
+.sess-nosound {
+  align-self: center; display: inline-flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0 12px;
+  color: var(--label-2); font-size: var(--fs-sub); font-weight: 600;
+}
+.sess-nosound svg { width: 18px; height: 18px; }
+.sess-nosound:active { opacity: .5; }
+.sess-nosound.is-fb { align-self: flex-start; min-height: 36px; padding: 0; margin-top: 2px; font-size: var(--fs-foot); color: inherit; opacity: .8; }
 
 /* ---------- Inhalt ---------- */
 .sess-body {

@@ -3,6 +3,7 @@
 // Auswahl-Optionen: richtige Option an Index 0 (die Komponenten mischen).
 import { normalizeWord, words as ukWords } from '../lib/uk-text.js';
 import { shuffle } from './util.js';
+import { isListenOff, isSpeakOff } from '../audio-mode.js';
 
 /** Arten generierter Aufgaben → Kategorie (wie srs.exerciseCategory). */
 export const GEN_KINDS = {
@@ -186,4 +187,86 @@ export function stageForCard(card, rng = Math.random) {
   if (!card || !card.S || card.state === 'learning') return rng() < 0.5 ? 'recognize' : 'recall';
   if (card.S < 3) return rng() < 0.35 ? 'recognize' : 'recall';
   return rng() < 0.7 ? 'produce' : 'recall';
+}
+
+// ---------------- „Gerade kein Ton“: Hör-/Sprechaufgaben durch Textvarianten ersetzen ----------------
+/** {listenOff, speakOff} aus js/audio-mode.js (oder übergeben). */
+export function audioModeOf(app, mode) {
+  if (mode && typeof mode === 'object') return { listenOff: !!mode.listenOff, speakOff: !!mode.speakOff };
+  return { listenOff: isListenOff(app), speakOff: isSpeakOff(app) };
+}
+
+function findVocabFor(app, uk) {
+  const k = ukKey(uk);
+  if (!k) return { v: null, viaExample: null };
+  let viaExample = null;
+  for (const v of app.content.vocabById.values()) {
+    if (ukKey(v.uk) === k) return { v, viaExample: null };
+    if (!viaExample && v.example?.uk && ukKey(v.example.uk) === k) viaExample = v;
+  }
+  return { v: null, viaExample };
+}
+
+function adapted(orig, ex) {
+  if (!ex) return null;
+  const { id: genId, source_vocab, ...rest } = ex;
+  return { ...rest, id: `${orig.id}~txt`, vocab: (orig.vocab && orig.vocab.length ? orig.vocab : ex.vocab),
+    difficulty: orig.difficulty || ex.difficulty || 1, ...(orig.hint_de ? { hint_de: orig.hint_de } : {}),
+    generated: true, adapted: true, orig_id: orig.id, ...(source_vocab ? { source_vocab } : {}) };
+}
+
+function ukDistractors(app, answer, pool, rng, given = []) {
+  const have = new Set(ukWords(answer));
+  const out = [];
+  const cand = [...given, ...shuffle(pool, rng).flatMap(v => [v.uk, ...(v.forms || []).map(f => f.uk)])];
+  for (const s of cand) {
+    for (const p of String(s).split(/\s+/)) {
+      const w = (p.match(/[Ѐ-ӿ́’'ʼ-]+/u) || [])[0];
+      const k = w && normalizeWord(w);
+      if (!k || have.has(k)) continue;
+      have.add(k); out.push(w);
+      if (out.length >= 3) return out;
+    }
+  }
+  return out;
+}
+
+/**
+ * Aufgabe an den Audio-Modus anpassen. → dieselbe Aufgabe (nichts zu tun) | Textvariante (id `<orig>~txt`,
+ * adapted:true, generated:true → kein SRS-Eintrag für die Originalkarte) | null (auslassen).
+ * mode: {listenOff, speakOff} (Default: aus js/audio-mode.js); opts: {rng, pool}
+ */
+export function adaptForAudio(app, ex, mode, { rng = Math.random, pool } = {}) {
+  if (!ex) return null;
+  const { listenOff, speakOff } = audioModeOf(app, mode);
+  const vid = ex.source_vocab || (ex.vocab || [])[0];
+  const v0 = vid ? app.content.vocabById.get(vid) : null;
+  pool = pool || (v0 ? defaultPool(app, v0) : [...app.content.vocabById.values()]);
+  if (ex.type === 'listening' && listenOff) {
+    if (ex.generated && v0) return generate(app, v0, 'mc-uk-de', { pool, rng }) || generate(app, v0, 'pic', { pool, rng });
+    if (ex.mode === 'choose_meaning' && Array.isArray(ex.options) && ex.options.length >= 2) {
+      return adapted(ex, { type: 'mc_translate', dir: 'uk-de', prompt: ex.audio_uk, options: ex.options.slice() });
+    }
+    if (ex.mode === 'choose_heard') {
+      const { v } = findVocabFor(app, ex.audio_uk);
+      const g = v ? generate(app, v, 'mc-uk-de', { pool, rng }) : null;
+      return g ? adapted(ex, { ...g, prompt: ex.audio_uk }) : null;
+    }
+    if (ex.mode === 'build') {
+      const { v, viaExample } = findVocabFor(app, ex.audio_uk);
+      const de = viaExample?.example?.de || (v && ukWords(ex.audio_uk).length > 1 ? v.de : null);
+      if (!de) return null;
+      const distractors = ukDistractors(app, ex.audio_uk, pool, rng, ex.distractors || []);
+      if (distractors.length < 2) return null;
+      return adapted(ex, { type: 'build_sentence', dir: 'de-uk', prompt: de, answer: ex.audio_uk, distractors });
+    }
+    return null;
+  }
+  if (ex.type === 'speak' && speakOff) {
+    if (!ex.uk || !ex.de) return null;
+    const distractors = ukDistractors(app, ex.uk, pool, rng);
+    if (distractors.length >= 2) return adapted(ex, { type: 'build_sentence', dir: 'de-uk', prompt: ex.de, answer: ex.uk, distractors });
+    return v0 ? (generate(app, v0, 'mc-de-uk', { pool, rng }) || null) : null;
+  }
+  return ex;
 }

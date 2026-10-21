@@ -10,6 +10,7 @@ const ROUTES = [
   { pattern: '/words', load: () => import('./views/words.js'), tab: 'trainer' },
   { pattern: '/trainer', load: () => import('./views/trainer.js'), tab: 'trainer' },
   { pattern: '/trainer/session', load: () => import('./views/trainer-session.js'), tab: null },
+  { pattern: '/story/:id', load: () => import('./views/story.js'), tab: 'course' },
   { pattern: '/library', load: () => import('./views/library.js'), tab: 'library' },
   { pattern: '/explain/:id', load: () => import('./views/explain.js'), tab: 'library' },
   { pattern: '/session/lesson/:id', load: () => import('./views/session.js'), tab: null, mode: 'lesson' },

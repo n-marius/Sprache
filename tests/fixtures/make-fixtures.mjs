@@ -143,6 +143,7 @@ const glossary = [
   g('Оде́си', 'Оде́са', 'Odesa', 'name', 'Gen. · Nom. Оде́са'),
   g('Як', 'як', 'wie', 'adv', 'Fragewort'),
   g('Офіціа́нт', 'офіціа́нт', 'Kellner', 'noun', 'Nom. Sg. m.'),
+  g('Знайо́мство', 'знайо́мство', 'Kennenlernen', 'noun', 'Nom. Sg. n.'),
 ];
 
 const V = (id, uk, de, pos, info, emoji, ex, forms = []) => ({ id, uk, de, pos, info, ...(emoji ? { emoji } : {}), example: ex, forms });
@@ -162,6 +163,20 @@ const lesson1 = {
       { heading_de: 'Anrede mit Vokativ', body_de: 'Wenn man jemanden direkt anspricht, ändert sich die Endung des Namens: Окса́на → **Окса́но**, Тара́с → **Тара́се**. Das ist hier nur eine feste Wendung – mehr dazu später.' },
     ],
     summary_de: ['приві́т = locker, до́брий день = höflich', 'Мене́ звуть … = Ich heiße …'],
+  },
+  story: {
+    title_uk: 'Знайо́мство', title_de: 'Kennenlernen',
+    scene_de: 'Im Hof eines Wohnhauses in Kyjiw. Oksana trägt gerade Einkäufe nach Hause, Taras ist neu eingezogen.',
+    characters: [{ name: 'Окса́на', emoji: '👩', role_de: 'Nachbarin, Studentin' }, { name: 'Тара́с', emoji: '🧑', role_de: 'neuer Nachbar' }],
+    lines: [
+      { who: 'Тара́с', uk: 'До́брий день!', de: 'Guten Tag!' },
+      { who: 'Окса́на', uk: 'Приві́т! Як спра́ви?', de: 'Hallo! Wie geht’s?' },
+      { who: 'Тара́с', uk: 'До́бре, дя́кую. А в те́бе?', de: 'Gut, danke. Und bei dir?' },
+      { who: 'Окса́на', uk: 'Тако́ж до́бре. Мене́ звуть Окса́на. Як тебе́ звуть?', de: 'Auch gut. Ich heiße Oksana. Wie heißt du?' },
+      { who: 'Тара́с', uk: 'Мене́ звуть Тара́с.', de: 'Ich heiße Taras.' },
+      { who: 'Окса́на', uk: 'Ду́же приє́мно, Тара́се! До поба́чення!', de: 'Sehr angenehm, Taras! Auf Wiedersehen!' },
+    ],
+    new: ['приві́т', 'спра́ви', 'дя́кую', 'мене́', 'звуть', 'поба́чення'],
   },
   grammar: [
     { title_de: 'Grüßen: привіт und добрий день', body_de: '**Приві́т** ist locker (Freunde, Familie). **До́брий день** ist neutral-höflich und passt immer. Zum Abschied sagt man **до поба́чення**.', examples: [{ uk: 'До́брий день!', de: 'Guten Tag!' }, { uk: 'Приві́т, Окса́но!', de: 'Hallo, Oksana!' }] },
@@ -241,6 +256,21 @@ const lesson2 = {
         examples: [{ uk: 'Ка́ву, будь ла́ска.', de: 'Einen Kaffee, bitte.' }] },
     ],
     summary_de: ['я п’ю, ти п’єш, він п’є', '-а → -у im Akkusativ'],
+  },
+  story: {
+    title_uk: 'У кав’я́рні', title_de: 'Im Café',
+    scene_de: 'Oksana und Taras treffen sich am Samstag in einem kleinen Café.',
+    characters: [{ name: 'Окса́на', emoji: '👩', role_de: 'Nachbarin, Studentin' }, { name: 'Тара́с', emoji: '🧑', role_de: 'neuer Nachbar' }, { name: 'Офіціа́нт', emoji: '🧑‍🍳', role_de: 'Kellner' }],
+    lines: [
+      { uk: 'Це кав’я́рня. Тут є ка́ва, чай і вода́.', de: 'Das ist ein Café. Hier gibt es Kaffee, Tee und Wasser.' },
+      { who: 'Офіціа́нт', uk: 'До́брий день! Що ви бу́дете пи́ти?', de: 'Guten Tag! Was möchten Sie trinken?' },
+      { who: 'Окса́на', uk: 'Ка́ву, будь ла́ска. З молоко́м.', de: 'Einen Kaffee, bitte. Mit Milch.' },
+      { who: 'Тара́с', uk: 'Я хо́чу чай.', de: 'Ich möchte Tee.' },
+      { who: 'Офіціа́нт', uk: 'Будь ла́ска!', de: 'Bitte schön!' },
+      { who: 'Окса́на', uk: 'Дя́кую! Тара́се, ти не п’єш ка́ву?', de: 'Danke! Taras, trinkst du keinen Kaffee?' },
+      { who: 'Тара́с', uk: 'Ні, я п’ю чай.', de: 'Nein, ich trinke Tee.' },
+    ],
+    new: ['ка́ву', 'п’єш', 'п’ю', 'хо́чу', 'молоко́м'],
   },
   grammar: [
     { title_de: 'Akkusativ bei -а-Wörtern', body_de: 'Feminine Wörter auf **-а** enden im Akkusativ auf **-у**: ка́ва → **ка́ву**, вода́ → **во́ду**. Maskuline Dinge wie чай bleiben gleich.', examples: [{ uk: 'Я п’ю ка́ву.', de: 'Ich trinke Kaffee.' }, { uk: 'Я п’ю чай.', de: 'Ich trinke Tee.' }] },

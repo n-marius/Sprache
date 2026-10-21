@@ -84,6 +84,63 @@
       "Мене́ звуть … = Ich heiße …"
     ]
   },
+  "story": {
+    "title_uk": "Знайо́мство",
+    "title_de": "Kennenlernen",
+    "scene_de": "Im Hof eines Wohnhauses in Kyjiw. Oksana trägt gerade Einkäufe nach Hause, Taras ist neu eingezogen.",
+    "characters": [
+      {
+        "name": "Окса́на",
+        "emoji": "👩",
+        "role_de": "Nachbarin, Studentin"
+      },
+      {
+        "name": "Тара́с",
+        "emoji": "🧑",
+        "role_de": "neuer Nachbar"
+      }
+    ],
+    "lines": [
+      {
+        "who": "Тара́с",
+        "uk": "До́брий день!",
+        "de": "Guten Tag!"
+      },
+      {
+        "who": "Окса́на",
+        "uk": "Приві́т! Як спра́ви?",
+        "de": "Hallo! Wie geht’s?"
+      },
+      {
+        "who": "Тара́с",
+        "uk": "До́бре, дя́кую. А в те́бе?",
+        "de": "Gut, danke. Und bei dir?"
+      },
+      {
+        "who": "Окса́на",
+        "uk": "Тако́ж до́бре. Мене́ звуть Окса́на. Як тебе́ звуть?",
+        "de": "Auch gut. Ich heiße Oksana. Wie heißt du?"
+      },
+      {
+        "who": "Тара́с",
+        "uk": "Мене́ звуть Тара́с.",
+        "de": "Ich heiße Taras."
+      },
+      {
+        "who": "Окса́на",
+        "uk": "Ду́же приє́мно, Тара́се! До поба́чення!",
+        "de": "Sehr angenehm, Taras! Auf Wiedersehen!"
+      }
+    ],
+    "new": [
+      "приві́т",
+      "спра́ви",
+      "дя́кую",
+      "мене́",
+      "звуть",
+      "поба́чення"
+    ]
+  },
   "grammar": [
     {
       "title_de": "Grüßen: привіт und добрий день",

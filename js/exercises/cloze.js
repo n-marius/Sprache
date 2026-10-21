@@ -45,7 +45,8 @@ export function render(ex, ctx) {
       type: 'button', class: 'exb-gap', 'aria-label': `Lücke ${i + 1}`,
       on: { click: () => tapGap(i) },
     }, h('span', { class: 'exb-gap-fill' }), h('span', { class: 'exb-gap-fix', hidden: true }));
-    slot.style.setProperty('--gap-w', `${Math.max(3, ...opts[i].map(o => [...o.value].length)) * 0.62 + 1.2}em`);
+    const longest = Math.max(2, ...opts[i].map(o => [...o.value.normalize('NFD').replace(/\p{M}/gu, '')].length));
+    slot.style.setProperty('--gap-w', `${(longest * 0.58 + 1).toFixed(2)}em`);
     slotEls.push(slot);
     sentence.append(slot);
   }
@@ -55,6 +56,7 @@ export function render(ex, ctx) {
 
   const optsEl = h('div', { class: 'exb-cloze-opts', role: 'group', 'aria-label': 'Auswahl' });
   const optsLabel = h('div', { class: 'exb-cloze-opts-label' });
+  const bankEl = h('div', { class: 'exb-cloze-bank' }, optsLabel, optsEl);
 
   const extras = [];
   if (ex.translation_de) {
@@ -64,7 +66,7 @@ export function render(ex, ctx) {
   const hint = hintDe(ex.hint_de, ctx, 'exb-hint');
 
   const el = h('div', { class: 'exb exb-cloze' }, card, extras, hint,
-    h('div', { class: 'exb-cloze-bank' }, optsLabel, optsEl));
+    bankEl);
 
   function nextEmpty(from) {
     for (let k = 1; k <= gaps.length; k++) {
@@ -148,7 +150,7 @@ export function render(ex, ctx) {
           fix.hidden = false;
         }
       });
-      optsLabel.hidden = true;
+      bankEl.hidden = true;
       speakWrap.append(isolate(ctx.speaker(full, { size: 'm', autoplay: true })));
       speakWrap.hidden = false;
       result = {

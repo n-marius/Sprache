@@ -92,6 +92,71 @@
       "-а → -у im Akkusativ"
     ]
   },
+  "story": {
+    "title_uk": "У кав’я́рні",
+    "title_de": "Im Café",
+    "scene_de": "Oksana und Taras treffen sich am Samstag in einem kleinen Café.",
+    "characters": [
+      {
+        "name": "Окса́на",
+        "emoji": "👩",
+        "role_de": "Nachbarin, Studentin"
+      },
+      {
+        "name": "Тара́с",
+        "emoji": "🧑",
+        "role_de": "neuer Nachbar"
+      },
+      {
+        "name": "Офіціа́нт",
+        "emoji": "🧑‍🍳",
+        "role_de": "Kellner"
+      }
+    ],
+    "lines": [
+      {
+        "uk": "Це кав’я́рня. Тут є ка́ва, чай і вода́.",
+        "de": "Das ist ein Café. Hier gibt es Kaffee, Tee und Wasser."
+      },
+      {
+        "who": "Офіціа́нт",
+        "uk": "До́брий день! Що ви бу́дете пи́ти?",
+        "de": "Guten Tag! Was möchten Sie trinken?"
+      },
+      {
+        "who": "Окса́на",
+        "uk": "Ка́ву, будь ла́ска. З молоко́м.",
+        "de": "Einen Kaffee, bitte. Mit Milch."
+      },
+      {
+        "who": "Тара́с",
+        "uk": "Я хо́чу чай.",
+        "de": "Ich möchte Tee."
+      },
+      {
+        "who": "Офіціа́нт",
+        "uk": "Будь ла́ска!",
+        "de": "Bitte schön!"
+      },
+      {
+        "who": "Окса́на",
+        "uk": "Дя́кую! Тара́се, ти не п’єш ка́ву?",
+        "de": "Danke! Taras, trinkst du keinen Kaffee?"
+      },
+      {
+        "who": "Тара́с",
+        "uk": "Ні, я п’ю чай.",
+        "de": "Nein, ich trinke Tee."
+      }
+    ],
+    "new": [
+      "ка́ву",
+      "п’єш",
+      "п’ю",
+      "хо́чу",
+      "молоко́м"
+    ]
+  },
   "grammar": [
     {
       "title_de": "Akkusativ bei -а-Wörtern",

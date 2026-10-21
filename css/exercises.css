@@ -156,6 +156,12 @@
   .ex-pic-label { font-size: var(--fs-body); }
 }
 
+@media (min-width: 768px) and (max-height: 900px) {
+  .ex-pic-grid { max-width: 440px; }
+  .ex-pic-grid.n-3 { max-width: 600px; }
+  .ex-pic-emoji, .ex-pic-grid.n-3 .ex-pic-emoji { font-size: 68px; }
+}
+
 /* ---------- true_false ---------- */
 .ex-tf-context .ex-context-uk { font-size: var(--fs-uk-option); line-height: 1.45; }
 .ex-tf-context .speaker-btn { margin-top: 1px; }

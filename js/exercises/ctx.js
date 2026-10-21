@@ -1,6 +1,7 @@
 // ctx-Fabrik für Aufgaben-Komponenten (Koordinator). Wird von views/session.js und views/dev-exercise.js genutzt.
 import { ukText } from '../ui/dom.js';
 import { speakerButton } from '../ui/audio-button.js';
+import { autoplayAllowed, isListenOff, isSpeakOff } from '../audio-mode.js';
 import { mulberry32, hashStr, shuffle as shuffleArr } from '../engine/util.js';
 
 /**
@@ -14,7 +15,9 @@ export function makeCtx(app, { lessonId, ex, onReady, onComplete, seed } = {}) {
     lessonId,
     t: app.t,
     ukText,
-    speaker: (text, opts = {}) => speakerButton(text, { ...opts, autoplay: !!opts.autoplay && app.store.state.settings.autoplay }),
+    speaker: (text, opts = {}) => speakerButton(text, { ...opts, autoplay: !!opts.autoplay && autoplayAllowed(app) }),
+    listenOff: isListenOff(app),
+    speakOff: isSpeakOff(app),
     setReady: v => onReady?.(!!v),
     complete: r => onComplete?.(r),
     rng,
