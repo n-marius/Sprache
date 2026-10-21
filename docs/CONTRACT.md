@@ -62,6 +62,17 @@ Alle Wörter darin müssen über `glossary-common.json` auflösbar sein.
   "phase": "A1.1",
   "title_uk": "…", "title_de": "…", "theme": "cafe",
   "goals_de": ["Ich kann im Café bestellen."],
+  "concepts": [ { "id": "akk-sg-unbelebt", "title_de": "Akkusativ Sg. (unbelebt)" } ],
+  "explanation": {
+    "title_de": "…",
+    "intro_de": "1–3 Sätze: worum es geht, was man danach kann",
+    "sections": [
+      { "heading_de": "…", "body_de": "zusammenhängender Fließtext, **fett** erlaubt, Absätze mit \n\n",
+        "table": { "head": ["…","…"], "rows": [["…","…"]] },
+        "examples": [ {"uk":"…","de":"…"} ] }
+    ],
+    "summary_de": ["Merksatz 1", "Merksatz 2"]
+  },
   "grammar": [ { "title_de": "…", "body_de": "kurz, max. ~80 Wörter, **fett** erlaubt", "examples": [ {"uk":"…","de":"…"} ] } ],
   "vocab": [
     { "id": "kava", "uk": "ка́ва", "de": "Kaffee", "pos": "noun", "info": "f.", "emoji": "☕",
@@ -72,6 +83,10 @@ Alle Wörter darin müssen über `glossary-common.json` auflösbar sein.
   "exercises": [ ]
 }
 ```
+- `concepts`: in dieser Lektion NEU eingeführte Grammatik-/Strukturkonzepte (ids eindeutig über alle Lektionen).
+- `explanation` (Pflicht): kurze, übersichtliche, verständliche, aber VOLLSTÄNDIGE und zusammenhängende deutsche Erklärung aller neuen Konzepte und Redemittel der Lektion (ca. 250–600 Wörter, Tabellen für Paradigmen, Beispiele mit Übersetzung). Wird vor der Lektion gezeigt und bleibt danach in der Erklärungsbibliothek abrufbar. `table` und `examples` optional je Abschnitt. Ukrainische Wörter in Tabellen/Beispielen ebenfalls glossiert.
+- `grammar`: knappe Merkhilfen, die die App während der Session als Tipp-Karten zeigt.
+- **Grammatische Progression streng aufbauend**: Jede Form/Struktur, die eine Aufgabe produktiv verlangt (Antwort, Lücke, Satzbau), muss in dieser oder einer früheren Lektion erklärt sein. Fälle werden nacheinander eingeführt (in A1.1 nur das, was der Plan vorsieht); unbekannte Formen dürfen nur als ausdrücklich in `explanation` benannte feste Wendung (Chunk) vorkommen und nicht grammatisch abgefragt werden.
 - `vocab[].id`: eindeutig über ALLE Lektionen (ASCII, z. B. `kava`, `pyty`). Die App erzeugt daraus SRS-Karten und eigene Wiederholungsaufgaben.
 - `vocab[].forms` und `glossary` müssen zusammen mit früheren Lektionen und `glossary-common.json` **jedes** ukrainische Wort der Lektion abdecken (Validator prüft).
 - `emoji` optional, nur wenn eindeutig.
@@ -97,6 +112,8 @@ Bei Auswahl-Optionen steht die **richtige Option immer an Index 0**; die App mis
 Jede Lektion: **mind. 45 Aufgaben**, alle Typen vertreten, je Vokabel mehrere Aufgaben in verschiedenen Formen/Kontexten (Konzept statt Auswendiglernen), mind. 3 `chat`, 2 `reading`, 5 `speak`, 6 `listening`. Aufgaben greifen bewusst auch Wortschatz früherer Lektionen auf (Interleaving).
 
 ## App-Verhalten (Eigentümer: Programmier-Team)
+- Vor dem ersten Start einer Lektion: `explanation` als gut lesbare Seite (Tabellen, Beispiele mit Audio, Tap-Übersetzung). Danach jederzeit abrufbar über eine Erklärungs-/Grammatikbibliothek (nur freigeschaltete Lektionen) und aus der Lektion heraus.
+- Vokabeltrainer unabhängig vom Lektionskontext: Richtung wählbar (DE→UK, UK→DE, gemischt), Umfang wählbar (fällig, alle freigeschalteten, je Lektion, schwierige Wörter); eigenes SRS je Richtung (FSRS-artig), Abfrage als Karte mit Aufdecken + Selbstbewertung (Nochmal/Schwer/Gut/Leicht) und optional Auswahl-/Hörmodus; Audio.
 - Statische PWA ohne Build-Schritt (ES-Module), Hosting GitHub Pages (Unterpfad `/Sprache/` → nur relative Pfade).
 - Lädt `content/curriculum.json`, dann Lektionsdateien; baut Lexikon-Index aus `glossary-common.json` + allen `vocab`(inkl. `forms`) + `glossary`.
 - Tippen auf ein ukrainisches Wort (überall außer in Antwortoptionen und reinen Vokabelabfragen) → Blase mit Lemma, Übersetzung, `info`; nächster Tap irgendwo schließt.
