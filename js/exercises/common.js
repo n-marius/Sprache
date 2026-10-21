@@ -242,6 +242,48 @@ export function revealToggle({ labelShow = 'Übersetzung zeigen', labelHide = '�
   return { btn, box, el: h('div', { class: 'ex-reveal' }, btn, box) };
 }
 
+// ---------- Gemeinsame Bausteine für Prompt/Karte/Vorlesen (EX-A, von allen nutzbar) ----------
+
+/** Text vorlesen, wenn Autoplay an ist (z. B. beim Antippen einer ukrainischen Option). */
+export function speakIfAutoplay(text, ctx, opts) {
+  if (!text || ctx?.settings?.autoplay === false) return;
+  try { ctx?.app?.tts?.speak?.(text, opts)?.catch?.(() => {}); } catch {}
+}
+
+/**
+ * Großer Aufgaben-Prompt (.ex-prompt), optional mit Lautsprecher.
+ * promptBlock({text, lang:'uk'|'de', ctx, ex, tap, speaker=true(uk), autoplay=true, hint, size})
+ * tap: undefined → automatisch (reine Vokabelabfrage → nicht antippbar).
+ * → {el, text, speakerEl}
+ */
+export function promptBlock({ text, lang = 'uk', ctx, ex, tap, speaker = lang === 'uk', autoplay = true, hint, cls = '' } = {}) {
+  const word = lang === 'uk' ? isVocabQuery(text, ex, ctx) : !/\s/.test(String(text || '').trim());
+  const tapOn = tap ?? (lang === 'uk' ? !word : false);
+  const textEl = lang === 'uk'
+    ? ukText(text, { tap: tapOn, cls: 'ex-prompt-text' })
+    : deText(text, { cls: 'ex-prompt-text' });
+  const speakerEl = speaker && ctx?.speaker ? ctx.speaker(text, { size: 'm', autoplay }) : null;
+  if (speakerEl) speakerEl.classList.add('ex-prompt-speaker');
+  const el = h('div', { class: ['ex-prompt', `is-${lang}`, word && 'is-word', cls] },
+    speakerEl ? isolate(speakerEl) : null,
+    h('div', { class: 'ex-prompt-body' }, textEl, hint ? hintDe(hint, ctx) : null));
+  return { el, text: textEl, speakerEl };
+}
+
+/** Karte (.ex-card) für Kontext/Situation. */
+export function exCard(...children) {
+  return h('div', { class: 'card ex-card' }, ...children);
+}
+
+/** Sind alle Optionen kurz? → auf breiten Bildschirmen zweispaltig (.is-short). */
+export const shortOptions = (list, max = 22) => (list || []).every(o => String(o ?? '').length <= max);
+
+/** Prüf-Animation an der gewählten Option/Element (falls anim verfügbar). */
+export function feedbackAnim(el, ok) {
+  if (!el) return;
+  import('../ui/anim.js').then(m => (ok ? m.anim?.correct?.(el) : m.anim?.wrong?.(el))).catch(() => {});
+}
+
 export { h, ukText, deText, icon };
 
 /** Anweisungs-Key je Aufgabe (ui-strings), Fallback für Module ohne eigenes instructionKey(). */

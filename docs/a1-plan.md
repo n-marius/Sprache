@@ -25,33 +25,58 @@ Verbindlich für die Lektions-Autoren. Datenformat: `docs/CONTRACT.md`. Recherch
 
 Lektion ≈ 3–5 Lerntage inkl. Wiederholung (A1.1: 15 Lektionen in ca. 10 Wochen).
 
-## Grammatik-Progression A1.1 (Überblick)
+## Grammatische Progression A1.1–A1.3 (verbindlich)
 
-1. Duzen/Siezen (ти/ви), Chunks ohne Grammatik
-2. Personalpronomen, kein „sein“ im Präsens, `Мене́ зва́ти`, `Я з …` (Gen. als Chunk), Verneinung `не`
-3. Zahlen 0–20, оди́н/одна́, два/дві, `Мені́ … ро́ків` (рік/ро́ки/ро́ків)
-4. Genus der Nomen, Possessiva мій/твій, його́/її́, `У ме́не є …`
-5. Präsens I. Konjugation (-аю/-ую/живу́), `у/в` + Lokativ als Chunk
-6. Akkusativ Sg. (unbelebt), хоті́ти, `Мо́жна …?`
-7. Präsens II. Konjugation (люби́ти), ї́сти / пи́ти
-8. Zahlen bis 1000, гри́вня/гри́вні/гри́вень, ко́штує/ко́штують
-9. Adjektive (Genus-Kongruenz), Lokativ auf `Де?` (у/в, на)
-10. Lokativ: у vs. на; `до` + Gen. als Chunk; höflicher Imperativ als Chunk (`Іді́ть`)
-11. Uhrzeit mit Ordinalzahlen (f.), `о` + Lokativ
-12. Wochentage mit `у/в` + Akk., ма́ти, могти́
-13. Berufe, `Ким ти працю́єш?` (Instr. als Chunk), weibliche Berufsbezeichnungen
-14. Höflicher Imperativ (-і́ть/-йте), Bitten im Büro
-15. Persönliche Daten, Formulare, Possessiv ваш; Wiederholung Akk./Lok.
+Grundsatz: Jede Form, die eine Aufgabe **produktiv** verlangt (Antwort wählen/bilden, Lücke, Satzbau, Sprechen), ist in dieser oder einer früheren Lektion in `explanation` erklärt. Vorgriffe sind nur als **ausdrücklich benannte Chunks** erlaubt: Sie werden als Ganzes gelernt (auch gesprochen und gebaut), aber nie grammatisch abgefragt (keine Endungslücke, keine Kasus-Distraktoren, keine Übertragung auf andere Wörter).
 
----
+### Kasus – Reihenfolge der Einführung
+
+| Kasus / Struktur | Chunk-Phase (nur feste Wendungen) | systematisch eingeführt |
+|---|---|---|
+| Nominativ Sg. | – | a1-1-02 (Pronomen), a1-1-04 (Genus) |
+| Nominativ Pl. | ді́ти, батьки́, о́вочі, фру́кти als Wörter | a1-1-08 |
+| Akkusativ Sg. unbelebt (Nomen + одну́/мою́/твою́) | вивча́ю украї́нську мо́ву (a1-1-05) | a1-1-06 |
+| Akkusativ Zeit (у понеді́лок) | – | a1-1-12 |
+| Lokativ Sg. (Nomen) | у Ки́єві, в Берлі́ні, в Украї́ні … (a1-1-05) | a1-1-09 (у/в, на + -і), a1-1-10 (у vs. на; m. -у) |
+| Lokativ Ordinalzahl f. (о тре́тій) | – | a1-1-11 |
+| Genitiv | з Німе́ччини (a1-1-02), у ме́не є (a1-1-04), без цу́кру (a1-1-06), кілогра́м я́блук (a1-1-08), до вокза́лу (a1-1-10), з … до … (a1-1-11), громадя́нин Німе́ччини (a1-1-15) | a1-2-08 (Sg.), a1-2-10/12 (Datum, з … до …), a1-3-03 (Pl.), a1-3-04 (Zahl + Gen. Pl.) |
+| Zählregel 1 / 2–4 / 5+ | – | a1-1-03 (рік), a1-1-08 (гри́вня, verallgemeinert) |
+| Dativ | мені́/тобі́/вам … ро́ків (a1-1-03), Мені́ ка́ву (a1-1-06) | a1-2-05 (Pronomen), a1-3-07 (Nomen) |
+| Instrumental | украї́нською (a1-1-02), з молоко́м (a1-1-06), ка́рткою (a1-1-08), Ким ти працю́єш? (a1-1-13) | a1-2-11 (Sg.), a1-2-14 (з + Instr.), a1-3-08 (Pl.) |
+| Akkusativ belebt / Adjektive | – | a1-2-06 (Adjektive), a1-2-07 (belebt) |
+| Vokativ | (in A1.1 vermeiden) | a1-2-07 |
+| Lokativ Pl. | на вихідни́х (a1-1-12) | a1-2-15 |
+
+### Verben
+
+| Struktur | Chunk-Phase | eingeführt |
+|---|---|---|
+| Präsens I. Konj. (-аю/-яю, -ую, жи́ти) | розмовля́ю/розмовля́єш, розумі́ю (a1-1-02), дя́кую (a1-1-01) | a1-1-05 |
+| хоті́ти | – | a1-1-06 |
+| Präsens II. Konj., ї́сти/пи́ти | – | a1-1-07 |
+| ко́штує/ко́штують, купува́ти | – | a1-1-08 |
+| іти́ | – | a1-1-10 |
+| ма́ти, могти́ | – | a1-1-12 |
+| Imperativ (ви) | Да́йте (a1-1-08), Іді́ть (a1-1-10), Ви́бачте (a1-1-01) | a1-1-14 (ти-Form nur erkennen; aktiv a1-3-04) |
+| писа́ти, дзвони́ти, чека́ти | – | a1-1-14 |
+| reflexive Verben -ся | – | a1-2-01 |
+| Präteritum | – | a1-2-02 |
+| Futur | – | a1-3-01 (бу́ду + Inf.), a1-3-10 (vollendet) |
+| Aspekt | einzelne vollendete Verben als Chunks (A1.2) | a1-3-02, a1-3-06 |
+| Komparativ/Superlativ | – | a1-3-05, a1-3-14 |
+
+Weitere Regeln für A1.1: Akkusativ nur bei Sachen (keine belebten Objekte wie *Я ба́чу бра́та*); kein Vokativ in produktiven Aufgaben (Anrede ohne Namen oder mit пан/па́ні + Name im Nominativ wie im Alltag üblich, z. B. „Па́ні Окса́на, …“ nur in Bot-Zeilen); keine Ich-Präteritumformen.
 
 ## A1.1 – Lektionen im Detail
 
-Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in der Tabelle ist **genau so** als `vocab[].uk` zu verwenden (spätere Lektionen verlassen sich darauf). Gebeugte Formen gehören in `forms` (bzw. `glossary`). Mehrwortausdrücke brauchen zusätzlich Glossareinträge für ihre Einzelwörter, soweit diese nicht anderweitig auflösbar sind.
+Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in der Tabelle ist **genau so** als `vocab[].uk` zu verwenden (spätere Lektionen verlassen sich darauf). Gebeugte Formen gehören in `forms` (bzw. `glossary`). Mehrwortausdrücke brauchen zusätzlich Glossareinträge für ihre Einzelwörter. Die concept-ids sind ebenfalls fest (`concepts` der Lektion = genau diese Liste).
 
 ### a1-1-01 · Приві́т! · Hallo! · theme `greetings`
 - **Can-do**: Ich kann Menschen formell und informell begrüßen und mich verabschieden. Ich kann fragen, wie es jemandem geht, und kurz antworten. Ich kann mich bedanken, um etwas bitten und mich entschuldigen.
-- **Grammatik**: ти vs. ви (Duzen/Siezen); Begrüßungen als feste Wendungen; Hinweis zur Betonung (wird angezeigt, nicht geübt).
+- **Neue Konzepte** (`concepts`): `ty-vy` Duzen und Siezen: ти und ви · `grussformeln` Grußformeln nach Tageszeit und Register · `betonung-lesen` Betonungszeichen lesen (nur Lesehilfe)
+- **Nur als Chunk (nicht grammatisch abfragen)**: До́брий день / ра́нок / ве́чір · На добра́ніч · До поба́чення · Як спра́ви? · Будь ла́ска · А ти? – alles feste Wendungen, Einzelwörter werden nicht grammatisch abgefragt.
+- **Produktiv verlangbar (neu)**: nur die Grußformeln/Chunks dieser Lektion, Pronomen я/ти/ви.
+- **`explanation` muss enthalten**: ти vs. ви (wem gegenüber, auch ви als Plural); Grüße nach Tageszeit und formell/informell (Tabelle); Abschied; Як спра́ви? und typische Antworten; danke/bitte/Entschuldigung (ви́бач vs. ви́бачте); так/ні; Hinweis: Akzentzeichen zeigt Betonung, wird in normalen Texten nicht geschrieben.
 - **Redemittel**: Приві́т! · До́брий день! · Як спра́ви? – До́бре, дя́кую. А ти? · До поба́чення! · Бува́й! · Ви́бачте. · Будь ла́ска.
 
 | id | uk | de | pos |
@@ -63,7 +88,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | na_dobranich | на добра́ніч | gute Nacht | phrase |
 | do_pobachennia | до поба́чення | auf Wiedersehen | phrase |
 | buvai | бува́й | tschüss (zu einer Person, informell) | interj |
-| yak | як | wie | adv |
+| yak | як | wie (Fragewort) | adv |
 | yak_spravy | Як спра́ви? | Wie geht’s? | phrase |
 | dobre | до́бре | gut | adv |
 | normalno | норма́льно | ganz gut, okay | adv |
@@ -82,7 +107,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-02 · Як тебе́ зва́ти? · Wie heißt du? · theme `people`
 - **Can-do**: Ich kann mich mit Namen, Herkunft und Sprachen vorstellen. Ich kann andere nach Namen und Herkunft fragen. Ich kann sagen, dass ich etwas (nicht) verstehe.
-- **Grammatik**: kein „sein“ im Präsens (`Я Ма́ркус.` `Це Окса́на.`); Personalpronomen я, ти, він, вона́, ми, ви, вони́; `Мене́ / Тебе́ / Вас зва́ти` (Akk.-Pronomen als Chunk); `Я з Німе́ччини` (з + Gen. als Chunk); Verneinung mit `не`; розмовля́ти/розумі́ти (я, ти, ви) als Chunks.
+- **Neue Konzepte** (`concepts`): `nullkopula` Kein „sein“ im Präsens: Я Ма́ркус. Це Окса́на. · `pronomen-nom` Personalpronomen im Nominativ · `verneinung-ne` Verneinung mit не · `fragen-1` Fragen: Intonation (Ja/Nein) und хто, що, зві́дки · `chunk-zvaty` Chunk: Мене́ / тебе́ / вас / його́ / її́ зва́ти … · `chunk-z-krainy` Chunk: Я з Німе́ччини / з Украї́ни / з А́встрії · `chunk-rozmovliaty` Chunk: розмовля́ю / розмовля́єш / розмовля́єте украї́нською …; (не) розумі́ю
+- **Nur als Chunk (nicht grammatisch abfragen)**: Мене́ зва́ти … (Akk.-Pronomen), Я з Німе́ччини/Украї́ни/А́встрії (Genitiv), украї́нською/німе́цькою/англі́йською (Instrumental), Verbformen розмовля́ю/розмовля́єш/розмовля́єте, розумі́ю/розумі́єш/розумі́єте (Konjugation folgt in a1-1-05). Die Kasusformen werden NICHT erklärt-abgefragt (keine Lücke „з {{Украї́ни}}“ mit Kasus-Distraktoren); die Chunks werden als Ganzes geübt.
+- **Produktiv verlangbar (neu)**: Nominativ-Sätze ohne Verb, Pronomen, не, die Chunks als Ganzes (auch Personenwechsel тебе́/вас/його́/її́ innerhalb von „… зва́ти“ und я/ти/ви bei розмовля́ти/розумі́ти, da explizit als Formeln gelernt).
+- **`explanation` muss enthalten**: Nullkopula; Pronomen-Tabelle (я, ти, він, вона́, ми, ви, вони́); Verneinung не; Fragen (Intonation, хто/що/зві́дки); Sich-Vorstellen mit Мене́ зва́ти (wörtl. „mich nennt man“) inkl. Як тебе́/вас/його́/її́ зва́ти?; Herkunft Я з … als feste Formel mit Ländernamen-Liste; Sprachen mit розмовля́ю … украї́нською; пан/па́ні als Anrede; друг/по́друга.
 - **Redemittel**: Мене́ зва́ти … · Як тебе́/вас зва́ти? · Ду́же приє́мно! · Зві́дки ти? – Я з Німе́ччини. · Ти розмовля́єш украї́нською? – Тро́хи. · Я не розумі́ю.
 
 | id | uk | de | pos |
@@ -95,9 +123,9 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | vona | вона́ | sie (Sg.) | pron |
 | my | ми | wir | pron |
 | vony | вони́ | sie (Pl.) | pron |
-| khto | хто | wer | pron |
-| shcho | що | was | pron |
-| tse | це | das (ist), dies | pron |
+| khto | хто | wer (Fragewort) | pron |
+| shcho | що | was (Fragewort) | pron |
+| tse | це | das (ist), dies (ist) | pron |
 | zvidky | зві́дки | woher | adv |
 | nimechchyna | Німе́ччина | Deutschland | name |
 | ukraina | Украї́на | Ukraine | name |
@@ -110,12 +138,15 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | rozumity | розумі́ти | verstehen | verb |
 | pan | пан | Herr (Anrede) | noun |
 | pani | па́ні | Frau (Anrede) | noun |
-| druh | друг | Freund | noun |
+| druh | друг | Freund (befreundet) | noun |
 | podruha | по́друга | Freundin | noun |
 
 ### a1-1-03 · Скі́льки? Чи́сла · Wie viel? Zahlen · theme `numbers`
 - **Can-do**: Ich kann von 0 bis 20 zählen. Ich kann eine Telefonnummer nennen und verstehen. Ich kann nach dem Alter fragen und mein Alter (bzw. das anderer) angeben.
-- **Grammatik**: оди́н/одна́ (одне́), два/дві; Telefonnummern ziffernweise bzw. paarweise; `Мені́ … ро́ків` mit 1 рік / 2–4 ро́ки / 5–20 ро́ків; Dativ-Pronomen мені́, тобі́, вам (Chunk).
+- **Neue Konzepte** (`concepts`): `zahlen-0-20` Grundzahlen 0–20 · `odyn-dva-genus` оди́н / одна́ / одне́ und два / дві nach Genus · `zahl-rik` Zahl + рік: 1 рік · 2–4 ро́ки · 5–20 ро́ків · `chunk-vik` Chunk: Мені́ / тобі́ / вам / йому́ / їй … ро́ків (Alter) · `chunk-nomer` Chunk: Яки́й у те́бе / у вас но́мер телефо́ну?
+- **Nur als Chunk (nicht grammatisch abfragen)**: Мені́/тобі́/вам/йому́/їй … ро́ків (Dativ-Pronomen; Dativ systematisch erst A1.2), Скі́льки тобі́/вам ро́ків?, Яки́й у те́бе/у вас но́мер телефо́ну? (у + Gen.), Ще раз, будь ла́ска.
+- **Produktiv verlangbar (neu)**: Zahlen 0–20, Zählregel рік/ро́ки/ро́ків, Alters-Chunk mit мені́/тобі́/вам/йому́/їй.
+- **`explanation` muss enthalten**: Zahlen 0–20 (Tabelle, Bildung 11–19 mit -на́дцять); оди́н/одна́/одне́, два/дві – Genus aus a1-1-02 nur angedeutet (Genus systematisch a1-1-04: hier nur mit bekannten Wörtern друг/по́друга); рік/ро́ки/ро́ків als Zählregel (Tabelle); Alter erfragen/angeben (Dativ-Pronomen als Formel, Tabelle я→мені́ …); Telefonnummern (Ziffern oder Paare).
 - **Redemittel**: Скі́льки тобі́ ро́ків? – Мені́ два́дцять ро́ків. · Яки́й у те́бе но́мер телефо́ну? (als Chunk) · Ще раз, будь ла́ска.
 
 | id | uk | de | pos |
@@ -141,7 +172,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | visimnadtsiat | вісімна́дцять | achtzehn | num |
 | deviatnadtsiat | дев’ятна́дцять | neunzehn | num |
 | dvadtsiat | два́дцять | zwanzig | num |
-| skilky | скі́льки | wie viel | adv |
+| skilky | скі́льки | wie viel, wie viele | adv |
 | rik | рік | Jahr | noun |
 | skilky_tobi_rokiv | Скі́льки тобі́ ро́ків? | Wie alt bist du? | phrase |
 | meni_rokiv | Мені́ … ро́ків. | Ich bin … Jahre alt. | phrase |
@@ -149,7 +180,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-04 · Моя́ сім’я́ · Meine Familie · theme `family`
 - **Can-do**: Ich kann meine Familie vorstellen und einfache Fragen zur Familie stellen und beantworten. Ich kann sagen, was/wen ich habe.
-- **Grammatik**: Genus der Nomen nach Endung (Konsonant → m., -а/-я → f., -о/-е → n.; Ausnahmen wie та́то, дити́на f.!); Possessiva мій/моя́/моє́/мої́, твій/твоя́/твоє́/твої́; його́/її́ unveränderlich; `У ме́не є …` (ich habe), `Ось …`.
+- **Neue Konzepte** (`concepts`): `genus-nomen` Genus der Nomen nach Endung (m. Konsonant, f. -а/-я, n. -о/-е) und Ausnahmen · `possessiv-miy-tviy` Possessiva мій / моя́ / моє́ / мої́ und твій / твоя́ / твоє́ / твої́ · `possessiv-yoho-yii` Possessiva його́ / її́ (unveränderlich) · `chunk-u-mene-ie` Chunk: У ме́не / у те́бе / у вас є … (ich habe …) · `os-tse` Zeigen und Vorstellen: Ось … / Це …
+- **Nur als Chunk (nicht grammatisch abfragen)**: У ме́не/у те́бе/у вас є … (у + Genitiv der Pronomen; Betonung nach Präposition: у ме́не, у те́бе); Plural ді́ти/батьки́ nur als Wörter. Keine Verneinung „нема́є“ (Genitiv).
+- **Produktiv verlangbar (neu)**: Genus-Kongruenz von мій/твій, його́/її́, Ось/Це, У ме́не/у те́бе/у вас є + Nominativ.
+- **`explanation` muss enthalten**: Genus-Tabelle mit Endungen und Beispielen aus Familienwortschatz, Ausnahmen (та́то m., дити́на f., ді́ти Pl.); Possessiva als Tabelle nach Genus/Plural; його́/її́ unveränderlich (auch: його́/її́ = ihn/sie aus Мене́ зва́ти); У ме́не є als Besitzformel (Vergleich deutsch „bei mir ist“); Ось/Це.
 - **Redemittel**: Це моя́ сім’я́. · Ось мій брат. · У те́бе є ді́ти? – Так, у ме́не є син і дочка́. · Як його́/її́ зва́ти?
 
 | id | uk | de | pos |
@@ -174,17 +208,20 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | yoho | його́ | sein (Possessiv) | pron |
 | yii | її́ | ihr (Possessiv) | pron |
 | u_mene_ie | У ме́не є … | Ich habe … | phrase |
-| ie | є | ist/gibt es; (hat) | verb |
-| os | ось | hier ist, da ist | part |
+| ie | є | es gibt; ist vorhanden (у ме́не є = ich habe) | verb |
+| os | ось | hier ist …, da ist … (zeigend) | part |
 
 ### a1-1-05 · Де ти живе́ш? · Wo wohnst du? · theme `people`
 - **Can-do**: Ich kann sagen, wo ich wohne und arbeite, und andere danach fragen. Ich kann sagen, welche Sprachen ich lerne und spreche. Ich kann über einfache Tätigkeiten im Präsens sprechen.
-- **Grammatik**: Präsens I. Konjugation (-ю, -єш, -є, -ємо, -єте, -ють): зна́ти, чита́ти, вивча́ти, розмовля́ти; -ува- → -у-: працюва́ти → працю́ю; жи́ти → живу́, живе́ш; `у/в` + Lokativ als Chunk (у Ки́єві, в Берлі́ні, в Украї́ні, в Німе́ччині); у/в-Wechsel kurz.
+- **Neue Konzepte** (`concepts`): `praesens-konj1` Präsens I. Konjugation (-ю, -єш, -є, -ємо, -єте, -ють) · `praesens-uva` Verben auf -ува́ти: працюва́ти → працю́ю · `zhyty` жи́ти: живу́, живе́ш … (Stamm жив-) · `chunk-lok-misto` Chunk: у Ки́єві, у Льво́ві, в Берлі́ні, в Украї́ні, в Німе́ччині (Lokativ folgt in a1-1-09) · `u-v-wechsel` у oder в? (Wohlklangregel) · `chunk-movu` Chunk: вивча́ю украї́нську мо́ву (Akkusativ folgt in a1-1-06)
+- **Nur als Chunk (nicht grammatisch abfragen)**: Ortsangaben у Ки́єві / у Льво́ві / в Берлі́ні / в Украї́ні / в Німе́ччині / у мі́сті / на ву́лиці als feste Formeln (keine Endungs-Lücken); украї́нську/німе́цьку мо́ву.
+- **Produktiv verlangbar (neu)**: alle Personalformen der I. Konjugation (зна́ти, чита́ти, вивча́ти, розмовля́ти, розумі́ти, працюва́ти, жи́ти), Ortsformeln als Ganzes.
+- **`explanation` muss enthalten**: Konjugationstabelle чита́ти/зна́ти (alle Personen), -ува́ти-Verben (працю́ю), жи́ти (живу́, живе́ш, живе́, живемо́, живете́, живу́ть); розмовля́ти nun vollständig; Fragen mit Де?; Ortsformeln (Liste, Hinweis: Lokativ folgt); у/в-Wechsel kurz; вдо́ма.
 - **Redemittel**: Де ти живе́ш? – Я живу́ в Берлі́ні. · Я працю́ю вдо́ма. · Я вивча́ю украї́нську мо́ву. · Я не зна́ю.
 
 | id | uk | de | pos |
 |---|---|---|---|
-| de | де | wo | adv |
+| de | де | wo (Fragewort) | adv |
 | zhyty | жи́ти | wohnen, leben | verb |
 | pratsiuvaty | працюва́ти | arbeiten | verb |
 | znaty | зна́ти | wissen, kennen | verb |
@@ -207,7 +244,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-06 · У кафе́ · Im Café · theme `cafe`
 - **Can-do**: Ich kann im Café Getränke und Kleinigkeiten bestellen, nachfragen und um die Rechnung bitten. Ich kann einfache Wünsche äußern (ich möchte …).
-- **Grammatik**: Akkusativ Sg. unbelebter Nomen: f. -а → -у, -я → -ю (ка́ва → ка́ву, вода́ → во́ду); m./n. unbelebt = Nominativ (чай, молоко́); хоті́ти: хо́чу, хо́чеш, хо́че, хо́чемо, хо́чете, хо́чуть; `Мо́жна …?`; Bestellen mit `Мені́ …, будь ла́ска`.
+- **Neue Konzepte** (`concepts`): `akk-sg-unbelebt` Akkusativ Sg. unbelebter Nomen: f. -а → -у, -я → -ю; m./n. = Nominativ · `akk-f-begleiter` Akkusativ f. bei Begleitwörtern: одну́, мою́, твою́ · `khotity` хоті́ти: хо́чу, хо́чеш … (+ Akkusativ oder Infinitiv) · `mozhna` Мо́жна …? – darf ich / kann man · `chunk-zamovlennia` Chunks beim Bestellen: Мені́ …, будь ла́ска · з молоко́м · без цу́кру · Раху́нок, будь ла́ска
+- **Nur als Chunk (nicht grammatisch abfragen)**: з молоко́м (Instr.), без цу́кру (Gen.), Що для вас? / Щось іще́? (nur verstehen).
+- **Produktiv verlangbar (neu)**: Akkusativ Sg. unbelebter Nomen (+ одну́/мою́/твою́), хоті́ти alle Personen, Bestellformeln.
+- **`explanation` muss enthalten**: Wozu Akkusativ (direktes Objekt); Tabelle Nom.→Akk. für f./m./n. mit Café-Wörtern (вода́ → во́ду mit Betonungswechsel); Begleitwörter одну́/мою́/твою́; Belebte Nomen (Personen/Tiere) kommen später – hier nur Sachen; хоті́ти-Tabelle; Bestellen mit Мені́ … (Dativ-Formel aus a1-1-03), Мо́жна …?; Chunks з молоко́м/без цу́кру.
 - **Redemittel**: Мені́ ка́ву, будь ла́ска. · Я хо́чу чай з молоко́м. · Мо́жна меню́? · Раху́нок, будь ла́ска. · Це все.
 
 | id | uk | de | pos |
@@ -220,7 +260,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | moloko | молоко́ | Milch | noun |
 | tsukor | цу́кор | Zucker | noun |
 | tistechko | ті́стечко | Törtchen, Stück Kuchen | noun |
-| khotity | хоті́ти | wollen, mögen (möchten) | verb |
+| khotity | хоті́ти | wollen, möchten | verb |
 | mozhna | мо́жна | man kann/darf; darf ich …? | adv |
 | rakhunok | раху́нок | Rechnung | noun |
 | menu | меню́ | Speisekarte | noun |
@@ -236,14 +276,17 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-07 · Що ти лю́биш? · Was isst du gern? · theme `food`
 - **Can-do**: Ich kann sagen, was ich gern esse und trinke, und andere danach fragen. Ich kann über Mahlzeiten sprechen (Frühstück, Mittag-, Abendessen).
-- **Grammatik**: Präsens II. Konjugation: люби́ти – люблю́, лю́биш, лю́бить, лю́бимо, лю́бите, лю́блять (Einschub -л-); unregelmäßig ї́сти (їм, їси́, їсть, їмо́, їсте́, їдя́ть) und пи́ти (п’ю, п’єш, п’є, п’ємо́, п’єте́, п’ють); Akk. (Wdh.); `люблю́` + Inf./Akk.
-- **Redemittel**: Що ти лю́биш? – Я люблю́ ри́бу. · На сніда́нок я їм хліб із сиро́м. · Смачно́го! · Ду́же смачни́й борщ!
+- **Neue Konzepte** (`concepts`): `praesens-konj2` Präsens II. Konjugation (люби́ти: люблю́, лю́биш …; -л- in 1. Sg.) · `isty-pyty` Unregelmäßig: ї́сти (їм, їси́ …) und пи́ти (п’ю, п’єш …) · `liubyty-inf` люби́ти + Akkusativ / + Infinitiv (etwas gern tun) · `chunk-na-snidanok` Chunk: на сніда́нок / на обі́д / на вече́рю
+- **Nur als Chunk (nicht grammatisch abfragen)**: на сніда́нок/обі́д/вече́рю (на + Akk.), Смачно́го!
+- **Produktiv verlangbar (neu)**: II. Konjugation, ї́сти/пи́ти, люби́ти + Akk./Inf., Akkusativ (Wdh.).
+- **`explanation` muss enthalten**: Vergleich I./II. Konjugation (Tabelle: чита́ти vs. люби́ти); люби́ти mit -л- (люблю́, лю́блять); ї́сти und пи́ти vollständig (Betonung: їси́, їмо́, їсте́, їдя́ть); люблю́ + Akk. (Wiederholung) vs. люблю́ + Inf.; Mahlzeiten mit на + …; о́вочі/фру́кти sind Pluralwörter.
+- **Redemittel**: Що ти лю́биш? – Я люблю́ ри́бу. · На сніда́нок я їм хліб із си́ром. · Смачно́го! · Ду́же смачни́й борщ!
 
 | id | uk | de | pos |
 |---|---|---|---|
 | isty | ї́сти | essen | verb |
 | pyty | пи́ти | trinken | verb |
-| liubyty | люби́ти | lieben, gern haben/mögen | verb |
+| liubyty | люби́ти | lieben, gern mögen | verb |
 | khlib | хліб | Brot | noun |
 | syr | сир | Käse; Quark | noun |
 | miaso | м’я́со | Fleisch | noun |
@@ -265,7 +308,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-08 · Скі́льки ко́штує? · Was kostet das? · theme `shopping`
 - **Can-do**: Ich kann nach Preisen fragen und Preise verstehen. Ich kann einfache Einkäufe machen (Menge, Bezahlung bar/Karte).
-- **Grammatik**: Zahlen 30–1000 (Zehner, сто, дві́сті, п’ятсо́т, ти́сяча); Zusammensetzung (два́дцять п’ять); 1 гри́вня / 2–4 гри́вні / 5+ гри́вень; ко́штує / ко́штують; купува́ти (купу́ю); höfliche Bitte `Да́йте, будь ла́ска, …` + Akk.
+- **Neue Konzepte** (`concepts`): `zahlen-30-1000` Zahlen 30–1000, zusammengesetzte Zahlen · `plural-nom` Nominativ Plural der Nomen (-и / -і / -а) – Grundregeln · `zahl-hryvnia` Zahl + Nomen: 1 гри́вня · 2–4 гри́вні · 5+ гри́вень (letzte Ziffer zählt) · `kostuie` ко́штує / ко́штують (Singular/Plural) · `chunk-daite` Chunk: Да́йте, будь ла́ска, … (+ Akkusativ) · `chunk-oplata` Chunks: Мо́жна ка́рткою? · готі́вкою · кілогра́м я́блук / карто́плі
+- **Nur als Chunk (nicht grammatisch abfragen)**: Да́йте (Imperativ folgt in a1-1-14), ка́рткою/готі́вкою (Instr.), кілогра́м я́блук/карто́плі (Gen.).
+- **Produktiv verlangbar (neu)**: Zahlen bis 1000, Plural Nominativ, гри́вня-Formen nach Zahlen, ко́штує/ко́штують, купува́ти (-ува́ти, schon bekannt).
+- **`explanation` muss enthalten**: Zehner/Hunderter-Tabelle, Zusammensetzung; Plural-Tabelle (-и nach hartem Konsonant/-а, -і nach weichem/-я, n. -а: я́блука, я́йця) mit Wortschatz; Zählregel mit гри́вня/рік verallgemeinert (2–4 + Nom. Pl., 5+ + Gen. Pl. als Formeln); ко́штує vs. ко́штують; Einkaufschunks.
 - **Redemittel**: Скі́льки ко́штує сир? – Сто гри́вень. · Да́йте, будь ла́ска, кілогра́м я́блук. (я́блук als Glossar) · Мо́жна ка́рткою? · Це до́рого.
 
 | id | uk | de | pos |
@@ -296,13 +342,16 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-09 · Моя́ кварти́ра · Meine Wohnung · theme `home`
 - **Can-do**: Ich kann meine Wohnung und Zimmer einfach beschreiben. Ich kann sagen und fragen, wo sich etwas befindet. Ich kann einfache Eigenschaften nennen (groß, klein, neu, alt, schön, hell).
-- **Grammatik**: Adjektive: Kongruenz m. -ий, f. -а, n. -е, Pl. -і (вели́кий / вели́ка / вели́ке / вели́кі); Lokativ auf `Де?`: у/в + -і (у кімна́ті, у ша́фі), на + -і (на ку́хні, на столі́); `Яки́й/яка́/яке́?`.
+- **Neue Konzepte** (`concepts`): `adjektiv-nom` Adjektive im Nominativ: Kongruenz -ий / -а / -е / -і · `lok-sg` Lokativ Sg. auf die Frage Де?: у/в + -і, на + -і · `yakyi` Fragewort яки́й / яка́ / яке́ / які́
+- **Nur als Chunk (nicht grammatisch abfragen)**: вдо́ма (Adverb); у ва́нній (substantiviertes Adjektiv – als Formel).
+- **Produktiv verlangbar (neu)**: Adjektive im Nominativ (Sg./Pl.), Lokativ Sg. der Lektionswörter und der bekannten Orte, яки́й-Fragen.
+- **`explanation` muss enthalten**: Adjektivtabelle (m./f./n./Pl.) mit вели́кий, нови́й (Endbetonung), сві́тлий; Adjektiv vor Nomen und als Prädikat (Кімна́та вели́ка.); Lokativ: Bildung -і (кімна́та → у кімна́ті, стіл → на столі́, ша́фа → у ша́фі), Konsonantenwechsel к→ц, г→з, х→с nur erwähnen; у/в vs. на (на ку́хні, на столі́); jetzt Rückblick: у Ки́єві, в Берлі́ні sind Lokative.
 - **Redemittel**: У ме́не нова́ кварти́ра. · Яка́ твоя́ кімна́та? – Вели́ка і сві́тла. · Де ру́чка? – На столі́.
 
 | id | uk | de | pos |
 |---|---|---|---|
 | kvartyra | кварти́ра | Wohnung | noun |
-| dim | дім | Haus | noun |
+| dim | дім | Haus; Zuhause | noun |
 | kimnata | кімна́та | Zimmer | noun |
 | kukhnia | ку́хня | Küche | noun |
 | vanna | ва́нна | Bad(ezimmer); Badewanne | noun |
@@ -324,7 +373,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-10 · Де апте́ка? · Wo ist die Apotheke? · theme `city`
 - **Can-do**: Ich kann nach dem Weg fragen und einfache Wegbeschreibungen verstehen (geradeaus, rechts, links, nah, weit). Ich kann wichtige Orte in der Stadt benennen.
-- **Grammatik**: Lokativ: у/в (у ба́нку, в апте́ці, у па́рку) vs. на (на зупи́нці, на вокза́лі, на пло́щі); `до` + Gen. als Chunk (до вокза́лу, до апте́ки); höflicher Imperativ als Chunk: `Іді́ть пря́мо`.
+- **Neue Konzepte** (`concepts`): `lok-u-na` у oder на? Orte mit на (на зупи́нці, на вокза́лі, на пло́щі) · `lok-m-u` Lokativ m. auf -у bei -к/-г (у ба́нку, у па́рку, на ри́нку) · `yty` іти́: іду́, іде́ш … (gehen zu Fuß) · `chunk-do` Chunk: Як дійти́ до …? (до вокза́лу, до це́нтру, до апте́ки, до ба́нку, до зупи́нки, до метро́) · `chunk-idit` Chunk: Іді́ть пря́мо / право́руч / ліво́руч (Imperativ folgt in a1-1-14)
+- **Nur als Chunk (nicht grammatisch abfragen)**: до + Genitiv nur mit den aufgelisteten Orten als feste Formeln; Іді́ть …
+- **Produktiv verlangbar (neu)**: Lokativ mit у/на bei Orten, іти́ alle Personen, Richtungsadverbien, die до-Formeln als Ganzes.
+- **`explanation` muss enthalten**: у/на-Liste der Orte (Tabelle); Lokativ m.: -і als Regel, -у bei -к/-г; іти́-Konjugation (+ Variante йти nach Vokal); Wegbeschreibung (пря́мо, право́руч, ліво́руч, по́тім, дале́ко, бли́зько); Як дійти́ до …? als Formel mit Liste.
 - **Redemittel**: Ви́бачте, де тут апте́ка? · Як дійти́ до вокза́лу? – Іді́ть пря́мо, по́тім право́руч. · Це дале́ко? – Ні, бли́зько.
 
 | id | uk | de | pos |
@@ -353,7 +405,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-11 · Котра́ годи́на? · Wie spät ist es? · theme `time`
 - **Can-do**: Ich kann nach der Uhrzeit fragen und volle Stunden angeben. Ich kann sagen, um wie viel Uhr und zu welcher Tageszeit etwas stattfindet.
-- **Grammatik**: Uhrzeit mit Ordinalzahlen (f., weil годи́на): `Котра́ годи́на? – Тре́тя.`; `О котрі́й? – О тре́тій.` (о + Lokativ, vor Vokal `об`: об одина́дцятій); Tageszeiten вра́нці, вдень, уве́чері, вночі́; `Зара́з …` (Wdh. за́раз).
+- **Neue Konzepte** (`concepts`): `uhrzeit-ordinal` Uhrzeit: Котра́ годи́на? – Пе́рша / Дру́га … (Ordinalzahlen f.) · `uhrzeit-o-lok` Um … Uhr: о / об + Lokativ der Ordinalzahl (о тре́тій, об одина́дцятій) · `tageszeiten` Tageszeiten: вра́нці, вдень, уве́чері, вночі́ · `chunk-z-do` Chunk: з дев’я́тої до шо́стої (von … bis …; nur verstehen)
+- **Nur als Chunk (nicht grammatisch abfragen)**: з … до … (Genitiv) nur verstehen; хвили́н (Gen. Pl.) als Formel nach Zahl.
+- **Produktiv verlangbar (neu)**: Uhrzeit Nom. und о + Lok. (volle Stunden), Tageszeiten.
+- **`explanation` muss enthalten**: Ordinalzahlen 1.–12. (f.) als Tabelle Nom. + Lok. (пе́рша – о пе́ршій …); Котра́ годи́на? vs. О котрі́й?; об vor Vokal; Tageszeiten zur Unterscheidung 8 vs. 20 Uhr; ра́но/пі́зно; Minuten mit хвили́на (Zählregel aus a1-1-03: 1 хвили́на, 2–4 хвили́ни, 5+ хвили́н).
 - **Redemittel**: Котра́ за́раз годи́на? – Дев’я́та. · Я працю́ю з дев’я́тої до шо́стої (nur verstehen, Glossar). · Уве́чері я чита́ю.
 
 | id | uk | de | pos |
@@ -383,7 +438,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-12 · Сього́дні понеді́лок · Heute ist Montag · theme `calendar`
 - **Can-do**: Ich kann die Wochentage nennen und sagen, wann ich etwas mache (heute, morgen, am Montag …). Ich kann einfache Verabredungen treffen, zu- oder absagen.
-- **Grammatik**: Wochentage: `у/в` + Akk. (у понеді́лок, у се́реду, у п’я́тницю, у субо́ту, в неді́лю – f. -а → -у!); ма́ти (ма́ю, ма́єш …: `Я ма́ю час`); могти́ (мо́жу, мо́жеш …); `Коли́?`.
+- **Neue Konzepte** (`concepts`): `zeit-u-akk` Wochentag: у/в + Akkusativ (у понеді́лок, у се́реду, в неді́лю) · `maty` ма́ти: ма́ю, ма́єш … (haben; Я ма́ю час) · `mohty` могти́ + Infinitiv: мо́жу, мо́жеш … · `chunk-domovlennia` Chunks: Ході́мо …! · На жаль, … · До за́втра! · на вихідни́х
+- **Nur als Chunk (nicht grammatisch abfragen)**: Ході́мо …!, На жаль …, До за́втра!, на вихідни́х (Lok. Pl.).
+- **Produktiv verlangbar (neu)**: Wochentage mit у + Akk., ма́ти und могти́ alle Personen, Zeitadverbien.
+- **`explanation` muss enthalten**: Wochentage (Tabelle Nom. → у + Akk., Betonung се́реду); сього́дні/за́втра/учо́ра; ма́ти vs. У ме́не є (beides „haben“: ма́ти eher bei Abstrakta wie час); могти́-Tabelle (Konsonantenwechsel г→ж); Verabredungsformeln.
 - **Redemittel**: Яки́й сього́дні день? – Сього́дні середа́. · Ти ма́єш час у п’я́тницю? – На жаль, ні. (на жаль als Glossar) · Ході́мо ра́зом у кіно́! (ході́мо als Glossar)
 
 | id | uk | de | pos |
@@ -402,7 +460,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 | zavtra | за́втра | morgen | adv |
 | uchora | учо́ра | gestern | adv |
 | shchodnia | щодня́ | täglich | adv |
-| koly | коли́ | wann | adv |
+| koly | коли́ | wann (Fragewort) | adv |
 | maty | ма́ти | haben | verb |
 | chas | час | Zeit | noun |
 | vilnyi | ві́льний | frei | adj |
@@ -413,7 +471,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-13 · Моя́ робо́та · Mein Beruf · theme `work`
 - **Can-do**: Ich kann meinen Beruf nennen und andere nach ihrem Beruf fragen. Ich kann sagen, wo ich arbeite, und meine Arbeit kurz bewerten (interessant, schwer).
-- **Grammatik**: `Я юри́ст.` (kein „sein“) vs. `Я працю́ю юри́стом.` (Instr. als Chunk); `Ким ти працю́єш?`; weibliche Berufsbezeichnungen (юри́стка, вчи́телька, лі́карка, студе́нтка, адвока́тка); на робо́ті, в о́фісі, у компа́нії (Lok., Wdh.).
+- **Neue Konzepte** (`concepts`): `beruf-nom` Beruf angeben: Я юри́ст. (Nominativ, ohne „sein“) · `feminitive` Weibliche Berufsbezeichnungen (юри́стка, вчи́телька, лі́карка …) · `chunk-kym` Chunk: Ким ти працю́єш? / Ким ви працю́єте? · `konj-a-ale` Sätze verbinden: і, а, але́
+- **Nur als Chunk (nicht grammatisch abfragen)**: Ким …? (Instrumental) nur als Frage; Antwort produktiv im Nominativ: Я юри́ст / юри́стка. Я працю́ю юри́стом nur verstehen.
+- **Produktiv verlangbar (neu)**: Berufe Nom. m./f., Lokativ (Wdh.), Adjektivkongruenz (Wdh.), і/а/але́.
+- **`explanation` muss enthalten**: Beruf im Nominativ; Feminitive als Tabelle (m./f.) mit Hinweis auf Право́пис-Norm; Frage Ким …? als Formel; Arbeitsort mit Lokativ (Wdh.: в о́фісі, у компа́нії, на робо́ті, у ліка́рні); Bewertung mit Adjektiven (Робо́та ціка́ва, але́ важка́); і / а / але́ im Vergleich.
 - **Redemittel**: Ким ви працю́єте? – Я юри́ст. · Я працю́ю в компа́нії в Берлі́ні. · Моя́ робо́та ціка́ва, але́ важка́.
 
 | id | uk | de | pos |
@@ -441,7 +502,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-14 · В о́фісі · Im Büro · theme `office`
 - **Can-do**: Ich kann Gegenstände im Büro benennen und um etwas bitten. Ich kann höfliche Aufforderungen verstehen und verwenden (Kommen Sie herein, warten Sie bitte). Ich kann sagen, ob ich Zeit habe oder beschäftigt bin.
-- **Grammatik**: höflicher Imperativ (ви): -і́ть / -йте (Зачека́йте, Сіда́йте, Захо́дьте, Повторі́ть, Напиші́ть, Да́йте); ти-Imperativ zum Wiedererkennen (зачека́й, сіда́й); писа́ти (пишу́, пи́шеш), дзвони́ти (дзвоню́, дзво́ниш); `Чи мо́жете ви …?`.
+- **Neue Konzepte** (`concepts`): `imperativ-vy` Höflicher Imperativ (ви): -і́ть / -йте (Напиші́ть, Зачека́йте) · `imperativ-ty-erkennen` ти-Imperativ erkennen (напиши́, зачека́й) · `chy-frage` Höfliche Fragen mit чи: Чи мо́жете ви …? · `pysaty` писа́ти: пишу́, пи́шеш … (с → ш); дзвони́ти: дзвоню́, дзво́ниш …
+- **Nur als Chunk (nicht grammatisch abfragen)**: Хвили́нку! · Мені́ (Dativ-Formel aus a1-1-03) in Чи мо́жете ви мені́ допомогти́?
+- **Produktiv verlangbar (neu)**: ви-Imperativ der Lektionsverben und bekannter Verben (Да́йте, Іді́ть, Повторі́ть …), писа́ти/дзвони́ти/чека́ти alle Personen, чи-Fragen.
+- **`explanation` muss enthalten**: Imperativ-Bildung aus der 1. Sg./Präsensstamm (чека́ю → чека́й(те), пишу́ → пиши́ → пиші́ть, сіда́ю → сіда́й(те)); Tabelle ти/ви; Rückblick: Да́йте, Іді́ть; писа́ти/дзвони́ти-Tabelle; чи-Fragen; Höflichkeit (будь ла́ска).
 - **Redemittel**: Захо́дьте, будь ла́ска! Сіда́йте. · Хвили́нку! · Повторі́ть, будь ла́ска. · Ви́бачте, я за́раз за́йнятий/за́йнята. · Чи мо́жете ви допомогти́?
 
 | id | uk | de | pos |
@@ -469,7 +533,10 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ### a1-1-15 · Ва́ші докуме́нти, будь ла́ска · Ihre Dokumente, bitte · theme `law`
 - **Can-do**: Ich kann in einfachen Formularen und am Schalter meine persönlichen Daten angeben (Vorname, Nachname, Adresse, Geburtsdatum, Staatsangehörigkeit). Ich kann Dokumente vorzeigen und einfache Aufforderungen verstehen (Zeigen Sie …, Unterschreiben Sie …). Ich kenne sehr grundlegende Begriffe aus Recht und Verwaltung.
-- **Grammatik**: Possessiv ваш/ва́ша/ва́ше/ва́ші; Imperativ Покажі́ть, Підпиші́ть, Запо́вніть; Wiederholung Akk. (Покажі́ть па́спорт, Запо́вніть зая́ву) und Lok. (у суді́, в посо́льстві).
+- **Neue Konzepte** (`concepts`): `possessiv-vash` Possessiv ваш / ва́ша / ва́ше / ва́ші · `formular` Persönliche Daten angeben (Ім’я́: … · Да́та наро́дження: …) · `chunk-hromadianyn` Chunk: Я громадя́нин / громадя́нка Німе́ччини
+- **Nur als Chunk (nicht grammatisch abfragen)**: громадя́нин/громадя́нка Німе́ччини (Gen.), пода́ти зая́ву, Підпиші́ть / Покажі́ть / Запо́вніть (Imperativ aus a1-1-14, hier neue Verben).
+- **Produktiv verlangbar (neu)**: ваш-Formen, Imperative, Akkusativ/Lokativ (Wdh.), Personalangaben.
+- **`explanation` muss enthalten**: ваш-Tabelle (Vergleich мій/твій); Formularangaben (Liste mit Beispiel); Datum als Zahlen (Monatsnamen erst A1.2: Datum ziffernweise 12.03.1985 vorlesen nicht verlangt); Imperative der Behördensprache; Grundbegriffe Recht/Verwaltung mit Lokativ (у суді́, у посо́льстві, у полі́ції).
 - **Redemittel**: Ва́ше ім’я́ і прі́звище? · Покажі́ть, будь ла́ска, па́спорт. · Підпиші́ть тут. · Я хо́чу пода́ти зая́ву. (пода́ти als Glossar)
 
 | id | uk | de | pos |
@@ -499,43 +566,43 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ## A1.2 – Lektionsplan (Status: planned)
 
-| id | title_uk | title_de | theme | Ziele (Can-do) | Grammatik | Wortfelder |
+| id | title_uk | title_de | theme | Ziele (Can-do) | Neue Konzepte (`concepts`) | Wortfelder |
 |---|---|---|---|---|---|---|
-| a1-2-01 | Мій день | Mein Tag | time | Tagesablauf beschreiben; Uhrzeiten mit halb/Viertel | reflexive Verben (-ся): прокида́тися, вмива́тися; пів на …, чверть | Tagesablauf, Körperpflege |
-| a1-2-02 | Тра́нспорт | Verkehrsmittel | transport | Verkehrsmittel nennen, Fahrkarte kaufen, nach Abfahrt fragen | ї́хати vs. іти́; на + Lok. (на авто́бусі); Bewegungsrichtung у/в + Akk. | Verkehr, Fahrkarten |
-| a1-2-03 | Пого́да | Das Wetter | weather | über Wetter und Jahreszeiten sprechen | unpersönliche Sätze (хо́лодно, тепло́); Jahreszeiten (взи́мку, влі́тку) | Wetter, Jahreszeiten, Temperatur |
-| a1-2-04 | Ко́лір і о́дяг | Farben und Kleidung | clothes | Kleidung und Farben beschreiben | Adjektiv-Kongruenz inkl. Akk.; Plural Nom. | Farben, Kleidung |
-| a1-2-05 | Що ти роби́в учо́ра? | Was hast du gestern gemacht? | time | über Vergangenes berichten | Präteritum (-в, -ла, -ло, -ли) | Alltagsaktivitäten |
-| a1-2-06 | Мої́ хо́бі | Meine Hobbys | hobby | Freizeit und Vorlieben ausdrücken | мені́ подо́бається + Inf./Nom.; гра́ти в/на | Freizeit, Sport, Musik |
-| a1-2-07 | У магази́ні о́дягу | Im Bekleidungsgeschäft | shopping | Größe, Farbe, Preis erfragen, anprobieren | Genitiv nach Zahlen und Mengen; цей/ця/це | Einkauf, Größen |
-| a1-2-08 | У рестора́ні | Im Restaurant | food | im Restaurant bestellen, reklamieren, bezahlen | нема́є + Gen.; без + Gen.; Plural Akk. (unbelebt) | Speisen, Getränke, Geschirr |
-| a1-2-09 | Здоро́в’я | Gesundheit | health | Beschwerden nennen, beim Arzt einfache Angaben machen | У ме́не боли́ть …; Dativ мені́/тобі́ (Wdh.) | Körperteile, Beschwerden |
-| a1-2-10 | Да́ти і мі́сяці | Daten und Monate | calendar | Datum, Geburtstag, Termine angeben | Ordinalzahlen n.; Genitiv der Monate (пе́ршого бе́резня) | Monate, Datum |
-| a1-2-11 | Які́ вони́? | Wie sind sie? | people | Aussehen und Charakter einfach beschreiben | Adjektive Pl.; ду́же/не ду́же | Aussehen, Charakter |
-| a1-2-12 | Робо́чий день | Arbeitstag | office | Termine vereinbaren und verschieben, kurze E-Mail | Dativ Sg. (Personen); бу́ти у Präteritum | Termine, E-Mail, Büroalltag |
-| a1-2-13 | Банк і по́шта | Bank und Post | city | Konto, Geld abheben, Paket senden | Gen. Sg. (без, для, від); ві́дправити/отри́мати | Bank, Post |
-| a1-2-14 | Свята́ | Feste | calendar | gratulieren, über Feste sprechen | Віта́ю з … (з + Instr.); Wünsche (Бажа́ю …) | Feiertage, Glückwünsche |
-| a1-2-15 | В устано́ві | Auf dem Amt | law | Termin bei Behörde, nach Zuständigkeit fragen, Formular ausfüllen | Gen. bei Angaben (на ім’я́ …); Modalität потрі́бно/тре́ба | Behörde, Antrag, Fristen |
+| a1-2-01 | Мій день | Mein Tag | time | Tagesablauf beschreiben; Uhrzeiten mit halb und Viertel | `refl-sia` Reflexive Verben auf -ся (прокида́тися, вмива́тися); `uhrzeit-piv` Uhrzeit: пів на …, чверть на … | Tagesablauf, Körperpflege |
+| a1-2-02 | Що ти роби́в учо́ра? | Was hast du gestern gemacht? | time | über Vergangenes berichten | `praeteritum` Präteritum (-в, -ла, -ло, -ли); `buv` бу́ти im Präteritum (був, була́, було́, були́) | Alltagsaktivitäten, Zeitangaben der Vergangenheit |
+| a1-2-03 | Тра́нспорт | Verkehrsmittel | transport | Verkehrsmittel nennen; Fahrkarte kaufen; nach Abfahrt fragen | `yikhaty` ї́хати vs. іти́; `akk-richtung` Richtung Куди́?: у/в/на + Akkusativ; `na-transport` на + Lokativ bei Verkehrsmitteln (на авто́бусі) | Verkehr, Fahrkarten |
+| a1-2-04 | Пого́да | Das Wetter | weather | über Wetter und Jahreszeiten sprechen | `bezosobovi` Unpersönliche Sätze (хо́лодно, тепло́); `poru-roku` Jahreszeiten als Adverbien (взи́мку, навесні́, влі́тку, восени́) | Wetter, Jahreszeiten, Temperatur |
+| a1-2-05 | Мої́ хо́бі | Meine Hobbys | hobby | Freizeit und Vorlieben ausdrücken | `dat-pron` Dativ der Personalpronomen (мені́, тобі́, йому́, їй, нам, вам, їм); `podobatysia` мені́ подо́бається / подо́баються; `hraty` гра́ти в + Akkusativ / на + Lokativ | Freizeit, Sport, Musik |
+| a1-2-06 | Ко́лір і о́дяг | Farben und Kleidung | clothes | Kleidung und Farben beschreiben | `akk-adj` Akkusativ Sg. der Adjektive (unbelebt); `tsei` Demonstrativ цей / ця / це / ці | Farben, Kleidung |
+| a1-2-07 | Роди́на і дру́зі | Familie und Freunde | people | Personen beschreiben; über Familie und Freunde sprechen; jemanden ansprechen | `akk-belebt` Akkusativ belebter Nomen (бра́та, ма́му, дру́га); `vokatyv` Vokativ (Окса́но! Іва́не! па́не …) | Aussehen, Charakter, Verwandte |
+| a1-2-08 | У рестора́ні | Im Restaurant | food | im Restaurant bestellen, reklamieren und bezahlen | `gen-sg` Genitiv Sg. (Endungen); `nemaie` нема́є + Genitiv; `gen-prep` без / для / до / з / від + Genitiv | Speisen, Getränke, Geschirr |
+| a1-2-09 | Здоро́в’я | Gesundheit | health | Beschwerden nennen; beim Arzt einfache Angaben machen | `bolyt` У ме́не боли́ть / боля́ть …; `u-gen` у + Genitiv (у лі́каря – beim Arzt); `treba` мені́ тре́ба + Infinitiv | Körperteile, Beschwerden |
+| a1-2-10 | Да́ти і мі́сяці | Daten und Monate | calendar | Datum, Geburtstag und Termine angeben | `ordinal-datum` Ordinalzahlen im Datum (n.); `datum-gen` Datum im Genitiv (пе́ршого бе́резня) | Monate, Datum |
+| a1-2-11 | Я працю́ю вчи́телем | Ich arbeite als Lehrer | work | über Beruf und Tätigkeit genauer sprechen | `instr-sg` Instrumental Sg. (Endungen); `instr-pred` працюва́ти / бу́ти + Instrumental; з + Instrumental | Berufe, Tätigkeiten |
+| a1-2-12 | Робо́чий день | Arbeitstag | office | Termine vereinbaren und verschieben; kurze E-Mail schreiben | `z-do-gen` Zeitspanne з … до … (Genitiv); `termin` Termine vorschlagen und ablehnen | Termine, E-Mail, Büroalltag |
+| a1-2-13 | Банк і по́шта | Bank und Post | city | Konto, Geld abheben, Paket senden | `pf-chunks` Vollendete Verben als Chunks (відпра́вити, отри́мати); `gen-wdh` Genitiv: Wiederholung und Erweiterung (від, для, бі́ля) | Bank, Post |
+| a1-2-14 | Свята́ | Feste | calendar | gratulieren; über Feste sprechen | `vitaiu-z` Віта́ю з + Instrumental; `bazhaiu` Бажа́ю + Genitiv (ща́стя, здоро́в’я) | Feiertage, Glückwünsche |
+| a1-2-15 | В устано́ві | Auf dem Amt | law | Termin bei einer Behörde; nach Zuständigkeit fragen; Formular ausfüllen | `treba-inf` тре́ба / потрі́бно + Infinitiv; `lok-pl` Lokativ Plural (у докуме́нтах) | Behörde, Antrag, Fristen |
 
 ## A1.3 – Lektionsplan (Status: planned)
 
-| id | title_uk | title_de | theme | Ziele (Can-do) | Grammatik | Wortfelder |
+| id | title_uk | title_de | theme | Ziele (Can-do) | Neue Konzepte (`concepts`) | Wortfelder |
 |---|---|---|---|---|---|---|
-| a1-3-01 | Пла́ни на вихідні́ | Pläne fürs Wochenende | hobby | Pläne machen und darüber sprechen | Futur: бу́ду + Inf., synthetisch (чита́тиму) | Freizeit, Verabredungen |
-| a1-3-02 | По́дорож | Die Reise | travel | Reise planen, Fahrkarte/Ticket buchen | Aspekt (Einführung: купува́ти/купи́ти) | Reise, Ticket, Gepäck |
-| a1-3-03 | У готе́лі | Im Hotel | travel | ein- und auschecken, Probleme melden | Lok. Pl. Grundformen; чи + Frage | Hotel, Zimmerausstattung |
-| a1-3-04 | В апте́ці | In der Apotheke | health | Medikamente kaufen, Einnahme verstehen | Imperativ (Wdh.), Zahlwort + Gen. Pl. | Medikamente, Beschwerden |
-| a1-3-05 | Оре́нда кварти́ри | Wohnung mieten | home | Wohnungsanzeige verstehen, Mietvertrag-Grundbegriffe | Komparativ Grundform (бі́льший, деше́вший) | Miete, Vertrag, Nebenkosten |
-| a1-3-06 | Ха́тні спра́ви | Hausarbeit | home | Hausarbeiten benennen, Aufgaben verteilen | Aspekt im Präteritum (роби́в/зроби́в) | Haushalt |
-| a1-3-07 | Запро́шення | Einladungen | people | einladen, annehmen, ablehnen, telefonieren | Modalverben (хоті́ти, могти́, му́сити) | Einladung, Telefon |
-| a1-3-08 | На ку́рсі | Im Sprachkurs | school | über Lernen sprechen, nachfragen | Instr. (з + Instr., Wdh.); тому́ що/бо | Schule, Kurs |
-| a1-3-09 | Співбе́сіда | Vorstellungsgespräch | work | sich bewerben, Lebenslauf-Grunddaten | Präteritum + Zeitangaben (з … до …) | Bewerbung, Erfahrung |
-| a1-3-10 | Телефо́нна розмо́ва | Telefonat im Beruf | office | Anruf annehmen, Nachricht hinterlassen | Dativ (Wdh.), Futur (Wdh.) | Telefon, Nachricht |
-| a1-3-11 | У полі́ції | Bei der Polizei | law | Verlust/Diebstahl melden, Personalien angeben | Präteritum + Akk.; Passiv-Chunks (вкра́ли) | Polizei, Diebstahl, Rechte |
-| a1-3-12 | Культу́ра в мі́сті | Kultur in der Stadt | city | Tickets kaufen, Veranstaltungen besprechen | Zeitangaben (о сьо́мій годи́ні), Wdh. Futur | Theater, Museum, Konzert |
-| a1-3-13 | Приро́да | Natur | weather | Natur und Ausflug beschreiben | Präpositionen des Ortes (над, під, бі́ля) | Natur, Landschaft |
-| a1-3-14 | Порівня́ння | Vergleiche | people | Dinge und Orte vergleichen | Komparativ/Superlativ (кра́щий, найкра́щий) | Eigenschaften, Städte |
-| a1-3-15 | Пі́дсумок | Abschluss A1 | travel | Gesamtwiederholung, Prüfungsformate A1 | Wiederholung aller A1-Strukturen | gemischt |
+| a1-3-01 | Пла́ни на вихідні́ | Pläne fürs Wochenende | hobby | Pläne machen und darüber sprechen | `futur` Futur: бу́ду + Infinitiv und -му-Form (чита́тиму) | Freizeit, Verabredungen |
+| a1-3-02 | По́дорож | Die Reise | travel | Reise planen; Fahrkarte oder Ticket buchen | `aspekt` Aspekt: unvollendet / vollendet (купува́ти – купи́ти) | Reise, Ticket, Gepäck |
+| a1-3-03 | У готе́лі | Im Hotel | travel | ein- und auschecken; Probleme melden | `gen-pl` Genitiv Plural (Grundregeln) | Hotel, Zimmerausstattung |
+| a1-3-04 | В апте́ці | In der Apotheke | health | Medikamente kaufen; Einnahmehinweise verstehen | `zahl-gen-pl` Zahl + Genitiv Plural (п’ять табле́ток); `imperativ-ty` ти-Imperativ aktiv verwenden | Medikamente, Beschwerden |
+| a1-3-05 | Оре́нда кварти́ри | Wohnung mieten | home | Wohnungsanzeige verstehen; Grundbegriffe des Mietvertrags | `komparativ` Komparativ (бі́льший, деше́вший) | Miete, Vertrag, Nebenkosten |
+| a1-3-06 | Ха́тні спра́ви | Hausarbeit | home | Hausarbeiten benennen und verteilen | `aspekt-praet` Aspekt im Präteritum (роби́в / зроби́в) | Haushalt |
+| a1-3-07 | Запро́шення | Einladungen | people | einladen, annehmen, ablehnen; telefonisch verabreden | `dat-sg` Dativ Sg. der Nomen (дру́гові, ма́мі); `modal` Modalverben му́сити, могти́, хоті́ти | Einladung, Telefon |
+| a1-3-08 | На ку́рсі | Im Sprachkurs | school | über Lernen sprechen; nachfragen | `begruendung` Begründen mit бо / тому́ що; `instr-pl` Instrumental Plural (Grundformen) | Schule, Kurs |
+| a1-3-09 | Співбе́сіда | Vorstellungsgespräch | work | sich bewerben; Lebenslauf-Grunddaten nennen | `praet-zeit` Präteritum mit Zeitangaben (з … до …, у … ро́ці) | Bewerbung, Erfahrung |
+| a1-3-10 | Телефо́нна розмо́ва | Telefonat im Beruf | office | Anruf annehmen; Nachricht hinterlassen | `futur-pf` Vollendetes Futur (подзвоню́, напишу́); `telefon-formeln` Telefonformeln | Telefon, Nachricht |
+| a1-3-11 | У полі́ції | Bei der Polizei | law | Verlust oder Diebstahl melden; Personalien angeben | `neosob-3pl` Unpersönliche 3. Pl. (вкра́ли, сказа́ли); `praet-akk` Präteritum + Akkusativ (Wdh.) | Polizei, Diebstahl, Rechte |
+| a1-3-12 | Культу́ра в мі́сті | Kultur in der Stadt | city | Tickets kaufen; Veranstaltungen besprechen | `relativ-yakyi` Relativsatz mit яки́й | Theater, Museum, Konzert |
+| a1-3-13 | Приро́да | Natur | weather | Natur und Ausflug beschreiben | `prep-ort` Ortspräpositionen над, під, між, бі́ля | Natur, Landschaft |
+| a1-3-14 | Порівня́ння | Vergleiche | people | Dinge, Orte und Menschen vergleichen | `superlativ` Superlativ (найкра́щий); `porivniannia` Vergleich mit ніж | Eigenschaften, Städte |
+| a1-3-15 | Пі́дсумок | Abschluss A1 | travel | alle A1-Strukturen sicher anwenden; Prüfungsformate A1 kennen | — (Wiederholung) | gemischt |
 
 ---
 
@@ -554,7 +621,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 - Nur kyrillische Buchstaben in ukrainischen Feldern (Achtung: kyrillisches **і** U+0456, nicht lateinisches i; kein lateinisches o/a/e/c/p/x!). Apostroph nur **’ (U+2019)**.
 - Tipp: JSON per Python/Node-Skript erzeugen (kein Handescaping), z. B. Betonung im Quelltext als `+` hinter dem Vokal notieren und per Skript in U+0301 umwandeln (`ка+ва` → `ка́ва`); lateinische Buchstaben vorher ausschließen.
 - Deutsch: neutral und knapp, Lernende nicht siezen (Infinitiv-/Nominalstil, z. B. „Achtung: Akkusativ!“, „Hier passt ти, nicht ви.“). Typ-Anweisungen kommen aus `ui-strings.json`. In de→uk-Prompts Anrede markieren: „(du)“ bzw. „(Sie)“, wenn ти/ви sonst mehrdeutig wäre.
-- Ukrainische Anweisungen im ти-Imperativ (`Переклади́`, `Обери́`; nicht „Перекладі́“).
+- Ukrainische Anweisungen im ти-Imperativ (`Переклади́`, `Обери́`; nicht „Перекладі“).
 - Geschlecht der lernenden Person ist unbekannt: Sätze in der Ich-Form ohne geschlechtsmarkierte Formen (keine Ich-Präteritumformen, kein `я за́йнятий/за́йнята` als einzige Lösung) – oder beide Formen über `accept` zulassen.
 
 ### Sprachqualität
@@ -580,9 +647,9 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 ### Ablauf
 1. Datei schreiben. 2. `node tools/validate-content.mjs --lesson <id>` bis fehlerfrei. 3. Unabhängige Prüfung (Prüf-Subagent). 4. Korrigieren, erneut validieren. 5. Kurzbericht.
 
-## Maschinenlesbarer Plan (für `tools/validate-content.mjs --lesson`)
+## Maschinenlesbarer Plan (für `tools/validate-content.mjs`)
 
-Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identisch sein.
+Wird aus derselben Quelle wie die Tabellen erzeugt; nicht von Hand ändern.
 
 <!-- PLAN-JSON-START -->
 ```json
@@ -593,6 +660,20 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Приві́т!",
    "title_de": "Hallo!",
    "theme": "greetings",
+   "concepts": [
+    {
+     "id": "ty-vy",
+     "title_de": "Duzen und Siezen: ти und ви"
+    },
+    {
+     "id": "grussformeln",
+     "title_de": "Grußformeln nach Tageszeit und Register"
+    },
+    {
+     "id": "betonung-lesen",
+     "title_de": "Betonungszeichen lesen (nur Lesehilfe)"
+    }
+   ],
    "vocab": [
     {
      "id": "pryvit",
@@ -639,7 +720,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "yak",
      "uk": "як",
-     "de": "wie",
+     "de": "wie (Fragewort)",
      "pos": "adv"
     },
     {
@@ -739,6 +820,36 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Як тебе́ зва́ти?",
    "title_de": "Wie heißt du?",
    "theme": "people",
+   "concepts": [
+    {
+     "id": "nullkopula",
+     "title_de": "Kein „sein“ im Präsens: Я Ма́ркус. Це Окса́на."
+    },
+    {
+     "id": "pronomen-nom",
+     "title_de": "Personalpronomen im Nominativ"
+    },
+    {
+     "id": "verneinung-ne",
+     "title_de": "Verneinung mit не"
+    },
+    {
+     "id": "fragen-1",
+     "title_de": "Fragen: Intonation (Ja/Nein) und хто, що, зві́дки"
+    },
+    {
+     "id": "chunk-zvaty",
+     "title_de": "Chunk: Мене́ / тебе́ / вас / його́ / її́ зва́ти …"
+    },
+    {
+     "id": "chunk-z-krainy",
+     "title_de": "Chunk: Я з Німе́ччини / з Украї́ни / з А́встрії"
+    },
+    {
+     "id": "chunk-rozmovliaty",
+     "title_de": "Chunk: розмовля́ю / розмовля́єш / розмовля́єте украї́нською …; (не) розумі́ю"
+    }
+   ],
    "vocab": [
     {
      "id": "mene_zvaty",
@@ -791,19 +902,19 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "khto",
      "uk": "хто",
-     "de": "wer",
+     "de": "wer (Fragewort)",
      "pos": "pron"
     },
     {
      "id": "shcho",
      "uk": "що",
-     "de": "was",
+     "de": "was (Fragewort)",
      "pos": "pron"
     },
     {
      "id": "tse",
      "uk": "це",
-     "de": "das (ist), dies",
+     "de": "das (ist), dies (ist)",
      "pos": "pron"
     },
     {
@@ -881,7 +992,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "druh",
      "uk": "друг",
-     "de": "Freund",
+     "de": "Freund (befreundet)",
      "pos": "noun"
     },
     {
@@ -897,6 +1008,28 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Скі́льки? Чи́сла",
    "title_de": "Wie viel? Zahlen",
    "theme": "numbers",
+   "concepts": [
+    {
+     "id": "zahlen-0-20",
+     "title_de": "Grundzahlen 0–20"
+    },
+    {
+     "id": "odyn-dva-genus",
+     "title_de": "оди́н / одна́ / одне́ und два / дві nach Genus"
+    },
+    {
+     "id": "zahl-rik",
+     "title_de": "Zahl + рік: 1 рік · 2–4 ро́ки · 5–20 ро́ків"
+    },
+    {
+     "id": "chunk-vik",
+     "title_de": "Chunk: Мені́ / тобі́ / вам / йому́ / їй … ро́ків (Alter)"
+    },
+    {
+     "id": "chunk-nomer",
+     "title_de": "Chunk: Яки́й у те́бе / у вас но́мер телефо́ну?"
+    }
+   ],
    "vocab": [
     {
      "id": "nul",
@@ -1027,7 +1160,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "skilky",
      "uk": "скі́льки",
-     "de": "wie viel",
+     "de": "wie viel, wie viele",
      "pos": "adv"
     },
     {
@@ -1061,6 +1194,28 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Моя́ сім’я́",
    "title_de": "Meine Familie",
    "theme": "family",
+   "concepts": [
+    {
+     "id": "genus-nomen",
+     "title_de": "Genus der Nomen nach Endung (m. Konsonant, f. -а/-я, n. -о/-е) und Ausnahmen"
+    },
+    {
+     "id": "possessiv-miy-tviy",
+     "title_de": "Possessiva мій / моя́ / моє́ / мої́ und твій / твоя́ / твоє́ / твої́"
+    },
+    {
+     "id": "possessiv-yoho-yii",
+     "title_de": "Possessiva його́ / її́ (unveränderlich)"
+    },
+    {
+     "id": "chunk-u-mene-ie",
+     "title_de": "Chunk: У ме́не / у те́бе / у вас є … (ich habe …)"
+    },
+    {
+     "id": "os-tse",
+     "title_de": "Zeigen und Vorstellen: Ось … / Це …"
+    }
+   ],
    "vocab": [
     {
      "id": "simia",
@@ -1185,13 +1340,13 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "ie",
      "uk": "є",
-     "de": "ist/gibt es; (hat)",
+     "de": "es gibt; ist vorhanden (у ме́не є = ich habe)",
      "pos": "verb"
     },
     {
      "id": "os",
      "uk": "ось",
-     "de": "hier ist, da ist",
+     "de": "hier ist …, da ist … (zeigend)",
      "pos": "part"
     }
    ]
@@ -1201,11 +1356,37 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Де ти живе́ш?",
    "title_de": "Wo wohnst du?",
    "theme": "people",
+   "concepts": [
+    {
+     "id": "praesens-konj1",
+     "title_de": "Präsens I. Konjugation (-ю, -єш, -є, -ємо, -єте, -ють)"
+    },
+    {
+     "id": "praesens-uva",
+     "title_de": "Verben auf -ува́ти: працюва́ти → працю́ю"
+    },
+    {
+     "id": "zhyty",
+     "title_de": "жи́ти: живу́, живе́ш … (Stamm жив-)"
+    },
+    {
+     "id": "chunk-lok-misto",
+     "title_de": "Chunk: у Ки́єві, у Льво́ві, в Берлі́ні, в Украї́ні, в Німе́ччині (Lokativ folgt in a1-1-09)"
+    },
+    {
+     "id": "u-v-wechsel",
+     "title_de": "у oder в? (Wohlklangregel)"
+    },
+    {
+     "id": "chunk-movu",
+     "title_de": "Chunk: вивча́ю украї́нську мо́ву (Akkusativ folgt in a1-1-06)"
+    }
+   ],
    "vocab": [
     {
      "id": "de",
      "uk": "де",
-     "de": "wo",
+     "de": "wo (Fragewort)",
      "pos": "adv"
     },
     {
@@ -1329,6 +1510,28 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "У кафе́",
    "title_de": "Im Café",
    "theme": "cafe",
+   "concepts": [
+    {
+     "id": "akk-sg-unbelebt",
+     "title_de": "Akkusativ Sg. unbelebter Nomen: f. -а → -у, -я → -ю; m./n. = Nominativ"
+    },
+    {
+     "id": "akk-f-begleiter",
+     "title_de": "Akkusativ f. bei Begleitwörtern: одну́, мою́, твою́"
+    },
+    {
+     "id": "khotity",
+     "title_de": "хоті́ти: хо́чу, хо́чеш … (+ Akkusativ oder Infinitiv)"
+    },
+    {
+     "id": "mozhna",
+     "title_de": "Мо́жна …? – darf ich / kann man"
+    },
+    {
+     "id": "chunk-zamovlennia",
+     "title_de": "Chunks beim Bestellen: Мені́ …, будь ла́ска · з молоко́м · без цу́кру · Раху́нок, будь ла́ска"
+    }
+   ],
    "vocab": [
     {
      "id": "kafe",
@@ -1381,7 +1584,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "khotity",
      "uk": "хоті́ти",
-     "de": "wollen, mögen (möchten)",
+     "de": "wollen, möchten",
      "pos": "verb"
     },
     {
@@ -1463,6 +1666,24 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Що ти лю́биш?",
    "title_de": "Was isst du gern?",
    "theme": "food",
+   "concepts": [
+    {
+     "id": "praesens-konj2",
+     "title_de": "Präsens II. Konjugation (люби́ти: люблю́, лю́биш …; -л- in 1. Sg.)"
+    },
+    {
+     "id": "isty-pyty",
+     "title_de": "Unregelmäßig: ї́сти (їм, їси́ …) und пи́ти (п’ю, п’єш …)"
+    },
+    {
+     "id": "liubyty-inf",
+     "title_de": "люби́ти + Akkusativ / + Infinitiv (etwas gern tun)"
+    },
+    {
+     "id": "chunk-na-snidanok",
+     "title_de": "Chunk: на сніда́нок / на обі́д / на вече́рю"
+    }
+   ],
    "vocab": [
     {
      "id": "isty",
@@ -1479,7 +1700,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "liubyty",
      "uk": "люби́ти",
-     "de": "lieben, gern haben/mögen",
+     "de": "lieben, gern mögen",
      "pos": "verb"
     },
     {
@@ -1597,6 +1818,32 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Скі́льки ко́штує?",
    "title_de": "Was kostet das?",
    "theme": "shopping",
+   "concepts": [
+    {
+     "id": "zahlen-30-1000",
+     "title_de": "Zahlen 30–1000, zusammengesetzte Zahlen"
+    },
+    {
+     "id": "plural-nom",
+     "title_de": "Nominativ Plural der Nomen (-и / -і / -а) – Grundregeln"
+    },
+    {
+     "id": "zahl-hryvnia",
+     "title_de": "Zahl + Nomen: 1 гри́вня · 2–4 гри́вні · 5+ гри́вень (letzte Ziffer zählt)"
+    },
+    {
+     "id": "kostuie",
+     "title_de": "ко́штує / ко́штують (Singular/Plural)"
+    },
+    {
+     "id": "chunk-daite",
+     "title_de": "Chunk: Да́йте, будь ла́ска, … (+ Akkusativ)"
+    },
+    {
+     "id": "chunk-oplata",
+     "title_de": "Chunks: Мо́жна ка́рткою? · готі́вкою · кілогра́м я́блук / карто́плі"
+    }
+   ],
    "vocab": [
     {
      "id": "trydtsiat",
@@ -1743,6 +1990,20 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Моя́ кварти́ра",
    "title_de": "Meine Wohnung",
    "theme": "home",
+   "concepts": [
+    {
+     "id": "adjektiv-nom",
+     "title_de": "Adjektive im Nominativ: Kongruenz -ий / -а / -е / -і"
+    },
+    {
+     "id": "lok-sg",
+     "title_de": "Lokativ Sg. auf die Frage Де?: у/в + -і, на + -і"
+    },
+    {
+     "id": "yakyi",
+     "title_de": "Fragewort яки́й / яка́ / яке́ / які́"
+    }
+   ],
    "vocab": [
     {
      "id": "kvartyra",
@@ -1753,7 +2014,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "dim",
      "uk": "дім",
-     "de": "Haus",
+     "de": "Haus; Zuhause",
      "pos": "noun"
     },
     {
@@ -1871,6 +2132,28 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Де апте́ка?",
    "title_de": "Wo ist die Apotheke?",
    "theme": "city",
+   "concepts": [
+    {
+     "id": "lok-u-na",
+     "title_de": "у oder на? Orte mit на (на зупи́нці, на вокза́лі, на пло́щі)"
+    },
+    {
+     "id": "lok-m-u",
+     "title_de": "Lokativ m. auf -у bei -к/-г (у ба́нку, у па́рку, на ри́нку)"
+    },
+    {
+     "id": "yty",
+     "title_de": "іти́: іду́, іде́ш … (gehen zu Fuß)"
+    },
+    {
+     "id": "chunk-do",
+     "title_de": "Chunk: Як дійти́ до …? (до вокза́лу, до це́нтру, до апте́ки, до ба́нку, до зупи́нки, до метро́)"
+    },
+    {
+     "id": "chunk-idit",
+     "title_de": "Chunk: Іді́ть пря́мо / право́руч / ліво́руч (Imperativ folgt in a1-1-14)"
+    }
+   ],
    "vocab": [
     {
      "id": "apteka",
@@ -2005,6 +2288,24 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Котра́ годи́на?",
    "title_de": "Wie spät ist es?",
    "theme": "time",
+   "concepts": [
+    {
+     "id": "uhrzeit-ordinal",
+     "title_de": "Uhrzeit: Котра́ годи́на? – Пе́рша / Дру́га … (Ordinalzahlen f.)"
+    },
+    {
+     "id": "uhrzeit-o-lok",
+     "title_de": "Um … Uhr: о / об + Lokativ der Ordinalzahl (о тре́тій, об одина́дцятій)"
+    },
+    {
+     "id": "tageszeiten",
+     "title_de": "Tageszeiten: вра́нці, вдень, уве́чері, вночі́"
+    },
+    {
+     "id": "chunk-z-do",
+     "title_de": "Chunk: з дев’я́тої до шо́стої (von … bis …; nur verstehen)"
+    }
+   ],
    "vocab": [
     {
      "id": "kotra_hodyna",
@@ -2145,6 +2446,24 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Сього́дні понеді́лок",
    "title_de": "Heute ist Montag",
    "theme": "calendar",
+   "concepts": [
+    {
+     "id": "zeit-u-akk",
+     "title_de": "Wochentag: у/в + Akkusativ (у понеді́лок, у се́реду, в неді́лю)"
+    },
+    {
+     "id": "maty",
+     "title_de": "ма́ти: ма́ю, ма́єш … (haben; Я ма́ю час)"
+    },
+    {
+     "id": "mohty",
+     "title_de": "могти́ + Infinitiv: мо́жу, мо́жеш …"
+    },
+    {
+     "id": "chunk-domovlennia",
+     "title_de": "Chunks: Ході́мо …! · На жаль, … · До за́втра! · на вихідни́х"
+    }
+   ],
    "vocab": [
     {
      "id": "ponedilok",
@@ -2233,7 +2552,7 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
     {
      "id": "koly",
      "uk": "коли́",
-     "de": "wann",
+     "de": "wann (Fragewort)",
      "pos": "adv"
     },
     {
@@ -2285,6 +2604,24 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Моя́ робо́та",
    "title_de": "Mein Beruf",
    "theme": "work",
+   "concepts": [
+    {
+     "id": "beruf-nom",
+     "title_de": "Beruf angeben: Я юри́ст. (Nominativ, ohne „sein“)"
+    },
+    {
+     "id": "feminitive",
+     "title_de": "Weibliche Berufsbezeichnungen (юри́стка, вчи́телька, лі́карка …)"
+    },
+    {
+     "id": "chunk-kym",
+     "title_de": "Chunk: Ким ти працю́єш? / Ким ви працю́єте?"
+    },
+    {
+     "id": "konj-a-ale",
+     "title_de": "Sätze verbinden: і, а, але́"
+    }
+   ],
    "vocab": [
     {
      "id": "robota",
@@ -2413,6 +2750,24 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "В о́фісі",
    "title_de": "Im Büro",
    "theme": "office",
+   "concepts": [
+    {
+     "id": "imperativ-vy",
+     "title_de": "Höflicher Imperativ (ви): -і́ть / -йте (Напиші́ть, Зачека́йте)"
+    },
+    {
+     "id": "imperativ-ty-erkennen",
+     "title_de": "ти-Imperativ erkennen (напиши́, зачека́й)"
+    },
+    {
+     "id": "chy-frage",
+     "title_de": "Höfliche Fragen mit чи: Чи мо́жете ви …?"
+    },
+    {
+     "id": "pysaty",
+     "title_de": "писа́ти: пишу́, пи́шеш … (с → ш); дзвони́ти: дзвоню́, дзво́ниш …"
+    }
+   ],
    "vocab": [
     {
      "id": "kompiuter",
@@ -2541,6 +2896,20 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
    "title_uk": "Ва́ші докуме́нти, будь ла́ска",
    "title_de": "Ihre Dokumente, bitte",
    "theme": "law",
+   "concepts": [
+    {
+     "id": "possessiv-vash",
+     "title_de": "Possessiv ваш / ва́ша / ва́ше / ва́ші"
+    },
+    {
+     "id": "formular",
+     "title_de": "Persönliche Daten angeben (Ім’я́: … · Да́та наро́дження: …)"
+    },
+    {
+     "id": "chunk-hromadianyn",
+     "title_de": "Chunk: Я громадя́нин / громадя́нка Німе́ччини"
+    }
+   ],
    "vocab": [
     {
      "id": "pasport",
@@ -2663,6 +3032,491 @@ Nicht von Hand abweichen: Die Vokabelzeilen oben und dieser Block müssen identi
      "pos": "noun"
     }
    ]
+  },
+  {
+   "id": "a1-2-01",
+   "title_uk": "Мій день",
+   "title_de": "Mein Tag",
+   "theme": "time",
+   "concepts": [
+    {
+     "id": "refl-sia",
+     "title_de": "Reflexive Verben auf -ся (прокида́тися, вмива́тися)"
+    },
+    {
+     "id": "uhrzeit-piv",
+     "title_de": "Uhrzeit: пів на …, чверть на …"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-02",
+   "title_uk": "Що ти роби́в учо́ра?",
+   "title_de": "Was hast du gestern gemacht?",
+   "theme": "time",
+   "concepts": [
+    {
+     "id": "praeteritum",
+     "title_de": "Präteritum (-в, -ла, -ло, -ли)"
+    },
+    {
+     "id": "buv",
+     "title_de": "бу́ти im Präteritum (був, була́, було́, були́)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-03",
+   "title_uk": "Тра́нспорт",
+   "title_de": "Verkehrsmittel",
+   "theme": "transport",
+   "concepts": [
+    {
+     "id": "yikhaty",
+     "title_de": "ї́хати vs. іти́"
+    },
+    {
+     "id": "akk-richtung",
+     "title_de": "Richtung Куди́?: у/в/на + Akkusativ"
+    },
+    {
+     "id": "na-transport",
+     "title_de": "на + Lokativ bei Verkehrsmitteln (на авто́бусі)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-04",
+   "title_uk": "Пого́да",
+   "title_de": "Das Wetter",
+   "theme": "weather",
+   "concepts": [
+    {
+     "id": "bezosobovi",
+     "title_de": "Unpersönliche Sätze (хо́лодно, тепло́)"
+    },
+    {
+     "id": "poru-roku",
+     "title_de": "Jahreszeiten als Adverbien (взи́мку, навесні́, влі́тку, восени́)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-05",
+   "title_uk": "Мої́ хо́бі",
+   "title_de": "Meine Hobbys",
+   "theme": "hobby",
+   "concepts": [
+    {
+     "id": "dat-pron",
+     "title_de": "Dativ der Personalpronomen (мені́, тобі́, йому́, їй, нам, вам, їм)"
+    },
+    {
+     "id": "podobatysia",
+     "title_de": "мені́ подо́бається / подо́баються"
+    },
+    {
+     "id": "hraty",
+     "title_de": "гра́ти в + Akkusativ / на + Lokativ"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-06",
+   "title_uk": "Ко́лір і о́дяг",
+   "title_de": "Farben und Kleidung",
+   "theme": "clothes",
+   "concepts": [
+    {
+     "id": "akk-adj",
+     "title_de": "Akkusativ Sg. der Adjektive (unbelebt)"
+    },
+    {
+     "id": "tsei",
+     "title_de": "Demonstrativ цей / ця / це / ці"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-07",
+   "title_uk": "Роди́на і дру́зі",
+   "title_de": "Familie und Freunde",
+   "theme": "people",
+   "concepts": [
+    {
+     "id": "akk-belebt",
+     "title_de": "Akkusativ belebter Nomen (бра́та, ма́му, дру́га)"
+    },
+    {
+     "id": "vokatyv",
+     "title_de": "Vokativ (Окса́но! Іва́не! па́не …)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-08",
+   "title_uk": "У рестора́ні",
+   "title_de": "Im Restaurant",
+   "theme": "food",
+   "concepts": [
+    {
+     "id": "gen-sg",
+     "title_de": "Genitiv Sg. (Endungen)"
+    },
+    {
+     "id": "nemaie",
+     "title_de": "нема́є + Genitiv"
+    },
+    {
+     "id": "gen-prep",
+     "title_de": "без / для / до / з / від + Genitiv"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-09",
+   "title_uk": "Здоро́в’я",
+   "title_de": "Gesundheit",
+   "theme": "health",
+   "concepts": [
+    {
+     "id": "bolyt",
+     "title_de": "У ме́не боли́ть / боля́ть …"
+    },
+    {
+     "id": "u-gen",
+     "title_de": "у + Genitiv (у лі́каря – beim Arzt)"
+    },
+    {
+     "id": "treba",
+     "title_de": "мені́ тре́ба + Infinitiv"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-10",
+   "title_uk": "Да́ти і мі́сяці",
+   "title_de": "Daten und Monate",
+   "theme": "calendar",
+   "concepts": [
+    {
+     "id": "ordinal-datum",
+     "title_de": "Ordinalzahlen im Datum (n.)"
+    },
+    {
+     "id": "datum-gen",
+     "title_de": "Datum im Genitiv (пе́ршого бе́резня)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-11",
+   "title_uk": "Я працю́ю вчи́телем",
+   "title_de": "Ich arbeite als Lehrer",
+   "theme": "work",
+   "concepts": [
+    {
+     "id": "instr-sg",
+     "title_de": "Instrumental Sg. (Endungen)"
+    },
+    {
+     "id": "instr-pred",
+     "title_de": "працюва́ти / бу́ти + Instrumental; з + Instrumental"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-12",
+   "title_uk": "Робо́чий день",
+   "title_de": "Arbeitstag",
+   "theme": "office",
+   "concepts": [
+    {
+     "id": "z-do-gen",
+     "title_de": "Zeitspanne з … до … (Genitiv)"
+    },
+    {
+     "id": "termin",
+     "title_de": "Termine vorschlagen und ablehnen"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-13",
+   "title_uk": "Банк і по́шта",
+   "title_de": "Bank und Post",
+   "theme": "city",
+   "concepts": [
+    {
+     "id": "pf-chunks",
+     "title_de": "Vollendete Verben als Chunks (відпра́вити, отри́мати)"
+    },
+    {
+     "id": "gen-wdh",
+     "title_de": "Genitiv: Wiederholung und Erweiterung (від, для, бі́ля)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-14",
+   "title_uk": "Свята́",
+   "title_de": "Feste",
+   "theme": "calendar",
+   "concepts": [
+    {
+     "id": "vitaiu-z",
+     "title_de": "Віта́ю з + Instrumental"
+    },
+    {
+     "id": "bazhaiu",
+     "title_de": "Бажа́ю + Genitiv (ща́стя, здоро́в’я)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-2-15",
+   "title_uk": "В устано́ві",
+   "title_de": "Auf dem Amt",
+   "theme": "law",
+   "concepts": [
+    {
+     "id": "treba-inf",
+     "title_de": "тре́ба / потрі́бно + Infinitiv"
+    },
+    {
+     "id": "lok-pl",
+     "title_de": "Lokativ Plural (у докуме́нтах)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-01",
+   "title_uk": "Пла́ни на вихідні́",
+   "title_de": "Pläne fürs Wochenende",
+   "theme": "hobby",
+   "concepts": [
+    {
+     "id": "futur",
+     "title_de": "Futur: бу́ду + Infinitiv und -му-Form (чита́тиму)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-02",
+   "title_uk": "По́дорож",
+   "title_de": "Die Reise",
+   "theme": "travel",
+   "concepts": [
+    {
+     "id": "aspekt",
+     "title_de": "Aspekt: unvollendet / vollendet (купува́ти – купи́ти)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-03",
+   "title_uk": "У готе́лі",
+   "title_de": "Im Hotel",
+   "theme": "travel",
+   "concepts": [
+    {
+     "id": "gen-pl",
+     "title_de": "Genitiv Plural (Grundregeln)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-04",
+   "title_uk": "В апте́ці",
+   "title_de": "In der Apotheke",
+   "theme": "health",
+   "concepts": [
+    {
+     "id": "zahl-gen-pl",
+     "title_de": "Zahl + Genitiv Plural (п’ять табле́ток)"
+    },
+    {
+     "id": "imperativ-ty",
+     "title_de": "ти-Imperativ aktiv verwenden"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-05",
+   "title_uk": "Оре́нда кварти́ри",
+   "title_de": "Wohnung mieten",
+   "theme": "home",
+   "concepts": [
+    {
+     "id": "komparativ",
+     "title_de": "Komparativ (бі́льший, деше́вший)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-06",
+   "title_uk": "Ха́тні спра́ви",
+   "title_de": "Hausarbeit",
+   "theme": "home",
+   "concepts": [
+    {
+     "id": "aspekt-praet",
+     "title_de": "Aspekt im Präteritum (роби́в / зроби́в)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-07",
+   "title_uk": "Запро́шення",
+   "title_de": "Einladungen",
+   "theme": "people",
+   "concepts": [
+    {
+     "id": "dat-sg",
+     "title_de": "Dativ Sg. der Nomen (дру́гові, ма́мі)"
+    },
+    {
+     "id": "modal",
+     "title_de": "Modalverben му́сити, могти́, хоті́ти"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-08",
+   "title_uk": "На ку́рсі",
+   "title_de": "Im Sprachkurs",
+   "theme": "school",
+   "concepts": [
+    {
+     "id": "begruendung",
+     "title_de": "Begründen mit бо / тому́ що"
+    },
+    {
+     "id": "instr-pl",
+     "title_de": "Instrumental Plural (Grundformen)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-09",
+   "title_uk": "Співбе́сіда",
+   "title_de": "Vorstellungsgespräch",
+   "theme": "work",
+   "concepts": [
+    {
+     "id": "praet-zeit",
+     "title_de": "Präteritum mit Zeitangaben (з … до …, у … ро́ці)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-10",
+   "title_uk": "Телефо́нна розмо́ва",
+   "title_de": "Telefonat im Beruf",
+   "theme": "office",
+   "concepts": [
+    {
+     "id": "futur-pf",
+     "title_de": "Vollendetes Futur (подзвоню́, напишу́)"
+    },
+    {
+     "id": "telefon-formeln",
+     "title_de": "Telefonformeln"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-11",
+   "title_uk": "У полі́ції",
+   "title_de": "Bei der Polizei",
+   "theme": "law",
+   "concepts": [
+    {
+     "id": "neosob-3pl",
+     "title_de": "Unpersönliche 3. Pl. (вкра́ли, сказа́ли)"
+    },
+    {
+     "id": "praet-akk",
+     "title_de": "Präteritum + Akkusativ (Wdh.)"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-12",
+   "title_uk": "Культу́ра в мі́сті",
+   "title_de": "Kultur in der Stadt",
+   "theme": "city",
+   "concepts": [
+    {
+     "id": "relativ-yakyi",
+     "title_de": "Relativsatz mit яки́й"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-13",
+   "title_uk": "Приро́да",
+   "title_de": "Natur",
+   "theme": "weather",
+   "concepts": [
+    {
+     "id": "prep-ort",
+     "title_de": "Ortspräpositionen над, під, між, бі́ля"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-14",
+   "title_uk": "Порівня́ння",
+   "title_de": "Vergleiche",
+   "theme": "people",
+   "concepts": [
+    {
+     "id": "superlativ",
+     "title_de": "Superlativ (найкра́щий)"
+    },
+    {
+     "id": "porivniannia",
+     "title_de": "Vergleich mit ніж"
+    }
+   ],
+   "vocab": []
+  },
+  {
+   "id": "a1-3-15",
+   "title_uk": "Пі́дсумок",
+   "title_de": "Abschluss A1",
+   "theme": "travel",
+   "concepts": [],
+   "vocab": []
   }
  ]
 }

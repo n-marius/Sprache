@@ -21,6 +21,20 @@
       "Ich kann Menschen formell und informell begrüßen und mich verabschieden.",
       "Ich kann fragen, wie es jemandem geht, und kurz antworten.",
       "Ich kann mich bedanken, um etwas bitten und mich entschuldigen."
+     ],
+     "concepts": [
+      {
+       "id": "ty-vy",
+       "title_de": "Duzen und Siezen: ти und ви"
+      },
+      {
+       "id": "grussformeln",
+       "title_de": "Grußformeln nach Tageszeit und Register"
+      },
+      {
+       "id": "betonung-lesen",
+       "title_de": "Betonungszeichen lesen (nur Lesehilfe)"
+      }
      ]
     },
     {
@@ -34,6 +48,36 @@
       "Ich kann mich mit Namen, Herkunft und Sprachen vorstellen.",
       "Ich kann andere nach Namen und Herkunft fragen.",
       "Ich kann sagen, dass ich etwas (nicht) verstehe."
+     ],
+     "concepts": [
+      {
+       "id": "nullkopula",
+       "title_de": "Kein „sein“ im Präsens: Я Ма́ркус. Це Окса́на."
+      },
+      {
+       "id": "pronomen-nom",
+       "title_de": "Personalpronomen im Nominativ"
+      },
+      {
+       "id": "verneinung-ne",
+       "title_de": "Verneinung mit не"
+      },
+      {
+       "id": "fragen-1",
+       "title_de": "Fragen: Intonation (Ja/Nein) und хто, що, зві́дки"
+      },
+      {
+       "id": "chunk-zvaty",
+       "title_de": "Chunk: Мене́ / тебе́ / вас / його́ / її́ зва́ти …"
+      },
+      {
+       "id": "chunk-z-krainy",
+       "title_de": "Chunk: Я з Німе́ччини / з Украї́ни / з А́встрії"
+      },
+      {
+       "id": "chunk-rozmovliaty",
+       "title_de": "Chunk: розмовля́ю / розмовля́єш / розмовля́єте украї́нською …; (не) розумі́ю"
+      }
      ]
     },
     {
@@ -48,6 +92,28 @@
       "Ich kann eine Telefonnummer nennen und verstehen.",
       "Ich kann nach dem Alter fragen und mein Alter (bzw.",
       "das anderer) angeben."
+     ],
+     "concepts": [
+      {
+       "id": "zahlen-0-20",
+       "title_de": "Grundzahlen 0–20"
+      },
+      {
+       "id": "odyn-dva-genus",
+       "title_de": "оди́н / одна́ / одне́ und два / дві nach Genus"
+      },
+      {
+       "id": "zahl-rik",
+       "title_de": "Zahl + рік: 1 рік · 2–4 ро́ки · 5–20 ро́ків"
+      },
+      {
+       "id": "chunk-vik",
+       "title_de": "Chunk: Мені́ / тобі́ / вам / йому́ / їй … ро́ків (Alter)"
+      },
+      {
+       "id": "chunk-nomer",
+       "title_de": "Chunk: Яки́й у те́бе / у вас но́мер телефо́ну?"
+      }
      ]
     },
     {
@@ -60,6 +126,28 @@
      "goals_de": [
       "Ich kann meine Familie vorstellen und einfache Fragen zur Familie stellen und beantworten.",
       "Ich kann sagen, was/wen ich habe."
+     ],
+     "concepts": [
+      {
+       "id": "genus-nomen",
+       "title_de": "Genus der Nomen nach Endung (m. Konsonant, f. -а/-я, n. -о/-е) und Ausnahmen"
+      },
+      {
+       "id": "possessiv-miy-tviy",
+       "title_de": "Possessiva мій / моя́ / моє́ / мої́ und твій / твоя́ / твоє́ / твої́"
+      },
+      {
+       "id": "possessiv-yoho-yii",
+       "title_de": "Possessiva його́ / її́ (unveränderlich)"
+      },
+      {
+       "id": "chunk-u-mene-ie",
+       "title_de": "Chunk: У ме́не / у те́бе / у вас є … (ich habe …)"
+      },
+      {
+       "id": "os-tse",
+       "title_de": "Zeigen und Vorstellen: Ось … / Це …"
+      }
      ]
     },
     {
@@ -73,6 +161,32 @@
       "Ich kann sagen, wo ich wohne und arbeite, und andere danach fragen.",
       "Ich kann sagen, welche Sprachen ich lerne und spreche.",
       "Ich kann über einfache Tätigkeiten im Präsens sprechen."
+     ],
+     "concepts": [
+      {
+       "id": "praesens-konj1",
+       "title_de": "Präsens I. Konjugation (-ю, -єш, -є, -ємо, -єте, -ють)"
+      },
+      {
+       "id": "praesens-uva",
+       "title_de": "Verben auf -ува́ти: працюва́ти → працю́ю"
+      },
+      {
+       "id": "zhyty",
+       "title_de": "жи́ти: живу́, живе́ш … (Stamm жив-)"
+      },
+      {
+       "id": "chunk-lok-misto",
+       "title_de": "Chunk: у Ки́єві, у Льво́ві, в Берлі́ні, в Украї́ні, в Німе́ччині (Lokativ folgt in a1-1-09)"
+      },
+      {
+       "id": "u-v-wechsel",
+       "title_de": "у oder в? (Wohlklangregel)"
+      },
+      {
+       "id": "chunk-movu",
+       "title_de": "Chunk: вивча́ю украї́нську мо́ву (Akkusativ folgt in a1-1-06)"
+      }
      ]
     },
     {
@@ -85,6 +199,28 @@
      "goals_de": [
       "Ich kann im Café Getränke und Kleinigkeiten bestellen, nachfragen und um die Rechnung bitten.",
       "Ich kann einfache Wünsche äußern (ich möchte …)."
+     ],
+     "concepts": [
+      {
+       "id": "akk-sg-unbelebt",
+       "title_de": "Akkusativ Sg. unbelebter Nomen: f. -а → -у, -я → -ю; m./n. = Nominativ"
+      },
+      {
+       "id": "akk-f-begleiter",
+       "title_de": "Akkusativ f. bei Begleitwörtern: одну́, мою́, твою́"
+      },
+      {
+       "id": "khotity",
+       "title_de": "хоті́ти: хо́чу, хо́чеш … (+ Akkusativ oder Infinitiv)"
+      },
+      {
+       "id": "mozhna",
+       "title_de": "Мо́жна …? – darf ich / kann man"
+      },
+      {
+       "id": "chunk-zamovlennia",
+       "title_de": "Chunks beim Bestellen: Мені́ …, будь ла́ска · з молоко́м · без цу́кру · Раху́нок, будь ла́ска"
+      }
      ]
     },
     {
@@ -97,6 +233,24 @@
      "goals_de": [
       "Ich kann sagen, was ich gern esse und trinke, und andere danach fragen.",
       "Ich kann über Mahlzeiten sprechen (Frühstück, Mittag-, Abendessen)."
+     ],
+     "concepts": [
+      {
+       "id": "praesens-konj2",
+       "title_de": "Präsens II. Konjugation (люби́ти: люблю́, лю́биш …; -л- in 1. Sg.)"
+      },
+      {
+       "id": "isty-pyty",
+       "title_de": "Unregelmäßig: ї́сти (їм, їси́ …) und пи́ти (п’ю, п’єш …)"
+      },
+      {
+       "id": "liubyty-inf",
+       "title_de": "люби́ти + Akkusativ / + Infinitiv (etwas gern tun)"
+      },
+      {
+       "id": "chunk-na-snidanok",
+       "title_de": "Chunk: на сніда́нок / на обі́д / на вече́рю"
+      }
      ]
     },
     {
@@ -109,6 +263,32 @@
      "goals_de": [
       "Ich kann nach Preisen fragen und Preise verstehen.",
       "Ich kann einfache Einkäufe machen (Menge, Bezahlung bar/Karte)."
+     ],
+     "concepts": [
+      {
+       "id": "zahlen-30-1000",
+       "title_de": "Zahlen 30–1000, zusammengesetzte Zahlen"
+      },
+      {
+       "id": "plural-nom",
+       "title_de": "Nominativ Plural der Nomen (-и / -і / -а) – Grundregeln"
+      },
+      {
+       "id": "zahl-hryvnia",
+       "title_de": "Zahl + Nomen: 1 гри́вня · 2–4 гри́вні · 5+ гри́вень (letzte Ziffer zählt)"
+      },
+      {
+       "id": "kostuie",
+       "title_de": "ко́штує / ко́штують (Singular/Plural)"
+      },
+      {
+       "id": "chunk-daite",
+       "title_de": "Chunk: Да́йте, будь ла́ска, … (+ Akkusativ)"
+      },
+      {
+       "id": "chunk-oplata",
+       "title_de": "Chunks: Мо́жна ка́рткою? · готі́вкою · кілогра́м я́блук / карто́плі"
+      }
      ]
     },
     {
@@ -122,6 +302,20 @@
       "Ich kann meine Wohnung und Zimmer einfach beschreiben.",
       "Ich kann sagen und fragen, wo sich etwas befindet.",
       "Ich kann einfache Eigenschaften nennen (groß, klein, neu, alt, schön, hell)."
+     ],
+     "concepts": [
+      {
+       "id": "adjektiv-nom",
+       "title_de": "Adjektive im Nominativ: Kongruenz -ий / -а / -е / -і"
+      },
+      {
+       "id": "lok-sg",
+       "title_de": "Lokativ Sg. auf die Frage Де?: у/в + -і, на + -і"
+      },
+      {
+       "id": "yakyi",
+       "title_de": "Fragewort яки́й / яка́ / яке́ / які́"
+      }
      ]
     },
     {
@@ -134,6 +328,28 @@
      "goals_de": [
       "Ich kann nach dem Weg fragen und einfache Wegbeschreibungen verstehen (geradeaus, rechts, links, nah, weit).",
       "Ich kann wichtige Orte in der Stadt benennen."
+     ],
+     "concepts": [
+      {
+       "id": "lok-u-na",
+       "title_de": "у oder на? Orte mit на (на зупи́нці, на вокза́лі, на пло́щі)"
+      },
+      {
+       "id": "lok-m-u",
+       "title_de": "Lokativ m. auf -у bei -к/-г (у ба́нку, у па́рку, на ри́нку)"
+      },
+      {
+       "id": "yty",
+       "title_de": "іти́: іду́, іде́ш … (gehen zu Fuß)"
+      },
+      {
+       "id": "chunk-do",
+       "title_de": "Chunk: Як дійти́ до …? (до вокза́лу, до це́нтру, до апте́ки, до ба́нку, до зупи́нки, до метро́)"
+      },
+      {
+       "id": "chunk-idit",
+       "title_de": "Chunk: Іді́ть пря́мо / право́руч / ліво́руч (Imperativ folgt in a1-1-14)"
+      }
      ]
     },
     {
@@ -146,6 +362,24 @@
      "goals_de": [
       "Ich kann nach der Uhrzeit fragen und volle Stunden angeben.",
       "Ich kann sagen, um wie viel Uhr und zu welcher Tageszeit etwas stattfindet."
+     ],
+     "concepts": [
+      {
+       "id": "uhrzeit-ordinal",
+       "title_de": "Uhrzeit: Котра́ годи́на? – Пе́рша / Дру́га … (Ordinalzahlen f.)"
+      },
+      {
+       "id": "uhrzeit-o-lok",
+       "title_de": "Um … Uhr: о / об + Lokativ der Ordinalzahl (о тре́тій, об одина́дцятій)"
+      },
+      {
+       "id": "tageszeiten",
+       "title_de": "Tageszeiten: вра́нці, вдень, уве́чері, вночі́"
+      },
+      {
+       "id": "chunk-z-do",
+       "title_de": "Chunk: з дев’я́тої до шо́стої (von … bis …; nur verstehen)"
+      }
      ]
     },
     {
@@ -158,6 +392,24 @@
      "goals_de": [
       "Ich kann die Wochentage nennen und sagen, wann ich etwas mache (heute, morgen, am Montag …).",
       "Ich kann einfache Verabredungen treffen, zu- oder absagen."
+     ],
+     "concepts": [
+      {
+       "id": "zeit-u-akk",
+       "title_de": "Wochentag: у/в + Akkusativ (у понеді́лок, у се́реду, в неді́лю)"
+      },
+      {
+       "id": "maty",
+       "title_de": "ма́ти: ма́ю, ма́єш … (haben; Я ма́ю час)"
+      },
+      {
+       "id": "mohty",
+       "title_de": "могти́ + Infinitiv: мо́жу, мо́жеш …"
+      },
+      {
+       "id": "chunk-domovlennia",
+       "title_de": "Chunks: Ході́мо …! · На жаль, … · До за́втра! · на вихідни́х"
+      }
      ]
     },
     {
@@ -170,6 +422,24 @@
      "goals_de": [
       "Ich kann meinen Beruf nennen und andere nach ihrem Beruf fragen.",
       "Ich kann sagen, wo ich arbeite, und meine Arbeit kurz bewerten (interessant, schwer)."
+     ],
+     "concepts": [
+      {
+       "id": "beruf-nom",
+       "title_de": "Beruf angeben: Я юри́ст. (Nominativ, ohne „sein“)"
+      },
+      {
+       "id": "feminitive",
+       "title_de": "Weibliche Berufsbezeichnungen (юри́стка, вчи́телька, лі́карка …)"
+      },
+      {
+       "id": "chunk-kym",
+       "title_de": "Chunk: Ким ти працю́єш? / Ким ви працю́єте?"
+      },
+      {
+       "id": "konj-a-ale",
+       "title_de": "Sätze verbinden: і, а, але́"
+      }
      ]
     },
     {
@@ -183,6 +453,24 @@
       "Ich kann Gegenstände im Büro benennen und um etwas bitten.",
       "Ich kann höfliche Aufforderungen verstehen und verwenden (Kommen Sie herein, warten Sie bitte).",
       "Ich kann sagen, ob ich Zeit habe oder beschäftigt bin."
+     ],
+     "concepts": [
+      {
+       "id": "imperativ-vy",
+       "title_de": "Höflicher Imperativ (ви): -і́ть / -йте (Напиші́ть, Зачека́йте)"
+      },
+      {
+       "id": "imperativ-ty-erkennen",
+       "title_de": "ти-Imperativ erkennen (напиши́, зачека́й)"
+      },
+      {
+       "id": "chy-frage",
+       "title_de": "Höfliche Fragen mit чи: Чи мо́жете ви …?"
+      },
+      {
+       "id": "pysaty",
+       "title_de": "писа́ти: пишу́, пи́шеш … (с → ш); дзвони́ти: дзвоню́, дзво́ниш …"
+      }
      ]
     },
     {
@@ -196,6 +484,20 @@
       "Ich kann in einfachen Formularen und am Schalter meine persönlichen Daten angeben (Vorname, Nachname, Adresse, Geburtsdatum, Staatsangehörigkeit).",
       "Ich kann Dokumente vorzeigen und einfache Aufforderungen verstehen (Zeigen Sie …, Unterschreiben Sie …).",
       "Ich kenne sehr grundlegende Begriffe aus Recht und Verwaltung."
+     ],
+     "concepts": [
+      {
+       "id": "possessiv-vash",
+       "title_de": "Possessiv ваш / ва́ша / ва́ше / ва́ші"
+      },
+      {
+       "id": "formular",
+       "title_de": "Persönliche Daten angeben (Ім’я́: … · Да́та наро́дження: …)"
+      },
+      {
+       "id": "chunk-hromadianyn",
+       "title_de": "Chunk: Я громадя́нин / громадя́нка Німе́ччини"
+      }
      ]
     }
    ]
@@ -216,75 +518,29 @@
      "status": "planned",
      "goals_de": [
       "Tagesablauf beschreiben",
-      "Uhrzeiten mit halb/Viertel"
+      "Uhrzeiten mit halb und Viertel"
      ],
      "grammar_de": [
-      "reflexive Verben (-ся): прокида́тися, вмива́тися",
-      "пів на …, чверть"
+      "Reflexive Verben auf -ся (прокида́тися, вмива́тися)",
+      "Uhrzeit: пів на …, чверть на …"
      ],
      "vocab_fields_de": [
       "Tagesablauf",
       "Körperpflege"
+     ],
+     "concepts": [
+      {
+       "id": "refl-sia",
+       "title_de": "Reflexive Verben auf -ся (прокида́тися, вмива́тися)"
+      },
+      {
+       "id": "uhrzeit-piv",
+       "title_de": "Uhrzeit: пів на …, чверть на …"
+      }
      ]
     },
     {
      "id": "a1-2-02",
-     "title_uk": "Тра́нспорт",
-     "title_de": "Verkehrsmittel",
-     "theme": "transport",
-     "status": "planned",
-     "goals_de": [
-      "Verkehrsmittel nennen, Fahrkarte kaufen, nach Abfahrt fragen"
-     ],
-     "grammar_de": [
-      "ї́хати vs. іти́",
-      "на + Lok. (на авто́бусі)",
-      "Bewegungsrichtung у/в + Akk."
-     ],
-     "vocab_fields_de": [
-      "Verkehr",
-      "Fahrkarten"
-     ]
-    },
-    {
-     "id": "a1-2-03",
-     "title_uk": "Пого́да",
-     "title_de": "Das Wetter",
-     "theme": "weather",
-     "status": "planned",
-     "goals_de": [
-      "Über Wetter und Jahreszeiten sprechen"
-     ],
-     "grammar_de": [
-      "unpersönliche Sätze (хо́лодно, тепло́)",
-      "Jahreszeiten (взи́мку, влі́тку)"
-     ],
-     "vocab_fields_de": [
-      "Wetter",
-      "Jahreszeiten",
-      "Temperatur"
-     ]
-    },
-    {
-     "id": "a1-2-04",
-     "title_uk": "Ко́лір і о́дяг",
-     "title_de": "Farben und Kleidung",
-     "theme": "clothes",
-     "status": "planned",
-     "goals_de": [
-      "Kleidung und Farben beschreiben"
-     ],
-     "grammar_de": [
-      "Adjektiv-Kongruenz inkl. Akk.",
-      "Plural Nom."
-     ],
-     "vocab_fields_de": [
-      "Farben",
-      "Kleidung"
-     ]
-    },
-    {
-     "id": "a1-2-05",
      "title_uk": "Що ти роби́в учо́ра?",
      "title_de": "Was hast du gestern gemacht?",
      "theme": "time",
@@ -293,14 +549,90 @@
       "Über Vergangenes berichten"
      ],
      "grammar_de": [
-      "Präteritum (-в, -ла, -ло, -ли)"
+      "Präteritum (-в, -ла, -ло, -ли)",
+      "бу́ти im Präteritum (був, була́, було́, були́)"
      ],
      "vocab_fields_de": [
-      "Alltagsaktivitäten"
+      "Alltagsaktivitäten",
+      "Zeitangaben der Vergangenheit"
+     ],
+     "concepts": [
+      {
+       "id": "praeteritum",
+       "title_de": "Präteritum (-в, -ла, -ло, -ли)"
+      },
+      {
+       "id": "buv",
+       "title_de": "бу́ти im Präteritum (був, була́, було́, були́)"
+      }
      ]
     },
     {
-     "id": "a1-2-06",
+     "id": "a1-2-03",
+     "title_uk": "Тра́нспорт",
+     "title_de": "Verkehrsmittel",
+     "theme": "transport",
+     "status": "planned",
+     "goals_de": [
+      "Verkehrsmittel nennen",
+      "Fahrkarte kaufen",
+      "Nach Abfahrt fragen"
+     ],
+     "grammar_de": [
+      "ї́хати vs. іти́",
+      "Richtung Куди́?: у/в/на + Akkusativ",
+      "на + Lokativ bei Verkehrsmitteln (на авто́бусі)"
+     ],
+     "vocab_fields_de": [
+      "Verkehr",
+      "Fahrkarten"
+     ],
+     "concepts": [
+      {
+       "id": "yikhaty",
+       "title_de": "ї́хати vs. іти́"
+      },
+      {
+       "id": "akk-richtung",
+       "title_de": "Richtung Куди́?: у/в/на + Akkusativ"
+      },
+      {
+       "id": "na-transport",
+       "title_de": "на + Lokativ bei Verkehrsmitteln (на авто́бусі)"
+      }
+     ]
+    },
+    {
+     "id": "a1-2-04",
+     "title_uk": "Пого́да",
+     "title_de": "Das Wetter",
+     "theme": "weather",
+     "status": "planned",
+     "goals_de": [
+      "Über Wetter und Jahreszeiten sprechen"
+     ],
+     "grammar_de": [
+      "Unpersönliche Sätze (хо́лодно, тепло́)",
+      "Jahreszeiten als Adverbien (взи́мку, навесні́, влі́тку, восени́)"
+     ],
+     "vocab_fields_de": [
+      "Wetter",
+      "Jahreszeiten",
+      "Temperatur"
+     ],
+     "concepts": [
+      {
+       "id": "bezosobovi",
+       "title_de": "Unpersönliche Sätze (хо́лодно, тепло́)"
+      },
+      {
+       "id": "poru-roku",
+       "title_de": "Jahreszeiten als Adverbien (взи́мку, навесні́, влі́тку, восени́)"
+      }
+     ]
+    },
+    {
+     "id": "a1-2-05",
      "title_uk": "Мої́ хо́бі",
      "title_de": "Meine Hobbys",
      "theme": "hobby",
@@ -309,31 +641,87 @@
       "Freizeit und Vorlieben ausdrücken"
      ],
      "grammar_de": [
-      "мені́ подо́бається + Inf./Nom.",
-      "гра́ти в/на"
+      "Dativ der Personalpronomen (мені́, тобі́, йому́, їй, нам, вам, їм)",
+      "мені́ подо́бається / подо́баються",
+      "гра́ти в + Akkusativ / на + Lokativ"
      ],
      "vocab_fields_de": [
       "Freizeit",
       "Sport",
       "Musik"
+     ],
+     "concepts": [
+      {
+       "id": "dat-pron",
+       "title_de": "Dativ der Personalpronomen (мені́, тобі́, йому́, їй, нам, вам, їм)"
+      },
+      {
+       "id": "podobatysia",
+       "title_de": "мені́ подо́бається / подо́баються"
+      },
+      {
+       "id": "hraty",
+       "title_de": "гра́ти в + Akkusativ / на + Lokativ"
+      }
+     ]
+    },
+    {
+     "id": "a1-2-06",
+     "title_uk": "Ко́лір і о́дяг",
+     "title_de": "Farben und Kleidung",
+     "theme": "clothes",
+     "status": "planned",
+     "goals_de": [
+      "Kleidung und Farben beschreiben"
+     ],
+     "grammar_de": [
+      "Akkusativ Sg. der Adjektive (unbelebt)",
+      "Demonstrativ цей / ця / це / ці"
+     ],
+     "vocab_fields_de": [
+      "Farben",
+      "Kleidung"
+     ],
+     "concepts": [
+      {
+       "id": "akk-adj",
+       "title_de": "Akkusativ Sg. der Adjektive (unbelebt)"
+      },
+      {
+       "id": "tsei",
+       "title_de": "Demonstrativ цей / ця / це / ці"
+      }
      ]
     },
     {
      "id": "a1-2-07",
-     "title_uk": "У магази́ні о́дягу",
-     "title_de": "Im Bekleidungsgeschäft",
-     "theme": "shopping",
+     "title_uk": "Роди́на і дру́зі",
+     "title_de": "Familie und Freunde",
+     "theme": "people",
      "status": "planned",
      "goals_de": [
-      "Größe, Farbe, Preis erfragen, anprobieren"
+      "Personen beschreiben",
+      "Über Familie und Freunde sprechen",
+      "Jemanden ansprechen"
      ],
      "grammar_de": [
-      "Genitiv nach Zahlen und Mengen",
-      "цей/ця/це"
+      "Akkusativ belebter Nomen (бра́та, ма́му, дру́га)",
+      "Vokativ (Окса́но! Іва́не! па́не …)"
      ],
      "vocab_fields_de": [
-      "Einkauf",
-      "Größen"
+      "Aussehen",
+      "Charakter",
+      "Verwandte"
+     ],
+     "concepts": [
+      {
+       "id": "akk-belebt",
+       "title_de": "Akkusativ belebter Nomen (бра́та, ма́му, дру́га)"
+      },
+      {
+       "id": "vokatyv",
+       "title_de": "Vokativ (Окса́но! Іва́не! па́не …)"
+      }
      ]
     },
     {
@@ -343,17 +731,31 @@
      "theme": "food",
      "status": "planned",
      "goals_de": [
-      "Im Restaurant bestellen, reklamieren, bezahlen"
+      "Im Restaurant bestellen, reklamieren und bezahlen"
      ],
      "grammar_de": [
-      "нема́є + Gen.",
-      "без + Gen.",
-      "Plural Akk. (unbelebt)"
+      "Genitiv Sg. (Endungen)",
+      "нема́є + Genitiv",
+      "без / для / до / з / від + Genitiv"
      ],
      "vocab_fields_de": [
       "Speisen",
       "Getränke",
       "Geschirr"
+     ],
+     "concepts": [
+      {
+       "id": "gen-sg",
+       "title_de": "Genitiv Sg. (Endungen)"
+      },
+      {
+       "id": "nemaie",
+       "title_de": "нема́є + Genitiv"
+      },
+      {
+       "id": "gen-prep",
+       "title_de": "без / для / до / з / від + Genitiv"
+      }
      ]
     },
     {
@@ -363,15 +765,31 @@
      "theme": "health",
      "status": "planned",
      "goals_de": [
-      "Beschwerden nennen, beim Arzt einfache Angaben machen"
+      "Beschwerden nennen",
+      "Beim Arzt einfache Angaben machen"
      ],
      "grammar_de": [
-      "У ме́не боли́ть …",
-      "Dativ мені́/тобі́ (Wdh.)"
+      "У ме́не боли́ть / боля́ть …",
+      "у + Genitiv (у лі́каря – beim Arzt)",
+      "мені́ тре́ба + Infinitiv"
      ],
      "vocab_fields_de": [
       "Körperteile",
       "Beschwerden"
+     ],
+     "concepts": [
+      {
+       "id": "bolyt",
+       "title_de": "У ме́не боли́ть / боля́ть …"
+      },
+      {
+       "id": "u-gen",
+       "title_de": "у + Genitiv (у лі́каря – beim Arzt)"
+      },
+      {
+       "id": "treba",
+       "title_de": "мені́ тре́ба + Infinitiv"
+      }
      ]
     },
     {
@@ -381,33 +799,53 @@
      "theme": "calendar",
      "status": "planned",
      "goals_de": [
-      "Datum, Geburtstag, Termine angeben"
+      "Datum, Geburtstag und Termine angeben"
      ],
      "grammar_de": [
-      "Ordinalzahlen n.",
-      "Genitiv der Monate (пе́ршого бе́резня)"
+      "Ordinalzahlen im Datum (n.)",
+      "Datum im Genitiv (пе́ршого бе́резня)"
      ],
      "vocab_fields_de": [
       "Monate",
       "Datum"
+     ],
+     "concepts": [
+      {
+       "id": "ordinal-datum",
+       "title_de": "Ordinalzahlen im Datum (n.)"
+      },
+      {
+       "id": "datum-gen",
+       "title_de": "Datum im Genitiv (пе́ршого бе́резня)"
+      }
      ]
     },
     {
      "id": "a1-2-11",
-     "title_uk": "Які́ вони́?",
-     "title_de": "Wie sind sie?",
-     "theme": "people",
+     "title_uk": "Я працю́ю вчи́телем",
+     "title_de": "Ich arbeite als Lehrer",
+     "theme": "work",
      "status": "planned",
      "goals_de": [
-      "Aussehen und Charakter einfach beschreiben"
+      "Über Beruf und Tätigkeit genauer sprechen"
      ],
      "grammar_de": [
-      "Adjektive Pl.",
-      "ду́же/не ду́же"
+      "Instrumental Sg. (Endungen)",
+      "працюва́ти / бу́ти + Instrumental; з + Instrumental"
      ],
      "vocab_fields_de": [
-      "Aussehen",
-      "Charakter"
+      "Berufe",
+      "Tätigkeiten"
+     ],
+     "concepts": [
+      {
+       "id": "instr-sg",
+       "title_de": "Instrumental Sg. (Endungen)"
+      },
+      {
+       "id": "instr-pred",
+       "title_de": "працюва́ти / бу́ти + Instrumental; з + Instrumental"
+      }
      ]
     },
     {
@@ -417,16 +855,27 @@
      "theme": "office",
      "status": "planned",
      "goals_de": [
-      "Termine vereinbaren und verschieben, kurze E-Mail"
+      "Termine vereinbaren und verschieben",
+      "Kurze E-Mail schreiben"
      ],
      "grammar_de": [
-      "Dativ Sg. (Personen)",
-      "бу́ти у Präteritum"
+      "Zeitspanne з … до … (Genitiv)",
+      "Termine vorschlagen und ablehnen"
      ],
      "vocab_fields_de": [
       "Termine",
       "E-Mail",
       "Büroalltag"
+     ],
+     "concepts": [
+      {
+       "id": "z-do-gen",
+       "title_de": "Zeitspanne з … до … (Genitiv)"
+      },
+      {
+       "id": "termin",
+       "title_de": "Termine vorschlagen und ablehnen"
+      }
      ]
     },
     {
@@ -439,12 +888,22 @@
       "Konto, Geld abheben, Paket senden"
      ],
      "grammar_de": [
-      "Gen. Sg. (без, для, від)",
-      "ві́дправити/отри́мати"
+      "Vollendete Verben als Chunks (відпра́вити, отри́мати)",
+      "Genitiv: Wiederholung und Erweiterung (від, для, бі́ля)"
      ],
      "vocab_fields_de": [
       "Bank",
       "Post"
+     ],
+     "concepts": [
+      {
+       "id": "pf-chunks",
+       "title_de": "Vollendete Verben als Chunks (відпра́вити, отри́мати)"
+      },
+      {
+       "id": "gen-wdh",
+       "title_de": "Genitiv: Wiederholung und Erweiterung (від, для, бі́ля)"
+      }
      ]
     },
     {
@@ -454,15 +913,26 @@
      "theme": "calendar",
      "status": "planned",
      "goals_de": [
-      "Gratulieren, über Feste sprechen"
+      "Gratulieren",
+      "Über Feste sprechen"
      ],
      "grammar_de": [
-      "Віта́ю з … (з + Instr.)",
-      "Wünsche (Бажа́ю …)"
+      "Віта́ю з + Instrumental",
+      "Бажа́ю + Genitiv (ща́стя, здоро́в’я)"
      ],
      "vocab_fields_de": [
       "Feiertage",
       "Glückwünsche"
+     ],
+     "concepts": [
+      {
+       "id": "vitaiu-z",
+       "title_de": "Віта́ю з + Instrumental"
+      },
+      {
+       "id": "bazhaiu",
+       "title_de": "Бажа́ю + Genitiv (ща́стя, здоро́в’я)"
+      }
      ]
     },
     {
@@ -472,16 +942,28 @@
      "theme": "law",
      "status": "planned",
      "goals_de": [
-      "Termin bei Behörde, nach Zuständigkeit fragen, Formular ausfüllen"
+      "Termin bei einer Behörde",
+      "Nach Zuständigkeit fragen",
+      "Formular ausfüllen"
      ],
      "grammar_de": [
-      "Gen. bei Angaben (на ім’я́ …)",
-      "Modalität потрі́бно/тре́ба"
+      "тре́ба / потрі́бно + Infinitiv",
+      "Lokativ Plural (у докуме́нтах)"
      ],
      "vocab_fields_de": [
       "Behörde",
       "Antrag",
       "Fristen"
+     ],
+     "concepts": [
+      {
+       "id": "treba-inf",
+       "title_de": "тре́ба / потрі́бно + Infinitiv"
+      },
+      {
+       "id": "lok-pl",
+       "title_de": "Lokativ Plural (у докуме́нтах)"
+      }
      ]
     }
    ]
@@ -504,11 +986,17 @@
       "Pläne machen und darüber sprechen"
      ],
      "grammar_de": [
-      "Futur: бу́ду + Inf., synthetisch (чита́тиму)"
+      "Futur: бу́ду + Infinitiv und -му-Form (чита́тиму)"
      ],
      "vocab_fields_de": [
       "Freizeit",
       "Verabredungen"
+     ],
+     "concepts": [
+      {
+       "id": "futur",
+       "title_de": "Futur: бу́ду + Infinitiv und -му-Form (чита́тиму)"
+      }
      ]
     },
     {
@@ -518,15 +1006,22 @@
      "theme": "travel",
      "status": "planned",
      "goals_de": [
-      "Reise planen, Fahrkarte/Ticket buchen"
+      "Reise planen",
+      "Fahrkarte oder Ticket buchen"
      ],
      "grammar_de": [
-      "Aspekt (Einführung: купува́ти/купи́ти)"
+      "Aspekt: unvollendet / vollendet (купува́ти – купи́ти)"
      ],
      "vocab_fields_de": [
       "Reise",
       "Ticket",
       "Gepäck"
+     ],
+     "concepts": [
+      {
+       "id": "aspekt",
+       "title_de": "Aspekt: unvollendet / vollendet (купува́ти – купи́ти)"
+      }
      ]
     },
     {
@@ -536,15 +1031,21 @@
      "theme": "travel",
      "status": "planned",
      "goals_de": [
-      "Ein- und auschecken, Probleme melden"
+      "Ein- und auschecken",
+      "Probleme melden"
      ],
      "grammar_de": [
-      "Lok. Pl. Grundformen",
-      "чи + Frage"
+      "Genitiv Plural (Grundregeln)"
      ],
      "vocab_fields_de": [
       "Hotel",
       "Zimmerausstattung"
+     ],
+     "concepts": [
+      {
+       "id": "gen-pl",
+       "title_de": "Genitiv Plural (Grundregeln)"
+      }
      ]
     },
     {
@@ -554,14 +1055,26 @@
      "theme": "health",
      "status": "planned",
      "goals_de": [
-      "Medikamente kaufen, Einnahme verstehen"
+      "Medikamente kaufen",
+      "Einnahmehinweise verstehen"
      ],
      "grammar_de": [
-      "Imperativ (Wdh.), Zahlwort + Gen. Pl."
+      "Zahl + Genitiv Plural (п’ять табле́ток)",
+      "ти-Imperativ aktiv verwenden"
      ],
      "vocab_fields_de": [
       "Medikamente",
       "Beschwerden"
+     ],
+     "concepts": [
+      {
+       "id": "zahl-gen-pl",
+       "title_de": "Zahl + Genitiv Plural (п’ять табле́ток)"
+      },
+      {
+       "id": "imperativ-ty",
+       "title_de": "ти-Imperativ aktiv verwenden"
+      }
      ]
     },
     {
@@ -571,15 +1084,22 @@
      "theme": "home",
      "status": "planned",
      "goals_de": [
-      "Wohnungsanzeige verstehen, Mietvertrag-Grundbegriffe"
+      "Wohnungsanzeige verstehen",
+      "Grundbegriffe des Mietvertrags"
      ],
      "grammar_de": [
-      "Komparativ Grundform (бі́льший, деше́вший)"
+      "Komparativ (бі́льший, деше́вший)"
      ],
      "vocab_fields_de": [
       "Miete",
       "Vertrag",
       "Nebenkosten"
+     ],
+     "concepts": [
+      {
+       "id": "komparativ",
+       "title_de": "Komparativ (бі́льший, деше́вший)"
+      }
      ]
     },
     {
@@ -589,13 +1109,19 @@
      "theme": "home",
      "status": "planned",
      "goals_de": [
-      "Hausarbeiten benennen, Aufgaben verteilen"
+      "Hausarbeiten benennen und verteilen"
      ],
      "grammar_de": [
-      "Aspekt im Präteritum (роби́в/зроби́в)"
+      "Aspekt im Präteritum (роби́в / зроби́в)"
      ],
      "vocab_fields_de": [
       "Haushalt"
+     ],
+     "concepts": [
+      {
+       "id": "aspekt-praet",
+       "title_de": "Aspekt im Präteritum (роби́в / зроби́в)"
+      }
      ]
     },
     {
@@ -605,14 +1131,26 @@
      "theme": "people",
      "status": "planned",
      "goals_de": [
-      "Einladen, annehmen, ablehnen, telefonieren"
+      "Einladen, annehmen, ablehnen",
+      "Telefonisch verabreden"
      ],
      "grammar_de": [
-      "Modalverben (хоті́ти, могти́, му́сити)"
+      "Dativ Sg. der Nomen (дру́гові, ма́мі)",
+      "Modalverben му́сити, могти́, хоті́ти"
      ],
      "vocab_fields_de": [
       "Einladung",
       "Telefon"
+     ],
+     "concepts": [
+      {
+       "id": "dat-sg",
+       "title_de": "Dativ Sg. der Nomen (дру́гові, ма́мі)"
+      },
+      {
+       "id": "modal",
+       "title_de": "Modalverben му́сити, могти́, хоті́ти"
+      }
      ]
     },
     {
@@ -622,15 +1160,26 @@
      "theme": "school",
      "status": "planned",
      "goals_de": [
-      "Über Lernen sprechen, nachfragen"
+      "Über Lernen sprechen",
+      "Nachfragen"
      ],
      "grammar_de": [
-      "Instr. (з + Instr., Wdh.)",
-      "тому́ що/бо"
+      "Begründen mit бо / тому́ що",
+      "Instrumental Plural (Grundformen)"
      ],
      "vocab_fields_de": [
       "Schule",
       "Kurs"
+     ],
+     "concepts": [
+      {
+       "id": "begruendung",
+       "title_de": "Begründen mit бо / тому́ що"
+      },
+      {
+       "id": "instr-pl",
+       "title_de": "Instrumental Plural (Grundformen)"
+      }
      ]
     },
     {
@@ -640,14 +1189,21 @@
      "theme": "work",
      "status": "planned",
      "goals_de": [
-      "Sich bewerben, Lebenslauf-Grunddaten"
+      "Sich bewerben",
+      "Lebenslauf-Grunddaten nennen"
      ],
      "grammar_de": [
-      "Präteritum + Zeitangaben (з … до …)"
+      "Präteritum mit Zeitangaben (з … до …, у … ро́ці)"
      ],
      "vocab_fields_de": [
       "Bewerbung",
       "Erfahrung"
+     ],
+     "concepts": [
+      {
+       "id": "praet-zeit",
+       "title_de": "Präteritum mit Zeitangaben (з … до …, у … ро́ці)"
+      }
      ]
     },
     {
@@ -657,14 +1213,26 @@
      "theme": "office",
      "status": "planned",
      "goals_de": [
-      "Anruf annehmen, Nachricht hinterlassen"
+      "Anruf annehmen",
+      "Nachricht hinterlassen"
      ],
      "grammar_de": [
-      "Dativ (Wdh.), Futur (Wdh.)"
+      "Vollendetes Futur (подзвоню́, напишу́)",
+      "Telefonformeln"
      ],
      "vocab_fields_de": [
       "Telefon",
       "Nachricht"
+     ],
+     "concepts": [
+      {
+       "id": "futur-pf",
+       "title_de": "Vollendetes Futur (подзвоню́, напишу́)"
+      },
+      {
+       "id": "telefon-formeln",
+       "title_de": "Telefonformeln"
+      }
      ]
     },
     {
@@ -674,16 +1242,27 @@
      "theme": "law",
      "status": "planned",
      "goals_de": [
-      "Verlust/Diebstahl melden, Personalien angeben"
+      "Verlust oder Diebstahl melden",
+      "Personalien angeben"
      ],
      "grammar_de": [
-      "Präteritum + Akk.",
-      "Passiv-Chunks (вкра́ли)"
+      "Unpersönliche 3. Pl. (вкра́ли, сказа́ли)",
+      "Präteritum + Akkusativ (Wdh.)"
      ],
      "vocab_fields_de": [
       "Polizei",
       "Diebstahl",
       "Rechte"
+     ],
+     "concepts": [
+      {
+       "id": "neosob-3pl",
+       "title_de": "Unpersönliche 3. Pl. (вкра́ли, сказа́ли)"
+      },
+      {
+       "id": "praet-akk",
+       "title_de": "Präteritum + Akkusativ (Wdh.)"
+      }
      ]
     },
     {
@@ -693,15 +1272,22 @@
      "theme": "city",
      "status": "planned",
      "goals_de": [
-      "Tickets kaufen, Veranstaltungen besprechen"
+      "Tickets kaufen",
+      "Veranstaltungen besprechen"
      ],
      "grammar_de": [
-      "Zeitangaben (о сьо́мій годи́ні), Wdh. Futur"
+      "Relativsatz mit яки́й"
      ],
      "vocab_fields_de": [
       "Theater",
       "Museum",
       "Konzert"
+     ],
+     "concepts": [
+      {
+       "id": "relativ-yakyi",
+       "title_de": "Relativsatz mit яки́й"
+      }
      ]
     },
     {
@@ -714,11 +1300,17 @@
       "Natur und Ausflug beschreiben"
      ],
      "grammar_de": [
-      "Präpositionen des Ortes (над, під, бі́ля)"
+      "Ortspräpositionen над, під, між, бі́ля"
      ],
      "vocab_fields_de": [
       "Natur",
       "Landschaft"
+     ],
+     "concepts": [
+      {
+       "id": "prep-ort",
+       "title_de": "Ortspräpositionen над, під, між, бі́ля"
+      }
      ]
     },
     {
@@ -728,14 +1320,25 @@
      "theme": "people",
      "status": "planned",
      "goals_de": [
-      "Dinge und Orte vergleichen"
+      "Dinge, Orte und Menschen vergleichen"
      ],
      "grammar_de": [
-      "Komparativ/Superlativ (кра́щий, найкра́щий)"
+      "Superlativ (найкра́щий)",
+      "Vergleich mit ніж"
      ],
      "vocab_fields_de": [
       "Eigenschaften",
       "Städte"
+     ],
+     "concepts": [
+      {
+       "id": "superlativ",
+       "title_de": "Superlativ (найкра́щий)"
+      },
+      {
+       "id": "porivniannia",
+       "title_de": "Vergleich mit ніж"
+      }
      ]
     },
     {
@@ -745,14 +1348,16 @@
      "theme": "travel",
      "status": "planned",
      "goals_de": [
-      "Gesamtwiederholung, Prüfungsformate A1"
+      "Alle A1-Strukturen sicher anwenden",
+      "Prüfungsformate A1 kennen"
      ],
      "grammar_de": [
       "Wiederholung aller A1-Strukturen"
      ],
      "vocab_fields_de": [
       "gemischt"
-     ]
+     ],
+     "concepts": []
     }
    ]
   }
