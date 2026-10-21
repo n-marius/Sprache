@@ -1,1 +1,255 @@
-/* Platzhalter – siehe docs/ARCHITECTURE.md */
+/* EX-C Dialog: chat (Messenger), reading (Lesetext + Fragen), speak (Sprechen). Präfix .exd-* */
+
+/* ---------- Fallbacks mit Spezifität 0 (fremde Stylesheets gewinnen immer) ---------- */
+:where(.exd-chat, .exd-read, .exd-speak) :where(.speaker-btn) {
+  display: inline-grid; place-items: center; flex: none;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--sel-bg); color: var(--blue-ink);
+}
+:where(.exd-chat, .exd-read, .exd-speak) :where(.speaker-btn) svg { width: 22px; height: 22px; }
+:where(.exd-chat .speaker-btn.size-s) { width: 32px; height: 32px; }
+:where(.exd-chat .speaker-btn.size-s) svg { width: 18px; height: 18px; }
+:where(.exd-read, .exd-speak) :where(.ex-reveal-btn) {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px;
+  color: var(--tint); font-size: var(--fs-sub); font-weight: 600;
+}
+:where(.exd-read, .exd-speak) :where(.ex-reveal-btn) svg { width: 16px; height: 16px; transition: transform var(--dur-2) var(--ease-out); }
+:where(.exd-read .ex-reveal-btn.is-open) svg { transform: rotate(180deg); }
+:where(.exd-read, .exd-speak) :where(.ex-hint) { display: block; font-size: var(--fs-foot); color: var(--label-2); margin-top: 2px; }
+
+/* Tipp-Indikator (Fallback; css/animations.css liefert die endgültige Fassung) */
+:where(.anim-typing) { display: inline-flex; align-items: center; gap: 4px; height: 1em; }
+:where(.anim-typing) i { display: block; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .35; animation: exd-typing 1.2s infinite ease-in-out; }
+:where(.anim-typing) i:nth-child(2) { animation-delay: .15s; }
+:where(.anim-typing) i:nth-child(3) { animation-delay: .3s; }
+@keyframes exd-typing { 0%, 60%, 100% { opacity: .3; transform: none; } 30% { opacity: .9; transform: translateY(-3px); } }
+
+/* ============================== CHAT ============================== */
+.exd-chat {
+  display: flex; flex-direction: column;
+  background: var(--surface); border-radius: var(--r-l);
+  box-shadow: var(--shadow-1); border: .5px solid var(--separator);
+  overflow: clip;
+}
+.exd-chat-head {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: var(--sp-4) var(--sp-4) var(--sp-3);
+  background: var(--material); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: .5px solid var(--separator);
+  text-align: center;
+}
+.exd-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 30px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--blue) 22%, var(--surface-2)), var(--surface-3));
+  box-shadow: inset 0 0 0 .5px var(--separator);
+}
+.exd-chat-name { font-size: var(--fs-foot); font-weight: 600; color: var(--label); }
+.exd-chat-scenario { font-size: var(--fs-cap); color: var(--label-2); max-width: 32ch; line-height: 1.3; }
+
+.exd-chat-log {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: var(--sp-4) var(--sp-3) var(--sp-3);
+  min-height: 160px;
+  scroll-margin-bottom: 16px;
+}
+.exd-msg { display: flex; flex-direction: column; max-width: 82%; scroll-margin: 24px; }
+.exd-msg.is-bot { align-self: flex-start; align-items: flex-start; }
+.exd-msg.is-me { align-self: flex-end; align-items: flex-end; }
+.exd-msg + .exd-msg:not(.is-hint) { margin-top: 4px; }
+.exd-msg.is-me + .exd-msg.is-bot, .exd-msg.is-bot + .exd-msg.is-me, .exd-msg.is-hint + .exd-msg { margin-top: 10px; }
+
+.exd-bubble {
+  position: relative;
+  padding: 9px 14px 8px;
+  border-radius: 20px;
+  font-size: var(--fs-body); line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.exd-msg.is-bot .exd-bubble { background: var(--surface-2); color: var(--label); border-bottom-left-radius: 6px; }
+.exd-msg.is-me .exd-bubble {
+  background: var(--tint);
+  color: #fff; border-bottom-right-radius: 6px;
+}
+.exd-msg.is-me .uk-tap .w:active, .exd-msg.is-me .uk-tap .w.is-active { background: rgba(255,255,255,.25); box-shadow: 0 0 0 2px rgba(255,255,255,.25); }
+.exd-delivered { font-size: 11px; color: var(--label-3); margin: 2px 6px 0; }
+.exd-msg.is-me:not(:last-child) .exd-delivered { display: none; }
+
+.exd-msg.is-typing .exd-bubble { padding: 12px 16px; color: var(--label-2); }
+.exd-msg.is-typing .anim-typing { color: var(--label-2); }
+
+.exd-bubble-uk { font-size: var(--fs-uk-option); }
+.exd-bubble-de { margin-top: 4px; padding-top: 4px; border-top: .5px solid var(--separator); font-size: var(--fs-sub); color: var(--label-2); }
+.exd-bubble-tools { display: flex; align-items: center; gap: 6px; margin: 4px -6px -2px; }
+.exd-de-btn {
+  min-width: 44px; height: 32px; padding: 0 10px; border-radius: var(--r-pill);
+  font-size: var(--fs-cap); font-weight: 700; letter-spacing: .04em;
+  color: var(--label-2); background: var(--fill-2);
+  transition: background-color var(--dur-1), color var(--dur-1);
+}
+.exd-de-btn.is-on { background: var(--sel-bg); color: var(--sel-ink); }
+.exd-de-btn:active { opacity: .7; }
+
+.exd-msg.is-hint { align-self: center; max-width: 92%; margin: 6px 0 2px; }
+.exd-hint-bubble {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 8px 12px; border-radius: var(--r-m);
+  background: var(--bad-bg); border: 1.5px solid var(--bad-border); color: var(--bad-ink);
+  font-size: var(--fs-sub); line-height: 1.35;
+  animation: exd-hint-in var(--dur-3) var(--ease-spring);
+}
+.exd-hint-bubble .de { color: inherit; }
+.exd-hint-icon { width: 18px; height: 18px; flex: none; margin-top: 1px; }
+@keyframes exd-hint-in { from { opacity: 0; transform: translateY(6px) scale(.97); } }
+
+.exd-msg.is-bot:not(.is-typing) .exd-bubble { animation: exd-bubble-in var(--dur-3) var(--ease-spring); transform-origin: 0 100%; }
+@keyframes exd-bubble-in { from { opacity: 0; transform: scale(.85); } }
+
+.exd-chat-reply {
+  padding: var(--sp-3) var(--sp-3) var(--sp-4);
+  border-top: .5px solid var(--separator);
+  background: var(--bg-grouped);
+  scroll-margin-bottom: calc(var(--safe-bottom) + 96px);
+}
+.exd-reply-label { color: var(--label-2); margin: 0 4px 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: var(--fs-cap); }
+.exd-chat-options .option { font-size: var(--fs-uk-option); }
+
+/* ============================== READING ============================== */
+.exd-read { display: grid; gap: var(--sp-5); }
+.exd-read-card { padding: var(--sp-5); }
+.exd-read-head { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.exd-read-title { flex: 1; min-width: 0; margin: 0; font-family: var(--font-display); font-size: var(--fs-title2); font-weight: 700; line-height: 1.2; }
+.exd-read-audio { display: flex; gap: 8px; flex: none; }
+.exd-read-text { margin: 0; font-size: 19px; line-height: 1.65; color: var(--label); letter-spacing: .005em; }
+.exd-read-card .ex-reveal { margin-top: var(--sp-3); border-top: .5px solid var(--separator); padding-top: var(--sp-1); }
+.exd-read-de { margin: var(--sp-1) 0 0; font-size: var(--fs-callout); line-height: 1.5; color: var(--label-2); }
+
+.exd-questions { display: grid; gap: var(--sp-4); counter-reset: q; }
+.exd-q {
+  padding: var(--sp-4); border-radius: var(--r-l);
+  background: var(--surface); box-shadow: var(--shadow-1);
+  border: 2px solid transparent;
+  transition: border-color var(--dur-2), background-color var(--dur-2);
+}
+.exd-q.is-correct { border-color: var(--ok-border); background: color-mix(in srgb, var(--ok-bg) 45%, var(--surface)); }
+.exd-q.is-wrong { border-color: var(--bad-border); background: color-mix(in srgb, var(--bad-bg) 45%, var(--surface)); }
+.exd-q-head { display: flex; gap: var(--sp-3); align-items: flex-start; margin-bottom: var(--sp-3); }
+.exd-q-num {
+  flex: none; width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center;
+  font: 700 var(--fs-sub)/1 var(--font-rounded);
+  background: var(--sel-bg); color: var(--sel-ink);
+}
+.exd-q.is-correct .exd-q-num { background: var(--ok); color: var(--on-color); }
+.exd-q.is-wrong .exd-q-num { background: var(--bad); color: var(--on-color); }
+.exd-q-text { flex: 1; min-width: 0; padding-top: 2px; }
+.exd-q-uk { font-size: var(--fs-headline); font-weight: 600; line-height: 1.35; }
+.exd-q .options { gap: 8px; }
+.exd-q .option { font-size: var(--fs-uk-option); }
+.exd-tf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.exd-tf .option { justify-content: center; text-align: center; }
+
+@media (min-width: 1000px) {
+  .exd-read { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; }
+  .exd-read-card { position: sticky; top: calc(var(--safe-top) + 12px); }
+}
+
+/* ============================== SPEAK ============================== */
+.exd-speak { display: flex; flex-direction: column; gap: var(--sp-5); }
+.exd-speak-de { font-family: var(--font-display); font-size: var(--fs-title1); font-weight: 700; line-height: 1.2; letter-spacing: -.01em; }
+.exd-speak-de .de { color: var(--label); }
+.exd-speak-uk {
+  padding: var(--sp-3) var(--sp-4) var(--sp-1);
+  border-radius: var(--r-l); background: var(--surface); box-shadow: var(--shadow-1);
+}
+.exd-speak-uk-row { display: flex; align-items: center; gap: var(--sp-3); }
+.exd-speak-uk-main { flex: 1; min-width: 0; }
+.exd-speak-uk-text { font-size: var(--fs-uk-prompt); line-height: 1.35; }
+.exd-speak-uk-hidden {
+  display: flex; align-items: center; min-height: 44px; padding: 0 12px;
+  border: 1.5px dashed var(--separator-opaque); border-radius: var(--r-s);
+  color: var(--label-3); font-size: var(--fs-sub);
+}
+.exd-speak-audio { display: flex; gap: 8px; flex: none; }
+.exd-link {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px;
+  color: var(--tint); font-size: var(--fs-sub); font-weight: 600;
+}
+.exd-link:active { opacity: .6; }
+.exd-link:disabled { opacity: .4; }
+.exd-uk-chev { width: 16px; height: 16px; transform: rotate(180deg); transition: transform var(--dur-2) var(--ease-out); }
+.exd-uk-toggle.is-collapsed .exd-uk-chev { transform: none; }
+
+.exd-speak-stage {
+  display: flex; flex-direction: column; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-5) var(--sp-4);
+  border-radius: var(--r-xl);
+  background: var(--surface); box-shadow: var(--shadow-1);
+  text-align: center;
+  transition: background-color var(--dur-2);
+}
+.exd-speak-stage.is-ok { background: var(--ok-bg); }
+
+.exd-mic {
+  --m-bg: var(--blue); --m-edge: var(--blue-edge);
+  position: relative; display: grid; place-items: center;
+  width: 104px; height: 104px; border-radius: 50%;
+  background: var(--m-bg); color: #fff;
+  box-shadow: 0 6px 0 var(--m-edge), 0 10px 24px color-mix(in srgb, var(--m-bg) 35%, transparent);
+  margin-bottom: 6px;
+  transition: transform var(--dur-1) var(--ease-out), box-shadow var(--dur-1) var(--ease-out), background-color var(--dur-2);
+  -webkit-tap-highlight-color: transparent;
+}
+.exd-mic:active:not(:disabled) { transform: translateY(6px); box-shadow: 0 0 0 var(--m-edge), 0 4px 12px color-mix(in srgb, var(--m-bg) 30%, transparent); }
+.exd-mic:disabled { opacity: .45; }
+.exd-mic-icon { position: relative; z-index: 1; display: grid; }
+.exd-mic-icon svg { width: 46px; height: 46px; stroke-width: 2.2; }
+.exd-mic-pulse { position: absolute; inset: 0; border-radius: 50%; pointer-events: none; }
+.exd-mic.is-listening { --m-bg: var(--red); --m-edge: var(--red-edge); }
+.exd-mic.is-listening .exd-mic-pulse { animation: exd-pulse 1.3s infinite var(--ease-out); box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 55%, transparent); }
+.exd-mic.is-ok { --m-bg: var(--green); --m-edge: var(--green-edge); }
+.exd-mic.is-play { --m-bg: var(--blue); --m-edge: var(--blue-edge); }
+@keyframes exd-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 55%, transparent); }
+  100% { box-shadow: 0 0 0 26px color-mix(in srgb, var(--red) 0%, transparent); }
+}
+
+.exd-tries { display: flex; gap: 6px; }
+.exd-tries[hidden] { display: none; }
+.exd-tries i { width: 8px; height: 8px; border-radius: 50%; background: var(--fill); }
+.exd-tries i.is-used { background: var(--label-3); }
+
+.exd-speak-status { font-size: var(--fs-callout); font-weight: 600; color: var(--label-2); max-width: 36ch; line-height: 1.35; }
+.exd-speak-status.is-listening { color: var(--red-ink); }
+.exd-speak-status.is-ok { color: var(--ok-ink); font-size: var(--fs-title3); }
+.exd-speak-status.is-close { color: var(--yellow-ink); font-size: var(--fs-title3); }
+.exd-speak-status.is-bad { color: var(--bad-ink); }
+
+.exd-speak-heard {
+  padding: 8px 14px; border-radius: var(--r-m);
+  font-size: var(--fs-uk-option); line-height: 1.35;
+  background: var(--surface); border: 1.5px solid var(--separator);
+  max-width: 100%;
+}
+.exd-speak-heard.is-interim { color: var(--label-2); font-style: italic; }
+.exd-speak-heard.is-ok { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-ink); }
+.exd-speak-heard.is-close { background: color-mix(in srgb, var(--yellow) 16%, transparent); border-color: var(--yellow); color: var(--yellow-ink); }
+.exd-speak-heard.is-bad { background: var(--bad-bg); border-color: var(--bad-border); color: var(--bad-ink); }
+
+.exd-speak-actions { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--sp-3); width: 100%; max-width: 440px; }
+.exd-speak-actions:empty { display: none; }
+.exd-speak-actions .btn { min-height: 50px; }
+.exd-speak-foot { display: flex; justify-content: center; }
+.exd-skip { color: var(--label-2); font-weight: 500; }
+
+@media (min-width: 700px) {
+  .exd-speak-de { font-size: 32px; }
+  .exd-mic { width: 120px; height: 120px; }
+  .exd-speak-stage { padding: var(--sp-7) var(--sp-5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exd-msg.is-bot:not(.is-typing) .exd-bubble, .exd-hint-bubble { animation: none; }
+  .exd-mic.is-listening .exd-mic-pulse { animation: none; box-shadow: 0 0 0 6px color-mix(in srgb, var(--red) 35%, transparent); }
+  :where(.anim-typing) i { animation: none; opacity: .6; }
+}

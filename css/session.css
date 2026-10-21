@@ -1,1 +1,203 @@
-/* Platzhalter – siehe docs/ARCHITECTURE.md */
+/* Session-Player (Vollbild) – Kopf (sticky), Inhalt (scrollt), Footer (fix) mit Feedback-Leiste. */
+
+.sess {
+  --sess-max: 680px;
+  --foot-h: 120px;
+  position: relative;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--label);
+}
+
+/* ---------- Kopf ---------- */
+.sess-head {
+  position: sticky; top: 0; z-index: 30;
+  padding: var(--safe-top) calc(var(--safe-right) + 8px) 0 calc(var(--safe-left) + 8px);
+  background: var(--material);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: .5px solid var(--separator);
+}
+.sess-head-inner {
+  display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; gap: var(--sp-2);
+  height: 56px; max-width: calc(var(--sess-max) + 120px); margin: 0 auto;
+}
+.sess-head .icon-btn { width: 44px; height: 44px; color: var(--label-3); }
+.sess-head .icon-btn svg { width: 24px; height: 24px; }
+.sess-head .sess-close { color: var(--label-2); }
+.sess-head .icon-btn:active { background: var(--fill); }
+.sess-progress { height: 16px; }
+
+/* ---------- Inhalt ---------- */
+.sess-body {
+  padding: var(--sp-5) calc(var(--safe-right) + var(--gutter)) calc(var(--foot-h) + var(--sp-6)) calc(var(--safe-left) + var(--gutter));
+}
+.sess-stage { max-width: var(--sess-max); margin: 0 auto; }
+.sess-item { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+/* Anweisung */
+.sess-instr { display: flex; flex-direction: column; gap: 2px; }
+.sess-instr-uk {
+  margin: 0;
+  font-family: var(--font-display); font-size: var(--fs-title2); font-weight: 700; line-height: 1.25;
+}
+.sess-instr-de { font-size: var(--fs-foot); color: var(--label-2); }
+.sess-ex-body { position: relative; border-radius: var(--r-l); }
+
+/* Kopfzeile „Neues Wort“ / „Tipp“ */
+.sess-kicker {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  padding: 6px 12px 6px 10px; border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--purple) 14%, transparent);
+  color: var(--purple);
+  font-family: var(--font-rounded); font-weight: 700; font-size: var(--fs-sub);
+}
+.sess-kicker svg { width: 18px; height: 18px; }
+.sess-kicker-de { font-weight: 500; color: var(--label-2); font-family: var(--font); font-size: var(--fs-foot); }
+.sess-kicker.is-tip { background: color-mix(in srgb, var(--yellow) 22%, transparent); color: var(--yellow-ink); }
+
+/* ---------- Neues Wort ---------- */
+.sess-intro-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--sp-3);
+  padding: var(--sp-6) var(--sp-5) var(--sp-5);
+  border: 2px solid var(--tile-border);
+  box-shadow: 0 4px 0 var(--tile-edge);
+  border-radius: var(--r-xl);
+}
+.sess-emoji { font-size: 72px; line-height: 1; filter: drop-shadow(0 4px 8px rgba(0,0,0,.12)); }
+.sess-word {
+  font-family: var(--font-display); font-size: 40px; font-weight: 800; line-height: 1.15; letter-spacing: .005em;
+  overflow-wrap: anywhere;
+}
+.sess-speakers { display: flex; align-items: center; justify-content: center; gap: var(--sp-3); }
+.sess-trans { font-size: var(--fs-title3); font-weight: 600; color: var(--label); }
+.sess-meta { font-size: var(--fs-foot); color: var(--label-2); }
+.sess-example {
+  align-self: stretch; text-align: left;
+  margin-top: var(--sp-2); padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-m); background: var(--surface-2);
+}
+.sess-example-row { display: flex; align-items: center; gap: var(--sp-2); justify-content: space-between; }
+.sess-example-uk { font-size: var(--fs-uk-option); font-weight: 600; line-height: 1.35; }
+.sess-example-de { display: block; margin-top: 2px; font-size: var(--fs-sub); color: var(--label-2); }
+.sess-forms { align-self: stretch; text-align: left; display: flex; flex-direction: column; gap: 6px; }
+.sess-form-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.sess-form {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  padding: 6px 10px; border-radius: var(--r-s);
+  background: var(--fill-2); font-size: var(--fs-sub);
+}
+.sess-form-info { font-size: var(--fs-cap); color: var(--label-2); }
+
+/* ---------- Tipp ---------- */
+.sess-tip-card {
+  display: flex; flex-direction: column; gap: var(--sp-3);
+  padding: var(--sp-5);
+  border: 2px solid color-mix(in srgb, var(--yellow) 55%, var(--tile-border));
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--yellow-edge) 45%, var(--tile-edge));
+  border-radius: var(--r-xl);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--yellow) 10%, var(--surface)), var(--surface) 60%);
+}
+.sess-tip-head { display: flex; align-items: center; gap: var(--sp-3); }
+.sess-tip-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--yellow); color: #4B3500;
+}
+.sess-tip-icon svg { width: 26px; height: 26px; }
+.sess-tip-title { margin: 0; font-size: var(--fs-title3); font-weight: 700; line-height: 1.25; }
+.sess-tip-body { margin: 0; font-size: var(--fs-body); line-height: 1.5; }
+.sess-tip-body strong { font-weight: 700; }
+.sess-tip-examples { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.sess-tip-examples li { padding: var(--sp-3) var(--sp-4); border-radius: var(--r-m); background: var(--surface-2); }
+.sess-link {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0 4px;
+  color: var(--tint); font-size: var(--fs-callout); font-weight: 600;
+}
+.sess-link svg { width: 20px; height: 20px; }
+.sess-link:active { opacity: .6; }
+.sess-explain-sheet { display: flex; flex-direction: column; gap: var(--sp-3); }
+.sess-explain-sheet h3, .sess-explain-sheet p { margin: 0; }
+.sess-explain-note { display: flex; gap: 8px; align-items: flex-start; font-size: var(--fs-foot); color: var(--label-2); }
+.sess-explain-note svg { flex: none; width: 18px; height: 18px; }
+
+/* ---------- Footer + Feedback-Leiste ---------- */
+.sess-foot {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 35;
+  padding: var(--sp-3) calc(var(--safe-right) + var(--gutter)) calc(var(--safe-bottom) + var(--sp-3)) calc(var(--safe-left) + var(--gutter));
+  background: var(--material-thick);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-top: .5px solid var(--separator);
+  transition: background-color var(--dur-2);
+}
+.sess-foot.is-idle-hidden:not(.has-fb) { visibility: hidden; pointer-events: none; }
+.sess-foot.is-ok { background: var(--ok-bar); border-top-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.sess-foot.is-bad { background: var(--bad-bar); border-top-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.sess-foot.is-neutral { background: var(--surface-2); }
+.sess-foot-inner { max-width: var(--sess-max); margin: 0 auto; display: flex; flex-direction: column; gap: var(--sp-3); }
+.sess-fb:empty { display: none; }
+.sess-action { margin-bottom: 4px; }
+
+.sess-fb-row { display: flex; align-items: flex-start; gap: var(--sp-3); }
+.sess-fb-glyph {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+}
+.sess-fb-glyph.is-ok { background: var(--surface); --check-color: var(--ok); }
+.sess-fb-glyph.is-ok svg { width: 40px; height: 40px; }
+.sess-fb-glyph.is-bad { background: var(--surface); color: var(--bad); }
+.sess-fb-glyph.is-bad svg { width: 26px; height: 26px; stroke-width: 3; }
+.sess-fb-glyph.is-neutral { background: var(--fill-2); color: var(--label-2); }
+.sess-fb-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.sess-fb-title {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  font-family: var(--font-rounded); font-size: var(--fs-title3); font-weight: 800; line-height: 1.2;
+}
+.sess-fb-title-de { font-family: var(--font); font-size: var(--fs-foot); font-weight: 500; opacity: .75; }
+.is-ok .sess-fb-title, .is-ok .sess-fb-report { color: var(--ok-ink); }
+.is-bad .sess-fb-title, .is-bad .sess-fb-report { color: var(--bad-ink); }
+.is-neutral .sess-fb-title { color: var(--label); }
+.sess-fb-sol { display: flex; align-items: center; gap: 8px; font-size: var(--fs-callout); line-height: 1.35; }
+.sess-fb-sol.is-strong { font-size: var(--fs-uk-option); font-weight: 600; }
+.is-ok .sess-fb-sol { color: var(--ok-ink); }
+.is-bad .sess-fb-sol { color: var(--bad-ink); }
+.sess-fb-sol .speaker-btn { flex: none; }
+.sess-fb-de { font-size: var(--fs-sub); color: var(--label-2); }
+.sess-fb-expl { display: flex; gap: 6px; align-items: flex-start; font-size: var(--fs-sub); color: var(--label); margin-top: 2px; }
+.sess-fb-expl svg { flex: none; width: 18px; height: 18px; margin-top: 1px; color: var(--label-2); }
+.sess-fb-report {
+  flex: none; display: inline-flex; align-items: center; gap: 4px;
+  min-height: 44px; padding: 0 4px;
+  font-size: var(--fs-foot); font-weight: 700; opacity: .85;
+}
+.sess-fb-report svg { width: 18px; height: 18px; }
+.sess-fb-report:active { opacity: .5; }
+
+.sess-error { display: grid; place-items: center; padding: var(--sp-6); }
+
+/* ---------- iPad ---------- */
+@media (min-width: 768px) {
+  .sess { --fs-uk-prompt: 26px; --fs-uk-option: 20px; }
+  .sess-head-inner { height: 64px; }
+  .sess-progress { height: 18px; border-radius: 9px; }
+  .sess-body { padding-top: var(--sp-7); }
+  .sess-item { gap: var(--sp-5); }
+  .sess-instr-uk { font-size: var(--fs-title1); }
+  .sess-instr-de { font-size: var(--fs-sub); }
+  .sess-word { font-size: 52px; }
+  .sess-emoji { font-size: 96px; }
+  .sess-intro-card, .sess-tip-card { padding: var(--sp-7); }
+  .sess-trans { font-size: var(--fs-title2); }
+  .sess-tip-body { font-size: 19px; }
+  .sess-foot { padding-top: var(--sp-4); padding-bottom: calc(var(--safe-bottom) + var(--sp-4)); }
+  .sess-foot-inner { flex-direction: row; align-items: center; gap: var(--sp-5); }
+  .sess-fb { flex: 1; min-width: 0; }
+  .sess-action-wrap { flex: 0 0 auto; margin-left: auto; width: 240px; }
+  .sess-foot:not(.has-fb) .sess-action-wrap { width: 100%; max-width: 360px; margin: 0 auto; }
+  .sess-fb-glyph { width: 56px; height: 56px; }
+  .sess-fb-glyph.is-ok svg { width: 52px; height: 52px; }
+  .sess-fb-title { font-size: var(--fs-title2); }
+}
+@media (min-width: 1100px) {
+  .sess { --sess-max: 760px; }
+}

@@ -110,8 +110,7 @@ export function render(ex, ctx) {
 
   function tapGap(i) {
     if (locked) return;
-    if (fills[i] != null && active === i) fills[i] = null;
-    else if (fills[i] != null) fills[i] = null;
+    fills[i] = null; // gefüllte Lücke leeren, leere aktivieren
     active = i;
     haptic('light');
     paint();

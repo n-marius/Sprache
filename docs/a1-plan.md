@@ -14,6 +14,9 @@ Verbindlich für die Lektions-Autoren. Datenformat: `docs/CONTRACT.md`. Recherch
 - **Immersion**: Anweisungen/Fragen auf Ukrainisch mit einfachsten Wörtern; jedes ukrainische Wort ist per Tap auflösbar (Glossar).
 - **Sprachnorm**: Standardukrainisch, keine Russismen/Surschyk; je Begriff EINE gängige Form; Betonung (U+0301) auf jedem mehrsilbigen Wort; Apostroph ’ (U+2019).
 - **Lernerprofil**: Experte (u. a. Jura) – erwachsene, sachliche Kontexte (Büro, Behörde, Reise), keine Kindersprache.
+- **Strikt aufbauende Grammatik**: Fälle und Verbformen werden nacheinander eingeführt (siehe „Grammatische Progression“). Produktiv verlangt wird nur, was erklärt ist; Vorgriffe nur als benannte Chunks.
+- **Erklärung vor der Übung**: Jede Lektion hat eine zusammenhängende deutsche `explanation` (Tabellen, Beispiele), die vor der Lektion gezeigt wird und danach abrufbar bleibt.
+- **Vokabeltrainer**: `vocab[].de` muss als Karteikarte allein verständlich sein (Klammerzusatz bei Mehrdeutigkeit), `info` mit Genus bzw. Konjugationsklasse/Stammformen.
 
 ## Phasenüberblick
 
@@ -608,6 +611,22 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 
 ## Autoren-Leitfaden für Lektionsdateien (`content/a1-1/<id>.json`)
 
+### Neue Pflichtfelder: `concepts` und `explanation`
+- `concepts`: genau die im Plan genannten concept-ids mit `title_de` (ids sind über alle Lektionen eindeutig).
+- `explanation` (Format siehe `docs/CONTRACT.md`): `title_de`, `intro_de` (1–3 Sätze), `sections[]` mit `heading_de`, `body_de` (zusammenhängender Fließtext, **fett** erlaubt, Absätze mit `\n\n`), optional `table` (`head`, `rows`) und `examples` (`uk`, `de`), dazu `summary_de` (3–6 Merksätze). Umfang ca. 250–600 Wörter. Sie erklärt **alle** neuen Konzepte UND Redemittel/Chunks der Lektion (Chunks ausdrücklich als „feste Wendung“ kennzeichnen, mit Hinweis, wann die Grammatik dahinter kommt). Kurz, übersichtlich, verständlich für Nicht-Linguisten, aber vollständig und korrekt; deutsche Fachbegriffe (Akkusativ, Lokativ …) mit kurzer Erläuterung beim ersten Auftreten.
+- Ukrainische Wörter in `explanation` (Fließtext, Tabellen, Beispiele) und `grammar` müssen betont und über Glossar/Vokabeln auflösbar sein. Endungen/Wortteile mit Bindestrich schreiben (`-у`, `-ою`, `ка́в-`): Bindestrich-Fragmente werden nicht geprüft.
+- `grammar` bleibt: 2–4 knappe Merkkarten (≤ 80 Wörter) für die Session.
+
+### Grammatische Progression (verbindlich)
+- Produktiv (Antwortoptionen mit Form-Distraktoren, Lücken, Satzbau, Sprechen von frei kombinierten Sätzen) nur Formen aus den Konzepten dieser und früherer Lektionen (siehe Abschnitt „Grammatische Progression“ und die Zeilen „Produktiv verlangbar“).
+- Chunks: nur die in der Lektion (oder früher) als Chunk genannten festen Wendungen, als Ganzes; nie Endungen davon abfragen, nie auf andere Wörter übertragen.
+- Formen späterer Lektionen nur in Bot-Zeilen/Lesetexten zum Verstehen, sparsam, glossiert – und nie als richtige Antwort, die man bilden müsste.
+
+### Vokabeln für den Vokabeltrainer
+- `de`: eindeutig und allein verständlich (z. B. „gehen (zu Fuß)“, „Bad(ezimmer)“); keine Kürzel.
+- `info`: Nomen Genus (+ Besonderheiten wie „nur Pl.“, „indekl.“, Betonungswechsel); Verben „I. Konj.; я …, ти …“ bzw. „II. Konj.“/„unregelm.“ – soweit eingeführt, sonst Stammformen; Adjektive „Adj.; f. …, n. …“; Chunks „feste Wendung“.
+- `example`: kurzer, natürlicher Satz nur mit bekanntem Wortschatz.
+
 ### Wortschatz und Auflösbarkeit
 - `vocab` enthält **genau** die geplanten Einträge der Lektion (ids und `uk` wie in der Tabelle; Reihenfolge wie im Plan). Zusätzliche Wörter kommen ins `glossary`, nicht in `vocab`.
 - Erlaubter Wortschatz in Aufgaben: `glossary-common.json` + Vokabeln dieser und **früherer** Lektionen + höchstens ca. 8–12 zusätzliche, glossierte Wörter (einfach, hochfrequent). Wörter späterer Lektionen nur ausnahmsweise und dann glossiert.
@@ -645,7 +664,7 @@ Die vocab-ids sind **fest** und über alle Lektionen eindeutig. Die `uk`-Form in
 - `grammar`: 2–4 Blöcke, `body_de` ≤ 80 Wörter, je 2–4 Beispiele.
 
 ### Ablauf
-1. Datei schreiben. 2. `node tools/validate-content.mjs --lesson <id>` bis fehlerfrei. 3. Unabhängige Prüfung (Prüf-Subagent). 4. Korrigieren, erneut validieren. 5. Kurzbericht.
+1. Datei schreiben (explanation zuerst – sie legt fest, was die Aufgaben voraussetzen dürfen). 2. `node tools/validate-content.mjs --lesson <id>` bis fehlerfrei; Betonungs-Check per goroh-Skript. 3. Unabhängige Prüfung (Prüf-Subagent, inkl. Erklärung und Progression). 4. Korrigieren, erneut validieren. 5. Kurzbericht.
 
 ## Maschinenlesbarer Plan (für `tools/validate-content.mjs`)
 

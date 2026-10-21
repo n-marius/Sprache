@@ -86,16 +86,25 @@ function checkDeText(text, where) {
 
 // ---------- Lexikon ----------
 class Lexicon {
-  constructor() { this.map = new Map(); }
+  constructor() { this.map = new Map(); this.acc = new Map(); }
   add(uk, src) {
     if (typeof uk !== 'string') return;
-    const key = normalizeWord(uk.normalize('NFC'));
+    const nfc = uk.normalize('NFC').trim();
+    const key = normalizeWord(nfc);
     if (!key || key.includes(' ')) return; // Mehrwortausdrücke sind nicht tippbar
-    if (!this.map.has(key)) this.map.set(key, []);
+    if (!this.map.has(key)) { this.map.set(key, []); this.acc.set(key, new Set()); }
     this.map.get(key).push(src);
+    if (nfc.includes(STRESS)) this.acc.get(key).add(nfc.toLowerCase().replace(/[ʼ'`´‘]/g, '’'));
   }
   has(key) { return this.map.has(key); }
-  clone() { const l = new Lexicon(); for (const [k, v] of this.map) l.map.set(k, [...v]); return l; }
+  // Betonung des Tokens weicht von allen betonten Lexikonformen ab?
+  stressMismatch(token, key) {
+    const set = this.acc.get(key);
+    if (!set || !set.size || !token.includes(STRESS)) return null;
+    const t = token.normalize('NFC').toLowerCase();
+    return set.has(t) ? null : [...set];
+  }
+  clone() { const l = new Lexicon(); for (const [k, v] of this.map) { l.map.set(k, [...v]); l.acc.set(k, new Set(this.acc.get(k))); } return l; }
 }
 function addLessonToLexicon(lex, lesson, src) {
   for (const v of lesson.vocab || []) {
@@ -104,14 +113,35 @@ function addLessonToLexicon(lex, lesson, src) {
   }
   for (const g of lesson.glossary || []) lex.add(g.uk, src);
 }
-function checkResolvable(text, where, lex, unresolved) {
+function checkResolvable(text, where, lex, unresolved, { skipFragments = false } = {}) {
   if (typeof text !== 'string') return;
-  for (const part of tokenize(text)) {
-    if (!part.word) continue;
+  const parts = tokenize(text);
+  parts.forEach((part, i) => {
+    if (!part.word) return;
+    if (skipFragments && isFragment(parts, i)) return;
     if (!lex.has(part.key)) {
       if (!unresolved.has(part.key)) unresolved.set(part.key, where);
+    } else {
+      const mm = lex.stressMismatch(part.text, part.key);
+      if (mm) warn(where, `Betonung „${part.text}“ weicht vom Lexikon ab (${mm.join(', ')})`);
     }
-  }
+  });
+}
+// Wortteil mit Bindestrich (z. B. „-ою“, „ка́в-“) in deutschen Erklärtexten
+function isFragment(parts, i) {
+  const prev = parts[i - 1], next = parts[i + 1];
+  return Boolean((prev && /[-‑]$/.test(prev.text)) || (next && /^[-‑]/.test(next.text)));
+}
+// Kyrillische Wörter in gemischten (deutschen) Erklärtexten: Betonung + Auflösbarkeit, Fragmente ausgenommen
+function checkMixedText(text, where, lex, unresolved) {
+  if (typeof text !== 'string' || !/[\u0400-\u04FF]/.test(text)) return;
+  checkMixedStress(text, where);
+  checkResolvable(text, where, lex, unresolved, { skipFragments: true });
+}
+function checkMixedStress(text, where, asWarning = false) {
+  const parts = tokenize(text.normalize('NFC'));
+  const words = parts.map((p, i) => (p.word && !isFragment(parts, i) ? p.text : null)).filter(Boolean);
+  if (words.length) checkUkText(words.join(' '), where, { allowLatin: true, asWarning });
 }
 
 // ---------- Glossar-Eintrag ----------
@@ -302,7 +332,7 @@ function checkDistractors(ex, where, fn, uk) {
 }
 
 // ---------- Lektion ----------
-function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds) {
+function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds, globalConceptIds) {
   const W = file;
   if (lesson.id !== meta.id) err(W, `id „${lesson.id}“ ≠ Curriculum-id „${meta.id}“`);
   if (lesson.phase !== meta.phase) err(W, `phase „${lesson.phase}“ ≠ „${meta.phase}“`);
@@ -312,7 +342,64 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds) {
   if (!isArr(lesson.goals_de) || !lesson.goals_de.length) err(W, 'goals_de fehlt');
   const ukTexts = [];
   const deTexts = [];
+  const mixedTexts = [];
   if (isStr(lesson.title_uk)) ukTexts.push([lesson.title_uk, `${W}.title_uk`]);
+
+  // Konzepte
+  const ownConcepts = [];
+  if (!isArr(lesson.concepts)) err(W, 'concepts (Array) fehlt');
+  else {
+    if (!lesson.concepts.length) warn(W, 'concepts ist leer');
+    lesson.concepts.forEach((c, i) => {
+      const w = `${W}.concepts[${i}]`;
+      if (!c || !isStr(c.id) || !/^[a-z0-9][a-z0-9-]*$/.test(c.id)) err(w, 'id fehlt oder nicht [a-z0-9-]');
+      if (!c || !isStr(c.title_de)) err(w, 'title_de fehlt');
+      else mixedTexts.push([c.title_de, `${w}.title_de`]);
+      if (c && isStr(c.id)) {
+        if (globalConceptIds.has(c.id)) err(w, `concept-id „${c.id}“ schon in ${globalConceptIds.get(c.id)} vergeben`);
+        globalConceptIds.set(c.id, meta.id);
+        ownConcepts.push(c.id);
+      }
+    });
+  }
+
+  // Erklärung
+  const ex0 = lesson.explanation;
+  if (!ex0 || typeof ex0 !== 'object') err(W, 'explanation fehlt');
+  else {
+    const w = `${W}.explanation`;
+    let words = 0;
+    const count = (t) => { if (typeof t === 'string') words += t.split(/\s+/).filter(Boolean).length; };
+    for (const f of ['title_de', 'intro_de']) { if (!isStr(ex0[f])) err(w, `${f} fehlt`); else { mixedTexts.push([ex0[f], `${w}.${f}`]); count(ex0[f]); } }
+    if (!isArr(ex0.sections) || !ex0.sections.length) err(w, 'sections fehlt');
+    else ex0.sections.forEach((sec, i) => {
+      const sw = `${w}.sections[${i}]`;
+      if (!isStr(sec.heading_de)) err(sw, 'heading_de fehlt'); else mixedTexts.push([sec.heading_de, `${sw}.heading_de`]);
+      if (!isStr(sec.body_de)) err(sw, 'body_de fehlt'); else { mixedTexts.push([sec.body_de, `${sw}.body_de`]); count(sec.body_de); }
+      if (sec.table !== undefined) {
+        const t = sec.table;
+        if (!t || !isArr(t.head) || !isArr(t.rows) || !t.rows.length) err(sw, 'table braucht head[] und rows[]');
+        else {
+          t.head.forEach((h, j) => { if (typeof h !== 'string') err(`${sw}.table.head[${j}]`, 'kein String'); else mixedTexts.push([h, `${sw}.table.head[${j}]`]); });
+          t.rows.forEach((r, j) => {
+            if (!isArr(r) || r.length !== t.head.length) err(`${sw}.table.rows[${j}]`, `Zeile muss ${t.head.length} Zellen haben`);
+            else r.forEach((c, k) => { if (typeof c !== 'string') err(`${sw}.table.rows[${j}][${k}]`, 'kein String'); else { mixedTexts.push([c, `${sw}.table.rows[${j}][${k}]`]); count(c); } });
+          });
+        }
+      }
+      if (sec.examples !== undefined) {
+        if (!isArr(sec.examples)) err(sw, 'examples muss Array sein');
+        else sec.examples.forEach((e, j) => {
+          if (!isStr(e.uk) || !isStr(e.de)) err(`${sw}.examples[${j}]`, '{uk, de} fehlt');
+          else { ukTexts.push([e.uk, `${sw}.examples[${j}].uk`]); count(e.uk); count(e.de); }
+        });
+      }
+    });
+    if (!isArr(ex0.summary_de) || !ex0.summary_de.length) err(w, 'summary_de (Array) fehlt');
+    else ex0.summary_de.forEach((t, i) => { if (!isStr(t)) err(`${w}.summary_de[${i}]`, 'leer'); else { mixedTexts.push([t, `${w}.summary_de[${i}]`]); count(t); } });
+    if (words < 200) warn(w, `nur ca. ${words} Wörter (Richtwert 250–600)`);
+    if (words > 800) warn(w, `ca. ${words} Wörter (Richtwert 250–600)`);
+  }
 
   // Grammatik
   if (!isArr(lesson.grammar) || !lesson.grammar.length) err(W, 'grammar fehlt');
@@ -323,7 +410,7 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds) {
     else {
       const n = g.body_de.split(/\s+/).length;
       if (n > 110) warn(w, `body_de hat ${n} Wörter (Richtwert ≤ 80)`);
-      checkDeText(g.body_de, `${w}.body_de`);
+      mixedTexts.push([g.body_de, `${w}.body_de`]);
     }
     if (!isArr(g.examples) || !g.examples.length) err(w, 'examples fehlt');
     else g.examples.forEach((e, j) => { if (isStr(e.uk)) ukTexts.push([e.uk, `${w}.examples[${j}].uk`]); else err(`${w}.examples[${j}]`, 'uk fehlt'); if (!isStr(e.de)) err(`${w}.examples[${j}]`, 'de fehlt'); });
@@ -402,8 +489,9 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds) {
   const unresolved = new Map();
   for (const [t, w] of ukTexts) { checkUkText(t, w); checkResolvable(t, w, thisLex, unresolved); }
   for (const [t, w] of deTexts) checkDeText(t, w);
+  for (const [t, w] of mixedTexts) checkMixedText(t, w, thisLex, unresolved);
   for (const [k, w] of unresolved) err(w, `Wort nicht auflösbar (Glossar/Vokabel fehlt): „${k}“`);
-  return { counts: byType, total: exs.length, ownIds };
+  return { counts: byType, total: exs.length, ownIds, ownConcepts };
 }
 
 // ---------- Hauptlauf ----------
@@ -432,6 +520,7 @@ if (cur) {
   if (!isStr(cur.targetDate)) err('curriculum.json', 'targetDate fehlt');
   if (!isArr(cur.phases)) err('curriculum.json', 'phases fehlt');
   const lids = new Set();
+  const curConcepts = new Map();
   (cur.phases || []).forEach((ph, pi) => {
     const w = `curriculum.phases[${pi}]`;
     for (const f of ['id', 'title_uk', 'title_de', 'start', 'end', 'summary_de']) if (!isStr(ph[f])) err(w, `${f} fehlt`);
@@ -450,6 +539,11 @@ if (cur) {
         if (!isArr(l.grammar_de) || !l.grammar_de.length) err(lw, 'grammar_de fehlt');
         if (!isArr(l.vocab_fields_de) || !l.vocab_fields_de.length) err(lw, 'vocab_fields_de fehlt');
       }
+      if (!isArr(l.concepts)) err(lw, 'concepts (Array) fehlt');
+      else l.concepts.forEach((c, ci) => {
+        if (!c || !isStr(c.id) || !isStr(c.title_de)) err(`${lw}.concepts[${ci}]`, '{id, title_de} fehlt');
+        else { if (curConcepts.has(c.id)) err(`${lw}.concepts[${ci}]`, `concept-id „${c.id}“ doppelt (auch ${curConcepts.get(c.id)})`); curConcepts.set(c.id, l.id); checkMixedStress(c.title_de, `${lw}.concepts[${ci}].title_de`); }
+      });
       lessonsMeta.push({ ...l, phase: ph.id });
     });
   });
@@ -460,6 +554,7 @@ const planById = new Map((plan?.lessons || []).map((l) => [l.id, l]));
 const lex = baseLex.clone();
 const knownVocab = new Set();
 const globalVocabIds = new Map();
+const globalConceptIds = new Map();
 const stats = [];
 let reached = !onlyLesson;
 // Dateien in content/a1-1, die nicht im Curriculum stehen
@@ -493,7 +588,7 @@ for (const meta of lessonsMeta) {
     if (p) for (const v of p.vocab) { lex.add(v.uk, `${meta.id}(Plan)`); knownVocab.add(v.id); if (!globalVocabIds.has(v.id)) globalVocabIds.set(v.id, `${meta.id}(Plan)`); }
     continue;
   }
-  const res = checkLesson(lesson, meta, `content/${meta.file}`, lex, knownVocab, globalVocabIds);
+  const res = checkLesson(lesson, meta, `content/${meta.file}`, lex, knownVocab, globalVocabIds, globalConceptIds);
   // Plan-Abgleich (Hinweise)
   const p = planById.get(meta.id);
   if (p && res) {
@@ -504,6 +599,11 @@ for (const meta of lessonsMeta) {
       else if (pv.uk.normalize('NFC') !== String(v.uk).normalize('NFC')) warn(`content/${meta.file}`, `Vokabel „${v.id}“: uk „${v.uk}“ ≠ Plan „${pv.uk}“`);
     }
     for (const id of planned.keys()) if (!res.ownIds.has(id)) err(`content/${meta.file}`, `geplante Vokabel „${id}“ fehlt`);
+    const pc = new Set((p.concepts || []).map((c) => c.id));
+    for (const id of pc) if (!res.ownConcepts.includes(id)) err(`content/${meta.file}`, `geplantes Konzept „${id}“ fehlt in concepts`);
+    for (const id of res.ownConcepts) if (!pc.has(id)) warn(`content/${meta.file}`, `Konzept „${id}“ nicht im Plan`);
+    const cc = new Set((meta.concepts || []).map((c) => c.id));
+    for (const id of res.ownConcepts) if (!cc.has(id)) warn(`content/${meta.file}`, `Konzept „${id}“ fehlt in curriculum.json`);
   }
   addLessonToLexicon(lex, lesson, meta.id);
   for (const v of lesson.vocab || []) knownVocab.add(v.id);
