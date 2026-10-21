@@ -1,0 +1,1919 @@
+{
+ "id": "a1-1-03",
+ "phase": "A1.1",
+ "title_uk": "Скі́льки? Чи́сла",
+ "title_de": "Wie viel? Zahlen",
+ "theme": "numbers",
+ "goals_de": [
+  "Ich kann von 0 bis 20 zählen und einfach rechnen.",
+  "Ich kann eine Telefonnummer nennen und verstehen und um Wiederholung bitten.",
+  "Ich kann nach dem Alter fragen und das Alter anderer angeben."
+ ],
+ "concepts": [
+  {
+   "id": "zahlen-0-20",
+   "title_de": "Grundzahlen 0–20"
+  },
+  {
+   "id": "odyn-dva-genus",
+   "title_de": "оди́н / одна́ / одне́ und два / дві nach Genus"
+  },
+  {
+   "id": "zahl-rik",
+   "title_de": "Zahl + рік: 1 рік · 2–4 ро́ки · 5–20 ро́ків"
+  },
+  {
+   "id": "chunk-vik",
+   "title_de": "Chunk: Мені́ / тобі́ / вам / йому́ / їй … ро́ків (Alter)"
+  },
+  {
+   "id": "chunk-nomer",
+   "title_de": "Chunk: Яки́й у те́бе / у вас но́мер телефо́ну?"
+  }
+ ],
+ "explanation": {
+  "title_de": "Zahlen 0–20, Alter und Telefonnummer",
+  "intro_de": "Markus und Oksana tauschen im Büro ihre Telefonnummern aus, und Oksanas Tochter Sofija verrät ihr Alter. Danach kann man von 0 bis 20 zählen, Telefonnummern nennen und verstehen und nach dem Alter fragen.",
+  "sections": [
+   {
+    "heading_de": "Die Zahlen 0–20",
+    "body_de": "Die Zahlen 0–10 lernt man einfach auswendig. **11–19** folgen einem Muster: Einer + **-на́дцять** (aus на + де́сять, „auf zehn“): **одина́дцять** (11), **двана́дцять** (12), **трина́дцять** (13). Die Betonung liegt immer auf **-на́-**. Schreibung beachten: **чотирна́дцять** (ohne -и-), **п’ятна́дцять**, **дев’ятна́дцять** (mit Apostroph). **два́дцять** (20) bedeutet „zwei Zehner“.\n\nBeim Hören genau auf das Wortende achten: **сім** (7) – **сімна́дцять** (17), **шість** (6) – **шістна́дцять** (16), **два** (2) – **двана́дцять** (12) – **два́дцять** (20). Rechnen geht ganz einfach mit **плюс** und **мі́нус**. **скі́льки** heißt „wie viel, wie viele“.",
+    "table": {
+     "head": [
+      "Zahl",
+      "ukrainisch",
+      "Zahl",
+      "ukrainisch"
+     ],
+     "rows": [
+      [
+       "0",
+       "нуль",
+       "11",
+       "одина́дцять"
+      ],
+      [
+       "1",
+       "оди́н",
+       "12",
+       "двана́дцять"
+      ],
+      [
+       "2",
+       "два",
+       "13",
+       "трина́дцять"
+      ],
+      [
+       "3",
+       "три",
+       "14",
+       "чотирна́дцять"
+      ],
+      [
+       "4",
+       "чоти́ри",
+       "15",
+       "п’ятна́дцять"
+      ],
+      [
+       "5",
+       "п’ять",
+       "16",
+       "шістна́дцять"
+      ],
+      [
+       "6",
+       "шість",
+       "17",
+       "сімна́дцять"
+      ],
+      [
+       "7",
+       "сім",
+       "18",
+       "вісімна́дцять"
+      ],
+      [
+       "8",
+       "ві́сім",
+       "19",
+       "дев’ятна́дцять"
+      ],
+      [
+       "9",
+       "де́в’ять",
+       "20",
+       "два́дцять"
+      ],
+      [
+       "10",
+       "де́сять",
+       "",
+       ""
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Два плюс три – п’ять.",
+      "de": "Zwei plus drei ist fünf."
+     },
+     {
+      "uk": "Де́сять мі́нус оди́н – де́в’ять.",
+      "de": "Zehn minus eins ist neun."
+     }
+    ]
+   },
+   {
+    "heading_de": "Eins und zwei: оди́н / одна́ / одне́, два / дві",
+    "body_de": "Beim Zählen sagt man **оди́н, два**. Vor einem Nomen richten sich 1 und 2 nach dessen **Genus** (grammatisches Geschlecht): männlich (m.) **оди́н** друг, weiblich (f.) **одна́** по́друга, sächlich (n.) **одне́** сло́во. Bei 2 gibt es nur zwei Formen: **два** für m. und n., **дві** für f. Ab 3 bleibt die Zahl immer gleich. Wie man das Genus erkennt, folgt in Lektion 4; vorerst genügen друг (m.), по́друга (f.), рік (m.), сло́во und ре́чення (n.). Das Nomen nach 2–4 hat eine eigene Form (два дру́зі, дві по́други) – hier nur verstehen.",
+    "table": {
+     "head": [
+      "Genus",
+      "1",
+      "2"
+     ],
+     "rows": [
+      [
+       "m.",
+       "**оди́н** друг",
+       "**два** дру́зі"
+      ],
+      [
+       "f.",
+       "**одна́** по́друга",
+       "**дві** по́други"
+      ],
+      [
+       "n.",
+       "**одне́** ре́чення",
+       "**два** ре́чення"
+      ]
+     ]
+    }
+   },
+   {
+    "heading_de": "Zahl + рік: 1 · 2–4 · 5–20",
+    "body_de": "Wie im Deutschen („1 Jahr, 2 Jahre“) ändert sich das Nomen nach der Zahl – im Ukrainischen gibt es aber **drei** Formen: nach 1 **рік**, nach 2, 3, 4 **ро́ки**, nach 5 bis 20 **ро́ків**. Diese Zählregel gilt später für fast alle Nomen (z. B. für Geld in Lektion 8). Ohne Zahl heißt „Jahre“ **роки́** (Betonung am Ende), nach 2–4 aber **ро́ки**. Statt оди́н рік sagt man oft nur рік.",
+    "table": {
+     "head": [
+      "Zahl",
+      "Form",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "1",
+       "**рік**",
+       "оди́н рік"
+      ],
+      [
+       "2, 3, 4",
+       "**ро́ки**",
+       "два ро́ки, три ро́ки, чоти́ри ро́ки"
+      ],
+      [
+       "5–20",
+       "**ро́ків**",
+       "п’ять ро́ків, сім ро́ків, два́дцять ро́ків"
+      ]
+     ]
+    }
+   },
+   {
+    "heading_de": "Das Alter: Мені́ … ро́ків",
+    "body_de": "Das Alter nennt man mit einer **festen Wendung**: **Мені́ два́дцять ро́ків.** heißt wörtlich „Mir (sind) zwanzig Jahre“. Statt я steht **мені́** („mir“), statt ти **тобі́** usw. Diese Formen (Dativ = Fall für „wem?“) werden hier als Formeln gelernt; die Grammatik folgt in A1.2. Die Zahl bestimmt wie oben die Form von рік: **Їй сім ро́ків**, aber **Йому́ два ро́ки**.\n\nFragen: **Скі́льки тобі́ ро́ків?** (du) bzw. **Скі́льки вам ро́ків?** (Sie). Kurze Rückfrage: **А тобі́?** / **А вам?** / **А йому́?** / **А їй?** Kinder spricht man mit ти an; Kinder sagen zu Erwachsenen ви. Erwachsene nach dem Alter zu fragen ist – wie im Deutschen – eher unhöflich.",
+    "table": {
+     "head": [
+      "Person",
+      "Formel",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "я",
+       "**мені́**",
+       "**Мені́** два́дцять ро́ків."
+      ],
+      [
+       "ти",
+       "**тобі́**",
+       "Скі́льки **тобі́** ро́ків?"
+      ],
+      [
+       "ви",
+       "**вам**",
+       "Скі́льки **вам** ро́ків?"
+      ],
+      [
+       "він",
+       "**йому́**",
+       "**Йому́** ві́сім ро́ків."
+      ],
+      [
+       "вона́",
+       "**їй**",
+       "**Їй** сім ро́ків."
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Скі́льки тобі́ ро́ків? – Мені́ сім ро́ків. А вам?",
+      "de": "Wie alt bist du? – Ich bin sieben. Und Sie?"
+     },
+     {
+      "uk": "Йому́ ві́сім ро́ків, а їй три ро́ки.",
+      "de": "Er ist acht, und sie ist drei Jahre alt."
+     }
+    ]
+   },
+   {
+    "heading_de": "Telefonnummern",
+    "body_de": "Nach der Nummer fragt man mit der **festen Wendung** **Яки́й у вас но́мер телефо́ну?** (Sie) bzw. **Яки́й у те́бе но́мер телефо́ну?** (du), wörtlich „Welche (ist) bei Ihnen/dir die Nummer des Telefons?“. Nach у wird **те́бе** vorn betont – anders als in Як тебе́ зва́ти? Die Grammatik dahinter (у + Genitiv) folgt später. Rückfrage: **А у вас?** – Und Ihre?\n\nNummern nennt man **Ziffer für Ziffer** oder in **Paaren** bis 20: 067 315 20 14 = нуль шість сім, три оди́н п’ять, два́дцять, чотирна́дцять. Muttersprachler fassen oft auch größere Gruppen zusammen (Zahlen über 20 folgen später). Nicht verstanden? **Ще раз, будь ла́ска.** = Noch einmal, bitte (ще = noch, раз = Mal).",
+    "examples": [
+     {
+      "uk": "Яки́й у вас но́мер телефо́ну? – Нуль де́в’ять сім, шість ві́сім два, одина́дцять, нуль три.",
+      "de": "Wie ist Ihre Telefonnummer? – 097 682 11 03."
+     },
+     {
+      "uk": "Ще раз, будь ла́ска.",
+      "de": "Noch einmal, bitte."
+     }
+    ]
+   }
+  ],
+  "summary_de": [
+   "11–19 = Einer + -на́дцять (Betonung auf -на́-); 20 = два́дцять.",
+   "1 und 2 richten sich nach dem Genus: оди́н / одна́ / одне́, два / дві.",
+   "Nach Zahlen: 1 рік · 2–4 ро́ки · 5–20 ро́ків.",
+   "Alter als feste Wendung: Мені́ / тобі́ / вам / йому́ / їй + Zahl + рік-Form.",
+   "Telefonnummer: Яки́й у вас (у те́бе) но́мер телефо́ну? – Ziffern einzeln oder in Paaren; Ще раз, будь ла́ска."
+  ]
+ },
+ "grammar": [
+  {
+   "title_de": "11–19 mit -на́дцять",
+   "body_de": "Einer + **-на́дцять**, betont immer auf **-на́-**. Genau hinhören: сім – сімна́дцять, шість – шістна́дцять, два – двана́дцять – два́дцять.",
+   "examples": [
+    {
+     "uk": "одина́дцять",
+     "de": "elf"
+    },
+    {
+     "uk": "чотирна́дцять",
+     "de": "vierzehn"
+    },
+    {
+     "uk": "дев’ятна́дцять",
+     "de": "neunzehn"
+    }
+   ]
+  },
+  {
+   "title_de": "1 und 2 nach Genus",
+   "body_de": "**оди́н** (m.), **одна́** (f.), **одне́** (n.); **два** (m./n.), **дві** (f.). рік ist m.: оди́н рік, два ро́ки.",
+   "examples": [
+    {
+     "uk": "оди́н друг",
+     "de": "ein Freund"
+    },
+    {
+     "uk": "дві по́други",
+     "de": "zwei Freundinnen"
+    },
+    {
+     "uk": "одне́ сло́во",
+     "de": "ein Wort"
+    }
+   ]
+  },
+  {
+   "title_de": "Zahl + рік",
+   "body_de": "Nach 1: **рік** · nach 2–4: **ро́ки** · nach 5–20: **ро́ків**.",
+   "examples": [
+    {
+     "uk": "Їй оди́н рік.",
+     "de": "Sie ist ein Jahr alt."
+    },
+    {
+     "uk": "Йому́ три ро́ки.",
+     "de": "Er ist drei Jahre alt."
+    },
+    {
+     "uk": "Мені́ два́дцять ро́ків.",
+     "de": "Ich bin zwanzig Jahre alt."
+    }
+   ]
+  },
+  {
+   "title_de": "Alter: feste Wendung",
+   "body_de": "**мені́** (ich), **тобі́** (du), **вам** (Sie), **йому́** (er), **їй** (sie) + Zahl + рік-Form. Frage: Скі́льки тобі́ / вам ро́ків?",
+   "examples": [
+    {
+     "uk": "Скі́льки тобі́ ро́ків?",
+     "de": "Wie alt bist du?"
+    },
+    {
+     "uk": "Софі́я? Їй сім ро́ків.",
+     "de": "Sofija? Sie ist sieben."
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  {
+   "id": "nul",
+   "uk": "нуль",
+   "de": "null (Zahl 0)",
+   "pos": "num",
+   "info": "Grundzahl; m.",
+   "emoji": "0️⃣",
+   "example": {
+    "uk": "Три мі́нус три – нуль.",
+    "de": "Drei minus drei ist null."
+   }
+  },
+  {
+   "id": "odyn",
+   "uk": "оди́н",
+   "de": "eins; ein (Zahl 1)",
+   "pos": "num",
+   "info": "Grundzahl; m. оди́н, f. одна́, n. одне́",
+   "emoji": "1️⃣",
+   "example": {
+    "uk": "Їй оди́н рік.",
+    "de": "Sie ist ein Jahr alt."
+   },
+   "forms": [
+    {
+     "uk": "одна́",
+     "info": "f. (vor weiblichen Nomen)"
+    },
+    {
+     "uk": "одне́",
+     "info": "n. (vor sächlichen Nomen)"
+    }
+   ]
+  },
+  {
+   "id": "dva",
+   "uk": "два",
+   "de": "zwei",
+   "pos": "num",
+   "info": "Grundzahl; m./n. два, f. дві",
+   "emoji": "2️⃣",
+   "example": {
+    "uk": "Два плюс два – чоти́ри.",
+    "de": "Zwei plus zwei ist vier."
+   },
+   "forms": [
+    {
+     "uk": "дві",
+     "info": "f. (vor weiblichen Nomen)"
+    }
+   ]
+  },
+  {
+   "id": "try",
+   "uk": "три",
+   "de": "drei",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "3️⃣",
+   "example": {
+    "uk": "Їй три ро́ки.",
+    "de": "Sie ist drei Jahre alt."
+   }
+  },
+  {
+   "id": "chotyry",
+   "uk": "чоти́ри",
+   "de": "vier",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "4️⃣",
+   "example": {
+    "uk": "Йому́ чоти́ри ро́ки.",
+    "de": "Er ist vier Jahre alt."
+   }
+  },
+  {
+   "id": "piat",
+   "uk": "п’ять",
+   "de": "fünf",
+   "pos": "num",
+   "info": "Grundzahl; danach ро́ків",
+   "emoji": "5️⃣",
+   "example": {
+    "uk": "Два плюс три – п’ять.",
+    "de": "Zwei plus drei ist fünf."
+   }
+  },
+  {
+   "id": "shist",
+   "uk": "шість",
+   "de": "sechs",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "6️⃣",
+   "example": {
+    "uk": "Йому́ шість ро́ків.",
+    "de": "Er ist sechs Jahre alt."
+   }
+  },
+  {
+   "id": "sim",
+   "uk": "сім",
+   "de": "sieben",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "7️⃣",
+   "example": {
+    "uk": "Сім плюс оди́н – ві́сім.",
+    "de": "Sieben plus eins ist acht."
+   }
+  },
+  {
+   "id": "visim",
+   "uk": "ві́сім",
+   "de": "acht",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "8️⃣",
+   "example": {
+    "uk": "Йому́ ві́сім ро́ків.",
+    "de": "Er ist acht Jahre alt."
+   }
+  },
+  {
+   "id": "deviat",
+   "uk": "де́в’ять",
+   "de": "neun",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "9️⃣",
+   "example": {
+    "uk": "Де́в’ять плюс оди́н – де́сять.",
+    "de": "Neun plus eins ist zehn."
+   }
+  },
+  {
+   "id": "desiat",
+   "uk": "де́сять",
+   "de": "zehn",
+   "pos": "num",
+   "info": "Grundzahl",
+   "emoji": "🔟",
+   "example": {
+    "uk": "Їй де́сять ро́ків.",
+    "de": "Sie ist zehn Jahre alt."
+   }
+  },
+  {
+   "id": "odynadtsiat",
+   "uk": "одина́дцять",
+   "de": "elf",
+   "pos": "num",
+   "info": "Grundzahl; оди́н + -на́дцять",
+   "example": {
+    "uk": "Йому́ одина́дцять ро́ків.",
+    "de": "Er ist elf Jahre alt."
+   }
+  },
+  {
+   "id": "dvanadtsiat",
+   "uk": "двана́дцять",
+   "de": "zwölf",
+   "pos": "num",
+   "info": "Grundzahl; два + -на́дцять",
+   "example": {
+    "uk": "Де́сять плюс два – двана́дцять.",
+    "de": "Zehn plus zwei ist zwölf."
+   }
+  },
+  {
+   "id": "trynadtsiat",
+   "uk": "трина́дцять",
+   "de": "dreizehn",
+   "pos": "num",
+   "info": "Grundzahl; три + -на́дцять",
+   "example": {
+    "uk": "Їй трина́дцять ро́ків.",
+    "de": "Sie ist dreizehn Jahre alt."
+   }
+  },
+  {
+   "id": "chotyrnadtsiat",
+   "uk": "чотирна́дцять",
+   "de": "vierzehn",
+   "pos": "num",
+   "info": "Grundzahl; Schreibung ohne -и- (чотир-)",
+   "example": {
+    "uk": "Йому́ чотирна́дцять ро́ків.",
+    "de": "Er ist vierzehn Jahre alt."
+   }
+  },
+  {
+   "id": "piatnadtsiat",
+   "uk": "п’ятна́дцять",
+   "de": "fünfzehn",
+   "pos": "num",
+   "info": "Grundzahl; п’ять + -на́дцять",
+   "example": {
+    "uk": "Де́сять плюс п’ять – п’ятна́дцять.",
+    "de": "Zehn plus fünf ist fünfzehn."
+   }
+  },
+  {
+   "id": "shistnadtsiat",
+   "uk": "шістна́дцять",
+   "de": "sechzehn",
+   "pos": "num",
+   "info": "Grundzahl; шість + -на́дцять",
+   "example": {
+    "uk": "Їй шістна́дцять ро́ків.",
+    "de": "Sie ist sechzehn Jahre alt."
+   }
+  },
+  {
+   "id": "simnadtsiat",
+   "uk": "сімна́дцять",
+   "de": "siebzehn",
+   "pos": "num",
+   "info": "Grundzahl; сім + -на́дцять",
+   "example": {
+    "uk": "Йому́ сімна́дцять ро́ків.",
+    "de": "Er ist siebzehn Jahre alt."
+   }
+  },
+  {
+   "id": "visimnadtsiat",
+   "uk": "вісімна́дцять",
+   "de": "achtzehn",
+   "pos": "num",
+   "info": "Grundzahl; ві́сім + -на́дцять (Betonung wandert)",
+   "example": {
+    "uk": "Їй вісімна́дцять ро́ків.",
+    "de": "Sie ist achtzehn Jahre alt."
+   }
+  },
+  {
+   "id": "deviatnadtsiat",
+   "uk": "дев’ятна́дцять",
+   "de": "neunzehn",
+   "pos": "num",
+   "info": "Grundzahl; де́в’ять + -на́дцять",
+   "example": {
+    "uk": "Тобі́ дев’ятна́дцять ро́ків?",
+    "de": "Bist du neunzehn Jahre alt?"
+   }
+  },
+  {
+   "id": "dvadtsiat",
+   "uk": "два́дцять",
+   "de": "zwanzig",
+   "pos": "num",
+   "info": "Grundzahl; danach ро́ків",
+   "example": {
+    "uk": "Мені́ два́дцять ро́ків.",
+    "de": "Ich bin zwanzig Jahre alt."
+   }
+  },
+  {
+   "id": "skilky",
+   "uk": "скі́льки",
+   "de": "wie viel, wie viele",
+   "pos": "adv",
+   "info": "Fragewort; unveränderlich",
+   "example": {
+    "uk": "Скі́льки вам ро́ків?",
+    "de": "Wie alt sind Sie?"
+   }
+  },
+  {
+   "id": "rik",
+   "uk": "рік",
+   "de": "Jahr",
+   "pos": "noun",
+   "info": "m.; nach 2–4: ро́ки, nach 5–20: ро́ків; Pl. ohne Zahl: роки́",
+   "example": {
+    "uk": "Йому́ два ро́ки.",
+    "de": "Er ist zwei Jahre alt."
+   },
+   "forms": [
+    {
+     "uk": "ро́ки",
+     "info": "nach 2, 3, 4 (два ро́ки)"
+    },
+    {
+     "uk": "ро́ків",
+     "info": "Gen. Pl.; nach 5–20 (п’ять ро́ків)"
+    },
+    {
+     "uk": "роки́",
+     "info": "Nom. Pl. ohne Zahl (Jahre)"
+    }
+   ]
+  },
+  {
+   "id": "skilky_tobi_rokiv",
+   "uk": "Скі́льки тобі́ ро́ків?",
+   "de": "Wie alt bist du?",
+   "pos": "phrase",
+   "info": "feste Wendung; höflich: Скі́льки вам ро́ків?",
+   "example": {
+    "uk": "Скі́льки тобі́ ро́ків? – Мені́ сім ро́ків.",
+    "de": "Wie alt bist du? – Ich bin sieben."
+   }
+  },
+  {
+   "id": "meni_rokiv",
+   "uk": "Мені́ … ро́ків.",
+   "de": "Ich bin … Jahre alt.",
+   "pos": "phrase",
+   "info": "feste Wendung; nach 1: рік, nach 2–4: ро́ки, nach 5–20: ро́ків",
+   "example": {
+    "uk": "Мені́ п’ятна́дцять ро́ків.",
+    "de": "Ich bin fünfzehn Jahre alt."
+   }
+  },
+  {
+   "id": "nomer_telefonu",
+   "uk": "но́мер телефо́ну",
+   "de": "Telefonnummer",
+   "pos": "phrase",
+   "info": "feste Wendung; но́мер (m.) + Gen. телефо́ну",
+   "emoji": "📱",
+   "example": {
+    "uk": "Яки́й у вас но́мер телефо́ну?",
+    "de": "Wie ist Ihre Telefonnummer?"
+   }
+  }
+ ],
+ "glossary": [
+  {
+   "uk": "мені́",
+   "lemma": "я",
+   "de": "mir",
+   "pos": "pron",
+   "info": "Dat. von я; feste Wendung Мені́ … ро́ків = ich bin … Jahre alt"
+  },
+  {
+   "uk": "тобі́",
+   "lemma": "ти",
+   "de": "dir",
+   "pos": "pron",
+   "info": "Dat. von ти; in Скі́льки тобі́ ро́ків?"
+  },
+  {
+   "uk": "вам",
+   "lemma": "ви",
+   "de": "Ihnen; euch",
+   "pos": "pron",
+   "info": "Dat. von ви; in Скі́льки вам ро́ків?"
+  },
+  {
+   "uk": "йому́",
+   "lemma": "він",
+   "de": "ihm",
+   "pos": "pron",
+   "info": "Dat. von він; Йому́ … ро́ків = er ist … Jahre alt"
+  },
+  {
+   "uk": "їй",
+   "lemma": "вона́",
+   "de": "ihr (wem?)",
+   "pos": "pron",
+   "info": "Dat. von вона́; Їй … ро́ків = sie ist … Jahre alt"
+  },
+  {
+   "uk": "те́бе",
+   "lemma": "ти",
+   "de": "dir (nach Präposition)",
+   "pos": "pron",
+   "info": "Gen. von ти, betont vorn nach Präposition; у те́бе = bei dir"
+  },
+  {
+   "uk": "вас",
+   "lemma": "ви",
+   "de": "Ihnen (nach Präposition)",
+   "pos": "pron",
+   "info": "Gen. von ви; у вас = bei Ihnen"
+  },
+  {
+   "uk": "яки́й",
+   "lemma": "яки́й",
+   "de": "welcher, was für ein",
+   "pos": "pron",
+   "info": "Fragewort, m. Nom. Sg.; in Яки́й у вас но́мер телефо́ну?"
+  },
+  {
+   "uk": "но́мер",
+   "lemma": "но́мер",
+   "de": "Nummer",
+   "pos": "noun",
+   "info": "m., Nom. Sg."
+  },
+  {
+   "uk": "телефо́ну",
+   "lemma": "телефо́н",
+   "de": "Telefon (des Telefons)",
+   "pos": "noun",
+   "info": "Gen. Sg. · Nom. телефо́н (m.); но́мер телефо́ну = Telefonnummer"
+  },
+  {
+   "uk": "телефо́н",
+   "lemma": "телефо́н",
+   "de": "Telefon",
+   "pos": "noun",
+   "info": "m., Nom. Sg."
+  },
+  {
+   "uk": "ще",
+   "lemma": "ще",
+   "de": "noch",
+   "pos": "adv",
+   "info": "Adv.; ще раз = noch einmal"
+  },
+  {
+   "uk": "раз",
+   "lemma": "раз",
+   "de": "Mal",
+   "pos": "noun",
+   "info": "m., Nom. Sg.; ще раз = noch einmal"
+  },
+  {
+   "uk": "плюс",
+   "lemma": "плюс",
+   "de": "plus",
+   "pos": "noun",
+   "info": "m.; beim Rechnen: два плюс три = 2 + 3"
+  },
+  {
+   "uk": "мі́нус",
+   "lemma": "мі́нус",
+   "de": "minus",
+   "pos": "noun",
+   "info": "m.; beim Rechnen: три мі́нус оди́н = 3 − 1"
+  },
+  {
+   "uk": "чи́сла",
+   "lemma": "число́",
+   "de": "Zahlen",
+   "pos": "noun",
+   "info": "Nom. Pl. · Sg. число́ (n.)"
+  },
+  {
+   "uk": "число́",
+   "lemma": "число́",
+   "de": "Zahl",
+   "pos": "noun",
+   "info": "n., Nom. Sg.; Pl. чи́сла"
+  },
+  {
+   "uk": "по́други",
+   "lemma": "по́друга",
+   "de": "Freundinnen",
+   "pos": "noun",
+   "info": "Nom. Pl. · Sg. по́друга (f.); дві по́други"
+  },
+  {
+   "uk": "дру́зі",
+   "lemma": "друг",
+   "de": "Freunde",
+   "pos": "noun",
+   "info": "Nom. Pl. · Sg. друг (m.); два дру́зі"
+  },
+  {
+   "uk": "бага́то",
+   "lemma": "бага́то",
+   "de": "viel, viele",
+   "pos": "adv",
+   "info": "Adv."
+  },
+  {
+   "uk": "бі́льше",
+   "lemma": "бі́льше",
+   "de": "mehr",
+   "pos": "adv",
+   "info": "Adv., Komparativ von бага́то"
+  },
+  {
+   "uk": "Софі́я",
+   "lemma": "Софі́я",
+   "de": "Sofija",
+   "pos": "name",
+   "info": "weibl. Vorname; Oksanas Tochter (7 Jahre)"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e01",
+   "type": "reading",
+   "vocab": [
+    "nul",
+    "odyn",
+    "dva",
+    "try",
+    "chotyry",
+    "piat",
+    "shist",
+    "sim",
+    "visim",
+    "deviat",
+    "odynadtsiat",
+    "dvanadtsiat",
+    "chotyrnadtsiat",
+    "simnadtsiat",
+    "dvadtsiat",
+    "nomer_telefonu",
+    "diakuiu",
+    "bud_laska",
+    "ya",
+    "ty",
+    "vy"
+   ],
+   "difficulty": 1,
+   "title_uk": "Но́мер телефо́ну",
+   "text_uk": "💼 О́фіс\nОкса́на: Яки́й у вас но́мер телефо́ну?\nМа́ркус: Нуль шість сім, три оди́н п’ять, два́дцять, чотирна́дцять.\nОкса́на: Ще раз, будь ла́ска.\nМа́ркус: Нуль шість сім, три оди́н п’ять, два́дцять, чотирна́дцять.\nОкса́на: Дя́кую!\nМа́ркус: А яки́й у вас но́мер?\nОкса́на: Нуль де́в’ять сім, шість ві́сім два, одина́дцять, нуль три.",
+   "text_de": "Im Büro. Oksana: Wie ist Ihre Telefonnummer? – Markus: 067 315 20 14. – Oksana: Noch einmal, bitte. – Markus: 067 315 20 14. – Oksana: Danke! – Markus: Und wie ist Ihre Nummer? – Oksana: 097 682 11 03.",
+   "questions": [
+    {
+     "q_uk": "Ма́ркус і Окса́на: «ти» чи «ви»?",
+     "q_de": "Markus und Oksana: „ти“ oder „ви“?",
+     "kind": "mc",
+     "options": [
+      "«ви»",
+      "«ти»",
+      "«я»"
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус: нуль шість сім, три оди́н п’ять, два́дцять, …",
+     "q_de": "Markus: 067 315 20 …?",
+     "kind": "mc",
+     "options": [
+      "чотирна́дцять",
+      "чоти́ри",
+      "сімна́дцять"
+     ]
+    },
+    {
+     "q_uk": "Окса́на: «Ще раз, будь ла́ска.»",
+     "q_de": "Oksana sagt: „Noch einmal, bitte.“",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Окса́на: нуль де́в’ять сім, шість ві́сім два, …",
+     "q_de": "Oksana: 097 682 …?",
+     "kind": "mc",
+     "options": [
+      "одина́дцять, нуль три",
+      "двана́дцять, нуль три",
+      "одина́дцять, три нуль"
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус: «Ще раз, будь ла́ска.»",
+     "q_de": "Markus sagt: „Noch einmal, bitte.“",
+     "kind": "tf",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "type": "true_false",
+   "vocab": [
+    "nul",
+    "odyn",
+    "try",
+    "chotyry",
+    "piat",
+    "shist",
+    "sim",
+    "chotyrnadtsiat",
+    "dvadtsiat",
+    "nomer_telefonu"
+   ],
+   "difficulty": 1,
+   "context_uk": "Окса́на: Яки́й у вас но́мер телефо́ну?\nМа́ркус: Нуль шість сім, три оди́н п’ять, два́дцять, чотирна́дцять.",
+   "context_de": "Oksana: Wie ist Ihre Telefonnummer? – Markus: 067 315 20 14.",
+   "statement_uk": "Но́мер телефо́ну: нуль шість сім, три оди́н п’ять, два́дцять, чоти́ри.",
+   "answer": false,
+   "explanation_de": "Am Ende steht чотирна́дцять (14), nicht чоти́ри (4)."
+  },
+  {
+   "id": "e03",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "nomer_telefonu"
+   ],
+   "difficulty": 1,
+   "prompt": "Яки́й у вас но́мер телефо́ну?",
+   "options": [
+    "Wie ist Ihre Telefonnummer?",
+    "Wie alt sind Sie?",
+    "Wie heißen Sie?",
+    "Woher kommen Sie?"
+   ]
+  },
+  {
+   "id": "e04",
+   "type": "cloze",
+   "vocab": [
+    "nomer_telefonu"
+   ],
+   "difficulty": 1,
+   "text": "Окса́на: Яки́й у {{вас}} но́мер телефо́ну?",
+   "options": [
+    [
+     "вас",
+     "те́бе",
+     "вам"
+    ]
+   ],
+   "translation_de": "Oksana: Wie ist Ihre Telefonnummer? (Oksana und Markus siezen sich.)",
+   "hint_de": "Feste Wendung: у вас (Sie) / у те́бе (du)."
+  },
+  {
+   "id": "e05",
+   "type": "match_pairs",
+   "vocab": [
+    "nul",
+    "odyn",
+    "try",
+    "piat",
+    "visim",
+    "deviat"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "нуль",
+     "de": "0"
+    },
+    {
+     "uk": "оди́н",
+     "de": "1"
+    },
+    {
+     "uk": "три",
+     "de": "3"
+    },
+    {
+     "uk": "п’ять",
+     "de": "5"
+    },
+    {
+     "uk": "ві́сім",
+     "de": "8"
+    },
+    {
+     "uk": "де́в’ять",
+     "de": "9"
+    }
+   ]
+  },
+  {
+   "id": "e06",
+   "type": "picture_choice",
+   "vocab": [
+    "visim"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "ві́сім",
+   "options": [
+    {
+     "emoji": "8️⃣",
+     "de": "acht"
+    },
+    {
+     "emoji": "3️⃣",
+     "de": "drei"
+    },
+    {
+     "emoji": "6️⃣",
+     "de": "sechs"
+    },
+    {
+     "emoji": "9️⃣",
+     "de": "neun"
+    }
+   ]
+  },
+  {
+   "id": "e07",
+   "type": "match_pairs",
+   "vocab": [
+    "nul",
+    "dva",
+    "chotyry",
+    "shist",
+    "sim",
+    "desiat"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "два",
+     "de": "2"
+    },
+    {
+     "uk": "чоти́ри",
+     "de": "4"
+    },
+    {
+     "uk": "шість",
+     "de": "6"
+    },
+    {
+     "uk": "сім",
+     "de": "7"
+    },
+    {
+     "uk": "де́сять",
+     "de": "10"
+    },
+    {
+     "uk": "нуль",
+     "de": "0"
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "shist",
+    "sim",
+    "simnadtsiat"
+   ],
+   "difficulty": 1,
+   "audio_uk": "сім",
+   "options": [
+    "сім",
+    "сімна́дцять",
+    "шість"
+   ]
+  },
+  {
+   "id": "e09",
+   "type": "picture_choice",
+   "vocab": [
+    "dva"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Два плюс два",
+   "options": [
+    {
+     "emoji": "4️⃣",
+     "de": "vier"
+    },
+    {
+     "emoji": "2️⃣",
+     "de": "zwei"
+    },
+    {
+     "emoji": "5️⃣",
+     "de": "fünf"
+    }
+   ]
+  },
+  {
+   "id": "e10",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "chotyrnadtsiat"
+   ],
+   "difficulty": 1,
+   "prompt": "чотирна́дцять",
+   "options": [
+    "vierzehn",
+    "vier",
+    "vierzig",
+    "fünfzehn"
+   ]
+  },
+  {
+   "id": "e11",
+   "type": "match_pairs",
+   "vocab": [
+    "odynadtsiat",
+    "trynadtsiat",
+    "piatnadtsiat",
+    "simnadtsiat",
+    "deviatnadtsiat",
+    "dvadtsiat"
+   ],
+   "difficulty": 2,
+   "pairs": [
+    {
+     "uk": "одина́дцять",
+     "de": "11"
+    },
+    {
+     "uk": "трина́дцять",
+     "de": "13"
+    },
+    {
+     "uk": "п’ятна́дцять",
+     "de": "15"
+    },
+    {
+     "uk": "сімна́дцять",
+     "de": "17"
+    },
+    {
+     "uk": "дев’ятна́дцять",
+     "de": "19"
+    },
+    {
+     "uk": "два́дцять",
+     "de": "20"
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "type": "cloze",
+   "vocab": [
+    "nul",
+    "odyn",
+    "try",
+    "chotyry",
+    "piat",
+    "shist",
+    "sim",
+    "chotyrnadtsiat",
+    "simnadtsiat",
+    "dvadtsiat"
+   ],
+   "difficulty": 2,
+   "text": "Ма́ркус: Нуль шість сім, три оди́н п’ять, два́дцять, {{чотирна́дцять}}.",
+   "options": [
+    [
+     "чотирна́дцять",
+     "чоти́ри",
+     "сімна́дцять"
+    ]
+   ],
+   "translation_de": "Markus: 067 315 20 14."
+  },
+  {
+   "id": "e13",
+   "type": "picture_choice",
+   "vocab": [
+    "dvanadtsiat"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "двана́дцять",
+   "options": [
+    {
+     "emoji": "1️⃣2️⃣",
+     "de": "zwölf"
+    },
+    {
+     "emoji": "2️⃣0️⃣",
+     "de": "zwanzig"
+    },
+    {
+     "emoji": "2️⃣",
+     "de": "zwei"
+    }
+   ]
+  },
+  {
+   "id": "e14",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "shist",
+    "piatnadtsiat",
+    "shistnadtsiat",
+    "simnadtsiat"
+   ],
+   "difficulty": 1,
+   "audio_uk": "шістна́дцять",
+   "options": [
+    "шістна́дцять",
+    "шість",
+    "п’ятна́дцять",
+    "сімна́дцять"
+   ]
+  },
+  {
+   "id": "e15",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "dva",
+    "odynadtsiat",
+    "dvanadtsiat",
+    "dvadtsiat"
+   ],
+   "difficulty": 1,
+   "prompt": "zwölf",
+   "options": [
+    "двана́дцять",
+    "два́дцять",
+    "одина́дцять",
+    "два"
+   ]
+  },
+  {
+   "id": "e16",
+   "type": "match_pairs",
+   "vocab": [
+    "dva",
+    "shist",
+    "dvanadtsiat",
+    "shistnadtsiat",
+    "visimnadtsiat",
+    "dvadtsiat"
+   ],
+   "difficulty": 2,
+   "pairs": [
+    {
+     "uk": "два",
+     "de": "2"
+    },
+    {
+     "uk": "двана́дцять",
+     "de": "12"
+    },
+    {
+     "uk": "два́дцять",
+     "de": "20"
+    },
+    {
+     "uk": "шість",
+     "de": "6"
+    },
+    {
+     "uk": "шістна́дцять",
+     "de": "16"
+    },
+    {
+     "uk": "вісімна́дцять",
+     "de": "18"
+    }
+   ]
+  },
+  {
+   "id": "e17",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "dva",
+    "dvanadtsiat",
+    "dvadtsiat"
+   ],
+   "difficulty": 2,
+   "audio_uk": "два́дцять",
+   "options": [
+    "два́дцять",
+    "двана́дцять",
+    "два",
+    "дві"
+   ]
+  },
+  {
+   "id": "e18",
+   "type": "cloze",
+   "vocab": [
+    "sim",
+    "visim",
+    "deviat",
+    "piatnadtsiat"
+   ],
+   "difficulty": 1,
+   "text": "Сім плюс {{ві́сім}} – п’ятна́дцять.",
+   "options": [
+    [
+     "ві́сім",
+     "сім",
+     "де́в’ять"
+    ]
+   ],
+   "translation_de": "Sieben plus acht ist fünfzehn."
+  },
+  {
+   "id": "e19",
+   "type": "true_false",
+   "vocab": [
+    "shist",
+    "sim",
+    "trynadtsiat"
+   ],
+   "difficulty": 1,
+   "statement_uk": "Сім плюс шість – трина́дцять.",
+   "answer": true,
+   "explanation_de": "7 + 6 = 13: сім плюс шість – трина́дцять."
+  },
+  {
+   "id": "e20",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "dva",
+    "try",
+    "chotyry",
+    "piat",
+    "shist"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Два плюс три – п’ять.",
+   "answer": "Два плюс три – п’ять.",
+   "distractors": [
+    "шість",
+    "чоти́ри",
+    "дві"
+   ]
+  },
+  {
+   "id": "e21",
+   "type": "picture_choice",
+   "vocab": [
+    "odyn",
+    "desiat"
+   ],
+   "difficulty": 2,
+   "prompt_uk": "Де́сять мі́нус оди́н",
+   "options": [
+    {
+     "emoji": "9️⃣",
+     "de": "neun"
+    },
+    {
+     "emoji": "🔟",
+     "de": "zehn"
+    },
+    {
+     "emoji": "1️⃣1️⃣",
+     "de": "elf"
+    }
+   ]
+  },
+  {
+   "id": "e22",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "dva",
+    "try",
+    "chotyry",
+    "piat",
+    "shist"
+   ],
+   "difficulty": 2,
+   "prompt": "Zwei plus drei ist fünf.",
+   "answer": "Два плюс три – п’ять.",
+   "distractors": [
+    "дві",
+    "шість",
+    "чоти́ри"
+   ]
+  },
+  {
+   "id": "e23",
+   "type": "cloze",
+   "vocab": [
+    "visim",
+    "deviat",
+    "desiat",
+    "deviatnadtsiat"
+   ],
+   "difficulty": 2,
+   "text": "Де́сять плюс {{де́в’ять}} – дев’ятна́дцять.",
+   "options": [
+    [
+     "де́в’ять",
+     "дев’ятна́дцять",
+     "ві́сім"
+    ]
+   ],
+   "translation_de": "Zehn plus neun ist neunzehn."
+  },
+  {
+   "id": "e24",
+   "type": "speak",
+   "vocab": [
+    "nul",
+    "odyn",
+    "dva",
+    "try",
+    "chotyry",
+    "piat",
+    "shist",
+    "sim",
+    "visim",
+    "deviat",
+    "desiat"
+   ],
+   "difficulty": 1,
+   "uk": "Нуль, оди́н, два, три, чоти́ри, п’ять, шість, сім, ві́сім, де́в’ять, де́сять.",
+   "de": "Null, eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn."
+  },
+  {
+   "id": "e25",
+   "type": "speak",
+   "vocab": [
+    "odynadtsiat",
+    "dvanadtsiat",
+    "trynadtsiat",
+    "chotyrnadtsiat",
+    "piatnadtsiat"
+   ],
+   "difficulty": 2,
+   "uk": "Одина́дцять, двана́дцять, трина́дцять, чотирна́дцять, п’ятна́дцять.",
+   "de": "Elf, zwölf, dreizehn, vierzehn, fünfzehn."
+  },
+  {
+   "id": "e26",
+   "type": "speak",
+   "vocab": [
+    "shistnadtsiat",
+    "simnadtsiat",
+    "visimnadtsiat",
+    "deviatnadtsiat",
+    "dvadtsiat"
+   ],
+   "difficulty": 2,
+   "uk": "Шістна́дцять, сімна́дцять, вісімна́дцять, дев’ятна́дцять, два́дцять.",
+   "de": "Sechzehn, siebzehn, achtzehn, neunzehn, zwanzig."
+  },
+  {
+   "id": "e27",
+   "type": "cloze",
+   "vocab": [
+    "odyn",
+    "dva",
+    "druh",
+    "podruha"
+   ],
+   "difficulty": 2,
+   "text": "Оди́н друг і {{дві}} по́други.",
+   "options": [
+    [
+     "дві",
+     "два"
+    ]
+   ],
+   "translation_de": "Ein Freund und zwei Freundinnen.",
+   "hint_de": "по́друга ist weiblich (f.)."
+  },
+  {
+   "id": "e28",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "odyn",
+    "dva",
+    "druh",
+    "podruha"
+   ],
+   "difficulty": 2,
+   "prompt": "eine Freundin und zwei Freunde",
+   "options": [
+    "одна́ по́друга й два дру́зі",
+    "оди́н по́друга й два дру́зі",
+    "одна́ по́друга й дві дру́зі",
+    "одне́ по́друга й два дру́зі"
+   ],
+   "hint_de": "по́друга f., друг m."
+  },
+  {
+   "id": "e29",
+   "type": "cloze",
+   "vocab": [
+    "odyn"
+   ],
+   "difficulty": 2,
+   "text": "Ще {{одне́}} сло́во.",
+   "options": [
+    [
+     "одне́",
+     "оди́н",
+     "одна́"
+    ]
+   ],
+   "translation_de": "Noch ein Wort.",
+   "hint_de": "сло́во ist sächlich (n.)."
+  },
+  {
+   "id": "e30",
+   "type": "reading",
+   "vocab": [
+    "sim",
+    "visim",
+    "simnadtsiat",
+    "dvadtsiat",
+    "skilky",
+    "rik",
+    "skilky_tobi_rokiv",
+    "meni_rokiv",
+    "pryvit",
+    "tse"
+   ],
+   "difficulty": 2,
+   "title_uk": "Софі́я",
+   "text_uk": "💼 О́фіс\nОкса́на: Це Софі́я.\nМа́ркус: Приві́т! Скі́льки тобі́ ро́ків?\nСофі́я: Мені́ сім ро́ків. А вам?\nМа́ркус: Ой, бага́то!\nСофі́я: Два́дцять?\nМа́ркус: Бі́льше!",
+   "text_de": "Im Büro. Oksana: Das ist Sofija. – Markus: Hallo! Wie alt bist du? – Sofija: Ich bin sieben Jahre alt. Und Sie? – Markus: Oh, viele (Jahre)! – Sofija: Zwanzig? – Markus: Mehr!",
+   "questions": [
+    {
+     "q_uk": "Софі́я: «Мені́ … ро́ків.»",
+     "q_de": "Sofija: „Ich bin … Jahre alt.“",
+     "kind": "mc",
+     "options": [
+      "сім",
+      "сімна́дцять",
+      "ві́сім"
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус: «Скі́льки тобі́ ро́ків?»",
+     "q_de": "Markus fragt: „Wie alt bist du?“",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Софі́я: «А …?»",
+     "q_de": "Sofija fragt Markus zurück: „Und …?“",
+     "kind": "mc",
+     "options": [
+      "вам",
+      "тобі́",
+      "їй"
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус: «Мені́ два́дцять ро́ків.»",
+     "q_de": "Markus sagt: „Ich bin zwanzig.“",
+     "kind": "tf",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "id": "e31",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "sim",
+    "rik",
+    "meni_rokiv"
+   ],
+   "difficulty": 1,
+   "prompt": "Мені́ сім ро́ків. А вам?",
+   "options": [
+    "Ich bin sieben Jahre alt. Und Sie?",
+    "Ich bin siebzehn Jahre alt. Und du?",
+    "Sie ist sieben Jahre alt. Und Sie?",
+    "Ich habe sieben Jahre. Und Sie?"
+   ]
+  },
+  {
+   "id": "e32",
+   "type": "cloze",
+   "vocab": [
+    "sim",
+    "rik",
+    "meni_rokiv"
+   ],
+   "difficulty": 1,
+   "text": "Софі́я: Мені́ сім {{ро́ків}}.",
+   "options": [
+    [
+     "ро́ків",
+     "ро́ки",
+     "рік"
+    ]
+   ],
+   "translation_de": "Sofija: Ich bin sieben Jahre alt.",
+   "hint_de": "Nach 5–20: ро́ків."
+  },
+  {
+   "id": "e33",
+   "type": "cloze",
+   "vocab": [
+    "dva",
+    "rik"
+   ],
+   "difficulty": 2,
+   "text": "Йому́ два {{ро́ки}}.",
+   "options": [
+    [
+     "ро́ки",
+     "ро́ків",
+     "рік"
+    ]
+   ],
+   "translation_de": "Er ist zwei Jahre alt.",
+   "hint_de": "Nach 2, 3, 4: ро́ки."
+  },
+  {
+   "id": "e34",
+   "type": "cloze",
+   "vocab": [
+    "odyn",
+    "rik"
+   ],
+   "difficulty": 2,
+   "text": "Їй {{оди́н}} рік.",
+   "options": [
+    [
+     "оди́н",
+     "одна́",
+     "одне́"
+    ]
+   ],
+   "translation_de": "Sie ist ein Jahr alt.",
+   "hint_de": "Die Zahl richtet sich nach рік (m.), nicht nach der Person."
+  },
+  {
+   "id": "e35",
+   "type": "match_pairs",
+   "vocab": [
+    "try",
+    "desiat",
+    "dvanadtsiat",
+    "visimnadtsiat",
+    "dvadtsiat",
+    "rik",
+    "meni_rokiv"
+   ],
+   "difficulty": 2,
+   "pairs": [
+    {
+     "uk": "Мені́ два́дцять ро́ків.",
+     "de": "Ich bin 20."
+    },
+    {
+     "uk": "Йому́ де́сять ро́ків.",
+     "de": "Er ist 10."
+    },
+    {
+     "uk": "Їй три ро́ки.",
+     "de": "Sie ist 3."
+    },
+    {
+     "uk": "Тобі́ двана́дцять ро́ків?",
+     "de": "Bist du 12?"
+    },
+    {
+     "uk": "Вам вісімна́дцять ро́ків?",
+     "de": "Sind Sie 18?"
+    }
+   ]
+  },
+  {
+   "id": "e36",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "try",
+    "rik"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Їй три ро́ки.",
+   "options": [
+    "Sie ist drei Jahre alt.",
+    "Er ist drei Jahre alt.",
+    "Sie ist dreizehn Jahre alt.",
+    "Ich bin drei Jahre alt."
+   ]
+  },
+  {
+   "id": "e37",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "piat",
+    "piatnadtsiat",
+    "rik"
+   ],
+   "difficulty": 2,
+   "prompt": "Sie ist fünfzehn Jahre alt. (sie = eine Person)",
+   "options": [
+    "Їй п’ятна́дцять ро́ків.",
+    "Їй п’ятна́дцять ро́ки.",
+    "Йому́ п’ятна́дцять ро́ків.",
+    "Їй п’ять ро́ків."
+   ]
+  },
+  {
+   "id": "e38",
+   "type": "cloze",
+   "vocab": [
+    "visim",
+    "rik",
+    "tse"
+   ],
+   "difficulty": 2,
+   "text": "Це Іва́н. {{Йому́}} ві́сім ро́ків.",
+   "options": [
+    [
+     "Йому́",
+     "Їй",
+     "Мені́"
+    ]
+   ],
+   "translation_de": "Das ist Iwan. Er ist acht Jahre alt."
+  },
+  {
+   "id": "e39",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "skilky",
+    "rik",
+    "skilky_tobi_rokiv",
+    "yak",
+    "yak_tebe_zvaty"
+   ],
+   "difficulty": 2,
+   "prompt": "Wie alt bist du? (zu Sofija)",
+   "options": [
+    "Скі́льки тобі́ ро́ків?",
+    "Скі́льки вам ро́ків?",
+    "Скі́льки їй ро́ків?",
+    "Як тебе́ зва́ти?"
+   ]
+  },
+  {
+   "id": "e40",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "simnadtsiat",
+    "rik",
+    "meni_rokiv"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Мені́ сімна́дцять ро́ків.",
+   "options": [
+    "Ich bin siebzehn Jahre alt.",
+    "Ich bin sieben Jahre alt.",
+    "Er ist siebzehn Jahre alt.",
+    "Ich bin siebzig Jahre alt."
+   ]
+  },
+  {
+   "id": "e41",
+   "type": "true_false",
+   "vocab": [
+    "chotyry",
+    "chotyrnadtsiat",
+    "rik",
+    "tse"
+   ],
+   "difficulty": 2,
+   "context_uk": "Це Оле́на. Їй чотирна́дцять ро́ків.",
+   "context_de": "Das ist Olena. Sie ist vierzehn Jahre alt.",
+   "statement_uk": "Оле́на: «Мені́ чоти́ри ро́ки.»",
+   "answer": false,
+   "explanation_de": "Olena ist чотирна́дцять (14), nicht чоти́ри (4)."
+  },
+  {
+   "id": "e42",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "deviat",
+    "deviatnadtsiat",
+    "rik"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Йому́ дев’ятна́дцять ро́ків.",
+   "options": [
+    "Йому́ дев’ятна́дцять ро́ків.",
+    "Йому́ де́в’ять ро́ків.",
+    "Їй дев’ятна́дцять ро́ків."
+   ]
+  },
+  {
+   "id": "e43",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "skilky",
+    "rik",
+    "yak"
+   ],
+   "difficulty": 2,
+   "prompt": "Wie alt sind Sie?",
+   "answer": "Скі́льки вам ро́ків?",
+   "accept": [
+    "Вам скі́льки ро́ків?"
+   ],
+   "distractors": [
+    "тобі́",
+    "ро́ки",
+    "як"
+   ]
+  },
+  {
+   "id": "e44",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "dva",
+    "rik"
+   ],
+   "difficulty": 2,
+   "prompt": "Er ist zwei Jahre alt.",
+   "answer": "Йому́ два ро́ки.",
+   "distractors": [
+    "дві",
+    "ро́ків",
+    "їй"
+   ]
+  },
+  {
+   "id": "e45",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "deviat",
+    "deviatnadtsiat",
+    "rik",
+    "vin"
+   ],
+   "difficulty": 2,
+   "prompt": "Er ist neunzehn Jahre alt.",
+   "answer": "Йому́ дев’ятна́дцять ро́ків.",
+   "distractors": [
+    "ро́ки",
+    "він",
+    "де́в’ять"
+   ]
+  },
+  {
+   "id": "e46",
+   "type": "build_sentence",
+   "dir": "uk-de",
+   "vocab": [
+    "shistnadtsiat",
+    "rik"
+   ],
+   "difficulty": 2,
+   "prompt": "Тобі́ шістна́дцять ро́ків?",
+   "answer": "Bist du sechzehn Jahre alt?",
+   "distractors": [
+    "sechs",
+    "Sie",
+    "er"
+   ]
+  },
+  {
+   "id": "e47",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "odynadtsiat",
+    "dvanadtsiat",
+    "dvadtsiat",
+    "rik",
+    "vin"
+   ],
+   "difficulty": 3,
+   "prompt": "Er ist zwölf Jahre alt, und sie ist elf.",
+   "answer": "Йому́ двана́дцять ро́ків, а їй одина́дцять.",
+   "distractors": [
+    "два́дцять",
+    "він",
+    "рік"
+   ]
+  },
+  {
+   "id": "e48",
+   "type": "speak",
+   "vocab": [
+    "skilky",
+    "rik"
+   ],
+   "difficulty": 2,
+   "uk": "Скі́льки вам ро́ків?",
+   "de": "Wie alt sind Sie?"
+  },
+  {
+   "id": "e49",
+   "type": "speak",
+   "vocab": [
+    "try",
+    "visim",
+    "rik"
+   ],
+   "difficulty": 2,
+   "uk": "Йому́ ві́сім ро́ків, а їй три ро́ки.",
+   "de": "Er ist acht Jahre alt, und sie ist drei."
+  }
+ ]
+}

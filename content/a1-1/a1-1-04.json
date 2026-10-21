@@ -34,11 +34,11 @@
  ],
  "explanation": {
   "title_de": "Familie: Genus, mein/dein, sein/ihr und „ich habe“",
-  "intro_de": "In dieser Lektion zeigt Oksana ein Familienfoto. Danach kann man die eigene Familie vorstellen (Це моя́ сім’я́.), nach Familienmitgliedern fragen und sagen, wen oder was man hat (У ме́не є брат.). Außerdem: Oksana bietet Markus das Du an.",
+  "intro_de": "Oksana zeigt ein Familienfoto und bietet Markus das Du an. Danach kann man die eigene Familie vorstellen, nach Familienmitgliedern fragen und sagen, was man hat.",
   "sections": [
    {
     "heading_de": "1. Genus: männlich, weiblich, sächlich",
-    "body_de": "Jedes ukrainische Nomen hat ein **Genus** (grammatisches Geschlecht): männlich (m.), weiblich (f.) oder sächlich (n.). Man erkennt es fast immer an der **Endung der Grundform** (Nominativ = Wer-Fall, die Form im Wörterbuch). Das deutsche Geschlecht hilft dabei nicht: „das“ Kind heißt дити́на und ist weiblich, „das“ Foto (фо́то) ist sächlich.\n\n**Ausnahmen und Besonderheiten:** Bei Personen zählt das natürliche Geschlecht – та́то endet auf -о, ist aber männlich (**мій** та́то). дити́на ist regelmäßig weiblich (-а), auch wenn ein Junge gemeint ist (**моя́** дити́на). ді́ти (Kinder) und батьки́ (Eltern) sind Mehrzahlwörter; den Plural lernen wir später (Lektion 8), hier nur als Wörter. кіт ist der Kater, steht aber auch allgemein für „Katze“.",
+    "body_de": "Jedes Nomen hat ein **Genus** (grammatisches Geschlecht): männlich (m.), weiblich (f.) oder sächlich (n.). Man erkennt es fast immer an der **Endung der Grundform** (Nominativ = Wer-Fall, die Wörterbuchform). Das deutsche Geschlecht hilft nicht: „das“ Kind = дити́на ist weiblich.\n\n**Ausnahmen:** Bei Personen zählt das natürliche Geschlecht – та́то ist männlich (**мій** та́то). дити́на bleibt weiblich, auch für einen Jungen (**моя́** дити́на). ді́ти und батьки́ sind Mehrzahlwörter (Plural: Lektion 8). кіт (Kater) steht auch allgemein für „Katze“.",
     "table": {
      "head": [
       "Genus",
@@ -115,7 +115,7 @@
    },
    {
     "heading_de": "3. його́ und її́ – sein und ihr",
-    "body_de": "його́ (sein) und її́ (ihr) **verändern sich nie**. Sie richten sich nur nach der Person, der etwas gehört: його́ bei einem Besitzer (він), її́ bei einer Besitzerin (вона́). Das Genus des Nomens spielt keine Rolle: його́ брат, його́ сестра́, його́ ді́ти.\n\nDie beiden Wörter sind schon bekannt: In Як його́ зва́ти? / Як її́ зва́ти? bedeuten sie „ihn“ bzw. „sie“ (wörtlich „Wie nennt man ihn/sie?“). Dieselbe Form hat also zwei Aufgaben: „ihn/sie“ und „sein/ihr“.",
+    "body_de": "його́ (sein) und її́ (ihr) **verändern sich nie**; sie richten sich nur nach dem Besitzer: його́ für він, її́ für вона́.\n\nBekannt sind sie schon aus Як його́ / її́ зва́ти? – dort bedeuten sie „ihn/sie“ (wörtlich „Wie nennt man ihn/sie?“). Dieselbe Form heißt also „ihn/sie“ und „sein/ihr“.",
     "table": {
      "head": [
       "Besitzer",
@@ -144,18 +144,14 @@
       "de": "Das ist Oksana, und das ist ihr Mann Andrij."
      },
      {
-      "uk": "Це Ма́ркус, а це його́ сестра́ Ю́лія.",
-      "de": "Das ist Markus, und das ist seine Schwester Julia."
-     },
-     {
-      "uk": "Як її́ зва́ти? – Її́ зва́ти Софі́я.",
-      "de": "Wie heißt sie? – Sie heißt Sofija."
+      "uk": "Це Ма́ркус і його́ сестра́ Ю́лія.",
+      "de": "Das sind Markus und seine Schwester Julia."
      }
     ]
    },
    {
     "heading_de": "4. У ме́не є … – ich habe …",
-    "body_de": "Für „haben“ benutzt man im Alltag eine **feste Wendung**: у ме́не є … heißt wörtlich „bei mir ist/gibt es …“ (vgl. deutsch „bei mir ist ein Bruder“). ме́не ist eine Form von я nach einer Präposition (Genitiv, Wes-Fall – kommt systematisch in A1.2). Das, was man hat, steht in der Grundform (Nominativ). є (es gibt, ist vorhanden) bleibt immer gleich; nur die Person wechselt.\n\n**Betonung:** Nach у liegt sie vorn – у ме́не, у те́бе –, anders als in Мене́ зва́ти … / Як тебе́ зва́ти? Nach einem Vokal sagt man meist в statt у: А в те́бе? (vor в aber immer у: А у вас?). Die Frage ist derselbe Satz mit Frageton. „Er/sie hat“ (у ньо́го / у не́ї) und „ich habe kein(e) …“ folgen später; vorerst genügt die Antwort Ні.",
+    "body_de": "„Haben“ drückt man mit einer **festen Wendung** aus: у ме́не є … = wörtlich „bei mir ist …“. ме́не ist eine Form von я (Genitiv, Wes-Fall – systematisch in A1.2). Was man hat, steht in der Grundform; є bleibt gleich, nur die Person wechselt.\n\n**Betonung:** nach у vorn – у ме́не, у те́бе (aber Мене́ зва́ти …). Nach Vokal meist в: А в те́бе? (vor в immer у: А у вас?). Die Frage hat nur Frageton. „Er/sie hat“ (у ньо́го / у не́ї) und „ich habe kein …“ folgen später; vorerst antwortet man einfach Ні.",
     "table": {
      "head": [
       "Person",
@@ -184,24 +180,16 @@
      {
       "uk": "У те́бе є ді́ти? – Так, у ме́не є син і дочка́.",
       "de": "Hast du Kinder? – Ja, ich habe einen Sohn und eine Tochter."
-     },
-     {
-      "uk": "У вас є кіт? – Ні.",
-      "de": "Haben Sie eine Katze? – Nein."
      }
     ]
    },
    {
     "heading_de": "5. Ось und Це – zeigen und vorstellen; Дава́й на ти!",
-    "body_de": "Mit Ось … zeigt man auf etwas: „Hier ist … / Da ist …“, etwa beim Zeigen eines Fotos. Mit Це … benennt man etwas: „Das ist …“ – so antwortet man auf Хто це? (Wer ist das?). Beide bleiben unverändert; ein „ist“ braucht man im Präsens nicht. на фо́то heißt „auf dem Foto“ (фо́то ist unveränderlich).\n\nBekanntes lässt sich gut kombinieren: Alter (Йому́ ві́сім ро́ків.), Name (Як її́ зва́ти?), Herkunft (Мій чолові́к з Украї́ни.).\n\n**Дава́й на ти!** ist eine feste Wendung: „Lass uns uns duzen!“ (дава́й = „lass uns“, wörtlich „gib“). Die Antwort ist einfach: Дава́й! Ab jetzt duzen sich Oksana und Markus.",
+    "body_de": "Ось … zeigt auf etwas: „Hier ist … / Da ist …“ (z. B. auf einem Foto). Це … benennt: „Das ist …“ – die Antwort auf Хто це? Beide bleiben unverändert; „ist“ fällt im Präsens weg. на фо́то = auf dem Foto. Gut kombinierbar mit Alter (Йому́ ві́сім ро́ків.), Name (Як її́ зва́ти?) und Herkunft (Мій чолові́к з Украї́ни.).\n\n**Дава́й на ти!** ist eine feste Wendung: „Lass uns uns duzen!“ (дава́й = „lass uns“). Antwort: Дава́й!",
     "examples": [
      {
       "uk": "Ось моя́ сім’я́ на фо́то.",
       "de": "Hier ist meine Familie auf dem Foto."
-     },
-     {
-      "uk": "Хто це? – Це мій чолові́к Андрі́й.",
-      "de": "Wer ist das? – Das ist mein Mann Andrij."
      },
      {
       "uk": "Дава́й на ти! – Дава́й!",
@@ -211,11 +199,11 @@
    }
   ],
   "summary_de": [
-   "Genus an der Endung: Konsonant → m., -а/-я → f., -о/-е → n.; Ausnahme та́то (m.).",
-   "мій/моя́/моє́/мої́ und твій/твоя́/твоє́/твої́ richten sich nach dem folgenden Nomen.",
-   "його́ (sein) und її́ (ihr) sind unveränderlich und richten sich nach dem Besitzer.",
-   "У ме́не / у те́бе / у вас є … + Grundform = ich habe / du hast / Sie haben …",
-   "Ось … = Hier ist …; Це … = Das ist …; Дава́й на ти! = Lass uns uns duzen!"
+   "Konsonant → m., -а/-я → f., -о/-е → n.; Ausnahme та́то (m.).",
+   "мій/твій passen sich dem Nomen an (моя́, моє́, мої́ …).",
+   "його́ und її́ sind unveränderlich.",
+   "У ме́не / у те́бе / у вас є … = ich habe / du hast / Sie haben …",
+   "Ось … = Hier ist …; Це … = Das ist …"
   ]
  },
  "grammar": [
@@ -753,6 +741,20 @@
    "info": "Nom. Pl. von спра́ва; Як спра́ви? = Wie geht’s?"
   },
   {
+   "uk": "до́брий",
+   "lemma": "до́брий",
+   "de": "gut",
+   "pos": "adj",
+   "info": "m. Nom. Sg.; До́брий ве́чір! = Guten Abend!"
+  },
+  {
+   "uk": "ве́чір",
+   "lemma": "ве́чір",
+   "de": "Abend",
+   "pos": "noun",
+   "info": "m. Nom. Sg."
+  },
+  {
    "uk": "поба́чення",
    "lemma": "поба́чення",
    "de": "Wiedersehen",
@@ -760,5 +762,1547 @@
    "info": "n.; до поба́чення = auf Wiedersehen"
   }
  ],
- "exercises": []
+ "exercises": [
+  {
+   "id": "e01",
+   "type": "reading",
+   "vocab": [
+    "simia",
+    "os",
+    "cholovik",
+    "dochka",
+    "kit",
+    "miy",
+    "tviy",
+    "khto",
+    "tse"
+   ],
+   "difficulty": 1,
+   "title_uk": "Сім’я́ на фо́то",
+   "text_uk": "Окса́на: Дава́й на ти!\nМа́ркус: Дава́й!\nОкса́на: Ось моя́ сім’я́ на фо́то.\nМа́ркус: Хто це?\nОкса́на: Це мій чолові́к Андрі́й, він програмі́ст.\nМа́ркус: А це твоя́ дочка́?\nОкса́на: Так, це Софі́я, їй сім ро́ків. А ось Ба́рсик, мій кіт.",
+   "text_de": "Im Büro zeigt Oksana Markus ein Foto. Oksana: Lass uns uns duzen! – Markus: Gern! – Oksana: Hier ist meine Familie auf dem Foto. – Markus: Wer ist das? – Oksana: Das ist mein Mann Andrij, er ist Programmierer. – Markus: Und ist das deine Tochter? – Oksana: Ja, das ist Sofija, sie ist sieben Jahre alt. Und hier ist Barsyk, mein Kater.",
+   "questions": [
+    {
+     "q_uk": "Хто Андрі́й?",
+     "q_de": "Wer ist Andrij?",
+     "kind": "mc",
+     "options": [
+      "Її́ чолові́к.",
+      "Її́ брат.",
+      "Її́ син."
+     ]
+    },
+    {
+     "q_uk": "Хто Софі́я?",
+     "q_de": "Wer ist Sofija?",
+     "kind": "mc",
+     "options": [
+      "Її́ дочка́.",
+      "Її́ сестра́.",
+      "Її́ ма́ма."
+     ]
+    },
+    {
+     "q_uk": "Андрі́й – програмі́ст.",
+     "q_de": "Andrij ist Programmierer.",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Ба́рсик – її́ син.",
+     "q_de": "Barsyk ist ihr Sohn.",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Окса́на: «Дава́й на …!»",
+     "q_de": "Oksana sagt: „Дава́й на …!“",
+     "kind": "mc",
+     "options": [
+      "ти",
+      "ви",
+      "я"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "type": "true_false",
+   "vocab": [
+    "dochka",
+    "syn",
+    "u_mene_ie",
+    "ie",
+    "cholovik",
+    "kit"
+   ],
+   "difficulty": 1,
+   "context_uk": "Окса́на: Ось моя́ сім’я́: мій чолові́к Андрі́й, моя́ дочка́ Софі́я й мій кіт Ба́рсик.",
+   "context_de": "Oksana: Hier ist meine Familie: mein Mann Andrij, meine Tochter Sofija und mein Kater Barsyk.",
+   "statement_uk": "Окса́на: «У ме́не є син.»",
+   "answer": false,
+   "explanation_de": "Oksana hat eine Tochter (дочка́ Софі́я), keinen Sohn (син)."
+  },
+  {
+   "id": "e03",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "tse",
+    "dochka",
+    "tviy"
+   ],
+   "difficulty": 1,
+   "prompt": "А це твоя́ дочка́?",
+   "options": [
+    "Und ist das deine Tochter?",
+    "Und ist das deine Schwester?",
+    "Und ist das meine Tochter?",
+    "Und wer ist deine Tochter?"
+   ]
+  },
+  {
+   "id": "e04",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "ty"
+   ],
+   "difficulty": 1,
+   "prompt": "Дава́й на ти!",
+   "options": [
+    "Lass uns uns duzen!",
+    "Lass uns uns siezen!",
+    "Wie heißt du?",
+    "Und du?"
+   ],
+   "hint_de": "дава́й = lass uns; на ти = per du."
+  },
+  {
+   "id": "e05",
+   "type": "picture_choice",
+   "vocab": [
+    "simia"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "сім’я́",
+   "options": [
+    {
+     "emoji": "👨‍👩‍👧",
+     "de": "Familie"
+    },
+    {
+     "emoji": "👶",
+     "de": "Kind"
+    },
+    {
+     "emoji": "👵",
+     "de": "Oma"
+    }
+   ]
+  },
+  {
+   "id": "e06",
+   "type": "match_pairs",
+   "vocab": [
+    "mama",
+    "tato",
+    "syn",
+    "dochka",
+    "brat",
+    "sestra"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "ма́ма",
+     "de": "Mama"
+    },
+    {
+     "uk": "та́то",
+     "de": "Papa"
+    },
+    {
+     "uk": "син",
+     "de": "Sohn"
+    },
+    {
+     "uk": "дочка́",
+     "de": "Tochter"
+    },
+    {
+     "uk": "брат",
+     "de": "Bruder"
+    },
+    {
+     "uk": "сестра́",
+     "de": "Schwester"
+    }
+   ]
+  },
+  {
+   "id": "e07",
+   "type": "picture_choice",
+   "vocab": [
+    "kit",
+    "os",
+    "miy"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "А ось Ба́рсик, мій кіт.",
+   "options": [
+    {
+     "emoji": "🐈",
+     "de": "Kater"
+    },
+    {
+     "emoji": "👶",
+     "de": "Kind"
+    },
+    {
+     "emoji": "👴",
+     "de": "Opa"
+    },
+    {
+     "emoji": "👵",
+     "de": "Oma"
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "type": "cloze",
+   "vocab": [
+    "os",
+    "miy",
+    "simia"
+   ],
+   "difficulty": 1,
+   "text": "Ось {{моя́}} сім’я́ на фо́то.",
+   "options": [
+    [
+     "моя́",
+     "мій",
+     "моє́"
+    ]
+   ],
+   "translation_de": "Hier ist meine Familie auf dem Foto.",
+   "hint_de": "сім’я́ endet auf -я → f."
+  },
+  {
+   "id": "e09",
+   "type": "cloze",
+   "vocab": [
+    "miy",
+    "cholovik"
+   ],
+   "difficulty": 1,
+   "text": "Це {{мій}} чолові́к Андрі́й.",
+   "options": [
+    [
+     "мій",
+     "моя́",
+     "мої́"
+    ]
+   ],
+   "translation_de": "Das ist mein Mann Andrij.",
+   "hint_de": "чолові́к endet auf Konsonant → m."
+  },
+  {
+   "id": "e10",
+   "type": "picture_choice",
+   "vocab": [
+    "babusia"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "бабу́ся",
+   "options": [
+    {
+     "emoji": "👵",
+     "de": "Oma"
+    },
+    {
+     "emoji": "👴",
+     "de": "Opa"
+    },
+    {
+     "emoji": "👶",
+     "de": "Kind"
+    },
+    {
+     "emoji": "🐈",
+     "de": "Katze"
+    }
+   ]
+  },
+  {
+   "id": "e11",
+   "type": "match_pairs",
+   "vocab": [
+    "cholovik",
+    "druzhyna",
+    "babusia",
+    "didus",
+    "batky",
+    "dity"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "чолові́к",
+     "de": "Ehemann"
+    },
+    {
+     "uk": "дружи́на",
+     "de": "Ehefrau"
+    },
+    {
+     "uk": "бабу́ся",
+     "de": "Oma"
+    },
+    {
+     "uk": "діду́сь",
+     "de": "Opa"
+    },
+    {
+     "uk": "батьки́",
+     "de": "Eltern"
+    },
+    {
+     "uk": "ді́ти",
+     "de": "Kinder"
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "type": "picture_choice",
+   "vocab": [
+    "didus",
+    "miy"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Це мій діду́сь.",
+   "options": [
+    {
+     "emoji": "👴",
+     "de": "Opa"
+    },
+    {
+     "emoji": "👵",
+     "de": "Oma"
+    },
+    {
+     "emoji": "👶",
+     "de": "Kind"
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "de": "Familie"
+    }
+   ]
+  },
+  {
+   "id": "e13",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "tato",
+    "miy",
+    "tse"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Це мій та́то.",
+   "options": [
+    "Das ist mein Papa.",
+    "Das ist meine Mama.",
+    "Das ist mein Bruder.",
+    "Das ist mein Opa."
+   ]
+  },
+  {
+   "id": "e14",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "miy",
+    "sestra"
+   ],
+   "difficulty": 1,
+   "prompt": "meine Schwester",
+   "options": [
+    "моя́ сестра́",
+    "мій сестра́",
+    "моє́ сестра́",
+    "твоя́ сестра́"
+   ]
+  },
+  {
+   "id": "e15",
+   "type": "cloze",
+   "vocab": [
+    "os",
+    "miy",
+    "tato"
+   ],
+   "difficulty": 2,
+   "text": "Ось {{мій}} та́то.",
+   "options": [
+    [
+     "мій",
+     "моя́",
+     "моє́"
+    ]
+   ],
+   "translation_de": "Hier ist mein Papa.",
+   "hint_de": "та́то endet auf -о, ist aber ein Mann → m."
+  },
+  {
+   "id": "e16",
+   "type": "picture_choice",
+   "vocab": [
+    "dytyna",
+    "os",
+    "miy"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Ось моя́ дити́на.",
+   "options": [
+    {
+     "emoji": "👶",
+     "de": "Kind"
+    },
+    {
+     "emoji": "👵",
+     "de": "Oma"
+    },
+    {
+     "emoji": "🐈",
+     "de": "Katze"
+    },
+    {
+     "emoji": "👴",
+     "de": "Opa"
+    }
+   ]
+  },
+  {
+   "id": "e17",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "tviy",
+    "dytyna"
+   ],
+   "difficulty": 2,
+   "prompt": "dein Kind",
+   "options": [
+    "твоя́ дити́на",
+    "твій дити́на",
+    "твоє́ дити́на",
+    "моя́ дити́на"
+   ],
+   "hint_de": "Auf die Endung von дити́на achten."
+  },
+  {
+   "id": "e18",
+   "type": "cloze",
+   "vocab": [
+    "miy",
+    "tse"
+   ],
+   "difficulty": 2,
+   "text": "Це {{моє́}} фо́то.",
+   "options": [
+    [
+     "моє́",
+     "мій",
+     "моя́"
+    ]
+   ],
+   "translation_de": "Das ist mein Foto.",
+   "hint_de": "фо́то endet auf -о → n."
+  },
+  {
+   "id": "e19",
+   "type": "match_pairs",
+   "vocab": [
+    "miy",
+    "tviy",
+    "brat",
+    "sestra",
+    "dity",
+    "syn",
+    "dochka",
+    "batky"
+   ],
+   "difficulty": 2,
+   "pairs": [
+    {
+     "uk": "мій брат",
+     "de": "mein Bruder"
+    },
+    {
+     "uk": "моя́ сестра́",
+     "de": "meine Schwester"
+    },
+    {
+     "uk": "мої́ ді́ти",
+     "de": "meine Kinder"
+    },
+    {
+     "uk": "твій син",
+     "de": "dein Sohn"
+    },
+    {
+     "uk": "твоя́ дочка́",
+     "de": "deine Tochter"
+    },
+    {
+     "uk": "твої́ батьки́",
+     "de": "deine Eltern"
+    }
+   ]
+  },
+  {
+   "id": "e20",
+   "type": "cloze",
+   "vocab": [
+    "miy",
+    "batky",
+    "nimechchyna"
+   ],
+   "difficulty": 2,
+   "text": "{{Мої́}} батьки́ з Німе́ччини.",
+   "options": [
+    [
+     "Мої́",
+     "Мій",
+     "Моя́"
+    ]
+   ],
+   "translation_de": "Meine Eltern sind aus Deutschland.",
+   "hint_de": "батьки́ ist Plural."
+  },
+  {
+   "id": "e21",
+   "type": "reading",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "brat",
+    "sestra",
+    "yii",
+    "tviy",
+    "batky",
+    "miy",
+    "os"
+   ],
+   "difficulty": 2,
+   "title_uk": "А в те́бе?",
+   "text_uk": "Окса́на: А в те́бе є брат чи сестра́?\nМа́ркус: У ме́не є сестра́.\nОкса́на: Як її́ зва́ти?\nМа́ркус: Ю́лія. Ось фо́то.\nОкса́на: А це твої́ батьки́?\nМа́ркус: Так, це мої́ батьки́ і Ю́лія в Берлі́ні.",
+   "text_de": "Jetzt erzählt Markus. Oksana: Und hast du einen Bruder oder eine Schwester? – Markus: Ich habe eine Schwester. – Oksana: Wie heißt sie? – Markus: Julia. Hier ist ein Foto. – Oksana: Und sind das deine Eltern? – Markus: Ja, das sind meine Eltern und Julia in Berlin.",
+   "questions": [
+    {
+     "q_uk": "Хто Ю́лія?",
+     "q_de": "Wer ist Julia?",
+     "kind": "mc",
+     "options": [
+      "Його́ сестра́.",
+      "Його́ дочка́.",
+      "Його́ дружи́на."
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус: «У ме́не є брат.»",
+     "q_de": "Markus sagt: „Ich habe einen Bruder.“",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Його́ батьки́ в Берлі́ні.",
+     "q_de": "Seine Eltern sind in Berlin.",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Окса́на й Ма́ркус: «ти» чи «ви»?",
+     "q_de": "Oksana und Markus: „ти“ oder „ви“?",
+     "kind": "mc",
+     "options": [
+      "«ти»",
+      "«ви»",
+      "«я»"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e22",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "yii",
+    "yak"
+   ],
+   "difficulty": 1,
+   "prompt": "Як її́ зва́ти?",
+   "options": [
+    "Wie heißt sie?",
+    "Wie heißt er?",
+    "Wie heißt du?",
+    "Wer ist sie?"
+   ]
+  },
+  {
+   "id": "e23",
+   "type": "cloze",
+   "vocab": [
+    "yii",
+    "cholovik"
+   ],
+   "difficulty": 2,
+   "text": "Це Окса́на, а це {{її́}} чолові́к Андрі́й.",
+   "options": [
+    [
+     "її́",
+     "його́",
+     "моя́"
+    ]
+   ],
+   "translation_de": "Das ist Oksana, und das ist ihr Mann Andrij.",
+   "hint_de": "Wem gehört er? Oksana → „ihr“."
+  },
+  {
+   "id": "e24",
+   "type": "match_pairs",
+   "vocab": [
+    "yoho",
+    "yii",
+    "druzhyna",
+    "cholovik",
+    "dity",
+    "brat",
+    "sestra"
+   ],
+   "difficulty": 2,
+   "pairs": [
+    {
+     "uk": "його́ дружи́на",
+     "de": "seine Frau"
+    },
+    {
+     "uk": "її́ чолові́к",
+     "de": "ihr Mann"
+    },
+    {
+     "uk": "його́ ді́ти",
+     "de": "seine Kinder"
+    },
+    {
+     "uk": "її́ ді́ти",
+     "de": "ihre Kinder"
+    },
+    {
+     "uk": "його́ брат",
+     "de": "sein Bruder"
+    },
+    {
+     "uk": "її́ сестра́",
+     "de": "ihre Schwester"
+    }
+   ]
+  },
+  {
+   "id": "e25",
+   "type": "true_false",
+   "vocab": [
+    "yoho",
+    "yii",
+    "dochka",
+    "sestra",
+    "os"
+   ],
+   "difficulty": 2,
+   "context_uk": "Ось Андрі́й і його́ дочка́. Її́ зва́ти Софі́я.",
+   "context_de": "Hier sind Andrij und seine Tochter. Sie heißt Sofija.",
+   "statement_uk": "Софі́я – його́ сестра́.",
+   "answer": false,
+   "explanation_de": "Sofija ist seine Tochter (дочка́), nicht seine Schwester (сестра́)."
+  },
+  {
+   "id": "e26",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "yii",
+    "cholovik"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Її́ чолові́к програмі́ст.",
+   "options": [
+    "Ihr Mann ist Programmierer.",
+    "Mein Mann ist Programmierer.",
+    "Ihr Sohn ist Programmierer.",
+    "Ihr Bruder ist Programmierer."
+   ]
+  },
+  {
+   "id": "e27",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "yoho",
+    "batky"
+   ],
+   "difficulty": 2,
+   "prompt": "seine Eltern",
+   "options": [
+    "його́ батьки́",
+    "її́ батьки́",
+    "мої́ батьки́",
+    "його́ ді́ти"
+   ]
+  },
+  {
+   "id": "e28",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "os",
+    "yii",
+    "cholovik"
+   ],
+   "difficulty": 1,
+   "prompt": "Ось її́ чолові́к.",
+   "options": [
+    "Hier ist ihr Mann.",
+    "Hier ist mein Mann.",
+    "Hier ist ihr Sohn.",
+    "Hier ist seine Frau."
+   ]
+  },
+  {
+   "id": "e29",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "babusia",
+    "didus",
+    "miy"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Це моя́ бабу́ся.",
+   "options": [
+    "Це моя́ бабу́ся.",
+    "Це мій діду́сь.",
+    "Це моя́ ма́ма.",
+    "Це твоя́ бабу́ся."
+   ]
+  },
+  {
+   "id": "e30",
+   "type": "cloze",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "brat"
+   ],
+   "difficulty": 2,
+   "text": "У {{те́бе}} є брат?",
+   "options": [
+    [
+     "те́бе",
+     "ме́не",
+     "вас"
+    ]
+   ],
+   "translation_de": "Hast du einen Bruder?",
+   "hint_de": "du hast → у те́бе є."
+  },
+  {
+   "id": "e31",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "syn"
+   ],
+   "difficulty": 2,
+   "prompt": "Ich habe einen Sohn.",
+   "options": [
+    "У ме́не є син.",
+    "У те́бе є син.",
+    "У вас є син.",
+    "У ме́не є дочка́."
+   ]
+  },
+  {
+   "id": "e32",
+   "type": "true_false",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "dochka",
+    "dytyna",
+    "piat"
+   ],
+   "difficulty": 2,
+   "context_uk": "У ме́не є дочка́. Їй п’ять ро́ків.",
+   "context_de": "Ich habe eine Tochter. Sie ist fünf Jahre alt.",
+   "statement_uk": "У ме́не є дити́на.",
+   "answer": true,
+   "explanation_de": "Eine Tochter (дочка́) ist ein Kind (дити́на) – die Aussage stimmt."
+  },
+  {
+   "id": "e33",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "sestra"
+   ],
+   "difficulty": 2,
+   "audio_uk": "У те́бе є сестра́?",
+   "options": [
+    "У те́бе є сестра́?",
+    "У ме́не є сестра́.",
+    "У вас є сестра́?",
+    "У те́бе є брат?"
+   ]
+  },
+  {
+   "id": "e34",
+   "type": "cloze",
+   "vocab": [
+    "sim",
+    "tse"
+   ],
+   "difficulty": 2,
+   "text": "Це Софі́я. {{Їй}} сім ро́ків.",
+   "options": [
+    [
+     "Їй",
+     "Йому́",
+     "Мені́"
+    ]
+   ],
+   "translation_de": "Das ist Sofija. Sie ist sieben Jahre alt.",
+   "hint_de": "Alter: мені́ / йому́ / їй … ро́ків."
+  },
+  {
+   "id": "e35",
+   "type": "cloze",
+   "vocab": [
+    "syn",
+    "miy",
+    "yoho"
+   ],
+   "difficulty": 2,
+   "text": "Це мій син. {{Його́}} зва́ти Дмитро́.",
+   "options": [
+    [
+     "Його́",
+     "Її́",
+     "Мене́"
+    ]
+   ],
+   "translation_de": "Das ist mein Sohn. Er heißt Dmytro.",
+   "hint_de": "Name: Мене́ / його́ / її́ зва́ти …"
+  },
+  {
+   "id": "e36",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "dity",
+    "miy",
+    "dytyna",
+    "batky"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Це мої́ ді́ти.",
+   "options": [
+    "Це мої́ ді́ти.",
+    "Це твої́ ді́ти.",
+    "Це моя́ дити́на.",
+    "Це мої́ батьки́."
+   ]
+  },
+  {
+   "id": "e37",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "simia",
+    "miy",
+    "tse"
+   ],
+   "difficulty": 1,
+   "prompt": "Das ist meine Familie.",
+   "answer": "Це моя́ сім’я́.",
+   "distractors": [
+    "мій",
+    "мої́"
+   ]
+  },
+  {
+   "id": "e38",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "os",
+    "miy",
+    "brat"
+   ],
+   "difficulty": 1,
+   "prompt": "Hier ist mein Bruder.",
+   "answer": "Ось мій брат.",
+   "distractors": [
+    "моя́",
+    "твій"
+   ]
+  },
+  {
+   "id": "e39",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "dity"
+   ],
+   "difficulty": 2,
+   "prompt": "Hast du Kinder?",
+   "answer": "У те́бе є ді́ти?",
+   "distractors": [
+    "ме́не",
+    "вас"
+   ]
+  },
+  {
+   "id": "e40",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "yoho",
+    "druzhyna"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Його́ дружи́на з А́встрії.",
+   "answer": "Його́ дружи́на з А́встрії.",
+   "distractors": [
+    "її́",
+    "Украї́ни"
+   ]
+  },
+  {
+   "id": "e41",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "syn",
+    "dochka",
+    "tak"
+   ],
+   "difficulty": 2,
+   "prompt": "Ja, ich habe einen Sohn und eine Tochter.",
+   "answer": "Так, у ме́не є син і дочка́.",
+   "accept": [
+    "Так, у ме́не є дочка́ і син."
+   ],
+   "distractors": [
+    "те́бе",
+    "сестра́"
+   ]
+  },
+  {
+   "id": "e42",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "yii",
+    "cholovik",
+    "nimechchyna"
+   ],
+   "difficulty": 2,
+   "prompt": "Ihr Mann ist aus Deutschland.",
+   "answer": "Її́ чолові́к з Німе́ччини.",
+   "distractors": [
+    "його́",
+    "моя́"
+   ]
+  },
+  {
+   "id": "e43",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "syn",
+    "miy",
+    "visim",
+    "tse"
+   ],
+   "difficulty": 3,
+   "prompt": "Das ist mein Sohn. Er ist acht Jahre alt.",
+   "answer": "Це мій син. Йому́ ві́сім ро́ків.",
+   "distractors": [
+    "їй",
+    "ро́ки"
+   ]
+  },
+  {
+   "id": "e44",
+   "type": "build_sentence",
+   "dir": "uk-de",
+   "vocab": [
+    "kit",
+    "u_mene_ie",
+    "ie"
+   ],
+   "difficulty": 1,
+   "prompt": "У вас є кіт?",
+   "answer": "Haben Sie eine Katze?",
+   "distractors": [
+    "hast",
+    "du"
+   ]
+  },
+  {
+   "id": "e45",
+   "type": "true_false",
+   "vocab": [
+    "druzhyna",
+    "yii",
+    "yoho",
+    "os",
+    "mene_zvaty"
+   ],
+   "difficulty": 2,
+   "context_uk": "Мене́ зва́ти Петро́. Ось моя́ дружи́на, її́ зва́ти Ле́ся.",
+   "context_de": "Ich heiße Petro. Hier ist meine Frau, sie heißt Lessja.",
+   "statement_uk": "Ле́ся – його́ дружи́на.",
+   "answer": true,
+   "explanation_de": "Petro sagt „моя́ дружи́на“ – Lessja ist also seine Frau (його́ дружи́на)."
+  },
+  {
+   "id": "e46",
+   "type": "true_false",
+   "vocab": [
+    "didus",
+    "babusia",
+    "batky",
+    "miy"
+   ],
+   "difficulty": 2,
+   "context_uk": "Це мій діду́сь і моя́ бабу́ся.",
+   "context_de": "Das sind mein Opa und meine Oma.",
+   "statement_uk": "Це мої́ батьки́.",
+   "answer": false,
+   "explanation_de": "Opa und Oma (діду́сь, бабу́ся) sind nicht die Eltern; батьки́ = Mama und Papa."
+  },
+  {
+   "id": "e47",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "dochka"
+   ],
+   "difficulty": 1,
+   "audio_uk": "У ме́не є дочка́.",
+   "options": [
+    "Ich habe eine Tochter.",
+    "Ich habe eine Schwester.",
+    "Du hast eine Tochter.",
+    "Das ist meine Tochter."
+   ]
+  },
+  {
+   "id": "e48",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "os",
+    "kit",
+    "miy",
+    "dva"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Ось мій кіт. Йому́ два ро́ки.",
+   "answer": "Ось мій кіт. Йому́ два ро́ки.",
+   "distractors": [
+    "їй",
+    "ро́ків"
+   ]
+  },
+  {
+   "id": "e49",
+   "type": "speak",
+   "vocab": [
+    "simia",
+    "miy",
+    "os"
+   ],
+   "difficulty": 1,
+   "uk": "Ось моя́ сім’я́.",
+   "de": "Hier ist meine Familie."
+  },
+  {
+   "id": "e50",
+   "type": "speak",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "brat",
+    "sestra"
+   ],
+   "difficulty": 2,
+   "uk": "У ме́не є брат і сестра́.",
+   "de": "Ich habe einen Bruder und eine Schwester."
+  },
+  {
+   "id": "e51",
+   "type": "speak",
+   "vocab": [
+    "ty"
+   ],
+   "difficulty": 1,
+   "uk": "Дава́й на ти!",
+   "de": "Lass uns uns duzen!"
+  },
+  {
+   "id": "e52",
+   "type": "speak",
+   "vocab": [
+    "yii",
+    "yak"
+   ],
+   "difficulty": 1,
+   "uk": "Як її́ зва́ти?",
+   "de": "Wie heißt sie?"
+  },
+  {
+   "id": "e53",
+   "type": "chat",
+   "vocab": [
+    "tviy",
+    "cholovik",
+    "dochka",
+    "simia",
+    "miy",
+    "sim"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Oksana bietet auch dir das Du an und zeigt dir ihr Familienfoto. Ziel: herausfinden, wer darauf ist und wie alt Sofija ist.",
+   "partner": {
+    "name": "Окса́на",
+    "emoji": "👩"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Дава́й на ти!",
+     "de": "Lass uns uns duzen!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Дава́й!",
+       "de": "Gern!"
+      },
+      {
+       "uk": "Ду́же приє́мно!",
+       "de": "Freut mich!",
+       "feedback_de": "Passt beim Kennenlernen; auf „Дава́й на ти!“ antwortet man einfach „Дава́й!“."
+      },
+      {
+       "uk": "До поба́чення!",
+       "de": "Auf Wiedersehen!",
+       "feedback_de": "Das ist ein Abschied, keine Antwort auf das Angebot."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Ось моє́ фо́то. Це моя́ сім’я́.",
+     "de": "Hier ist mein Foto. Das ist meine Familie."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "А це твій чолові́к?",
+       "de": "Und ist das dein Mann?"
+      },
+      {
+       "uk": "А це твоя́ чолові́к?",
+       "de": "(falsche Form)",
+       "feedback_de": "чолові́к endet auf Konsonant → m. → твій."
+      },
+      {
+       "uk": "А це твої́ чолові́к?",
+       "de": "(falsche Form)",
+       "feedback_de": "твої́ ist Plural; für чолові́к (m. Sg.) → твій."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Так, це Андрі́й. А це моя́ дочка́ Софі́я.",
+     "de": "Ja, das ist Andrij. Und das ist meine Tochter Sofija."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Скі́льки їй ро́ків?",
+       "de": "Wie alt ist sie?"
+      },
+      {
+       "uk": "Скі́льки йому́ ро́ків?",
+       "de": "Wie alt ist er?",
+       "feedback_de": "Gefragt ist nach Sofija (sie) → їй."
+      },
+      {
+       "uk": "Скі́льки вам ро́ків?",
+       "de": "Wie alt sind Sie?",
+       "feedback_de": "Ihr duzt euch jetzt, und es geht um Sofija → їй."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Їй сім ро́ків.",
+     "de": "Sie ist sieben."
+    }
+   ]
+  },
+  {
+   "id": "e54",
+   "type": "order_dialog",
+   "vocab": [
+    "simia",
+    "tviy",
+    "os",
+    "dochka",
+    "yii",
+    "sim"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Це твоя́ сім’я́?",
+     "de": "Ist das deine Familie?"
+    },
+    {
+     "uk": "Так. Ось моя́ дочка́.",
+     "de": "Ja. Hier ist meine Tochter."
+    },
+    {
+     "uk": "Як її́ зва́ти?",
+     "de": "Wie heißt sie?"
+    },
+    {
+     "uk": "Софі́я. Їй сім ро́ків.",
+     "de": "Sofija. Sie ist sieben Jahre alt."
+    }
+   ]
+  },
+  {
+   "id": "e55",
+   "type": "speak",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "dity"
+   ],
+   "difficulty": 2,
+   "uk": "У вас є ді́ти?",
+   "de": "Haben Sie Kinder?"
+  },
+  {
+   "id": "e56",
+   "type": "chat",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "brat",
+    "sestra",
+    "batky",
+    "miy",
+    "syn",
+    "yoho",
+    "zvidky"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Im Hausflur fragt Frau Natalija (Vermieterin, ihr siezt euch) nach deiner Familie. Ziel: höflich von deiner Familie erzählen und nach ihrem Sohn fragen.",
+   "partner": {
+    "name": "Па́ні Ната́лія",
+    "emoji": "👵"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "До́брий ве́чір! У вас є ді́ти?",
+     "de": "Guten Abend! Haben Sie Kinder?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Ні, але́ в ме́не є брат і сестра́.",
+       "de": "Nein, aber ich habe einen Bruder und eine Schwester."
+      },
+      {
+       "uk": "Ні, але́ в те́бе є брат і сестра́.",
+       "de": "Nein, aber du hast einen Bruder und eine Schwester.",
+       "feedback_de": "у те́бе = du hast; über dich selbst sagt man у ме́не."
+      },
+      {
+       "uk": "Ні, але́ у вас є брат і сестра́.",
+       "de": "Nein, aber Sie haben einen Bruder und eine Schwester.",
+       "feedback_de": "у вас = Sie haben; gemeint ist die eigene Familie → у ме́не."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А батьки́? Зві́дки вони́?",
+     "de": "Und die Eltern? Woher kommen sie?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Мої́ батьки́ з Німе́ччини.",
+       "de": "Meine Eltern sind aus Deutschland."
+      },
+      {
+       "uk": "Мій батьки́ з Німе́ччини.",
+       "de": "(falsche Form)",
+       "feedback_de": "батьки́ ist Plural → мої́."
+      },
+      {
+       "uk": "Моя́ батьки́ з Німе́ччини.",
+       "de": "(falsche Form)",
+       "feedback_de": "моя́ steht bei f. Sg.; батьки́ ist Plural → мої́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А в ме́не є син.",
+     "de": "Und ich habe einen Sohn."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Як його́ зва́ти?",
+       "de": "Wie heißt er?"
+      },
+      {
+       "uk": "Як її́ зва́ти?",
+       "de": "Wie heißt sie?",
+       "feedback_de": "Es geht um den Sohn → його́."
+      },
+      {
+       "uk": "Як тебе́ зва́ти?",
+       "de": "Wie heißt du?",
+       "feedback_de": "Frau Natalija wird gesiezt, und gefragt ist nach dem Sohn → його́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Петро́. Ось він на фо́то.",
+     "de": "Petro. Hier ist er auf dem Foto."
+    }
+   ]
+  },
+  {
+   "id": "e57",
+   "type": "order_dialog",
+   "vocab": [
+    "u_mene_ie",
+    "ie",
+    "dity",
+    "dochka",
+    "kit",
+    "try"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "У вас є ді́ти?",
+     "de": "Haben Sie Kinder?"
+    },
+    {
+     "uk": "Так, у ме́не є дочка́. А у вас?",
+     "de": "Ja, ich habe eine Tochter. Und Sie?"
+    },
+    {
+     "uk": "Ні. Але́ в ме́не є кіт.",
+     "de": "Nein. Aber ich habe eine Katze."
+    },
+    {
+     "uk": "О! Скі́льки йому́ ро́ків?",
+     "de": "Oh! Wie alt ist er?"
+    },
+    {
+     "uk": "Йому́ три ро́ки.",
+     "de": "Er ist drei Jahre alt."
+    }
+   ]
+  },
+  {
+   "id": "e58",
+   "type": "speak",
+   "vocab": [
+    "khto",
+    "tse"
+   ],
+   "difficulty": 1,
+   "uk": "Хто це на фо́то?",
+   "de": "Wer ist das auf dem Foto?"
+  },
+  {
+   "id": "e59",
+   "type": "chat",
+   "vocab": [
+    "batky",
+    "miy",
+    "sestra",
+    "kit",
+    "u_mene_ie",
+    "ie",
+    "brat",
+    "yoho"
+   ],
+   "difficulty": 3,
+   "scenario_de": "Im Café sieht Taras ein Foto auf deinem Handy. Ziel: erklären, wer darauf ist, und nach seiner Familie fragen.",
+   "partner": {
+    "name": "Тара́с",
+    "emoji": "👨"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Приві́т! Хто це на фо́то?",
+     "de": "Hallo! Wer ist das auf dem Foto?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Це мої́ батьки́ й моя́ сестра́.",
+       "de": "Das sind meine Eltern und meine Schwester."
+      },
+      {
+       "uk": "Це мій батьки́ й моя́ сестра́.",
+       "de": "(falsche Form)",
+       "feedback_de": "батьки́ ist Plural → мої́."
+      },
+      {
+       "uk": "Це мої́ батьки́ й мій сестра́.",
+       "de": "(falsche Form)",
+       "feedback_de": "сестра́ endet auf -а → f. → моя́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А в те́бе є кіт?",
+     "de": "Und hast du eine Katze?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Ні. А в те́бе?",
+       "de": "Nein. Und du?"
+      },
+      {
+       "uk": "Так, у те́бе є кіт.",
+       "de": "Ja, du hast eine Katze.",
+       "feedback_de": "у те́бе = du hast; über dich selbst: у ме́не."
+      },
+      {
+       "uk": "Ні, це твій кіт.",
+       "de": "Nein, das ist deine Katze.",
+       "feedback_de": "Passt nicht: Taras fragt, ob du eine Katze hast."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А в ме́не є брат. Йому́ п’ятна́дцять ро́ків.",
+     "de": "Ich habe einen Bruder. Er ist fünfzehn."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Як його́ зва́ти?",
+       "de": "Wie heißt er?"
+      },
+      {
+       "uk": "Як її́ зва́ти?",
+       "de": "Wie heißt sie?",
+       "feedback_de": "Es geht um den Bruder → його́."
+      },
+      {
+       "uk": "Скі́льки йому́ ро́ків?",
+       "de": "Wie alt ist er?",
+       "feedback_de": "Das Alter hat Taras gerade gesagt."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Богда́н.",
+     "de": "Bohdan."
+    }
+   ]
+  },
+  {
+   "id": "e60",
+   "type": "order_dialog",
+   "vocab": [
+    "khto",
+    "batky",
+    "miy",
+    "vony",
+    "ukraina",
+    "nimechchyna"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Хто це на фо́то?",
+     "de": "Wer ist das auf dem Foto?"
+    },
+    {
+     "uk": "Це мої́ батьки́.",
+     "de": "Das sind meine Eltern."
+    },
+    {
+     "uk": "Вони́ з Украї́ни?",
+     "de": "Kommen sie aus der Ukraine?"
+    },
+    {
+     "uk": "Ні, вони́ з Німе́ччини.",
+     "de": "Nein, sie kommen aus Deutschland."
+    }
+   ]
+  }
+ ]
 }

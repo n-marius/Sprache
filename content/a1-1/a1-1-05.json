@@ -213,7 +213,7 @@
    },
    {
     "heading_de": "у oder в? Die Wohlklangregel",
-    "body_de": "**у** und **в** bedeuten dasselbe; man wählt, was sich leichter sprechen lässt. **в** steht nach einem Vokal und vor einem Vokal: **Я живу́ в Берлі́ні. Вона́ живе́ в Украї́ні.** **у** steht zwischen Konsonanten und am Satzanfang vor einem Konsonanten: **Ти живе́ш у Ки́єві? У Берлі́ні.** Vor **в, ф, льв, св, тв, хв** steht immer **у**: **у Льво́ві**. Genauso wechselt **вдо́ма / удо́ма**; nach Vokal heißt es **вдо́ма**.\n\nDasselbe Prinzip gilt für „und“: nach Vokal **й**, nach Konsonant **і**: **Окса́на й Андрі́й**, **Тара́с і Окса́на**."
+    "body_de": "**у** und **в** bedeuten dasselbe; man wählt, was sich leichter sprechen lässt. **в** steht nach einem Vokal und vor einem Vokal: **Я живу́ в Берлі́ні. Вона́ живе́ в Украї́ні.** **у** steht zwischen Konsonanten und am Satzanfang vor einem Konsonanten: **Ти живе́ш у Ки́єві? У Берлі́ні.** Vor **в-, ф-, льв-, св-, тв-, хв-** steht immer **у**: **у Льво́ві**. Genauso wechselt **вдо́ма / удо́ма**; nach Vokal heißt es **вдо́ма**.\n\nDasselbe Prinzip gilt für „und“: nach Vokal **й**, nach Konsonant **і**: **Окса́на й Андрі́й**, **Тара́с і Окса́на**."
    },
    {
     "heading_de": "Sprachen sprechen und lernen; „wissen“",
@@ -239,7 +239,7 @@
    "-ува́ти wird zu -у-: працюва́ти → працю́ю, працю́єш.",
    "жи́ти: живу́, живе́ш, живе́, живемо́, живете́, живу́ть – Endung betont.",
    "Ortsangaben wie у Ки́єві, в Берлі́ні, на ву́лиці als Ganzes lernen (Lokativ: Lektion 9).",
-   "в nach/vor Vokal, у zwischen Konsonanten, am Satzanfang vor Konsonant und vor в, ф, льв.",
+   "в nach/vor Vokal, у zwischen Konsonanten, am Satzanfang vor Konsonant und vor в-, ф-, льв-.",
    "Sprache lernen: вивча́ти украї́нську мо́ву (feste Wendung); sprechen: розмовля́ти украї́нською."
   ]
  },
@@ -292,7 +292,7 @@
   },
   {
    "title_de": "у oder в?",
-   "body_de": "Nach oder vor Vokal **в**; zwischen Konsonanten und am Satzanfang vor Konsonant **у**; vor **в, ф, льв** immer **у**. Ortsangaben als Ganzes lernen.",
+   "body_de": "Nach oder vor Vokal **в**; zwischen Konsonanten und am Satzanfang vor Konsonant **у**; vor **в-, ф-, льв-** immer **у**. Ortsangaben als Ganzes lernen.",
    "examples": [
     {
      "uk": "Вона́ живе́ в Берлі́ні.",
@@ -891,7 +891,7 @@
    "lemma": "кафе́",
    "de": "Café",
    "pos": "noun",
-   "info": "n., unveränderlich (в кафе́ – im Café)"
+   "info": "n., unveränderlich (в кафе́ = dort, im Lokal)"
   },
   {
    "uk": "моя́",
@@ -929,6 +929,20 @@
    "info": "Nom. Pl. · m. твій"
   },
   {
+   "uk": "вже",
+   "lemma": "вже",
+   "de": "schon",
+   "pos": "adv",
+   "info": "Adv.; nach Konsonant auch уже́"
+  },
+  {
+   "uk": "уже́",
+   "lemma": "уже́",
+   "de": "schon",
+   "pos": "adv",
+   "info": "Variante von вже (nach Konsonant)"
+  },
+  {
    "uk": "Ба́рсик",
    "lemma": "Ба́рсик",
    "de": "Barsyk (Katername)",
@@ -936,5 +950,1596 @@
    "info": "Name von Oksanas Kater"
   }
  ],
- "exercises": []
+ "exercises": [
+  {
+   "id": "e01",
+   "type": "reading",
+   "vocab": [
+    "de",
+    "zhyty",
+    "pratsiuvaty",
+    "tut",
+    "kyiv",
+    "berlin",
+    "lviv",
+    "chytaty",
+    "vyvchaty",
+    "zaraz",
+    "sestra",
+    "batky"
+   ],
+   "difficulty": 1,
+   "title_uk": "Хто де живе́?",
+   "text_uk": "Окса́на: Де ти за́раз живе́ш?\nМа́ркус: Я живу́ тут, у Ки́єві, а моя́ сестра́ Ю́лія живе́ в Берлі́ні. А ти?\nОкса́на: Я живу́ й працю́ю в Ки́єві, але́ я зі Льво́ва. Мої́ батьки́ живу́ть у Льво́ві.\nМа́ркус: А Тара́с?\nОкса́на: Тара́с живе́ тут, він студе́нт і вивча́є пра́во. Він працю́є в кафе́ й бага́то чита́є.",
+   "text_de": "Kaffeepause im Büro. Oksana: Wo wohnst du jetzt? – Markus: Ich wohne hier, in Kyjiw, und meine Schwester Julia wohnt in Berlin. Und du? – Oksana: Ich wohne und arbeite in Kyjiw, aber ich komme aus Lwiw. Meine Eltern wohnen in Lwiw. – Markus: Und Taras? – Oksana: Taras wohnt hier, er ist Student und studiert Jura. Er arbeitet im Café und liest viel.",
+   "questions": [
+    {
+     "q_uk": "Де живе́ Ма́ркус?",
+     "q_de": "Wo wohnt Markus?",
+     "kind": "mc",
+     "options": [
+      "У Ки́єві.",
+      "У Льво́ві.",
+      "У Берлі́ні."
+     ]
+    },
+    {
+     "q_uk": "Ю́лія живе́ в Ки́єві.",
+     "q_de": "Julia wohnt in Kyjiw.",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Окса́на: «Мої́ батьки́ живу́ть …»",
+     "q_de": "Oksana: „Meine Eltern wohnen …“",
+     "kind": "mc",
+     "options": [
+      "у Льво́ві.",
+      "у Ки́єві.",
+      "у Берлі́ні."
+     ]
+    },
+    {
+     "q_uk": "Хто вивча́є пра́во?",
+     "q_de": "Wer studiert Jura?",
+     "kind": "mc",
+     "options": [
+      "Тара́с.",
+      "Ма́ркус.",
+      "Окса́на."
+     ]
+    },
+    {
+     "q_uk": "Тара́с працю́є в кафе́.",
+     "q_de": "Taras arbeitet im Café.",
+     "kind": "tf",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "type": "true_false",
+   "vocab": [
+    "zhyty",
+    "kyiv",
+    "lviv",
+    "batky"
+   ],
+   "difficulty": 1,
+   "context_uk": "Окса́на: Я живу́ й працю́ю в Ки́єві, але́ я зі Льво́ва. Мої́ батьки́ живу́ть у Льво́ві.",
+   "context_de": "Oksana: Ich wohne und arbeite in Kyjiw, aber ich komme aus Lwiw. Meine Eltern wohnen in Lwiw.",
+   "statement_uk": "Окса́на живе́ у Льво́ві.",
+   "answer": false,
+   "explanation_de": "Oksana stammt aus Lwiw (зі Льво́ва), wohnt aber in Kyjiw (живе́ в Ки́єві). In Lwiw wohnen ihre Eltern."
+  },
+  {
+   "id": "e03",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "zhyty",
+    "tut",
+    "vyvchaty"
+   ],
+   "difficulty": 1,
+   "prompt": "Тара́с живе́ тут, він студе́нт і вивча́є пра́во.",
+   "options": [
+    "Taras wohnt hier, er ist Student und studiert Jura.",
+    "Taras arbeitet hier, er ist Student und liest viel.",
+    "Taras wohnt hier, er ist Student und lernt Deutsch.",
+    "Taras wohnt in Lwiw, er ist Student und studiert Jura."
+   ]
+  },
+  {
+   "id": "e04",
+   "type": "picture_choice",
+   "vocab": [
+    "knyzhka"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "кни́жка",
+   "options": [
+    {
+     "emoji": "📕",
+     "de": "Buch"
+    },
+    {
+     "emoji": "🏙️",
+     "de": "Stadt"
+    },
+    {
+     "emoji": "🏠",
+     "de": "Haus"
+    },
+    {
+     "emoji": "🐈",
+     "de": "Katze"
+    }
+   ]
+  },
+  {
+   "id": "e05",
+   "type": "picture_choice",
+   "vocab": [
+    "misto"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "мі́сто",
+   "options": [
+    {
+     "emoji": "🏙️",
+     "de": "Stadt"
+    },
+    {
+     "emoji": "📕",
+     "de": "Buch"
+    },
+    {
+     "emoji": "🇺🇦",
+     "de": "Ukraine"
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "de": "Familie"
+    }
+   ]
+  },
+  {
+   "id": "e06",
+   "type": "match_pairs",
+   "vocab": [
+    "zhyty",
+    "pratsiuvaty",
+    "znaty",
+    "chytaty",
+    "vyvchaty",
+    "rozmovliaty"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "жи́ти",
+     "de": "wohnen, leben"
+    },
+    {
+     "uk": "працюва́ти",
+     "de": "arbeiten"
+    },
+    {
+     "uk": "зна́ти",
+     "de": "wissen"
+    },
+    {
+     "uk": "чита́ти",
+     "de": "lesen"
+    },
+    {
+     "uk": "вивча́ти",
+     "de": "lernen, studieren"
+    },
+    {
+     "uk": "розмовля́ти",
+     "de": "sprechen (eine Sprache)"
+    }
+   ]
+  },
+  {
+   "id": "e07",
+   "type": "match_pairs",
+   "vocab": [
+    "zhyty"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "я живу́",
+     "de": "ich wohne"
+    },
+    {
+     "uk": "ти живе́ш",
+     "de": "du wohnst"
+    },
+    {
+     "uk": "вона́ живе́",
+     "de": "sie wohnt"
+    },
+    {
+     "uk": "ми живемо́",
+     "de": "wir wohnen"
+    },
+    {
+     "uk": "ви живете́",
+     "de": "ihr wohnt / Sie wohnen"
+    },
+    {
+     "uk": "вони́ живу́ть",
+     "de": "sie wohnen (mehrere)"
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "type": "cloze",
+   "vocab": [
+    "zhyty",
+    "pratsiuvaty",
+    "kyiv"
+   ],
+   "difficulty": 1,
+   "text": "Окса́на: Я {{живу́}} й {{працю́ю}} в Ки́єві.",
+   "options": [
+    [
+     "живу́",
+     "живе́",
+     "живе́ш"
+    ],
+    [
+     "працю́ю",
+     "працю́є",
+     "працю́ють"
+    ]
+   ],
+   "translation_de": "Oksana: Ich wohne und arbeite in Kyjiw."
+  },
+  {
+   "id": "e09",
+   "type": "cloze",
+   "vocab": [
+    "zhyty",
+    "lviv",
+    "batky",
+    "miy"
+   ],
+   "difficulty": 1,
+   "text": "Мої́ батьки́ {{живу́ть}} у Льво́ві.",
+   "options": [
+    [
+     "живу́ть",
+     "живе́",
+     "живемо́"
+    ]
+   ],
+   "translation_de": "Meine Eltern wohnen in Lwiw."
+  },
+  {
+   "id": "e10",
+   "type": "cloze",
+   "vocab": [
+    "chytaty"
+   ],
+   "difficulty": 1,
+   "text": "Тара́с бага́то {{чита́є}}.",
+   "options": [
+    [
+     "чита́є",
+     "чита́ю",
+     "чита́ють"
+    ]
+   ],
+   "translation_de": "Taras liest viel."
+  },
+  {
+   "id": "e11",
+   "type": "picture_choice",
+   "vocab": [
+    "zhyty",
+    "nimechchyna"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Він живе́ в Німе́ччині.",
+   "options": [
+    {
+     "emoji": "🇩🇪",
+     "de": "Er wohnt in Deutschland."
+    },
+    {
+     "emoji": "🇺🇦",
+     "de": "Er wohnt in der Ukraine."
+    },
+    {
+     "emoji": "🇦🇹",
+     "de": "Er wohnt in Österreich."
+    },
+    {
+     "emoji": "🇵🇱",
+     "de": "Er wohnt in Polen."
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "type": "picture_choice",
+   "vocab": [
+    "chytaty"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Я чита́ю.",
+   "options": [
+    {
+     "emoji": "📖",
+     "de": "Ich lese."
+    },
+    {
+     "emoji": "💻",
+     "de": "Ich arbeite (am Computer)."
+    },
+    {
+     "emoji": "🗣️",
+     "de": "Ich spreche."
+    },
+    {
+     "emoji": "🏠",
+     "de": "Ich bin zu Hause."
+    }
+   ]
+  },
+  {
+   "id": "e13",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "pratsiuvaty",
+    "vdoma"
+   ],
+   "difficulty": 1,
+   "prompt": "Ich arbeite zu Hause.",
+   "options": [
+    "Я працю́ю вдо́ма.",
+    "Ви працю́єте вдо́ма.",
+    "Я працю́ю там.",
+    "Він працю́є вдо́ма."
+   ]
+  },
+  {
+   "id": "e14",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "de",
+    "zhyty"
+   ],
+   "difficulty": 1,
+   "prompt": "Wo wohnen Sie?",
+   "options": [
+    "Де ви живете́?",
+    "Де ти живе́ш?",
+    "Зві́дки ви?",
+    "Де ви працю́єте?"
+   ]
+  },
+  {
+   "id": "e15",
+   "type": "cloze",
+   "vocab": [
+    "zhyty",
+    "lviv",
+    "kyiv",
+    "brat",
+    "sestra"
+   ],
+   "difficulty": 2,
+   "text": "Мій брат живе́ {{у}} Льво́ві, а сестра́ живе́ {{в}} Ки́єві.",
+   "options": [
+    [
+     "у",
+     "в"
+    ],
+    [
+     "в",
+     "у"
+    ]
+   ],
+   "translation_de": "Mein Bruder wohnt in Lwiw, und meine Schwester wohnt in Kyjiw.",
+   "hint_de": "Vor льв- immer у; nach einem Vokal (живе́) vor Konsonant в."
+  },
+  {
+   "id": "e16",
+   "type": "cloze",
+   "vocab": [
+    "zhyty",
+    "berlin"
+   ],
+   "difficulty": 2,
+   "text": "Ти живе́ш {{у}} Берлі́ні?",
+   "options": [
+    [
+     "у",
+     "в"
+    ]
+   ],
+   "translation_de": "Wohnst du in Berlin?",
+   "hint_de": "живе́ш endet auf einen Konsonanten, Берлі́ні beginnt mit einem Konsonanten."
+  },
+  {
+   "id": "e17",
+   "type": "cloze",
+   "vocab": [
+    "rozmovliaty",
+    "ukrainskoiu"
+   ],
+   "difficulty": 1,
+   "text": "Окса́на й Андрі́й {{розмовля́ють}} украї́нською.",
+   "options": [
+    [
+     "розмовля́ють",
+     "розмовля́є",
+     "розмовля́ємо"
+    ]
+   ],
+   "translation_de": "Oksana und Andrij sprechen Ukrainisch."
+  },
+  {
+   "id": "e18",
+   "type": "cloze",
+   "vocab": [
+    "rozumity"
+   ],
+   "difficulty": 2,
+   "text": "– Ви {{розумі́єте}}? – Так, ми {{розумі́ємо}}.",
+   "options": [
+    [
+     "розумі́єте",
+     "розумі́ємо",
+     "розумі́ють"
+    ],
+    [
+     "розумі́ємо",
+     "розумі́єте",
+     "розумі́є"
+    ]
+   ],
+   "translation_de": "– Versteht ihr? – Ja, wir verstehen."
+  },
+  {
+   "id": "e19",
+   "type": "cloze",
+   "vocab": [
+    "vyvchaty",
+    "mova",
+    "ukrainskyi",
+    "shcho"
+   ],
+   "difficulty": 2,
+   "text": "– Що ви {{вивча́єте}}? – Ми {{вивча́ємо}} украї́нську мо́ву.",
+   "options": [
+    [
+     "вивча́єте",
+     "вивча́ємо",
+     "вивча́ють"
+    ],
+    [
+     "вивча́ємо",
+     "вивча́єте",
+     "вивча́є"
+    ]
+   ],
+   "translation_de": "– Was lernt ihr? – Wir lernen Ukrainisch."
+  },
+  {
+   "id": "e20",
+   "type": "cloze",
+   "vocab": [
+    "znaty",
+    "de",
+    "zhyty"
+   ],
+   "difficulty": 2,
+   "text": "– Ти {{зна́єш}}, де живе́ Тара́с? – Ні, я не {{зна́ю}}.",
+   "options": [
+    [
+     "зна́єш",
+     "зна́є",
+     "зна́ємо"
+    ],
+    [
+     "зна́ю",
+     "зна́єш",
+     "зна́ють"
+    ]
+   ],
+   "translation_de": "– Weißt du, wo Taras wohnt? – Nein, ich weiß es nicht."
+  },
+  {
+   "id": "e21",
+   "type": "cloze",
+   "vocab": [
+    "knyzhka",
+    "de",
+    "tam",
+    "miy"
+   ],
+   "difficulty": 1,
+   "text": "– Де {{моя́}} кни́жка? – Там.",
+   "options": [
+    [
+     "моя́",
+     "мій",
+     "моє́"
+    ]
+   ],
+   "translation_de": "– Wo ist mein Buch? – Dort.",
+   "hint_de": "кни́жка endet auf -а: feminin."
+  },
+  {
+   "id": "e22",
+   "type": "cloze",
+   "vocab": [
+    "kraina",
+    "misto",
+    "berlin",
+    "nimechchyna"
+   ],
+   "difficulty": 1,
+   "text": "Німе́ччина – {{краї́на}}, а Берлі́н – {{мі́сто}}.",
+   "options": [
+    [
+     "краї́на",
+     "мі́сто",
+     "ву́лиця"
+    ],
+    [
+     "мі́сто",
+     "краї́на",
+     "кни́жка"
+    ]
+   ],
+   "translation_de": "Deutschland ist ein Land, und Berlin ist eine Stadt."
+  },
+  {
+   "id": "e23",
+   "type": "match_pairs",
+   "vocab": [
+    "tut",
+    "tam",
+    "zaraz",
+    "vdoma",
+    "de",
+    "zvidky"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "тут",
+     "de": "hier"
+    },
+    {
+     "uk": "там",
+     "de": "dort"
+    },
+    {
+     "uk": "за́раз",
+     "de": "jetzt"
+    },
+    {
+     "uk": "вдо́ма",
+     "de": "zu Hause"
+    },
+    {
+     "uk": "де",
+     "de": "wo"
+    },
+    {
+     "uk": "зві́дки",
+     "de": "woher"
+    }
+   ]
+  },
+  {
+   "id": "e24",
+   "type": "match_pairs",
+   "vocab": [
+    "misto",
+    "kraina",
+    "vulytsia",
+    "knyzhka",
+    "mova",
+    "simia"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "мі́сто",
+     "de": "Stadt"
+    },
+    {
+     "uk": "краї́на",
+     "de": "Land (Staat)"
+    },
+    {
+     "uk": "ву́лиця",
+     "de": "Straße"
+    },
+    {
+     "uk": "кни́жка",
+     "de": "Buch"
+    },
+    {
+     "uk": "мо́ва",
+     "de": "Sprache"
+    },
+    {
+     "uk": "сім’я́",
+     "de": "Familie"
+    }
+   ]
+  },
+  {
+   "id": "e25",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "zhyty",
+    "kyiv",
+    "vony"
+   ],
+   "difficulty": 1,
+   "prompt": "Вони́ живу́ть у Ки́єві.",
+   "options": [
+    "Sie (mehrere) wohnen in Kyjiw.",
+    "Sie (eine Frau) wohnt in Kyjiw.",
+    "Wir wohnen in Kyjiw.",
+    "Sie (mehrere) arbeiten in Kyjiw."
+   ]
+  },
+  {
+   "id": "e26",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "vyvchaty",
+    "mova",
+    "ukrainskyi"
+   ],
+   "difficulty": 1,
+   "prompt": "Ich lerne Ukrainisch.",
+   "options": [
+    "Я вивча́ю украї́нську мо́ву.",
+    "Я розмовля́ю украї́нською.",
+    "Я чита́ю украї́нською.",
+    "Він вивча́є украї́нську мо́ву."
+   ]
+  },
+  {
+   "id": "e27",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "znaty",
+    "de",
+    "pratsiuvaty"
+   ],
+   "difficulty": 2,
+   "prompt": "Ти зна́єш, де він працю́є?",
+   "options": [
+    "Weißt du, wo er arbeitet?",
+    "Weißt du, wo er wohnt?",
+    "Weiß er, wo du arbeitest?",
+    "Weißt du, woher er kommt?"
+   ]
+  },
+  {
+   "id": "e28",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "rozmovliaty",
+    "ukrainskoiu",
+    "my"
+   ],
+   "difficulty": 1,
+   "prompt": "Wir sprechen Ukrainisch.",
+   "options": [
+    "Ми розмовля́ємо украї́нською.",
+    "Ми вивча́ємо украї́нську мо́ву.",
+    "Ви розмовля́єте украї́нською.",
+    "Вони́ розмовля́ють украї́нською."
+   ]
+  },
+  {
+   "id": "e29",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "vulytsia",
+    "zaraz"
+   ],
+   "difficulty": 2,
+   "prompt": "Софі́я за́раз на ву́лиці.",
+   "options": [
+    "Sofija ist gerade draußen.",
+    "Sofija ist gerade zu Hause.",
+    "Sofija wohnt in der Stadt.",
+    "Sofija ist gerade in Kyjiw."
+   ]
+  },
+  {
+   "id": "e30",
+   "type": "true_false",
+   "vocab": [
+    "zhyty",
+    "berlin",
+    "nimechchyna",
+    "sestra"
+   ],
+   "difficulty": 2,
+   "context_uk": "Ма́ркус: Я живу́ тут, у Ки́єві, а моя́ сестра́ Ю́лія живе́ в Берлі́ні.",
+   "context_de": "Markus: Ich wohne hier, in Kyjiw, und meine Schwester Julia wohnt in Berlin.",
+   "statement_uk": "Ю́лія живе́ в Німе́ччині.",
+   "answer": true,
+   "explanation_de": "Julia wohnt in Berlin – und Berlin liegt in Deutschland (в Німе́ччині)."
+  },
+  {
+   "id": "e31",
+   "type": "true_false",
+   "vocab": [
+    "vyvchaty",
+    "chytaty",
+    "mova",
+    "ukrainskyi"
+   ],
+   "difficulty": 2,
+   "context_uk": "Тара́с: Я студе́нт. Я вивча́ю пра́во й бага́то чита́ю.",
+   "context_de": "Taras: Ich bin Student. Ich studiere Jura und lese viel.",
+   "statement_uk": "Тара́с вивча́є украї́нську мо́ву.",
+   "answer": false,
+   "explanation_de": "Taras studiert Jura (вивча́є пра́во). Ukrainisch lernt Markus."
+  },
+  {
+   "id": "e32",
+   "type": "true_false",
+   "vocab": [
+    "vulytsia",
+    "vdoma",
+    "pratsiuvaty",
+    "zaraz"
+   ],
+   "difficulty": 2,
+   "context_uk": "Окса́на: Андрі́й працю́є вдо́ма, а Софі́я за́раз на ву́лиці.",
+   "context_de": "Oksana: Andrij arbeitet zu Hause, und Sofija ist gerade draußen.",
+   "statement_uk": "Софі́я вдо́ма.",
+   "answer": false,
+   "explanation_de": "Sofija ist draußen (на ву́лиці); zu Hause (вдо́ма) arbeitet Andrij."
+  },
+  {
+   "id": "e33",
+   "type": "reading",
+   "vocab": [
+    "zhyty",
+    "pratsiuvaty",
+    "kyiv",
+    "berlin",
+    "rozmovliaty",
+    "vyvchaty",
+    "mova",
+    "ukrainskyi",
+    "chytaty",
+    "rozumity",
+    "zaraz",
+    "batky",
+    "sestra"
+   ],
+   "difficulty": 2,
+   "title_uk": "Ма́ркус",
+   "text_uk": "Це Ма́ркус Шмідт. Він з Німе́ччини, але́ за́раз живе́ й працю́є в Ки́єві. Його́ батьки́ й сестра́ Ю́лія живу́ть у Берлі́ні. Ма́ркус розмовля́є німе́цькою й англі́йською. Він вивча́є украї́нську мо́ву. Він уже́ тро́хи чита́є украї́нською, але́ не все розумі́є.",
+   "text_de": "Das ist Markus Schmidt. Er kommt aus Deutschland, aber jetzt wohnt und arbeitet er in Kyjiw. Seine Eltern und seine Schwester Julia wohnen in Berlin. Markus spricht Deutsch und Englisch. Er lernt Ukrainisch. Er liest schon ein bisschen auf Ukrainisch, aber er versteht nicht alles.",
+   "questions": [
+    {
+     "q_uk": "Де живе́ Ю́лія?",
+     "q_de": "Wo wohnt Julia?",
+     "kind": "mc",
+     "options": [
+      "У Берлі́ні.",
+      "У Ки́єві.",
+      "У Льво́ві."
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус вивча́є німе́цьку мо́ву.",
+     "q_de": "Markus lernt Deutsch.",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Що вивча́є Ма́ркус?",
+     "q_de": "Was lernt Markus?",
+     "kind": "mc",
+     "options": [
+      "Украї́нську мо́ву.",
+      "Німе́цьку мо́ву.",
+      "Англі́йську мо́ву."
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус уже́ все розумі́є.",
+     "q_de": "Markus versteht schon alles.",
+     "kind": "tf",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "id": "e34",
+   "type": "reading",
+   "vocab": [
+    "zhyty",
+    "kyiv",
+    "pratsiuvaty",
+    "vdoma",
+    "chytaty",
+    "tut",
+    "cholovik",
+    "dochka",
+    "kit"
+   ],
+   "difficulty": 2,
+   "title_uk": "Окса́на й сім’я́",
+   "text_uk": "Це Окса́на, її́ чолові́к Андрі́й і дочка́ Софі́я. Вони́ живу́ть у Ки́єві. Андрі́й працю́є вдо́ма. Софі́я? Їй сім ро́ків, і вона́ вже чита́є! А це кіт Ба́рсик. Він теж живе́ тут.",
+   "text_de": "Das sind Oksana, ihr Mann Andrij und ihre Tochter Sofija. Sie wohnen in Kyjiw. Andrij arbeitet zu Hause. Und Sofija? Sie ist sieben Jahre alt und liest schon! Und das ist der Kater Barsyk. Er wohnt auch hier.",
+   "questions": [
+    {
+     "q_uk": "Хто працю́є вдо́ма?",
+     "q_de": "Wer arbeitet zu Hause?",
+     "kind": "mc",
+     "options": [
+      "Андрі́й.",
+      "Окса́на.",
+      "Софі́я."
+     ]
+    },
+    {
+     "q_uk": "Їй сім ро́ків. Хто це?",
+     "q_de": "Sie ist sieben Jahre alt. Wer ist das?",
+     "kind": "mc",
+     "options": [
+      "Софі́я.",
+      "Окса́на.",
+      "Ба́рсик."
+     ]
+    },
+    {
+     "q_uk": "Софі́я вже чита́є.",
+     "q_de": "Sofija liest schon.",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Ба́рсик живе́ у Льво́ві.",
+     "q_de": "Barsyk wohnt in Lwiw.",
+     "kind": "tf",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "id": "e35",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "zhyty",
+    "berlin"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Я живу́ в Берлі́ні.",
+   "options": [
+    "Ich wohne in Berlin.",
+    "Ich arbeite in Berlin.",
+    "Er wohnt in Berlin.",
+    "Ich komme aus Berlin."
+   ]
+  },
+  {
+   "id": "e36",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "zhyty",
+    "lviv",
+    "kyiv"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Він живе́ у Льво́ві.",
+   "options": [
+    "Він живе́ у Льво́ві.",
+    "Вони́ живу́ть у Льво́ві.",
+    "Він живе́ в Ки́єві.",
+    "Ви живете́ у Льво́ві."
+   ]
+  },
+  {
+   "id": "e37",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "de",
+    "zaraz",
+    "vdoma"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Де ти за́раз? – Я вдо́ма.",
+   "options": [
+    "Wo bist du jetzt? – Ich bin zu Hause.",
+    "Wo wohnst du? – Ich wohne hier.",
+    "Wo arbeitest du? – Zu Hause.",
+    "Wo bist du jetzt? – Ich bin dort."
+   ]
+  },
+  {
+   "id": "e38",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "de",
+    "pratsiuvaty"
+   ],
+   "difficulty": 1,
+   "prompt": "Wo arbeitest du?",
+   "answer": "Де ти працю́єш?",
+   "accept": [
+    "Ти де працю́єш?"
+   ],
+   "distractors": [
+    "працю́ю",
+    "зві́дки"
+   ]
+  },
+  {
+   "id": "e39",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "zhyty",
+    "kyiv",
+    "simia",
+    "miy"
+   ],
+   "difficulty": 2,
+   "prompt": "Meine Familie wohnt in Kyjiw.",
+   "answer": "Моя́ сім’я́ живе́ в Ки́єві.",
+   "distractors": [
+    "живу́ть",
+    "моє́"
+   ]
+  },
+  {
+   "id": "e40",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "znaty",
+    "de",
+    "zhyty"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Я не зна́ю, де вона́ живе́.",
+   "answer": "Я не зна́ю, де вона́ живе́.",
+   "distractors": [
+    "зна́єш",
+    "живу́"
+   ]
+  },
+  {
+   "id": "e41",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "vyvchaty",
+    "mova",
+    "ukrainskyi",
+    "my"
+   ],
+   "difficulty": 2,
+   "prompt": "Wir lernen Ukrainisch.",
+   "answer": "Ми вивча́ємо украї́нську мо́ву.",
+   "distractors": [
+    "вивча́ють",
+    "украї́нською"
+   ]
+  },
+  {
+   "id": "e42",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "pratsiuvaty",
+    "tut",
+    "tam"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Ми працю́ємо тут.",
+   "options": [
+    "Ми працю́ємо тут.",
+    "Ви працю́єте тут.",
+    "Ми працю́ємо там.",
+    "Вони́ працю́ють тут."
+   ]
+  },
+  {
+   "id": "e43",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "zhyty",
+    "tut"
+   ],
+   "difficulty": 2,
+   "prompt": "Wohnt ihr hier?",
+   "answer": "Ви живете́ тут?",
+   "accept": [
+    "Ви тут живете́?"
+   ],
+   "distractors": [
+    "живемо́",
+    "там"
+   ]
+  },
+  {
+   "id": "e44",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "zhyty",
+    "nimechchyna",
+    "sestra",
+    "miy"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Моя́ сестра́ живе́ в Німе́ччині.",
+   "options": [
+    "Meine Schwester wohnt in Deutschland.",
+    "Meine Schwester arbeitet in Deutschland.",
+    "Mein Bruder wohnt in Deutschland.",
+    "Meine Schwester wohnt in der Ukraine."
+   ]
+  },
+  {
+   "id": "e45",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "znaty",
+    "de",
+    "pratsiuvaty"
+   ],
+   "difficulty": 2,
+   "prompt": "Weißt du, wo Oksana arbeitet?",
+   "answer": "Ти зна́єш, де працю́є Окса́на?",
+   "accept": [
+    "Ти зна́єш, де Окса́на працю́є?"
+   ],
+   "distractors": [
+    "зна́ю",
+    "живе́"
+   ]
+  },
+  {
+   "id": "e46",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "zhyty",
+    "lviv",
+    "brat",
+    "miy"
+   ],
+   "difficulty": 2,
+   "prompt": "Mein Bruder wohnt in Lwiw.",
+   "answer": "Мій брат живе́ у Льво́ві.",
+   "accept": [
+    "У Льво́ві живе́ мій брат."
+   ],
+   "distractors": [
+    "живу́",
+    "моя́"
+   ]
+  },
+  {
+   "id": "e47",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "chytaty",
+    "pratsiuvaty",
+    "vin",
+    "vona"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Він чита́є, а вона́ працю́є.",
+   "answer": "Він чита́є, а вона́ працю́є.",
+   "distractors": [
+    "чита́ють",
+    "працю́ю"
+   ]
+  },
+  {
+   "id": "e48",
+   "type": "build_sentence",
+   "dir": "uk-de",
+   "vocab": [
+    "pratsiuvaty",
+    "vdoma",
+    "cholovik"
+   ],
+   "difficulty": 1,
+   "prompt": "Мій чолові́к працю́є вдо́ма.",
+   "answer": "Mein Mann arbeitet zu Hause.",
+   "distractors": [
+    "wohnt",
+    "Bruder"
+   ]
+  },
+  {
+   "id": "e49",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "de",
+    "pratsiuvaty",
+    "tut"
+   ],
+   "difficulty": 3,
+   "prompt": "Wo arbeitet ihr? – Wir arbeiten hier.",
+   "answer": "Де ви працю́єте? – Ми працю́ємо тут.",
+   "accept": [
+    "Де ви працю́єте? – Ми тут працю́ємо."
+   ],
+   "distractors": [
+    "працю́ють",
+    "там"
+   ]
+  },
+  {
+   "id": "e50",
+   "type": "speak",
+   "vocab": [
+    "zhyty",
+    "pratsiuvaty",
+    "kyiv"
+   ],
+   "difficulty": 1,
+   "uk": "Я живу́ й працю́ю в Ки́єві.",
+   "de": "Ich wohne und arbeite in Kyjiw."
+  },
+  {
+   "id": "e51",
+   "type": "speak",
+   "vocab": [
+    "de",
+    "zhyty"
+   ],
+   "difficulty": 1,
+   "uk": "Де ви живете́?",
+   "de": "Wo wohnen Sie?"
+  },
+  {
+   "id": "e52",
+   "type": "speak",
+   "vocab": [
+    "pratsiuvaty",
+    "vdoma"
+   ],
+   "difficulty": 1,
+   "uk": "Я працю́ю вдо́ма.",
+   "de": "Ich arbeite zu Hause."
+  },
+  {
+   "id": "e53",
+   "type": "speak",
+   "vocab": [
+    "vyvchaty",
+    "mova",
+    "ukrainskyi"
+   ],
+   "difficulty": 1,
+   "uk": "Я вивча́ю украї́нську мо́ву.",
+   "de": "Ich lerne Ukrainisch."
+  },
+  {
+   "id": "e54",
+   "type": "speak",
+   "vocab": [
+    "znaty",
+    "vybachte"
+   ],
+   "difficulty": 1,
+   "uk": "Ви́бачте, я не зна́ю.",
+   "de": "Entschuldigung, ich weiß es nicht."
+  },
+  {
+   "id": "e55",
+   "type": "speak",
+   "vocab": [
+    "zhyty",
+    "nimechchyna",
+    "batky",
+    "miy"
+   ],
+   "difficulty": 2,
+   "uk": "Мої́ батьки́ живу́ть у Німе́ччині.",
+   "de": "Meine Eltern wohnen in Deutschland."
+  },
+  {
+   "id": "e56",
+   "type": "chat",
+   "vocab": [
+    "zhyty",
+    "tut",
+    "zaraz",
+    "pratsiuvaty",
+    "kyiv",
+    "vyvchaty",
+    "mova",
+    "ukrainskyi",
+    "rozmovliaty"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Im Hausflur spricht dich die Nachbarin Frau Natalija an (sie siezt, du siezt sie auch). Ziel: sagen, dass du hier wohnst, wo du arbeitest und dass du Ukrainisch lernst.",
+   "partner": {
+    "name": "па́ні Ната́лія",
+    "emoji": "👵"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "До́брий день! Ви тут живете́?",
+     "de": "Guten Tag! Wohnen Sie hier?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Так, я за́раз живу́ тут.",
+       "de": "Ja, ich wohne jetzt hier."
+      },
+      {
+       "uk": "Так, ти тут живе́ш.",
+       "de": "Ja, du wohnst hier.",
+       "feedback_de": "Gefragt ist nach dir selbst: я живу́. Außerdem wird Frau Natalija gesiezt."
+      },
+      {
+       "uk": "Так, він живе́ тут.",
+       "de": "Ja, er wohnt hier.",
+       "feedback_de": "він живе́ = er wohnt. Über dich selbst: я живу́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Ду́же приє́мно! А де ви працю́єте?",
+     "de": "Sehr erfreut! Und wo arbeiten Sie?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Я працю́ю тут, у Ки́єві.",
+       "de": "Ich arbeite hier, in Kyjiw."
+      },
+      {
+       "uk": "Я живу́ в Берлі́ні.",
+       "de": "Ich wohne in Berlin.",
+       "feedback_de": "Gefragt war, wo du arbeitest (працю́єте), nicht wo du wohnst."
+      },
+      {
+       "uk": "Ви працю́єте в Ки́єві.",
+       "de": "Sie arbeiten in Kyjiw.",
+       "feedback_de": "ви працю́єте = Sie arbeiten. Über dich selbst: я працю́ю."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Ви ду́же до́бре розмовля́єте украї́нською!",
+     "de": "Sie sprechen sehr gut Ukrainisch!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Дя́кую! Я вивча́ю украї́нську мо́ву.",
+       "de": "Danke! Ich lerne Ukrainisch."
+      },
+      {
+       "uk": "Дя́кую! Я вивча́ю украї́нською.",
+       "de": "Danke! Ich lerne auf Ukrainisch.",
+       "feedback_de": "„Ukrainisch lernen“ ist die feste Wendung вивча́ти украї́нську мо́ву; украї́нською gehört zu розмовля́ти."
+      },
+      {
+       "uk": "Дя́кую! Ти вивча́єш украї́нську мо́ву.",
+       "de": "Danke! Du lernst Ukrainisch.",
+       "feedback_de": "ти вивча́єш = du lernst. Über dich selbst: я вивча́ю."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Молоде́ць! До поба́чення!",
+     "de": "Toll! Auf Wiedersehen!"
+    }
+   ]
+  },
+  {
+   "id": "e57",
+   "type": "chat",
+   "vocab": [
+    "zhyty",
+    "tut",
+    "kyiv",
+    "zaraz",
+    "vyvchaty",
+    "mova",
+    "ukrainskyi",
+    "chytaty",
+    "trokhy"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Pause im Café neben dem Büro. Taras (Student, duzt alle) liest gerade. Ziel: ins Gespräch kommen und erzählen, was du lernst.",
+   "partner": {
+    "name": "Тара́с",
+    "emoji": "🧑"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Приві́т! Ти тут живе́ш, у Ки́єві?",
+     "de": "Hallo! Wohnst du hier, in Kyjiw?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Так, я за́раз живу́ в Ки́єві. А ти?",
+       "de": "Ja, ich wohne jetzt in Kyjiw. Und du?"
+      },
+      {
+       "uk": "Так, ви живете́ в Ки́єві. А ти?",
+       "de": "Ja, Sie wohnen in Kyjiw. Und du?",
+       "feedback_de": "ви живете́ = Sie wohnen / ihr wohnt. Über dich selbst: я живу́."
+      },
+      {
+       "uk": "Так, він живе́ в Ки́єві. А ти?",
+       "de": "Ja, er wohnt in Kyjiw. Und du?",
+       "feedback_de": "він живе́ = er wohnt. Über dich selbst: я живу́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Я теж. Я студе́нт, вивча́ю пра́во.",
+     "de": "Ich auch. Ich bin Student, ich studiere Jura."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "А я вивча́ю украї́нську мо́ву.",
+       "de": "Und ich lerne Ukrainisch."
+      },
+      {
+       "uk": "А я вивча́єш украї́нську мо́ву.",
+       "de": "(falsche Form)",
+       "feedback_de": "Zu я gehört вивча́ю; вивча́єш ist die ти-Form."
+      },
+      {
+       "uk": "А я розмовля́ю украї́нську мо́ву.",
+       "de": "(falsche Verbindung)",
+       "feedback_de": "розмовля́ти steht mit украї́нською (sprechen); украї́нську мо́ву gehört zu вивча́ти (lernen)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Чудо́во! Ти вже чита́єш украї́нською?",
+     "de": "Super! Liest du schon auf Ukrainisch?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Так, тро́хи чита́ю.",
+       "de": "Ja, ich lese ein bisschen."
+      },
+      {
+       "uk": "Так, тро́хи чита́єш.",
+       "de": "Ja, du liest ein bisschen.",
+       "feedback_de": "Über dich selbst: (я) чита́ю, nicht чита́єш."
+      },
+      {
+       "uk": "Так, тро́хи живу́.",
+       "de": "Ja, ich wohne ein bisschen.",
+       "feedback_de": "Gefragt war nach dem Lesen (чита́ти), nicht nach dem Wohnen."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Молоде́ць!",
+     "de": "Klasse!"
+    }
+   ]
+  },
+  {
+   "id": "e58",
+   "type": "chat",
+   "vocab": [
+    "zhyty",
+    "nimechchyna",
+    "berlin",
+    "kyiv",
+    "lviv",
+    "batky",
+    "brat",
+    "u_mene_ie",
+    "miy",
+    "tviy"
+   ],
+   "difficulty": 3,
+   "scenario_de": "Mittagspause mit Oksana (ihr duzt euch). Sie fragt nach deiner Familie. Ziel: sagen, wo deine Familie wohnt, und nachfragen.",
+   "partner": {
+    "name": "Окса́на",
+    "emoji": "👩‍💼"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Де живу́ть твої́ батьки́?",
+     "de": "Wo wohnen deine Eltern?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Мої́ батьки́ живу́ть у Німе́ччині.",
+       "de": "Meine Eltern wohnen in Deutschland."
+      },
+      {
+       "uk": "Мої́ батьки́ живе́ в Німе́ччині.",
+       "de": "(falsche Form)",
+       "feedback_de": "батьки́ ist Plural (= вони́): живу́ть."
+      },
+      {
+       "uk": "Твої́ батьки́ живу́ть у Німе́ччині.",
+       "de": "Deine Eltern wohnen in Deutschland.",
+       "feedback_de": "Über die eigenen Eltern: мої́ батьки́ (meine), nicht твої́ (deine)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А в те́бе є брат чи сестра́?",
+     "de": "Und hast du einen Bruder oder eine Schwester?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Так, у ме́не є брат. Він живе́ в Берлі́ні.",
+       "de": "Ja, ich habe einen Bruder. Er wohnt in Berlin."
+      },
+      {
+       "uk": "Так, у ме́не є брат. Він живу́ в Берлі́ні.",
+       "de": "(falsche Form)",
+       "feedback_de": "Zu він gehört живе́; живу́ ist die я-Form."
+      },
+      {
+       "uk": "Так, я брат. Він живе́ в Берлі́ні.",
+       "de": "Ja, ich bin ein Bruder. Er wohnt in Berlin.",
+       "feedback_de": "„Ich habe“ heißt у ме́не є: У ме́не є брат."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А мої́ батьки́ живу́ть у Льво́ві.",
+     "de": "Und meine Eltern wohnen in Lwiw."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "А ти живе́ш у Ки́єві, так?",
+       "de": "Und du wohnst in Kyjiw, oder?"
+      },
+      {
+       "uk": "А ти живу́ у Ки́єві, так?",
+       "de": "(falsche Form)",
+       "feedback_de": "Zu ти gehört живе́ш."
+      },
+      {
+       "uk": "А ви живете́ у Ки́єві, так?",
+       "de": "Und Sie wohnen in Kyjiw, oder?",
+       "feedback_de": "Mit Oksana bist du per du: ти живе́ш."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Так, я живу́ й працю́ю тут.",
+     "de": "Ja, ich wohne und arbeite hier."
+    }
+   ]
+  },
+  {
+   "id": "e59",
+   "type": "order_dialog",
+   "vocab": [
+    "de",
+    "zaraz",
+    "vdoma",
+    "pratsiuvaty"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Тара́с: Приві́т! Де ти за́раз?",
+     "de": "Taras: Hallo! Wo bist du gerade?"
+    },
+    {
+     "uk": "Я вдо́ма. А ти?",
+     "de": "Ich bin zu Hause. Und du?"
+    },
+    {
+     "uk": "Тара́с: Я в кафе́, я працю́ю.",
+     "de": "Taras: Ich bin im Café, ich arbeite."
+    },
+    {
+     "uk": "До́бре, бува́й!",
+     "de": "Gut, tschüss!"
+    }
+   ]
+  },
+  {
+   "id": "e60",
+   "type": "order_dialog",
+   "vocab": [
+    "zaraz",
+    "zhyty",
+    "tut",
+    "rozmovliaty",
+    "ukrainskoiu",
+    "vyvchaty",
+    "mova",
+    "ukrainskyi"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Пан Бондаре́нко: До́брий день! Ви з Німе́ччини?",
+     "de": "Herr Bondarenko: Guten Tag! Kommen Sie aus Deutschland?"
+    },
+    {
+     "uk": "Так, я з Німе́ччини, але́ за́раз живу́ тут.",
+     "de": "Ja, ich komme aus Deutschland, aber jetzt wohne ich hier."
+    },
+    {
+     "uk": "Пан Бондаре́нко: Ви розмовля́єте украї́нською?",
+     "de": "Herr Bondarenko: Sprechen Sie Ukrainisch?"
+    },
+    {
+     "uk": "Тро́хи. Я вивча́ю украї́нську мо́ву.",
+     "de": "Ein bisschen. Ich lerne Ukrainisch."
+    }
+   ]
+  }
+ ]
 }

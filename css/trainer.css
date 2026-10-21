@@ -228,3 +228,12 @@ html[data-motion="reduce"] .tr-card.is-flipped .tr-back { opacity: 1; }
   .tr-words-tools .segmented { width: auto; flex: 1 1 320px; }
   .tr-words-count { flex-basis: 100%; }
 }
+
+/* Feinschliff */
+.tr-word .de, .tr-word.tr-de { color: var(--label); }
+.tr-tap-hint { text-align: center; }
+.tr-option.is-correct, .tr-option.is-wrong { opacity: 1; }
+.tr-option.is-correct .tr-opt-key { border-color: var(--ok-border); color: var(--ok-ink); }
+.tr-option.is-wrong .tr-opt-key { border-color: var(--bad-border); color: var(--bad-ink); }
+.tr-option.is-correct, .tr-option.is-correct .de, .tr-option.is-correct .uk { color: var(--ok-ink); }
+.tr-option.is-wrong, .tr-option.is-wrong .de, .tr-option.is-wrong .uk { color: var(--bad-ink); }

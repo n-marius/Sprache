@@ -28,7 +28,7 @@ export function render(params, app) {
     if (prefs.scope.startsWith('lesson:') && !st.lessons.some(l => 'lesson:' + l.id === prefs.scope)) prefs.scope = 'due';
 
     const stats = h('div', { class: 'tr-stats' },
-      stat(st.due, 'heute fällig', 'var(--blue)', 'clock'),
+      stat(st.due, 'fällig', 'var(--blue)', 'clock'),
       stat(st.learned, 'gelernt', 'var(--green)', 'check'),
       stat(st.hard, 'schwierig', 'var(--orange)', 'target'),
       stat(st.sentences, 'Sätze', 'var(--purple)', 'chat'));
