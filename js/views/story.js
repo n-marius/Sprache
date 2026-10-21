@@ -17,10 +17,24 @@ const MAX_GUESS = 4;
 /** Story aus lesson.story oder Fallback (erste reading-Aufgabe bzw. erster chat). */
 function storyOf(lesson) {
   if (lesson.story?.lines?.length) return { ...lesson.story, real: true };
-  const rd = lesson.exercises.find(e => e.type === 'reading');
+  const rd = lesson.exercises.find(e => e.type === 'reading' && /\n/.test(e.text_uk)) || lesson.exercises.find(e => e.type === 'reading');
   if (rd) {
-    const sents = rd.text_uk.match(/[^.!?…]+[.!?…]*/g)?.map(s => s.trim()).filter(Boolean) || [rd.text_uk];
-    return { title_uk: rd.title_uk, title_de: lesson.title_de, lines: sents.map(uk => ({ uk })), text_de: rd.text_de, characters: [] };
+    // Format der Inhalte: Zeilen „Name: Text“, Szenenmarker „🏠 Ort“, sonst Fließtext
+    const lines = [];
+    const cast = new Map();
+    for (const raw of rd.text_uk.split(/\n+/).map(x => x.trim()).filter(Boolean)) {
+      const m = raw.match(/^([^:.!?]{1,40}):\s+(.+)$/);
+      if (m && m[1].split(/\s+/).length <= 4) {
+        const who = m[1].trim();
+        if (!cast.has(who)) cast.set(who, { name: who, emoji: guessEmoji(who) });
+        lines.push({ who, uk: m[2] });
+      } else if (/^\p{Extended_Pictographic}/u.test(raw)) {
+        lines.push({ uk: raw.replace(/^\p{Extended_Pictographic}\uFE0F?\s*/u, ''), scene: raw.match(/^\p{Extended_Pictographic}\uFE0F?/u)[0] });
+      } else {
+        for (const sent of raw.match(/[^.!?…]+[.!?…]*/g) || [raw]) lines.push({ uk: sent.trim() });
+      }
+    }
+    return { title_uk: rd.title_uk, title_de: lesson.title_de, lines, text_de: rd.text_de, characters: [...cast.values()] };
   }
   const ch = lesson.exercises.find(e => e.type === 'chat');
   if (ch) {
@@ -32,6 +46,15 @@ function storyOf(lesson) {
     };
   }
   return null;
+}
+
+/** Grobe Emoji-Wahl für Figuren ohne Angabe. */
+function guessEmoji(name) {
+  const n = name.normalize('NFD').replace(/\u0301/g, '').toLowerCase();
+  if (/^пані(\s|$)/.test(n)) return '👩‍🦳';
+  if (/^пан(\s|$)/.test(n)) return '👨‍💼';
+  const first = n.split(/\s+/)[0];
+  return /[ая]$/.test(first) ? '👩' : '🧑';
 }
 
 /** Schlüssel der neuen Formen: story.new oder vocab+forms der Lektion. */
@@ -103,6 +126,7 @@ export function render(params, app) {
   story.lines.forEach((ln, i) => {
     const ci = ln.who ? indexOfChar(ln.who) : -1;
     const narration = !ln.who;
+    const scene = ln.scene || null;
     const uk = ukText(ln.uk, { cls: 'st-uk' });
     markWords(uk, { guess: firstVisit && !review });
     const de = ln.de ? deText(ln.de, { cls: 'st-de' }) : null;
@@ -116,7 +140,8 @@ export function render(params, app) {
     const side = narration ? 'narr' : (ci % 2 === 1 ? 'right' : 'left');
     const row = h('div', { class: ['st-line', `is-${side}`], dataset: { i: String(i) } },
       narration ? null : h('span', { class: 'st-line-avatar emoji', title: ln.who }, chars[ci]?.emoji || '🙂'),
-      h('div', { class: 'st-bubble' },
+      h('div', { class: ['st-bubble', scene && 'is-scene'] },
+        scene ? h('span', { class: 'st-scene-glyph emoji' }, scene) : null,
         narration ? null : h('div', { class: 'st-who' }, ukText(ln.who, { tap: false })),
         uk, de, tools));
     lineEls.push({ row, de, ln });

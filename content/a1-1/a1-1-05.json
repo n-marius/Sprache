@@ -1,0 +1,940 @@
+{
+ "id": "a1-1-05",
+ "phase": "A1.1",
+ "title_uk": "Де ти живе́ш?",
+ "title_de": "Wo wohnst du?",
+ "theme": "people",
+ "goals_de": [
+  "Ich kann sagen, wo ich wohne und arbeite, und andere danach fragen.",
+  "Ich kann sagen, welche Sprachen ich lerne und spreche.",
+  "Ich kann über einfache Tätigkeiten im Präsens sprechen."
+ ],
+ "concepts": [
+  {
+   "id": "praesens-konj1",
+   "title_de": "Präsens I. Konjugation (-ю, -єш, -є, -ємо, -єте, -ють)"
+  },
+  {
+   "id": "praesens-uva",
+   "title_de": "Verben auf -ува́ти: працюва́ти → працю́ю"
+  },
+  {
+   "id": "zhyty",
+   "title_de": "жи́ти: живу́, живе́ш … (Stamm жив-)"
+  },
+  {
+   "id": "chunk-lok-misto",
+   "title_de": "Chunk: у Ки́єві, у Льво́ві, в Берлі́ні, в Украї́ні, в Німе́ччині (Lokativ folgt in a1-1-09)"
+  },
+  {
+   "id": "u-v-wechsel",
+   "title_de": "у oder в? (Wohlklangregel)"
+  },
+  {
+   "id": "chunk-movu",
+   "title_de": "Chunk: вивча́ю украї́нську мо́ву (Akkusativ folgt in a1-1-06)"
+  }
+ ],
+ "explanation": {
+  "title_de": "Wohnen, arbeiten, lernen: das Präsens – und wo?",
+  "intro_de": "Wer wohnt wo? Oksana stammt aus Lwiw und lebt in Kyjiw, Markus wohnt jetzt auch hier, Taras studiert Jura. Danach kann man sagen, wo man wohnt und arbeitet, welche Sprachen man spricht und lernt – mit allen Personalformen des Präsens.",
+  "sections": [
+   {
+    "heading_de": "Präsens der I. Konjugation",
+    "body_de": "Das **Präsens** (Gegenwart) besteht aus **Stamm** und **Personalendung**. Bei Verben wie **чита́ти** (lesen) und **зна́ти** (wissen) fällt **-ти** weg, dann folgen die Endungen **-ю, -єш, -є, -ємо, -єте, -ють**. Die Betonung bleibt auf derselben Silbe. Genauso gehen **вивча́ти** (lernen), **розумі́ти** (verstehen) und **розмовля́ти** (sprechen) – die Formeln aus Lektion 2 sind jetzt vollständig.\n\nDie Endung zeigt die Person, daher kann das Pronomen auch fehlen: **Живу́ в Берлі́ні.** = Ich wohne in Berlin. **ви** ist höflich „Sie“ (eine Person) oder „ihr“ (mehrere).",
+    "table": {
+     "head": [
+      "Person",
+      "Endung",
+      "чита́ти",
+      "зна́ти",
+      "розмовля́ти"
+     ],
+     "rows": [
+      [
+       "я",
+       "-ю",
+       "**чита́ю**",
+       "**зна́ю**",
+       "**розмовля́ю**"
+      ],
+      [
+       "ти",
+       "-єш",
+       "**чита́єш**",
+       "**зна́єш**",
+       "**розмовля́єш**"
+      ],
+      [
+       "він / вона́",
+       "-є",
+       "**чита́є**",
+       "**зна́є**",
+       "**розмовля́є**"
+      ],
+      [
+       "ми",
+       "-ємо",
+       "**чита́ємо**",
+       "**зна́ємо**",
+       "**розмовля́ємо**"
+      ],
+      [
+       "ви",
+       "-єте",
+       "**чита́єте**",
+       "**зна́єте**",
+       "**розмовля́єте**"
+      ],
+      [
+       "вони́",
+       "-ють",
+       "**чита́ють**",
+       "**зна́ють**",
+       "**розмовля́ють**"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Тара́с бага́то чита́є.",
+      "de": "Taras liest viel."
+     },
+     {
+      "uk": "Ти розумі́єш? – Так, розумі́ю.",
+      "de": "Verstehst du? – Ja, ich verstehe."
+     },
+     {
+      "uk": "Ми вивча́ємо украї́нську мо́ву.",
+      "de": "Wir lernen Ukrainisch."
+     }
+    ]
+   },
+   {
+    "heading_de": "працюва́ти und жи́ти",
+    "body_de": "Bei Verben auf **-ува́ти** wird **-ува-** im Präsens zu **-у-**; danach kommen dieselben Endungen: працюва́ти → **працю́ю, працю́єш** … (betont ist das **-у́-**).\n\n**жи́ти** (wohnen, leben) hat den Stamm **жив-**. Nach diesem Konsonanten lauten die Endungen **-у, -еш, -е, -емо, -ете, -уть**; betont ist immer die Endung. Die wichtigste Frage der Lektion: **Де ти живе́ш?** – Wo wohnst du?",
+    "table": {
+     "head": [
+      "Person",
+      "працюва́ти",
+      "жи́ти"
+     ],
+     "rows": [
+      [
+       "я",
+       "**працю́ю**",
+       "**живу́**"
+      ],
+      [
+       "ти",
+       "**працю́єш**",
+       "**живе́ш**"
+      ],
+      [
+       "він / вона́",
+       "**працю́є**",
+       "**живе́**"
+      ],
+      [
+       "ми",
+       "**працю́ємо**",
+       "**живемо́**"
+      ],
+      [
+       "ви",
+       "**працю́єте**",
+       "**живете́**"
+      ],
+      [
+       "вони́",
+       "**працю́ють**",
+       "**живу́ть**"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Я працю́ю вдо́ма.",
+      "de": "Ich arbeite zu Hause."
+     },
+     {
+      "uk": "Де ви живете́? – Ми живемо́ в Ки́єві.",
+      "de": "Wo wohnen Sie? – Wir wohnen in Kyjiw."
+     }
+    ]
+   },
+   {
+    "heading_de": "Wo? – Ortsangaben als feste Wendungen",
+    "body_de": "Auf **Де?** (wo?) – nicht verwechseln mit **Зві́дки?** (woher?) – antwortet man mit **тут** (hier), **там** (dort), **вдо́ма** (zu Hause) oder einer Ortsangabe. Nach **у/в** (in) und **на** (auf) bekommt das Nomen eine andere Endung: Das ist der **Lokativ** (Ortsfall, Frage „wo?“). Er wird erst in Lektion 9 erklärt; hier lernt man die Ortsangaben als **feste Wendungen**. **кафе́** ist unveränderlich: **в кафе́**.\n\nDie Herkunft nennt man weiter mit **з** (Lektion 2): **Я з Німе́ччини.** Zum Verstehen: **Окса́на зі Льво́ва.** = Oksana stammt aus Lwiw.",
+    "table": {
+     "head": [
+      "Grundform",
+      "Wo?",
+      "Deutsch"
+     ],
+     "rows": [
+      [
+       "Ки́їв",
+       "**у Ки́єві** / **в Ки́єві**",
+       "in Kyjiw"
+      ],
+      [
+       "Львів",
+       "**у Льво́ві**",
+       "in Lwiw"
+      ],
+      [
+       "Берлі́н",
+       "**в Берлі́ні** / **у Берлі́ні**",
+       "in Berlin"
+      ],
+      [
+       "Украї́на",
+       "**в Украї́ні**",
+       "in der Ukraine"
+      ],
+      [
+       "Німе́ччина",
+       "**в Німе́ччині**",
+       "in Deutschland"
+      ],
+      [
+       "мі́сто",
+       "**у мі́сті** / **в мі́сті**",
+       "in der Stadt"
+      ],
+      [
+       "ву́лиця",
+       "**на ву́лиці**",
+       "draußen, auf der Straße"
+      ]
+     ]
+    }
+   },
+   {
+    "heading_de": "у oder в? Die Wohlklangregel",
+    "body_de": "**у** und **в** bedeuten dasselbe; man wählt, was sich leichter sprechen lässt. **в** steht nach einem Vokal und vor einem Vokal: **Я живу́ в Берлі́ні. Вона́ живе́ в Украї́ні.** **у** steht zwischen Konsonanten und am Satzanfang vor einem Konsonanten: **Ти живе́ш у Ки́єві? У Берлі́ні.** Vor **в, ф, льв, св, тв, хв** steht immer **у**: **у Льво́ві**. Genauso wechselt **вдо́ма / удо́ма**; nach Vokal heißt es **вдо́ма**.\n\nDasselbe Prinzip gilt für „und“: nach Vokal **й**, nach Konsonant **і**: **Окса́на й Андрі́й**, **Тара́с і Окса́на**."
+   },
+   {
+    "heading_de": "Sprachen sprechen und lernen; „wissen“",
+    "body_de": "**розмовля́ти украї́нською** (Ukrainisch sprechen) kennt man aus Lektion 2. „Eine Sprache lernen“ heißt **вивча́ти украї́нську мо́ву** – eine **feste Wendung**: **мо́ва** (Sprache) und **украї́нський** (ukrainisch) stehen hier im **Akkusativ** (Objektfall, Lektion 6). Ebenso: **німе́цьку мо́ву, англі́йську мо́ву**. Taras studiert Jura: **Він вивча́є пра́во.**\n\n**зна́ти** heißt „wissen“: **Я не зна́ю.** = Ich weiß (es) nicht. **Ти зна́єш, де вона́ живе́?** = Weißt du, wo sie wohnt?",
+    "examples": [
+     {
+      "uk": "Я вивча́ю украї́нську мо́ву.",
+      "de": "Ich lerne Ukrainisch."
+     },
+     {
+      "uk": "Окса́на розмовля́є украї́нською й англі́йською.",
+      "de": "Oksana spricht Ukrainisch und Englisch."
+     },
+     {
+      "uk": "Я не зна́ю, де він працю́є.",
+      "de": "Ich weiß nicht, wo er arbeitet."
+     }
+    ]
+   }
+  ],
+  "summary_de": [
+   "Präsens I. Konjugation: Stamm und -ю, -єш, -є, -ємо, -єте, -ють (чита́ю, чита́єш …).",
+   "-ува́ти wird zu -у-: працюва́ти → працю́ю, працю́єш.",
+   "жи́ти: живу́, живе́ш, живе́, живемо́, живете́, живу́ть – Endung betont.",
+   "Ortsangaben wie у Ки́єві, в Берлі́ні, на ву́лиці als Ganzes lernen (Lokativ: Lektion 9).",
+   "в nach/vor Vokal, у zwischen Konsonanten, am Satzanfang vor Konsonant und vor в, ф, льв.",
+   "Sprache lernen: вивча́ти украї́нську мо́ву (feste Wendung); sprechen: розмовля́ти украї́нською."
+  ]
+ },
+ "grammar": [
+  {
+   "title_de": "Präsens: -ю, -єш, -є …",
+   "body_de": "Infinitiv ohne **-ти**, dann die Endung der Person: я **-ю**, ти **-єш**, він/вона́ **-є**, ми **-ємо**, ви **-єте**, вони́ **-ють**. Die Betonung bleibt, wo sie im Infinitiv ist.",
+   "examples": [
+    {
+     "uk": "Я чита́ю.",
+     "de": "Ich lese."
+    },
+    {
+     "uk": "Вони́ не розумі́ють.",
+     "de": "Sie verstehen nicht."
+    },
+    {
+     "uk": "Ви зна́єте?",
+     "de": "Wissen Sie es?"
+    }
+   ]
+  },
+  {
+   "title_de": "працюва́ти → працю́ю",
+   "body_de": "Aus **-ува-** wird im Präsens **-у-**: працю́ю, працю́єш, працю́є, працю́ємо, працю́єте, працю́ють.",
+   "examples": [
+    {
+     "uk": "Де ти працю́єш?",
+     "de": "Wo arbeitest du?"
+    },
+    {
+     "uk": "Він працю́є в Ки́єві.",
+     "de": "Er arbeitet in Kyjiw."
+    }
+   ]
+  },
+  {
+   "title_de": "жи́ти → живу́, живе́ш",
+   "body_de": "Stamm **жив-**, Endungen **-у, -еш, -е, -емо, -ете, -уть**, immer betont: живу́, живе́ш, живе́, живемо́, живете́, живу́ть.",
+   "examples": [
+    {
+     "uk": "Де ти живе́ш?",
+     "de": "Wo wohnst du?"
+    },
+    {
+     "uk": "Ми живемо́ тут.",
+     "de": "Wir wohnen hier."
+    }
+   ]
+  },
+  {
+   "title_de": "у oder в?",
+   "body_de": "Nach oder vor Vokal **в**; zwischen Konsonanten und am Satzanfang vor Konsonant **у**; vor **в, ф, льв** immer **у**. Ortsangaben als Ganzes lernen.",
+   "examples": [
+    {
+     "uk": "Вона́ живе́ в Берлі́ні.",
+     "de": "Sie wohnt in Berlin."
+    },
+    {
+     "uk": "Тара́с у Ки́єві.",
+     "de": "Taras ist in Kyjiw."
+    },
+    {
+     "uk": "Брат живе́ у Льво́ві.",
+     "de": "Der Bruder wohnt in Lwiw."
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  {
+   "id": "de",
+   "uk": "де",
+   "de": "wo (Fragewort)",
+   "pos": "adv",
+   "info": "Fragewort nach dem Ort; woher = зві́дки",
+   "example": {
+    "uk": "Де ти живе́ш?",
+    "de": "Wo wohnst du?"
+   }
+  },
+  {
+   "id": "zhyty",
+   "uk": "жи́ти",
+   "de": "wohnen, leben",
+   "pos": "verb",
+   "info": "Inf.; I. Konj. mit Stamm жив-: я живу́, ти живе́ш (Endung betont)",
+   "example": {
+    "uk": "Я живу́ в Берлі́ні.",
+    "de": "Ich wohne in Berlin."
+   },
+   "forms": [
+    {
+     "uk": "живу́",
+     "info": "1. Sg. Präs. (я) · Inf. жи́ти"
+    },
+    {
+     "uk": "живе́ш",
+     "info": "2. Sg. Präs. (ти) · Inf. жи́ти"
+    },
+    {
+     "uk": "живе́",
+     "info": "3. Sg. Präs. (він/вона́) · Inf. жи́ти"
+    },
+    {
+     "uk": "живемо́",
+     "info": "1. Pl. Präs. (ми) · Inf. жи́ти"
+    },
+    {
+     "uk": "живете́",
+     "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. жи́ти"
+    },
+    {
+     "uk": "живу́ть",
+     "info": "3. Pl. Präs. (вони́) · Inf. жи́ти"
+    }
+   ]
+  },
+  {
+   "id": "pratsiuvaty",
+   "uk": "працюва́ти",
+   "de": "arbeiten",
+   "pos": "verb",
+   "info": "Inf.; I. Konj. (-ува- → -у-): я працю́ю, ти працю́єш",
+   "example": {
+    "uk": "Я працю́ю вдо́ма.",
+    "de": "Ich arbeite zu Hause."
+   },
+   "forms": [
+    {
+     "uk": "працю́ю",
+     "info": "1. Sg. Präs. (я) · Inf. працюва́ти"
+    },
+    {
+     "uk": "працю́єш",
+     "info": "2. Sg. Präs. (ти) · Inf. працюва́ти"
+    },
+    {
+     "uk": "працю́є",
+     "info": "3. Sg. Präs. (він/вона́) · Inf. працюва́ти"
+    },
+    {
+     "uk": "працю́ємо",
+     "info": "1. Pl. Präs. (ми) · Inf. працюва́ти"
+    },
+    {
+     "uk": "працю́єте",
+     "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. працюва́ти"
+    },
+    {
+     "uk": "працю́ють",
+     "info": "3. Pl. Präs. (вони́) · Inf. працюва́ти"
+    }
+   ]
+  },
+  {
+   "id": "znaty",
+   "uk": "зна́ти",
+   "de": "wissen, kennen",
+   "pos": "verb",
+   "info": "Inf.; I. Konj.: я зна́ю, ти зна́єш",
+   "example": {
+    "uk": "Я не зна́ю, де він живе́.",
+    "de": "Ich weiß nicht, wo er wohnt."
+   },
+   "forms": [
+    {
+     "uk": "зна́ю",
+     "info": "1. Sg. Präs. (я) · Inf. зна́ти"
+    },
+    {
+     "uk": "зна́єш",
+     "info": "2. Sg. Präs. (ти) · Inf. зна́ти"
+    },
+    {
+     "uk": "зна́є",
+     "info": "3. Sg. Präs. (він/вона́) · Inf. зна́ти"
+    },
+    {
+     "uk": "зна́ємо",
+     "info": "1. Pl. Präs. (ми) · Inf. зна́ти"
+    },
+    {
+     "uk": "зна́єте",
+     "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. зна́ти"
+    },
+    {
+     "uk": "зна́ють",
+     "info": "3. Pl. Präs. (вони́) · Inf. зна́ти"
+    }
+   ]
+  },
+  {
+   "id": "chytaty",
+   "uk": "чита́ти",
+   "de": "lesen",
+   "pos": "verb",
+   "info": "Inf.; I. Konj.: я чита́ю, ти чита́єш",
+   "emoji": "📖",
+   "example": {
+    "uk": "Тара́с бага́то чита́є.",
+    "de": "Taras liest viel."
+   },
+   "forms": [
+    {
+     "uk": "чита́ю",
+     "info": "1. Sg. Präs. (я) · Inf. чита́ти"
+    },
+    {
+     "uk": "чита́єш",
+     "info": "2. Sg. Präs. (ти) · Inf. чита́ти"
+    },
+    {
+     "uk": "чита́є",
+     "info": "3. Sg. Präs. (він/вона́) · Inf. чита́ти"
+    },
+    {
+     "uk": "чита́ємо",
+     "info": "1. Pl. Präs. (ми) · Inf. чита́ти"
+    },
+    {
+     "uk": "чита́єте",
+     "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. чита́ти"
+    },
+    {
+     "uk": "чита́ють",
+     "info": "3. Pl. Präs. (вони́) · Inf. чита́ти"
+    }
+   ]
+  },
+  {
+   "id": "vyvchaty",
+   "uk": "вивча́ти",
+   "de": "lernen, studieren (etw.)",
+   "pos": "verb",
+   "info": "Inf.; I. Konj.: я вивча́ю, ти вивча́єш; mit Objekt: вивча́ти украї́нську мо́ву",
+   "example": {
+    "uk": "Я вивча́ю украї́нську мо́ву.",
+    "de": "Ich lerne Ukrainisch."
+   },
+   "forms": [
+    {
+     "uk": "вивча́ю",
+     "info": "1. Sg. Präs. (я) · Inf. вивча́ти"
+    },
+    {
+     "uk": "вивча́єш",
+     "info": "2. Sg. Präs. (ти) · Inf. вивча́ти"
+    },
+    {
+     "uk": "вивча́є",
+     "info": "3. Sg. Präs. (він/вона́) · Inf. вивча́ти"
+    },
+    {
+     "uk": "вивча́ємо",
+     "info": "1. Pl. Präs. (ми) · Inf. вивча́ти"
+    },
+    {
+     "uk": "вивча́єте",
+     "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. вивча́ти"
+    },
+    {
+     "uk": "вивча́ють",
+     "info": "3. Pl. Präs. (вони́) · Inf. вивча́ти"
+    }
+   ]
+  },
+  {
+   "id": "misto",
+   "uk": "мі́сто",
+   "de": "Stadt",
+   "pos": "noun",
+   "info": "n.; wo? у мі́сті (feste Wendung)",
+   "emoji": "🏙️",
+   "example": {
+    "uk": "Ти живе́ш у мі́сті?",
+    "de": "Wohnst du in der Stadt?"
+   },
+   "forms": [
+    {
+     "uk": "мі́сті",
+     "info": "Lok. Sg. (у мі́сті – in der Stadt; feste Wendung)"
+    }
+   ]
+  },
+  {
+   "id": "kraina",
+   "uk": "краї́на",
+   "de": "Land (Staat)",
+   "pos": "noun",
+   "info": "f.",
+   "example": {
+    "uk": "Украї́на – моя́ краї́на.",
+    "de": "Die Ukraine ist mein Land."
+   }
+  },
+  {
+   "id": "kyiv",
+   "uk": "Ки́їв",
+   "de": "Kyjiw (Kiew)",
+   "pos": "name",
+   "info": "Stadt (m.); wo? у/в Ки́єві",
+   "example": {
+    "uk": "Окса́на живе́ в Ки́єві.",
+    "de": "Oksana wohnt in Kyjiw."
+   },
+   "forms": [
+    {
+     "uk": "Ки́єві",
+     "info": "Lok. Sg. (у/в Ки́єві – in Kyjiw; feste Wendung)"
+    }
+   ]
+  },
+  {
+   "id": "berlin",
+   "uk": "Берлі́н",
+   "de": "Berlin",
+   "pos": "name",
+   "info": "Stadt (m.); wo? в/у Берлі́ні",
+   "example": {
+    "uk": "Ю́лія живе́ в Берлі́ні.",
+    "de": "Julia wohnt in Berlin."
+   },
+   "forms": [
+    {
+     "uk": "Берлі́ні",
+     "info": "Lok. Sg. (в/у Берлі́ні – in Berlin; feste Wendung)"
+    }
+   ]
+  },
+  {
+   "id": "lviv",
+   "uk": "Львів",
+   "de": "Lwiw",
+   "pos": "name",
+   "info": "Stadt (m.); wo? у Льво́ві (і → о)",
+   "example": {
+    "uk": "Мої́ батьки́ живу́ть у Льво́ві.",
+    "de": "Meine Eltern wohnen in Lwiw."
+   },
+   "forms": [
+    {
+     "uk": "Льво́ві",
+     "info": "Lok. Sg. (у Льво́ві – in Lwiw; feste Wendung)"
+    },
+    {
+     "uk": "Льво́ва",
+     "info": "Gen. Sg. (зі Льво́ва – aus Lwiw)"
+    }
+   ]
+  },
+  {
+   "id": "vulytsia",
+   "uk": "ву́лиця",
+   "de": "Straße",
+   "pos": "noun",
+   "info": "f.; на ву́лиці = draußen, auf der Straße",
+   "example": {
+    "uk": "Софі́я за́раз на ву́лиці.",
+    "de": "Sofija ist gerade draußen."
+   },
+   "forms": [
+    {
+     "uk": "ву́лиці",
+     "info": "Lok. Sg. (на ву́лиці – draußen, auf der Straße; feste Wendung)"
+    }
+   ]
+  },
+  {
+   "id": "tut",
+   "uk": "тут",
+   "de": "hier",
+   "pos": "adv",
+   "info": "Adv. (Ort)",
+   "example": {
+    "uk": "Я живу́ тут.",
+    "de": "Ich wohne hier."
+   }
+  },
+  {
+   "id": "tam",
+   "uk": "там",
+   "de": "dort",
+   "pos": "adv",
+   "info": "Adv. (Ort)",
+   "example": {
+    "uk": "Там живу́ть мої́ батьки́.",
+    "de": "Dort wohnen meine Eltern."
+   }
+  },
+  {
+   "id": "zaraz",
+   "uk": "за́раз",
+   "de": "jetzt, gerade",
+   "pos": "adv",
+   "info": "Adv. (Zeit)",
+   "example": {
+    "uk": "Де ти за́раз?",
+    "de": "Wo bist du jetzt?"
+   }
+  },
+  {
+   "id": "vdoma",
+   "uk": "вдо́ма",
+   "de": "zu Hause",
+   "pos": "adv",
+   "info": "Adv. (Ort); nach Konsonant auch удо́ма",
+   "emoji": "🏠",
+   "example": {
+    "uk": "Я працю́ю вдо́ма.",
+    "de": "Ich arbeite zu Hause."
+   },
+   "forms": [
+    {
+     "uk": "удо́ма",
+     "info": "Variante von вдо́ма (nach Konsonant)"
+    }
+   ]
+  },
+  {
+   "id": "knyzhka",
+   "uk": "кни́жка",
+   "de": "Buch",
+   "pos": "noun",
+   "info": "f.",
+   "emoji": "📕",
+   "example": {
+    "uk": "Це моя́ кни́жка.",
+    "de": "Das ist mein Buch."
+   }
+  },
+  {
+   "id": "mova",
+   "uk": "мо́ва",
+   "de": "Sprache",
+   "pos": "noun",
+   "info": "f.; вивча́ти украї́нську мо́ву (feste Wendung)",
+   "example": {
+    "uk": "Він вивча́є німе́цьку мо́ву.",
+    "de": "Er lernt Deutsch."
+   },
+   "forms": [
+    {
+     "uk": "мо́ву",
+     "info": "Akk. Sg. (вивча́ти … мо́ву; Akkusativ: Lektion 6)"
+    }
+   ]
+  },
+  {
+   "id": "ukrainskyi",
+   "uk": "украї́нський",
+   "de": "ukrainisch",
+   "pos": "adj",
+   "info": "Adj. (Wörterbuchform m.); f. украї́нська; in der Wendung украї́нську мо́ву",
+   "example": {
+    "uk": "Ми вивча́ємо украї́нську мо́ву.",
+    "de": "Wir lernen Ukrainisch."
+   },
+   "forms": [
+    {
+     "uk": "украї́нська",
+     "info": "f. Nom. Sg. (украї́нська мо́ва)"
+    },
+    {
+     "uk": "украї́нську",
+     "info": "f. Akk. Sg. (вивча́ти украї́нську мо́ву)"
+    }
+   ]
+  },
+  {
+   "id": "nimetskyi",
+   "uk": "німе́цький",
+   "de": "deutsch",
+   "pos": "adj",
+   "info": "Adj. (Wörterbuchform m.); f. німе́цька; in der Wendung німе́цьку мо́ву",
+   "example": {
+    "uk": "Окса́на вивча́є німе́цьку мо́ву.",
+    "de": "Oksana lernt Deutsch."
+   },
+   "forms": [
+    {
+     "uk": "німе́цька",
+     "info": "f. Nom. Sg. (німе́цька мо́ва)"
+    },
+    {
+     "uk": "німе́цьку",
+     "info": "f. Akk. Sg. (вивча́ти німе́цьку мо́ву)"
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "uk": "розмовля́ю",
+   "lemma": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "1. Sg. Präs. (я) · Inf. розмовля́ти"
+  },
+  {
+   "uk": "розмовля́єш",
+   "lemma": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "2. Sg. Präs. (ти) · Inf. розмовля́ти"
+  },
+  {
+   "uk": "розмовля́є",
+   "lemma": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "3. Sg. Präs. (він/вона́) · Inf. розмовля́ти"
+  },
+  {
+   "uk": "розмовля́ємо",
+   "lemma": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "1. Pl. Präs. (ми) · Inf. розмовля́ти"
+  },
+  {
+   "uk": "розмовля́єте",
+   "lemma": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. розмовля́ти"
+  },
+  {
+   "uk": "розмовля́ють",
+   "lemma": "розмовля́ти",
+   "de": "sprechen (eine Sprache), sich unterhalten",
+   "pos": "verb",
+   "info": "3. Pl. Präs. (вони́) · Inf. розмовля́ти"
+  },
+  {
+   "uk": "розумі́ю",
+   "lemma": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "1. Sg. Präs. (я) · Inf. розумі́ти"
+  },
+  {
+   "uk": "розумі́єш",
+   "lemma": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "2. Sg. Präs. (ти) · Inf. розумі́ти"
+  },
+  {
+   "uk": "розумі́є",
+   "lemma": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "3. Sg. Präs. (він/вона́) · Inf. розумі́ти"
+  },
+  {
+   "uk": "розумі́ємо",
+   "lemma": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "1. Pl. Präs. (ми) · Inf. розумі́ти"
+  },
+  {
+   "uk": "розумі́єте",
+   "lemma": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "2. Pl. Präs. (ви; auch höflich Sie) · Inf. розумі́ти"
+  },
+  {
+   "uk": "розумі́ють",
+   "lemma": "розумі́ти",
+   "de": "verstehen",
+   "pos": "verb",
+   "info": "3. Pl. Präs. (вони́) · Inf. розумі́ти"
+  },
+  {
+   "uk": "Украї́ні",
+   "lemma": "Украї́на",
+   "de": "(in der) Ukraine",
+   "pos": "name",
+   "info": "Lok. Sg. (в Украї́ні – in der Ukraine; feste Wendung)"
+  },
+  {
+   "uk": "Німе́ччині",
+   "lemma": "Німе́ччина",
+   "de": "(in) Deutschland",
+   "pos": "name",
+   "info": "Lok. Sg. (в Німе́ччині – in Deutschland; feste Wendung)"
+  },
+  {
+   "uk": "Німе́ччини",
+   "lemma": "Німе́ччина",
+   "de": "(aus) Deutschland",
+   "pos": "name",
+   "info": "Gen. Sg. (з Німе́ччини – aus Deutschland; feste Wendung)"
+  },
+  {
+   "uk": "Украї́ни",
+   "lemma": "Украї́на",
+   "de": "(aus der) Ukraine",
+   "pos": "name",
+   "info": "Gen. Sg. (з Украї́ни – aus der Ukraine; feste Wendung)"
+  },
+  {
+   "uk": "Льво́ва",
+   "lemma": "Львів",
+   "de": "(aus) Lwiw",
+   "pos": "name",
+   "info": "Gen. Sg. (зі Льво́ва – aus Lwiw; nur verstehen)"
+  },
+  {
+   "uk": "англі́йську",
+   "lemma": "англі́йський",
+   "de": "englisch",
+   "pos": "adj",
+   "info": "f. Akk. Sg. (англі́йську мо́ву – Englisch als Objekt; feste Wendung)"
+  },
+  {
+   "uk": "англі́йська",
+   "lemma": "англі́йський",
+   "de": "englisch",
+   "pos": "adj",
+   "info": "f. Nom. Sg. (англі́йська мо́ва)"
+  },
+  {
+   "uk": "пра́во",
+   "lemma": "пра́во",
+   "de": "Recht; Jura (Studienfach)",
+   "pos": "noun",
+   "info": "n.; вивча́ти пра́во = Jura studieren"
+  },
+  {
+   "uk": "студе́нт",
+   "lemma": "студе́нт",
+   "de": "Student",
+   "pos": "noun",
+   "info": "m."
+  },
+  {
+   "uk": "бага́то",
+   "lemma": "бага́то",
+   "de": "viel",
+   "pos": "adv",
+   "info": "Adv."
+  },
+  {
+   "uk": "кафе́",
+   "lemma": "кафе́",
+   "de": "Café",
+   "pos": "noun",
+   "info": "n., unveränderlich (в кафе́ – im Café)"
+  },
+  {
+   "uk": "моя́",
+   "lemma": "мій",
+   "de": "mein",
+   "pos": "pron",
+   "info": "f. Nom. Sg. · m. мій"
+  },
+  {
+   "uk": "моє́",
+   "lemma": "мій",
+   "de": "mein",
+   "pos": "pron",
+   "info": "n. Nom. Sg. · m. мій"
+  },
+  {
+   "uk": "мої́",
+   "lemma": "мій",
+   "de": "meine (Pl.)",
+   "pos": "pron",
+   "info": "Nom. Pl. · m. мій"
+  },
+  {
+   "uk": "твоя́",
+   "lemma": "твій",
+   "de": "dein",
+   "pos": "pron",
+   "info": "f. Nom. Sg. · m. твій"
+  },
+  {
+   "uk": "твої́",
+   "lemma": "твій",
+   "de": "deine (Pl.)",
+   "pos": "pron",
+   "info": "Nom. Pl. · m. твій"
+  },
+  {
+   "uk": "Ба́рсик",
+   "lemma": "Ба́рсик",
+   "de": "Barsyk (Katername)",
+   "pos": "name",
+   "info": "Name von Oksanas Kater"
+  }
+ ],
+ "exercises": []
+}

@@ -25,9 +25,17 @@ export const KINDS_BY_STAGE = {
 };
 
 const DE_WORD = /[\p{L}\p{N}’'-]+/gu;
-const deKey = s => String(s ?? '').normalize('NFC').toLowerCase().replace(/[!?.,;:„“"«»()…–—]/g, '').replace(/\s+/g, ' ').trim();
+const deKey = s => deShort(s).normalize('NFC').toLowerCase().replace(/[!?.,;:„“"«»()…–—]/g, '').replace(/\s+/g, ' ').trim();
 const ukKey = s => ukWords(String(s ?? '')).join(' ') || normalizeWord(String(s ?? ''));
 const deWords = s => (String(s ?? '').normalize('NFC').match(DE_WORD) || []);
+const GRAMMAR_TERMS = /^(adverb|adjektiv|verb|nomen|substantiv|pronomen|partikel|präposition|konjunktion|interjektion|fragewort|informell|formell|höflich|plural|singular|sg|pl|akk|nom|gen|dat|instr|lok|vok|mask|fem|neutr|m|f|n|auch|zu|einer|person|sie|ihr)$/i;
+/** Deutsche Bedeutung ohne Klammerzusätze, erste Alternative vor „;“: „gut (Adverb); okay“ → „gut“. */
+export function deShort(s) {
+  const t = String(s ?? '').replace(/\s*\([^)]*\)/g, '').split(';')[0].trim();
+  return t || String(s ?? '').trim();
+}
+/** Wörter für deutsche Wortbausteine (ohne Grammatikbegriffe). */
+const deChipWords = s => deWords(deShort(s)).filter(w => !GRAMMAR_TERMS.test(w));
 
 /** Standard-Pool für Distraktoren: Vokabeln der Lektion des Worts und aller früheren + alle eingeführten. */
 export function defaultPool(app, vocab) {
@@ -86,7 +94,7 @@ export function generate(app, vocab, art, { pool, rng = Math.random } = {}) {
       return base(vocab, art, 'mc_translate', deUk ? 2 : 1, {
         dir: deUk ? 'de-uk' : 'uk-de',
         prompt: deUk ? vocab.de : vocab.uk,
-        options: deUk ? [vocab.uk, ...d.map(v => v.uk)] : [vocab.de, ...d.map(v => v.de)],
+        options: deUk ? [vocab.uk, ...d.map(v => v.uk)] : [deShort(vocab.de), ...d.map(v => deShort(v.de))],
       });
     }
     case 'heard': case 'meaning': {
@@ -95,7 +103,7 @@ export function generate(app, vocab, art, { pool, rng = Math.random } = {}) {
       return base(vocab, art, 'listening', 1, {
         mode: art === 'heard' ? 'choose_heard' : 'choose_meaning',
         audio_uk: vocab.uk,
-        options: art === 'heard' ? [vocab.uk, ...d.map(v => v.uk)] : [vocab.de, ...d.map(v => v.de)],
+        options: art === 'heard' ? [vocab.uk, ...d.map(v => v.uk)] : [deShort(vocab.de), ...d.map(v => deShort(v.de))],
       });
     }
     case 'pic': {
@@ -106,7 +114,7 @@ export function generate(app, vocab, art, { pool, rng = Math.random } = {}) {
       if (d.length < 2) return null;
       return base(vocab, art, 'picture_choice', 1, {
         prompt_uk: vocab.uk,
-        options: [{ emoji: vocab.emoji, de: vocab.de }, ...d.map(v => ({ emoji: v.emoji, de: v.de }))],
+        options: [{ emoji: vocab.emoji, de: deShort(vocab.de) }, ...d.map(v => ({ emoji: v.emoji, de: deShort(v.de) }))],
       });
     }
     case 'pairs': {
@@ -116,7 +124,7 @@ export function generate(app, vocab, art, { pool, rng = Math.random } = {}) {
       const all = [vocab, ...d];
       return base(vocab, art, 'match_pairs', 1, {
         vocab: all.map(v => v.id),
-        pairs: all.map(v => ({ uk: v.uk, de: v.de })),
+        pairs: all.map(v => ({ uk: v.uk, de: deShort(v.de) })),
       });
     }
     case 'build-de-uk': case 'build-uk-de': {
@@ -129,10 +137,10 @@ export function generate(app, vocab, art, { pool, rng = Math.random } = {}) {
       const have = new Set(answerWords);
       const cands = [];
       for (const v of shuffle(pool.filter(v => v.id !== vocab.id), rng)) {
-        const src = deUk ? [v.uk, ...(v.forms || []).map(f => f.uk)] : [v.de];
+        const src = deUk ? [v.uk, ...(v.forms || []).map(f => f.uk)] : [v.de, v.example?.de].filter(Boolean);
         for (const s of src) {
           if (deUk) { for (const p of String(s).split(/\s+/)) { const w = (p.match(/[Ѐ-ӿ́’'ʼ-]+/u) || [])[0]; if (w) cands.push(w); } }
-          else for (const w of deWords(s)) cands.push(w);
+          else for (const w of deChipWords(s)) cands.push(w);
         }
       }
       const distractors = [];

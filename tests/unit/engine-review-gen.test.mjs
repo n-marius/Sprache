@@ -115,3 +115,32 @@ test('adaptForAudio: Hören/Sprechen aus → Textvarianten oder auslassen', () =
   const g = generate(app, app.content.vocabById.get('kava'), 'heard');
   assert.notEqual(adaptForAudio(app, g, off).type, 'listening');
 });
+
+test('Deutsch: Klammerzusätze/Grammatikbegriffe nie in Optionen oder Wortbausteinen', async () => {
+  const { deShort } = await import('../../js/engine/review-gen.js');
+  assert.equal(deShort('gut (Adverb); okay'), 'gut');
+  assert.equal(deShort('hallo (informell)'), 'hallo');
+  const fs = await import('node:fs');
+  const { useBase } = await import('./engine-fake-app.mjs');
+  const bases = ['tests/fixtures'];
+  if (fs.existsSync(new URL('../../content/curriculum.json', import.meta.url))) bases.push('content');
+  for (const base of bases) {
+    useBase(base);
+    const capp = makeApp();
+    useBase('tests/fixtures');
+    // künstliche Vokabel mit Zusatz, damit der Fall auch in den Fixtures geprüft wird
+    capp.content.vocabById.set('x_test', { id: 'x_test', uk: 'до́бре', de: 'gut (Adverb); okay', pos: 'adv', lessonId: capp.content.lessonList[0].id, example: { uk: 'Ду́же до́бре!', de: 'Sehr gut!' } });
+    const bad = /[()]|\bAdverb\b|\bAdjektiv\b|\binformell\b/i;
+    for (const v of capp.content.vocabById.values()) {
+      for (const art of ['mc-uk-de', 'meaning', 'pic', 'pairs', 'build-uk-de']) {
+        for (let seed = 1; seed <= 3; seed++) {
+          const ex = generate(capp, v, art, { rng: mulberry32(seed) });
+          if (!ex) continue;
+          const de = [...(ex.options || []).map(o => (typeof o === 'string' ? o : o.de)), ...(ex.pairs || []).map(p => p.de),
+            ...(ex.dir === 'uk-de' && ex.type === 'build_sentence' ? ex.distractors : [])];
+          for (const t of de) assert.ok(!bad.test(t), `${base} ${ex.id}: „${t}“`);
+        }
+      }
+    }
+  }
+});

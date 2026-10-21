@@ -47,7 +47,7 @@ function weekdayLong(key) {
 function accuracy7(state, today) {
   let t = 0, c = 0;
   for (let i = 0; i < 7; i++) { const d = state.days?.[addDays(today, -i)]; if (d) { t += d.tasks || 0; c += d.correct || 0; } }
-  return t ? Math.round((c / t) * 100) : null;
+  return t ? Math.min(100, Math.round((c / t) * 100)) : null;
 }
 function minutes7(state, today) {
   let ms = 0;

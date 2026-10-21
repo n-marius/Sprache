@@ -21,6 +21,7 @@ function goalsCard(goals) {
 }
 
 function plannedPage(meta, app) {
+  const prep = meta.status === 'error' || meta.status === 'ready';
   const color = anim.themeColor?.(meta.theme) || 'var(--green)';
   const list = (title, ic, items) => items?.length ? h('section', { class: 'card v-goals' },
     h('h2', { class: 'v-card-title' }, icon(ic), title),
@@ -31,10 +32,10 @@ function plannedPage(meta, app) {
       h('section', { class: 'v-lesson-hero is-planned', style: sty({ '--theme-c': color }) },
         h('div', { class: 'v-lesson-glyph emoji' }, anim.themeGlyph(meta.theme)),
         h('div', { class: 'v-lesson-head' },
-          h('div', { class: 'v-lesson-cap' }, `Lektion ${meta.index + 1} · ${meta.phaseId}`, h('span', { class: 'badge v-planned-badge' }, 'geplant')),
+          h('div', { class: 'v-lesson-cap' }, `Lektion ${meta.index + 1} · ${meta.phaseId}`, h('span', { class: 'badge v-planned-badge' }, prep ? 'in Vorbereitung' : 'geplant')),
           ukText(meta.title_uk, { cls: 'v-lesson-uk', tag: 'h1' }),
           h('div', { class: 'v-lesson-de' }, meta.title_de),
-          h('p', { class: 'v-lesson-note' }, 'Diese Lektion ist geplant und wird bald freigeschaltet.'))),
+          h('p', { class: 'v-lesson-note' }, prep ? 'Die Inhalte dieser Lektion werden gerade fertiggestellt.' : 'Diese Lektion ist geplant – Ziele und Themen stehen schon fest.'))),
       h('div', { class: 'grid-2' },
         h('div', { class: 'v-stack' }, goalsCard(meta.goals_de), list('Grammatik', 'book', meta.grammar_de)),
         h('div', { class: 'v-stack' }, list('Wortfelder', 'words', meta.vocab_fields_de))),

@@ -7,7 +7,7 @@
 import * as srs from './srs.js';
 import { now, mulberry32, hashStr, shuffle, addDays, dayDiff } from './util.js';
 import { dayKey, isUnlocked, applyStreak } from './progress.js';
-import { pickDistractors } from './review-gen.js';
+import { pickDistractors, deShort } from './review-gen.js';
 import { listMined } from '../services/mining.js';
 import { isListenOff } from '../audio-mode.js';
 
@@ -339,7 +339,7 @@ function buildChoices(app, item, rng, mode) {
   const d = pickDistractors(v, pool, 3, rng);
   if (d.length < 2) return null;
   if (mode === 'listen' || item.dir === 'uk-de') {
-    return { prompt: v.uk, promptLang: 'uk', audio: mode === 'listen' ? v.uk : null, options: [v.de, ...d.map(x => x.de)].map(text => ({ text, lang: 'de' })) };
+    return { prompt: v.uk, promptLang: 'uk', audio: mode === 'listen' ? v.uk : null, options: [deShort(v.de), ...d.map(x => deShort(x.de))].map(text => ({ text, lang: 'de' })) };
   }
   return { prompt: v.de, promptLang: 'de', emoji: v.emoji || null, options: [v.uk, ...d.map(x => x.uk)].map(text => ({ text, lang: 'uk' })) };
 }

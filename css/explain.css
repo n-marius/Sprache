@@ -73,3 +73,5 @@
   .lib-groups > * + * { margin-top: 0; }
 }
 .xp-locked svg { width: 28px; height: 28px; flex: none; color: var(--label-3); }
+.xp-intro .xp-p { font-size: 19px; line-height: 1.5; }
+.xp-intro > * + * { margin-top: 8px; }

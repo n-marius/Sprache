@@ -31,9 +31,11 @@ Alle Lektionen erzählen eine durchgehende Geschichte (narrativer Kontext, Compr
 | Frau Natalija | па́ні Ната́лія | Vermieterin von Markus’ Wohnung, Nachbarin | ca. 65; Rentnerin; spricht langsam und freundlich, siezt; geht gern auf den Markt |
 | Herr Wiktor Bondarenko | пан Ві́ктор Бондаре́нко | Leiter (керівни́к) des Kyjiwer Büros | ca. 55; formell, siezt |
 
-**Anrede unter den Figuren**: Oksana und Markus duzen sich (Oksana bietet es in a1-1-02 an); Taras duzt alle Gleichaltrigen und Markus; Frau Natalija und Herr Bondarenko werden gesiezt und siezen. Die lernende Person duzt Oksana und Taras, siezt Frau Natalija, Herrn Bondarenko, Mandanten, Passanten und Behörden.
+**Anrede unter den Figuren**: Oksana und Markus **siezen** sich zunächst (Kollegen beim ersten Kontakt, a1-1-01 bis a1-1-03); in a1-1-04 (Familienfoto) bietet Oksana das Du an („Дава́й на ти!“), danach duzen sie sich. Taras duzt alle Gleichaltrigen und Markus von Anfang an. Frau Natalija und Herr Bondarenko werden immer gesiezt und siezen. Die lernende Person verhält sich wie Markus: Oksana bis a1-1-03 siezen, ab a1-1-04 duzen; Taras duzen; Frau Natalija, Herrn Bondarenko, Mandanten, Passanten und Behörden siezen.
 
 **Nebenfiguren** (bei Bedarf): Laura und Thomas (Лау́ра, То́мас) aus Österreich, Kollegen aus dem Sprachkurs; Herr Bondarenko stammt aus Kyjiw. Weitere Nebenfiguren (Passanten, Verkäufer, Beamte) ohne Namen oder mit Namen aus glossary-common.
+
+**Typografie**: Gedankenstrich (–) nur zwischen Sprecher-/Antwortteilen wie im Deutschen (Frage – Antwort), **nicht** als Kopula-Ersatz in einfachen Nominalsätzen mit Pronomen (`Вони́ дру́зі.`, `Я юри́ст.`, `Це Окса́на.`); nach ukrainischer Norm steht der Strich zwischen zwei Nomen ohne Verb (`Ки́їв – столи́ця`), aber nicht, wenn das Subjekt ein Pronomen ist. Wohlklang: `і`/`й` und `у`/`в` nach Vokal/Konsonant anwenden (`Окса́на й Андрі́й`, `Тара́с і Окса́на`).
 
 **Rolle der lernenden Person**: In `chat`-Aufgaben spricht die lernende Person als sie selbst – eine neue Kollegin bzw. ein neuer Kollege aus Deutschland im selben Büro (Geschlecht offen → keine geschlechtsmarkierten Ich-Formen). Markus ist eine Figur, nicht die lernende Person.
 
@@ -43,7 +45,7 @@ Alle Lektionen erzählen eine durchgehende Geschichte (narrativer Kontext, Compr
 | a1-1-01 | Erster Tag in Kyjiw: Markus grüßt Taras im Café, Frau Natalija im Hausflur, Oksana im Büro (ти vs. ви). |
 | a1-1-02 | Vorstellungsrunde im Büro: Markus lernt Oksana und Herrn Bondarenko kennen; woher, welche Sprachen. |
 | a1-1-03 | Telefonnummern und Alter: Markus und Oksana tauschen Nummern; Sofija ist sieben. |
-| a1-1-04 | Familienfoto: Oksana zeigt ihre Familie, Markus erzählt von Julia und seinen Eltern. |
+| a1-1-04 | Familienfoto: Oksana zeigt ihre Familie und bietet das Du an („Дава́й на ти!“), Markus erzählt von Julia und seinen Eltern. |
 | a1-1-05 | Wer wohnt wo? Oksana aus Lwiw lebt in Kyjiw, Markus wohnt jetzt hier, Taras liest und lernt viel. |
 | a1-1-06 | Im Café: Markus bestellt bei Taras; die lernende Person bestellt auch. |
 | a1-1-07 | Mittagessen mit Oksana; Abendessen bei Oksanas Familie (Смачно́го!). |

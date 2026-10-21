@@ -142,7 +142,9 @@ body.is-fullscreen .tabbar { display: none; }
   .tab svg { width: 24px; height: 24px; color: var(--blue-ink); }
   .tab.is-active { background: var(--blue); color: #fff; }
   .tab.is-active svg { color: #fff; }
-  .tab .tab-badge { position: static; transform: none; margin-left: auto; }
+  .tab .tab-icon { position: static; display: contents; }
+  .tab .tab-label { flex: 1; }
+  .tab .tab-badge { position: static; transform: none; order: 3; margin-left: auto; }
   .view { margin-left: 240px; padding-bottom: var(--sp-8); }
   body.is-fullscreen .view { margin-left: 0; }
 }

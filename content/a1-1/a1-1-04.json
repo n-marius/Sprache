@@ -1,0 +1,764 @@
+{
+ "id": "a1-1-04",
+ "phase": "A1.1",
+ "title_uk": "Моя́ сім’я́",
+ "title_de": "Meine Familie",
+ "theme": "family",
+ "goals_de": [
+  "Ich kann meine Familie vorstellen (Це моя́ сім’я́. Ось мій брат.).",
+  "Ich kann einfache Fragen zur Familie stellen und beantworten (Як її́ зва́ти? Скі́льки йому́ ро́ків?).",
+  "Ich kann sagen, wen oder was ich habe (У ме́не є …), und andere danach fragen.",
+  "Ich kann jemandem das Du anbieten und es annehmen (Дава́й на ти!)."
+ ],
+ "concepts": [
+  {
+   "id": "genus-nomen",
+   "title_de": "Genus der Nomen nach Endung (m. Konsonant, f. -а/-я, n. -о/-е) und Ausnahmen"
+  },
+  {
+   "id": "possessiv-miy-tviy",
+   "title_de": "Possessiva мій / моя́ / моє́ / мої́ und твій / твоя́ / твоє́ / твої́"
+  },
+  {
+   "id": "possessiv-yoho-yii",
+   "title_de": "Possessiva його́ / її́ (unveränderlich)"
+  },
+  {
+   "id": "chunk-u-mene-ie",
+   "title_de": "Chunk: У ме́не / у те́бе / у вас є … (ich habe …)"
+  },
+  {
+   "id": "os-tse",
+   "title_de": "Zeigen und Vorstellen: Ось … / Це …"
+  }
+ ],
+ "explanation": {
+  "title_de": "Familie: Genus, mein/dein, sein/ihr und „ich habe“",
+  "intro_de": "In dieser Lektion zeigt Oksana ein Familienfoto. Danach kann man die eigene Familie vorstellen (Це моя́ сім’я́.), nach Familienmitgliedern fragen und sagen, wen oder was man hat (У ме́не є брат.). Außerdem: Oksana bietet Markus das Du an.",
+  "sections": [
+   {
+    "heading_de": "1. Genus: männlich, weiblich, sächlich",
+    "body_de": "Jedes ukrainische Nomen hat ein **Genus** (grammatisches Geschlecht): männlich (m.), weiblich (f.) oder sächlich (n.). Man erkennt es fast immer an der **Endung der Grundform** (Nominativ = Wer-Fall, die Form im Wörterbuch). Das deutsche Geschlecht hilft dabei nicht: „das“ Kind heißt дити́на und ist weiblich, „das“ Foto (фо́то) ist sächlich.\n\n**Ausnahmen und Besonderheiten:** Bei Personen zählt das natürliche Geschlecht – та́то endet auf -о, ist aber männlich (**мій** та́то). дити́на ist regelmäßig weiblich (-а), auch wenn ein Junge gemeint ist (**моя́** дити́на). ді́ти (Kinder) und батьки́ (Eltern) sind Mehrzahlwörter; den Plural lernen wir später (Lektion 8), hier nur als Wörter. кіт ist der Kater, steht aber auch allgemein für „Katze“.",
+    "table": {
+     "head": [
+      "Genus",
+      "Endung",
+      "Beispiele"
+     ],
+     "rows": [
+      [
+       "m.",
+       "Konsonant (auch -й, -ь)",
+       "брат, син, чолові́к, діду́сь, кіт"
+      ],
+      [
+       "f.",
+       "-а, -я",
+       "ма́ма, сестра́, дочка́, бабу́ся, сім’я́"
+      ],
+      [
+       "n.",
+       "-о, -е",
+       "фо́то, сло́во, прі́звище"
+      ],
+      [
+       "Ausnahme m.",
+       "-о, aber Mann",
+       "та́то"
+      ],
+      [
+       "nur Plural",
+       "Mehrzahl",
+       "ді́ти, батьки́"
+      ]
+     ]
+    }
+   },
+   {
+    "heading_de": "2. мій und твій – mein und dein",
+    "body_de": "мій (mein) und твій (dein) richten sich – wie im Deutschen – nach dem **Genus des folgenden Nomens**, nicht nach der Person, der etwas gehört. Die Endung zeigt das Genus: -я bei f., -є bei n., -ї im Plural. твій gehört zu ти; man benutzt es also nur, wenn man jemanden duzt.",
+    "table": {
+     "head": [
+      "",
+      "m.",
+      "f.",
+      "n.",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "mein",
+       "мій брат",
+       "моя́ сестра́",
+       "моє́ фо́то",
+       "мої́ батьки́"
+      ],
+      [
+       "dein",
+       "твій син",
+       "твоя́ дочка́",
+       "твоє́ фо́то",
+       "твої́ ді́ти"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Це мій та́то, а це моя́ ма́ма.",
+      "de": "Das ist mein Papa, und das ist meine Mama."
+     },
+     {
+      "uk": "Це твоя́ дити́на?",
+      "de": "Ist das dein Kind?"
+     }
+    ]
+   },
+   {
+    "heading_de": "3. його́ und її́ – sein und ihr",
+    "body_de": "його́ (sein) und її́ (ihr) **verändern sich nie**. Sie richten sich nur nach der Person, der etwas gehört: його́ bei einem Besitzer (він), її́ bei einer Besitzerin (вона́). Das Genus des Nomens spielt keine Rolle: його́ брат, його́ сестра́, його́ ді́ти.\n\nDie beiden Wörter sind schon bekannt: In Як його́ зва́ти? / Як її́ зва́ти? bedeuten sie „ihn“ bzw. „sie“ (wörtlich „Wie nennt man ihn/sie?“). Dieselbe Form hat also zwei Aufgaben: „ihn/sie“ und „sein/ihr“.",
+    "table": {
+     "head": [
+      "Besitzer",
+      "m.",
+      "f.",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "він",
+       "його́ брат",
+       "його́ сестра́",
+       "його́ ді́ти"
+      ],
+      [
+       "вона́",
+       "її́ брат",
+       "її́ сестра́",
+       "її́ ді́ти"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Це Окса́на, а це її́ чолові́к Андрі́й.",
+      "de": "Das ist Oksana, und das ist ihr Mann Andrij."
+     },
+     {
+      "uk": "Це Ма́ркус, а це його́ сестра́ Ю́лія.",
+      "de": "Das ist Markus, und das ist seine Schwester Julia."
+     },
+     {
+      "uk": "Як її́ зва́ти? – Її́ зва́ти Софі́я.",
+      "de": "Wie heißt sie? – Sie heißt Sofija."
+     }
+    ]
+   },
+   {
+    "heading_de": "4. У ме́не є … – ich habe …",
+    "body_de": "Für „haben“ benutzt man im Alltag eine **feste Wendung**: у ме́не є … heißt wörtlich „bei mir ist/gibt es …“ (vgl. deutsch „bei mir ist ein Bruder“). ме́не ist eine Form von я nach einer Präposition (Genitiv, Wes-Fall – kommt systematisch in A1.2). Das, was man hat, steht in der Grundform (Nominativ). є (es gibt, ist vorhanden) bleibt immer gleich; nur die Person wechselt.\n\n**Betonung:** Nach у liegt sie vorn – у ме́не, у те́бе –, anders als in Мене́ зва́ти … / Як тебе́ зва́ти? Nach einem Vokal sagt man meist в statt у: А в те́бе? (vor в aber immer у: А у вас?). Die Frage ist derselbe Satz mit Frageton. „Er/sie hat“ (у ньо́го / у не́ї) und „ich habe kein(e) …“ folgen später; vorerst genügt die Antwort Ні.",
+    "table": {
+     "head": [
+      "Person",
+      "Wendung",
+      "Bedeutung"
+     ],
+     "rows": [
+      [
+       "я",
+       "у ме́не є …",
+       "ich habe …"
+      ],
+      [
+       "ти",
+       "у те́бе є …",
+       "du hast …"
+      ],
+      [
+       "ви",
+       "у вас є …",
+       "Sie haben / ihr habt …"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "У те́бе є ді́ти? – Так, у ме́не є син і дочка́.",
+      "de": "Hast du Kinder? – Ja, ich habe einen Sohn und eine Tochter."
+     },
+     {
+      "uk": "У вас є кіт? – Ні.",
+      "de": "Haben Sie eine Katze? – Nein."
+     }
+    ]
+   },
+   {
+    "heading_de": "5. Ось und Це – zeigen und vorstellen; Дава́й на ти!",
+    "body_de": "Mit Ось … zeigt man auf etwas: „Hier ist … / Da ist …“, etwa beim Zeigen eines Fotos. Mit Це … benennt man etwas: „Das ist …“ – so antwortet man auf Хто це? (Wer ist das?). Beide bleiben unverändert; ein „ist“ braucht man im Präsens nicht. на фо́то heißt „auf dem Foto“ (фо́то ist unveränderlich).\n\nBekanntes lässt sich gut kombinieren: Alter (Йому́ ві́сім ро́ків.), Name (Як її́ зва́ти?), Herkunft (Мій чолові́к з Украї́ни.).\n\n**Дава́й на ти!** ist eine feste Wendung: „Lass uns uns duzen!“ (дава́й = „lass uns“, wörtlich „gib“). Die Antwort ist einfach: Дава́й! Ab jetzt duzen sich Oksana und Markus.",
+    "examples": [
+     {
+      "uk": "Ось моя́ сім’я́ на фо́то.",
+      "de": "Hier ist meine Familie auf dem Foto."
+     },
+     {
+      "uk": "Хто це? – Це мій чолові́к Андрі́й.",
+      "de": "Wer ist das? – Das ist mein Mann Andrij."
+     },
+     {
+      "uk": "Дава́й на ти! – Дава́й!",
+      "de": "Lass uns uns duzen! – Gern!"
+     }
+    ]
+   }
+  ],
+  "summary_de": [
+   "Genus an der Endung: Konsonant → m., -а/-я → f., -о/-е → n.; Ausnahme та́то (m.).",
+   "мій/моя́/моє́/мої́ und твій/твоя́/твоє́/твої́ richten sich nach dem folgenden Nomen.",
+   "його́ (sein) und її́ (ihr) sind unveränderlich und richten sich nach dem Besitzer.",
+   "У ме́не / у те́бе / у вас є … + Grundform = ich habe / du hast / Sie haben …",
+   "Ось … = Hier ist …; Це … = Das ist …; Дава́й на ти! = Lass uns uns duzen!"
+  ]
+ },
+ "grammar": [
+  {
+   "title_de": "Genus an der Endung",
+   "body_de": "Konsonant → **m.** (брат, діду́сь, кіт), -а/-я → **f.** (сестра́, бабу́ся, сім’я́), -о/-е → **n.** (фо́то). Ausnahme: та́то ist m. дити́на ist immer f. ді́ти und батьки́ sind Plural.",
+   "examples": [
+    {
+     "uk": "мій та́то",
+     "de": "mein Papa"
+    },
+    {
+     "uk": "моя́ дити́на",
+     "de": "mein Kind"
+    },
+    {
+     "uk": "моє́ фо́то",
+     "de": "mein Foto"
+    }
+   ]
+  },
+  {
+   "title_de": "мій / твій",
+   "body_de": "Das Besitzwort passt sich dem Nomen an: **мій / моя́ / моє́ / мої́** (m. / f. / n. / Pl.), ebenso **твій / твоя́ / твоє́ / твої́** (nur beim Duzen).",
+   "examples": [
+    {
+     "uk": "мій брат",
+     "de": "mein Bruder"
+    },
+    {
+     "uk": "твоя́ дочка́",
+     "de": "deine Tochter"
+    },
+    {
+     "uk": "мої́ батьки́",
+     "de": "meine Eltern"
+    }
+   ]
+  },
+  {
+   "title_de": "його́ / її́",
+   "body_de": "**його́** = sein, **її́** = ihr – unveränderlich, nur der Besitzer zählt. Bekannt aus Як його́ / її́ зва́ти?",
+   "examples": [
+    {
+     "uk": "його́ дружи́на",
+     "de": "seine Frau"
+    },
+    {
+     "uk": "її́ чолові́к",
+     "de": "ihr Mann"
+    },
+    {
+     "uk": "її́ ді́ти",
+     "de": "ihre Kinder"
+    }
+   ]
+  },
+  {
+   "title_de": "Ich habe …",
+   "body_de": "Feste Wendung + Grundform: **у ме́не є** (ich habe), **у те́бе є** (du hast), **у вас є** (Sie haben). Nach Vokal oft в: А в те́бе?",
+   "examples": [
+    {
+     "uk": "У ме́не є брат.",
+     "de": "Ich habe einen Bruder."
+    },
+    {
+     "uk": "У те́бе є ді́ти?",
+     "de": "Hast du Kinder?"
+    },
+    {
+     "uk": "У вас є кіт?",
+     "de": "Haben Sie eine Katze?"
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  {
+   "id": "simia",
+   "uk": "сім’я́",
+   "de": "Familie",
+   "pos": "noun",
+   "info": "f.",
+   "emoji": "👨‍👩‍👧",
+   "example": {
+    "uk": "Ось моя́ сім’я́ на фо́то.",
+    "de": "Hier ist meine Familie auf dem Foto."
+   }
+  },
+  {
+   "id": "mama",
+   "uk": "ма́ма",
+   "de": "Mama, Mutter",
+   "pos": "noun",
+   "info": "f.",
+   "example": {
+    "uk": "Це моя́ ма́ма.",
+    "de": "Das ist meine Mama."
+   }
+  },
+  {
+   "id": "tato",
+   "uk": "та́то",
+   "de": "Papa, Vater",
+   "pos": "noun",
+   "info": "m. (trotz Endung -о!)",
+   "example": {
+    "uk": "Це мій та́то.",
+    "de": "Das ist mein Papa."
+   }
+  },
+  {
+   "id": "batky",
+   "uk": "батьки́",
+   "de": "Eltern",
+   "pos": "noun",
+   "info": "Pl. (nur Mehrzahl gebraucht)",
+   "example": {
+    "uk": "Мої́ батьки́ з Німе́ччини.",
+    "de": "Meine Eltern sind aus Deutschland."
+   }
+  },
+  {
+   "id": "syn",
+   "uk": "син",
+   "de": "Sohn",
+   "pos": "noun",
+   "info": "m.",
+   "example": {
+    "uk": "У ме́не є син.",
+    "de": "Ich habe einen Sohn."
+   }
+  },
+  {
+   "id": "dochka",
+   "uk": "дочка́",
+   "de": "Tochter",
+   "pos": "noun",
+   "info": "f.; Pl. до́чки",
+   "example": {
+    "uk": "Це моя́ дочка́ Софі́я.",
+    "de": "Das ist meine Tochter Sofija."
+   }
+  },
+  {
+   "id": "brat",
+   "uk": "брат",
+   "de": "Bruder",
+   "pos": "noun",
+   "info": "m.",
+   "example": {
+    "uk": "Ось мій брат.",
+    "de": "Hier ist mein Bruder."
+   }
+  },
+  {
+   "id": "sestra",
+   "uk": "сестра́",
+   "de": "Schwester",
+   "pos": "noun",
+   "info": "f.; Pl. се́стри",
+   "example": {
+    "uk": "У ме́не є сестра́.",
+    "de": "Ich habe eine Schwester."
+   }
+  },
+  {
+   "id": "cholovik",
+   "uk": "чолові́к",
+   "de": "Ehemann; Mann",
+   "pos": "noun",
+   "info": "m.",
+   "example": {
+    "uk": "Це мій чолові́к Андрі́й.",
+    "de": "Das ist mein Mann Andrij."
+   }
+  },
+  {
+   "id": "druzhyna",
+   "uk": "дружи́на",
+   "de": "Ehefrau",
+   "pos": "noun",
+   "info": "f.",
+   "example": {
+    "uk": "Його́ дружи́на з Украї́ни.",
+    "de": "Seine Frau ist aus der Ukraine."
+   }
+  },
+  {
+   "id": "dytyna",
+   "uk": "дити́на",
+   "de": "Kind",
+   "pos": "noun",
+   "info": "f. (auch wenn ein Junge gemeint ist); Pl. ді́ти",
+   "emoji": "👶",
+   "example": {
+    "uk": "Це твоя́ дити́на?",
+    "de": "Ist das dein Kind?"
+   }
+  },
+  {
+   "id": "dity",
+   "uk": "ді́ти",
+   "de": "Kinder",
+   "pos": "noun",
+   "info": "Pl. (Sg. дити́на)",
+   "example": {
+    "uk": "У вас є ді́ти?",
+    "de": "Haben Sie Kinder?"
+   }
+  },
+  {
+   "id": "babusia",
+   "uk": "бабу́ся",
+   "de": "Oma",
+   "pos": "noun",
+   "info": "f.",
+   "emoji": "👵",
+   "example": {
+    "uk": "Це моя́ бабу́ся.",
+    "de": "Das ist meine Oma."
+   }
+  },
+  {
+   "id": "didus",
+   "uk": "діду́сь",
+   "de": "Opa",
+   "pos": "noun",
+   "info": "m. (Endung -сь)",
+   "emoji": "👴",
+   "example": {
+    "uk": "Ось мій діду́сь.",
+    "de": "Hier ist mein Opa."
+   }
+  },
+  {
+   "id": "kit",
+   "uk": "кіт",
+   "de": "Kater, Katze",
+   "pos": "noun",
+   "info": "m.; Gen. кота́",
+   "emoji": "🐈",
+   "example": {
+    "uk": "У ме́не є кіт.",
+    "de": "Ich habe eine Katze."
+   }
+  },
+  {
+   "id": "miy",
+   "uk": "мій",
+   "de": "mein",
+   "pos": "pron",
+   "info": "Possessivpronomen; m. мій, f. моя́, n. моє́, Pl. мої́",
+   "example": {
+    "uk": "Це мій брат, а це моя́ сестра́.",
+    "de": "Das ist mein Bruder, und das ist meine Schwester."
+   },
+   "forms": [
+    {
+     "uk": "моя́",
+     "info": "f. Nom. Sg. von мій"
+    },
+    {
+     "uk": "моє́",
+     "info": "n. Nom. Sg. von мій"
+    },
+    {
+     "uk": "мої́",
+     "info": "Nom. Pl. von мій"
+    }
+   ]
+  },
+  {
+   "id": "tviy",
+   "uk": "твій",
+   "de": "dein",
+   "pos": "pron",
+   "info": "Possessivpronomen (zu ти); m. твій, f. твоя́, n. твоє́, Pl. твої́",
+   "example": {
+    "uk": "Це твій кіт?",
+    "de": "Ist das deine Katze?"
+   },
+   "forms": [
+    {
+     "uk": "твоя́",
+     "info": "f. Nom. Sg. von твій"
+    },
+    {
+     "uk": "твоє́",
+     "info": "n. Nom. Sg. von твій"
+    },
+    {
+     "uk": "твої́",
+     "info": "Nom. Pl. von твій"
+    }
+   ]
+  },
+  {
+   "id": "yoho",
+   "uk": "його́",
+   "de": "sein (Possessiv)",
+   "pos": "pron",
+   "info": "Possessivpronomen (Besitzer: він), unveränderlich; auch „ihn“ (Як його́ зва́ти?)",
+   "example": {
+    "uk": "Це Ма́ркус і його́ сестра́.",
+    "de": "Das sind Markus und seine Schwester."
+   }
+  },
+  {
+   "id": "yii",
+   "uk": "її́",
+   "de": "ihr (Possessiv, Besitzerin: sie)",
+   "pos": "pron",
+   "info": "Possessivpronomen (Besitzerin: вона́), unveränderlich; auch „sie“ (Як її́ зва́ти?)",
+   "example": {
+    "uk": "Це Окса́на і її́ чолові́к.",
+    "de": "Das sind Oksana und ihr Mann."
+   }
+  },
+  {
+   "id": "u_mene_ie",
+   "uk": "У ме́не є …",
+   "de": "Ich habe …",
+   "pos": "phrase",
+   "info": "feste Wendung (wörtl. „bei mir ist …“) + Nominativ; у те́бе є = du hast, у вас є = Sie haben",
+   "example": {
+    "uk": "У ме́не є брат і сестра́.",
+    "de": "Ich habe einen Bruder und eine Schwester."
+   }
+  },
+  {
+   "id": "ie",
+   "uk": "є",
+   "de": "es gibt; ist vorhanden (у ме́не є = ich habe)",
+   "pos": "verb",
+   "info": "unveränderlich; Form von бу́ти „sein“",
+   "example": {
+    "uk": "У те́бе є ді́ти?",
+    "de": "Hast du Kinder?"
+   }
+  },
+  {
+   "id": "os",
+   "uk": "ось",
+   "de": "hier ist …, da ist … (zeigend)",
+   "pos": "part",
+   "info": "Partikel, unveränderlich",
+   "example": {
+    "uk": "Ось моя́ сім’я́.",
+    "de": "Hier ist meine Familie."
+   }
+  }
+ ],
+ "glossary": [
+  {
+   "uk": "ме́не",
+   "lemma": "я",
+   "de": "mich; mir (hier: bei mir)",
+   "pos": "pron",
+   "info": "Gen. von я; nach Präposition vorn betont: у ме́не = bei mir (ich habe)"
+  },
+  {
+   "uk": "те́бе",
+   "lemma": "ти",
+   "de": "dich; dir (hier: bei dir)",
+   "pos": "pron",
+   "info": "Gen. von ти; nach Präposition vorn betont: у те́бе = bei dir (du hast)"
+  },
+  {
+   "uk": "вас",
+   "lemma": "ви",
+   "de": "Sie; euch",
+   "pos": "pron",
+   "info": "Gen./Akk. von ви; у вас = bei Ihnen (Sie haben)"
+  },
+  {
+   "uk": "мене́",
+   "lemma": "я",
+   "de": "mich",
+   "pos": "pron",
+   "info": "Akk. von я; Мене́ зва́ти … = Ich heiße …"
+  },
+  {
+   "uk": "тебе́",
+   "lemma": "ти",
+   "de": "dich",
+   "pos": "pron",
+   "info": "Akk. von ти; Як тебе́ зва́ти? = Wie heißt du?"
+  },
+  {
+   "uk": "зва́ти",
+   "lemma": "зва́ти",
+   "de": "nennen (Мене́ зва́ти … = ich heiße …)",
+   "pos": "verb",
+   "info": "Inf.; nur in festen Wendungen"
+  },
+  {
+   "uk": "його́",
+   "lemma": "він",
+   "de": "ihn",
+   "pos": "pron",
+   "info": "Akk. von він; Як його́ зва́ти? = Wie heißt er?"
+  },
+  {
+   "uk": "її́",
+   "lemma": "вона́",
+   "de": "sie (Akk.)",
+   "pos": "pron",
+   "info": "Akk. von вона́; Як її́ зва́ти? = Wie heißt sie?"
+  },
+  {
+   "uk": "ньо́го",
+   "lemma": "він",
+   "de": "ihm (hier: bei ihm)",
+   "pos": "pron",
+   "info": "Gen. von він nach Präposition; у ньо́го = er hat (folgt später)"
+  },
+  {
+   "uk": "не́ї",
+   "lemma": "вона́",
+   "de": "ihr (hier: bei ihr)",
+   "pos": "pron",
+   "info": "Gen. von вона́ nach Präposition; у не́ї = sie hat (folgt später)"
+  },
+  {
+   "uk": "йому́",
+   "lemma": "він",
+   "de": "ihm",
+   "pos": "pron",
+   "info": "Dat. von він; Йому́ … ро́ків = Er ist … Jahre alt."
+  },
+  {
+   "uk": "їй",
+   "lemma": "вона́",
+   "de": "ihr",
+   "pos": "pron",
+   "info": "Dat. von вона́; Їй … ро́ків = Sie ist … Jahre alt."
+  },
+  {
+   "uk": "мені́",
+   "lemma": "я",
+   "de": "mir",
+   "pos": "pron",
+   "info": "Dat. von я; Мені́ … ро́ків = Ich bin … Jahre alt."
+  },
+  {
+   "uk": "вам",
+   "lemma": "ви",
+   "de": "Ihnen; euch",
+   "pos": "pron",
+   "info": "Dat. von ви; Скі́льки вам ро́ків? = Wie alt sind Sie?"
+  },
+  {
+   "uk": "ро́ків",
+   "lemma": "рік",
+   "de": "Jahre",
+   "pos": "noun",
+   "info": "Gen. Pl. von рік; nach 5–20: п’ять ро́ків"
+  },
+  {
+   "uk": "ро́ки",
+   "lemma": "рік",
+   "de": "Jahre",
+   "pos": "noun",
+   "info": "Nom. Pl. nach 2–4: два ро́ки"
+  },
+  {
+   "uk": "Украї́ни",
+   "lemma": "Украї́на",
+   "de": "Ukraine",
+   "pos": "name",
+   "info": "Gen. Sg.; з Украї́ни = aus der Ukraine"
+  },
+  {
+   "uk": "Німе́ччини",
+   "lemma": "Німе́ччина",
+   "de": "Deutschland",
+   "pos": "name",
+   "info": "Gen. Sg.; з Німе́ччини = aus Deutschland"
+  },
+  {
+   "uk": "А́встрії",
+   "lemma": "А́встрія",
+   "de": "Österreich",
+   "pos": "name",
+   "info": "Gen. Sg.; з А́встрії = aus Österreich"
+  },
+  {
+   "uk": "фо́то",
+   "lemma": "фо́то",
+   "de": "Foto",
+   "pos": "noun",
+   "info": "n., unveränderlich; на фо́то = auf dem Foto"
+  },
+  {
+   "uk": "прі́звище",
+   "lemma": "прі́звище",
+   "de": "Nachname",
+   "pos": "noun",
+   "info": "n."
+  },
+  {
+   "uk": "Ба́рсик",
+   "lemma": "Ба́рсик",
+   "de": "Barsyk (Katername)",
+   "pos": "name",
+   "info": "m."
+  },
+  {
+   "uk": "програмі́ст",
+   "lemma": "програмі́ст",
+   "de": "Programmierer",
+   "pos": "noun",
+   "info": "m."
+  },
+  {
+   "uk": "дава́й",
+   "lemma": "дава́ти",
+   "de": "lass uns …! (wörtl. gib!)",
+   "pos": "verb",
+   "info": "Imperativ 2. Sg. von дава́ти; Дава́й на ти! = Lass uns uns duzen!"
+  },
+  {
+   "uk": "Берлі́ні",
+   "lemma": "Берлі́н",
+   "de": "Berlin",
+   "pos": "name",
+   "info": "Lok. Sg.; у/в Берлі́ні = in Berlin (Ortsangaben: Lektion 5)"
+  },
+  {
+   "uk": "спра́ви",
+   "lemma": "спра́ва",
+   "de": "Angelegenheiten",
+   "pos": "noun",
+   "info": "Nom. Pl. von спра́ва; Як спра́ви? = Wie geht’s?"
+  },
+  {
+   "uk": "поба́чення",
+   "lemma": "поба́чення",
+   "de": "Wiedersehen",
+   "pos": "noun",
+   "info": "n.; до поба́чення = auf Wiedersehen"
+  }
+ ],
+ "exercises": []
+}

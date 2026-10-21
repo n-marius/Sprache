@@ -16,7 +16,7 @@ function loadBase(base) {
   const phases = curriculum.phases;
   const lessonList = phases.flatMap(p => p.lessons.map(l => ({ ...l, phaseId: p.id })));
   const lessons = new Map();
-  for (const l of lessonList) if (l.status === 'ready') lessons.set(l.id, read(l.file));
+  for (const l of lessonList) if (l.status === 'ready' && fs.existsSync(path.join(dir, l.file))) lessons.set(l.id, read(l.file));
   return { curriculum, phases, lessonList, lessons, glossaryCommon: read('glossary-common.json'), uiStrings: read('ui-strings.json') };
 }
 

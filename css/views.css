@@ -164,8 +164,7 @@ a.v-tool:active { background: var(--surface-3); }
   background: var(--bg-grouped);
 }
 .v-sum-inner { width: 100%; max-width: 620px; margin: 0 auto; flex: 1; display: grid; gap: var(--sp-5); align-content: start; padding-bottom: var(--sp-6); }
-.v-sum-stage { position: relative; height: 180px; display: grid; place-items: center; }
-.v-sum-stage .anim-badge { margin: 0 auto; }
+.v-sum-stage { position: relative; height: 180px; }
 .v-sum-head { text-align: center; }
 .v-sum-title { font-family: var(--font-rounded); font-size: var(--fs-title1); font-weight: 800; color: var(--yellow-ink); }
 .v-sum-sub { margin-top: 4px; color: var(--label-2); font-size: var(--fs-callout); }

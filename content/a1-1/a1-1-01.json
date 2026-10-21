@@ -29,7 +29,7 @@
   "sections": [
    {
     "heading_de": "Duzen und Siezen: ти und ви",
-    "body_de": "Wie im Deutschen gibt es zwei Anredeformen. **ти** (du) gilt für Freunde, Familie, Kinder und Kollegen, mit denen man sich duzt. **ви** (Sie) gilt für Unbekannte, Ältere, Kunden und Behörden. Zugleich ist **ви** der Plural: Es heißt auch „ihr“ (mehrere Freunde). In Briefen und E-Mails wird die höfliche Anrede oft großgeschrieben: **Ви**. Dazu kommt **я** (ich).\n\nDie Anrede zieht sich durch viele Wendungen: zu „ти“ gehören **ви́бач** und **бува́й**, zu „ви“ gehören **ви́бачте** und **бува́йте**. Im Zweifel ist **ви** die sichere Wahl.",
+    "body_de": "Wie im Deutschen gibt es zwei Anredeformen. **ти** (du) gilt für Freunde, Familie, Kinder und Kollegen, mit denen man sich duzt. **ви** (Sie) gilt für Unbekannte, Ältere, Kunden und Behörden. Zugleich ist **ви** der Plural: Es heißt auch „ihr“ (mehrere Freunde). In Briefen und E-Mails wird die höfliche Anrede oft großgeschrieben: **Ви**. Dazu kommt **я** (ich).\n\nDie Anrede zieht sich durch viele Wendungen: zu „ти“ gehören **ви́бач** und **бува́й**, zu „ви“ gehören **ви́бачте** und **до поба́чення** (**бува́йте** sagt man zu mehreren). Im Zweifel ist **ви** die sichere Wahl.",
     "table": {
      "head": [
       "Deutsch",
@@ -43,7 +43,7 @@
        "До́брий день!"
       ],
       [
-       "Und du? / Und Ihnen?",
+       "Und dir? / Und Ihnen?",
        "А ти?",
        "А ви?"
       ],
@@ -55,7 +55,7 @@
       [
        "Tschüss! / Auf Wiedersehen!",
        "Бува́й!",
-       "Бува́йте! (mehrere) · До поба́чення!"
+       "До поба́чення! (Бува́йте! zu mehreren)"
       ]
      ]
     }
@@ -95,7 +95,7 @@
    },
    {
     "heading_de": "Sich verabschieden",
-    "body_de": "**До поба́чення!** (wörtlich „bis zum Wiedersehen“) ist neutral und höflich. **Бува́й!** ist das lockere „Tschüss“ zu einer vertrauten Person, **Бува́йте!** zu mehreren. **На добра́ніч!** (gute Nacht) sagt man nur beim Abschied spät abends oder vor dem Schlafengehen – nie zur Begrüßung (dann: **До́брий ве́чір!**).",
+    "body_de": "**До поба́чення!** (wörtlich „bis zum Wiedersehen“) ist neutral und höflich. **Бува́й!** ist das lockere „Tschüss“ zu einer vertrauten Person, **Бува́йте!** zu mehreren (zu einer gesiezten Person höchstens locker-freundlich; neutral-höflich ist **До поба́чення!**). **На добра́ніч!** (gute Nacht) sagt man nur beim Abschied spät abends oder vor dem Schlafengehen – nie zur Begrüßung (dann: **До́брий ве́чір!**).",
     "examples": [
      {
       "uk": "Ду́же дя́кую! До поба́чення!",
@@ -109,7 +109,7 @@
    },
    {
     "heading_de": "Wie geht’s?",
-    "body_de": "**Як спра́ви?** (wörtlich „Wie (stehen die) Dinge?“; **як** = wie) ist die übliche Frage, im Ton neutral. Persönlicher: **Як ти?** bzw. höflich **Як ви?** Nach der Antwort fragt man zurück: **А ти?** / **А ви?** **ду́же** (sehr) und **теж** (auch) stehen vor dem Wort: **ду́же до́бре**, **теж до́бре**. Kurz: **Я теж.** – Ich auch.",
+    "body_de": "**Як спра́ви?** (wörtlich „Wie (stehen die) Dinge?“; **як** = wie) ist die übliche Frage, im Ton neutral. Persönlicher: **Як ти?** bzw. höflich **Як ви?** Nach der Antwort fragt man zurück: **А ти?** / **А ви?** **ду́же** (sehr) und **теж** (auch) stehen vor dem Wort, auf das sie sich beziehen: **ду́же до́бре**, **теж до́бре**; nach einem Pronomen steht **теж** dahinter: **Я теж.** – Ich auch.",
     "table": {
      "head": [
       "Antwort",
@@ -159,7 +159,7 @@
    },
    {
     "heading_de": "Das Betonungszeichen",
-    "body_de": "Der Strich über einem Vokal (**до́бре**, **приві́т**) zeigt die betonte Silbe. Die Betonung ist im Ukrainischen frei und wird mit jedem Wort gelernt. Das Zeichen ist nur eine **Lesehilfe** in Lehrmaterial – in normalen Texten, auf Schildern und im Internet steht es nicht. Einsilbige Wörter (**так**, **ні**, **ти**, **день**) tragen kein Zeichen. Gut zu wissen: Unbetontes **о** bleibt ein klares o (anders als im Russischen): **до́бре**, **норма́льно**."
+    "body_de": "Der Strich über einem Vokal (**до́бре**, **приві́т**) zeigt die betonte Silbe. Die Betonung ist im Ukrainischen frei und wird mit jedem Wort gelernt. Das Zeichen ist nur eine **Lesehilfe** in Lehrmaterial – in normalen Texten, auf Schildern und im Internet steht es nicht. Einsilbige Wörter (**так**, **ні**, **ти**, **день**) tragen kein Zeichen. Gut zu wissen: Unbetontes **о** bleibt ein klares o (anders als im Russischen): **пога́но**, **норма́льно**, **до поба́чення**."
    }
   ],
   "summary_de": [
@@ -174,7 +174,7 @@
  "grammar": [
   {
    "title_de": "ти oder ви?",
-   "body_de": "**ти** = du (Freunde, Familie, Kollegen per du). **ви** = Sie (Unbekannte, Ältere, Kunden) **und** ihr (mehrere). Passend dazu: **ви́бач / бува́й** (du) – **ви́бачте / бува́йте** (Sie, ihr). Im Zweifel **ви**.",
+   "body_de": "**ти** = du (Freunde, Familie, Kollegen per du). **ви** = Sie (Unbekannte, Ältere, Kunden) **und** ihr (mehrere). Passend dazu: **ви́бач / бува́й** (du) – **ви́бачте / до поба́чення** (Sie); zu mehreren: **бува́йте**. Im Zweifel **ви**.",
    "examples": [
     {
      "uk": "До́бре, дя́кую. А ти?",
@@ -185,8 +185,8 @@
      "de": "Gut, danke. Und Ihnen?"
     },
     {
-     "uk": "Ви́бач! – Ви́бачте!",
-     "de": "Entschuldige! – Entschuldigen Sie!"
+     "uk": "Ви́бач! / Ви́бачте!",
+     "de": "Entschuldige! / Entschuldigen Sie!"
     }
    ]
   },
@@ -210,7 +210,7 @@
   },
   {
    "title_de": "Wie geht’s? – Antworten",
-   "body_de": "**Як спра́ви?** – **Ду́же до́бре / До́бре / Норма́льно / Пога́но.** Dann zurückfragen: **А ти?** bzw. **А ви?** **ду́же** und **теж** stehen vor dem Wort: **ду́же до́бре**, **теж до́бре**.",
+   "body_de": "**Як спра́ви?** – **Ду́же до́бре / До́бре / Норма́льно / Пога́но.** Dann zurückfragen: **А ти?** bzw. **А ви?** **ду́же** und **теж** stehen vor dem Wort: **ду́же до́бре**, **теж до́бре** – aber **Я теж.**",
    "examples": [
     {
      "uk": "Як спра́ви? – Норма́льно, дя́кую.",
@@ -224,7 +224,7 @@
   },
   {
    "title_de": "Danke – bitte – Entschuldigung",
-   "body_de": "**Дя́кую!** (danke), **Ду́же дя́кую!** (vielen Dank). Antwort: **Будь ла́ска!** (bitte schön) – das heißt auch „bitte“ bei einer Bitte. **Ви́бачте!** – Antwort: **Нічо́го.** (Macht nichts.) Das Akzentzeichen ist nur Lesehilfe.",
+   "body_de": "**Дя́кую!** (danke), **Ду́же дя́кую!** (vielen Dank). Antwort: **Будь ла́ска!** (bitte schön) – das heißt auch „bitte“ bei einer Bitte. **Ви́бачте!** – Antwort: **Нічо́го.** (Macht nichts.)",
    "examples": [
     {
      "uk": "Ду́же дя́кую! – Будь ла́ска!",
@@ -280,8 +280,8 @@
    "pos": "phrase",
    "info": "feste Wendung; höflich, abends",
    "example": {
-    "uk": "До́брий ве́чір! Ви́бачте!",
-    "de": "Guten Abend! Entschuldigung!"
+    "uk": "До́брий ве́чір! Як ви?",
+    "de": "Guten Abend! Wie geht es Ihnen?"
    }
   },
   {
@@ -320,7 +320,7 @@
    "forms": [
     {
      "uk": "бува́йте",
-     "info": "ви-Form: zu mehreren (ihr) oder Sie"
+     "info": "Form für mehrere Personen (ihr)"
     }
    ]
   },
@@ -492,7 +492,7 @@
    "uk": "теж",
    "de": "auch",
    "pos": "adv",
-   "info": "Adverb; steht vor dem Wort: теж до́бре",
+   "info": "Adverb; vor dem Bezugswort (теж до́бре), nach Pronomen dahinter (я теж)",
    "example": {
     "uk": "Теж до́бре, дя́кую.",
     "de": "Auch gut, danke."
@@ -538,13 +538,6 @@
    "de": "Abend",
    "pos": "noun",
    "info": "m., Nom. Sg.; in до́брий ве́чір"
-  },
-  {
-   "uk": "ніч",
-   "lemma": "ніч",
-   "de": "Nacht",
-   "pos": "noun",
-   "info": "f., Nom. Sg."
   },
   {
    "uk": "добра́ніч",
@@ -665,8 +658,8 @@
    ],
    "difficulty": 1,
    "title_uk": "Пе́рший день",
-   "text_uk": "🏠 Під’ї́зд\nПа́ні Ната́лія: До́брий ра́нок, як ви?\nМа́ркус: Ду́же до́бре, дя́кую!\n☕ Кафе́\nТара́с: Приві́т, як спра́ви?\nМа́ркус: Норма́льно, а ти?\nТара́с: Теж норма́льно!\n💼 О́фіс\nОкса́на: До́брий день, як ви?\nМа́ркус: До́бре, дя́кую, а ви?\nОкса́на: Теж до́бре, дя́кую.",
-   "text_de": "Markus’ erster Tag in Kyjiw. Hauseingang – Frau Natalija (Vermieterin): Guten Morgen, wie geht es Ihnen? – Markus: Sehr gut, danke! Café – Taras (Student, arbeitet im Café): Hallo, wie geht’s? – Markus: Ganz gut, und dir? – Taras: Auch ganz gut! Büro – Oksana (Kollegin): Guten Tag, wie geht es Ihnen? – Markus: Gut, danke, und Ihnen? – Oksana: Auch gut, danke.",
+   "text_uk": "(🏠 Під’ї́зд)\nПа́ні Ната́лія: До́брий ра́нок, як ви?\nМа́ркус: Ду́же до́бре, дя́кую, а ви?\nПа́ні Ната́лія: Теж до́бре.\n(☕ Кафе́)\nТара́с: Приві́т, як спра́ви?\nМа́ркус: Норма́льно, а ти?\nТара́с: Теж норма́льно!\n(💼 О́фіс)\nОкса́на: До́брий день, як ви?\nМа́ркус: До́бре, дя́кую, а ви?",
+   "text_de": "Markus’ erster Tag in Kyjiw. Hauseingang – Frau Natalija (Vermieterin): Guten Morgen, wie geht es Ihnen? – Markus: Sehr gut, danke, und Ihnen? – Frau Natalija: Auch gut. Café – Taras (Student, arbeitet im Café): Hallo, wie geht’s? – Markus: Ganz gut, und dir? – Taras: Auch ganz gut! Büro – Oksana (neue Kollegin): Guten Tag, wie geht es Ihnen? – Markus: Gut, danke, und Ihnen?",
    "questions": [
     {
      "q_uk": "Тара́с: «ти» чи «ви»?",
@@ -689,7 +682,7 @@
      "q_de": "Was antwortet Markus Frau Natalija?",
      "kind": "mc",
      "options": [
-      "Ду́же до́бре, дя́кую!",
+      "Ду́же до́бре, дя́кую, а ви?",
       "Норма́льно, а ти?",
       "Пога́но."
      ]
@@ -723,7 +716,7 @@
    "difficulty": 1,
    "context_uk": "Тара́с: Приві́т, як спра́ви?\nМа́ркус: Норма́льно, а ти?",
    "context_de": "Im Café: Taras (Student, duzt alle) und Markus.",
-   "statement_uk": "Тут пра́вильно «ти».",
+   "statement_uk": "Тара́с і Ма́ркус – «ти».",
    "answer": true,
    "explanation_de": "Richtig: Taras duzt – Приві́т! und а ти? passen."
   },
@@ -735,9 +728,9 @@
     "dobryi_ranok"
    ],
    "difficulty": 1,
-   "context_uk": "Па́ні Ната́лія: До́брий ра́нок, як ви?\nМа́ркус: Ду́же до́бре, дя́кую!",
+   "context_uk": "Па́ні Ната́лія: До́брий ра́нок, як ви?\nМа́ркус: Ду́же до́бре, дя́кую, а ви?",
    "context_de": "Im Hauseingang: Frau Natalija (ca. 65, Vermieterin) und Markus.",
-   "statement_uk": "Тут пра́вильно «ти».",
+   "statement_uk": "Па́ні Ната́лія й Ма́ркус – «ти».",
    "answer": false,
    "explanation_de": "Falsch: Frau Natalija und Markus siezen sich – hier passt ви (Як ви?)."
   },
@@ -770,8 +763,8 @@
    "options": [
     [
      "ра́нок",
-     "ве́чір",
-     "ла́ска"
+     "ла́ска",
+     "спра́ви"
     ]
    ],
    "translation_de": "Frau Natalija: Guten Morgen, wie geht es Ihnen?"
@@ -785,7 +778,7 @@
     "normalno"
    ],
    "difficulty": 1,
-   "text": "Ма́ркус: Норма́льно, а {{ти}}?",
+   "text": "Тара́с: Приві́т, як спра́ви? – Ма́ркус: Норма́льно, а {{ти}}?",
    "options": [
     [
      "ти",
@@ -793,7 +786,7 @@
      "я"
     ]
    ],
-   "translation_de": "Markus (zu Taras): Ganz gut, und dir?",
+   "translation_de": "Taras: Hallo, wie geht’s? – Markus: Ganz gut, und dir?",
    "hint_de": "Taras duzt – also ти."
   },
   {
@@ -1263,20 +1256,20 @@
    "id": "e29",
    "type": "cloze",
    "vocab": [
-    "ya",
     "tezh",
+    "normalno",
     "a_ty"
    ],
    "difficulty": 2,
-   "text": "– Норма́льно. А ти? – {{Я}} теж.",
+   "text": "– Норма́льно. А ти? – {{Теж}} норма́льно.",
    "options": [
     [
-     "Я",
-     "Ти",
-     "Ви"
+     "Теж",
+     "Ду́же",
+     "Бува́й"
     ]
    ],
-   "translation_de": "– Ganz gut. Und dir? – Mir auch. (wörtl. „Ich auch.“)"
+   "translation_de": "– Ganz gut. Und dir? – Auch ganz gut."
   },
   {
    "id": "e30",
@@ -1322,7 +1315,7 @@
    "answer": "До́брий ра́нок! Як спра́ви?",
    "distractors": [
     "ве́чір",
-    "ти"
+    "день"
    ]
   },
   {
@@ -1687,7 +1680,7 @@
     "buvai"
    ],
    "difficulty": 3,
-   "scenario_de": "8 Uhr im Hauseingang: Frau Natalija (ca. 65, Markus’ Vermieterin) wohnt nebenan und siezt. Ziel: höflich grüßen, antworten, sich verabschieden.",
+   "scenario_de": "8 Uhr: Man holt Markus zu Hause ab. Im Hauseingang trifft man Frau Natalija (ca. 65, Markus’ Vermieterin); sie siezt. Ziel: höflich grüßen, antworten, sich verabschieden.",
    "partner": {
     "name": "Па́ні Ната́лія",
     "emoji": "👵"
@@ -1808,7 +1801,8 @@
     "vybachte",
     "diakuiu",
     "do_pobachennia",
-    "bud_laska"
+    "bud_laska",
+    "pohano"
    ],
    "difficulty": 2,
    "scenario_de": "Im Büroflur stößt man versehentlich mit einem Herrn zusammen – es ist Herr Bondarenko, der Büroleiter (formell, siezt). Ziel: sich entschuldigen und höflich verabschieden.",
@@ -1907,7 +1901,6 @@
     "pryvit",
     "vybachte",
     "ty",
-    "pohano",
     "normalno",
     "na_dobranich",
     "buvai"
@@ -1969,8 +1962,8 @@
     },
     {
      "who": "bot",
-     "uk": "Ой, пога́но … Ну, бува́й! На добра́ніч!",
-     "de": "Ach, schlecht … Na dann, tschüss! Gute Nacht!"
+     "uk": "Теж норма́льно. Ну, бува́й! На добра́ніч!",
+     "de": "Auch ganz gut. Na dann, tschüss! Gute Nacht!"
     },
     {
      "who": "me",
@@ -2037,10 +2030,10 @@
      ]
     },
     {
-     "q_uk": "Ма́ркус і Окса́на – «ти».",
-     "q_de": "Markus und Oksana sagen „ти“ zueinander.",
+     "q_uk": "Окса́на: «Будь ла́ска!»",
+     "q_de": "Oksana sagt: „Будь ла́ска!“",
      "kind": "tf",
-     "answer": false
+     "answer": true
     }
    ]
   },
@@ -2058,7 +2051,7 @@
    ],
    "difficulty": 3,
    "title_uk": "До́брий ве́чір!",
-   "text_uk": "🏠 Під’ї́зд\nПа́ні Ната́лія: До́брий ве́чір, як спра́ви?\nМа́ркус: Ду́же до́бре, дя́кую! А ви?\nПа́ні Ната́лія: Теж до́бре. На добра́ніч!\nМа́ркус: Дя́кую, на добра́ніч!",
+   "text_uk": "(🏠 Під’ї́зд)\nПа́ні Ната́лія: До́брий ве́чір, як спра́ви?\nМа́ркус: Ду́же до́бре, дя́кую! А ви?\nПа́ні Ната́лія: Теж до́бре. На добра́ніч!\nМа́ркус: Дя́кую, на добра́ніч!",
    "text_de": "Spät abends kommt Markus nach Hause. Hauseingang – Frau Natalija: Guten Abend, wie geht’s? – Markus: Sehr gut, danke! Und Ihnen? – Frau Natalija: Auch gut. Gute Nacht! – Markus: Danke, gute Nacht!",
    "questions": [
     {
@@ -2121,6 +2114,40 @@
     "Ти теж.",
     "Ви теж.",
     "Я ду́же."
+   ]
+  },
+  {
+   "id": "e61",
+   "type": "mc_translate",
+   "vocab": [
+    "vybachte",
+    "ty"
+   ],
+   "difficulty": 2,
+   "dir": "de-uk",
+   "prompt": "Entschuldige! (zu Taras)",
+   "options": [
+    "Ви́бач!",
+    "Ви́бачте!",
+    "Бува́й!",
+    "Дя́кую!"
+   ]
+  },
+  {
+   "id": "e62",
+   "type": "build_sentence",
+   "vocab": [
+    "pryvit",
+    "yak",
+    "ty"
+   ],
+   "difficulty": 2,
+   "dir": "de-uk",
+   "prompt": "Hallo! Wie geht’s dir? (du)",
+   "answer": "Приві́т! Як ти?",
+   "distractors": [
+    "ви",
+    "ве́чір"
    ]
   }
  ]

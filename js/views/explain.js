@@ -95,7 +95,7 @@ export function render(params, app) {
   } else if (!unlocked) {
     body.push(h('div', { class: 'card xp-locked' }, icon('lock'), h('p', 'Diese Erklärung wird freigeschaltet, sobald du die vorige Lektion begonnen hast.')));
   } else {
-    if (x.intro_de) body.push(h('p', { class: 'xp-intro' }, x.intro_de));
+    if (x.intro_de) body.push(h('div', { class: 'xp-intro' }, ...paragraphs(x.intro_de)));
     if (lesson.concepts?.length) body.push(h('div', { class: 'xp-concepts' }, lesson.concepts.map(c => h('span', { class: 'badge blue' }, c.title_de))));
     (x.sections || []).forEach((s, i) => {
       body.push(h('section', { class: 'card xp-section' },

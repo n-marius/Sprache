@@ -1,1 +1,205 @@
-/* Platzhalter – wird vom zuständigen Agenten gefüllt (siehe docs/ARCHITECTURE.md). */
+/* Animationen – Utilities + Stile für js/ui/anim.js (API-Doku: Kopfkommentar in js/ui/anim.js).
+   Nur transform/opacity animiert (Ausnahme: SVG stroke-dashoffset für Häkchen/Ring).
+   prefers-reduced-motion bzw. <html data-motion="reduce"> → keine Bewegung, Endzustand sichtbar. */
+
+/* ============================== Utilities ============================== */
+
+/* Pulsierender Ring um den aktuellen Lernpfad-Knoten (belegt ::after). Farbe: --pulse-color */
+:where(.anim-pulse-ring) { position: relative; }
+.anim-pulse-ring::after {
+  content: ""; position: absolute; inset: -4px; border-radius: inherit;
+  border: 3px solid var(--pulse-color, var(--green));
+  pointer-events: none;
+  opacity: 0;
+  animation: anim-pulse-ring 1.9s var(--ease-out) infinite;
+}
+@keyframes anim-pulse-ring {
+  0% { transform: scale(.94); opacity: .7; }
+  70%, 100% { transform: scale(1.32); opacity: 0; }
+}
+
+/* Sanftes Schweben */
+.anim-float { animation: anim-float 3.2s ease-in-out infinite; animation-delay: var(--float-delay, 0s); }
+@keyframes anim-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(calc(-1 * var(--float-dist, 4px))); }
+}
+
+/* Glanz-Sweep über einem Element (belegt ::after) */
+:where(.anim-shimmer) { position: relative; overflow: hidden; }
+.anim-shimmer::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, .45) 50%, transparent 80%);
+  transform: translateX(-100%);
+  animation: anim-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes anim-shimmer { 0% { transform: translateX(-100%); } 60%, 100% { transform: translateX(100%); } }
+
+/* Skeleton-Platzhalter */
+.anim-skeleton {
+  position: relative; overflow: hidden;
+  display: block; min-height: 1em;
+  border-radius: var(--r-s);
+  background: var(--fill-2);
+  color: transparent;
+}
+.anim-skeleton::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, transparent 20%, color-mix(in srgb, var(--surface) 70%, transparent) 50%, transparent 80%);
+  transform: translateX(-100%);
+  animation: anim-shimmer 1.5s ease-in-out infinite;
+}
+
+/* Tipp-Indikator: <span class="anim-typing"><i></i><i></i><i></i></span> */
+.anim-typing { display: inline-flex; align-items: center; gap: 4px; height: 1em; vertical-align: middle; }
+.anim-typing i {
+  display: block; width: 7px; height: 7px; border-radius: 50%;
+  background: currentColor; opacity: .35;
+  animation: anim-typing 1.2s ease-in-out infinite;
+}
+.anim-typing i:nth-child(2) { animation-delay: .15s; }
+.anim-typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes anim-typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: .35; }
+  30% { transform: translateY(-4px); opacity: .9; }
+}
+
+/* Schallwellen/Equalizer: <span class="anim-wave"><i></i><i></i><i></i><i></i></span> */
+.anim-wave { display: inline-flex; align-items: center; gap: 3px; height: 18px; vertical-align: middle; }
+.anim-wave i {
+  display: block; width: 3px; height: 100%; border-radius: 2px;
+  background: currentColor; transform-origin: 50% 50%;
+  transform: scaleY(.3);
+  animation: anim-wave 900ms ease-in-out infinite;
+}
+.anim-wave i:nth-child(2) { animation-delay: -.6s; }
+.anim-wave i:nth-child(3) { animation-delay: -.3s; }
+.anim-wave i:nth-child(4) { animation-delay: -.75s; }
+.anim-wave i:nth-child(5) { animation-delay: -.45s; }
+.anim-wave.is-paused i { animation-play-state: paused; }
+@keyframes anim-wave { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+
+/* Lautsprecher/Mikro während Wiedergabe/Aufnahme: Bögen pulsieren + weicher Ring (::after) */
+:where(.anim-speaking) { position: relative; }
+.anim-speaking .icon-speaker path + path,
+svg.icon-speaker.anim-speaking path + path { animation: anim-arcs 900ms ease-in-out infinite; }
+.anim-speaking:not(svg)::after {
+  content: ""; position: absolute; inset: -2px; border-radius: inherit; pointer-events: none;
+  border: 2px solid var(--speaking-color, var(--blue));
+  opacity: 0;
+  animation: anim-speaking 1.2s var(--ease-out) infinite;
+}
+@keyframes anim-arcs { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+@keyframes anim-speaking { 0% { transform: scale(1); opacity: .55; } 100% { transform: scale(1.35); opacity: 0; } }
+
+/* Erfolgshäkchen (anim.checkmark()): Kreis, dann Haken zeichnen */
+:where(.anim-draw-check) { overflow: visible; }
+:where(.anim-draw-check) .c,
+:where(.anim-draw-check) .k { fill: none; stroke: var(--check-color, var(--green)); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+:where(.anim-draw-check) .c { stroke-width: 3; }
+.anim-draw-check .c {
+  stroke-dasharray: 145; stroke-dashoffset: 145;
+  transform: rotate(-90deg); transform-origin: 50% 50%; transform-box: fill-box;
+  animation: anim-draw 420ms var(--ease-out) forwards;
+}
+.anim-draw-check .k {
+  stroke-dasharray: 32; stroke-dashoffset: 32;
+  animation: anim-draw 300ms var(--ease-out) 300ms forwards;
+}
+.anim-draw-check { animation: anim-check-pop 520ms var(--ease-spring) 280ms both; }
+@keyframes anim-draw { to { stroke-dashoffset: 0; } }
+@keyframes anim-check-pop { 0% { transform: scale(.9); } 60% { transform: scale(1.06); } 100% { transform: scale(1); } }
+
+/* ============================== Theme-Abzeichen ============================== */
+.anim-badge {
+  --badge-size: 96px;
+  --theme-c: var(--green);
+  position: relative;
+  width: var(--badge-size); height: var(--badge-size);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: color-mix(in srgb, var(--theme-c) 14%, var(--surface));
+  box-shadow: var(--shadow-2);
+  flex: none;
+}
+.anim-badge-ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.anim-badge-ring circle { fill: none; stroke-width: 6; }
+.anim-badge-ring .track { stroke: color-mix(in srgb, var(--theme-c) 22%, transparent); }
+.anim-badge-ring .value {
+  stroke: var(--theme-c); stroke-linecap: round;
+  transform: rotate(-90deg); transform-origin: 50% 50%;
+}
+.anim-badge-glyph {
+  position: relative; display: block;
+  font-size: calc(var(--badge-size) * .46); line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", var(--font);
+}
+
+/* ============================== Laufzeit-Elemente aus anim.js ============================== */
+/* Fixed-Layer für Glow, Funken, Glut */
+.anim-layer { position: fixed; inset: 0; z-index: 800; pointer-events: none; overflow: hidden; contain: strict; }
+.anim-layer > * { position: absolute; pointer-events: none; will-change: transform, opacity; }
+.anim-glow {
+  opacity: 0;
+  box-shadow: 0 0 0 3px var(--ok-border), 0 0 18px 2px color-mix(in srgb, var(--ok) 55%, transparent);
+}
+.anim-spark { border-radius: 50%; opacity: 0; }
+.anim-ember-glow {
+  border-radius: 50%; opacity: 0;
+  background: radial-gradient(circle, color-mix(in srgb, var(--orange) 45%, transparent) 0%, transparent 65%);
+}
+
+/* Glanz-Sweep im Fortschrittsbalken */
+.anim-sweep { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; pointer-events: none; }
+.anim-sweep > i {
+  position: absolute; top: 0; bottom: 0; left: 0; width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .6), transparent);
+  opacity: 0;
+}
+
+/* Lektionsabschluss */
+.anim-celebrate { position: absolute; inset: 0; z-index: 60; pointer-events: none; overflow: hidden; contain: layout paint; }
+.anim-celebrate.is-fixed { position: fixed; z-index: 700; }
+.anim-celebrate > * { position: absolute; pointer-events: none; }
+.anim-celebrate .anim-badge { z-index: 2; }
+.anim-celebrate-glow {
+  border-radius: 50%; opacity: 0;
+  background: radial-gradient(circle, color-mix(in srgb, var(--theme-c) 32%, transparent) 0%, transparent 62%);
+}
+.anim-p { display: grid; place-items: center; line-height: 1; opacity: 0; will-change: transform, opacity; z-index: 1; }
+.anim-p.anim-behind { z-index: 0; }
+.anim-emoji { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", var(--font); }
+.anim-glyphp { font-family: var(--font-rounded); font-weight: 800; }
+.anim-svgp svg { display: block; width: 100%; height: 100%; }
+.anim-ripple { border-radius: 50%; border: 3px solid var(--green); }
+.anim-steam { color: color-mix(in srgb, var(--label) 28%, transparent); }
+.anim-puff { border-radius: 50%; background: color-mix(in srgb, var(--label) 18%, transparent); }
+.anim-line { border-radius: 2px; }
+.anim-splat { border-radius: 46% 54% 52% 48% / 55% 45% 55% 45%; }
+.anim-day {
+  border-radius: 8px;
+  background: var(--surface); color: var(--label);
+  box-shadow: var(--shadow-1), inset 0 4px 0 var(--red);
+  font-family: var(--font-rounded); font-weight: 700; font-size: 12px !important; padding-top: 3px;
+}
+.anim-ecg-line { stroke-dasharray: 1; stroke-dashoffset: 1; }
+
+/* ============================== Reduced Motion ============================== */
+@media (prefers-reduced-motion: reduce) {
+  .anim-pulse-ring::after { animation: none; opacity: .55; transform: none; }
+  .anim-float, .anim-shimmer::after, .anim-skeleton::after { animation: none; }
+  .anim-shimmer::after, .anim-skeleton::after { opacity: 0; }
+  .anim-typing i { animation: none; opacity: .6; transform: none; }
+  .anim-wave i { animation: none; transform: scaleY(.65); }
+  .anim-speaking .icon-speaker path + path, svg.icon-speaker.anim-speaking path + path { animation: none; }
+  .anim-speaking:not(svg)::after { animation: none; opacity: .5; transform: none; }
+  .anim-draw-check, .anim-draw-check .c, .anim-draw-check .k { animation: none; stroke-dashoffset: 0; }
+}
+:root[data-motion="reduce"] .anim-pulse-ring::after { animation: none; opacity: .55; transform: none; }
+:root[data-motion="reduce"] .anim-float, :root[data-motion="reduce"] .anim-shimmer::after, :root[data-motion="reduce"] .anim-skeleton::after { animation: none; }
+:root[data-motion="reduce"] .anim-shimmer::after, :root[data-motion="reduce"] .anim-skeleton::after { opacity: 0; }
+:root[data-motion="reduce"] .anim-typing i { animation: none; opacity: .6; transform: none; }
+:root[data-motion="reduce"] .anim-wave i { animation: none; transform: scaleY(.65); }
+:root[data-motion="reduce"] .anim-speaking .icon-speaker path + path { animation: none; }
+:root[data-motion="reduce"] .anim-speaking:not(svg)::after { animation: none; opacity: .5; transform: none; }
+:root[data-motion="reduce"] :is(.anim-draw-check, .anim-draw-check .c, .anim-draw-check .k) { animation: none; stroke-dashoffset: 0; }

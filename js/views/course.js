@@ -6,7 +6,7 @@ import { sty } from './today.js';
 import { lessonMastery, isUnlocked, nextLesson, dueCount, pacing } from '../engine/progress.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
-const ROW = 132;          // Zeilenhöhe je Knoten (px)
+const ROW = 150;          // Zeilenhöhe je Knoten (px)
 const AMP = 70;           // seitliche Auslenkung (px)
 const PATH_W = 320;       // Breite der Pfadspalte
 const NODE = 76;          // Durchmesser Knoten
@@ -64,13 +64,14 @@ function lessonNode(app, meta, i, status, phaseColor) {
   const st = app.store.state.lessons?.[meta.id];
   const bubble = status === 'current'
     ? h('span', { class: 'v-node-bubble' }, st?.sessions ? 'Weiter' : 'Start') : null;
-  const badge = status === 'planned' ? h('span', { class: 'badge v-node-badge' }, 'geplant')
+  const prep = meta.status === 'error' || meta.status === 'ready';
+  const badge = status === 'planned' ? h('span', { class: 'badge v-node-badge' }, prep ? 'in Vorbereitung' : 'geplant')
     : status === 'locked' ? h('span', { class: 'v-node-lock' }, icon('lock'))
       : m.level >= 4 ? h('span', { class: 'v-node-crown' }, icon('star', { fill: true })) : null;
   return h('a', {
     class: ['v-node', `is-${status}`], href: `#/lesson/${encodeURIComponent(meta.id)}`,
     style: sty({ '--x': `${x}px`, '--theme-c': color, top: `${i * ROW}px` }),
-    'aria-label': `Lektion ${meta.index + 1}: ${meta.title_de}${status === 'planned' ? ' (geplant)' : ''}`,
+    'aria-label': `Lektion ${meta.index + 1}: ${meta.title_de}${status === 'planned' ? (prep ? ' (in Vorbereitung)' : ' (geplant)') : ''}`,
     dataset: { id: meta.id },
   },
     bubble,
@@ -99,7 +100,7 @@ function phaseInfo(app, p, idx, color) {
       h('div', { class: 'progress is-thin' }, h('div', { class: 'progress-fill', style: sty({ '--p': `${Math.round(frac * 100)}%`, background: '#fff' }) })),
       h('div', { class: 'v-phase-stats' },
         h('span', h('strong', { class: 'num' }, String(done)), ` / ${p.lessons.length} Lektionen`),
-        ready.length < p.lessons.length ? h('span', `${p.lessons.length - ready.length} geplant`) : h('span', `${Math.round(mast * 100)} % Meisterschaft`))));
+        ready.length < p.lessons.length ? h('span', p.lessons.some(l => !app.content.getLesson(l.id) && (l.status === 'error' || l.status === 'ready')) ? `${p.lessons.length - ready.length} in Vorbereitung` : `${p.lessons.length - ready.length} geplant`) : h('span', `${Math.round(mast * 100)} % Meisterschaft`))));
 }
 
 export function render(params, app) {

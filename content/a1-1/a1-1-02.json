@@ -45,7 +45,7 @@
   "sections": [
    {
     "heading_de": "Kein „sein“ im Präsens",
-    "body_de": "Im Präsens fällt „sein“ im Ukrainischen einfach weg: **Я Ма́ркус.** = Ich (bin) Markus. **Це Окса́на.** = Das (ist) Oksana. **це** heißt „das/dies“ und bleibt immer gleich. Stehen zwei Nomen nebeneinander, schreibt man dazwischen einen Gedankenstrich: **Тара́с — друг.**",
+    "body_de": "Im Präsens fällt „sein“ im Ukrainischen einfach weg: **Я Ма́ркус.** = Ich (bin) Markus. **Це Окса́на.** = Das (ist) Oksana. **це** heißt „das/dies“ und bleibt immer gleich. Sind Subjekt und Ergänzung beide Nomen, steht dazwischen ein Gedankenstrich: **Тара́с – до́брий друг.** Nach einem Pronomen (я, він, це …) steht keiner: **Я Ма́ркус. Він друг. Це Окса́на.**",
     "examples": [
      {
       "uk": "Я Ма́ркус.",
@@ -56,8 +56,8 @@
       "de": "Das ist Herr Bondarenko."
      },
      {
-      "uk": "Тара́с — друг.",
-      "de": "Taras ist ein Freund."
+      "uk": "Тара́с – до́брий друг.",
+      "de": "Taras ist ein guter Freund."
      }
     ]
    },
@@ -171,7 +171,7 @@
    },
    {
     "heading_de": "Sprachen und Verstehen",
-    "body_de": "**розмовля́ти** = (eine Sprache) sprechen, sich unterhalten; **розумі́ти** = verstehen. Vorerst nur die Formen für я, ти, ви als Formeln; die ganze Konjugation folgt in Lektion 5. Die Sprache steht als **украї́нською, німе́цькою, англі́йською** (wörtl. „auf …-isch“; feste Form, der Instrumental kommt in A1.2). **тро́хи** = ein bisschen.",
+    "body_de": "**розмовля́ти** = (eine Sprache) sprechen, sich unterhalten; **розумі́ти** = verstehen. Vorerst nur die Formen für я, ти, ви als Formeln; die ganze Konjugation folgt in Lektion 5. Die Sprache steht als **украї́нською, німе́цькою, англі́йською** (wörtl. „auf …-isch“; feste Form, der Instrumental kommt in A1.2). **тро́хи** = ein bisschen. **і / й / та** = und; nach einem Vokal meist **й** (німе́цькою **й** англі́йською, Лау́ра **й** То́мас), nach einem Konsonanten **і** (Ма́ркус **і** Окса́на).",
     "table": {
      "head": [
       "",
@@ -213,21 +213,21 @@
    },
    {
     "heading_de": "Verneinung und Fragen",
-    "body_de": "**не** (nicht) steht direkt vor dem verneinten Wort: **Я не розумі́ю. Це не Окса́на. Я не з А́встрії.** Nicht verwechseln: **ні** = nein (als Antwort).\n\n**Ja/Nein-Fragen** entstehen nur durch die Stimme: Wortstellung wie in der Aussage, die Stimme steigt auf dem wichtigen Wort: **Ти з Украї́ни?** In formellen Fragen steht manchmal **чи** am Anfang: **Чи ви розмовля́єте англі́йською?** **Fragewörter** stehen vorn: **хто** (wer), **що** (was), **зві́дки** (woher), **як** (wie).",
+    "body_de": "**не** (nicht) steht direkt vor dem verneinten Wort: **Я не розумі́ю. Це не Окса́на. Я не з А́встрії.** Nicht verwechseln: **ні** = nein (als Antwort).\n\n**Ja/Nein-Fragen** entstehen nur durch die Stimme: Wortstellung wie in der Aussage, die Stimme steigt auf dem wichtigen Wort: **Ти з Украї́ни?** Besonders in geschriebenen oder sorgfältigen Fragen steht oft **чи** am Anfang: **Чи ви розмовля́єте англі́йською?** **Fragewörter** stehen vorn: **хто** (wer), **що** (was), **зві́дки** (woher), **як** (wie).",
     "examples": [
      {
       "uk": "Хто це? – Це Окса́на.",
       "de": "Wer ist das? – Das ist Oksana."
      },
      {
-      "uk": "Що це? – Це ка́ва.",
-      "de": "Was ist das? – Das ist Kaffee."
+      "uk": "Що це? – Це кафе́.",
+      "de": "Was ist das? – Das ist ein Café."
      }
     ]
    },
    {
     "heading_de": "Anrede und Bekannte: пан, па́ні, друг, по́друга",
-    "body_de": "**пан** (Herr) und **па́ні** (Frau) stehen vor dem Familiennamen (auch vor dem Vornamen) und passen zum Siezen: **пан Бондаре́нко, па́ні Ковале́нко**. **па́ні** bleibt immer gleich. Bei direkter Anrede ändert sich die Form (Vokativ, A1.2) – hier nur über Personen: **Це пан Бондаре́нко.** **друг** = Freund (befreundet), **по́друга** = Freundin: **Окса́на — по́друга.** („mein Freund“ folgt in Lektion 4.)"
+    "body_de": "**пан** (Herr) und **па́ні** (Frau) stehen vor dem Familiennamen (auch vor dem Vornamen) und passen zum Siezen: **пан Бондаре́нко, па́ні Ковале́нко**. **па́ні** bleibt immer gleich. Bei direkter Anrede ändert sich die Form (Vokativ, A1.2) – hier nur über Personen: **Це пан Бондаре́нко.** **друг** = Freund (befreundet), **по́друга** = Freundin: **Лау́ра – по́друга з А́встрії.** („mein Freund“ folgt in Lektion 4.)"
    }
   ],
   "summary_de": [
@@ -242,7 +242,7 @@
  "grammar": [
   {
    "title_de": "Ohne „sein“",
-   "body_de": "Im Präsens gibt es kein „bin/ist/sind“: Pronomen oder Name + Name/Nomen. Zwischen zwei Nomen steht ein Gedankenstrich.",
+   "body_de": "Im Präsens gibt es kein „bin/ist/sind“: Pronomen oder Name + Name/Nomen. Gedankenstrich nur zwischen zwei Nomen, nicht nach Pronomen.",
    "examples": [
     {
      "uk": "Я Ма́ркус.",
@@ -253,8 +253,8 @@
      "de": "Das ist Oksana."
     },
     {
-     "uk": "Тара́с — друг.",
-     "de": "Taras ist ein Freund."
+     "uk": "Тара́с – до́брий друг.",
+     "de": "Taras ist ein guter Freund."
     }
    ]
   },
@@ -391,8 +391,8 @@
    "pos": "pron",
    "info": "Personalpronomen, 3. Pl.",
    "example": {
-    "uk": "Лау́ра і То́мас з А́встрії. Вони́ — дру́зі.",
-    "de": "Laura und Thomas kommen aus Österreich. Sie sind Freunde."
+    "uk": "Лау́ра й То́мас з А́встрії. Вони́ не з Німе́ччини.",
+    "de": "Laura und Thomas kommen aus Österreich. Sie kommen nicht aus Deutschland."
    }
   },
   {
@@ -413,8 +413,8 @@
    "pos": "pron",
    "info": "Fragewort für Sachen; auch Konjunktion „dass“",
    "example": {
-    "uk": "Що це? – Це ка́ва.",
-    "de": "Was ist das? – Das ist Kaffee."
+    "uk": "Що це? – Це кафе́.",
+    "de": "Was ist das? – Das ist ein Café."
    }
   },
   {
@@ -516,7 +516,7 @@
    "uk": "украї́нською",
    "de": "(auf) Ukrainisch",
    "pos": "adv",
-   "info": "feste Form (Instr. f. von украї́нська мо́ва); розмовля́ти украї́нською",
+   "info": "Adverb; feste Form = украї́нською (мо́вою), Instr. Sg. f. von украї́нська; розмовля́ти украї́нською",
    "emoji": "🇺🇦",
    "example": {
     "uk": "Ти розмовля́єш украї́нською?",
@@ -528,7 +528,7 @@
    "uk": "німе́цькою",
    "de": "(auf) Deutsch",
    "pos": "adv",
-   "info": "feste Form (Instr. f. von німе́цька мо́ва); розмовля́ти німе́цькою",
+   "info": "Adverb; feste Form = німе́цькою (мо́вою), Instr. Sg. f. von німе́цька; розмовля́ти німе́цькою",
    "emoji": "🇩🇪",
    "example": {
     "uk": "Ви розмовля́єте німе́цькою?",
@@ -540,7 +540,7 @@
    "uk": "англі́йською",
    "de": "(auf) Englisch",
    "pos": "adv",
-   "info": "feste Form (Instr. f. von англі́йська мо́ва); розмовля́ти англі́йською",
+   "info": "Adverb; feste Form = англі́йською (мо́вою), Instr. Sg. f. von англі́йська; розмовля́ти англі́йською",
    "example": {
     "uk": "Я розмовля́ю англі́йською.",
     "de": "Ich spreche Englisch."
@@ -551,7 +551,7 @@
    "uk": "тро́хи",
    "de": "ein bisschen",
    "pos": "adv",
-   "info": "",
+   "info": "Adverb; meist vor dem Verb: Я тро́хи розмовля́ю …",
    "example": {
     "uk": "Я тро́хи розмовля́ю украї́нською.",
     "de": "Ich spreche ein bisschen Ukrainisch."
@@ -611,8 +611,8 @@
    "pos": "noun",
    "info": "m.; Pl. дру́зі",
    "example": {
-    "uk": "Тара́с — друг.",
-    "de": "Taras ist ein Freund."
+    "uk": "Тара́с – до́брий друг.",
+    "de": "Taras ist ein guter Freund."
    },
    "forms": [
     {
@@ -628,8 +628,8 @@
    "pos": "noun",
    "info": "f.",
    "example": {
-    "uk": "Окса́на — по́друга.",
-    "de": "Oksana ist eine Freundin."
+    "uk": "Лау́ра – по́друга з А́встрії.",
+    "de": "Laura ist eine Freundin aus Österreich."
    }
   }
  ],
@@ -698,13 +698,6 @@
    "info": "Personalpronomen, 3. Sg. n. (ab Lektion 4)"
   },
   {
-   "uk": "ка́ва",
-   "lemma": "ка́ва",
-   "de": "Kaffee",
-   "pos": "noun",
-   "info": "f., Nom. Sg."
-  },
-  {
    "uk": "все",
    "lemma": "все",
    "de": "alles",
@@ -740,6 +733,13 @@
    "info": "f., Nom. Sg."
   },
   {
+   "uk": "мо́вою",
+   "lemma": "мо́ва",
+   "de": "(mit der) Sprache",
+   "pos": "noun",
+   "info": "Instr. Sg. · Nom. мо́ва (f.)"
+  },
+  {
    "uk": "украї́нська",
    "lemma": "украї́нська",
    "de": "ukrainische",
@@ -765,7 +765,7 @@
    "lemma": "до́брий",
    "de": "gut",
    "pos": "adj",
-   "info": "m. Nom. Sg.; in до́брий день / ве́чір"
+   "info": "m. Nom. Sg.; до́брий день / ве́чір, до́брий друг"
   },
   {
    "uk": "день",
@@ -810,8 +810,8 @@
    ],
    "difficulty": 1,
    "title_uk": "Хто це?",
-   "text_uk": "Пан Бондаре́нко: До́брий день, я Ві́ктор Бондаре́нко. Як вас зва́ти?\nМа́ркус: Мене́ зва́ти Ма́ркус Шмідт, я з Німе́ччини.\nПан Бондаре́нко: Ду́же приє́мно! Це Окса́на Ковале́нко, вона́ з Украї́ни.\nОкса́на: Приві́т! Ти розмовля́єш украї́нською?\nМа́ркус: Тро́хи, але́ я розмовля́ю німе́цькою й англі́йською.",
-   "text_de": "Erster Tag im Kyjiwer Büro. Herr Bondarenko: Guten Tag, ich bin Wiktor Bondarenko. Wie heißen Sie? – Markus: Ich heiße Markus Schmidt, ich komme aus Deutschland. – Herr Bondarenko: Freut mich! Das ist Oksana Kowalenko, sie kommt aus der Ukraine. – Oksana: Hallo! Sprichst du Ukrainisch? – Markus: Ein bisschen, aber ich spreche Deutsch und Englisch.",
+   "text_uk": "Пан Бондаре́нко: До́брий день, я Ві́ктор Бондаре́нко. Як вас зва́ти?\nМа́ркус: Мене́ зва́ти Ма́ркус Шмідт, я з Німе́ччини.\nПан Бондаре́нко: Ду́же приє́мно! Це Окса́на Ковале́нко, вона́ з Украї́ни.\nОкса́на: До́брий день! Ви розмовля́єте украї́нською?\nМа́ркус: Тро́хи, але́ я розмовля́ю німе́цькою й англі́йською.",
+   "text_de": "Vorstellungsrunde im Kyjiwer Büro. Herr Bondarenko: Guten Tag, ich bin Wiktor Bondarenko. Wie heißen Sie? – Markus: Ich heiße Markus Schmidt, ich komme aus Deutschland. – Herr Bondarenko: Freut mich! Das ist Oksana Kowalenko, sie kommt aus der Ukraine. – Oksana: Guten Tag! Sprechen Sie Ukrainisch? – Markus: Ein bisschen, aber ich spreche Deutsch und Englisch.",
    "questions": [
     {
      "q_uk": "Зві́дки Ма́ркус?",
@@ -846,7 +846,7 @@
      "answer": false
     },
     {
-     "q_uk": "Окса́на: «Ти розмовля́єш украї́нською?» – Ма́ркус: …",
+     "q_uk": "Окса́на: «Ви розмовля́єте украї́нською?» – Ма́ркус: …",
      "q_de": "Was antwortet Markus auf Oksanas Frage?",
      "kind": "mc",
      "options": [
@@ -928,19 +928,20 @@
    "type": "cloze",
    "vocab": [
     "rozmovliaty",
-    "ukrainskoiu"
+    "ukrainskoiu",
+    "vy"
    ],
    "difficulty": 1,
-   "text": "Окса́на: Приві́т! Ти {{розмовля́єш}} украї́нською?",
+   "text": "Окса́на: До́брий день! Ви {{розмовля́єте}} украї́нською?",
    "options": [
     [
-     "розмовля́єш",
      "розмовля́єте",
+     "розмовля́єш",
      "розмовля́ю"
     ]
    ],
-   "translation_de": "Oksana: Hallo! Sprichst du Ukrainisch?",
-   "hint_de": "Zu ти gehört розмовля́єш."
+   "translation_de": "Oksana: Guten Tag! Sprechen Sie Ukrainisch?",
+   "hint_de": "Oksana siezt Markus: zu ви gehört розмовля́єте."
   },
   {
    "id": "e07",
@@ -1073,7 +1074,8 @@
     "tse",
     "zvidky",
     "yak_tebe_zvaty",
-    "yak_vas_zvaty"
+    "yak_vas_zvaty",
+    "yak_spravy"
    ],
    "difficulty": 1,
    "pairs": [
@@ -1173,9 +1175,9 @@
    "difficulty": 2,
    "prompt": "Laura ist eine Freundin aus Österreich.",
    "options": [
-    "Лау́ра — по́друга з А́встрії.",
-    "Лау́ра — по́друга з Німе́ччини.",
-    "Лау́ра — па́ні з А́встрії.",
+    "Лау́ра – по́друга з А́встрії.",
+    "Лау́ра – по́друга з Німе́ччини.",
+    "Лау́ра – па́ні з А́встрії.",
     "Лау́ра не по́друга з А́встрії."
    ]
   },
@@ -1206,7 +1208,7 @@
     "tse"
    ],
    "difficulty": 1,
-   "text": "– {{Що}} це?\n– Це ка́ва.",
+   "text": "– {{Що}} це?\n– Це кафе́.",
    "options": [
     [
      "Що",
@@ -1214,7 +1216,7 @@
      "Зві́дки"
     ]
    ],
-   "translation_de": "– Was ist das? – Das ist Kaffee.",
+   "translation_de": "– Was ist das? – Das ist ein Café.",
    "hint_de": "Für Sachen fragt man anders als für Personen."
   },
   {
@@ -1285,15 +1287,15 @@
    "dir": "de-uk",
    "vocab": [
     "zvidky",
-    "ty"
+    "vy"
    ],
    "difficulty": 1,
-   "prompt": "Woher kommst du?",
+   "prompt": "Woher kommen Sie?",
    "options": [
-    "Зві́дки ти?",
     "Зві́дки ви?",
-    "Хто ти?",
-    "Як ти?"
+    "Зві́дки ти?",
+    "Хто ви?",
+    "Як ви?"
    ]
   },
   {
@@ -1305,12 +1307,12 @@
     "tse"
    ],
    "difficulty": 1,
-   "prompt": "Was ist das? – Das ist Kaffee.",
+   "prompt": "Was ist das? – Das ist ein Café.",
    "options": [
-    "Що це? – Це ка́ва.",
-    "Хто це? – Це ка́ва.",
-    "Що це? – Ні, ка́ва.",
-    "Зві́дки це? – Це ка́ва."
+    "Що це? – Це кафе́.",
+    "Хто це? – Це кафе́.",
+    "Що це? – Ні, кафе́.",
+    "Зві́дки це? – Це кафе́."
    ]
   },
   {
@@ -1409,18 +1411,18 @@
     "rozmovliaty",
     "anhliiskoiu",
     "trokhy",
-    "vy"
+    "ty"
    ],
    "difficulty": 2,
-   "text": "– Ви {{розмовля́єте}} англі́йською?\n– Так, тро́хи.",
+   "text": "– Ти {{розмовля́єш}} англі́йською?\n– Так, тро́хи.",
    "options": [
     [
-     "розмовля́єте",
      "розмовля́єш",
+     "розмовля́єте",
      "розмовля́ю"
     ]
    ],
-   "translation_de": "– Sprechen Sie Englisch? – Ja, ein bisschen."
+   "translation_de": "– Sprichst du Englisch? – Ja, ein bisschen."
   },
   {
    "id": "e29",
@@ -1492,7 +1494,7 @@
     "trokhy"
    ],
    "difficulty": 2,
-   "context_uk": "Окса́на: Я з Украї́ни. Я розмовля́ю украї́нською, англі́йською і тро́хи німе́цькою.",
+   "context_uk": "Окса́на: Я з Украї́ни. Я розмовля́ю украї́нською, англі́йською й тро́хи німе́цькою.",
    "context_de": "Oksana: Ich komme aus der Ukraine. Ich spreche Ukrainisch, Englisch und ein bisschen Deutsch.",
    "statement_uk": "Окса́на з Німе́ччини.",
    "answer": false,
@@ -1503,15 +1505,16 @@
    "type": "true_false",
    "vocab": [
     "vony",
-    "druh",
-    "tse"
+    "ne",
+    "tse",
+    "nimechchyna"
    ],
    "difficulty": 2,
-   "context_uk": "Це Лау́ра і То́мас. Вони́ з А́встрії. Вони́ — дру́зі.",
-   "context_de": "Das sind Laura und Thomas. Sie kommen aus Österreich. Sie sind Freunde.",
-   "statement_uk": "Лау́ра і То́мас — дру́зі.",
-   "answer": true,
-   "explanation_de": "„Вони́ — дру́зі“ = Sie sind Freunde. дру́зі ist die Mehrzahl von друг."
+   "context_uk": "Це Лау́ра й То́мас. Вони́ з А́встрії. Вони́ не з Німе́ччини.",
+   "context_de": "Das sind Laura und Thomas. Sie kommen aus Österreich. Sie kommen nicht aus Deutschland.",
+   "statement_uk": "Лау́ра з Німе́ччини.",
+   "answer": false,
+   "explanation_de": "„Вони́ з А́встрії“ – Laura und Thomas kommen aus Österreich, nicht aus Deutschland."
   },
   {
    "id": "e33",
@@ -1537,9 +1540,9 @@
     "khto"
    ],
    "difficulty": 2,
-   "context_uk": "– Хто це?\n– Це Тара́с. Він друг.",
-   "context_de": "– Wer ist das? – Das ist Taras. Er ist ein Freund.",
-   "statement_uk": "Тара́с — по́друга.",
+   "context_uk": "– Хто це?\n– Це Тара́с. Він до́брий друг.",
+   "context_de": "– Wer ist das? – Das ist Taras. Er ist ein guter Freund.",
+   "statement_uk": "Тара́с – по́друга.",
    "answer": false,
    "explanation_de": "Taras ist ein Mann: друг (Freund). по́друга = Freundin."
   },
@@ -1753,9 +1756,6 @@
    "difficulty": 1,
    "prompt": "Мене́ зва́ти Тара́с. Я з Украї́ни.",
    "answer": "Ich heiße Taras. Ich komme aus der Ukraine.",
-   "accept": [
-    "Ich heiße Taras. Ich bin aus der Ukraine."
-   ],
    "distractors": [
     "Deutschland",
     "heißt",
@@ -1791,11 +1791,7 @@
    "prompt": "Ich spreche Deutsch und Englisch.",
    "answer": "Я розмовля́ю німе́цькою й англі́йською.",
    "accept": [
-    "Я розмовля́ю англі́йською й німе́цькою.",
-    "Я розмовля́ю німе́цькою і англі́йською.",
-    "Я розмовля́ю англі́йською і німе́цькою.",
-    "Я розмовля́ю німе́цькою та англі́йською.",
-    "Я розмовля́ю англі́йською та німе́цькою."
+    "Я розмовля́ю англі́йською й німе́цькою."
    ],
    "distractors": [
     "розмовля́єш",
@@ -1821,8 +1817,8 @@
    ],
    "difficulty": 2,
    "title_uk": "Окса́на",
-   "text_uk": "Приві́т! Мене́ зва́ти Окса́на Ковале́нко. Я з Украї́ни. Я розмовля́ю украї́нською, англі́йською й тро́хи німе́цькою. Це Ма́ркус, він з Німе́ччини. А це пан Бондаре́нко. Він теж з Украї́ни.",
-   "text_de": "Hallo! Ich heiße Oksana Kowalenko. Ich komme aus der Ukraine. Ich spreche Ukrainisch, Englisch und ein bisschen Deutsch. Das ist Markus, er kommt aus Deutschland. Und das ist Herr Bondarenko. Er kommt auch aus der Ukraine.",
+   "text_uk": "До́брий день! Мене́ зва́ти Окса́на Ковале́нко. Я з Украї́ни. Я розмовля́ю украї́нською, англі́йською й тро́хи німе́цькою. Це Ма́ркус, він з Німе́ччини. А це пан Бондаре́нко. Він теж з Украї́ни.",
+   "text_de": "Guten Tag! Ich heiße Oksana Kowalenko. Ich komme aus der Ukraine. Ich spreche Ukrainisch, Englisch und ein bisschen Deutsch. Das ist Markus, er kommt aus Deutschland. Und das ist Herr Bondarenko. Er kommt auch aus der Ukraine.",
    "questions": [
     {
      "q_uk": "Хто з Німе́ччини?",
@@ -1870,8 +1866,8 @@
    ],
    "difficulty": 2,
    "title_uk": "Ви́бач, я не розумі́ю",
-   "text_uk": "Тара́с: Приві́т! Як тебе́ зва́ти?\nМа́ркус: Ви́бач, я не розумі́ю.\nТара́с: Як тебе́ зва́ти?\nМа́ркус: А, мене́ зва́ти Ма́ркус!\nТара́с: Ду́же приє́мно, я Тара́с.",
-   "text_de": "Im Café neben dem Büro. Taras: Hallo! Wie heißt du? – Markus: Entschuldige, ich verstehe nicht. – Taras (langsam): Wie heißt du? – Markus: Ah, ich heiße Markus! – Taras: Freut mich, ich bin Taras.",
+   "text_uk": "Лау́ра: Приві́т! Як тебе́ зва́ти?\nМа́ркус: Ви́бач, я не розумі́ю.\nЛау́ра: Як тебе́ зва́ти?\nМа́ркус: А, мене́ зва́ти Ма́ркус!\nЛау́ра: Ду́же приє́мно, я Лау́ра.",
+   "text_de": "Erster Abend im Ukrainischkurs. Laura: Hallo! Wie heißt du? – Markus: Entschuldige, ich verstehe nicht. – Laura (langsam): Wie heißt du? – Markus: Ah, ich heiße Markus! – Laura: Freut mich, ich bin Laura.",
    "questions": [
     {
      "q_uk": "«Ви́бач, я не розумі́ю.» – Хто?",
@@ -1879,7 +1875,7 @@
      "kind": "mc",
      "options": [
       "Ма́ркус",
-      "Тара́с",
+      "Лау́ра",
       "Окса́на"
      ]
     },
@@ -1890,13 +1886,13 @@
      "answer": true
     },
     {
-     "q_uk": "Як його́ зва́ти? Він з кафе́.",
-     "q_de": "Wie heißt der junge Mann aus dem Café?",
+     "q_uk": "Як її́ зва́ти?",
+     "q_de": "Wie heißt die Frau aus dem Kurs?",
      "kind": "mc",
      "options": [
-      "Тара́с",
-      "Ма́ркус",
-      "Ві́ктор"
+      "Лау́ра",
+      "Окса́на",
+      "Ю́лія"
      ]
     }
    ]
@@ -1992,16 +1988,16 @@
     "a_ty"
    ],
    "difficulty": 2,
-   "scenario_de": "Erster Tag im Kyjiwer Büro: Oksana kommt zum neuen Platz. Ziel: Namen und Herkunft austauschen und sagen, welche Sprachen man spricht. Kolleginnen und Kollegen duzen sich hier.",
+   "scenario_de": "Erster Abend im Ukrainischkurs. Laura aus Österreich sitzt daneben; im Kurs duzen sich alle. Ziel: Namen und Herkunft austauschen und eine gemeinsame Sprache finden.",
    "partner": {
-    "name": "Окса́на",
-    "emoji": "👩‍💼"
+    "name": "Лау́ра",
+    "emoji": "👩"
    },
    "turns": [
     {
      "who": "bot",
-     "uk": "Приві́т! Я Окса́на. Як тебе́ зва́ти?",
-     "de": "Hallo! Ich bin Oksana. Wie heißt du?"
+     "uk": "Приві́т! Я Лау́ра. Як тебе́ зва́ти?",
+     "de": "Hallo! Ich bin Laura. Wie heißt du?"
     },
     {
      "who": "me",
@@ -2018,7 +2014,7 @@
       {
        "uk": "Приві́т! Як тебе́ зва́ти?",
        "de": "Hallo! Wie heißt du?",
-       "feedback_de": "Oksana hat sich schon vorgestellt und fragt nach dem eigenen Namen – also antworten: Мене́ зва́ти …"
+       "feedback_de": "Laura hat sich schon vorgestellt und fragt nach dem eigenen Namen – also antworten: Мене́ зва́ти …"
       }
      ]
     },
@@ -2048,8 +2044,8 @@
     },
     {
      "who": "bot",
-     "uk": "Я з Украї́ни. Ти розмовля́єш украї́нською?",
-     "de": "Ich komme aus der Ukraine. Sprichst du Ukrainisch?"
+     "uk": "Я з А́встрії. Ти розмовля́єш украї́нською?",
+     "de": "Ich komme aus Österreich. Sprichst du Ukrainisch?"
     },
     {
      "who": "me",
@@ -2064,16 +2060,16 @@
        "feedback_de": "Mit я: розмовля́ю. розмовля́єш gehört zu ти."
       },
       {
-       "uk": "Так, я з Украї́ни.",
-       "de": "Ja, ich komme aus der Ukraine.",
+       "uk": "Так, я з А́встрії.",
+       "de": "Ja, ich komme aus Österreich.",
        "feedback_de": "Gefragt ist nach der Sprache – und man kommt aus Deutschland."
       }
      ]
     },
     {
      "who": "bot",
-     "uk": "Ду́же до́бре! Я теж розмовля́ю англі́йською.",
-     "de": "Sehr gut! Ich spreche auch Englisch."
+     "uk": "Ду́же до́бре! Я теж розмовля́ю німе́цькою.",
+     "de": "Sehr gut! Ich spreche auch Deutsch."
     }
    ]
   },
@@ -2093,7 +2089,9 @@
     "anhliiskoiu",
     "trokhy",
     "tezh",
-    "pan"
+    "pan",
+    "diakuiu",
+    "do_pobachennia"
    ],
    "difficulty": 3,
    "scenario_de": "Vorstellungsrunde beim Büroleiter Herrn Bondarenko. Er ist formell und siezt. Ziel: sich vorstellen und eine gemeinsame Sprache finden.",
@@ -2192,6 +2190,30 @@
        "feedback_de": "Ziel ist eine gemeinsame Sprache: Er spricht Englisch – also: Я теж розмовля́ю англі́йською."
       }
      ]
+    },
+    {
+     "who": "bot",
+     "uk": "Ду́же до́бре! До поба́чення!",
+     "de": "Sehr gut! Auf Wiedersehen!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Дя́кую! До поба́чення!",
+       "de": "Danke! Auf Wiedersehen!"
+      },
+      {
+       "uk": "Дя́кую! Бува́й!",
+       "de": "Danke! Tschüss!",
+       "feedback_de": "Бува́й ist informell – den Büroleiter verabschiedet man mit До поба́чення!"
+      },
+      {
+       "uk": "Дя́кую! Приві́т!",
+       "de": "Danke! Hallo!",
+       "feedback_de": "Приві́т ist eine Begrüßung, kein Abschied."
+      }
+     ]
     }
    ]
   },
@@ -2202,8 +2224,10 @@
     "khto",
     "tse",
     "vin",
+    "pan",
+    "ukraina",
     "nimechchyna",
-    "tezh",
+    "ni",
     "rozmovliaty",
     "nimetskoiu",
     "ukrainskoiu",
@@ -2211,7 +2235,7 @@
     "trokhy"
    ],
    "difficulty": 3,
-   "scenario_de": "Mittags im Café neben dem Büro. Taras (Student, duzt alle) kennt Markus noch nicht. Ziel: Markus vorstellen und eine gemeinsame Sprache finden.",
+   "scenario_de": "Mittags im Café neben dem Büro: Man kommt mit Herrn Bondarenko herein. Taras (Student, duzt Gleichaltrige) kennt beide noch nicht. Ziel: Herrn Bondarenko vorstellen, sich selbst vorstellen und eine gemeinsame Sprache finden.",
    "partner": {
     "name": "Тара́с",
     "emoji": "🧑"
@@ -2226,42 +2250,42 @@
      "who": "me",
      "options": [
       {
-       "uk": "Це Ма́ркус. Він з Німе́ччини.",
-       "de": "Das ist Markus. Er kommt aus Deutschland."
+       "uk": "Це пан Бондаре́нко. Він з Украї́ни.",
+       "de": "Das ist Herr Bondarenko. Er kommt aus der Ukraine."
       },
       {
-       "uk": "Це Ма́ркус. Вона́ з Німе́ччини.",
-       "de": "Das ist Markus. Sie kommt aus Deutschland.",
-       "feedback_de": "Markus ist ein Mann → він."
+       "uk": "Це пан Бондаре́нко. Вона́ з Украї́ни.",
+       "de": "Das ist Herr Bondarenko. Sie kommt aus der Ukraine.",
+       "feedback_de": "Herr Bondarenko ist ein Mann → він."
       },
       {
-       "uk": "Що це? Це Ма́ркус.",
-       "de": "Was ist das? Das ist Markus.",
+       "uk": "Що це? Це пан Бондаре́нко.",
+       "de": "Was ist das? Das ist Herr Bondarenko.",
        "feedback_de": "що fragt nach Sachen; nach Personen fragt man хто – und hier soll man antworten."
       }
      ]
     },
     {
      "who": "bot",
-     "uk": "Ду́же приє́мно! А ти теж з Німе́ччини?",
-     "de": "Freut mich! Und kommst du auch aus Deutschland?"
+     "uk": "Ду́же приє́мно! А ти теж з Украї́ни?",
+     "de": "Freut mich! Und kommst du auch aus der Ukraine?"
     },
     {
      "who": "me",
      "options": [
       {
-       "uk": "Так, я теж з Німе́ччини.",
-       "de": "Ja, ich komme auch aus Deutschland."
+       "uk": "Ні, я з Німе́ччини.",
+       "de": "Nein, ich komme aus Deutschland."
       },
       {
-       "uk": "Так, вони́ з Німе́ччини.",
-       "de": "Ja, sie kommen aus Deutschland.",
-       "feedback_de": "Gefragt ist nach einem selbst: я теж з Німе́ччини."
+       "uk": "Так, я з Німе́ччини.",
+       "de": "Ja, ich komme aus Deutschland.",
+       "feedback_de": "Widerspruch: Er fragt nach der Ukraine – also Ні, я з Німе́ччини."
       },
       {
-       "uk": "Ні, я теж з Німе́ччини.",
-       "de": "Nein, ich komme auch aus Deutschland.",
-       "feedback_de": "Widerspruch: „auch aus Deutschland“ passt zu Так, nicht zu Ні."
+       "uk": "Ні, він з Німе́ччини.",
+       "de": "Nein, er kommt aus Deutschland.",
+       "feedback_de": "Gefragt ist nach einem selbst (ти) – Antwort mit я. Und Herr Bondarenko kommt aus der Ukraine."
       }
      ]
     },
@@ -2300,25 +2324,26 @@
    "id": "e60",
    "type": "order_dialog",
    "vocab": [
-    "yak_tebe_zvaty",
+    "yak_vas_zvaty",
     "mene_zvaty",
     "duzhe_pryiemno",
     "zvidky",
-    "nimechchyna"
+    "nimechchyna",
+    "vy"
    ],
    "difficulty": 2,
    "lines": [
     {
-     "uk": "Приві́т! Я Окса́на. Як тебе́ зва́ти?",
-     "de": "Hallo! Ich bin Oksana. Wie heißt du?"
+     "uk": "До́брий день! Я Окса́на Ковале́нко. Як вас зва́ти?",
+     "de": "Guten Tag! Ich bin Oksana Kowalenko. Wie heißen Sie?"
     },
     {
-     "uk": "Мене́ зва́ти Ма́ркус.",
-     "de": "Ich heiße Markus."
+     "uk": "Мене́ зва́ти Ма́ркус Шмідт.",
+     "de": "Ich heiße Markus Schmidt."
     },
     {
-     "uk": "Ду́же приє́мно! Зві́дки ти?",
-     "de": "Freut mich! Woher kommst du?"
+     "uk": "Ду́же приє́мно! Зві́дки ви?",
+     "de": "Freut mich! Woher kommen Sie?"
     },
     {
      "uk": "Я з Німе́ччини.",

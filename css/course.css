@@ -36,7 +36,7 @@
 }
 
 /* ---------- Pfad ---------- */
-.v-path-wrap { display: flex; justify-content: center; padding: var(--sp-2) 0 var(--sp-4); }
+.v-path-wrap { display: flex; justify-content: center; padding: 40px 0 var(--sp-2); }
 .v-path { position: relative; flex: none; }
 .v-path-line { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
 .v-path-line path { fill: none; stroke-linecap: round; }
@@ -65,7 +65,7 @@
 }
 .v-node:active .v-node-disc { transform: translateY(3px); box-shadow: 0 0 0 color-mix(in srgb, var(--theme-c) 68%, #000); }
 .v-node-glyph { font-size: 34px; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .15)); }
-.v-node-label { display: flex; flex-direction: column; margin-top: 2px; max-width: 170px; line-height: 1.2; }
+.v-node-label { display: flex; flex-direction: column; margin-top: 2px; max-width: 170px; line-height: 1.2; padding: 2px 8px 3px; border-radius: 10px; background: var(--bg-grouped); position: relative; z-index: 1; }
 .v-node-uk { font-weight: 700; font-size: var(--fs-sub); color: var(--label); }
 .v-node-de { font-size: var(--fs-cap); color: var(--label-2); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -76,7 +76,7 @@
 .v-node.is-locked .v-node-glyph, .v-node.is-planned .v-node-glyph { filter: grayscale(1); opacity: .5; }
 .v-node.is-planned .v-node-uk, .v-node.is-locked .v-node-uk { color: var(--label-2); }
 .v-node.is-planned .v-node-disc { background: var(--surface-2); border: 2px dashed var(--separator-opaque); box-shadow: none; transform: none; }
-.v-node-badge { position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); background: var(--surface); box-shadow: var(--shadow-1); color: var(--label-2); z-index: 2; }
+.v-node-badge { position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: var(--surface); box-shadow: var(--shadow-1); color: var(--label-2); z-index: 2; }
 .v-node-lock { position: absolute; right: 6px; bottom: 6px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); color: var(--label-2); box-shadow: var(--shadow-1); }
 .v-node-lock svg { width: 15px; height: 15px; }
 .v-node-crown { position: absolute; right: 2px; top: 2px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--yellow); color: #fff; box-shadow: 0 2px 0 var(--yellow-edge); }
