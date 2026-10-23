@@ -1109,6 +1109,7 @@
    "mode": "choose_meaning",
    "vocab": [
     "tato",
+    "mama",
     "miy",
     "tse"
    ],
@@ -1144,10 +1145,11 @@
    "vocab": [
     "os",
     "miy",
-    "tato"
+    "tato",
+    "mama"
    ],
    "difficulty": 2,
-   "text": "Ось {{мій}} та́то.",
+   "text": "Ось {{мій}} та́то, а це моя́ ма́ма.",
    "options": [
     [
      "мій",
@@ -1155,7 +1157,7 @@
      "моє́"
     ]
    ],
-   "translation_de": "Hier ist mein Papa.",
+   "translation_de": "Hier ist mein Papa, und das ist meine Mama.",
    "hint_de": "та́то endet auf -о, ist aber ein Mann → m."
   },
   {

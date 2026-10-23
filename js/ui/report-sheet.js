@@ -34,7 +34,7 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
       on: { click: () => select(label, b) },
     },
       h('span', { class: 'r-cat-glyph emoji' }, m.emoji),
-      h('span', { class: 'r-cat-text' }, h('span', { class: 'r-cat-label' }, label), h('span', { class: 'r-cat-hint' }, m.hint)));
+      h('span', { class: 'r-cat-text' }, h('span', { class: 'r-cat-label' }, label.split('/').flatMap((p, i) => i ? ['/', h('wbr'), p] : [p])), h('span', { class: 'r-cat-hint' }, m.hint)));
     return b;
   });
   const catGroup = h('div', { class: 'r-section' },

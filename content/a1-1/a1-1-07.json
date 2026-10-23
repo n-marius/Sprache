@@ -1,0 +1,2610 @@
+{
+ "id": "a1-1-07",
+ "phase": "A1.1",
+ "title_uk": "Що ти лю́биш?",
+ "title_de": "Was isst du gern?",
+ "theme": "food",
+ "goals_de": [
+  "Ich kann sagen, was ich gern esse und trinke, und andere danach fragen.",
+  "Ich kann über Mahlzeiten sprechen (Frühstück, Mittag-, Abendessen)."
+ ],
+ "concepts": [
+  {
+   "id": "praesens-konj2",
+   "title_de": "Präsens II. Konjugation (люби́ти: люблю́, лю́биш …; -л- in 1. Sg.)"
+  },
+  {
+   "id": "isty-pyty",
+   "title_de": "Unregelmäßig: ї́сти (їм, їси́ …) und пи́ти (п’ю, п’єш …)"
+  },
+  {
+   "id": "liubyty-inf",
+   "title_de": "люби́ти + Akkusativ / + Infinitiv (etwas gern tun)"
+  },
+  {
+   "id": "chunk-na-snidanok",
+   "title_de": "Chunk: на сніда́нок / на обі́д / на вече́рю"
+  }
+ ],
+ "explanation": {
+  "title_de": "Essen, trinken, gern haben",
+  "intro_de": "Markus isst mit Oksana zu Mittag und ist abends bei Oksanas Familie zum Essen eingeladen. Danach kann man sagen, was man gern isst und trinkt, nach Vorlieben fragen und über Mahlzeiten sprechen.",
+  "sections": [
+   {
+    "heading_de": "Die II. Konjugation: люби́ти",
+    "body_de": "Aus Lektion 5 kennst du die **I. Konjugation** (чита́ти: чита́ю, чита́єш …). Viele Verben auf **-ити** gehören zur **II. Konjugation**: Die Endungen haben ein **-и-** (-иш, -ить, -имо, -ите) und in der 3. Person Plural **-ять**.\n\nBei **люби́ти** kommt in der 1. Person Singular und der 3. Person Plural ein **-л-** dazu: **люблю́**, **лю́блять**. Die Betonung liegt nur bei **люблю́** auf der Endung, sonst auf dem Stamm (**лю́биш**).\n\n**люби́ти** heißt „lieben“, im Alltag meist „gern mögen“: **Я люблю́ ри́бу.** = Ich esse gern Fisch.",
+    "table": {
+     "head": [
+      "Person",
+      "чита́ти (I. Konj.)",
+      "люби́ти (II. Konj.)"
+     ],
+     "rows": [
+      [
+       "я",
+       "чита́ю",
+       "**люблю́**"
+      ],
+      [
+       "ти",
+       "чита́єш",
+       "**лю́биш**"
+      ],
+      [
+       "він / вона́",
+       "чита́є",
+       "**лю́бить**"
+      ],
+      [
+       "ми",
+       "чита́ємо",
+       "**лю́бимо**"
+      ],
+      [
+       "ви",
+       "чита́єте",
+       "**лю́бите**"
+      ],
+      [
+       "вони́",
+       "чита́ють",
+       "**лю́блять**"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Що ти лю́биш? – Я люблю́ ри́бу.",
+      "de": "Was magst du (gern)? – Ich mag Fisch."
+     },
+     {
+      "uk": "Софі́я лю́бить карто́плю.",
+      "de": "Sofija isst gern Kartoffeln."
+     }
+    ]
+   },
+   {
+    "heading_de": "Unregelmäßig: ї́сти und пи́ти",
+    "body_de": "**ї́сти** (essen) ist unregelmäßig und wird am besten auswendig gelernt. **їм** und **їсть** sind einsilbig; in **їси́, їмо́, їсте́, їдя́ть** liegt die Betonung auf der Endung.\n\n**пи́ти** (trinken) hat den Stamm **п'-** mit Apostroph und die Endungen der I. Konjugation. Suppe wird gegessen: **Я їм суп.**",
+    "table": {
+     "head": [
+      "Person",
+      "ї́сти (essen)",
+      "пи́ти (trinken)"
+     ],
+     "rows": [
+      [
+       "я",
+       "**їм**",
+       "**п’ю**"
+      ],
+      [
+       "ти",
+       "**їси́**",
+       "**п’єш**"
+      ],
+      [
+       "він / вона́",
+       "**їсть**",
+       "**п’є**"
+      ],
+      [
+       "ми",
+       "**їмо́**",
+       "**п’ємо́**"
+      ],
+      [
+       "ви",
+       "**їсте́**",
+       "**п’єте́**"
+      ],
+      [
+       "вони́",
+       "**їдя́ть**",
+       "**п’ють**"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Що ти їси́ на обі́д?",
+      "de": "Was isst du zum Mittagessen?"
+     },
+     {
+      "uk": "Ма́ркус п’є ка́ву з молоко́м.",
+      "de": "Markus trinkt Kaffee mit Milch."
+     }
+    ]
+   },
+   {
+    "heading_de": "люби́ти + Akkusativ oder + Infinitiv",
+    "body_de": "Was man gern hat, isst oder trinkt, steht im **Akkusativ** (Fall des direkten Objekts, „wen? was?“ – Wiederholung aus Lektion 6): Weibliche Wörter auf **-а** bekommen **-у**, auf **-я** bekommen **-ю**. Männliche und sächliche Sachen bleiben gleich.\n\n**о́вочі** (Gemüse) und **фру́кти** (Obst) sind im Ukrainischen Pluralwörter und bleiben im Akkusativ gleich. **карто́пля** steht dagegen im Singular und bedeutet „Kartoffeln“.\n\nWas man gern **tut**, steht im **Infinitiv**: **Я люблю́ чита́ти.** = Ich lese gern.",
+    "table": {
+     "head": [
+      "Nominativ",
+      "Akkusativ",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "ри́ба (f.)",
+       "**ри́бу**",
+       "Я люблю́ ри́бу."
+      ],
+      [
+       "ку́рка (f.)",
+       "**ку́рку**",
+       "Ти лю́биш ку́рку?"
+      ],
+      [
+       "карто́пля (f.)",
+       "**карто́плю**",
+       "Ми лю́бимо карто́плю."
+      ],
+      [
+       "хліб, сир, суп (m.)",
+       "хліб, сир, суп",
+       "Я їм хліб і сир."
+      ],
+      [
+       "м’я́со, я́блуко, яйце́ (n.)",
+       "м’я́со, я́блуко, яйце́",
+       "Він їсть яйце́."
+      ],
+      [
+       "о́вочі, фру́кти (Pl.)",
+       "о́вочі, фру́кти",
+       "Вони́ лю́блять фру́кти."
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "Я люблю́ пи́ти чай.",
+      "de": "Ich trinke gern Tee."
+     },
+     {
+      "uk": "Ма́ркус лю́бить чита́ти.",
+      "de": "Markus liest gern."
+     }
+    ]
+   },
+   {
+    "heading_de": "Mahlzeiten: на сніда́нок, на обі́д, на вече́рю",
+    "body_de": "„Zum Frühstück / Mittagessen / Abendessen“ heißt **на сніда́нок / на обі́д / на вече́рю**. Das ist eine **feste Wendung** (на + Akkusativ); darum wird aus **вече́ря** hier **вече́рю**. Einfach als Ganzes lernen. **Що на вече́рю?** = Was gibt es zum Abendessen? **зазвича́й** = normalerweise.",
+    "table": {
+     "head": [
+      "Mahlzeit",
+      "zum …"
+     ],
+     "rows": [
+      [
+       "сніда́нок (Frühstück)",
+       "**на сніда́нок**"
+      ],
+      [
+       "обі́д (Mittagessen, Hauptmahlzeit)",
+       "**на обі́д**"
+      ],
+      [
+       "вече́ря (Abendessen)",
+       "**на вече́рю**"
+      ]
+     ]
+    },
+    "examples": [
+     {
+      "uk": "На сніда́нок я п’ю ка́ву і їм яйце́.",
+      "de": "Zum Frühstück trinke ich Kaffee und esse ein Ei."
+     },
+     {
+      "uk": "На обі́д я зазвича́й їм суп.",
+      "de": "Zum Mittagessen esse ich normalerweise Suppe."
+     }
+    ]
+   },
+   {
+    "heading_de": "Beim Essen: Смачно́го! und смачни́й",
+    "body_de": "**Смачно́го!** wünscht man vor oder beim Essen = Guten Appetit! Die übliche Antwort: **Дя́кую, навза́єм!** = Danke, gleichfalls! (Der Kellner isst nicht mit – ihm sagt man nur **Дя́кую!**)\n\n**смачни́й** heißt „lecker“: **Ду́же смачни́й борщ!** Das Adjektiv passt sich wie **мій / моя́ / моє́** dem Genus an: **смачна́** ри́ба, **смачне́** м’я́со. Diese Formen hier nur erkennen – Adjektive kommen in Lektion 9. Vorerst **смачни́й** mit männlichen Wörtern (борщ, суп, сала́т, хліб) verwenden.\n\nDie Wendung **хліб із си́ром** (Brot mit Käse) nur verstehen; selbst einfach **хліб і сир** sagen. Nach Vokal steht oft **й** statt **і**: **ри́бу й о́вочі**.",
+    "examples": [
+     {
+      "uk": "Смачно́го! – Дя́кую, навза́єм!",
+      "de": "Guten Appetit! – Danke, gleichfalls!"
+     },
+     {
+      "uk": "Ду́же смачни́й борщ!",
+      "de": "Sehr leckerer Borschtsch!"
+     }
+    ]
+   }
+  ],
+  "summary_de": [
+   "люби́ти (II. Konj.): люблю́, лю́биш, лю́бить, лю́бимо, лю́бите, лю́блять – mit -л- bei я und вони́.",
+   "ї́сти: їм, їси́, їсть, їмо́, їсте́, їдя́ть; пи́ти: п’ю, п’єш, п’є, п’ємо́, п’єте́, п’ють.",
+   "Nach люблю́ / їм / п’ю folgt der Akkusativ: ри́бу, ку́рку, карто́плю; хліб, м’я́со bleiben gleich.",
+   "люблю́ + Infinitiv = etwas gern tun: Я люблю́ чита́ти.",
+   "на сніда́нок / на обі́д / на вече́рю = zum Frühstück / Mittag- / Abendessen (feste Wendung).",
+   "Смачно́го! – Дя́кую, навза́єм!"
+  ]
+ },
+ "grammar": [
+  {
+   "title_de": "люби́ти – II. Konjugation",
+   "body_de": "Endungen mit **-и-**: лю́биш, лю́бить, лю́бимо, лю́бите. Bei я und вони́ kommt **-л-** dazu: **люблю́**, **лю́блять**.",
+   "examples": [
+    {
+     "uk": "Я люблю́ борщ.",
+     "de": "Ich esse gern Borschtsch."
+    },
+    {
+     "uk": "Вони́ лю́блять фру́кти.",
+     "de": "Sie essen gern Obst."
+    }
+   ]
+  },
+  {
+   "title_de": "ї́сти und пи́ти",
+   "body_de": "**ї́сти**: їм, їси́, їсть, їмо́, їсте́, їдя́ть. **пи́ти**: п’ю, п’єш, п’є, п’ємо́, п’єте́, п’ють.",
+   "examples": [
+    {
+     "uk": "Що ти їси́?",
+     "de": "Was isst du?"
+    },
+    {
+     "uk": "Ми п’ємо́ чай.",
+     "de": "Wir trinken Tee."
+    }
+   ]
+  },
+  {
+   "title_de": "Nach люблю́ / їм / п’ю: Akkusativ",
+   "body_de": "f. **-а → -у**, **-я → -ю**: ри́бу, ку́рку, ка́ву, карто́плю. m./n. und о́вочі/фру́кти bleiben gleich. Etwas gern tun: люблю́ + Infinitiv.",
+   "examples": [
+    {
+     "uk": "Я люблю́ ку́рку й карто́плю.",
+     "de": "Ich esse gern Hähnchen und Kartoffeln."
+    },
+    {
+     "uk": "Я люблю́ чита́ти.",
+     "de": "Ich lese gern."
+    }
+   ]
+  },
+  {
+   "title_de": "Mahlzeiten und Смачно́го!",
+   "body_de": "Feste Wendungen: **на сніда́нок / на обі́д / на вече́рю** = zum Frühstück / Mittag- / Abendessen. **Смачно́го!** – **Дя́кую, навза́єм!**",
+   "examples": [
+    {
+     "uk": "Що на вече́рю?",
+     "de": "Was gibt es zum Abendessen?"
+    },
+    {
+     "uk": "Смачно́го! – Дя́кую, навза́єм!",
+     "de": "Guten Appetit! – Danke, gleichfalls!"
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  {
+   "id": "isty",
+   "uk": "ї́сти",
+   "de": "essen",
+   "pos": "verb",
+   "info": "unregelm.; я їм, ти їси́, він їсть, ми їмо́, ви їсте́, вони́ їдя́ть",
+   "example": {
+    "uk": "Що ти їси́ на обі́д?",
+    "de": "Was isst du zum Mittagessen?"
+   },
+   "forms": [
+    {
+     "uk": "їм",
+     "info": "1. Sg. Präs. · Inf. ї́сти"
+    },
+    {
+     "uk": "їси́",
+     "info": "2. Sg. Präs. · Inf. ї́сти"
+    },
+    {
+     "uk": "їсть",
+     "info": "3. Sg. Präs. · Inf. ї́сти"
+    },
+    {
+     "uk": "їмо́",
+     "info": "1. Pl. Präs. · Inf. ї́сти"
+    },
+    {
+     "uk": "їсте́",
+     "info": "2. Pl. Präs. · Inf. ї́сти"
+    },
+    {
+     "uk": "їдя́ть",
+     "info": "3. Pl. Präs. · Inf. ї́сти"
+    }
+   ]
+  },
+  {
+   "id": "pyty",
+   "uk": "пи́ти",
+   "de": "trinken",
+   "pos": "verb",
+   "info": "unregelm. (Endungen wie I. Konj.); я п’ю, ти п’єш, вони́ п’ють",
+   "example": {
+    "uk": "Що ти п’єш? – Я п’ю чай.",
+    "de": "Was trinkst du? – Ich trinke Tee."
+   },
+   "forms": [
+    {
+     "uk": "п’ю",
+     "info": "1. Sg. Präs. · Inf. пи́ти"
+    },
+    {
+     "uk": "п’єш",
+     "info": "2. Sg. Präs. · Inf. пи́ти"
+    },
+    {
+     "uk": "п’є",
+     "info": "3. Sg. Präs. · Inf. пи́ти"
+    },
+    {
+     "uk": "п’ємо́",
+     "info": "1. Pl. Präs. · Inf. пи́ти"
+    },
+    {
+     "uk": "п’єте́",
+     "info": "2. Pl. Präs. · Inf. пи́ти"
+    },
+    {
+     "uk": "п’ють",
+     "info": "3. Pl. Präs. · Inf. пи́ти"
+    }
+   ]
+  },
+  {
+   "id": "liubyty",
+   "uk": "люби́ти",
+   "de": "lieben, gern mögen",
+   "pos": "verb",
+   "info": "II. Konj.; я люблю́, ти лю́биш, вони́ лю́блять (+ Akk. oder + Inf.)",
+   "example": {
+    "uk": "Я люблю́ ри́бу.",
+    "de": "Ich esse gern Fisch."
+   },
+   "forms": [
+    {
+     "uk": "люблю́",
+     "info": "1. Sg. Präs. · Inf. люби́ти"
+    },
+    {
+     "uk": "лю́биш",
+     "info": "2. Sg. Präs. · Inf. люби́ти"
+    },
+    {
+     "uk": "лю́бить",
+     "info": "3. Sg. Präs. · Inf. люби́ти"
+    },
+    {
+     "uk": "лю́бимо",
+     "info": "1. Pl. Präs. · Inf. люби́ти"
+    },
+    {
+     "uk": "лю́бите",
+     "info": "2. Pl. Präs. · Inf. люби́ти"
+    },
+    {
+     "uk": "лю́блять",
+     "info": "3. Pl. Präs. · Inf. люби́ти"
+    }
+   ]
+  },
+  {
+   "id": "khlib",
+   "uk": "хліб",
+   "de": "Brot",
+   "pos": "noun",
+   "info": "m.; Akk. = Nom.",
+   "emoji": "🍞",
+   "example": {
+    "uk": "Я їм хліб і сир.",
+    "de": "Ich esse Brot und Käse."
+   }
+  },
+  {
+   "id": "syr",
+   "uk": "сир",
+   "de": "Käse; Quark",
+   "pos": "noun",
+   "info": "m.; Akk. = Nom.",
+   "emoji": "🧀",
+   "example": {
+    "uk": "На сніда́нок я їм хліб і сир.",
+    "de": "Zum Frühstück esse ich Brot und Käse."
+   },
+   "forms": [
+    {
+     "uk": "си́ром",
+     "info": "Instr. Sg. · nur in хліб із си́ром (verstehen)"
+    }
+   ]
+  },
+  {
+   "id": "miaso",
+   "uk": "м’я́со",
+   "de": "Fleisch",
+   "pos": "noun",
+   "info": "n.; Akk. = Nom.",
+   "emoji": "🥩",
+   "example": {
+    "uk": "Ти їси́ м’я́со?",
+    "de": "Isst du Fleisch?"
+   }
+  },
+  {
+   "id": "ryba",
+   "uk": "ри́ба",
+   "de": "Fisch (als Essen)",
+   "pos": "noun",
+   "info": "f.; Akk. ри́бу",
+   "emoji": "🐟",
+   "example": {
+    "uk": "Окса́на лю́бить ри́бу.",
+    "de": "Oksana isst gern Fisch."
+   },
+   "forms": [
+    {
+     "uk": "ри́бу",
+     "info": "Akk. Sg. · Nom. ри́ба"
+    }
+   ]
+  },
+  {
+   "id": "kurka",
+   "uk": "ку́рка",
+   "de": "Huhn, Hähnchen",
+   "pos": "noun",
+   "info": "f.; Akk. ку́рку",
+   "emoji": "🍗",
+   "example": {
+    "uk": "На вече́рю є ку́рка й карто́пля.",
+    "de": "Zum Abendessen gibt es Hähnchen und Kartoffeln."
+   },
+   "forms": [
+    {
+     "uk": "ку́рку",
+     "info": "Akk. Sg. · Nom. ку́рка"
+    }
+   ]
+  },
+  {
+   "id": "ovochi",
+   "uk": "о́вочі",
+   "de": "Gemüse",
+   "pos": "noun",
+   "info": "Pl. (Sg. о́воч = ein Gemüse); Akk. = Nom.",
+   "emoji": "🥦",
+   "example": {
+    "uk": "Ми лю́бимо о́вочі.",
+    "de": "Wir essen gern Gemüse."
+   }
+  },
+  {
+   "id": "frukty",
+   "uk": "фру́кти",
+   "de": "Obst",
+   "pos": "noun",
+   "info": "Pl. (Sg. фрукт = eine Frucht); Akk. = Nom.",
+   "example": {
+    "uk": "Софі́я лю́бить фру́кти.",
+    "de": "Sofija isst gern Obst."
+   }
+  },
+  {
+   "id": "yabluko",
+   "uk": "я́блуко",
+   "de": "Apfel",
+   "pos": "noun",
+   "info": "n.; Akk. = Nom.",
+   "emoji": "🍎",
+   "example": {
+    "uk": "На обі́д вона́ їсть я́блуко.",
+    "de": "Zum Mittagessen isst sie einen Apfel."
+   }
+  },
+  {
+   "id": "kartoplia",
+   "uk": "карто́пля",
+   "de": "Kartoffeln",
+   "pos": "noun",
+   "info": "f., Sammelwort im Sg.; Akk. карто́плю",
+   "emoji": "🥔",
+   "example": {
+    "uk": "Софі́я лю́бить карто́плю.",
+    "de": "Sofija isst gern Kartoffeln."
+   },
+   "forms": [
+    {
+     "uk": "карто́плю",
+     "info": "Akk. Sg. · Nom. карто́пля"
+    }
+   ]
+  },
+  {
+   "id": "yaitse",
+   "uk": "яйце́",
+   "de": "Ei",
+   "pos": "noun",
+   "info": "n.; Akk. = Nom.",
+   "emoji": "🥚",
+   "example": {
+    "uk": "На сніда́нок я їм яйце́.",
+    "de": "Zum Frühstück esse ich ein Ei."
+   }
+  },
+  {
+   "id": "sup",
+   "uk": "суп",
+   "de": "Suppe",
+   "pos": "noun",
+   "info": "m. (!); Akk. = Nom.",
+   "emoji": "🍲",
+   "example": {
+    "uk": "На обі́д я зазвича́й їм суп.",
+    "de": "Zum Mittagessen esse ich normalerweise Suppe."
+   }
+  },
+  {
+   "id": "borshch",
+   "uk": "борщ",
+   "de": "Borschtsch (Rote-Bete-Suppe)",
+   "pos": "noun",
+   "info": "m.; Akk. = Nom.",
+   "example": {
+    "uk": "Ду́же смачни́й борщ!",
+    "de": "Sehr leckerer Borschtsch!"
+   }
+  },
+  {
+   "id": "salat",
+   "uk": "сала́т",
+   "de": "Salat (Gericht)",
+   "pos": "noun",
+   "info": "m.; Akk. = Nom.",
+   "emoji": "🥗",
+   "example": {
+    "uk": "Мені́ сала́т, будь ла́ска.",
+    "de": "Für mich einen Salat, bitte."
+   }
+  },
+  {
+   "id": "snidanok",
+   "uk": "сніда́нок",
+   "de": "Frühstück",
+   "pos": "noun",
+   "info": "m.; на сніда́нок = zum Frühstück",
+   "example": {
+    "uk": "Що ти їси́ на сніда́нок?",
+    "de": "Was isst du zum Frühstück?"
+   }
+  },
+  {
+   "id": "obid",
+   "uk": "обі́д",
+   "de": "Mittagessen",
+   "pos": "noun",
+   "info": "m.; на обі́д = zum Mittagessen",
+   "example": {
+    "uk": "Що ти хо́чеш на обі́д?",
+    "de": "Was möchtest du zum Mittagessen?"
+   }
+  },
+  {
+   "id": "vecheria",
+   "uk": "вече́ря",
+   "de": "Abendessen",
+   "pos": "noun",
+   "info": "f.; на вече́рю = zum Abendessen",
+   "example": {
+    "uk": "Що на вече́рю?",
+    "de": "Was gibt es zum Abendessen?"
+   },
+   "forms": [
+    {
+     "uk": "вече́рю",
+     "info": "Akk. Sg. · in на вече́рю"
+    }
+   ]
+  },
+  {
+   "id": "smachnyi",
+   "uk": "смачни́й",
+   "de": "lecker",
+   "pos": "adj",
+   "info": "Adj. m.; f. смачна́, n. смачне́ (Formen ab Lektion 9)",
+   "emoji": "😋",
+   "example": {
+    "uk": "Тут ду́же смачни́й суп.",
+    "de": "Hier ist die Suppe sehr lecker."
+   },
+   "forms": [
+    {
+     "uk": "смачна́",
+     "info": "f. Nom. Sg."
+    },
+    {
+     "uk": "смачне́",
+     "info": "n. Nom. Sg."
+    }
+   ]
+  },
+  {
+   "id": "smachnoho",
+   "uk": "Смачно́го!",
+   "de": "Guten Appetit!",
+   "pos": "phrase",
+   "info": "feste Wendung; Antwort: Дя́кую, навза́єм!",
+   "example": {
+    "uk": "Смачно́го! – Дя́кую, навза́єм!",
+    "de": "Guten Appetit! – Danke, gleichfalls!"
+   }
+  }
+ ],
+ "glossary": [
+  {
+   "uk": "смачно́го",
+   "lemma": "смачни́й",
+   "de": "Guten Appetit! (in Смачно́го!)",
+   "pos": "phrase",
+   "info": "feste Wendung (Gen. von смачне́)"
+  },
+  {
+   "uk": "навза́єм",
+   "lemma": "навза́єм",
+   "de": "gleichfalls, ebenso",
+   "pos": "adv",
+   "info": "Adv.; Дя́кую, навза́єм! = Danke, gleichfalls!"
+  },
+  {
+   "uk": "зазвича́й",
+   "lemma": "зазвича́й",
+   "de": "normalerweise, gewöhnlich",
+   "pos": "adv",
+   "info": "Adv."
+  },
+  {
+   "uk": "хо́чу",
+   "lemma": "хоті́ти",
+   "de": "ich möchte, ich will",
+   "pos": "verb",
+   "info": "1. Sg. Präs. · Inf. хоті́ти"
+  },
+  {
+   "uk": "хо́чеш",
+   "lemma": "хоті́ти",
+   "de": "du möchtest, du willst",
+   "pos": "verb",
+   "info": "2. Sg. Präs. · Inf. хоті́ти"
+  },
+  {
+   "uk": "хо́че",
+   "lemma": "хоті́ти",
+   "de": "er/sie möchte, will",
+   "pos": "verb",
+   "info": "3. Sg. Präs. · Inf. хоті́ти"
+  },
+  {
+   "uk": "хо́чете",
+   "lemma": "хоті́ти",
+   "de": "ihr möchtet; Sie möchten",
+   "pos": "verb",
+   "info": "2. Pl. Präs. · Inf. хоті́ти"
+  },
+  {
+   "uk": "ка́ву",
+   "lemma": "ка́ва",
+   "de": "Kaffee",
+   "pos": "noun",
+   "info": "Akk. Sg. f. · Nom. ка́ва"
+  },
+  {
+   "uk": "во́ду",
+   "lemma": "вода́",
+   "de": "Wasser",
+   "pos": "noun",
+   "info": "Akk. Sg. f. · Nom. вода́ (Betonungswechsel)"
+  },
+  {
+   "uk": "молоко́м",
+   "lemma": "молоко́",
+   "de": "(mit) Milch",
+   "pos": "noun",
+   "info": "Instr. Sg.; nur in з молоко́м"
+  },
+  {
+   "uk": "цу́кру",
+   "lemma": "цу́кор",
+   "de": "(ohne) Zucker",
+   "pos": "noun",
+   "info": "Gen. Sg.; nur in без цу́кру"
+  },
+  {
+   "uk": "мені́",
+   "lemma": "я",
+   "de": "mir; für mich",
+   "pos": "pron",
+   "info": "Dat. von я; Мені́ …, будь ла́ска = Für mich …, bitte"
+  },
+  {
+   "uk": "будь",
+   "lemma": "будь ла́ска",
+   "de": "bitte (in будь ла́ска)",
+   "pos": "phrase",
+   "info": "Teil der festen Wendung будь ла́ска"
+  },
+  {
+   "uk": "ла́ска",
+   "lemma": "будь ла́ска",
+   "de": "bitte (in будь ла́ска)",
+   "pos": "phrase",
+   "info": "Teil der festen Wendung будь ла́ска"
+  },
+  {
+   "uk": "до́брий",
+   "lemma": "до́брий",
+   "de": "gut (in До́брий день / ве́чір)",
+   "pos": "adj",
+   "info": "Adj. m. Nom. Sg.; in Grußformeln"
+  },
+  {
+   "uk": "ве́чір",
+   "lemma": "ве́чір",
+   "de": "Abend",
+   "pos": "noun",
+   "info": "m.; in До́брий ве́чір!"
+  },
+  {
+   "uk": "день",
+   "lemma": "день",
+   "de": "Tag",
+   "pos": "noun",
+   "info": "m.; in До́брий день!"
+  },
+  {
+   "uk": "добра́ніч",
+   "lemma": "на добра́ніч",
+   "de": "gute Nacht (in на добра́ніч)",
+   "pos": "phrase",
+   "info": "Teil der festen Wendung на добра́ніч"
+  },
+  {
+   "uk": "поба́чення",
+   "lemma": "до поба́чення",
+   "de": "auf Wiedersehen (in до поба́чення)",
+   "pos": "phrase",
+   "info": "Teil der festen Wendung до поба́чення"
+  },
+  {
+   "uk": "дава́й",
+   "lemma": "дава́й",
+   "de": "lass uns …; komm",
+   "pos": "part",
+   "info": "in Дава́й на ти! = Lass uns du sagen!"
+  },
+  {
+   "uk": "живе́",
+   "lemma": "жи́ти",
+   "de": "er/sie wohnt, lebt",
+   "pos": "verb",
+   "info": "3. Sg. Präs. · Inf. жи́ти"
+  },
+  {
+   "uk": "працю́є",
+   "lemma": "працюва́ти",
+   "de": "er/sie arbeitet",
+   "pos": "verb",
+   "info": "3. Sg. Präs. · Inf. працюва́ти"
+  },
+  {
+   "uk": "чита́ти",
+   "lemma": "чита́ти",
+   "de": "lesen",
+   "pos": "verb",
+   "info": "Inf.; I. Konj."
+  },
+  {
+   "uk": "чита́є",
+   "lemma": "чита́ти",
+   "de": "er/sie liest",
+   "pos": "verb",
+   "info": "3. Sg. Präs. · Inf. чита́ти"
+  },
+  {
+   "uk": "чита́ю",
+   "lemma": "чита́ти",
+   "de": "ich lese",
+   "pos": "verb",
+   "info": "1. Sg. Präs. · Inf. чита́ти"
+  },
+  {
+   "uk": "чита́єш",
+   "lemma": "чита́ти",
+   "de": "du liest",
+   "pos": "verb",
+   "info": "2. Sg. Präs. · Inf. чита́ти"
+  },
+  {
+   "uk": "чита́ємо",
+   "lemma": "чита́ти",
+   "de": "wir lesen",
+   "pos": "verb",
+   "info": "1. Pl. Präs. · Inf. чита́ти"
+  },
+  {
+   "uk": "чита́єте",
+   "lemma": "чита́ти",
+   "de": "ihr lest; Sie lesen",
+   "pos": "verb",
+   "info": "2. Pl. Präs. · Inf. чита́ти"
+  },
+  {
+   "uk": "чита́ють",
+   "lemma": "чита́ти",
+   "de": "sie lesen",
+   "pos": "verb",
+   "info": "3. Pl. Präs. · Inf. чита́ти"
+  },
+  {
+   "uk": "Ки́єві",
+   "lemma": "Ки́їв",
+   "de": "(in) Kyjiw",
+   "pos": "name",
+   "info": "Lok.; nur in у/в Ки́єві"
+  },
+  {
+   "uk": "програмі́ст",
+   "lemma": "програмі́ст",
+   "de": "Programmierer",
+   "pos": "noun",
+   "info": "m."
+  },
+  {
+   "uk": "о́воч",
+   "lemma": "о́вочі",
+   "de": "ein Gemüse",
+   "pos": "noun",
+   "info": "m. Sg. zu о́вочі"
+  },
+  {
+   "uk": "фрукт",
+   "lemma": "фру́кти",
+   "de": "eine Frucht",
+   "pos": "noun",
+   "info": "m. Sg. zu фру́кти"
+  },
+  {
+   "uk": "моя́",
+   "lemma": "мій",
+   "de": "meine",
+   "pos": "pron",
+   "info": "f. Nom. Sg. · m. мій"
+  },
+  {
+   "uk": "моє́",
+   "lemma": "мій",
+   "de": "mein (n.)",
+   "pos": "pron",
+   "info": "n. Nom. Sg. · m. мій"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e01",
+   "type": "reading",
+   "vocab": [
+    "obid",
+    "khotity",
+    "ryba",
+    "kartoplia",
+    "liubyty",
+    "pyty",
+    "kava",
+    "z_molokom",
+    "bez_tsukru",
+    "smachnoho",
+    "sup",
+    "salat"
+   ],
+   "difficulty": 1,
+   "title_uk": "Обі́д",
+   "text_uk": "Окса́на: Що ти хо́чеш на обі́д?\nМа́ркус: Суп і сала́т, а ти?\nОкса́на: Я хо́чу ри́бу й карто́плю. Я ду́же люблю́ ри́бу.\nМа́ркус: А що ти п’єш?\nОкса́на: Во́ду, а ти п’єш ка́ву з молоко́м, так?\nМа́ркус: Так, і без цу́кру.\nТара́с: Смачно́го!",
+   "text_de": "Mittagspause im Café neben dem Büro, in dem Taras arbeitet. Oksana: Was möchtest du zum Mittagessen? – Markus: Suppe und Salat, und du? – Oksana: Ich möchte Fisch und Kartoffeln. Ich esse sehr gern Fisch. – Markus: Und was trinkst du? – Oksana: Wasser, und du trinkst Kaffee mit Milch, oder? – Markus: Ja, und ohne Zucker. – Taras: Guten Appetit!",
+   "questions": [
+    {
+     "q_uk": "Що хо́че Ма́ркус на обі́д?",
+     "q_de": "Was möchte Markus zum Mittagessen?",
+     "kind": "mc",
+     "options": [
+      "Суп і сала́т.",
+      "Ри́бу й карто́плю.",
+      "Борщ."
+     ]
+    },
+    {
+     "q_uk": "Що лю́бить Окса́на?",
+     "q_de": "Was isst Oksana gern?",
+     "kind": "mc",
+     "options": [
+      "Ри́бу.",
+      "Суп.",
+      "Сала́т."
+     ]
+    },
+    {
+     "q_uk": "Окса́на п’є ка́ву.",
+     "q_de": "Oksana trinkt Kaffee.",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Ма́ркус п’є ка́ву з молоко́м.",
+     "q_de": "Markus trinkt Kaffee mit Milch.",
+     "kind": "tf",
+     "answer": true
+    },
+    {
+     "q_uk": "Що п’є Окса́на?",
+     "q_de": "Was trinkt Oksana?",
+     "kind": "mc",
+     "options": [
+      "Во́ду.",
+      "Ка́ву.",
+      "Чай."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "type": "true_false",
+   "vocab": [
+    "ryba",
+    "kartoplia",
+    "miaso",
+    "obid",
+    "khotity"
+   ],
+   "difficulty": 1,
+   "context_uk": "Окса́на: Я хо́чу ри́бу й карто́плю.",
+   "context_de": "Oksana: Ich möchte Fisch und Kartoffeln.",
+   "statement_uk": "Окса́на хо́че на обі́д м’я́со.",
+   "answer": false,
+   "explanation_de": "Oksana möchte Fisch (ри́бу) und Kartoffeln (карто́плю), kein Fleisch (м’я́со)."
+  },
+  {
+   "id": "e03",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "liubyty",
+    "ryba",
+    "duzhe"
+   ],
+   "difficulty": 1,
+   "prompt": "Я ду́же люблю́ ри́бу.",
+   "options": [
+    "Ich esse sehr gern Fisch.",
+    "Ich möchte sehr gern Fisch.",
+    "Ich esse sehr gern Fleisch.",
+    "Du isst sehr gern Fisch."
+   ]
+  },
+  {
+   "id": "e04",
+   "type": "cloze",
+   "vocab": [
+    "pyty",
+    "shcho"
+   ],
+   "difficulty": 1,
+   "text": "Ма́ркус: А що ти {{п’єш}}?",
+   "options": [
+    [
+     "п’єш",
+     "п’є",
+     "п’ю"
+    ]
+   ],
+   "translation_de": "Markus: Und was trinkst du?",
+   "hint_de": "ти → п’єш"
+  },
+  {
+   "id": "e05",
+   "type": "cloze",
+   "vocab": [
+    "liubyty",
+    "ryba"
+   ],
+   "difficulty": 1,
+   "text": "Окса́на: Я ду́же {{люблю́}} ри́бу.",
+   "options": [
+    [
+     "люблю́",
+     "лю́бить",
+     "лю́биш"
+    ]
+   ],
+   "translation_de": "Oksana: Ich esse sehr gern Fisch."
+  },
+  {
+   "id": "e06",
+   "type": "picture_choice",
+   "vocab": [
+    "ryba"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "ри́ба",
+   "options": [
+    {
+     "emoji": "🐟",
+     "de": "Fisch"
+    },
+    {
+     "emoji": "🥩",
+     "de": "Fleisch"
+    },
+    {
+     "emoji": "🍗",
+     "de": "Hähnchen"
+    },
+    {
+     "emoji": "🧀",
+     "de": "Käse"
+    }
+   ]
+  },
+  {
+   "id": "e07",
+   "type": "match_pairs",
+   "vocab": [
+    "khlib",
+    "syr",
+    "miaso",
+    "ryba",
+    "yabluko",
+    "yaitse"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "хліб",
+     "de": "Brot"
+    },
+    {
+     "uk": "сир",
+     "de": "Käse"
+    },
+    {
+     "uk": "м’я́со",
+     "de": "Fleisch"
+    },
+    {
+     "uk": "ри́ба",
+     "de": "Fisch"
+    },
+    {
+     "uk": "я́блуко",
+     "de": "Apfel"
+    },
+    {
+     "uk": "яйце́",
+     "de": "Ei"
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "type": "picture_choice",
+   "vocab": [
+    "kartoplia"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "карто́пля",
+   "options": [
+    {
+     "emoji": "🥔",
+     "de": "Kartoffeln"
+    },
+    {
+     "emoji": "🍎",
+     "de": "Apfel"
+    },
+    {
+     "emoji": "🥚",
+     "de": "Ei"
+    },
+    {
+     "emoji": "🍞",
+     "de": "Brot"
+    }
+   ]
+  },
+  {
+   "id": "e09",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "ovochi"
+   ],
+   "difficulty": 1,
+   "prompt": "о́вочі",
+   "options": [
+    "Gemüse",
+    "Obst",
+    "Kartoffeln",
+    "Salat"
+   ]
+  },
+  {
+   "id": "e10",
+   "type": "reading",
+   "vocab": [
+    "vecheria",
+    "borshch",
+    "kurka",
+    "kartoplia",
+    "liubyty",
+    "pyty",
+    "sik",
+    "voda",
+    "smachnoho",
+    "smachnyi",
+    "dobryi_vechir"
+   ],
+   "difficulty": 1,
+   "title_uk": "Смачно́го!",
+   "text_uk": "Андрі́й: До́брий ве́чір, я Андрі́й.\nОкса́на: Ось вече́ря: борщ, ку́рка й карто́пля.\nСофі́я: Я ду́же люблю́ карто́плю!\nАндрі́й: Ти п’єш сік чи во́ду?\nМа́ркус: Во́ду, будь ла́ска.\nОкса́на: Смачно́го!\nМа́ркус: Дя́кую, навза́єм! Ду́же смачни́й борщ!",
+   "text_de": "Abends ist Markus bei Oksanas Familie zum Essen eingeladen. Andrij: Guten Abend, ich bin Andrij. – Oksana: Hier ist das Abendessen: Borschtsch, Hähnchen und Kartoffeln. – Sofija: Ich esse total gern Kartoffeln! – Andrij: Trinkst du Saft oder Wasser? – Markus: Wasser, bitte. – Oksana: Guten Appetit! – Markus: Danke, gleichfalls! Sehr leckerer Borschtsch!",
+   "questions": [
+    {
+     "q_uk": "Що на вече́рю?",
+     "q_de": "Was gibt es zum Abendessen?",
+     "kind": "mc",
+     "options": [
+      "Борщ, ку́рка й карто́пля.",
+      "Ри́ба й о́вочі.",
+      "Суп і сала́т."
+     ]
+    },
+    {
+     "q_uk": "Що лю́бить Софі́я?",
+     "q_de": "Was isst Sofija gern?",
+     "kind": "mc",
+     "options": [
+      "Карто́плю.",
+      "Ри́бу.",
+      "Сала́т."
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус п’є сік.",
+     "q_de": "Markus trinkt Saft.",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Борщ ду́же смачни́й.",
+     "q_de": "Der Borschtsch ist sehr lecker.",
+     "kind": "tf",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "id": "e11",
+   "type": "true_false",
+   "vocab": [
+    "pyty",
+    "sik",
+    "voda"
+   ],
+   "difficulty": 1,
+   "context_uk": "Андрі́й: Ти п’єш сік чи во́ду? – Ма́ркус: Во́ду, будь ла́ска.",
+   "context_de": "Andrij: Trinkst du Saft oder Wasser? – Markus: Wasser, bitte.",
+   "statement_uk": "Ма́ркус п’є сік.",
+   "answer": false,
+   "explanation_de": "Markus wählt Wasser (во́ду), nicht Saft (сік)."
+  },
+  {
+   "id": "e12",
+   "type": "cloze",
+   "vocab": [
+    "kartoplia",
+    "liubyty"
+   ],
+   "difficulty": 1,
+   "text": "Софі́я: Я ду́же люблю́ {{карто́плю}}!",
+   "options": [
+    [
+     "карто́плю",
+     "карто́пля"
+    ]
+   ],
+   "translation_de": "Sofija: Ich esse total gern Kartoffeln!",
+   "hint_de": "Nach люблю́: Akkusativ, -я → -ю"
+  },
+  {
+   "id": "e13",
+   "type": "match_pairs",
+   "vocab": [
+    "snidanok",
+    "obid",
+    "vecheria",
+    "smachnoho",
+    "smachnyi"
+   ],
+   "difficulty": 1,
+   "pairs": [
+    {
+     "uk": "сніда́нок",
+     "de": "Frühstück"
+    },
+    {
+     "uk": "обі́д",
+     "de": "Mittagessen"
+    },
+    {
+     "uk": "вече́ря",
+     "de": "Abendessen"
+    },
+    {
+     "uk": "Смачно́го!",
+     "de": "Guten Appetit!"
+    },
+    {
+     "uk": "смачни́й",
+     "de": "lecker"
+    }
+   ]
+  },
+  {
+   "id": "e14",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "smachnoho"
+   ],
+   "difficulty": 1,
+   "prompt": "Смачно́го!",
+   "options": [
+    "Guten Appetit!",
+    "Sehr lecker!",
+    "Danke, gleichfalls!",
+    "Gute Nacht!"
+   ]
+  },
+  {
+   "id": "e15",
+   "type": "picture_choice",
+   "vocab": [
+    "salat",
+    "isty"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Окса́на їсть сала́т.",
+   "options": [
+    {
+     "emoji": "🥗",
+     "de": "Salat"
+    },
+    {
+     "emoji": "🍲",
+     "de": "Suppe"
+    },
+    {
+     "emoji": "🥩",
+     "de": "Fleisch"
+    }
+   ]
+  },
+  {
+   "id": "e16",
+   "type": "cloze",
+   "vocab": [
+    "liubyty",
+    "ovochi",
+    "frukty"
+   ],
+   "difficulty": 2,
+   "text": "Ми {{лю́бимо}} о́вочі, а Софі́я {{лю́бить}} фру́кти.",
+   "options": [
+    [
+     "лю́бимо",
+     "лю́бите",
+     "лю́блять"
+    ],
+    [
+     "лю́бить",
+     "лю́биш",
+     "люблю́"
+    ]
+   ],
+   "translation_de": "Wir essen gern Gemüse, und Sofija isst gern Obst."
+  },
+  {
+   "id": "e17",
+   "type": "cloze",
+   "vocab": [
+    "liubyty",
+    "borshch"
+   ],
+   "difficulty": 2,
+   "text": "Ти {{лю́биш}} борщ? – Так, ду́же {{люблю́}}!",
+   "options": [
+    [
+     "лю́биш",
+     "лю́бить",
+     "лю́бите"
+    ],
+    [
+     "люблю́",
+     "лю́бить",
+     "лю́биш"
+    ]
+   ],
+   "translation_de": "Isst du gern Borschtsch? – Ja, sehr gern!"
+  },
+  {
+   "id": "e18",
+   "type": "cloze",
+   "vocab": [
+    "isty",
+    "snidanok",
+    "khlib",
+    "syr"
+   ],
+   "difficulty": 2,
+   "text": "Що ти {{їси́}} на сніда́нок? – Я {{їм}} хліб і сир.",
+   "options": [
+    [
+     "їси́",
+     "їсть",
+     "їсте́"
+    ],
+    [
+     "їм",
+     "їсть",
+     "їмо́"
+    ]
+   ],
+   "translation_de": "Was isst du zum Frühstück? – Ich esse Brot und Käse."
+  },
+  {
+   "id": "e19",
+   "type": "cloze",
+   "vocab": [
+    "isty",
+    "borshch"
+   ],
+   "difficulty": 2,
+   "text": "Андрі́й і Окса́на {{їдя́ть}} борщ.",
+   "options": [
+    [
+     "їдя́ть",
+     "їсть",
+     "їмо́"
+    ]
+   ],
+   "translation_de": "Andrij und Oksana essen Borschtsch."
+  },
+  {
+   "id": "e20",
+   "type": "cloze",
+   "vocab": [
+    "pyty",
+    "chai",
+    "kava"
+   ],
+   "difficulty": 2,
+   "text": "Ми {{п’ємо́}} чай, а ви {{п’єте́}} ка́ву?",
+   "options": [
+    [
+     "п’ємо́",
+     "п’ють",
+     "п’єте́"
+    ],
+    [
+     "п’єте́",
+     "п’єш",
+     "п’ємо́"
+    ]
+   ],
+   "translation_de": "Wir trinken Tee, und trinkt ihr Kaffee?"
+  },
+  {
+   "id": "e21",
+   "type": "cloze",
+   "vocab": [
+    "ryba",
+    "salat",
+    "vecheria",
+    "khotity"
+   ],
+   "difficulty": 2,
+   "text": "На вече́рю я хо́чу {{ри́бу}} й сала́т.",
+   "options": [
+    [
+     "ри́бу",
+     "ри́ба"
+    ]
+   ],
+   "translation_de": "Zum Abendessen möchte ich Fisch und Salat.",
+   "hint_de": "Direktes Objekt: Akkusativ"
+  },
+  {
+   "id": "e22",
+   "type": "cloze",
+   "vocab": [
+    "liubyty",
+    "chytaty"
+   ],
+   "difficulty": 2,
+   "text": "Ма́ркус лю́бить {{чита́ти}}.",
+   "options": [
+    [
+     "чита́ти",
+     "чита́є",
+     "чита́ю"
+    ]
+   ],
+   "translation_de": "Markus liest gern.",
+   "hint_de": "Etwas gern tun: люби́ти + Infinitiv"
+  },
+  {
+   "id": "e23",
+   "type": "cloze",
+   "vocab": [
+    "vecheria",
+    "dobryi_vechir",
+    "isty"
+   ],
+   "difficulty": 2,
+   "text": "До́брий ве́чір! Що ми їмо́ на {{вече́рю}}?",
+   "options": [
+    [
+     "вече́рю",
+     "сніда́нок",
+     "обі́д"
+    ]
+   ],
+   "translation_de": "Guten Abend! Was essen wir zum Abendessen?"
+  },
+  {
+   "id": "e24",
+   "type": "picture_choice",
+   "vocab": [
+    "ovochi",
+    "liubyty"
+   ],
+   "difficulty": 1,
+   "prompt_uk": "Софі́я лю́бить о́вочі.",
+   "options": [
+    {
+     "emoji": "🥦",
+     "de": "Gemüse"
+    },
+    {
+     "emoji": "🍎",
+     "de": "Apfel"
+    },
+    {
+     "emoji": "🐟",
+     "de": "Fisch"
+    },
+    {
+     "emoji": "🥚",
+     "de": "Ei"
+    }
+   ]
+  },
+  {
+   "id": "e25",
+   "type": "cloze",
+   "vocab": [
+    "yabluko",
+    "frukty",
+    "isty"
+   ],
+   "difficulty": 2,
+   "text": "Софі́я лю́бить фру́кти. На обі́д вона́ їсть {{я́блуко}}.",
+   "options": [
+    [
+     "я́блуко",
+     "м’я́со",
+     "сир"
+    ]
+   ],
+   "translation_de": "Sofija isst gern Obst. Zum Mittagessen isst sie einen Apfel.",
+   "hint_de": "Was ist Obst?"
+  },
+  {
+   "id": "e26",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "isty",
+    "snidanok"
+   ],
+   "difficulty": 2,
+   "prompt": "Was isst du (du) zum Frühstück?",
+   "options": [
+    "Що ти їси́ на сніда́нок?",
+    "Що ти п’єш на сніда́нок?",
+    "Що ви їсте́ на сніда́нок?",
+    "Що ти їси́ на обі́д?"
+   ]
+  },
+  {
+   "id": "e27",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "pyty",
+    "voda",
+    "vin"
+   ],
+   "difficulty": 2,
+   "prompt": "Er trinkt Wasser.",
+   "options": [
+    "Він п’є во́ду.",
+    "Він п’є вода́.",
+    "Він п’ють во́ду."
+   ]
+  },
+  {
+   "id": "e28",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "liubyty",
+    "kurka",
+    "my"
+   ],
+   "difficulty": 2,
+   "prompt": "Wir essen gern Hähnchen.",
+   "options": [
+    "Ми лю́бимо ку́рку.",
+    "Ми лю́бите ку́рку.",
+    "Ми лю́бимо ку́рка.",
+    "Ви лю́бите ку́рку."
+   ]
+  },
+  {
+   "id": "e29",
+   "type": "mc_translate",
+   "dir": "uk-de",
+   "vocab": [
+    "isty",
+    "ovochi",
+    "frukty",
+    "vony"
+   ],
+   "difficulty": 2,
+   "prompt": "Вони́ їдя́ть о́вочі й фру́кти.",
+   "options": [
+    "Sie essen Gemüse und Obst.",
+    "Sie isst Gemüse und Obst.",
+    "Wir essen Gemüse und Obst.",
+    "Sie essen Kartoffeln und Obst."
+   ]
+  },
+  {
+   "id": "e30",
+   "type": "true_false",
+   "vocab": [
+    "obid",
+    "sup",
+    "salat",
+    "miaso",
+    "pratsiuvaty",
+    "vdoma"
+   ],
+   "difficulty": 2,
+   "context_uk": "Андрі́й програмі́ст, він працю́є вдо́ма. На обі́д він зазвича́й їсть суп або́ сала́т.",
+   "context_de": "Andrij ist Programmierer, er arbeitet zu Hause. Zum Mittagessen isst er normalerweise Suppe oder Salat.",
+   "statement_uk": "На обі́д Андрі́й зазвича́й їсть м’я́со.",
+   "answer": false,
+   "explanation_de": "Andrij isst mittags normalerweise (зазвича́й) Suppe oder Salat, nicht Fleisch."
+  },
+  {
+   "id": "e31",
+   "type": "true_false",
+   "vocab": [
+    "snidanok",
+    "yaitse",
+    "yabluko",
+    "pyty",
+    "isty"
+   ],
+   "difficulty": 2,
+   "context_uk": "Ма́ркус: На сніда́нок я п’ю ка́ву і їм яйце́.",
+   "context_de": "Markus: Zum Frühstück trinke ich Kaffee und esse ein Ei.",
+   "statement_uk": "Ма́ркус їсть на сніда́нок я́блуко.",
+   "answer": false,
+   "explanation_de": "Markus isst zum Frühstück ein Ei (яйце́), keinen Apfel (я́блуко)."
+  },
+  {
+   "id": "e32",
+   "type": "true_false",
+   "vocab": [
+    "khlib",
+    "syr",
+    "snidanok",
+    "isty"
+   ],
+   "difficulty": 2,
+   "context_uk": "Окса́на: На сніда́нок я їм хліб із си́ром.",
+   "context_de": "Oksana: Zum Frühstück esse ich Brot mit Käse.",
+   "statement_uk": "Окса́на їсть на сніда́нок хліб і сир.",
+   "answer": true,
+   "explanation_de": "хліб із си́ром = Brot mit Käse – also Brot und Käse. Die Wendung nur verstehen; selbst einfach хліб і сир sagen."
+  },
+  {
+   "id": "e33",
+   "type": "true_false",
+   "vocab": [
+    "smachnoho",
+    "vecheria"
+   ],
+   "difficulty": 2,
+   "context_uk": "Окса́на: Ось вече́ря. Смачно́го! – Андрі́й: Дя́кую, навза́єм!",
+   "context_de": "Oksana: Hier ist das Abendessen. Guten Appetit! – Andrij: Danke, gleichfalls!",
+   "statement_uk": "Андрі́й теж хо́че ї́сти.",
+   "answer": true,
+   "explanation_de": "„Навза́єм“ (gleichfalls) gibt den Wunsch zurück – Andrij isst also mit. Erschlossen aus dem Kontext."
+  },
+  {
+   "id": "e34",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "liubyty",
+    "ryba"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Я люблю́ ри́бу.",
+   "options": [
+    "Ich esse gern Fisch.",
+    "Ich möchte Fisch.",
+    "Ich esse gern Fleisch.",
+    "Ich trinke gern Tee."
+   ]
+  },
+  {
+   "id": "e35",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "isty",
+    "miaso"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Ти їси́ м’я́со?",
+   "options": [
+    "Ти їси́ м’я́со?",
+    "Ти п’єш молоко́?",
+    "Ви їсте́ м’я́со?"
+   ]
+  },
+  {
+   "id": "e36",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "pyty",
+    "kava",
+    "z_molokom"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Ми п’ємо́ ка́ву з молоко́м.",
+   "answer": "Ми п’ємо́ ка́ву з молоко́м.",
+   "distractors": [
+    "п’ють",
+    "чай",
+    "їмо́"
+   ]
+  },
+  {
+   "id": "e37",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "obid",
+    "sup",
+    "salat",
+    "isty"
+   ],
+   "difficulty": 2,
+   "audio_uk": "На обі́д я їм суп і сала́т.",
+   "options": [
+    "Zum Mittagessen esse ich Suppe und Salat.",
+    "Zum Abendessen esse ich Suppe und Salat.",
+    "Zum Mittagessen esse ich Fisch und Salat.",
+    "Zum Frühstück esse ich Brot."
+   ]
+  },
+  {
+   "id": "e38",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "liubyty",
+    "isty"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Що ти лю́биш ї́сти?",
+   "options": [
+    "Що ти лю́биш ї́сти?",
+    "Що ти лю́биш пи́ти?",
+    "Що ви лю́бите ї́сти?"
+   ]
+  },
+  {
+   "id": "e39",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "liubyty",
+    "frukty",
+    "ovochi"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Софі́я лю́бить фру́кти й о́вочі.",
+   "answer": "Софі́я лю́бить фру́кти й о́вочі.",
+   "distractors": [
+    "люблю́",
+    "я́блуко",
+    "ри́бу"
+   ]
+  },
+  {
+   "id": "e40",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "smachnyi",
+    "borshch",
+    "duzhe"
+   ],
+   "difficulty": 1,
+   "audio_uk": "Ду́же смачни́й борщ!",
+   "options": [
+    "Sehr leckerer Borschtsch!",
+    "Guten Appetit!",
+    "Der Borschtsch ist sehr heiß.",
+    "Ich esse gern Suppe."
+   ]
+  },
+  {
+   "id": "e41",
+   "type": "listening",
+   "mode": "choose_heard",
+   "vocab": [
+    "pyty",
+    "sik",
+    "vony"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Вони́ п’ють сік.",
+   "options": [
+    "Вони́ п’ють сік.",
+    "Вона́ п’є сік.",
+    "Вони́ їдя́ть сир."
+   ]
+  },
+  {
+   "id": "e42",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "liubyty",
+    "ryba",
+    "ovochi"
+   ],
+   "difficulty": 2,
+   "prompt": "Ich esse gern Fisch und Gemüse.",
+   "answer": "Я люблю́ ри́бу й о́вочі.",
+   "accept": [
+    "Я люблю́ о́вочі й ри́бу."
+   ],
+   "distractors": [
+    "ри́ба",
+    "лю́бить",
+    "їм"
+   ]
+  },
+  {
+   "id": "e43",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "snidanok",
+    "pyty",
+    "kava",
+    "z_molokom"
+   ],
+   "difficulty": 2,
+   "prompt": "Zum Frühstück trinke ich Kaffee mit Milch.",
+   "answer": "На сніда́нок я п’ю ка́ву з молоко́м.",
+   "accept": [
+    "Я п’ю ка́ву з молоко́м на сніда́нок."
+   ],
+   "distractors": [
+    "п’є",
+    "ка́ва",
+    "обі́д"
+   ]
+  },
+  {
+   "id": "e44",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "isty",
+    "miaso"
+   ],
+   "difficulty": 2,
+   "prompt": "Isst du (du) Fleisch?",
+   "answer": "Ти їси́ м’я́со?",
+   "distractors": [
+    "їсть",
+    "їсте́",
+    "п’єш"
+   ]
+  },
+  {
+   "id": "e45",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "isty",
+    "vecheria",
+    "vy"
+   ],
+   "difficulty": 3,
+   "prompt": "Was esst ihr zum Abendessen?",
+   "answer": "Що ви їсте́ на вече́рю?",
+   "distractors": [
+    "їмо́",
+    "їдя́ть",
+    "сніда́нок"
+   ]
+  },
+  {
+   "id": "e46",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "liubyty",
+    "pyty",
+    "chai"
+   ],
+   "difficulty": 3,
+   "prompt": "Ich trinke gern Tee.",
+   "answer": "Я люблю́ пи́ти чай.",
+   "accept": [
+    "Я люблю́ чай."
+   ],
+   "distractors": [
+    "п’ю",
+    "лю́бить",
+    "ка́ву"
+   ],
+   "hint_de": "люби́ти + Infinitiv"
+  },
+  {
+   "id": "e47",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "borshch",
+    "smachnyi",
+    "duzhe"
+   ],
+   "difficulty": 2,
+   "prompt": "Der Borschtsch ist sehr lecker!",
+   "answer": "Борщ ду́же смачни́й!",
+   "accept": [
+    "Ду́же смачни́й борщ!"
+   ],
+   "distractors": [
+    "Смачно́го",
+    "суп",
+    "хліб"
+   ]
+  },
+  {
+   "id": "e48",
+   "type": "build_sentence",
+   "dir": "uk-de",
+   "vocab": [
+    "liubyty",
+    "kurka",
+    "kartoplia"
+   ],
+   "difficulty": 2,
+   "prompt": "Андрі́й і Окса́на лю́блять ку́рку й карто́плю.",
+   "answer": "Andrij und Oksana essen gern Hähnchen und Kartoffeln.",
+   "distractors": [
+    "Fisch",
+    "isst",
+    "trinken"
+   ]
+  },
+  {
+   "id": "e49",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "pyty",
+    "voda",
+    "chai"
+   ],
+   "difficulty": 2,
+   "prompt": "Oksana trinkt Wasser oder Tee.",
+   "answer": "Окса́на п’є во́ду або́ чай.",
+   "accept": [
+    "Окса́на п’є чай або́ во́ду."
+   ],
+   "distractors": [
+    "п’ють",
+    "вода́",
+    "їсть"
+   ]
+  },
+  {
+   "id": "e50",
+   "type": "speak",
+   "vocab": [
+    "smachnoho"
+   ],
+   "difficulty": 1,
+   "uk": "Смачно́го!",
+   "de": "Guten Appetit!"
+  },
+  {
+   "id": "e51",
+   "type": "speak",
+   "vocab": [
+    "smachnoho",
+    "diakuiu"
+   ],
+   "difficulty": 1,
+   "uk": "Дя́кую, навза́єм!",
+   "de": "Danke, gleichfalls!"
+  },
+  {
+   "id": "e52",
+   "type": "speak",
+   "vocab": [
+    "liubyty",
+    "borshch",
+    "duzhe"
+   ],
+   "difficulty": 1,
+   "uk": "Я ду́же люблю́ борщ.",
+   "de": "Ich esse sehr gern Borschtsch."
+  },
+  {
+   "id": "e53",
+   "type": "speak",
+   "vocab": [
+    "snidanok",
+    "pyty",
+    "kava",
+    "isty",
+    "yaitse"
+   ],
+   "difficulty": 2,
+   "uk": "На сніда́нок я п’ю ка́ву і їм яйце́.",
+   "de": "Zum Frühstück trinke ich Kaffee und esse ein Ei."
+  },
+  {
+   "id": "e54",
+   "type": "speak",
+   "vocab": [
+    "isty",
+    "obid"
+   ],
+   "difficulty": 2,
+   "uk": "Що ти їси́ на обі́д?",
+   "de": "Was isst du (du) zum Mittagessen?"
+  },
+  {
+   "id": "e55",
+   "type": "speak",
+   "vocab": [
+    "ryba",
+    "salat",
+    "bud_laska"
+   ],
+   "difficulty": 2,
+   "uk": "Мені́ ри́бу й сала́т, будь ла́ска.",
+   "de": "Für mich Fisch und Salat, bitte."
+  },
+  {
+   "id": "e56",
+   "type": "speak",
+   "vocab": [
+    "obid",
+    "sup",
+    "isty"
+   ],
+   "difficulty": 2,
+   "uk": "На обі́д я зазвича́й їм суп.",
+   "de": "Zum Mittagessen esse ich normalerweise Suppe."
+  },
+  {
+   "id": "e57",
+   "type": "chat",
+   "vocab": [
+    "obid",
+    "sup",
+    "salat",
+    "ryba",
+    "kava",
+    "z_molokom",
+    "pyty",
+    "smachnoho"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Mittagspause im Café neben dem Büro. Taras bedient. Ziel: Mittagessen und ein Getränk bestellen.",
+   "partner": {
+    "name": "Тара́с",
+    "emoji": "🧑"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Приві́т! Що ти хо́чеш на обі́д?",
+     "de": "Hallo! Was möchtest du zum Mittagessen?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Суп і сала́т, будь ла́ска.",
+       "de": "Suppe und Salat, bitte."
+      },
+      {
+       "uk": "Смачно́го! Суп і сала́т.",
+       "de": "Guten Appetit! Suppe und Salat.",
+       "feedback_de": "Смачно́го! wünscht man beim Essen, nicht beim Bestellen."
+      },
+      {
+       "uk": "Ри́ба, будь ла́ска.",
+       "de": "Fisch, bitte.",
+       "feedback_de": "Bestellung = direktes Objekt → Akkusativ: ри́бу."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "До́бре. А що ти п’єш: чай чи ка́ву?",
+     "de": "Gut. Und was trinkst du: Tee oder Kaffee?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Ка́ву з молоко́м, будь ла́ска.",
+       "de": "Kaffee mit Milch, bitte."
+      },
+      {
+       "uk": "Ка́ва з молоко́м, будь ла́ска.",
+       "de": "Kaffee mit Milch, bitte.",
+       "feedback_de": "Akkusativ: ка́ва → ка́ву."
+      },
+      {
+       "uk": "Я п’єш ка́ву, будь ла́ска.",
+       "de": "Ich trinkst Kaffee, bitte.",
+       "feedback_de": "Form: я п’ю (п’єш = ти)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Ось суп, сала́т і ка́ва. Смачно́го!",
+     "de": "Hier sind Suppe, Salat und Kaffee. Guten Appetit!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Дя́кую!",
+       "de": "Danke!"
+      },
+      {
+       "uk": "Навза́єм!",
+       "de": "Gleichfalls!",
+       "feedback_de": "Taras isst nicht mit – ihm sagt man einfach Дя́кую!"
+      },
+      {
+       "uk": "Будь ла́ска!",
+       "de": "Bitte!",
+       "feedback_de": "Hier bedankst du dich: Дя́кую!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e58",
+   "type": "chat",
+   "vocab": [
+    "liubyty",
+    "isty",
+    "ryba",
+    "ovochi",
+    "pyty",
+    "obid",
+    "smachnoho"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Mittagessen mit Oksana (ihr duzt euch). Ziel: sagen, was du gern isst, und fragen, was sie trinkt.",
+   "partner": {
+    "name": "Окса́на",
+    "emoji": "👩"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Що ти лю́биш ї́сти на обі́д?",
+     "de": "Was isst du gern zum Mittagessen?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Я люблю́ ри́бу й о́вочі. А ти?",
+       "de": "Ich esse gern Fisch und Gemüse. Und du?"
+      },
+      {
+       "uk": "Я лю́бить ри́бу й о́вочі. А ти?",
+       "de": "Ich isst gern … (falsche Form)",
+       "feedback_de": "1. Person Singular: я люблю́."
+      },
+      {
+       "uk": "Я люблю́ ри́ба й о́вочі. А ти?",
+       "de": "Ich esse gern Fisch … (falscher Fall)",
+       "feedback_de": "Nach люблю́ steht der Akkusativ: ри́бу."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Я теж! А ще я люблю́ суп.",
+     "de": "Ich auch! Und außerdem esse ich gern Suppe."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "А що ти п’єш на обі́д?",
+       "de": "Und was trinkst du zum Mittagessen?"
+      },
+      {
+       "uk": "А що ти п’є на обі́д?",
+       "de": "Und was trinkt du …? (falsche Form)",
+       "feedback_de": "Zu ти gehört п’єш."
+      },
+      {
+       "uk": "А що ви п’єте́ на обі́д?",
+       "de": "Und was trinken Sie zum Mittagessen?",
+       "feedback_de": "Oksana und du duzt euch: ти п’єш."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Зазвича́й во́ду або́ чай. Смачно́го!",
+     "de": "Normalerweise Wasser oder Tee. Guten Appetit!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Дя́кую, навза́єм!",
+       "de": "Danke, gleichfalls!"
+      },
+      {
+       "uk": "Смачни́й!",
+       "de": "Lecker!",
+       "feedback_de": "смачни́й ist nur das Adjektiv „lecker“; der Wunsch heißt Смачно́го! – Antwort: Дя́кую, навза́єм!"
+      },
+      {
+       "uk": "До поба́чення!",
+       "de": "Auf Wiedersehen!",
+       "feedback_de": "Ihr esst gerade zusammen – kein Abschied."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e59",
+   "type": "order_dialog",
+   "vocab": [
+    "borshch",
+    "salat",
+    "voda",
+    "khotity",
+    "smachnoho",
+    "ofitsiant"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "До́брий день! Що ви хо́чете?",
+     "de": "Guten Tag! Was möchten Sie?"
+    },
+    {
+     "uk": "Мені́ борщ і сала́т, будь ла́ска.",
+     "de": "Für mich Borschtsch und Salat, bitte."
+    },
+    {
+     "uk": "А що ви хо́чете пи́ти?",
+     "de": "Und was möchten Sie trinken?"
+    },
+    {
+     "uk": "Во́ду, будь ла́ска.",
+     "de": "Wasser, bitte."
+    },
+    {
+     "uk": "Ось борщ, сала́т і вода́. Смачно́го!",
+     "de": "Hier sind Borschtsch, Salat und Wasser. Guten Appetit!"
+    }
+   ]
+  },
+  {
+   "id": "e60",
+   "type": "chat",
+   "vocab": [
+    "isty",
+    "miaso",
+    "liubyty",
+    "kurka",
+    "kartoplia",
+    "salat",
+    "pyty",
+    "voda",
+    "smachnoho",
+    "smachnyi"
+   ],
+   "difficulty": 3,
+   "scenario_de": "Abendessen bei Oksanas Familie – du bist auch eingeladen. Andrij, Oksanas Mann, fragt nach deinen Wünschen. Ziel: höflich antworten und das Essen loben.",
+   "partner": {
+    "name": "Андрі́й",
+    "emoji": "👨"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "До́брий ве́чір! Дава́й на ти. Ти їси́ м’я́со?",
+     "de": "Guten Abend! Lass uns du sagen. Isst du Fleisch?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Так, я люблю́ м’я́со.",
+       "de": "Ja, ich esse gern Fleisch."
+      },
+      {
+       "uk": "Так, я їси́ м’я́со.",
+       "de": "Ja, ich isst Fleisch. (falsche Form)",
+       "feedback_de": "їси́ ist die ти-Form; ich: я їм."
+      },
+      {
+       "uk": "Так, ти лю́биш м’я́со.",
+       "de": "Ja, du isst gern Fleisch.",
+       "feedback_de": "Du sprichst über dich selbst: я люблю́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "До́бре! На вече́рю ку́рка, карто́пля й сала́т. Ти п’єш сік чи во́ду?",
+     "de": "Gut! Zum Abendessen gibt es Hähnchen, Kartoffeln und Salat. Trinkst du Saft oder Wasser?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Во́ду, будь ла́ска.",
+       "de": "Wasser, bitte."
+      },
+      {
+       "uk": "Вода́, будь ла́ска.",
+       "de": "Wasser, bitte. (falscher Fall)",
+       "feedback_de": "Gemeint ist „ich trinke Wasser“ → Akkusativ во́ду."
+      },
+      {
+       "uk": "Я п’ють во́ду.",
+       "de": "Ich trinken Wasser. (falsche Form)",
+       "feedback_de": "п’ють = вони́; ich: я п’ю."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Смачно́го! Ну як?",
+     "de": "Guten Appetit! Na, wie ist es?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Дя́кую! Ду́же смачни́й сала́т.",
+       "de": "Danke! Sehr leckerer Salat."
+      },
+      {
+       "uk": "Дя́кую! Ду́же смачно́го сала́т.",
+       "de": "(falsche Form)",
+       "feedback_de": "Смачно́го! ist nur der Wunsch „Guten Appetit“; „lecker“ = смачни́й."
+      },
+      {
+       "uk": "Пога́но, дя́кую.",
+       "de": "Schlecht, danke.",
+       "feedback_de": "Unhöflich – und sicher nicht gemeint!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e61",
+   "type": "order_dialog",
+   "vocab": [
+    "vecheria",
+    "ryba",
+    "ovochi",
+    "smachnoho"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Ось вече́ря: ри́ба й о́вочі.",
+     "de": "Hier ist das Abendessen: Fisch und Gemüse."
+    },
+    {
+     "uk": "Ду́же дя́кую!",
+     "de": "Vielen Dank!"
+    },
+    {
+     "uk": "Смачно́го!",
+     "de": "Guten Appetit!"
+    },
+    {
+     "uk": "Дя́кую, навза́єм!",
+     "de": "Danke, gleichfalls!"
+    }
+   ]
+  },
+  {
+   "id": "e62",
+   "type": "chat",
+   "vocab": [
+    "isty",
+    "snidanok",
+    "khlib",
+    "syr",
+    "yaitse",
+    "frukty",
+    "pyty",
+    "chai",
+    "z_molokom"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Nach dem Abendessen fragt Sofija (7) neugierig. Kinder siezen Erwachsene, Erwachsene duzen Kinder. Ziel: von deinem Frühstück erzählen und zurückfragen.",
+   "partner": {
+    "name": "Софі́я",
+    "emoji": "👧"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "А що ви їсте́ на сніда́нок?",
+     "de": "Und was essen Sie zum Frühstück?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Зазвича́й хліб, сир і яйце́. А ти?",
+       "de": "Normalerweise Brot, Käse und ein Ei. Und du?"
+      },
+      {
+       "uk": "Зазвича́й хліб, сир і яйце́. А ви?",
+       "de": "Normalerweise Brot, Käse und ein Ei. Und Sie?",
+       "feedback_de": "Zu einem Kind sagt man ти."
+      },
+      {
+       "uk": "Я їсть хліб, сир і яйце́.",
+       "de": "Ich isst Brot … (falsche Form)",
+       "feedback_de": "1. Person: я їм."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А я люблю́ фру́кти! А що ви п’єте́?",
+     "de": "Und ich esse gern Obst! Und was trinken Sie?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Чай з молоко́м. А ти?",
+       "de": "Tee mit Milch. Und du?"
+      },
+      {
+       "uk": "Я п’єте́ чай з молоко́м.",
+       "de": "(falsche Form)",
+       "feedback_de": "п’єте́ ist die ви-Form; ich: я п’ю."
+      },
+      {
+       "uk": "Я їм чай з молоко́м.",
+       "de": "Ich esse Tee mit Milch.",
+       "feedback_de": "Tee trinkt man: я п’ю."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "А я п’ю сік!",
+     "de": "Und ich trinke Saft!"
+    }
+   ]
+  },
+  {
+   "id": "e63",
+   "type": "order_dialog",
+   "vocab": [
+    "liubyty",
+    "isty",
+    "miaso",
+    "kartoplia",
+    "ryba"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Що ти лю́биш ї́сти?",
+     "de": "Was isst du gern?"
+    },
+    {
+     "uk": "Я люблю́ м’я́со й карто́плю. А ти?",
+     "de": "Ich esse gern Fleisch und Kartoffeln. Und du?"
+    },
+    {
+     "uk": "А я люблю́ ри́бу.",
+     "de": "Und ich esse gern Fisch."
+    }
+   ]
+  },
+  {
+   "id": "e64",
+   "type": "match_pairs",
+   "vocab": [
+    "isty",
+    "pyty",
+    "liubyty"
+   ],
+   "difficulty": 2,
+   "pairs": [
+    {
+     "uk": "їм",
+     "de": "ich esse"
+    },
+    {
+     "uk": "п’ю",
+     "de": "ich trinke"
+    },
+    {
+     "uk": "їси́",
+     "de": "du isst"
+    },
+    {
+     "uk": "п’єш",
+     "de": "du trinkst"
+    },
+    {
+     "uk": "лю́блять",
+     "de": "sie mögen"
+    },
+    {
+     "uk": "їдя́ть",
+     "de": "sie essen"
+    }
+   ]
+  },
+  {
+   "id": "e65",
+   "type": "reading",
+   "vocab": [
+    "snidanok",
+    "obid",
+    "vecheria",
+    "khlib",
+    "syr",
+    "yaitse",
+    "kava",
+    "sup",
+    "salat",
+    "miaso",
+    "ryba",
+    "borshch",
+    "liubyty",
+    "isty",
+    "pyty"
+   ],
+   "difficulty": 3,
+   "title_uk": "Що їсть Ма́ркус?",
+   "text_uk": "Ма́ркус живе́ в Ки́єві. На сніда́нок він їсть хліб і сир або́ яйце́. Він п’є ка́ву з молоко́м і без цу́кру. На обі́д він зазвича́й їсть суп і сала́т. На вече́рю Ма́ркус лю́бить м’я́со або́ ри́бу. А ще він ду́же лю́бить украї́нський борщ!",
+   "text_de": "Markus wohnt in Kyjiw. Zum Frühstück isst er Brot und Käse oder ein Ei. Er trinkt Kaffee mit Milch und ohne Zucker. Zum Mittagessen isst er normalerweise Suppe und Salat. Zum Abendessen isst Markus gern Fleisch oder Fisch. Und außerdem isst er sehr gern ukrainischen Borschtsch!",
+   "questions": [
+    {
+     "q_uk": "Що п’є Ма́ркус на сніда́нок?",
+     "q_de": "Was trinkt Markus zum Frühstück?",
+     "kind": "mc",
+     "options": [
+      "Ка́ву з молоко́м.",
+      "Чай.",
+      "Сік."
+     ]
+    },
+    {
+     "q_uk": "На обі́д Ма́ркус їсть м’я́со.",
+     "q_de": "Zum Mittagessen isst Markus Fleisch.",
+     "kind": "tf",
+     "answer": false
+    },
+    {
+     "q_uk": "Що лю́бить Ма́ркус на вече́рю?",
+     "q_de": "Was isst Markus gern zum Abendessen?",
+     "kind": "mc",
+     "options": [
+      "М’я́со або́ ри́бу.",
+      "Суп і сала́т.",
+      "Хліб і сир."
+     ]
+    },
+    {
+     "q_uk": "Ма́ркус лю́бить борщ.",
+     "q_de": "Markus isst gern Borschtsch.",
+     "kind": "tf",
+     "answer": true
+    }
+   ]
+  }
+ ]
+}

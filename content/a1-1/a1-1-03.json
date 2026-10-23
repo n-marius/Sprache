@@ -1914,6 +1914,610 @@
    "difficulty": 2,
    "uk": "Йому́ ві́сім ро́ків, а їй три ро́ки.",
    "de": "Er ist acht Jahre alt, und sie ist drei."
+  },
+  {
+   "id": "e50",
+   "type": "listening",
+   "mode": "choose_meaning",
+   "vocab": [
+    "nul",
+    "dva",
+    "try",
+    "shist",
+    "sim",
+    "visim",
+    "deviat",
+    "odynadtsiat"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Нуль де́в’ять сім, шість ві́сім два, одина́дцять, нуль три.",
+   "options": [
+    "097 682 11 03",
+    "097 682 12 03",
+    "079 682 11 03",
+    "097 862 11 03"
+   ]
+  },
+  {
+   "id": "e51",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "dobre",
+    "duzhe",
+    "diakuiu",
+    "bud_laska",
+    "tak"
+   ],
+   "difficulty": 1,
+   "prompt": "Noch einmal, bitte.",
+   "options": [
+    "Ще раз, будь ла́ска.",
+    "Ще раз, дя́кую.",
+    "Так, будь ла́ска.",
+    "Ду́же до́бре, дя́кую."
+   ]
+  },
+  {
+   "id": "e52",
+   "type": "true_false",
+   "vocab": [
+    "nul",
+    "odyn",
+    "try",
+    "chotyry",
+    "shist",
+    "sim",
+    "visim",
+    "deviat",
+    "piatnadtsiat",
+    "nomer_telefonu"
+   ],
+   "difficulty": 2,
+   "context_uk": "Яки́й у вас но́мер телефо́ну? – Нуль шість три, чоти́ри оди́н ві́сім, п’ятна́дцять, нуль де́в’ять.",
+   "context_de": "Wie ist Ihre Telefonnummer? – 063 418 15 09.",
+   "statement_uk": "Но́мер телефо́ну: нуль шість три, чоти́ри оди́н ві́сім, п’ятна́дцять, нуль сім.",
+   "answer": false,
+   "explanation_de": "Am Ende steht нуль де́в’ять (09), nicht нуль сім (07)."
+  },
+  {
+   "id": "e53",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "skilky",
+    "nomer_telefonu"
+   ],
+   "difficulty": 2,
+   "prompt": "Wie ist deine Telefonnummer? (zu Taras)",
+   "answer": "Яки́й у те́бе но́мер телефо́ну?",
+   "accept": [
+    "У те́бе яки́й но́мер телефо́ну?"
+   ],
+   "distractors": [
+    "вас",
+    "тобі́",
+    "скі́льки"
+   ]
+  },
+  {
+   "id": "e54",
+   "type": "listening",
+   "mode": "build",
+   "vocab": [
+    "skilky",
+    "nomer_telefonu"
+   ],
+   "difficulty": 2,
+   "audio_uk": "Яки́й у вас но́мер телефо́ну?",
+   "answer": "Яки́й у вас но́мер телефо́ну?",
+   "distractors": [
+    "те́бе",
+    "вам",
+    "скі́льки"
+   ]
+  },
+  {
+   "id": "e55",
+   "type": "build_sentence",
+   "dir": "de-uk",
+   "vocab": [
+    "diakuiu",
+    "bud_laska",
+    "tak",
+    "ya",
+    "ty",
+    "ne"
+   ],
+   "difficulty": 2,
+   "prompt": "Noch einmal, bitte. Ich verstehe nicht.",
+   "answer": "Ще раз, будь ла́ска. Я не розумі́ю.",
+   "accept": [
+    "Я не розумі́ю. Ще раз, будь ла́ска."
+   ],
+   "distractors": [
+    "так",
+    "дя́кую",
+    "ти"
+   ]
+  },
+  {
+   "id": "e56",
+   "type": "speak",
+   "vocab": [
+    "nomer_telefonu"
+   ],
+   "difficulty": 2,
+   "uk": "Яки́й у те́бе но́мер телефо́ну?",
+   "de": "Wie ist deine Telefonnummer?"
+  },
+  {
+   "id": "e57",
+   "type": "speak",
+   "vocab": [
+    "bud_laska"
+   ],
+   "difficulty": 1,
+   "uk": "Ще раз, будь ла́ска.",
+   "de": "Noch einmal, bitte."
+  },
+  {
+   "id": "e58",
+   "type": "chat",
+   "vocab": [
+    "nul",
+    "odyn",
+    "dva",
+    "try",
+    "chotyry",
+    "piat",
+    "shist",
+    "sim",
+    "visim",
+    "deviat",
+    "odynadtsiat",
+    "piatnadtsiat",
+    "simnadtsiat",
+    "skilky",
+    "rik",
+    "meni_rokiv",
+    "nomer_telefonu",
+    "do_pobachennia",
+    "diakuiu",
+    "bud_laska",
+    "tak"
+   ],
+   "difficulty": 3,
+   "scenario_de": "Im Büro: Oksana möchte die Telefonnummer austauschen (ihr siezt euch noch). Deine Nummer: 063 418 15 09. Ziel: die eigene Nummer nennen, Oksanas Nummer erfragen, um Wiederholung bitten und zur Kontrolle wiederholen.",
+   "partner": {
+    "name": "Окса́на",
+    "emoji": "👩‍💼"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Яки́й у вас но́мер телефо́ну?",
+     "de": "Wie ist Ihre Telefonnummer?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Нуль шість три, чоти́ри оди́н ві́сім, п’ятна́дцять, нуль де́в’ять.",
+       "de": "063 418 15 09."
+      },
+      {
+       "uk": "Нуль шість три, чоти́ри оди́н ві́сім, п’ять, нуль де́в’ять.",
+       "de": "063 418 5 09.",
+       "feedback_de": "п’ять = 5; in der Nummer steht 15 = п’ятна́дцять."
+      },
+      {
+       "uk": "Мені́ п’ятна́дцять ро́ків.",
+       "de": "Ich bin fünfzehn Jahre alt.",
+       "feedback_de": "Das ist ein Alter, keine Telefonnummer."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Дя́кую!",
+     "de": "Danke!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "А яки́й у вас но́мер?",
+       "de": "Und wie ist Ihre Nummer?"
+      },
+      {
+       "uk": "А яки́й у те́бе но́мер?",
+       "de": "Und wie ist deine Nummer?",
+       "feedback_de": "Oksana wird noch gesiezt: у вас."
+      },
+      {
+       "uk": "А скі́льки вам ро́ків?",
+       "de": "Und wie alt sind Sie?",
+       "feedback_de": "Ziel ist Oksanas Nummer – und Erwachsene fragt man eher nicht nach dem Alter."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Нуль де́в’ять сім, шість ві́сім два, одина́дцять, нуль три.",
+     "de": "097 682 11 03."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Ще раз, будь ла́ска.",
+       "de": "Noch einmal, bitte."
+      },
+      {
+       "uk": "Ще раз, дя́кую.",
+       "de": "Noch einmal, danke.",
+       "feedback_de": "Für eine Bitte: будь ла́ска (bitte), nicht дя́кую (danke)."
+      },
+      {
+       "uk": "До поба́чення!",
+       "de": "Auf Wiedersehen!",
+       "feedback_de": "Die Nummer ist noch nicht verstanden – erst um Wiederholung bitten."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Нуль де́в’ять сім, шість ві́сім два, одина́дцять, нуль три.",
+     "de": "097 682 11 03."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Нуль де́в’ять сім, шість ві́сім два, одина́дцять, нуль три. Пра́вильно?",
+       "de": "097 682 11 03. Richtig?"
+      },
+      {
+       "uk": "Нуль де́в’ять сім, шість ві́сім два, сімна́дцять, нуль три. Пра́вильно?",
+       "de": "097 682 17 03. Richtig?",
+       "feedback_de": "Oksana sagt одина́дцять (11), nicht сімна́дцять (17)."
+      },
+      {
+       "uk": "Нуль сім де́в’ять, шість ві́сім два, одина́дцять, нуль три. Пра́вильно?",
+       "de": "079 682 11 03. Richtig?",
+       "feedback_de": "Der Anfang ist нуль де́в’ять сім (097)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Так, пра́вильно! Дя́кую.",
+     "de": "Ja, richtig! Danke."
+    }
+   ]
+  },
+  {
+   "id": "e59",
+   "type": "chat",
+   "vocab": [
+    "nul",
+    "odyn",
+    "dva",
+    "try",
+    "chotyry",
+    "shist",
+    "sim",
+    "visim",
+    "deviat",
+    "desiat",
+    "dvanadtsiat",
+    "piatnadtsiat",
+    "dvadtsiat",
+    "skilky",
+    "rik",
+    "skilky_tobi_rokiv",
+    "nomer_telefonu",
+    "pryvit",
+    "na_dobranich",
+    "buvai",
+    "tak"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Im Café neben dem Büro: Taras (duzt alle) möchte deine Nummer. Deine Nummer: 063 418 15 09. Ziel: Nummern tauschen und Taras’ Nummer zur Kontrolle wiederholen.",
+   "partner": {
+    "name": "Тара́с",
+    "emoji": "🧑"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Приві́т! Яки́й у те́бе но́мер телефо́ну?",
+     "de": "Hallo! Wie ist deine Telefonnummer?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Нуль шість три, чоти́ри оди́н ві́сім, п’ятна́дцять, нуль де́в’ять. А у те́бе?",
+       "de": "063 418 15 09. Und deine?"
+      },
+      {
+       "uk": "Нуль шість три, чоти́ри оди́н ві́сім, п’ятна́дцять, нуль де́в’ять. А у вас?",
+       "de": "063 418 15 09. Und Ihre?",
+       "feedback_de": "Taras duzt – zurück also: А у те́бе?"
+      },
+      {
+       "uk": "Нуль шість три, чоти́ри оди́н ві́сім, п’ятна́дцять, нуль де́в’ять. А тобі́?",
+       "de": "063 418 15 09. Und (wie alt bist) du?",
+       "feedback_de": "А тобі́? fragt nach dem Alter (Скі́льки тобі́ ро́ків?). Nach der Nummer: А у те́бе?"
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Нуль шість сім, два ві́сім ві́сім, де́сять, два́дцять.",
+     "de": "067 288 10 20."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Нуль шість сім, два ві́сім ві́сім, де́сять, два́дцять?",
+       "de": "067 288 10 20?"
+      },
+      {
+       "uk": "Нуль шість сім, два ві́сім ві́сім, де́в’ять, два́дцять?",
+       "de": "067 288 9 20?",
+       "feedback_de": "Taras sagt де́сять (10), nicht де́в’ять (9)."
+      },
+      {
+       "uk": "Нуль шість сім, два ві́сім ві́сім, де́сять, двана́дцять?",
+       "de": "067 288 10 12?",
+       "feedback_de": "Taras sagt два́дцять (20), nicht двана́дцять (12)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Так! Бува́й!",
+     "de": "Ja! Tschüss!"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Бува́й!",
+       "de": "Tschüss!"
+      },
+      {
+       "uk": "На добра́ніч!",
+       "de": "Gute Nacht!",
+       "feedback_de": "На добра́ніч passt nur spät abends; im Café tagsüber: Бува́й!"
+      },
+      {
+       "uk": "Приві́т!",
+       "de": "Hallo!",
+       "feedback_de": "Приві́т ist eine Begrüßung, kein Abschied."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e60",
+   "type": "chat",
+   "vocab": [
+    "odyn",
+    "dva",
+    "try",
+    "chotyry",
+    "piat",
+    "shist",
+    "sim",
+    "visim",
+    "desiat",
+    "trynadtsiat",
+    "simnadtsiat",
+    "skilky",
+    "rik",
+    "skilky_tobi_rokiv",
+    "meni_rokiv",
+    "pryvit",
+    "tak",
+    "ya",
+    "ty"
+   ],
+   "difficulty": 2,
+   "scenario_de": "Oksanas Tochter Sofija ist heute im Büro. Ziel: sie nach ihrem Alter fragen (Kinder duzt man) und mit ihr zählen und rechnen.",
+   "partner": {
+    "name": "Софі́я",
+    "emoji": "👧"
+   },
+   "turns": [
+    {
+     "who": "bot",
+     "uk": "Приві́т! Я Софі́я.",
+     "de": "Hallo! Ich bin Sofija."
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Приві́т! Скі́льки тобі́ ро́ків?",
+       "de": "Hallo! Wie alt bist du?"
+      },
+      {
+       "uk": "Приві́т! Скі́льки вам ро́ків?",
+       "de": "Hallo! Wie alt sind Sie?",
+       "feedback_de": "Kinder spricht man mit ти an: Скі́льки тобі́ ро́ків?"
+      },
+      {
+       "uk": "Приві́т! Скі́льки йому́ ро́ків?",
+       "de": "Hallo! Wie alt ist er?",
+       "feedback_de": "йому́ = er; Sofija selbst fragt man mit тобі́."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Мені́ сім ро́ків! Оди́н, два, три, чоти́ри, п’ять, шість …",
+     "de": "Ich bin sieben Jahre alt! Eins, zwei, drei, vier, fünf, sechs …"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Сім!",
+       "de": "Sieben!"
+      },
+      {
+       "uk": "Сімна́дцять!",
+       "de": "Siebzehn!",
+       "feedback_de": "Nach шість (6) kommt сім (7), nicht сімна́дцять (17)."
+      },
+      {
+       "uk": "Ві́сім!",
+       "de": "Acht!",
+       "feedback_de": "ві́сім (8) kommt erst nach сім (7)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Пра́вильно! А сім плюс три?",
+     "de": "Richtig! Und sieben plus drei?"
+    },
+    {
+     "who": "me",
+     "options": [
+      {
+       "uk": "Де́сять.",
+       "de": "Zehn."
+      },
+      {
+       "uk": "Трина́дцять.",
+       "de": "Dreizehn.",
+       "feedback_de": "7 + 3 = 10 (де́сять), nicht 13."
+      },
+      {
+       "uk": "Чоти́ри.",
+       "de": "Vier.",
+       "feedback_de": "Das wäre сім мі́нус три (7 − 3)."
+      }
+     ]
+    },
+    {
+     "who": "bot",
+     "uk": "Так! Молоде́ць!",
+     "de": "Ja! Gut gemacht!"
+    }
+   ]
+  },
+  {
+   "id": "e61",
+   "type": "order_dialog",
+   "vocab": [
+    "nul",
+    "piat",
+    "sim",
+    "dvanadtsiat",
+    "shistnadtsiat",
+    "dvadtsiat",
+    "nomer_telefonu",
+    "diakuiu",
+    "ni"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Яки́й у вас но́мер телефо́ну?",
+     "de": "Wie ist Ihre Telefonnummer?"
+    },
+    {
+     "uk": "Нуль п’ять нуль, сім сім сім, шістна́дцять, два́дцять.",
+     "de": "050 777 16 20."
+    },
+    {
+     "uk": "Нуль п’ять нуль, сім сім сім, шістна́дцять, двана́дцять?",
+     "de": "050 777 16 12?"
+    },
+    {
+     "uk": "Ні, шістна́дцять, два́дцять.",
+     "de": "Nein, 16, 20."
+    },
+    {
+     "uk": "Дя́кую!",
+     "de": "Danke!"
+    }
+   ]
+  },
+  {
+   "id": "e62",
+   "type": "order_dialog",
+   "vocab": [
+    "dva",
+    "desiat",
+    "skilky",
+    "rik",
+    "tse"
+   ],
+   "difficulty": 1,
+   "lines": [
+    {
+     "uk": "Це Богда́н, а це Ле́ся.",
+     "de": "Das ist Bohdan, und das ist Lessja."
+    },
+    {
+     "uk": "Скі́льки йому́ ро́ків?",
+     "de": "Wie alt ist er?"
+    },
+    {
+     "uk": "Йому́ де́сять ро́ків.",
+     "de": "Er ist zehn Jahre alt."
+    },
+    {
+     "uk": "А їй?",
+     "de": "Und sie?"
+    },
+    {
+     "uk": "Їй два ро́ки.",
+     "de": "Sie ist zwei Jahre alt."
+    }
+   ]
+  },
+  {
+   "id": "e63",
+   "type": "order_dialog",
+   "vocab": [
+    "sim",
+    "visim",
+    "skilky",
+    "rik",
+    "skilky_tobi_rokiv",
+    "meni_rokiv",
+    "pryvit",
+    "mene_zvaty"
+   ],
+   "difficulty": 2,
+   "lines": [
+    {
+     "uk": "Приві́т! Мене́ зва́ти Софі́я.",
+     "de": "Hallo! Ich heiße Sofija."
+    },
+    {
+     "uk": "Приві́т! Мене́ зва́ти Іва́н. Скі́льки тобі́ ро́ків?",
+     "de": "Hallo! Ich heiße Iwan. Wie alt bist du?"
+    },
+    {
+     "uk": "Мені́ сім ро́ків. А тобі́?",
+     "de": "Ich bin sieben Jahre alt. Und du?"
+    },
+    {
+     "uk": "Мені́ ві́сім.",
+     "de": "Ich bin acht."
+    }
+   ]
   }
  ]
 }

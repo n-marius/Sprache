@@ -19,7 +19,7 @@ export const CATEGORIES = [
 export const CATEGORY_META = {
   'Fehler im Ukrainischen': { emoji: '🇺🇦', color: 'var(--blue)', hint: 'Grammatik, Wortwahl, Russismus' },
   'Übersetzung falsch': { emoji: '🔤', color: 'var(--purple)', hint: 'Deutsch passt nicht' },
-  'Betonung falsch': { emoji: '´', color: 'var(--pink)', hint: 'Akzent an falscher Stelle' },
+  'Betonung falsch': { emoji: 'а́', color: 'var(--pink)', hint: 'Akzent an falscher Stelle' },
   'Audio/Aussprache': { emoji: '🔊', color: 'var(--orange)', hint: 'Stimme, Tempo, Aussprache' },
   'Lösung wird falsch bewertet': { emoji: '⚖️', color: 'var(--red)', hint: 'Richtige Antwort abgelehnt' },
   'Aufgabe unklar': { emoji: '❓', color: 'var(--yellow)', hint: 'Anweisung missverständlich' },
