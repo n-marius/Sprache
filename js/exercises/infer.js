@@ -1,7 +1,7 @@
 // Aufgabentyp „infer“ (Pretesting / Erschließen vor dem Lernen): Ein neues Wort steht in einem Satz; man rät die
 // Bedeutung aus dem Kontext, bevor es eingeführt wird. Falsches Raten ist erwünscht (wird nicht ins SRS gebucht).
 // ex: { sentence_uk, sentence_de, target_keys:[normalisierte Wörter], options:[de… (Index 0 richtig)], noSrs:true }
-import { h, ukText, deText, singleChoice, shuffledOptions } from './common.js';
+import { h, ukText, deText, singleChoice, shuffledOptions, uiLabel } from './common.js';
 
 export const selfChecking = false;
 export const instructionKey = () => 'infer';
@@ -16,7 +16,7 @@ export function render(ex, ctx) {
   const items = shuffledOptions(ex.options || [], ctx);
   const choice = singleChoice({ items, cls: 'exd-mc', renderItem: it => deText(it.value), onSelect: () => ctx.setReady(true) });
   const el = h('div', { class: 'inf' },
-    h('div', { class: 'card inf-card' }, sentence, h('p', { class: 'inf-tip t-foot' }, 'Was bedeutet das markierte Wort? Rate aus dem Zusammenhang – Fehler sind hier ausdrücklich erlaubt.')),
+    h('div', { class: 'card inf-card' }, sentence, h('p', { class: 'inf-tip t-foot' }, uiLabel('infer_tip'))),
     choice.el);
   return {
     el,

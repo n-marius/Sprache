@@ -7,6 +7,7 @@ import { startLesson } from '../engine/flow.js';
 import { MASTERY_LABELS } from '../engine/progress.js';
 import { ringSvg, sty } from './today.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+import { uiN } from '../ui-text-g1.js';
 
 function fmtTime(ms) {
   const s = Math.max(0, Math.round((ms || 0) / 1000));
@@ -38,16 +39,20 @@ export function render(params, app) {
     tile('time', 'var(--blue)', 'var(--blue-ink)', [icon('clock'), h('span', fmtTime(s.durationMs))]),
     tile('new_words', 'var(--orange)', 'var(--orange-edge)', [icon('sparkles'), newEl]));
 
+  const join = (a, b) => (b ? { uk: `${a.uk} · ${b.uk}`, de: `${a.de} · ${b.de}` } : a);
   const sub = s.total
-    ? `${s.correct} von ${s.total} Aufgaben richtig${s.reviewedWords ? ` · ${s.reviewedWords} Wörter wiederholt` : ''}`
-    : 'Session beendet';
+    ? join(uiN('correct_of', { a: s.correct, b: s.total }), s.reviewedWords ? uiN('words_reviewed', { a: s.reviewedWords }) : null)
+    : uiT('session_over');
 
   // Meisterschaft vorher → nachher
   const mb = s.masteryLevelBefore, ma = s.masteryLevelAfter;
   const mastery = h('div', { class: 'v-mastery', style: sty({ '--before': `${Math.round((s.masteryBefore || 0) * 100)}%`, '--after': `${Math.round((s.masteryAfter || 0) * 100)}%` }) },
     h('span', { class: 'v-mastery-before' }), h('span', { class: 'v-mastery-after' }));
+  const lvl = n => uiN('level_n', { a: n });
   const levelText = mb && ma
-    ? (ma.level > mb.level ? `${MASTERY_LABELS[mb.level]} → ${MASTERY_LABELS[ma.level]}` : `Stufe ${ma.level} · ${ma.label}`)
+    ? (ma.level > mb.level
+      ? { uk: `${lvl(mb.level).uk} → ${ma.level}`, de: `${MASTERY_LABELS[mb.level]} → ${MASTERY_LABELS[ma.level]}` }
+      : { uk: lvl(ma.level).uk, de: `${lvl(ma.level).de} · ${ma.label}` })
     : null;
 
   const goal = s.dayGoal || { done: 0, goal: 15, met: false };
@@ -58,26 +63,26 @@ export function render(params, app) {
   if (isLesson) rows.push(h('div', { class: 'v-sum-row' },
     h('span', { class: 'v-cta-glyph emoji', style: sty({ '--theme-c': anim.themeColor?.(theme) || 'var(--green)', width: '52px', height: '52px', fontSize: '28px', borderRadius: '16px' }) }, anim.themeGlyph(theme)),
     h('div', { class: 'v-sum-row-main' },
-      h('div', { class: 'v-sum-row-title' }, uiLabel('mastery', { layout: 'inline' }), levelText ? h('span', { class: 't-2 t-foot' }, ` · ${levelText}`) : null),
+      h('div', { class: 'v-sum-row-title' }, uiLabel('mastery', { layout: 'inline' }), levelText ? h('span', { class: 't-2 t-foot' }, ' · ', uiLabel(levelText, { layout: 'inline' })) : null),
       h('div', { class: 'v-sum-row-sub' }, `${Math.round((s.masteryBefore || 0) * 100)} % → ${Math.round((s.masteryAfter || 0) * 100)} %`),
       mastery)));
   rows.push(h('div', { class: 'v-sum-row' },
     ringSvg(goal.goal ? goal.done / goal.goal : 0, { size: 52, stroke: 7 }),
     h('div', { class: 'v-sum-row-main' },
       h('div', { class: 'v-sum-row-title' }, uiLabel(goal.met ? 'goal_met' : 'daily_goal', { layout: 'inline' })),
-      h('div', { class: 'v-sum-row-sub num' }, `${goal.done} / ${goal.goal} Aufgaben heute`))));
+      h('div', { class: 'v-sum-row-sub num' }, uiLabel(uiN('tasks_today', { a: goal.done, b: goal.goal }), { layout: 'inline' })))));
   rows.push(h('div', { class: 'v-sum-row' },
     flame,
     h('div', { class: 'v-sum-row-main' },
-      h('div', { class: 'v-sum-row-title num' }, streak.current === 1 ? '1 Tag in Folge' : `${streak.current} Tage in Folge`),
-      h('div', { class: 'v-sum-row-sub' }, streak.extended ? 'Serie verlängert – bis morgen!' : 'Heute schon gezählt'))));
+      h('div', { class: 'v-sum-row-title num' }, uiLabel(uiN('streak_days_n', { a: streak.current || 0 }), { layout: 'inline' })),
+      h('div', { class: 'v-sum-row-sub' }, uiLabel(streak.extended ? 'streak_extended' : 'streak_counted', { layout: 'inline' })))));
 
   const words = (s.newWords || []).filter(Boolean);
   const wordList = words.length ? listGroup({
     header: words.length === 1 ? uiLabel(app.t('new_word'), { layout: 'inline' }) : uiLabel({ uk: `${uiT('new_words').uk} · ${words.length}`, de: `${words.length} neue Wörter` }, { layout: 'inline' }),
     rows: words.map(v => ({
       title: ukText(v.uk, { cls: 'row-title' }),
-      subtitle: v.de,
+      subtitle: deText(v.de || '', { cls: 'row-subtitle' }),
       icon: v.emoji ? { emoji: v.emoji, color: 'var(--surface-2)' } : null,
       accessory: speakerButton(v.uk, { size: 's' }),
     })),
@@ -93,7 +98,8 @@ export function render(params, app) {
       stage,
       h('div', { class: 'v-sum-head' },
         ukText(head.uk, { cls: 'v-sum-title', tag: 'h1' }),
-        h('p', { class: 'v-sum-sub' }, `${head.de} ${sub}`)),
+        head.de ? h('p', { class: 'v-sum-sub ui-de', lang: 'de' }, head.de) : null,
+        h('p', { class: 'v-sum-sub' }, uiLabel(sub))),
       tiles,
       h('section', { class: 'card v-sum-card' }, rows),
       wordList ? h('div', { class: 'v-sum-words' }, wordList) : null,

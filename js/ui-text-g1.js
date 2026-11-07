@@ -42,7 +42,7 @@ export const UI_G1 = {
   plan_today_n: { uk: 'План на сього́дні: {a}', de: 'Soll heute: {a}' },
   until_date: { uk: 'до {date}', de: 'bis {date}' },
   per_week: { uk: '{a} {lessons@a} на ти́ждень', de: '{a} Lektionen/Woche' },
-  recommended: { uk: 'Рекомендо́вано', de: 'empfohlen' },
+  recommended: { uk: 'рекомендо́вано', de: 'empfohlen' },
   strong_n: { uk: 'Наді́йно: {a}', de: '{a} sicher' },
   last_7_days: { uk: 'Оста́нні 7 днів', de: 'letzte 7 Tage' },
   to_review: { uk: 'Тре́ба повтори́ти', de: 'zum Wiederholen' },
@@ -77,7 +77,7 @@ export const UI_G1 = {
 
   // ---------- Zusammenfassung ----------
   correct_of: { uk: '{a} з {b} {tasks@b:gen} пра́вильно', de: '{a} von {b} Aufgaben richtig' },
-  words_reviewed: { uk: 'Повто́рено: {a} {words@a}', de: '{a} {Wort|Wörter@a} wiederholt' },
+  words_reviewed: { uk: 'повто́рено {a} {words@a}', de: '{a} {Wort|Wörter@a} wiederholt' },
   session_over: { uk: 'Се́сію заве́ршено', de: 'Session beendet' },
   tasks_today: { uk: '{a} / {b} {tasks@b} сього́дні', de: '{a} / {b} Aufgaben heute' },
   streak_extended: { uk: 'Се́рія трива́є – до за́втра!', de: 'Serie verlängert – bis morgen!' },

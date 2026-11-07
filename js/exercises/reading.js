@@ -1,5 +1,5 @@
 // Aufgabentyp „reading“ – Lesetext mit Verständnisfragen (mc / tf). Prüfung über check().
-import { h, ukText, deText, singleChoice, shuffledOptions, hintDe, revealToggle } from './common.js';
+import { h, ukText, deText, singleChoice, shuffledOptions, hintDe, revealToggle, uiLabel, holdLabel } from './common.js';
 import { anim } from '../ui/anim.js';
 
 export const selfChecking = false;
@@ -50,8 +50,8 @@ export function render(ex, ctx) {
   if (gist) {
     qWrap.hidden = true;
     gate = h('div', { class: 'exd-read-gate' },
-      deText('Lies den ganzen Text. Du musst nicht jedes Wort kennen – erschließe den Sinn aus dem Zusammenhang. Unbekanntes kannst du antippen.', { tag: 'p', cls: 'exd-read-tip' }),
-      h('button', { type: 'button', class: 'btn btn-blue btn-block', on: { click: () => { gate.remove(); qWrap.hidden = false; try { qWrap.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch {} } } }, 'Gelesen – zu den Fragen'));
+      h('p', { class: 'exd-read-tip' }, uiLabel('read_whole')),
+      h('button', { type: 'button', class: 'btn btn-blue btn-block', on: { click: () => { gate.remove(); qWrap.hidden = false; try { qWrap.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch {} } } }, holdLabel('to_questions')));
   }
   const el = h('div', { class: ['exd-read', gist && 'is-gist'] }, card, gate, qWrap);
 

@@ -1,5 +1,5 @@
 // Lückentext: Lücken {{…}} als Slots im Fließtext, Optionen der aktiven Lücke als Bausteine darunter.
-import { h, ukText, deText, hintDe, revealToggle, shuffledOptions, keyHandler, digitOf, isolate } from './common.js';
+import { h, ukText, deText, hintDe, revealToggle, shuffledOptions, keyHandler, digitOf, isolate, uiLabel, uiT } from './common.js';
 import { normalizeWord } from '../lib/uk-text.js';
 import { haptic } from '../ui/haptics.js';
 import { anim } from '../ui/anim.js';
@@ -85,7 +85,9 @@ export function render(ex, ctx) {
     });
     optsEl.replaceChildren();
     if (active >= 0 && !locked) {
-      optsLabel.textContent = gaps.length > 1 ? `Lücke ${active + 1} von ${gaps.length}` : '';
+      optsLabel.replaceChildren(gaps.length > 1 && active >= 0
+        ? uiLabel({ uk: `${uiT('gap_n').uk} ${active + 1} ${uiT('of').uk} ${gaps.length}`, de: `${uiT('gap_n').de} ${active + 1} von ${gaps.length}` }, { layout: 'inline' })
+        : '');
       optsLabel.hidden = gaps.length < 2;
       opts[active].forEach((o, k) => {
         const picked = fills[active] === o.value;

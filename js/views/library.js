@@ -1,12 +1,15 @@
 // Wissen (#/library): Einzelthemen nach Kategorie (Standard) oder Gesamterklärungen je Lektion.
 // Freigeschaltet ist, was zu erreichten Lektionen gehört; Gesperrtes bleibt sichtbar.
-import { h, ukText, icon } from '../ui/dom.js';
+import { h, ukText, deText, icon } from '../ui/dom.js';
 import { page, listGroup, segmented } from '../ui/shell.js';
 import { anim } from '../ui/anim.js';
 import { listMined } from '../services/mining.js';
 import { CATEGORIES, allConcepts, lessonOpen } from '../concepts.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
 import { uiF } from '../ui-text-g2.js';
+
+/** Zeilen-Untertitel: Ukrainisch, darunter dezent Deutsch (langer Druck übersetzt). */
+const subLabel = t => { const el = holdLabel(t, { cls: 'row-subtitle' }); el.style.cssText = 'display:flex;flex-direction:column;align-items:flex-start'; return el; };
 
 const badgeUk = (key, cls = '') => h('span', { class: ['badge', cls], title: uiT(key).de }, ukText(uiT(key).uk, { hold: true }));
 
@@ -31,7 +34,7 @@ export function render(params, app) {
         header: h('span', { class: 'lib-cat' }, `${cat.emoji} `, uiLabel({ uk: cat.uk, de: cat.label }, { layout: 'inline' })),
         rows: list.map(c => ({
           icon: { emoji: anim.themeGlyph(c.meta.theme), color: c.open ? anim.themeColor(c.meta.theme) : 'var(--surface-3)' },
-          title: h('span', { class: 'row-title' }, c.title_de),
+          title: deText(c.title_de, { cls: 'row-title' }),
           subtitle: h('span', { class: 'row-subtitle lib-sub' }, ukText(`${uiF('lesson_n', { n: c.meta.index + 1 }).uk} · ${c.meta.title_uk}`, { hold: true })),
           detail: statusBadge(c.open, false, !!st.lessons[c.lessonId]?.explainedAt),
           accessory: c.open ? 'chevron' : null,
@@ -54,7 +57,7 @@ export function render(params, app) {
         if (term && !hay.includes(term)) continue;
         rows.push({
           icon: { emoji: anim.themeGlyph(meta.theme), color: open ? anim.themeColor(meta.theme) : 'var(--surface-3)' },
-          title: h('span', { class: 'row-title' }, lesson.explanation?.title_de || meta.title_de),
+          title: deText(lesson.explanation?.title_de || meta.title_de, { cls: 'row-title' }),
           subtitle: h('span', { class: 'row-subtitle lib-sub' }, ukText(`${uiF('lesson_n', { n: meta.index + 1 }).uk} · ${meta.title_uk}`, { hold: true })),
           detail: statusBadge(open, false, !!st.lessons[meta.id]?.explainedAt),
           accessory: open ? 'chevron' : null,
@@ -85,7 +88,7 @@ export function render(params, app) {
     header: uiLabel('collection', { layout: 'inline' }),
     rows: [{
       icon: { name: 'sparkles', color: 'var(--purple)' },
-      title: holdLabel('my_sentences', { cls: 'row-title' }), subtitle: holdLabel(uiF('mined_sub'), { cls: 'row-subtitle', layout: 'inline' }),
+      title: holdLabel('my_sentences', { cls: 'row-title' }), subtitle: subLabel(uiF('mined_sub')),
       detail: String(mined.length), accessory: 'chevron', href: '#/trainer',
     }],
   });

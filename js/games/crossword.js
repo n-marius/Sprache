@@ -3,13 +3,15 @@ import { h, ukText, deText, icon } from '../ui/dom.js';
 import { anim } from '../ui/anim.js';
 import { haptic } from '../ui/haptics.js';
 import { buildCrossword, toAnswer } from './crossword-gen.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+import { uiF } from '../ui-text-g2.js';
 
 const ALPHABET = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюя';
 
 export function crossword(app, words, { onDone } = {}) {
   const pool = words.map(v => ({ answer: toAnswer(v.uk), uk: v.uk, de: v.de, emoji: v.emoji })).filter(w => w.answer && w.answer.length >= 2 && w.answer.length <= 9);
   const cw = buildCrossword(pool, { max: 6 });
-  if (!cw || cw.slots.length < 3) return h('div', { class: 'empty' }, h('p', 'Für ein Kreuzworträtsel brauchst du noch etwas mehr Wortschatz.'));
+  if (!cw || cw.slots.length < 3) return h('div', { class: 'empty' }, h('p', uiLabel(uiF('cw_need_words'))));
 
   const fill = new Map();          // "x,y" → Buchstabe
   const solved = new Set();
@@ -35,7 +37,7 @@ export function crossword(app, words, { onDone } = {}) {
     const list = cw.slots.filter(s => s.dir === dir).sort((a, b) => a.num - b.num);
     if (!list.length) return null;
     return h('section', { class: 'cw-clues' },
-      h('h3', { class: 'cw-clues-h' }, ukText(dir === 'h' ? 'По горизонта́лі' : 'По вертика́лі'), deText(dir === 'h' ? ' waagrecht' : ' senkrecht')),
+      h('h3', { class: 'cw-clues-h' }, uiLabel(dir === 'h' ? 'cw_across' : 'cw_down', { layout: 'inline' })),
       list.map(s => {
         const el = h('button', { type: 'button', class: 'cw-clue', on: { click: () => select(s) } },
           h('span', { class: 'cw-clue-num' }, String(s.num)),
@@ -49,8 +51,8 @@ export function crossword(app, words, { onDone } = {}) {
 
   const current = h('div', { class: 'cw-current' });
   const tiles = h('div', { class: 'cw-tiles' });
-  const back = h('button', { type: 'button', class: 'cw-tile cw-back', 'aria-label': 'Löschen', on: { click: erase } }, '⌫');
-  const hintBtn = h('button', { type: 'button', class: 'btn btn-secondary cw-hint', on: { click: hint } }, icon('bulb'), 'Buchstabe zeigen');
+  const back = h('button', { type: 'button', class: 'cw-tile cw-back', 'aria-label': uiT('delete').de, on: { click: erase } }, '⌫');
+  const hintBtn = h('button', { type: 'button', class: 'btn btn-secondary cw-hint', on: { click: hint } }, icon('bulb'), holdLabel(uiF('cw_show_letter')));
 
   function paint() {
     for (const [k, el] of cellEls) {
@@ -70,7 +72,7 @@ export function crossword(app, words, { onDone } = {}) {
     const extra = ALPHABET.split('').filter(l => !free.has(l)).sort(() => Math.random() - 0.5).slice(0, Math.max(3, 8 - free.size));
     tiles.replaceChildren(...[...free, ...extra].sort(() => Math.random() - 0.5)
       .map(l => h('button', { type: 'button', class: 'cw-tile no-tap', on: { click: () => type(l) } }, l)), back);
-    current.replaceChildren(...[h('span', { class: 'cw-clue-num' }, String(s.num)), s.emoji ? h('span', { class: 'cw-clue-emoji' }, s.emoji) : null, h('span', s.de)].filter(Boolean));
+    current.replaceChildren(...[h('span', { class: 'cw-clue-num' }, String(s.num)), s.emoji ? h('span', { class: 'cw-clue-emoji' }, s.emoji) : null, deText(s.de)].filter(Boolean));
     paint();
   }
 
@@ -125,9 +127,9 @@ export function crossword(app, words, { onDone } = {}) {
     hintBtn.hidden = true;
     doneBox.hidden = false;
     doneBox.replaceChildren(
-      h('div', { class: 'cw-done-title' }, ukText('Молоде́ць!'), deText(' Gut gemacht!')),
+      h('div', { class: 'cw-done-title' }, uiLabel('well_done', { layout: 'inline' })),
       h('ul', { class: 'cw-solution' }, cw.slots.sort((a, b) => a.num - b.num).map(s => h('li', ukText(s.uk), ' – ', deText(s.de)))),
-      hints ? deText(`${hints} Buchstabe(n) aufgedeckt`, { tag: 'p' }) : null);
+      hints ? h('p', uiLabel(uiF('cw_hints_used', { n: hints }), { layout: 'inline' })) : null);
     onDone?.({ words: cw.slots.length, hints });
   }
 

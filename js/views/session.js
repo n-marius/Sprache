@@ -11,12 +11,11 @@ import { makeCtx } from '../exercises/ctx.js';
 import { createLessonSession, createReviewSession } from '../engine/session.js';
 import { isListenOff, isSpeakOff, autoplayAllowed } from '../audio-mode.js';
 import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
-import { holdLabel, uiT } from '../ui/ui-label.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+import { UI_G3 } from '../ui-text-g3.js';
 
-const POS_DE = {
-  noun: 'Substantiv', verb: 'Verb', adj: 'Adjektiv', adv: 'Adverb', pron: 'Pronomen', num: 'Zahlwort',
-  prep: 'Präposition', conj: 'Konjunktion', part: 'Partikel', interj: 'Ausruf', name: 'Name', phrase: 'Wendung',
-};
+/** Wortart ukrainisch (+ Deutsch), z. B. {uk:'іме́нник', de:'Substantiv'} */
+const posUi = pos => UI_G3[`pos_${pos}`] || (pos ? { uk: '', de: String(pos) } : null);
 
 // Aufgabentypen, die Ton brauchen → Prüffunktion „gerade aus?“
 const AUDIO_TYPES = { listening: isListenOff, speak: isSpeakOff };
@@ -93,7 +92,8 @@ export function render(params, app) {
 
   function setAction(label, cls, { disabled = false, hidden = false } = {}) {
     actionBtn.className = ['btn', cls, 'btn-lg', 'btn-block', 'btn-caps', 'sess-action'].join(' ');
-    clear(actionBtn).append(ukText(label, { tap: false }));
+    // label: {uk, de} – Übersetzung per langem Druck, Deutsch dezent darunter
+    clear(actionBtn).append(holdLabel(typeof label === 'string' ? { uk: label, de: '' } : label));
     actionBtn.disabled = !!disabled;
     foot.classList.toggle('is-idle-hidden', !!hidden);
     requestAnimationFrame(syncFoot);
@@ -157,10 +157,11 @@ export function render(params, app) {
     const v = it.vocab || {};
     const head = T('new_word');
     const forms = Array.isArray(v.forms) ? v.forms.filter(f => f && f.uk) : [];
-    const meta = [POS_DE[v.pos] || v.pos, v.info].filter(Boolean).join(' · ');
+    const pos = posUi(v.pos);
+    const meta = pos || v.info ? uiLabel({ uk: pos?.uk || '', de: [pos?.de, v.info].filter(Boolean).join(' · ') }, { layout: 'inline' }) : null;
     const ex = v.example && v.example.uk ? v.example : null;
     const el = h('section', { class: 'sess-item sess-intro' },
-      h('div', { class: 'sess-kicker' }, icon('sparkles'), ukText(head.uk, { tap: false }), h('span', { class: 'sess-kicker-de' }, head.de)),
+      h('div', { class: 'sess-kicker' }, icon('sparkles'), uiLabel(head, { layout: 'inline' })),
       h('div', { class: 'card sess-intro-card' },
         v.emoji ? h('div', { class: 'sess-emoji', 'aria-hidden': 'true' }, v.emoji) : null,
         h('div', { class: 'sess-word' }, ukText(v.uk, { tap: false })),
@@ -173,13 +174,13 @@ export function render(params, app) {
           h('div', { class: 'sess-example-row' }, ukText(ex.uk, { cls: 'sess-example-uk' }), speakerButton(ex.uk, { size: 's' })),
           ex.de ? deText(ex.de, { cls: 'sess-example-de' }) : null) : null,
         forms.length ? h('div', { class: 'sess-forms' },
-          h('div', { class: 't-cap t-2' }, 'Formen'),
+          h('div', { class: 't-cap t-2' }, uiLabel('forms', { layout: 'inline' })),
           h('div', { class: 'sess-form-list' }, forms.map(f => h('span', { class: 'sess-form' },
             ukText(f.uk, { tap: false }), f.info ? h('span', { class: 'sess-form-info' }, f.info) : null)))) : null));
     if (my !== token) return;
     itemEl = el;
     phase = 'info';
-    setAction(T('continue').uk, 'btn-primary');
+    setAction(T('continue'), 'btn-primary');
     await swapStage(el);
   }
 
@@ -188,21 +189,21 @@ export function render(params, app) {
     const lesson = safeLesson(it.lessonId);
     const examples = Array.isArray(g.examples) ? g.examples.filter(x => x && x.uk) : [];
     const el = h('section', { class: 'sess-item sess-tip' },
-      h('div', { class: 'sess-kicker is-tip' }, icon('bulb'), h('span', null, 'Tipp')),
+      h('div', { class: 'sess-kicker is-tip' }, icon('bulb'), uiLabel(T('hint'), { layout: 'inline' })),
       h('div', { class: 'card sess-tip-card' },
         h('div', { class: 'sess-tip-head' },
           h('span', { class: 'sess-tip-icon', 'aria-hidden': 'true' }, icon('bulb')),
-          h('h2', { class: 'sess-tip-title' }, g.title_de || 'Merke')),
+          h('h2', { class: 'sess-tip-title' }, g.title_de || uiLabel(T('hint'), { layout: 'inline' }))),
         richText(g.body_de || '', { cls: 'sess-tip-body' }),
         examples.length ? h('ul', { class: 'sess-tip-examples' }, examples.map(x => h('li', null,
           h('div', { class: 'sess-example-row' }, ukText(x.uk, { cls: 'sess-example-uk' }), speakerButton(x.uk, { size: 's' })),
           x.de ? deText(x.de, { cls: 'sess-example-de' }) : null))) : null,
         lesson?.explanation ? h('button', { type: 'button', class: 'sess-link', on: { click: () => openExplainSheet(lesson) } },
-          icon('book'), holdLabel({ uk: uiT('explanation').uk, de: 'Erklärung öffnen' }, { layout: 'inline' })) : null));
+          icon('book'), holdLabel('open_explanation', { layout: 'inline' })) : null));
     if (my !== token) return;
     itemEl = el;
     phase = 'info';
-    setAction(T('continue').uk, 'btn-primary');
+    setAction(T('continue'), 'btn-primary');
     await swapStage(el);
   }
 
@@ -231,8 +232,8 @@ export function render(params, app) {
       h('div', { class: 'sess-ex-body' }, ctrl.el),
       AUDIO_TYPES[ex.type] ? noSoundLink() : null);
     itemEl = el;
-    if (m.selfChecking) setAction(T('check').uk, 'btn-primary', { disabled: true, hidden: true });
-    else setAction(T('check').uk, 'btn-primary', { disabled: !ready });
+    if (m.selfChecking) setAction(T('check'), 'btn-primary', { disabled: true, hidden: true });
+    else setAction(T('check'), 'btn-primary', { disabled: !ready });
     await swapStage(el);
   }
 
@@ -268,19 +269,19 @@ export function render(params, app) {
   function showFeedback(r, ex) {
     resetFeedback();
     const kind = r.skipped ? 'neutral' : r.correct ? 'ok' : 'bad';
-    const reportLink = h('button', { type: 'button', class: 'sess-fb-report', on: { click: () => report() } }, icon('flag'), 'Melden');
+    const reportLink = h('button', { type: 'button', class: 'sess-fb-report', on: { click: () => report() } }, icon('flag'), holdLabel('report_short', { de: false }));
     const hints = settings().showGermanHints !== false;
     let glyph, title, details = [];
     if (kind === 'ok') {
       glyph = h('div', { class: 'sess-fb-glyph is-ok' }, anim.checkmark({ size: 40 }));
-      title = h('div', { class: 'sess-fb-title' }, ukText(T('correct').uk, { tap: false }), hints ? h('span', { class: 'sess-fb-title-de' }, T('correct').de) : null);
+      title = h('div', { class: 'sess-fb-title' }, ukText(T('correct').uk), hints ? h('span', { class: 'sess-fb-title-de ui-de', lang: 'de' }, T('correct').de) : null);
       if (r.solution_uk) details.push(h('div', { class: 'sess-fb-sol' }, ukText(r.solution_uk), speakerButton(r.solution_uk, { size: 's' })));
       if (r.solution_de) details.push(deText(r.solution_de, { tag: 'div', cls: 'sess-fb-de' }));
       haptic('success');
       anim.correct(itemEl?.querySelector('.sess-ex-body') || itemEl);
     } else if (kind === 'bad') {
       glyph = h('div', { class: 'sess-fb-glyph is-bad' }, icon('x'));
-      title = h('div', { class: 'sess-fb-title' }, ukText(T('correct_answer').uk, { tap: false }), hints ? h('span', { class: 'sess-fb-title-de' }, T('correct_answer').de) : null);
+      title = h('div', { class: 'sess-fb-title' }, ukText(T('correct_answer').uk), hints ? h('span', { class: 'sess-fb-title-de ui-de', lang: 'de' }, T('correct_answer').de) : null);
       const deFirst = ex?.dir === 'uk-de' && r.solution_de; // Zielsprache Deutsch → deutsche Lösung hervorheben
       if (deFirst) details.push(deText(r.solution_de, { tag: 'div', cls: 'sess-fb-sol is-strong' }));
       if (r.solution_uk) details.push(h('div', { class: ['sess-fb-sol', !deFirst && 'is-strong'] }, ukText(r.solution_uk), speakerButton(r.solution_uk, { size: 's' })));
@@ -291,15 +292,15 @@ export function render(params, app) {
       anim.wrong(itemEl?.querySelector('.sess-ex-body') || itemEl);
     } else {
       glyph = h('div', { class: 'sess-fb-glyph is-neutral' }, icon('clock'));
-      title = h('div', { class: 'sess-fb-title' }, h('span', null, 'Übersprungen'));
-      details.push(h('div', { class: 'sess-fb-de' }, 'Diese Aufgabe wird nicht bewertet.'));
+      title = h('div', { class: 'sess-fb-title' }, ukText(uiT('skipped').uk), hints ? h('span', { class: 'sess-fb-title-de ui-de', lang: 'de' }, uiT('skipped').de) : null);
+      details.push(h('div', { class: 'sess-fb-de' }, uiLabel('not_graded', { layout: 'inline' })));
       if (r.solution_uk) details.push(h('div', { class: 'sess-fb-sol' }, ukText(r.solution_uk), speakerButton(r.solution_uk, { size: 's' })));
     }
     fbSlot.append(h('div', { class: 'sess-fb-row' }, glyph,
       h('div', { class: 'sess-fb-text' }, title, details,
         AUDIO_TYPES[ex?.type] && kind !== 'neutral' ? noSoundLink('is-fb') : null), reportLink));
     foot.classList.add('has-fb', `is-${kind}`);
-    setAction(T('continue').uk, kind === 'bad' ? 'btn-danger' : kind === 'ok' ? 'btn-primary' : 'btn-blue');
+    setAction(T('continue'), kind === 'bad' ? 'btn-danger' : kind === 'ok' ? 'btn-primary' : 'btn-blue');
     syncFoot();
     anim.feedbackIn(foot);
     setTimeout(() => { try { actionBtn.focus({ preventScroll: true }); } catch {} }, 60);
@@ -330,7 +331,7 @@ export function render(params, app) {
   // ---------- „Gerade kein Ton“ ----------
   function safeAutoplay() { try { return autoplayAllowed(app); } catch { return settings().autoplay !== false; } }
   function noSoundLink(cls = '') {
-    return h('button', { type: 'button', class: ['sess-nosound', cls], on: { click: () => openAudio() } }, icon('speaker'), 'Gerade kein Ton');
+    return h('button', { type: 'button', class: ['sess-nosound', cls], on: { click: () => openAudio() } }, icon('speaker'), holdLabel('no_sound_now', { layout: 'inline' }));
   }
   function openAudio() {
     try { Promise.resolve(openAudioModeSheet(app)).catch(e => console.error(e)); } catch (e) { console.error(e); }
@@ -362,7 +363,7 @@ export function render(params, app) {
 
   // ---------- Kopf-Aktionen ----------
   async function askClose() {
-    const ok = await confirmDialog({ title: 'Session beenden?', message: 'Bisherige Antworten bleiben gespeichert.', ok: 'Beenden', cancel: 'Weiterlernen', destructive: true });
+    const ok = await confirmDialog({ title: uiT('end_session_q'), message: uiT('answers_saved'), ok: uiT('end_session'), cancel: uiT('keep_learning'), destructive: true });
     if (ok && !destroyed) app.navigate('#/today');
   }
 
@@ -387,12 +388,12 @@ export function render(params, app) {
     s = sheet({
       title: uiT('explanation'),
       content: h('div', { class: 'sess-explain-sheet' },
-        h('h3', { class: 't-headline' }, e.title_de || lesson.title_de || 'Erklärung'),
+        h('h3', { class: 't-headline' }, e.title_de || lesson.title_de || uiLabel('explanation', { layout: 'inline' })),
         e.intro_de ? h('p', { class: 't-callout t-2' }, e.intro_de) : null,
-        h('p', { class: 'sess-explain-note' }, icon('info'), h('span', null, 'Die ausführliche Erklärung öffnet sich als eigene Seite – die laufende Session wird dabei beendet.'))),
+        h('p', { class: 'sess-explain-note' }, icon('info'), uiLabel('session_will_end'))),
       actions: [
-        h('button', { type: 'button', class: 'btn btn-blue btn-block', on: { click: () => { s.close(); app.navigate('#/explain/' + encodeURIComponent(lesson.id)); } } }, 'Erklärung öffnen'),
-        h('button', { type: 'button', class: 'btn btn-secondary btn-block', on: { click: () => s.close() } }, 'Hier weiterlernen'),
+        h('button', { type: 'button', class: 'btn btn-blue btn-block', on: { click: () => { s.close(); app.navigate('#/explain/' + encodeURIComponent(lesson.id)); } } }, holdLabel('open_explanation')),
+        h('button', { type: 'button', class: 'btn btn-secondary btn-block', on: { click: () => s.close() } }, holdLabel('keep_here')),
       ],
     });
   }
@@ -413,7 +414,7 @@ export function render(params, app) {
   document.addEventListener('keydown', onKey);
 
   updateProgress();
-  setAction(T('check').uk, 'btn-primary', { disabled: true });
+  setAction(T('check'), 'btn-primary', { disabled: true });
   let started = false;
   const start = () => { if (!started) { started = true; advance(); } };
 
@@ -434,7 +435,7 @@ function errorView(e) {
   return h('div', { class: 'sess sess-error' },
     h('div', { class: 'empty' },
       h('div', { class: 'empty-glyph' }, '🧭'),
-      h('p', null, 'Diese Session konnte nicht gestartet werden.'),
+      h('p', null, uiLabel('session_error')),
       h('p', { class: 't-foot t-3', style: { marginTop: '8px' } }, String(e?.message || e || '')),
-      h('a', { class: 'btn btn-secondary', href: '#/today', style: { marginTop: '16px' } }, 'Zur Startseite')));
+      h('a', { class: 'btn btn-secondary', href: '#/today', style: { marginTop: '16px' } }, holdLabel('to_start'))));
 }

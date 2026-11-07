@@ -1,7 +1,7 @@
 // Aufgabentyp „chat“ – Messenger-Dialog im iMessage-Stil (selbstprüfend).
 // Bot-Zeilen erscheinen nach kurzem Tipp-Indikator (Autoplay), bei „me“-Zügen wählt man unten eine Antwort.
 // Falsche Antwort → rot + feedback_de als Hinweis-Bubble, erneut wählbar; richtige → blaue Bubble rechts.
-import { h, ukText, deText, icon, singleChoice, shuffledOptions, reducedMotion } from './common.js';
+import { h, ukText, deText, icon, singleChoice, shuffledOptions, reducedMotion, uiLabel, uiT } from './common.js';
 import { anim } from '../ui/anim.js';
 import { haptic } from '../ui/haptics.js';
 
@@ -57,11 +57,12 @@ export function render(ex, ctx) {
   function meBubble(opt) {
     return h('div', { class: 'exd-msg is-me' },
       h('div', { class: 'exd-bubble' }, h('div', { class: 'exd-bubble-uk' }, ukText(opt.uk))),
-      h('div', { class: 'exd-delivered', 'aria-hidden': 'true' }, 'Zugestellt'));
+      h('div', { class: 'exd-delivered' }, uiLabel('delivered', { de: false })));
   }
+  /** text: deutscher Hinweis (Inhalt) | {uk, de} (Rahmentext) */
   function hintBubble(text) {
     return h('div', { class: 'exd-msg is-hint', role: 'status' },
-      h('div', { class: 'exd-hint-bubble' }, icon('bulb', { cls: 'exd-hint-icon' }), deText(text)));
+      h('div', { class: 'exd-hint-bubble' }, icon('bulb', { cls: 'exd-hint-icon' }), typeof text === 'string' ? deText(text) : uiLabel(text)));
   }
 
   async function showBot(turn) {
@@ -102,7 +103,7 @@ export function render(ex, ctx) {
             btn.setAttribute('aria-disabled', 'true');
             haptic('error');
             anim.wrong(btn);
-            const fb = it.value.feedback_de || 'Das passt hier nicht. Versuch es noch einmal.';
+            const fb = it.value.feedback_de || uiT('chat_try_again');
             push(hintBubble(fb));
             return;
           }
@@ -123,7 +124,7 @@ export function render(ex, ctx) {
           }, reducedMotion() ? 60 : 220);
         },
       });
-      reply.replaceChildren(h('div', { class: 'exd-reply-label t-foot' }, 'Deine Antwort'), choice.el);
+      reply.replaceChildren(h('div', { class: 'exd-reply-label t-foot' }, uiLabel('your_answer', { layout: 'inline' })), choice.el);
       reply.hidden = false;
       scrollToEnd(reply);
     });
@@ -174,7 +175,7 @@ export function render(ex, ctx) {
           }, reducedMotion() ? 120 : 420);
         },
       });
-      reply.replaceChildren(h('div', { class: 'exd-reply-label t-foot' }, 'Deine Antwort'), choice.el);
+      reply.replaceChildren(h('div', { class: 'exd-reply-label t-foot' }, uiLabel('your_answer', { layout: 'inline' })), choice.el);
       reply.hidden = false;
       scrollToEnd(reply);
     });
@@ -185,7 +186,7 @@ export function render(ex, ctx) {
     const notes = choices.filter(c => c.tone !== 'good' && c.note_de);
     const card = h('div', { class: ['exd-msg', 'is-hint', 'exd-outcome', `is-${node.end}`], role: 'status' },
       h('div', { class: 'exd-hint-bubble' },
-        h('strong', ok ? 'Ziel erreicht' : node.end === 'neutral' ? 'Gespräch beendet' : 'Ziel nicht erreicht'),
+        h('strong', uiLabel(ok ? 'goal_met' : node.end === 'neutral' ? 'chat_ended' : 'goal_missed', { layout: 'inline' })),
         node.summary_de ? deText(node.summary_de, { tag: 'p' }) : null,
         notes.length ? h('ul', { class: 'exd-outcome-notes' }, notes.map(c => h('li', ukText(c.uk, { tap: false }), ' – ', deText(c.note_de)))) : null));
     push(card);

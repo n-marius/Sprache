@@ -7,6 +7,9 @@ import { isListenOff } from '../audio-mode.js';
 import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
 import { uiF, countUk, pluralUk } from '../ui-text-g2.js';
 
+/** Zeilen-Untertitel: Ukrainisch, darunter dezent Deutsch (langer Druck übersetzt). */
+const subLabel = t => { const el = holdLabel(t, { cls: 'row-subtitle' }); el.style.cssText = 'display:flex;flex-direction:column;align-items:flex-start'; return el; };
+
 const DIR_OPTS = [{ value: 'de-uk', label: 'DE → UK' }, { value: 'uk-de', label: 'UK → DE' }, { value: 'mixed', label: uiT('both') }];
 const MODE_OPTS = [{ value: 'card', label: uiT('card') }, { value: 'choice', label: uiT('choice') }, { value: 'listen', label: uiT('listen') }];
 
@@ -59,7 +62,7 @@ export function render(params, app) {
     ];
     const isSel = v => (v === 'lesson' ? prefs.scope.startsWith('lesson:') : prefs.scope === v);
     const scopeRows = scopes.map(sc => ({
-      title: holdLabel(sc.title, { cls: 'row-title' }), subtitle: holdLabel(sc.subtitle, { cls: 'row-subtitle', layout: 'inline' }), icon: { name: sc.iconName, color: sc.color },
+      title: holdLabel(sc.title, { cls: 'row-title' }), subtitle: subLabel(sc.subtitle), icon: { name: sc.iconName, color: sc.color },
       detail: sc.n != null ? String(sc.n) : null,
       cls: ['tr-scope', isSel(sc.value) && 'is-selected'].filter(Boolean).join(' '),
       accessory: isSel(sc.value) ? icon('check', { cls: 'tr-check' }) : (sc.value === 'lesson' ? 'chevron' : h('span', { class: 'tr-check-space' })),
@@ -90,13 +93,13 @@ export function render(params, app) {
       h('section', { class: 'tr-section' }, h('div', { class: 'section-header' }, uiLabel('mode', { layout: 'inline' })), modeSeg,
         listenOff ? h('button', { type: 'button', class: 'tr-muted-note', on: { click: () => openAudioModeSheet(app) } }, icon('speaker'), holdLabel(uiF('listen_is_off'))) : null),
       h('div', { class: 'tr-start-wrap' }, startBtn, hint),
-      listGroup({ rows: [{ title: holdLabel('word_list', { cls: 'row-title' }), subtitle: holdLabel(uiF('word_list_sub'), { cls: 'row-subtitle', layout: 'inline' }), icon: { name: 'search', color: 'var(--blue)' }, href: '#/words', accessory: 'chevron' }] }),
+      listGroup({ rows: [{ title: holdLabel('word_list', { cls: 'row-title' }), subtitle: holdLabel(uiF('word_list_sub')), icon: { name: 'search', color: 'var(--blue)' }, href: '#/words', accessory: 'chevron' }] }),
     );
   }
 
   function pickLesson(lessons) {
     const rows = lessons.map(l => ({
-      title: holdLabel({ uk: l.title_uk || l.title_de, de: l.title_de }, { cls: 'row-title' }), subtitle: holdLabel({ uk: countUk(l.count, 'word'), de: `${l.count} Wörter` }, { cls: 'row-subtitle', layout: 'inline' }), icon: { name: 'course', color: 'var(--yellow)' },
+      title: holdLabel({ uk: l.title_uk || l.title_de, de: l.title_de }, { cls: 'row-title' }), subtitle: subLabel({ uk: countUk(l.count, 'word'), de: `${l.count} Wörter` }), icon: { name: 'course', color: 'var(--yellow)' },
       accessory: prefs.scope === 'lesson:' + l.id ? icon('check', { cls: 'tr-check' }) : null,
       onClick: () => { prefs.scope = 'lesson:' + l.id; setPrefs(app, { scope: prefs.scope }); s.close(); build(); },
     }));

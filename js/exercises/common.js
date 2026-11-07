@@ -2,6 +2,7 @@
 import { h, ukText, deText, icon } from '../ui/dom.js';
 import { tokenize, normalizeSentence, stripStress } from '../lib/uk-text.js';
 import { haptic } from '../ui/haptics.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
 
 export const reducedMotion = () => {
   try { return matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { return false; }
@@ -229,14 +230,15 @@ export function isolate(el) {
   return wrap;
 }
 
-/** Kleiner Umschalter „Übersetzung zeigen/ausblenden“. */
-export function revealToggle({ labelShow = 'Übersetzung zeigen', labelHide = 'Übersetzung ausblenden', content, open = false, cls = '' }) {
+/** Kleiner Umschalter „Übersetzung zeigen/ausblenden“ (Beschriftung: UI-Key oder {uk, de}). */
+export function revealToggle({ labelShow = 'show_translation', labelHide = 'hide_translation', content, open = false, cls = '' }) {
   const box = h('div', { class: ['ex-reveal-body', cls] }, content);
   box.hidden = !open;
-  const txt = h('span', open ? labelHide : labelShow);
+  const lbl = v => holdLabel(uiT(v), { layout: 'inline' });
+  const txt = h('span', lbl(open ? labelHide : labelShow));
   const btn = h('button', {
     type: 'button', class: 'ex-reveal-btn', 'aria-expanded': String(open),
-    on: { click: () => { box.hidden = !box.hidden; txt.textContent = box.hidden ? labelShow : labelHide; btn.setAttribute('aria-expanded', String(!box.hidden)); btn.classList.toggle('is-open', !box.hidden); } },
+    on: { click: () => { box.hidden = !box.hidden; txt.replaceChildren(lbl(box.hidden ? labelShow : labelHide)); btn.setAttribute('aria-expanded', String(!box.hidden)); btn.classList.toggle('is-open', !box.hidden); } },
   }, icon('chevron-down', { cls: 'ex-reveal-chev' }), txt);
   if (open) btn.classList.add('is-open');
   return { btn, box, el: h('div', { class: 'ex-reveal' }, btn, box) };
@@ -284,7 +286,7 @@ export function feedbackAnim(el, ok) {
   import('../ui/anim.js').then(m => (ok ? m.anim?.correct?.(el) : m.anim?.wrong?.(el))).catch(() => {});
 }
 
-export { h, ukText, deText, icon };
+export { h, ukText, deText, icon, uiLabel, holdLabel, uiT };
 
 /** Anweisungs-Key je Aufgabe (ui-strings), Fallback für Module ohne eigenes instructionKey(). */
 export function instructionKey(ex) {

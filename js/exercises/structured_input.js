@@ -1,7 +1,7 @@
 // Aufgabentyp „structured_input“ (Processing Instruction nach VanPatten): Serie kurzer Sätze, deren Bedeutung
 // nur über die Form erschließbar ist (z. B. ти- oder ви-Form → wer wird angesprochen?). Sofortiges Feedback je Satz.
 // ex: { prompt_uk, prompt_de, choices:[{id, uk, emoji}], items:[{uk, de, answer, why_de}], listen? }
-import { h, ukText, deText, icon, reducedMotion } from './common.js';
+import { h, ukText, deText, icon, reducedMotion, uiLabel } from './common.js';
 import { anim } from '../ui/anim.js';
 import { haptic } from '../ui/haptics.js';
 
@@ -89,7 +89,7 @@ export function render(ex, ctx) {
         haptic(ok ? 'success' : 'error');
         setTimeout(() => resolve(ok), reducedMotion() ? 300 : ok ? 700 : 1400);
       } } }, deText(r.de)));
-      feedback.replaceChildren(h('div', { class: 'si-reasons' }, h('div', { class: 'si-reasons-q' }, ukText('Чому́?'), deText(' Woran erkennst du es?')), btns));
+      feedback.replaceChildren(h('div', { class: 'si-reasons' }, h('div', { class: 'si-reasons-q' }, uiLabel('why_q', { layout: 'inline' })), btns));
     });
   }
 

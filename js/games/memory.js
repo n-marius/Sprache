@@ -3,6 +3,8 @@
 import { h, ukText, deText } from '../ui/dom.js';
 import { anim } from '../ui/anim.js';
 import { haptic } from '../ui/haptics.js';
+import { uiLabel } from '../ui/ui-label.js';
+import { uiF, pluralUk } from '../ui-text-g2.js';
 
 export function memory(app, pairs, { onDone } = {}) {
   const cards = pairs.flatMap((p, i) => [
@@ -20,7 +22,7 @@ export function memory(app, pairs, { onDone } = {}) {
   });
   const status = h('div', { class: 'mm-status t-foot' });
   const doneBox = h('div', { class: 'mm-done', hidden: true });
-  const upd = () => { status.textContent = `${found} / ${pairs.length} Paare · ${moves} Züge`; };
+  const upd = () => { status.replaceChildren(uiLabel(uiF('mm_status', { f: found, n: pairs.length, P: pluralUk(pairs.length, 'pair'), m: moves, M: pluralUk(moves, 'move') }), { layout: 'inline' })); };
 
   function flip(i) {
     const el = els[i];
@@ -47,7 +49,7 @@ export function memory(app, pairs, { onDone } = {}) {
   }
   function finish() {
     doneBox.hidden = false;
-    doneBox.replaceChildren(h('div', { class: 'cw-done-title' }, ukText('Молоде́ць!'), deText(` ${moves} Züge`)),
+    doneBox.replaceChildren(h('div', { class: 'cw-done-title' }, uiLabel('well_done', { layout: 'inline' }), ' · ', uiLabel(uiF('mm_moves', { m: moves, M: pluralUk(moves, 'move') }), { layout: 'inline' })),
       h('ul', { class: 'cw-solution' }, pairs.map(p => h('li',
         p.aLang === 'de' ? deText(p.a) : ukText(p.a), ' – ', p.bLang === 'uk' ? ukText(p.b) : deText(p.b)))));
     onDone?.({ moves, pairs: pairs.length });

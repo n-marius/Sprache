@@ -1,7 +1,7 @@
 // Aufgabentyp „back_translation“ (stille Rückübersetzung): Zeilen des Leittexts erscheinen auf Deutsch und werden
 // mit Wortkacheln ins Ukrainische zurückgebaut; danach Vergleich mit dem Original. Selbstprüfend, Zeile für Zeile.
 // ex: { title_uk, lines:[{who, uk, de}], context:{who, uk}|null, distractors:[uk-Wörter] }
-import { h, ukText, deText, icon } from './common.js';
+import { h, ukText, deText, icon, uiLabel, holdLabel, uiT } from './common.js';
 import { tokenize, normalizeSentence } from '../lib/uk-text.js';
 import { anim } from '../ui/anim.js';
 import { haptic } from '../ui/haptics.js';
@@ -19,7 +19,7 @@ export function render(ex, ctx) {
   if (ex.context) log.append(lineView(ex.context, 'is-context'));
   const work = h('div', { class: 'bt-work' });
   const el = h('div', { class: 'bt' },
-    ex.title_uk ? h('div', { class: 'bt-title' }, ukText(ex.title_uk), deText(' – Rückübersetzung', { cls: 'bt-title-de' })) : null,
+    ex.title_uk ? h('div', { class: 'bt-title' }, ukText(ex.title_uk), ' ', h('span', { class: 'bt-title-de ui-de', lang: 'de' }, uiT('back_translation_de').de)) : null,
     log, work);
 
   function lineView(l, cls = '') {
@@ -33,8 +33,8 @@ export function render(ex, ctx) {
     const answer = [];
     const row = h('div', { class: 'bt-answer', role: 'list' });
     const bank = h('div', { class: 'bt-bank' });
-    const checkBtn = h('button', { type: 'button', class: 'btn btn-blue btn-block', disabled: true, on: { click: check } }, 'Vergleichen');
-    const tileEls = pool.map((wd, i) => h('button', { type: 'button', class: 'chip bt-tile', on: { click: () => take(i) } }, wd));
+    const checkBtn = h('button', { type: 'button', class: 'btn btn-blue btn-block', disabled: true, on: { click: check } }, holdLabel('compare'));
+    const tileEls = pool.map((wd, i) => h('button', { type: 'button', class: 'chip bt-tile', on: { click: () => take(i) } }, ukText(wd, { tap: false })));
     bank.append(...tileEls);
     function take(i) {
       if (tileEls[i].classList.contains('is-used')) return;
@@ -45,7 +45,7 @@ export function render(ex, ctx) {
     }
     function drop(pos) { const i = answer.splice(pos, 1)[0]; tileEls[i].classList.remove('is-used'); paint(); }
     function paint() {
-      row.replaceChildren(...answer.map((i, pos) => h('button', { type: 'button', class: 'chip bt-tile is-placed', on: { click: () => drop(pos) } }, pool[i])));
+      row.replaceChildren(...answer.map((i, pos) => h('button', { type: 'button', class: 'chip bt-tile is-placed', on: { click: () => drop(pos) } }, ukText(pool[i], { tap: false }))));
       checkBtn.disabled = !answer.length;
     }
     function check() {
@@ -54,7 +54,7 @@ export function render(ex, ctx) {
       if (ok) right++; else wrong.push(l.uk);
       haptic(ok ? 'success' : 'error');
       const v = lineView(l, ok ? 'is-ok' : 'is-bad');
-      if (!ok) v.append(h('div', { class: 'bt-yours' }, deText('Deine Version: '), ukText(built, { tap: false })));
+      if (!ok) v.append(h('div', { class: 'bt-yours' }, uiLabel('your_version', { layout: 'inline', de: false }), ' ', ukText(built, { tap: false })));
       log.append(v);
       ok ? anim.correct(v, { sparks: false }) : anim.wrong(v);
       idx++;
@@ -68,7 +68,9 @@ export function render(ex, ctx) {
 
   function finish() {
     work.replaceChildren(h('div', { class: ['bt-done', wrong.length ? 'is-bad' : 'is-ok'] }, icon(wrong.length ? 'bulb' : 'check'),
-      deText(wrong.length ? `${right} von ${lines.length} Zeilen genau getroffen. Vergleiche die markierten Zeilen mit dem Original.` : 'Alle Zeilen genau wie im Original.')));
+      uiLabel(wrong.length
+        ? { uk: `${uiT('lines_right').uk} ${right} ${uiT('of').uk} ${lines.length}.`, de: `${right} von ${lines.length} ${uiT('lines_right').de}` }
+        : 'all_lines_right')));
     setTimeout(() => alive && ctx.complete({
       correct: !wrong.length,
       score: lines.length ? right / lines.length : 1,

@@ -11,7 +11,7 @@ import { addMined, isMined } from '../services/mining.js';
 import { isListenOff } from '../audio-mode.js';
 import { hidePopover } from '../ui/popover.js';
 import { mulberry32, hashStr, shuffle } from '../engine/util.js';
-import { holdLabel, uiT } from '../ui/ui-label.js';
+import { holdLabel, uiLabel, uiT } from '../ui/ui-label.js';
 
 const MAX_GUESS = 4;
 
@@ -72,11 +72,11 @@ export function render(params, app) {
   const start = params.query.get('start') === '1';
   const review = params.query.get('review') === '1';
   const back = { href: `#/lesson/${encodeURIComponent(id)}`, label: uiT('lesson') };
-  if (!lesson) return page({ title: 'Geschichte', back, children: [h('div', { class: 'empty' }, h('div', { class: 'empty-glyph' }, '📖'), h('p', 'Diese Lektion ist noch nicht verfügbar.'))] });
+  if (!lesson) return page({ title: uiT('story'), back, children: [h('div', { class: 'empty' }, h('div', { class: 'empty-glyph' }, '📖'), h('p', uiLabel('story_unavailable')))] });
   const story = storyOf(lesson);
   if (!story) {
     if (start) { markStorySeen(app, id, { proceed: true }); }
-    return page({ title: 'Geschichte', back, children: [h('div', { class: 'empty' }, h('p', 'Für diese Lektion gibt es keine Geschichte.'))] });
+    return page({ title: uiT('story'), back, children: [h('div', { class: 'empty' }, h('p', uiLabel('story_none')))] });
   }
 
   const listenOff = isListenOff(app);
@@ -99,14 +99,14 @@ export function render(params, app) {
   // ---------- Kopf ----------
   const chars = (story.characters || []).filter(c => c.name);
   const hero = h('header', { class: 'st-hero', style: { '--theme-c': anim.themeColor(lesson.theme) } },
-    h('div', { class: 'st-kicker t-cap' }, review ? 'Noch einmal lesen' : 'Geschichte', ' · ', anim.themeGlyph(lesson.theme)),
+    h('div', { class: 'st-kicker t-cap' }, uiLabel(review ? 'read_once_more' : 'story', { layout: 'inline' }), ' · ', anim.themeGlyph(lesson.theme)),
     h('h1', { class: 'st-title' }, ukText(story.title_uk || lesson.title_uk)),
-    h('div', { class: 'st-subtitle t-2' }, story.title_de || lesson.title_de),
-    story.scene_de && !review ? h('p', { class: 'st-scene' }, story.scene_de) : null,
+    h('div', { class: 'st-subtitle t-2 ui-de', lang: 'de' }, story.title_de || lesson.title_de),
+    story.scene_de && !review ? h('p', { class: 'st-scene ui-de', lang: 'de' }, story.scene_de) : null,
     chars.length ? h('div', { class: 'st-cast' }, chars.map(c => h('div', { class: 'st-person' },
       h('span', { class: 'st-avatar emoji' }, c.emoji || '🙂'),
       h('span', { class: 'st-person-name' }, ukText(c.name)),
-      c.role_de ? h('span', { class: 'st-person-role' }, c.role_de) : null))) : null);
+      c.role_de ? h('span', { class: 'st-person-role de', lang: 'de' }, c.role_de) : null))) : null);
 
   // ---------- Zeilen ----------
   const lineEls = [];
@@ -133,8 +133,8 @@ export function render(params, app) {
     const de = ln.de ? deText(ln.de, { cls: 'st-de' }) : null;
     if (de) de.hidden = true;
     const mine = h('button', {
-      type: 'button', class: ['icon-btn', 'st-mine', isMined(app, ln.uk) && 'is-on'], 'aria-label': 'Satz merken', title: 'Satz merken',
-      on: { click: e => { e.stopPropagation(); if (addMined(app, { uk: ln.uk, de: ln.de || '', lessonId: id, source: 'story' })) { mine.classList.add('is-on'); anim.pop(mine); toast('Satz unter Vokabeln (Слова́) gespeichert'); } } },
+      type: 'button', class: ['icon-btn', 'st-mine', isMined(app, ln.uk) && 'is-on'], 'aria-label': uiT('save_sentence').uk, title: `${uiT('save_sentence').uk} · ${uiT('save_sentence').de}`,
+      on: { click: e => { e.stopPropagation(); if (addMined(app, { uk: ln.uk, de: ln.de || '', lessonId: id, source: 'story' })) { mine.classList.add('is-on'); anim.pop(mine); toast(uiLabel('story_sentence_saved')); } } },
     }, icon('plus'));
     const deBtn = de && !review ? h('button', { type: 'button', class: 'st-de-btn', on: { click: e => { e.stopPropagation(); de.hidden = !de.hidden; deBtn.classList.toggle('is-on', !de.hidden); } } }, 'DE') : null;
     const tools = h('div', { class: 'st-tools' }, listenOff ? null : speakerButton(ln.uk, { size: 's' }), deBtn, mine);
@@ -158,12 +158,12 @@ export function render(params, app) {
   const setNotice = on => { notice = on; lines.classList.toggle('is-noticing', on); };
   setNotice(notice);
   let playing = null;
-  const stopPlay = () => { if (playing) playing.stop = true; playing = null; app.tts.stop(); lineEls.forEach(l => l.row.classList.remove('is-playing', 'is-yourturn')); playBtn && playBtn.lastChild.replaceWith(holdLabel('listen_all', { de: false })); shadowBtn && (shadowBtn.lastChild.textContent = 'Shadowing'); };
+  const stopPlay = () => { if (playing) playing.stop = true; playing = null; app.tts.stop(); lineEls.forEach(l => l.row.classList.remove('is-playing', 'is-yourturn')); playBtn && playBtn.lastChild.replaceWith(holdLabel('listen_all', { de: false })); shadowBtn && shadowBtn.lastChild.replaceWith(holdLabel('shadowing', { de: false })); };
   const wait = ms => new Promise(r => setTimeout(r, ms));
   async function playAll(shadow) {
     if (playing) { stopPlay(); return; }
     const me = playing = { stop: false };
-    if (shadow) shadowBtn.lastChild.textContent = 'Stopp'; else playBtn.lastChild.replaceWith(holdLabel('stop', { de: false }));
+    (shadow ? shadowBtn : playBtn).lastChild.replaceWith(holdLabel('stop', { de: false }));
     for (const l of lineEls) {
       if (me.stop) break;
       l.row.classList.add('is-playing');
@@ -181,33 +181,33 @@ export function render(params, app) {
     if (playing === me) stopPlay();
   }
   const playBtn = listenOff ? null : h('button', { type: 'button', class: 'btn btn-blue btn-sm', on: { click: () => playAll(false) } }, icon('play', { fill: true }), holdLabel('listen_all', { de: false }));
-  const shadowBtn = listenOff ? null : h('button', { type: 'button', class: 'btn btn-secondary btn-sm', title: 'Hören → nachsprechen → nochmal hören', on: { click: () => playAll(true) } }, icon('mic'), h('span', 'Shadowing'));
+  const shadowBtn = listenOff ? null : h('button', { type: 'button', class: 'btn btn-secondary btn-sm', title: `${uiT('shadowing_hint').uk} (${uiT('shadowing_hint').de})`, on: { click: () => playAll(true) } }, icon('mic'), holdLabel('shadowing', { de: false }));
   const controls = h('div', { class: 'st-controls' },
     h('div', { class: 'st-controls-row' }, playBtn, shadowBtn),
     h('div', { class: 'st-controls-row' },
-      review ? null : h('label', { class: 'st-toggle' }, h('span', 'Übersetzung'), toggle(showDe, setDe)),
-      h('label', { class: 'st-toggle' }, h('span', 'Neue Formen'), toggle(notice, setNotice))));
+      review ? null : h('label', { class: 'st-toggle' }, holdLabel('translation', { layout: 'inline' }), toggle(showDe, setDe)),
+      h('label', { class: 'st-toggle' }, holdLabel('new_forms', { layout: 'inline' }), toggle(notice, setNotice))));
 
   const hint = firstVisit && !review && guessBudget.n
-    ? h('div', { class: 'st-hint' }, icon('bulb'), h('span', 'Gepunktet unterstrichene Wörter sind neu. Tippe darauf und ', h('strong', 'rate zuerst'), ' – das hilft beim Behalten, auch wenn du falsch liegst.'))
-    : review ? h('div', { class: 'st-hint' }, icon('sparkles'), h('span', 'Jetzt ohne Übersetzung: Verstehst du die Geschichte? Neue Formen sind markiert.')) : null;
+    ? h('div', { class: 'st-hint' }, icon('bulb'), uiLabel('story_guess_hint'))
+    : review ? h('div', { class: 'st-hint' }, icon('sparkles'), uiLabel('story_review_hint')) : null;
 
   // ---------- Abschluss ----------
   const actions = h('div', { class: 'st-actions' });
   if (start) {
-    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => { stopPlay(); markStorySeen(app, id, { proceed: true }); } } }, lesson.explanation ? 'Weiter zur Erklärung' : 'Weiter zu den Übungen'));
+    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => { stopPlay(); markStorySeen(app, id, { proceed: true }); } } }, holdLabel(lesson.explanation ? 'story_to_explanation' : 'story_to_exercises')));
   } else {
     if (review) {
-      actions.append(h('div', { class: 'st-selfcheck' }, h('div', { class: 't-headline' }, 'Wie viel hast du verstanden?'),
-        h('div', { class: 'st-selfcheck-btns' }, ['Fast alles', 'Das meiste', 'Wenig'].map((t, i) =>
-          h('button', { type: 'button', class: `btn ${i === 0 ? 'btn-primary' : 'btn-secondary'} btn-sm`, on: { click: () => { toast(i === 0 ? 'Großartig – genau so wächst Verstehen.' : i === 1 ? 'Gut! Beim nächsten Mal noch mehr.' : 'Kein Problem – tippe Wörter an und hör noch einmal zu.'); } } }, t)))));
+      actions.append(h('div', { class: 'st-selfcheck' }, h('div', { class: 't-headline' }, uiLabel('how_much_understood')),
+        h('div', { class: 'st-selfcheck-btns' }, ['understood_most_all', 'understood_most', 'understood_little'].map((t, i) =>
+          h('button', { type: 'button', class: `btn ${i === 0 ? 'btn-primary' : 'btn-secondary'} btn-sm`, on: { click: () => { toast(uiLabel(['praise_great', 'praise_good', 'praise_little'][i])); } } }, holdLabel(t))))));
     }
-    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => { stopPlay(); markStorySeen(app, id); startLesson(app, id); } } }, 'Lektion üben'));
+    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => { stopPlay(); markStorySeen(app, id); startLesson(app, id); } } }, holdLabel('story_practice')));
   }
 
   if (!start && !review) markStorySeen(app, id);
   const el = page({
-    title: story.title_de || 'Geschichte', largeTitle: false, back: start ? back : true, cls: 'st-page',
+    title: story.title_uk || lesson.title_uk ? { uk: story.title_uk || lesson.title_uk, de: story.title_de || lesson.title_de || '' } : uiT('story'), largeTitle: false, back: start ? back : true, cls: 'st-page',
     children: [h('article', { class: 'st-article' }, hero, hint, controls, lines, fullDe, actions)],
   });
   return { el, destroy: () => { stopPlay(); hidePopover(); } };

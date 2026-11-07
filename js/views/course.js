@@ -115,7 +115,7 @@ function courseSubtitle(pace) {
   const t = uiN('course_sub', { a: pace.lessonsDone, b: pace.lessonsTotal });
   const st = uiT(pace.status === 'ahead' || pace.status === 'behind' ? pace.status : 'on_track');
   return h('div', { class: 'page-subtitle' }, uiLabel({
-    uk: `${t.uk.replace('{date}', d.uk)} · ${st.uk}`,
+    uk: `${t.uk.replace('{date}', d.uk)} · ${st.uk.charAt(0).toLowerCase()}${st.uk.slice(1)}`,
     de: `${t.de.replace('{date}', d.de)} · ${pace.status === 'on_track' ? 'im Plan' : pace.label || st.de}`,
   }, { layout: 'inline' }));
 }

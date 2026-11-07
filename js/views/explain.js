@@ -8,7 +8,8 @@ import { startLesson, markExplained } from '../engine/flow.js';
 import { isUnlocked } from '../engine/progress.js';
 import { addMined, isMined } from '../services/mining.js';
 import { toast } from '../ui/shell.js';
-import { uiT } from '../ui/ui-label.js';
+import { uiT, uiLabel, holdLabel } from '../ui/ui-label.js';
+import { uiF } from '../ui-text-g2.js';
 
 const CYR = /[Ѐ-ӿ]/;
 
@@ -59,7 +60,7 @@ export function examples(app, list, lessonId) {
       type: 'button', class: ['icon-btn', 'xp-mine', isMined(app, ex.uk) && 'is-on'], 'aria-label': 'Satz merken',
       on: { click: e => {
         e.stopPropagation();
-        if (addMined(app, { uk: ex.uk, de: ex.de, lessonId, source: 'explain' })) { mineBtn.classList.add('is-on'); toast('Satz unter Vokabeln (Слова́) gespeichert'); }
+        if (addMined(app, { uk: ex.uk, de: ex.de, lessonId, source: 'explain' })) { mineBtn.classList.add('is-on'); toast(uiLabel(uiF('sentence_saved'), { layout: 'inline' })); }
       } },
     }, icon('plus'));
     return h('li', { class: 'xp-example' },
@@ -75,7 +76,7 @@ export function render(params, app) {
   const meta = app.content.getMeta(id);
   const start = params.query.get('start') === '1';
   if (!lesson) {
-    return page({ title: 'Erklärung', back: { href: '#/library', label: 'Wissen' }, children: [h('div', { class: 'empty' }, h('div', { class: 'empty-glyph' }, '🔒'), h('p', 'Diese Lektion ist noch nicht verfügbar.'))] });
+    return page({ title: uiT('explanation'), back: { href: '#/library', label: uiT('tab_library') }, children: [h('div', { class: 'empty' }, h('div', { class: 'empty-glyph' }, '🔒'), h('p', uiLabel(uiF('lesson_unavailable'))))] });
   }
   const unlocked = isUnlocked(app, id) || !!app.store.state.lessons[id]?.sessions || start;
   const x = lesson.explanation;
@@ -85,16 +86,16 @@ export function render(params, app) {
   const hero = h('header', { class: 'xp-hero', style: { '--theme-c': color } },
     h('div', { class: 'xp-badge emoji', 'aria-hidden': 'true' }, glyph),
     h('div', { class: 'xp-hero-text' },
-      h('div', { class: 't-cap xp-kicker' }, `${meta?.phaseId || lesson.phase} · Erklärung`),
+      h('div', { class: 't-cap xp-kicker' }, uiLabel({ uk: `${meta?.phaseId || lesson.phase} · ${uiT('explanation').uk}`, de: uiT('explanation').de }, { layout: 'inline' })),
       h('h1', { class: 't-title1 xp-title' }, x?.title_de || lesson.title_de),
       h('div', { class: 'xp-lesson' }, ukText(lesson.title_uk), h('span', { class: 't-2' }, ' · ', lesson.title_de))));
 
   const body = [];
   if (!x) {
-    body.push(h('div', { class: 'card' }, h('p', 'Für diese Lektion gibt es noch keine ausführliche Erklärung.'),
+    body.push(h('div', { class: 'card' }, h('p', uiLabel(uiF('no_explanation'))),
       ...(lesson.grammar || []).map(g => h('div', { class: 'xp-section' }, h('h2', { class: 'xp-h2' }, g.title_de), ...paragraphs(g.body_de), examples(app, g.examples, id)))));
   } else if (!unlocked) {
-    body.push(h('div', { class: 'card xp-locked' }, icon('lock'), h('p', 'Diese Erklärung wird freigeschaltet, sobald du die vorige Lektion begonnen hast.')));
+    body.push(h('div', { class: 'card xp-locked' }, icon('lock'), h('p', uiLabel(uiF('explain_locked')))));
   } else {
     if (x.intro_de) body.push(h('div', { class: 'xp-intro' }, ...paragraphs(x.intro_de)));
     if (lesson.concepts?.length) body.push(h('div', { class: 'xp-concepts' }, lesson.concepts.map(c => h('span', { class: 'badge blue' }, c.title_de))));
@@ -107,22 +108,22 @@ export function render(params, app) {
     });
     if (x.summary_de?.length) {
       body.push(h('section', { class: 'card xp-summary' },
-        h('h2', { class: 'xp-h2' }, icon('bulb'), 'Merksätze'),
+        h('h2', { class: 'xp-h2' }, icon('bulb'), uiLabel(uiF('key_points'), { layout: 'inline' })),
         h('ul', x.summary_de.map(m => h('li', icon('check'), h('span', CYR.test(m) ? mixed(m) : m))))));
     }
   }
 
   const actions = h('div', { class: 'xp-actions' });
   if (start) {
-    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => markExplained(app, id, { proceed: true }) } }, 'Weiter zu den Übungen'));
+    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => markExplained(app, id, { proceed: true }) } }, holdLabel(uiF('to_exercises'))));
   } else if (unlocked && app.content.getLesson(id)) {
-    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => { markExplained(app, id); startLesson(app, id); } } }, 'Lektion üben'));
-    if (lesson.story) actions.append(h('a', { class: 'btn btn-secondary btn-block', href: `#/story/${encodeURIComponent(id)}` }, icon('book'), 'Geschichte lesen'));
+    actions.append(h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => { markExplained(app, id); startLesson(app, id); } } }, holdLabel(uiF('practice_lesson'))));
+    if (lesson.story) actions.append(h('a', { class: 'btn btn-secondary btn-block', href: `#/story/${encodeURIComponent(id)}` }, icon('book'), holdLabel(uiF('read_story'))));
   }
   if (unlocked && x && !start) markExplained(app, id);
 
   return page({
-    title: x?.title_de || 'Erklärung', largeTitle: false, cls: 'xp-page',
+    title: x?.title_de || uiT('explanation'), largeTitle: false, cls: 'xp-page',
     back: start ? { href: `#/lesson/${encodeURIComponent(id)}`, label: uiT('lesson') } : true,
     children: [h('article', { class: 'xp-article' }, hero, ...body, actions)],
   });

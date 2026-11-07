@@ -1,7 +1,7 @@
 // Aufgabentyp „speak“ – deutschen Satz auf Ukrainisch laut sagen (selbstprüfend).
 // Mit Spracherkennung (uk-UA): Bewertung über stt.scoreBest/verdict, max. 3 Versuche.
 // Ohne Erkennung (oder nach Fehler): Selbstbewertung nach Anhören des Originals.
-import { h, ukText, deText, icon } from './common.js';
+import { h, ukText, deText, icon, uiLabel, holdLabel, uiT } from './common.js';
 import { anim } from '../ui/anim.js';
 import { haptic } from '../ui/haptics.js';
 
@@ -20,15 +20,15 @@ export function render(ex, ctx) {
 
   // ---------- Aufgabe: Deutsch groß, UK einklappbar ----------
   const ukLine = h('div', { class: 'exd-speak-uk-text' }, ukText(ex.uk));
-  const ukHidden = h('div', { class: 'exd-speak-uk-hidden', hidden: true }, 'Ukrainisch ausgeblendet – erst selbst versuchen');
-  const ukToggleTxt = h('span', 'UK ausblenden');
+  const ukHidden = h('div', { class: 'exd-speak-uk-hidden', hidden: true }, uiLabel('try_first'));
+  const ukToggleTxt = h('span', holdLabel('hide_text', { layout: 'inline' }));
   const ukToggle = h('button', {
     type: 'button', class: 'exd-link exd-uk-toggle', 'aria-pressed': 'false',
     on: { click: () => setUkVisible(ukLine.hidden) },
   }, icon('chevron-down', { cls: 'exd-uk-chev' }), ukToggleTxt);
   function setUkVisible(v) {
     ukLine.hidden = !v; ukHidden.hidden = v;
-    ukToggleTxt.textContent = v ? 'UK ausblenden' : 'UK zeigen';
+    ukToggleTxt.replaceChildren(holdLabel(v ? 'hide_text' : 'show_text', { layout: 'inline' }));
     ukToggle.classList.toggle('is-collapsed', !v);
     ukToggle.setAttribute('aria-pressed', String(!v));
   }
@@ -48,15 +48,16 @@ export function render(ex, ctx) {
   const tryDots = h('div', { class: 'exd-tries', 'aria-hidden': 'true' });
   const stage = h('div', { class: 'exd-speak-stage' }, mic, tryDots, status, heard, actions);
 
-  const skip = h('button', { type: 'button', class: 'exd-link exd-skip', on: { click: onSkip } }, 'Gerade nicht sprechen');
+  const skip = h('button', { type: 'button', class: 'exd-link exd-skip', on: { click: onSkip } }, holdLabel('cant_speak', { layout: 'inline' }));
 
   const el = h('div', { class: 'exd-speak' },
     h('div', { class: 'exd-speak-de' }, deText(ex.de)),
     ukCard, stage, h('div', { class: 'exd-speak-foot' }, skip));
 
   // ---------- Zustände ----------
+  /** text: UI-Key | {uk, de} */
   function setStatus(text, kind = '') {
-    status.textContent = text || '';
+    status.replaceChildren(text ? uiLabel(uiT(text)) : '');
     status.className = ['exd-speak-status', kind && `is-${kind}`].filter(Boolean).join(' ');
   }
   function showHeard(text, kind) {
@@ -69,7 +70,7 @@ export function render(ex, ctx) {
     tryDots.hidden = mode !== 'stt' || tries === 0;
   }
   function setActions(...btns) { actions.replaceChildren(...btns.filter(Boolean)); }
-  const btn = (label, cls, onClick, ic) => h('button', { type: 'button', class: ['btn', cls], on: { click: onClick } }, ic ? icon(ic) : null, h('span', label));
+  const btn = (label, cls, onClick, ic) => h('button', { type: 'button', class: ['btn', cls], on: { click: onClick } }, ic ? icon(ic) : null, holdLabel(label));
 
   function idleStt(msg) {
     mode = 'stt';
@@ -78,7 +79,7 @@ export function render(ex, ctx) {
     mic.classList.remove('is-listening', 'is-ok', 'is-play');
     micIcon.replaceChildren(icon('mic'));
     mic.setAttribute('aria-label', 'Aufnahme starten');
-    setStatus(msg || 'Tippe aufs Mikrofon und sprich.');
+    setStatus(msg || 'tap_mic');
     renderTries();
   }
 
@@ -90,11 +91,12 @@ export function render(ex, ctx) {
     mic.classList.add('is-play');
     micIcon.replaceChildren(icon('speaker'));
     mic.setAttribute('aria-label', 'Original anhören');
-    setStatus(reason ? `${reason} Sprich den Satz laut. Dann hör dir das Original an.` : 'Sprich den Satz laut. Dann hör dir das Original an.');
+    const base = uiT('say_then_listen'), why = reason ? uiT(reason) : null;
+    setStatus(why ? { uk: `${why.uk} ${base.uk}`, de: `${why.de} ${base.de}` } : base);
     renderTries();
     setActions(
-      btn('Noch nicht', 'btn-secondary', () => finish({ correct: false, userAnswer: 'Selbstbewertung: noch nicht' }), 'x'),
-      btn('Richtig gesagt', 'btn-primary', () => finish({ correct: true, score: 1, userAnswer: 'Selbstbewertung: richtig gesagt' }), 'check'));
+      btn('not_yet', 'btn-secondary', () => finish({ correct: false, userAnswer: 'Selbstbewertung: noch nicht' }), 'x'),
+      btn('said_right', 'btn-primary', () => finish({ correct: true, score: 1, userAnswer: 'Selbstbewertung: richtig gesagt' }), 'check'));
   }
 
   function finish(r) {
@@ -126,7 +128,7 @@ export function render(ex, ctx) {
     mic.classList.add('is-listening');
     mic.setAttribute('aria-label', 'Aufnahme beenden');
     stage.classList.add('is-listening');
-    setStatus('Ich höre …', 'listening');
+    setStatus('listening_now', 'listening');
     haptic('light');
     let res;
     try {
@@ -139,10 +141,10 @@ export function render(ex, ctx) {
       const code = err?.code || 'error';
       if (err?.fatal || !SOFT_ERRORS.has(code)) {
         showHeard('');
-        enterSelf(err?.message || 'Spracherkennung nicht verfügbar.');
+        enterSelf({ uk: uiT('stt_unavailable').uk, de: err?.message || uiT('stt_unavailable').de });
         return;
       }
-      idleStt(code === 'aborted' ? 'Abgebrochen. Tippe aufs Mikrofon, wenn du bereit bist.' : 'Nichts gehört. Tippe nochmal und sprich deutlich.');
+      idleStt(code === 'aborted' ? 'stt_aborted' : 'stt_nothing');
       return;
     }
     listening = false;
@@ -160,7 +162,7 @@ export function render(ex, ctx) {
       stage.classList.add('is-ok');
       mic.classList.add('is-ok');
       micIcon.replaceChildren(icon('check'));
-      setStatus('Richtig!', 'ok');
+      setStatus(ctx.t?.('correct') || { uk: 'Пра́вильно!', de: 'Richtig!' }, 'ok');
       showHeard(transcript, 'ok');
       haptic('success');
       anim.correct(mic);
@@ -168,12 +170,12 @@ export function render(ex, ctx) {
       return;
     }
     if (v === 'close') {
-      setStatus('Fast!', 'close');
+      setStatus('almost', 'close');
       showHeard(transcript, 'close');
       haptic('light');
       setActions(
-        tries < MAX_TRIES ? btn('Nochmal', 'btn-secondary', () => { setActions(); onMic(); }, 'refresh') : null,
-        btn('Akzeptieren', 'btn-primary', () => finish({ correct: true, score: s, userAnswer: transcript }), 'check'));
+        tries < MAX_TRIES ? btn('rate_again', 'btn-secondary', () => { setActions(); onMic(); }, 'refresh') : null,
+        btn('accept', 'btn-primary', () => finish({ correct: true, score: s, userAnswer: transcript }), 'check'));
       if (tries >= MAX_TRIES) mic.disabled = true;
       return;
     }
@@ -182,10 +184,10 @@ export function render(ex, ctx) {
     haptic('error');
     anim.wrong(heard);
     if (tries >= MAX_TRIES) {
-      enterSelf('Die Erkennung hat es nicht verstanden.');
+      enterSelf('stt_failed');
       return;
     }
-    setStatus('Nicht ganz. Hör dir das Original an und versuch es nochmal.', 'bad');
+    setStatus('not_quite', 'bad');
   }
 
   // Start

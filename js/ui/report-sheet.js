@@ -6,6 +6,8 @@ import { haptic } from './haptics.js';
 import { getApp } from '../app-context.js';
 import { CATEGORIES, categoryMeta, createReport, addReport, attachedData, exerciseSummary, typeLabel } from '../services/reports.js';
 import { maybeAutoSync, errorMessage } from '../services/gist.js';
+import { uiLabel, holdLabel, uiT } from './ui-label.js';
+import { categoryUi, typeUi } from '../ui-text-g3.js';
 
 /** → {close} */
 export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
@@ -20,10 +22,12 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
     h('span', { class: 'r-ctx-icon' }, icon('flag')),
     h('div', { class: 'r-ctx-main' },
       h('div', { class: 'r-ctx-kicker' },
-        [draft.lessonId || 'Ohne Lektion', typeLabel(draft.exType), draft.exId].filter(Boolean).join(' · '),
-        draft.generated ? h('span', { class: 'badge blue r-ctx-badge' }, 'generiert') : null),
+        draft.lessonId ? `${draft.lessonId} · ` : [uiLabel('no_lesson', { de: false }), ' · '],
+        uiLabel({ uk: typeUi(draft.exType).uk, de: typeLabel(draft.exType) }, { layout: 'inline' }),
+        draft.exId ? ` · ${draft.exId}` : null,
+        draft.generated ? h('span', { class: 'badge blue r-ctx-badge' }, uiLabel('generated', { de: false })) : null),
       summary ? h('div', { class: 'r-ctx-text', lang: /[Ѐ-ӿ]/.test(summary) ? 'uk' : 'de' }, summary) : null,
-      draft.userAnswer ? h('div', { class: 'r-ctx-answer' }, h('span', 'Deine Antwort: '), draft.userAnswer) : null));
+      draft.userAnswer ? h('div', { class: 'r-ctx-answer' }, h('span', uiLabel('your_answer', { de: false }), ': '), draft.userAnswer) : null));
 
   // --- Kategorien
   const tiles = CATEGORIES.map(label => {
@@ -34,11 +38,13 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
       on: { click: () => select(label, b) },
     },
       h('span', { class: 'r-cat-glyph emoji' }, m.emoji),
-      h('span', { class: 'r-cat-text' }, h('span', { class: 'r-cat-label' }, label.split('/').flatMap((p, i) => i ? ['/', h('wbr'), p] : [p])), h('span', { class: 'r-cat-hint' }, m.hint)));
+      h('span', { class: 'r-cat-text' },
+        h('span', { class: 'r-cat-label' }, holdLabel(categoryUi(label), { de: false })),
+        h('span', { class: 'r-cat-hint ui-de', lang: 'de' }, `${label.replace('/', '/\u200b')} – ${m.hint}`)));
     return b;
   });
   const catGroup = h('div', { class: 'r-section' },
-    h('div', { class: 'section-header' }, 'Was stimmt nicht?'),
+    h('div', { class: 'section-header' }, uiLabel('whats_wrong', { layout: 'inline' })),
     h('div', { class: 'r-cats', role: 'radiogroup', 'aria-label': 'Kategorie' }, tiles));
 
   // --- Freitext
@@ -48,7 +54,7 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
     'aria-label': 'Beschreibung',
   });
   const textGroup = h('div', { class: 'r-section' },
-    h('div', { class: 'section-header' }, 'Beschreibung'),
+    h('div', { class: 'section-header' }, uiLabel('comment', { layout: 'inline' })),
     h('div', { class: 'list' }, h('div', { class: 'list-row r-textrow' }, ta)));
 
   // --- Angehängte Daten (einklappbar)
@@ -56,18 +62,18 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
   const details = h('details', { class: 'r-details' },
     h('summary', { class: 'r-details-summary' },
       h('span', { class: 'r-details-icon' }, icon('info')),
-      h('span', { class: 'r-details-title' }, 'Automatisch angehängt'),
-      h('span', { class: 'r-details-sub' }, 'Lektion, Aufgabe, Antwort, Version, Gerät'),
+      h('span', { class: 'r-details-title' }, uiLabel('auto_attached', { hold: true, de: false })),
+      h('span', { class: 'r-details-sub ui-de', lang: 'de' }, 'Automatisch angehängt: Lektion, Aufgabe, Antwort, Version, Gerät'),
       icon('chevron-down', { cls: 'r-details-chev' })),
     pre);
 
   const save = h('button', { type: 'button', class: 'btn btn-primary btn-block btn-lg btn-caps', disabled: true, on: { click: submit } },
-    icon('check'), 'Meldung speichern');
-  const hint = h('div', { class: 'r-save-hint t-foot t-2' }, 'Bitte eine Kategorie wählen.');
+    icon('check'), holdLabel('save_report'));
+  const hint = h('div', { class: 'r-save-hint t-foot t-2' }, uiLabel('choose_category', { layout: 'inline' }));
 
   const s = sheet({
-    title: 'Aufgabe melden',
-    cancelLabel: 'Abbrechen',
+    title: uiT('report_title'),
+    cancelLabel: uiT('cancel'),
     content: h('div', { class: 'r-sheet' }, ctxCard, catGroup, textGroup, details),
     actions: [save, hint],
   });
@@ -77,7 +83,7 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
     category = label;
     for (const t of tiles) { const on = t === btn; t.classList.toggle('is-selected', on); t.setAttribute('aria-checked', String(on)); }
     save.disabled = false;
-    hint.textContent = 'Wird lokal gespeichert – Export und Sync unter Mehr → Meldungen.';
+    hint.replaceChildren(uiLabel('saved_where'));
     haptic('select');
   }
 
@@ -87,9 +93,9 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
     addReport(app, report);
     haptic('success');
     s.close();
-    toast('Danke – Meldung gespeichert', { kind: 'ok' });
+    toast(uiT('thanks_saved'), { kind: 'ok' });
     maybeAutoSync(app).then(r => {
-      if (r?.error) toast(`Sync fehlgeschlagen: ${errorMessage(r.error)}`, { kind: 'bad', ms: 3500 });
+      if (r?.error) toast({ uk: uiT('sync_error').uk, de: `Sync fehlgeschlagen: ${errorMessage(r.error)}` }, { kind: 'bad', ms: 3500 });
     });
   }
 
