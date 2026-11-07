@@ -130,5 +130,9 @@
  "lesson": {
   "uk": "Уро́к",
   "de": "Lektion"
+ },
+ "structured_input": {
+  "uk": "Чита́й ува́жно",
+  "de": "Lies genau – achte auf die Form"
  }
 }

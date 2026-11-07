@@ -30,6 +30,7 @@ const FALLBACK = {
   slow: { uk: 'Пові́льніше', de: 'Langsamer' },
   // optionale Keys (nicht im Pflichtumfang des Vertrags)
   order_dialog: { uk: 'Розта́в ре́пліки в пра́вильному поря́дку', de: 'Bringe den Dialog in die richtige Reihenfolge' },
+  structured_input: { uk: 'Слу́хай і чита́й ува́жно', de: 'Achte genau auf die Form' },
 };
 
 let strings = {};

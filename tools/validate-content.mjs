@@ -26,7 +26,7 @@ const warn = (where, msg) => push(warnings, `${where}: ${msg}`);
 const THEMES = new Set('greetings people family home food cafe city transport time numbers shopping work law body weather hobby travel school colors clothes health calendar office'.split(' '));
 const POS = new Set('noun verb adj adv pron num prep conj part interj name phrase'.split(' '));
 const CATEGORIES = ['redemittel', 'aussprache', 'pronomen', 'verben', 'kasus', 'nomen', 'zahlen', 'satzbau'];
-const TYPES = ['mc_translate', 'build_sentence', 'cloze', 'chat', 'reading', 'listening', 'speak', 'match_pairs', 'picture_choice', 'true_false', 'order_dialog'];
+const TYPES = ['mc_translate', 'build_sentence', 'cloze', 'chat', 'reading', 'listening', 'speak', 'match_pairs', 'picture_choice', 'true_false', 'order_dialog', 'structured_input'];
 const UI_KEYS = 'translate_to_uk translate_to_de choose_translation build_sentence fill_gap read_and_answer listen_and_choose listen_and_build say_aloud match_pairs choose_picture chat true_false true false check continue correct incorrect correct_answer new_word review lesson_done well_done skip report tap_to_listen slow'.split(' ');
 const VOWELS = new Set('аеєиіїоуюя');
 const BAD_APOS = /[ʼ'`´‘]/;
@@ -291,6 +291,19 @@ function checkExercise(ex, where, ukTexts, deTexts) {
       if (me < 2) warn(where, `nur ${me} Antwortauswahl(en) im Chat`);
       break;
     }
+    case 'structured_input': {
+      U(ex.prompt_uk, `${where}.prompt_uk`); D(ex.prompt_de, `${where}.prompt_de`);
+      if (!isArr(ex.choices) || ex.choices.length < 2 || ex.choices.length > 4) { err(where, 'choices: 2–4'); break; }
+      const ids = new Set(ex.choices.map((c) => c.id));
+      ex.choices.forEach((c, i) => U(c.uk, `${where}.choices[${i}].uk`));
+      if (!isArr(ex.items) || ex.items.length < 4) { err(where, 'items: mind. 4'); break; }
+      ex.items.forEach((it, i) => {
+        const w = `${where}.items[${i}]`;
+        U(it.uk, `${w}.uk`); D(it.de, `${w}.de`); D(it.why_de, `${w}.why_de`);
+        if (!ids.has(it.answer)) err(w, `answer „${it.answer}“ ist keine choice-id`);
+      });
+      break;
+    }
     case 'reading': {
       U(ex.title_uk, `${where}.title_uk`);
       U(ex.text_uk, `${where}.text_uk`);
@@ -504,7 +517,7 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds, global
       usage.set(vid, (usage.get(vid) || 0) + 1);
     }
   });
-  for (const t of TYPES) if (!byType[t]) err(W, `Aufgabentyp „${t}“ fehlt`);
+  for (const t of TYPES) if (t !== 'structured_input' && !byType[t]) err(W, `Aufgabentyp „${t}“ fehlt`);
   const mins = { chat: 3, reading: 2, speak: 5, listening: 6 };
   for (const [t, n] of Object.entries(mins)) if (byType[t] < n) err(W, `${t}: ${byType[t]} (mind. ${n})`);
   for (const id of ownIds) {

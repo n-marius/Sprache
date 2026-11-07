@@ -760,13 +760,6 @@
    "info": "3. Sg. Präsens von усміха́тися (lächeln)"
   },
   {
-   "uk": "злий",
-   "lemma": "злий",
-   "de": "böse, wütend",
-   "pos": "adj",
-   "info": "m. Nom. Sg."
-  },
-  {
    "uk": "ка́же",
    "lemma": "каза́ти",
    "de": "sagt",
@@ -840,8 +833,8 @@
    "uk": "шкода́",
    "lemma": "шкода́",
    "de": "schade",
-   "pos": "adv",
-   "info": "Ой, шкода́! – Oh, wie schade!"
+   "pos": "phrase",
+   "info": "unpersönlich (Prädikativ): Ой, шкода́! – Oh, wie schade!"
   },
   {
    "uk": "диву́ється",
@@ -891,6 +884,48 @@
    "de": "er",
    "pos": "pron",
    "info": "Personalpronomen, 3. Sg. m."
+  },
+  {
+   "uk": "серди́тий",
+   "lemma": "серди́тий",
+   "de": "verärgert, wütend",
+   "pos": "adj",
+   "info": "m. Nom. Sg."
+  },
+  {
+   "uk": "бережі́ть",
+   "lemma": "берегти́",
+   "de": "passen Sie auf (auf sich)",
+   "pos": "verb",
+   "info": "Imperativ (ви) von берегти́; feste Wendung Бережі́ть себе́!"
+  },
+  {
+   "uk": "себе́",
+   "lemma": "себе́",
+   "de": "sich",
+   "pos": "pron",
+   "info": "Reflexivpronomen, Akk.; Бережі́ть себе́! – Passen Sie auf sich auf!"
+  },
+  {
+   "uk": "кому́",
+   "lemma": "хто",
+   "de": "wem; zu wem",
+   "pos": "pron",
+   "info": "Dativ von хто (wer)"
+  },
+  {
+   "uk": "чита́й",
+   "lemma": "чита́ти",
+   "de": "lies!",
+   "pos": "verb",
+   "info": "Imperativ (ти) von чита́ти (lesen)"
+  },
+  {
+   "uk": "ува́жно",
+   "lemma": "ува́жно",
+   "de": "aufmerksam, genau",
+   "pos": "adv",
+   "info": "Adverb"
   }
  ],
  "exercises": [
@@ -2437,7 +2472,7 @@
      "answer": false
     },
     {
-     "q_uk": "Па́ні Ната́лія: «А ви?» – Ма́ркус: «Теж норма́льно». А наспра́вді?",
+     "q_uk": "Па́ні Ната́лія: «А ви?» – Ма́ркус: «Теж норма́льно». А як наспра́вді?",
      "q_de": "Frau Natalija: „Und Ihnen?“ – Markus: „Auch ganz gut.“ Und in Wirklichkeit – wie geht es ihm?",
      "kind": "mc",
      "options": [
@@ -2453,7 +2488,7 @@
      "answer": false
     },
     {
-     "q_uk": "Тара́с – не клі́єнт.",
+     "q_uk": "Тара́с не клі́єнт.",
      "q_de": "Taras ist kein Gast.",
      "kind": "tf",
      "answer": true
@@ -2486,8 +2521,8 @@
      "answer": true
     },
     {
-     "q_uk": "Окса́на: «Ні, ні!» Чому́?",
-     "q_de": "Oksana: „Nein, nein!“ Warum?",
+     "q_uk": "Окса́на ка́же: «Ні, ні!» Що непра́вильно?",
+     "q_de": "Oksana sagt: „Nein, nein!“ Was ist falsch?",
      "kind": "mc",
      "options": [
       "«Приві́т» – ні. «До́брий день» – так.",
@@ -2496,8 +2531,8 @@
      ]
     },
     {
-     "q_uk": "Пан Бондаре́нко ду́же злий.",
-     "q_de": "Herr Bondarenko ist sehr wütend.",
+     "q_uk": "Пан Бондаре́нко ду́же серди́тий.",
+     "q_de": "Herr Bondarenko ist sehr verärgert.",
      "kind": "tf",
      "answer": false
     },
@@ -2593,7 +2628,7 @@
      "options": [
       {
        "uk": "Ой, так! Ви́бачте. До́брий ра́нок!",
-       "de": "Oh, ja! Entschuldigung. Guten Morgen!",
+       "de": "Oh, ja! Entschuldigen Sie. Guten Morgen!",
        "tone": "good",
        "next": "n1d"
       },
@@ -2752,8 +2787,8 @@
     "n3c": {
      "bot": [
       {
-       "uk": "Пога́но? Ой, шкода́! Ну, до поба́чення!",
-       "de": "Schlecht? Oh, wie schade! Na dann, auf Wiedersehen!"
+       "uk": "Пога́но? Ой, як шкода́… Бережі́ть себе́! До поба́чення!",
+       "de": "Schlecht? Oh, wie schade … Passen Sie auf sich auf! Auf Wiedersehen!"
       }
      ],
      "options": [
@@ -3001,9 +3036,9 @@
       {
        "uk": "Так, так. Бува́й!",
        "de": "Ja, ja. Tschüss!",
-       "tone": "ok",
-       "note_de": "Geht – aber erst einmal дя́кую.",
-       "next": "end_ok"
+       "tone": "bad",
+       "note_de": "Ohne дя́кую wirkt das unhöflich – erst Дя́кую!, dann Бува́й!",
+       "next": "end_odd"
       }
      ]
     },
@@ -3072,7 +3107,7 @@
       }
      ],
      "end": "neutral",
-     "summary_de": "Freundlich, aber der Abschied passte nicht ganz (Tageszeit bzw. Plural/Siezen)."
+     "summary_de": "Freundlich, aber nicht ganz passend (fehlender Dank, Tageszeit bzw. Plural/Siezen)."
     },
     "end_abrupt": {
      "bot": [
@@ -3085,6 +3120,164 @@
      "summary_de": "Das Gespräch endete abrupt – Taras hatte dir noch etwas angeboten."
     }
    }
+  },
+  {
+   "id": "e67",
+   "type": "structured_input",
+   "difficulty": 1,
+   "vocab": [
+    "ty",
+    "vy",
+    "a_ty",
+    "buvai",
+    "pryvit",
+    "vybachte",
+    "yak",
+    "yak_spravy"
+   ],
+   "prompt_uk": "Кому́ це ка́жуть?",
+   "prompt_de": "Zu wem sagt man das?",
+   "choices": [
+    {
+     "id": "t",
+     "uk": "Тара́с",
+     "emoji": "🧑"
+    },
+    {
+     "id": "n",
+     "uk": "Па́ні Ната́лія",
+     "emoji": "👵"
+    }
+   ],
+   "items": [
+    {
+     "uk": "А ти?",
+     "de": "Und du?",
+     "answer": "t",
+     "why_de": "ти-Form → zu Taras (man duzt sich)."
+    },
+    {
+     "uk": "А ви?",
+     "de": "Und Sie?",
+     "answer": "n",
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+    },
+    {
+     "uk": "Як ви?",
+     "de": "Wie geht es Ihnen?",
+     "answer": "n",
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+    },
+    {
+     "uk": "Бува́й!",
+     "de": "Tschüss!",
+     "answer": "t",
+     "why_de": "Бува́й ist der lockere Abschied unter Leuten, die sich duzen."
+    },
+    {
+     "uk": "Приві́т!",
+     "de": "Hallo!",
+     "answer": "t",
+     "why_de": "Приві́т ist informell – für Leute, die man duzt."
+    },
+    {
+     "uk": "Ви́бачте!",
+     "de": "Entschuldigen Sie!",
+     "answer": "n",
+     "why_de": "Die Endung -те zeigt die ви-Form."
+    },
+    {
+     "uk": "Як спра́ви?",
+     "de": "Wie geht’s?",
+     "answer": "t",
+     "why_de": "Як спра́ви? ist locker. Zu Frau Natalija: Як ви?"
+    },
+    {
+     "uk": "До́брий день! Як ви?",
+     "de": "Guten Tag! Wie geht es Ihnen?",
+     "answer": "n",
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+    },
+    {
+     "uk": "Норма́льно, а ти?",
+     "de": "Ganz gut, und dir?",
+     "answer": "t",
+     "why_de": "ти-Form → zu Taras (man duzt sich)."
+    },
+    {
+     "uk": "Теж до́бре, дя́кую. А ви?",
+     "de": "Auch gut, danke. Und Ihnen?",
+     "answer": "n",
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+    }
+   ]
+  },
+  {
+   "id": "e68",
+   "type": "structured_input",
+   "listen": true,
+   "difficulty": 2,
+   "vocab": [
+    "ty",
+    "vy",
+    "a_ty",
+    "buvai",
+    "pryvit",
+    "vybachte",
+    "dobryi_vechir"
+   ],
+   "prompt_uk": "Кому́ це ка́жуть?",
+   "prompt_de": "Zu wem sagt man das? (Hören)",
+   "choices": [
+    {
+     "id": "t",
+     "uk": "Тара́с",
+     "emoji": "🧑"
+    },
+    {
+     "id": "n",
+     "uk": "Па́ні Ната́лія",
+     "emoji": "👵"
+    }
+   ],
+   "items": [
+    {
+     "uk": "Приві́т! Як спра́ви?",
+     "de": "Hallo! Wie geht’s?",
+     "answer": "t",
+     "why_de": "ти-Form → zu Taras (man duzt sich)."
+    },
+    {
+     "uk": "До́брий ве́чір! Як ви?",
+     "de": "Guten Abend! Wie geht es Ihnen?",
+     "answer": "n",
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+    },
+    {
+     "uk": "Ду́же до́бре, а ти?",
+     "de": "Sehr gut, und dir?",
+     "answer": "t",
+     "why_de": "ти-Form → zu Taras (man duzt sich)."
+    },
+    {
+     "uk": "Ви́бачте, будь ла́ска!",
+     "de": "Entschuldigen Sie bitte!",
+     "answer": "n",
+     "why_de": "Ви́бачте (-те) ist die ви-Form."
+    },
+    {
+     "uk": "Ну, бува́й!",
+     "de": "Na dann, tschüss!",
+     "answer": "t",
+     "why_de": "Бува́й – Abschied unter Duzenden."
+    },
+    {
+     "uk": "Дя́кую! А ви?",
+     "de": "Danke! Und Ihnen?",
+     "answer": "n",
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+    }
+   ]
   }
  ]
 }

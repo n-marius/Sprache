@@ -13,6 +13,7 @@ const MODULES = {
   chat: () => import('./chat.js'),
   reading: () => import('./reading.js'),
   speak: () => import('./speak.js'),
+  structured_input: () => import('./structured_input.js'),
 };
 
 export const EXERCISE_TYPES = Object.keys(MODULES);

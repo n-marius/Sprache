@@ -78,6 +78,7 @@ const APP_ASSETS = [
   './js/exercises/chat.js',
   './js/exercises/reading.js',
   './js/exercises/speak.js',
+  './js/exercises/structured_input.js',
   './js/views/today.js',
   './js/views/course.js',
   './js/views/lesson.js',

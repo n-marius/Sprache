@@ -229,3 +229,21 @@
   .ex-pic-emoji, .ex-tf-icon, .ex-reveal-chev, .ex-pic-label { transition: none; }
   .ex-option.is-selected .ex-pic-emoji, .ex-tf .ex-option.is-selected .ex-tf-icon { transform: none; }
 }
+
+/* structured_input: Bedeutung aus der Form */
+.si-prompt { font-size: var(--fs-title3); font-weight: 700; margin-bottom: 4px; }
+.si-prompt-de { display: block; font-size: var(--fs-sub); font-weight: 400; }
+.si-count { color: var(--label-2); margin: 8px 0; }
+.si-sentence { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 96px; padding: 16px; margin-bottom: 16px;
+  border-radius: var(--r-l); background: var(--surface); box-shadow: 0 2px 0 var(--separator); }
+.si-uk { font-size: 1.6rem; font-weight: 700; text-align: center; }
+.si-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.si-choice { flex-direction: column; justify-content: center; gap: 6px; min-height: 96px; text-align: center; }
+.si-emoji { font-size: 2rem; }
+.si-feedback { min-height: 64px; margin-top: 14px; }
+.si-why { display: flex; gap: 8px; padding: 10px 12px; border-radius: var(--r-m); border: 1.5px solid; font-size: var(--fs-sub); }
+.si-why p { margin: 2px 0 0; }
+.si-why.is-ok { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-ink); }
+.si-why.is-bad { background: var(--bad-bg); border-color: var(--bad-border); color: var(--bad-ink); }
+.si-why .de { color: inherit; }
+.si-why > svg, .si-why .icon { width: 20px; height: 20px; flex: none; margin-top: 1px; }
