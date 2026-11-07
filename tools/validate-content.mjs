@@ -535,7 +535,7 @@ if (cur) {
       if (!['ready', 'planned'].includes(l.status)) err(lw, `status „${l.status}“ ungültig`);
       if (!isArr(l.goals_de) || !l.goals_de.length) err(lw, 'goals_de fehlt');
       if (l.status === 'ready' && !isStr(l.file)) err(lw, 'file fehlt');
-      if (l.status === 'planned') {
+      if (l.status === 'planned' && !isStr(l.file)) {
         if (!isArr(l.grammar_de) || !l.grammar_de.length) err(lw, 'grammar_de fehlt');
         if (!isArr(l.vocab_fields_de) || !l.vocab_fields_de.length) err(lw, 'vocab_fields_de fehlt');
       }

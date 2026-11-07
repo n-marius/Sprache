@@ -21,7 +21,7 @@ function goalsCard(goals) {
 }
 
 function plannedPage(meta, app) {
-  const prep = meta.status === 'error' || meta.status === 'ready';
+  const prep = meta.status === 'error' || meta.status === 'ready' || (meta.status === 'planned' && !!meta.file);
   const color = anim.themeColor?.(meta.theme) || 'var(--green)';
   const list = (title, ic, items) => items?.length ? h('section', { class: 'card v-goals' },
     h('h2', { class: 'v-card-title' }, icon(ic), title),

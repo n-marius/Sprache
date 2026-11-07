@@ -195,7 +195,7 @@
      "title_uk": "У кафе́",
      "title_de": "Im Café",
      "theme": "cafe",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann im Café Getränke und Kleinigkeiten bestellen, nachfragen und um die Rechnung bitten.",
       "Ich kann einfache Wünsche äußern (ich möchte …)."
@@ -229,7 +229,7 @@
      "title_uk": "Що ти лю́биш?",
      "title_de": "Was isst du gern?",
      "theme": "food",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann sagen, was ich gern esse und trinke, und andere danach fragen.",
       "Ich kann über Mahlzeiten sprechen (Frühstück, Mittag-, Abendessen)."
@@ -259,7 +259,7 @@
      "title_uk": "Скі́льки ко́штує?",
      "title_de": "Was kostet das?",
      "theme": "shopping",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann nach Preisen fragen und Preise verstehen.",
       "Ich kann einfache Einkäufe machen (Menge, Bezahlung bar/Karte)."
@@ -297,7 +297,7 @@
      "title_uk": "Моя́ кварти́ра",
      "title_de": "Meine Wohnung",
      "theme": "home",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann meine Wohnung und Zimmer einfach beschreiben.",
       "Ich kann sagen und fragen, wo sich etwas befindet.",
@@ -324,7 +324,7 @@
      "title_uk": "Де апте́ка?",
      "title_de": "Wo ist die Apotheke?",
      "theme": "city",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann nach dem Weg fragen und einfache Wegbeschreibungen verstehen (geradeaus, rechts, links, nah, weit).",
       "Ich kann wichtige Orte in der Stadt benennen."
@@ -358,7 +358,7 @@
      "title_uk": "Котра́ годи́на?",
      "title_de": "Wie spät ist es?",
      "theme": "time",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann nach der Uhrzeit fragen und volle Stunden angeben.",
       "Ich kann sagen, um wie viel Uhr und zu welcher Tageszeit etwas stattfindet."
@@ -388,7 +388,7 @@
      "title_uk": "Сього́дні понеді́лок",
      "title_de": "Heute ist Montag",
      "theme": "calendar",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann die Wochentage nennen und sagen, wann ich etwas mache (heute, morgen, am Montag …).",
       "Ich kann einfache Verabredungen treffen, zu- oder absagen."
@@ -418,7 +418,7 @@
      "title_uk": "Моя́ робо́та",
      "title_de": "Mein Beruf",
      "theme": "work",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann meinen Beruf nennen und andere nach ihrem Beruf fragen.",
       "Ich kann sagen, wo ich arbeite, und meine Arbeit kurz bewerten (interessant, schwer)."
@@ -448,7 +448,7 @@
      "title_uk": "В о́фісі",
      "title_de": "Im Büro",
      "theme": "office",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann Gegenstände im Büro benennen und um etwas bitten.",
       "Ich kann höfliche Aufforderungen verstehen und verwenden (Kommen Sie herein, warten Sie bitte).",
@@ -479,7 +479,7 @@
      "title_uk": "Ва́ші докуме́нти, будь ла́ска",
      "title_de": "Ihre Dokumente, bitte",
      "theme": "law",
-     "status": "ready",
+     "status": "planned",
      "goals_de": [
       "Ich kann in einfachen Formularen und am Schalter meine persönlichen Daten angeben (Vorname, Nachname, Adresse, Geburtsdatum, Staatsangehörigkeit).",
       "Ich kann Dokumente vorzeigen und einfache Aufforderungen verstehen (Zeigen Sie …, Unterschreiben Sie …).",

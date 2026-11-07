@@ -38,11 +38,11 @@ h1, h2, h3, h4, p { margin: 0; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Ukrainischer Text: Kombinationsakzente sauber, keine Silbentrennung mitten im Wort */
-.uk { font-feature-settings: "kern" 1; hyphens: manual; overflow-wrap: break-word; }
+.uk { font-feature-settings: "kern" 1; hyphens: manual; overflow-wrap: break-word; white-space: pre-line; }
 .uk .w { border-radius: 4px; }
 .uk-tap .w { cursor: pointer; transition: background-color var(--dur-1); }
 .uk-tap .w:active, .uk-tap .w.is-active { background: var(--sel-bg); box-shadow: 0 0 0 2px var(--sel-bg); }
-.de { color: var(--label-2); }
+.de { color: var(--label-2); white-space: pre-line; }
 .hint-de { font-size: var(--fs-foot); color: var(--label-2); }
 
 /* Typo-Klassen */

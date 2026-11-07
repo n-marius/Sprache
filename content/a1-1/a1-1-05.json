@@ -948,6 +948,13 @@
    "de": "Barsyk (Katername)",
    "pos": "name",
    "info": "Name von Oksanas Kater"
+  },
+  {
+   "uk": "чудо́во",
+   "lemma": "чудо́во",
+   "de": "wunderbar, super",
+   "pos": "adv",
+   "info": "Adverb"
   }
  ],
  "exercises": [
@@ -1737,7 +1744,8 @@
     "rozumity",
     "zaraz",
     "batky",
-    "sestra"
+    "sestra",
+    "nimetskyi"
    ],
    "difficulty": 2,
    "title_uk": "Ма́ркус",
@@ -2540,6 +2548,61 @@
      "de": "Ein bisschen. Ich lerne Ukrainisch."
     }
    ]
+  },
+  {
+   "id": "e61",
+   "type": "mc_translate",
+   "dir": "de-uk",
+   "vocab": [
+    "nimetskyi",
+    "vyvchaty"
+   ],
+   "difficulty": 1,
+   "prompt": "Ich lerne Deutsch.",
+   "options": [
+    "Я вивча́ю німе́цьку мо́ву.",
+    "Я вивча́ю украї́нську мо́ву.",
+    "Я зна́ю німе́цьку мо́ву.",
+    "Ти вивча́єш німе́цьку мо́ву."
+   ]
+  },
+  {
+   "id": "e62",
+   "type": "cloze",
+   "vocab": [
+    "nimetskyi",
+    "kraina"
+   ],
+   "difficulty": 2,
+   "text": "Німе́ччина – {{краї́на}}. Ма́ркус зна́є {{німе́цьку}} мо́ву.",
+   "options": [
+    [
+     "краї́на",
+     "мі́сто",
+     "ву́лиця"
+    ],
+    [
+     "німе́цьку",
+     "німе́цька",
+     "німе́цький"
+    ]
+   ],
+   "translation_de": "Deutschland ist ein Land. Markus kann Deutsch."
+  },
+  {
+   "id": "e63",
+   "type": "true_false",
+   "vocab": [
+    "kraina",
+    "misto",
+    "nimetskyi"
+   ],
+   "difficulty": 1,
+   "context_uk": "Ма́ркус живе́ в Берлі́ні. Він зна́є німе́цьку мо́ву.",
+   "context_de": "Markus wohnt in Berlin. Er kann Deutsch.",
+   "statement_uk": "Берлі́н – це краї́на.",
+   "answer": false,
+   "explanation_de": "Berlin ist eine Stadt (мі́сто), kein Land (краї́на)."
   }
  ]
 }

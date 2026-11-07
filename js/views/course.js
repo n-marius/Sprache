@@ -64,7 +64,7 @@ function lessonNode(app, meta, i, status, phaseColor) {
   const st = app.store.state.lessons?.[meta.id];
   const bubble = status === 'current'
     ? h('span', { class: 'v-node-bubble' }, st?.sessions ? 'Weiter' : 'Start') : null;
-  const prep = meta.status === 'error' || meta.status === 'ready';
+  const prep = meta.status === 'error' || meta.status === 'ready' || (meta.status === 'planned' && !!meta.file);
   const badge = status === 'planned' ? h('span', { class: 'badge v-node-badge' }, prep ? 'in Vorbereitung' : 'geplant')
     : status === 'locked' ? h('span', { class: 'v-node-lock' }, icon('lock'))
       : m.level >= 4 ? h('span', { class: 'v-node-crown' }, icon('star', { fill: true })) : null;
