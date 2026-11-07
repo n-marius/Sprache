@@ -6,6 +6,7 @@ import { speakerButton } from '../ui/audio-button.js';
 import { startLesson } from '../engine/flow.js';
 import { MASTERY_LABELS } from '../engine/progress.js';
 import { ringSvg, sty } from './today.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
 
 function fmtTime(ms) {
   const s = Math.max(0, Math.round((ms || 0) / 1000));
@@ -15,7 +16,7 @@ function fmtTime(ms) {
 
 function tile(label, color, ink, valueEl) {
   return h('div', { class: 'v-tile', style: sty({ '--c': color, '--c-ink': ink }) },
-    h('div', { class: 'v-tile-k' }, label), h('div', { class: 'v-tile-v num' }, valueEl));
+    h('div', { class: 'v-tile-k' }, uiLabel(label, { cls: 'v-tile-l' })), h('div', { class: 'v-tile-v num' }, valueEl));
 }
 
 export function render(params, app) {
@@ -33,9 +34,9 @@ export function render(params, app) {
   const accEl = h('span', '0 %');
   const newEl = h('span', '0');
   const tiles = h('div', { class: 'v-sum-tiles' },
-    tile('Genauigkeit', 'var(--green)', 'var(--green-ink)', [icon('target'), accEl]),
-    tile('Zeit', 'var(--blue)', 'var(--blue-ink)', [icon('clock'), h('span', fmtTime(s.durationMs))]),
-    tile('Neue Wörter', 'var(--orange)', 'var(--orange-edge)', [icon('sparkles'), newEl]));
+    tile('accuracy', 'var(--green)', 'var(--green-ink)', [icon('target'), accEl]),
+    tile('time', 'var(--blue)', 'var(--blue-ink)', [icon('clock'), h('span', fmtTime(s.durationMs))]),
+    tile('new_words', 'var(--orange)', 'var(--orange-edge)', [icon('sparkles'), newEl]));
 
   const sub = s.total
     ? `${s.correct} von ${s.total} Aufgaben richtig${s.reviewedWords ? ` · ${s.reviewedWords} Wörter wiederholt` : ''}`
@@ -57,13 +58,13 @@ export function render(params, app) {
   if (isLesson) rows.push(h('div', { class: 'v-sum-row' },
     h('span', { class: 'v-cta-glyph emoji', style: sty({ '--theme-c': anim.themeColor?.(theme) || 'var(--green)', width: '52px', height: '52px', fontSize: '28px', borderRadius: '16px' }) }, anim.themeGlyph(theme)),
     h('div', { class: 'v-sum-row-main' },
-      h('div', { class: 'v-sum-row-title' }, 'Meisterschaft', levelText ? h('span', { class: 't-2 t-foot' }, ` · ${levelText}`) : null),
+      h('div', { class: 'v-sum-row-title' }, uiLabel('mastery', { layout: 'inline' }), levelText ? h('span', { class: 't-2 t-foot' }, ` · ${levelText}`) : null),
       h('div', { class: 'v-sum-row-sub' }, `${Math.round((s.masteryBefore || 0) * 100)} % → ${Math.round((s.masteryAfter || 0) * 100)} %`),
       mastery)));
   rows.push(h('div', { class: 'v-sum-row' },
     ringSvg(goal.goal ? goal.done / goal.goal : 0, { size: 52, stroke: 7 }),
     h('div', { class: 'v-sum-row-main' },
-      h('div', { class: 'v-sum-row-title' }, goal.met ? 'Tagesziel erreicht' : 'Tagesziel'),
+      h('div', { class: 'v-sum-row-title' }, uiLabel(goal.met ? 'goal_met' : 'daily_goal', { layout: 'inline' })),
       h('div', { class: 'v-sum-row-sub num' }, `${goal.done} / ${goal.goal} Aufgaben heute`))));
   rows.push(h('div', { class: 'v-sum-row' },
     flame,
@@ -73,9 +74,9 @@ export function render(params, app) {
 
   const words = (s.newWords || []).filter(Boolean);
   const wordList = words.length ? listGroup({
-    header: words.length === 1 ? 'Neues Wort' : `${words.length} neue Wörter`,
+    header: words.length === 1 ? uiLabel(app.t('new_word'), { layout: 'inline' }) : uiLabel({ uk: `${uiT('new_words').uk} · ${words.length}`, de: `${words.length} neue Wörter` }, { layout: 'inline' }),
     rows: words.map(v => ({
-      title: ukText(v.uk, { tap: false, cls: 'row-title' }),
+      title: ukText(v.uk, { cls: 'row-title' }),
       subtitle: v.de,
       icon: v.emoji ? { emoji: v.emoji, color: 'var(--surface-2)' } : null,
       accessory: speakerButton(v.uk, { size: 's' }),
@@ -84,7 +85,7 @@ export function render(params, app) {
 
   const again = () => { if (isLesson) startLesson(app, s.lessonId); else app.navigate('#/session/review'); };
   const storyBtn = lesson?.story
-    ? h('a', { class: 'btn btn-secondary btn-block', href: `#/story/${encodeURIComponent(s.lessonId)}?review=1` }, icon('book'), 'Geschichte nochmal lesen (ohne Übersetzung)')
+    ? h('a', { class: 'btn btn-secondary btn-block', href: `#/story/${encodeURIComponent(s.lessonId)}?review=1` }, icon('book'), holdLabel('read_again'))
     : null;
 
   const el = h('div', { class: 'v-sum' },
@@ -98,8 +99,8 @@ export function render(params, app) {
       wordList ? h('div', { class: 'v-sum-words' }, wordList) : null,
       storyBtn),
     h('div', { class: 'v-sum-actions' }, h('div', { class: 'v-sum-actions-inner' },
-      h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block', on: { click: () => app.navigate('#/today') } }, 'Weiter'),
-      h('button', { type: 'button', class: 'btn btn-secondary btn-lg btn-block', on: { click: again } }, icon('refresh'), 'Noch eine Session'))));
+      h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block', on: { click: () => app.navigate('#/today') } }, holdLabel(app.t('continue'))),
+      h('button', { type: 'button', class: 'btn btn-secondary btn-lg btn-block', on: { click: again } }, icon('refresh'), holdLabel('again_session')))));
 
   let alive = true;
   return {

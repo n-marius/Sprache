@@ -1636,5 +1636,33 @@
   "de": "lesen",
   "pos": "verb",
   "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "і́гри",
+  "lemma": "гра",
+  "de": "Spiele",
+  "pos": "noun",
+  "info": "Nom. Pl. von гра (Spiel, f.)"
+ },
+ {
+  "uk": "кросво́рд",
+  "lemma": "кросво́рд",
+  "de": "Kreuzworträtsel",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "горизонта́лі",
+  "lemma": "горизонта́ль",
+  "de": "Waagerechte",
+  "pos": "noun",
+  "info": "Lok. Sg. f.; по горизонта́лі – waagrecht"
+ },
+ {
+  "uk": "вертика́лі",
+  "lemma": "вертика́ль",
+  "de": "Senkrechte",
+  "pos": "noun",
+  "info": "Lok. Sg. f.; по вертика́лі – senkrecht"
  }
 ]

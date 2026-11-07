@@ -1,5 +1,6 @@
 // #/reports – alle Meldungen gebündelt: neueste oben, aufklappbar, löschbar, Sync-Status; Export (.txt), Kopieren, Gist-Sync.
-import { h, icon, clear } from '../ui/dom.js';
+import { h, icon, clear, ukText } from '../ui/dom.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
 import { page, toast, confirmDialog } from '../ui/shell.js';
 import { haptic } from '../ui/haptics.js';
 import { sortedReports, deleteReport, clearReports, categoryMeta, typeLabel, exerciseSummary, fmtDateTime, unsyncedCount, reportsFilename } from '../services/reports.js';
@@ -66,10 +67,10 @@ export function render(params, app) {
     const last = store.state.meta.lastSyncAt;
     const gistId = store.state.settings.gistId;
     const syncBtn = h('button', { type: 'button', class: 'btn btn-blue btn-block r-sync-btn', on: { click: () => onSync(syncBtn) } },
-      h('span', { class: 'r-spin' }, icon('refresh')), 'Mit Gist synchronisieren');
+      h('span', { class: 'r-spin' }, icon('refresh')), holdLabel({ uk: uiT('sync_now').uk, de: 'Mit Gist synchronisieren' }));
     return h('section', { class: 'r-hero' },
       h('div', { class: 'r-hero-stats' },
-        h('div', { class: 'r-stat' }, h('div', { class: 'r-stat-num num' }, String(total)), h('div', { class: 'r-stat-label' }, total === 1 ? 'Meldung' : 'Meldungen')),
+        h('div', { class: 'r-stat' }, h('div', { class: 'r-stat-num num' }, String(total)), h('div', { class: 'r-stat-label' }, uiLabel('reports'))),
         h('div', { class: 'r-stat' }, h('div', { class: ['r-stat-num num', open ? 'is-open' : 'is-done'] }, String(open)), h('div', { class: 'r-stat-label' }, 'nicht synchronisiert')),
         h('div', { class: 'r-stat r-stat-wide' },
           h('div', { class: 'r-stat-when' }, icon('cloud'), last ? relTime(last) : 'noch nie'),
@@ -78,7 +79,7 @@ export function render(params, app) {
         syncBtn,
         h('div', { class: 'r-actions-row' },
           h('button', { type: 'button', class: 'btn btn-secondary r-act', disabled: !total, on: { click: onDownload } }, icon('download'), 'Als .txt'),
-          h('button', { type: 'button', class: 'btn btn-secondary r-act', disabled: !total, on: { click: onCopy } }, icon('copy'), 'Kopieren'))));
+          h('button', { type: 'button', class: 'btn btn-secondary r-act', disabled: !total, on: { click: onCopy } }, icon('copy'), holdLabel('copy', { de: false })))));
   }
 
   function item(r) {
@@ -98,7 +99,7 @@ export function render(params, app) {
       h('details', { class: 'r-details r-details-inline' },
         h('summary', { class: 'r-details-summary' }, h('span', { class: 'r-details-title' }, 'Aufgabeninhalt (JSON)'), icon('chevron-down', { cls: 'r-details-chev' })),
         h('pre', { class: 'r-json' }, JSON.stringify(r.exercise, null, 2))),
-      h('button', { type: 'button', class: 'btn btn-ghost r-del', on: { click: () => onDelete(r) } }, icon('trash'), 'Meldung löschen'));
+      h('button', { type: 'button', class: 'btn btn-ghost r-del', on: { click: () => onDelete(r) } }, icon('trash'), holdLabel({ uk: uiT('delete').uk, de: 'Meldung löschen' })));
     const head = h('button', {
       type: 'button', class: 'r-item-head', 'aria-expanded': String(open),
       on: { click: () => {
@@ -112,7 +113,7 @@ export function render(params, app) {
         h('span', { class: 'r-item-title' }, r.category),
         h('span', { class: 'r-item-sub' }, [r.lessonId, typeLabel(r.exType), relTime(r.createdAt)].filter(Boolean).join(' · ')),
         summary ? h('span', { class: 'r-item-snippet' }, summary) : null),
-      h('span', { class: ['badge', r.syncedAt ? 'green' : '', 'r-item-badge'] }, r.syncedAt ? icon('check') : null, r.syncedAt ? 'synchronisiert' : 'lokal'),
+      h('span', { class: ['badge', r.syncedAt ? 'green' : '', 'r-item-badge'], title: uiT(r.syncedAt ? 'synced' : 'local').de }, r.syncedAt ? icon('check') : null, ukText(uiT(r.syncedAt ? 'synced' : 'local').uk, { hold: true })),
       icon('chevron-down', { cls: 'r-item-chev' }));
     const el = h('article', { class: ['r-item', open && 'is-open'] }, head, body);
     return el;
@@ -140,23 +141,23 @@ export function render(params, app) {
     if (!reports.length) {
       listHost.append(h('div', { class: 'r-empty' },
         h('div', { class: 'r-empty-glyph' }, icon('flag')),
-        h('div', { class: 't-title3' }, 'Noch keine Meldungen'),
+        h('div', { class: 't-title3' }, uiLabel('no_reports')),
         h('p', { class: 't-sub t-2' }, 'Fällt dir in einer Aufgabe etwas auf – ein Fehler, eine falsche Betonung oder eine unfaire Bewertung –, tippe oben auf die Flagge. Alle Meldungen landen hier gebündelt.')));
       return;
     }
     listHost.append(
       h('div', { class: 'section-header' }, `${reports.length} ${reports.length === 1 ? 'Meldung' : 'Meldungen'} · neueste zuerst`),
       h('div', { class: 'r-list' }, reports.map(item)),
-      h('button', { type: 'button', class: 'r-clear', on: { click: onClearAll } }, 'Alle Meldungen löschen'));
+      h('button', { type: 'button', class: 'r-clear', on: { click: onClearAll } }, holdLabel({ uk: uiT('delete_all').uk, de: 'Alle Meldungen löschen' }, { layout: 'inline' })));
   }
 
   refresh();
   const unsub = store.subscribe(() => { if (!busy) refresh(); });
 
   const el = page({
-    title: 'Meldungen',
+    title: uiT('reports'),
     subtitle: 'Hinweise zu Aufgaben – zum Korrigieren der Inhalte',
-    back: { label: 'Mehr', href: '#/settings' },
+    back: { label: uiT('tab_more'), href: '#/settings' },
     cls: 'r-page',
     children: [heroHost, listHost],
   });

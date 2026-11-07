@@ -11,6 +11,7 @@ import { makeCtx } from '../exercises/ctx.js';
 import { createLessonSession, createReviewSession } from '../engine/session.js';
 import { isListenOff, isSpeakOff, autoplayAllowed } from '../audio-mode.js';
 import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
+import { holdLabel, uiT } from '../ui/ui-label.js';
 
 const POS_DE = {
   noun: 'Substantiv', verb: 'Verb', adj: 'Adjektiv', adv: 'Adverb', pron: 'Pronomen', num: 'Zahlwort',
@@ -197,7 +198,7 @@ export function render(params, app) {
           h('div', { class: 'sess-example-row' }, ukText(x.uk, { cls: 'sess-example-uk' }), speakerButton(x.uk, { size: 's' })),
           x.de ? deText(x.de, { cls: 'sess-example-de' }) : null))) : null,
         lesson?.explanation ? h('button', { type: 'button', class: 'sess-link', on: { click: () => openExplainSheet(lesson) } },
-          icon('book'), 'Erklärung öffnen') : null));
+          icon('book'), holdLabel({ uk: uiT('explanation').uk, de: 'Erklärung öffnen' }, { layout: 'inline' })) : null));
     if (my !== token) return;
     itemEl = el;
     phase = 'info';
@@ -384,7 +385,7 @@ export function render(params, app) {
     const e = lesson.explanation || {};
     let s;
     s = sheet({
-      title: 'Erklärung',
+      title: uiT('explanation'),
       content: h('div', { class: 'sess-explain-sheet' },
         h('h3', { class: 't-headline' }, e.title_de || lesson.title_de || 'Erklärung'),
         e.intro_de ? h('p', { class: 't-callout t-2' }, e.intro_de) : null,

@@ -356,3 +356,6 @@ a:has(.uk-hold), button:has(.uk-hold), [role="button"]:has(.uk-hold) { -webkit-t
 .uk-hold .w { border-radius: 4px; transition: background-color var(--dur-1); }
 .uk-hold .w.is-active { background: var(--sel-bg); box-shadow: 0 0 0 2px var(--sel-bg); }
 .btn-primary .uk-hold .w.is-active, .btn-blue .uk-hold .w.is-active, .btn-danger .uk-hold .w.is-active { background: rgba(255,255,255,.28); box-shadow: 0 0 0 2px rgba(255,255,255,.28); }
+.list-row .row-title.ui-l-stack { display: flex; flex-direction: column; align-items: flex-start; }
+.list-row .row-title.ui-l-stack > .ui-de { font-size: .7em; margin-top: 0; }
+.s-seg-row .row-main { min-width: 0; }

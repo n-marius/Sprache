@@ -96,9 +96,9 @@ export function render(params, app) {
 
   const links = listGroup({
     rows: [
-      lesson.story ? { title: holdLabel('story', { layout: 'inline', cls: 'row-title' }), subtitle: lesson.story.title_de || 'Ankertext der Lektion', icon: { name: 'chat', color: 'var(--orange)' },
+      lesson.story ? { title: holdLabel('story', { cls: 'row-title' }), subtitle: lesson.story.title_de || 'Ankertext der Lektion', icon: { name: 'chat', color: 'var(--orange)' },
         href: `#/story/${encodeURIComponent(id)}`, accessory: 'chevron' } : null,
-      { title: holdLabel('explanation', { layout: 'inline', cls: 'row-title' }), subtitle: lesson.explanation?.title_de || 'Grammatik und Wendungen', icon: { name: 'bulb', color: 'var(--yellow)' },
+      { title: holdLabel('explanation', { cls: 'row-title' }), subtitle: lesson.explanation?.title_de || 'Grammatik und Wendungen', icon: { name: 'bulb', color: 'var(--yellow)' },
         href: `#/explain/${encodeURIComponent(id)}`, accessory: 'chevron' },
     ],
   });

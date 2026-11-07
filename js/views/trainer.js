@@ -57,7 +57,7 @@ export function render(params, app) {
     ];
     const isSel = v => (v === 'lesson' ? prefs.scope.startsWith('lesson:') : prefs.scope === v);
     const scopeRows = scopes.map(sc => ({
-      title: holdLabel(sc.title, { layout: 'inline', cls: 'row-title' }), subtitle: sc.subtitle, icon: { name: sc.iconName, color: sc.color },
+      title: holdLabel(sc.title, { cls: 'row-title' }), subtitle: sc.subtitle, icon: { name: sc.iconName, color: sc.color },
       detail: sc.n != null ? String(sc.n) : null,
       cls: ['tr-scope', isSel(sc.value) && 'is-selected'].filter(Boolean).join(' '),
       accessory: isSel(sc.value) ? icon('check', { cls: 'tr-check' }) : (sc.value === 'lesson' ? 'chevron' : h('span', { class: 'tr-check-space' })),
@@ -87,7 +87,7 @@ export function render(params, app) {
       h('section', { class: 'tr-section' }, h('div', { class: 'section-header' }, uiLabel('mode', { layout: 'inline' })), modeSeg,
         listenOff ? h('button', { type: 'button', class: 'tr-muted-note', on: { click: () => openAudioModeSheet(app) } }, icon('speaker'), 'Hören ist gerade aus – antippen zum Ändern') : null),
       h('div', { class: 'tr-start-wrap' }, startBtn, hint),
-      listGroup({ rows: [{ title: holdLabel('word_list', { layout: 'inline', cls: 'row-title' }), subtitle: 'Alle Wörter mit Stärke, Suche und Filter', icon: { name: 'search', color: 'var(--blue)' }, href: '#/words', accessory: 'chevron' }] }),
+      listGroup({ rows: [{ title: holdLabel('word_list', { cls: 'row-title' }), subtitle: 'Alle Wörter mit Stärke, Suche und Filter', icon: { name: 'search', color: 'var(--blue)' }, href: '#/words', accessory: 'chevron' }] }),
     );
   }
 

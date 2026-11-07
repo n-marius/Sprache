@@ -8,6 +8,7 @@ import { startLesson, markExplained } from '../engine/flow.js';
 import { isUnlocked } from '../engine/progress.js';
 import { addMined, isMined } from '../services/mining.js';
 import { toast } from '../ui/shell.js';
+import { uiT } from '../ui/ui-label.js';
 
 const CYR = /[Ѐ-ӿ]/;
 
@@ -58,7 +59,7 @@ export function examples(app, list, lessonId) {
       type: 'button', class: ['icon-btn', 'xp-mine', isMined(app, ex.uk) && 'is-on'], 'aria-label': 'Satz merken',
       on: { click: e => {
         e.stopPropagation();
-        if (addMined(app, { uk: ex.uk, de: ex.de, lessonId, source: 'explain' })) { mineBtn.classList.add('is-on'); toast('Satz im Trainer gespeichert'); }
+        if (addMined(app, { uk: ex.uk, de: ex.de, lessonId, source: 'explain' })) { mineBtn.classList.add('is-on'); toast('Satz unter Vokabeln (Слова́) gespeichert'); }
       } },
     }, icon('plus'));
     return h('li', { class: 'xp-example' },
@@ -122,7 +123,7 @@ export function render(params, app) {
 
   return page({
     title: x?.title_de || 'Erklärung', largeTitle: false, cls: 'xp-page',
-    back: start ? { href: `#/lesson/${encodeURIComponent(id)}`, label: 'Lektion' } : true,
+    back: start ? { href: `#/lesson/${encodeURIComponent(id)}`, label: uiT('lesson') } : true,
     children: [h('article', { class: 'xp-article' }, hero, ...body, actions)],
   });
 }

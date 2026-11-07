@@ -7,6 +7,11 @@ import { speakerButton } from '../ui/audio-button.js';
 import { autoplayAllowed } from '../audio-mode.js';
 import { createTrainerRound, cardFaces, RATING_LABELS, isMarked, toggleMarked } from '../engine/trainer.js';
 import { shuffle } from '../engine/util.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+
+const RATE_KEY = { 1: 'rate_again', 2: 'rate_hard', 3: 'rate_good', 4: 'rate_easy' };
+const rateUk = G => uiT(RATE_KEY[G]).uk;
+const badgeUk = (key, cls) => h('span', { class: ['badge', cls], title: uiT(key).de }, ukText(uiT(key).uk));
 
 const RATE_CLS = { 1: 'tr-rate-again', 2: 'tr-rate-hard', 3: 'tr-rate-good', 4: 'tr-rate-easy' };
 const DIR_LABEL = { 'de-uk': 'Deutsch → Ukrainisch', 'uk-de': 'Ukrainisch → Deutsch', mixed: 'Gemischt' };
@@ -90,9 +95,9 @@ export function render(params, app) {
   function tags() {
     return h('div', { class: 'tr-card-tags' },
       h('span', { class: 'badge blue' }, item.dir === 'de-uk' ? 'DE → UK' : 'UK → DE'),
-      item.isNew ? h('span', { class: 'badge green' }, 'neu') : null,
-      item.retry ? h('span', { class: 'badge red' }, 'nochmal') : null,
-      item.entry.kind === 'sentence' ? h('span', { class: 'badge yellow' }, 'Satz') : null,
+      item.isNew ? badgeUk('new_badge', 'green') : null,
+      item.retry ? badgeUk('rate_again', 'red') : null,
+      item.entry.kind === 'sentence' ? badgeUk('sentence', 'yellow') : null,
       item.entry.kind === 'vocab' ? markBtn() : null);
   }
 
@@ -100,19 +105,19 @@ export function render(params, app) {
     const id = item.entry.id;
     const b = h('button', { type: 'button', class: ['tr-mark', isMarked(app, id) && 'is-on'], 'aria-pressed': String(isMarked(app, id)), title: 'Als schwierig markieren',
       on: { click: ev => { ev.stopPropagation(); const on = toggleMarked(app, id); b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', String(on)); haptic('light'); } } },
-    icon('target'), h('span', 'schwierig'));
+    icon('target'), ukText(uiT('hard_badge').uk, { hold: true }));
     return b;
   }
 
   function renderCard() {
     phase = 'front';
     const faces = cardFaces(item);
-    const front = h('div', { class: 'tr-face tr-front' }, frontNode(faces.front, faces), h('div', { class: 'tr-tap-hint' }, 'Antippen zum Aufdecken'));
+    const front = h('div', { class: 'tr-face tr-front' }, frontNode(faces.front, faces), h('div', { class: 'tr-tap-hint' }, holdLabel('tap_to_reveal')));
     const back = h('div', { class: 'tr-face tr-back', 'aria-hidden': 'true' });
     const card = h('div', { class: 'tr-card', role: 'button', tabindex: '0', 'aria-label': 'Karte aufdecken', on: { click: () => reveal() } },
       tags(), h('div', { class: 'tr-flip' }, front, back));
     stage.append(card);
-    const revealBtn = h('button', { type: 'button', class: 'btn btn-blue btn-lg btn-block btn-caps', on: { click: () => reveal() } }, 'Aufdecken');
+    const revealBtn = h('button', { type: 'button', class: 'btn btn-blue btn-lg btn-block btn-caps', on: { click: () => reveal() } }, holdLabel('reveal'));
     foot.append(h('div', { class: 'tr-foot-inner' }, revealBtn));
     anim.pop(card);
 
@@ -127,11 +132,12 @@ export function render(params, app) {
       haptic('light');
       const pv = round.preview(item);
       clear(foot).append(h('div', { class: 'tr-foot-inner' },
-        h('div', { class: 'tr-rate-title' }, 'Wie gut wusstest du es?'),
+        h('div', { class: 'tr-rate-title' }, uiLabel('how_easy', { layout: 'inline' })),
         h('div', { class: 'tr-rates' }, [1, 2, 3, 4].map(G => h('button', {
           type: 'button', class: ['btn', 'tr-rate', RATE_CLS[G]], on: { click: () => rateNow(G) },
           'aria-label': `${RATING_LABELS[G]}, nächstes Mal in ${pv[G].label}`,
-        }, h('span', { class: 'tr-rate-label' }, RATING_LABELS[G]), h('span', { class: 'tr-rate-iv' }, pv[G].label))))));
+          title: RATING_LABELS[G],
+        }, h('span', { class: 'tr-rate-label' }, ukText(rateUk(G), { hold: true })), h('span', { class: 'tr-rate-iv' }, pv[G].label))))));
     }
     card._reveal = reveal;
   }
@@ -187,9 +193,9 @@ export function render(params, app) {
     (ok ? anim.correct(btn) : anim.wrong(btn));
     const e = item.entry;
     const fb = h('div', { class: ['tr-fb', ok ? 'is-ok' : 'is-bad'], role: 'status' },
-      h('div', { class: 'tr-fb-title' }, icon(ok ? 'check' : 'x'), ok ? 'Richtig!' : 'Noch nicht – richtig ist:'),
+      h('div', { class: 'tr-fb-title' }, icon(ok ? 'check' : 'x'), uiLabel(app.t(ok ? 'correct' : 'correct_answer'), { layout: 'inline' })),
       h('div', { class: 'tr-fb-answer' }, ukText(e.uk, { tap: false }), speakerButton(e.uk, { size: 's', autoplay: autoplayAllowed(app) && !ok }), h('span', { class: 'tr-fb-de' }, '= ', e.de)));
-    const btnNext = h('button', { type: 'button', class: ['btn', ok ? 'btn-primary' : 'btn-danger', 'btn-lg', 'btn-block', 'btn-caps'], on: { click: () => next() } }, 'Weiter');
+    const btnNext = h('button', { type: 'button', class: ['btn', ok ? 'btn-primary' : 'btn-danger', 'btn-lg', 'btn-block', 'btn-caps'], on: { click: () => next() } }, holdLabel(app.t('continue')));
     clear(foot).append(h('div', { class: 'tr-foot-inner' }, fb, btnNext));
     anim.feedbackIn(fb);
     btnNext.focus({ preventScroll: true });
@@ -204,27 +210,27 @@ export function render(params, app) {
     if (!s.total) {
       stage.append(h('div', { class: 'tr-card tr-summary tr-empty' },
         h('div', { class: 'tr-sum-emoji', 'aria-hidden': 'true' }, '🎉'),
-        h('h2', { class: 'tr-sum-title' }, total0 ? 'Runde beendet' : 'Nichts zu üben'),
+        h('h2', { class: 'tr-sum-title' }, uiLabel(total0 ? 'round_done' : 'nothing_to_practice', { cls: 'tr-sum-l' })),
         h('p', { class: 'tr-sum-sub' }, total0 ? 'Keine Karte bewertet.' : 'Für diese Auswahl gibt es gerade keine Karten. Wähle einen anderen Umfang.')));
-      foot.append(h('div', { class: 'tr-foot-inner' }, h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, 'Zurück zum Trainer')));
+      foot.append(h('div', { class: 'tr-foot-inner' }, h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, holdLabel({ uk: uiT('back').uk, de: 'Zurück zu den Vokabeln' }))));
       return;
     }
     const segs = [1, 2, 3, 4].filter(G => s.counts[G]).map(G => h('span', { class: ['tr-dist-seg', RATE_CLS[G]], style: `flex:${s.counts[G]}`, title: `${RATING_LABELS[G]}: ${s.counts[G]}` }));
     const legend = [1, 2, 3, 4].map(G => h('div', { class: ['tr-legend-row', RATE_CLS[G]] },
-      h('span', { class: 'tr-dot' }), h('span', { class: 'tr-legend-label' }, RATING_LABELS[G]), h('span', { class: 'tr-legend-n' }, String(s.counts[G]))));
+      h('span', { class: 'tr-dot' }), h('span', { class: 'tr-legend-label' }, uiLabel({ uk: rateUk(G), de: RATING_LABELS[G] }, { layout: 'inline' })), h('span', { class: 'tr-legend-n' }, String(s.counts[G]))));
     const num = h('span', { class: 'tr-sum-num' }, '0');
     stage.append(h('div', { class: 'tr-card tr-summary' },
       h('div', { class: 'tr-sum-emoji', 'aria-hidden': 'true' }, s.accuracy >= 0.8 ? '🌟' : '💪'),
-      h('h2', { class: 'tr-sum-title' }, 'Runde geschafft!'),
+      h('h2', { class: 'tr-sum-title' }, uiLabel(app.t('well_done'), { cls: 'tr-sum-l' })),
       h('p', { class: 'tr-sum-sub' }, num, ` ${s.total === 1 ? 'Karte' : 'Karten'} geübt · ${DIR_LABEL[s.dir] || ''}`),
       h('div', { class: 'tr-dist' }, segs),
       h('div', { class: 'tr-legend' }, legend),
-      s.newCards ? h('p', { class: 'tr-sum-note' }, `${s.newCards} ${s.newCards === 1 ? 'neue Karte' : 'neue Karten'} im Trainer`) : null,
+      s.newCards ? h('p', { class: 'tr-sum-note' }, `${s.newCards} ${s.newCards === 1 ? 'neue Karte' : 'neue Karten'} unter Vokabeln`) : null,
       h('p', { class: 'tr-sum-note' }, `Tagesziel: ${Math.min(s.dayGoal.done, s.dayGoal.goal)} / ${s.dayGoal.goal}${s.dayGoal.met ? ' ✓' : ''}`)));
     anim.countUp(num, s.total);
     foot.append(h('div', { class: 'tr-foot-inner tr-sum-actions' },
-      h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => restart() } }, 'Noch eine Runde'),
-      h('button', { type: 'button', class: 'btn btn-secondary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, 'Zurück zum Trainer')));
+      h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => restart() } }, holdLabel('again')),
+      h('button', { type: 'button', class: 'btn btn-secondary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, holdLabel({ uk: uiT('back').uk, de: 'Zurück zu den Vokabeln' }))));
   }
 
   function restart() {

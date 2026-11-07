@@ -1,0 +1,49 @@
+/* Mini-Spiele: Kreuzworträtsel und Memory */
+.gm-head { margin: 4px 0 12px; font-size: var(--fs-title3); font-weight: 700; }
+.gm-title-de { font-weight: 400; color: var(--label-2); font-size: var(--fs-sub); }
+.gm-again { margin-top: 20px; }
+.gm-set { margin: 0 0 8px; }
+
+.cw-grid { display: grid; gap: 3px; max-width: 420px; margin: 0 auto 12px; }
+.cw-cell { position: relative; aspect-ratio: 1; border-radius: 6px; border: 1.5px solid var(--separator); background: var(--surface);
+  font: inherit; font-weight: 700; font-size: clamp(14px, 4.6vw, 22px); text-transform: uppercase; color: var(--label); padding: 0; }
+.cw-cell.is-void { border: 0; background: transparent; }
+.cw-cell.is-active { border-color: var(--sel-border); background: var(--sel-bg); }
+.cw-cell.is-solved { border-color: var(--ok-border); background: var(--ok-bg); color: var(--ok-ink); }
+.cw-cell.is-wrong { border-color: var(--bad-border); background: var(--bad-bg); color: var(--bad-ink); }
+.cw-num { position: absolute; top: 1px; left: 3px; font-size: 9px; font-weight: 600; color: var(--label-2); }
+.cw-current { display: flex; gap: 8px; align-items: center; justify-content: center; min-height: 32px; font-weight: 600; margin-bottom: 8px; }
+.cw-tiles { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 10px; }
+.cw-tile { min-width: 40px; height: 44px; border-radius: 10px; border: 1.5px solid var(--separator); background: var(--surface);
+  box-shadow: 0 3px 0 var(--separator); font: inherit; font-size: 20px; font-weight: 600; color: var(--label); }
+.cw-tile:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--separator); }
+.cw-back { color: var(--label-2); }
+.cw-hint { margin: 0 auto 12px; display: flex; }
+.cw-clues { margin-top: 12px; }
+.cw-clues-h { font-size: var(--fs-sub); margin: 0 0 6px; }
+.cw-clue { display: flex; gap: 8px; align-items: center; width: 100%; text-align: left; padding: 8px 10px; border-radius: 10px;
+  border: 1.5px solid transparent; background: var(--surface); margin-bottom: 4px; font: inherit; color: var(--label); }
+.cw-clue.is-active { border-color: var(--sel-border); background: var(--sel-bg); }
+.cw-clue.is-solved { border-color: var(--ok-border); background: var(--ok-bg); color: var(--ok-ink); }
+.cw-clue-num { font-weight: 700; min-width: 18px; }
+.cw-clue-len { margin-left: auto; color: var(--label-2); font-size: var(--fs-foot); }
+.cw-done, .mm-done { margin-top: 16px; padding: 14px; border-radius: var(--r-l); background: var(--ok-bg); border: 1.5px solid var(--ok-border); }
+.cw-done-title { font-size: var(--fs-title3); font-weight: 700; margin-bottom: 6px; }
+.cw-solution { margin: 0; padding-left: 18px; }
+
+.mm-status { text-align: center; margin-bottom: 10px; color: var(--label-2); }
+.mm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 520px; margin: 0 auto; }
+@media (min-width: 700px) { .mm-grid { grid-template-columns: repeat(4, 1fr); } }
+.mm-card { position: relative; min-height: 84px; border-radius: 14px; border: 1.5px solid var(--separator); background: var(--surface);
+  box-shadow: 0 3px 0 var(--separator); font: inherit; color: var(--label); padding: 6px; }
+.mm-back { position: absolute; inset: 0; display: grid; place-items: center; font-size: 26px; font-weight: 800; color: var(--sel-ink, var(--blue));
+  border-radius: 12px; background: var(--sel-bg); }
+.mm-face { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 70px; font-weight: 600; font-size: var(--fs-sub); line-height: 1.25; }
+.mm-face .de { color: var(--label); }
+.mm-tag { font-size: 11px; font-weight: 700; color: var(--label-2); text-transform: uppercase; }
+.mm-card.is-open .mm-back, .mm-card.is-found .mm-back { display: none; }
+.mm-card.is-open .mm-face, .mm-card.is-found .mm-face { display: flex; }
+.mm-card.is-found { border-color: var(--ok-border); background: var(--ok-bg); box-shadow: 0 3px 0 var(--ok-border); }
+.mm-card.is-miss { border-color: var(--bad-border); background: var(--bad-bg); }
+@media (prefers-reduced-motion: no-preference) { .mm-card.is-open .mm-face { animation: mm-in .2s ease-out; } }
+@keyframes mm-in { from { transform: rotateY(90deg); } to { transform: none; } }

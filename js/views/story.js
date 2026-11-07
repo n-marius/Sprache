@@ -11,6 +11,7 @@ import { addMined, isMined } from '../services/mining.js';
 import { isListenOff } from '../audio-mode.js';
 import { hidePopover } from '../ui/popover.js';
 import { mulberry32, hashStr, shuffle } from '../engine/util.js';
+import { holdLabel, uiT } from '../ui/ui-label.js';
 
 const MAX_GUESS = 4;
 
@@ -70,7 +71,7 @@ export function render(params, app) {
   const lesson = app.content.getLesson(id);
   const start = params.query.get('start') === '1';
   const review = params.query.get('review') === '1';
-  const back = { href: `#/lesson/${encodeURIComponent(id)}`, label: 'Lektion' };
+  const back = { href: `#/lesson/${encodeURIComponent(id)}`, label: uiT('lesson') };
   if (!lesson) return page({ title: 'Geschichte', back, children: [h('div', { class: 'empty' }, h('div', { class: 'empty-glyph' }, '📖'), h('p', 'Diese Lektion ist noch nicht verfügbar.'))] });
   const story = storyOf(lesson);
   if (!story) {
@@ -133,7 +134,7 @@ export function render(params, app) {
     if (de) de.hidden = true;
     const mine = h('button', {
       type: 'button', class: ['icon-btn', 'st-mine', isMined(app, ln.uk) && 'is-on'], 'aria-label': 'Satz merken', title: 'Satz merken',
-      on: { click: e => { e.stopPropagation(); if (addMined(app, { uk: ln.uk, de: ln.de || '', lessonId: id, source: 'story' })) { mine.classList.add('is-on'); anim.pop(mine); toast('Satz im Trainer gespeichert'); } } },
+      on: { click: e => { e.stopPropagation(); if (addMined(app, { uk: ln.uk, de: ln.de || '', lessonId: id, source: 'story' })) { mine.classList.add('is-on'); anim.pop(mine); toast('Satz unter Vokabeln (Слова́) gespeichert'); } } },
     }, icon('plus'));
     const deBtn = de && !review ? h('button', { type: 'button', class: 'st-de-btn', on: { click: e => { e.stopPropagation(); de.hidden = !de.hidden; deBtn.classList.toggle('is-on', !de.hidden); } } }, 'DE') : null;
     const tools = h('div', { class: 'st-tools' }, listenOff ? null : speakerButton(ln.uk, { size: 's' }), deBtn, mine);
@@ -157,12 +158,12 @@ export function render(params, app) {
   const setNotice = on => { notice = on; lines.classList.toggle('is-noticing', on); };
   setNotice(notice);
   let playing = null;
-  const stopPlay = () => { if (playing) playing.stop = true; playing = null; app.tts.stop(); lineEls.forEach(l => l.row.classList.remove('is-playing', 'is-yourturn')); playBtn && (playBtn.lastChild.textContent = 'Alles anhören'); shadowBtn && (shadowBtn.lastChild.textContent = 'Shadowing'); };
+  const stopPlay = () => { if (playing) playing.stop = true; playing = null; app.tts.stop(); lineEls.forEach(l => l.row.classList.remove('is-playing', 'is-yourturn')); playBtn && playBtn.lastChild.replaceWith(holdLabel('listen_all', { de: false })); shadowBtn && (shadowBtn.lastChild.textContent = 'Shadowing'); };
   const wait = ms => new Promise(r => setTimeout(r, ms));
   async function playAll(shadow) {
     if (playing) { stopPlay(); return; }
     const me = playing = { stop: false };
-    (shadow ? shadowBtn : playBtn).lastChild.textContent = 'Stopp';
+    if (shadow) shadowBtn.lastChild.textContent = 'Stopp'; else playBtn.lastChild.replaceWith(holdLabel('stop', { de: false }));
     for (const l of lineEls) {
       if (me.stop) break;
       l.row.classList.add('is-playing');
@@ -179,7 +180,7 @@ export function render(params, app) {
     }
     if (playing === me) stopPlay();
   }
-  const playBtn = listenOff ? null : h('button', { type: 'button', class: 'btn btn-blue btn-sm', on: { click: () => playAll(false) } }, icon('play', { fill: true }), h('span', 'Alles anhören'));
+  const playBtn = listenOff ? null : h('button', { type: 'button', class: 'btn btn-blue btn-sm', on: { click: () => playAll(false) } }, icon('play', { fill: true }), holdLabel('listen_all', { de: false }));
   const shadowBtn = listenOff ? null : h('button', { type: 'button', class: 'btn btn-secondary btn-sm', title: 'Hören → nachsprechen → nochmal hören', on: { click: () => playAll(true) } }, icon('mic'), h('span', 'Shadowing'));
   const controls = h('div', { class: 'st-controls' },
     h('div', { class: 'st-controls-row' }, playBtn, shadowBtn),

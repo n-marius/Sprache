@@ -4,12 +4,13 @@ import { page } from '../ui/shell.js';
 import { anim } from '../ui/anim.js';
 import { paragraphs, table, examples } from './explain.js';
 import { CATEGORIES, allConcepts } from '../concepts.js';
+import { uiT } from '../ui/ui-label.js';
 
 export function render(params, app) {
   const all = allConcepts(app);
   const i = all.findIndex(c => c.id === params.id);
   const c = all[i];
-  const back = { href: '#/library', label: 'Wissen' };
+  const back = { href: '#/library', label: uiT('tab_library') };
   if (!c || !c.open) {
     return page({ title: 'Thema', back, children: [h('div', { class: 'empty' }, h('div', { class: 'empty-glyph' }, '🔒'),
       h('p', c ? 'Dieses Thema wird freigeschaltet, sobald du die zugehörige Lektion erreichst.' : 'Thema nicht gefunden.'))] });

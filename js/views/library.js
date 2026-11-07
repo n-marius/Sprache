@@ -5,6 +5,9 @@ import { page, listGroup, segmented } from '../ui/shell.js';
 import { anim } from '../ui/anim.js';
 import { listMined } from '../services/mining.js';
 import { CATEGORIES, allConcepts, lessonOpen } from '../concepts.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+
+const badgeUk = (key, cls = '') => h('span', { class: ['badge', cls], title: uiT(key).de }, ukText(uiT(key).uk, { hold: true }));
 
 let view = 'topics';
 
@@ -13,9 +16,9 @@ export function render(params, app) {
   const q = h('input', { type: 'search', class: 'lib-search', placeholder: 'Themen durchsuchen', 'aria-label': 'Suchen' });
   const groups = h('div', { class: 'lib-groups' });
 
-  const statusBadge = (open, planned, read) => planned ? h('span', { class: 'badge' }, 'geplant')
+  const statusBadge = (open, planned, read) => planned ? badgeUk('planned')
     : !open ? icon('lock', { cls: 'lib-lock' })
-    : read ? null : h('span', { class: 'badge blue' }, 'neu');
+    : read ? null : badgeUk('new_badge', 'blue');
 
   function topics(term) {
     const concepts = allConcepts(app).filter(c => !c.planned);
@@ -28,7 +31,7 @@ export function render(params, app) {
         rows: list.map(c => ({
           icon: { emoji: anim.themeGlyph(c.meta.theme), color: c.open ? anim.themeColor(c.meta.theme) : 'var(--surface-3)' },
           title: h('span', { class: 'row-title' }, c.title_de),
-          subtitle: h('span', { class: 'row-subtitle lib-sub' }, `Lektion ${c.meta.index + 1} · `, ukText(c.meta.title_uk, { tap: false })),
+          subtitle: h('span', { class: 'row-subtitle lib-sub' }, `Lektion ${c.meta.index + 1} · `, ukText(c.meta.title_uk, { hold: true })),
           detail: statusBadge(c.open, false, !!st.lessons[c.lessonId]?.explainedAt),
           accessory: c.open ? 'chevron' : null,
           href: c.open ? `#/concept/${encodeURIComponent(c.id)}` : null,
@@ -51,7 +54,7 @@ export function render(params, app) {
         rows.push({
           icon: { emoji: anim.themeGlyph(meta.theme), color: open ? anim.themeColor(meta.theme) : 'var(--surface-3)' },
           title: h('span', { class: 'row-title' }, lesson.explanation?.title_de || meta.title_de),
-          subtitle: h('span', { class: 'row-subtitle lib-sub' }, `Lektion ${meta.index + 1} · `, ukText(meta.title_uk, { tap: false })),
+          subtitle: h('span', { class: 'row-subtitle lib-sub' }, `Lektion ${meta.index + 1} · `, ukText(meta.title_uk, { hold: true })),
           detail: statusBadge(open, false, !!st.lessons[meta.id]?.explainedAt),
           accessory: open ? 'chevron' : null,
           href: open ? `#/explain/${encodeURIComponent(meta.id)}` : null,
@@ -70,7 +73,7 @@ export function render(params, app) {
   };
   q.addEventListener('input', build);
   const seg = segmented({
-    options: [{ value: 'topics', label: 'Themen' }, { value: 'lessons', label: 'Lektionen' }],
+    options: [{ value: 'topics', label: uiT('topics') }, { value: 'lessons', label: uiT('lessons') }],
     value: view,
     onChange: v => { view = v; build(); },
   });
@@ -78,16 +81,16 @@ export function render(params, app) {
 
   const mined = listMined(app);
   const extra = listGroup({
-    header: 'Gesammelt',
+    header: uiLabel('collection', { layout: 'inline' }),
     rows: [{
       icon: { name: 'sparkles', color: 'var(--purple)' },
-      title: 'Gesammelte Sätze', subtitle: 'Aus Geschichten, Texten und Erklärungen',
+      title: holdLabel('my_sentences', { cls: 'row-title' }), subtitle: 'Aus Geschichten, Texten und Erklärungen',
       detail: String(mined.length), accessory: 'chevron', href: '#/trainer',
     }],
   });
 
   return page({
-    title: 'Wissen', subtitle: 'Grammatik und Redemittel – Thema für Thema',
+    title: uiT('tab_library'), subtitle: 'Grammatik und Redemittel – Thema für Thema',
     children: [h('div', { class: 'lib-seg' }, seg), h('div', { class: 'lib-search-wrap' }, icon('search', { cls: 'lib-search-icon' }), q), groups, extra],
   });
 }

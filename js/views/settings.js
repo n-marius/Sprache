@@ -10,6 +10,11 @@ import { unsyncedCount, fmtDateTime } from '../services/reports.js';
 import { backupJSON, backupFilename, parseBackup, backupSummary, applyBackup, shareOrDownload, readFileText } from '../services/export.js';
 import { syncReports, backupProgress, restoreProgress, testToken, errorMessage, gistUrl, TOKEN_URL } from '../services/gist.js';
 import { DEFAULT_TARGET_DATE } from '../config.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+
+/** Zeilentitel ukrainisch (+ Deutsch daneben); hold für antippbare Zeilen (Aktion). */
+const RT = (k, hold = false) => uiLabel(k, { cls: 'row-title', hold });
+const HDR = k => uiLabel(k, { layout: 'inline' });
 
 const TEST_PHRASE = 'Приві́т! Мене́ звуть Окса́на. Як спра́ви?';
 
@@ -60,7 +65,7 @@ export function render(params, app) {
   /** Slider-Zeile (Titel + Wert, darunter Regler) */
   function sliderRow({ key, title, min, max, step, fmt, ic }) {
     const out = h('span', { class: 's-slider-val num' });
-    const input = h('input', { type: 'range', class: 's-range', min, max, step, value: S()[key], 'aria-label': title });
+    const input = h('input', { type: 'range', class: 's-range', min, max, step, value: S()[key], 'aria-label': uiT(title).de });
     const paint = () => {
       const v = Number(input.value);
       out.textContent = fmt(v);
@@ -72,7 +77,7 @@ export function render(params, app) {
     return h('div', { class: 'list-row has-icon s-slider-row' },
       h('span', { class: 'row-icon', style: { background: ic.color } }, icon(ic.name)),
       h('div', { class: 's-slider-main' },
-        h('div', { class: 's-slider-head' }, h('span', { class: 'row-title' }, title), out),
+        h('div', { class: 's-slider-head' }, RT(title), out),
         h('div', { class: 's-slider-track' }, h('span', { class: 's-slider-cap' }, icon('turtle')), input, h('span', { class: 's-slider-cap' }, icon('speaker')))));
   }
 
@@ -102,14 +107,14 @@ export function render(params, app) {
   const dateInput = h('input', { type: 'date', class: 's-date', value: S().targetDate || DEFAULT_TARGET_DATE, min: new Date().toISOString().slice(0, 10), 'aria-label': 'Zieldatum' });
   dateInput.addEventListener('change', () => { if (dateInput.value) { set('targetDate', dateInput.value); heroRegion.refresh(); } });
   const learn = listGroup({
-    header: 'Lernen',
+    header: HDR('learning'),
     footer: 'Das Tagesziel zählt bewertete Aufgaben. Eine Session hat so viele Aufgaben wie die Session-Länge.',
     rows: [
-      { title: 'Tagesziel', subtitle: 'Aufgaben pro Tag', icon: tile('target', 'var(--green)'), accessory: stepper({ key: 'dailyGoal', min: 5, max: 60, step: 5 }) },
-      { title: 'Neue Wörter', subtitle: 'pro Session', icon: tile('sparkles', 'var(--yellow)'), accessory: stepper({ key: 'newWordsPerSession', min: 2, max: 10 }) },
-      { title: 'Session-Länge', subtitle: 'Aufgaben (10–20)', icon: tile('clock', 'var(--blue)'), accessory: stepper({ key: 'sessionSize', min: 10, max: 20 }) },
-      { title: 'Zieldatum', icon: tile('calendar', 'var(--red)'), accessory: dateInput },
-      { title: 'Deutsche Hilfen', subtitle: 'Übersetzungen und Hinweise anzeigen', icon: tile('bulb', 'var(--orange)'), accessory: sw('showGermanHints') },
+      { title: RT('daily_goal'), subtitle: 'Aufgaben pro Tag', icon: tile('target', 'var(--green)'), accessory: stepper({ key: 'dailyGoal', min: 5, max: 60, step: 5 }) },
+      { title: RT('new_words'), subtitle: 'pro Session', icon: tile('sparkles', 'var(--yellow)'), accessory: stepper({ key: 'newWordsPerSession', min: 2, max: 10 }) },
+      { title: RT('session_length'), subtitle: 'Aufgaben (10–20)', icon: tile('clock', 'var(--blue)'), accessory: stepper({ key: 'sessionSize', min: 10, max: 20 }) },
+      { title: RT('target_date'), icon: tile('calendar', 'var(--red)'), accessory: dateInput },
+      { title: RT('german_hints'), subtitle: 'Deutsche Übersetzungen unter ukrainischen Texten und Hinweise anzeigen', icon: tile('bulb', 'var(--orange)'), accessory: sw('showGermanHints') },
     ],
   });
 
@@ -117,12 +122,12 @@ export function render(params, app) {
   const toneRegion = region(() => {
     const m = audioMode(app);
     const tempRows = [];
-    for (const [k, label] of [['listen', 'Hören'], ['speak', 'Sprechen']]) {
+    for (const [k, label] of [['listen', 'no_listening'], ['speak', 'no_speaking']]) {
       const u = m[k + 'Until'];
       if (u && u !== 'forever') {
         tempRows.push({
-          title: `${label} zeitweise aus`, subtitle: untilLabel(u), icon: tile(k === 'listen' ? 'ear' : 'mic', 'var(--label-3)'), cls: 's-temp',
-          accessory: h('button', { type: 'button', class: 'btn btn-sm btn-secondary', on: { click: () => { setAudioOff(app, { [k]: true, duration: 'on' }); haptic('select'); } } }, 'Wieder an'),
+          title: RT(label), subtitle: `zeitweise ${untilLabel(u)}`, icon: tile(k === 'listen' ? 'ear' : 'mic', 'var(--label-3)'), cls: 's-temp',
+          accessory: h('button', { type: 'button', class: 'btn btn-sm btn-secondary', on: { click: () => { setAudioOff(app, { [k]: true, duration: 'on' }); haptic('select'); } } }, holdLabel('turn_on', { de: false })),
         });
       }
     }
@@ -131,14 +136,14 @@ export function render(params, app) {
       onChange: v => { setAudioOff(app, { [k === 'listen' ? 'listen' : 'speak']: true, duration: v ? 'forever' : 'on' }); haptic('select'); },
     });
     return listGroup({
-      header: 'Ton',
+      header: HDR('sound'),
       footer: 'Aus: Hör- und Sprechaufgaben werden ausgelassen oder durch Textvarianten ersetzt – ohne Nachteil für die Wiederholung.',
       rows: [
-        { title: 'Gerade kein Ton …', subtitle: 'Für 1 Stunde oder bis morgen ausschalten', icon: tile('headphones', 'var(--purple)'), accessory: 'chevron',
+        { title: RT('no_sound_now', true), subtitle: 'Für 1 Stunde oder bis morgen ausschalten', icon: tile('headphones', 'var(--purple)'), accessory: 'chevron',
           onClick: () => openAudioModeSheet(app).then(() => toneRegion.refresh()) },
         ...tempRows,
-        { title: 'Hören dauerhaft aus', icon: tile('ear', 'var(--pink)'), accessory: permanent('listen') },
-        { title: 'Sprechen dauerhaft aus', icon: tile('mic', 'var(--orange)'), accessory: permanent('speak') },
+        { title: RT('no_listening'), subtitle: 'dauerhaft', icon: tile('ear', 'var(--pink)'), accessory: permanent('listen') },
+        { title: RT('no_speaking'), subtitle: 'dauerhaft', icon: tile('mic', 'var(--orange)'), accessory: permanent('speak') },
       ],
     });
   });
@@ -170,17 +175,17 @@ export function render(params, app) {
       const r = await tts.speak(TEST_PHRASE, { rate: S().rate });
       testBtn.classList.remove('is-playing');
       if (r && r.ok === false && r.reason !== 'interrupted') toast(r.reason === 'no-voice' ? 'Keine ukrainische Stimme gefunden' : 'Wiedergabe nicht möglich', { kind: 'bad' });
-    } } }, icon('play'), 'Testen');
+    } } }, icon('play'), holdLabel('test', { de: false }));
     return h('div', { class: 's-stack' }, warn, listGroup({
-      header: 'Audio & Sprechen',
+      header: HDR('voice'),
       footer: stt?.supported ? 'Spracherkennung (uk-UA) bewertet deine Aussprache in Sprechaufgaben.' : 'Spracherkennung ist auf diesem Gerät nicht verfügbar – Sprechaufgaben nutzen dann die Selbstbewertung.',
       rows: [
-        { title: 'Stimme', icon: tile('speaker', 'var(--blue)'), accessory: h('span', { class: 's-select-wrap' }, sel, icon('chevron-down', { cls: 's-select-chev' })) },
-        { title: 'Stimme testen', subtitle: TEST_PHRASE, icon: tile('play', 'var(--green)'), accessory: testBtn, cls: 's-testrow' },
-        sliderRow({ key: 'rate', title: 'Sprechtempo', min: 0.5, max: 1.2, step: 0.05, fmt: v => `${Math.round(v * 100)} %`, ic: tile('speaker', 'var(--purple)') }),
-        sliderRow({ key: 'slowRate', title: 'Langsames Tempo', min: 0.3, max: 0.9, step: 0.05, fmt: v => `${Math.round(v * 100)} %`, ic: tile('turtle', 'var(--green)') }),
-        { title: 'Automatisch abspielen', subtitle: 'Audio beim Anzeigen einer Aufgabe', icon: tile('play', 'var(--orange)'), accessory: sw('autoplay') },
-        { title: 'Spracherkennung verwenden', subtitle: stt?.supported ? null : 'Nicht unterstützt', icon: tile('mic', 'var(--red)'),
+        { title: RT('voice'), icon: tile('speaker', 'var(--blue)'), accessory: h('span', { class: 's-select-wrap' }, sel, icon('chevron-down', { cls: 's-select-chev' })) },
+        { title: RT('test_voice'), subtitle: TEST_PHRASE, icon: tile('play', 'var(--green)'), accessory: testBtn, cls: 's-testrow' },
+        sliderRow({ key: 'rate', title: 'speech_rate', min: 0.5, max: 1.2, step: 0.05, fmt: v => `${Math.round(v * 100)} %`, ic: tile('speaker', 'var(--purple)') }),
+        sliderRow({ key: 'slowRate', title: 'slow_rate', min: 0.3, max: 0.9, step: 0.05, fmt: v => `${Math.round(v * 100)} %`, ic: tile('turtle', 'var(--green)') }),
+        { title: RT('autoplay'), subtitle: 'Audio beim Anzeigen einer Aufgabe abspielen', icon: tile('play', 'var(--orange)'), accessory: sw('autoplay') },
+        { title: RT('speech_recognition'), subtitle: stt?.supported ? null : 'Nicht unterstützt', icon: tile('mic', 'var(--red)'),
           accessory: stt?.supported ? sw('stt') : switchEl({ checked: false, label: 'stt' }), cls: !stt?.supported && 's-disabled' },
       ],
     }));
@@ -194,17 +199,17 @@ export function render(params, app) {
 
   // ---------- Darstellung ----------
   const look = listGroup({
-    header: 'Darstellung',
+    header: HDR('look'),
     rows: [
       h('div', { class: 'list-row has-icon s-seg-row' },
         h('span', { class: 'row-icon', style: { background: 'var(--label-2)' } }, icon('moon')),
-        h('span', { class: 'row-main' }, h('span', { class: 'row-title' }, 'Erscheinungsbild')),
+        h('span', { class: 'row-main' }, RT('theme')),
         segmented({
-          options: [{ value: 'light', label: 'Hell' }, { value: 'dark', label: 'Dunkel' }, { value: 'auto', label: 'Auto' }],
+          options: [{ value: 'light', label: uiT('light') }, { value: 'dark', label: uiT('dark') }, { value: 'auto', label: uiT('system') }],
           value: S().theme || 'auto',
           onChange: v => { set('theme', v); applyTheme(v); haptic('select'); },
         })),
-      { title: 'Haptik', subtitle: 'Vibration bei Antworten (wo unterstützt)', icon: tile('sparkles', 'var(--pink)'), accessory: sw('haptics') },
+      { title: RT('vibration'), subtitle: 'Vibration bei Antworten (wo unterstützt)', icon: tile('sparkles', 'var(--pink)'), accessory: sw('haptics') },
     ],
   });
 
@@ -214,11 +219,11 @@ export function render(params, app) {
     const open = unsyncedCount(store.state.reports);
     const mined = (store.state.mined || []).length;
     return listGroup({
-      header: 'Sammlung',
+      header: HDR('collection'),
       rows: [
-        { title: 'Meldungen', subtitle: n ? (open ? `${open} nicht synchronisiert` : 'alle synchronisiert') : 'Fehler in Aufgaben melden (Flagge)', icon: tile('flag', 'var(--red)'),
+        { title: RT('reports', true), subtitle: n ? (open ? `${open} nicht synchronisiert` : 'alle synchronisiert') : 'Fehler in Aufgaben melden (Flagge)', icon: tile('flag', 'var(--red)'),
           detail: String(n), accessory: 'chevron', href: '#/reports' },
-        { title: 'Gesammelte Sätze', subtitle: 'Im Vokabeltrainer üben', icon: tile('book', 'var(--green)'),
+        { title: RT('my_sentences', true), subtitle: 'Unter „Слова́“ (Vokabeln) üben', icon: tile('book', 'var(--green)'),
           detail: String(mined), accessory: 'chevron', href: '#/trainer' },
       ],
     });
@@ -239,7 +244,7 @@ export function render(params, app) {
       syncRegion.refresh();
     });
     const action = (id, title, ic, fn, sub) => ({
-      title: h('span', { class: 'row-title s-action-title' }, title), subtitle: sub, icon: ic,
+      title: uiLabel(title, { cls: 'row-title s-action-title', hold: true }), subtitle: sub, icon: ic,
       cls: ['s-action', syncBusy === id && 'is-busy', !hasToken && 's-disabled'].filter(Boolean).join(' '),
       accessory: syncBusy === id ? h('span', { class: 's-spinner', 'aria-label': 'Läuft' }) : null,
       onClick: () => run(id, fn),
@@ -248,7 +253,7 @@ export function render(params, app) {
       ? { title: 'Gist', icon: tile('github', '#24292F'), detail: h('a', { class: 's-gist-link', href: gistUrl(s.gistId), target: '_blank', rel: 'noopener' }, s.gistId.slice(0, 8) + '…', icon('share')) }
       : { title: 'Gist', icon: tile('github', '#24292F'), detail: 'wird beim ersten Sync angelegt' };
     return listGroup({
-      header: h('span', { id: 's-sync' }, 'Sync (GitHub Gist)'),
+      header: h('span', { id: 's-sync' }, HDR('sync')),
       footer: h('div', { class: 's-footnote' },
         h('div', `Letzter Sync: ${relOrNever(store.state.meta.lastSyncAt)} · Letzte Sicherung: ${relOrNever(store.state.meta.lastBackupAt)}`),
         h('div', { class: 's-caution' }, icon('info'),
@@ -261,15 +266,15 @@ export function render(params, app) {
         gistRow,
         { title: 'Meldungen automatisch syncen', subtitle: 'nach jeder neuen Meldung', icon: tile('flag', 'var(--orange)'), accessory: sw('gistAutoSync') },
         { title: 'Fortschritt automatisch sichern', subtitle: 'nach jeder Session', icon: tile('cloud', 'var(--blue)'), accessory: sw('gistBackup') },
-        action('sync', 'Jetzt synchronisieren', tile('refresh', 'var(--green)'), async () => {
+        action('sync', 'sync_now', tile('refresh', 'var(--green)'), async () => {
           const r = await syncReports(app);
           toast(r.created ? 'Privater Gist angelegt – Meldungen synchronisiert' : `${r.count} ${r.count === 1 ? 'Meldung' : 'Meldungen'} synchronisiert`, { kind: 'ok' });
         }),
-        action('backup', 'Fortschritt sichern', tile('cloud', 'var(--blue)'), async () => {
+        action('backup', 'save_progress', tile('cloud', 'var(--blue)'), async () => {
           await backupProgress(app);
           toast('Fortschritt im Gist gesichert', { kind: 'ok' });
         }),
-        action('restore', 'Fortschritt wiederherstellen', tile('download', 'var(--purple)'), async () => {
+        action('restore', 'restore_progress', tile('download', 'var(--purple)'), async () => {
           const r = await restoreProgress(app, {
             confirm: f => confirmDialog({ title: 'Fortschritt wiederherstellen?', message: `Backup: ${f.summary}. Der aktuelle Fortschritt auf diesem Gerät wird ersetzt. Token und Gist bleiben.`, ok: 'Wiederherstellen', destructive: true }),
           });
@@ -311,16 +316,16 @@ export function render(params, app) {
     } catch (e) { toast(errorMessage(e), { kind: 'bad', ms: 4000 }); }
   });
   const data = listGroup({
-    header: 'Daten',
+    header: HDR('data'),
     footer: 'Das Backup enthält Fortschritt, Wiederholungen, Meldungen, gesammelte Sätze und Einstellungen – aber keinen Token.',
     rows: [
-      { title: 'Backup exportieren', subtitle: 'JSON-Datei teilen oder sichern', icon: tile('share', 'var(--blue)'), accessory: 'chevron',
+      { title: RT('export_file', true), subtitle: 'JSON-Datei teilen oder sichern', icon: tile('share', 'var(--blue)'), accessory: 'chevron',
         onClick: async () => {
           const r = await shareOrDownload(backupFilename(), backupJSON(store, { appVersion: app.version }), 'application/json');
           if (r === 'downloaded') toast('Backup heruntergeladen', { kind: 'ok' });
         } },
-      { title: 'Backup importieren', subtitle: 'aus einer JSON-Datei', icon: tile('download', 'var(--green)'), accessory: 'chevron', onClick: () => fileInput.click() },
-      { title: h('span', { class: 'row-title s-danger' }, 'Fortschritt zurücksetzen'), icon: tile('trash', 'var(--red)'), cls: 's-action',
+      { title: RT('import_file', true), subtitle: 'aus einer JSON-Datei', icon: tile('download', 'var(--green)'), accessory: 'chevron', onClick: () => fileInput.click() },
+      { title: uiLabel('reset', { cls: 'row-title s-danger', hold: true }), icon: tile('trash', 'var(--red)'), cls: 's-action',
         onClick: async () => {
           const ok = await confirmDialog({ title: 'Wirklich alles zurücksetzen?', message: 'Fortschritt, Wiederholungen, Serie, Meldungen und Einstellungen werden gelöscht. Token und Gist bleiben. Das kann nicht rückgängig gemacht werden.', ok: 'Zurücksetzen', destructive: true });
           if (!ok) return;
@@ -343,19 +348,19 @@ export function render(params, app) {
         h('strong', 'Zum Home-Bildschirm hinzufügen'),
         h('p', 'In Safari unten auf ', h('b', 'Teilen'), ' tippen und ', h('b', '„Zum Home-Bildschirm“'), ' wählen. Dann läuft Мова wie eine App – im Vollbild, offline, und deine Daten bleiben dauerhaft gespeichert.'))),
     listGroup({
-      header: 'Info',
+      header: HDR('info'),
       rows: [
-        { title: 'Version', icon: tile('info', 'var(--label-2)'), detail: app.version || '–' },
-        { title: 'Inhalte', icon: tile('book', 'var(--blue)'), detail: c.isFixture ? 'Demo-Inhalte' : (c.base || '–'), subtitle: c.isFixture ? c.base : null },
-        { title: 'Lektionen', icon: tile('course', 'var(--green)'), detail: String(lessonsReady) },
-        { title: 'Lexikon-Einträge', icon: tile('words', 'var(--purple)'), detail: String(app.lexicon?.size ?? 0) },
-        { title: 'Speicher dauerhaft', icon: tile('lock', store.persisted ? 'var(--green)' : 'var(--orange)'), detail: store.persisted ? 'Ja' : 'Nein',
+        { title: RT('version'), icon: tile('info', 'var(--label-2)'), detail: app.version || '–' },
+        { title: RT('content'), icon: tile('book', 'var(--blue)'), detail: c.isFixture ? 'Demo-Inhalte' : (c.base || '–'), subtitle: c.isFixture ? c.base : null },
+        { title: RT('lessons'), icon: tile('course', 'var(--green)'), detail: String(lessonsReady) },
+        { title: RT('dictionary'), icon: tile('words', 'var(--purple)'), detail: String(app.lexicon?.size ?? 0) },
+        { title: RT('storage'), icon: tile('lock', store.persisted ? 'var(--green)' : 'var(--orange)'), detail: uiLabel(store.persisted ? 'yes' : 'no', { layout: 'inline', cls: 'row-detail' }),
           subtitle: store.persisted ? null : 'Als Home-Bildschirm-App wird der Speicher nicht automatisch geleert.' },
       ],
     }));
 
   const sections = [heroRegion, learn, toneRegion, voiceRegion, look, collectRegion, syncRegion, data, info, fileInput];
-  const el = page({ title: 'Einstellungen', cls: 's-page', children: h('div', { class: 's-grid' }, sections) });
+  const el = page({ title: uiT('settings'), cls: 's-page', children: h('div', { class: 's-grid' }, sections) });
 
   function rebuild() { app.navigate('#/settings', { replace: true }); }
 

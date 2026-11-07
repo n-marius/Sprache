@@ -1,6 +1,6 @@
 // Service Worker: Offline-Cache für App + Inhalte, Versionierung mit Update-Hinweis.
 // VERSION muss mit APP_VERSION in js/config.js übereinstimmen.
-const VERSION = '1.1.0';
+const VERSION = '1.2.0';
 const APP_CACHE = `mova-app-${VERSION}`;
 const CONTENT_CACHE = 'mova-content';
 const RUNTIME_CACHE = 'mova-runtime';
@@ -40,6 +40,7 @@ const APP_ASSETS = [
   './js/content.js',
   './js/lexicon.js',
   './js/i18n.js',
+  './js/ui-text.js',
   './js/audio-mode.js',
   './js/ui/audio-mode-sheet.js',
   './js/lib/uk-text.js',
@@ -49,6 +50,7 @@ const APP_ASSETS = [
   './js/ui/haptics.js',
   './js/ui/anim.js',
   './js/ui/popover.js',
+  './js/ui/ui-label.js',
   './js/ui/audio-button.js',
   './js/ui/report-sheet.js',
   './js/services/tts.js',
@@ -87,6 +89,11 @@ const APP_ASSETS = [
   './js/views/trainer-session.js',
   './js/views/library.js',
   './js/views/concept.js',
+  './js/views/games.js',
+  './js/games/crossword.js',
+  './js/games/crossword-gen.js',
+  './js/games/memory.js',
+  './css/games.css',
   './js/concepts.js',
   './js/views/explain.js',
   './js/views/story.js',
