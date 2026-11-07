@@ -23,7 +23,7 @@ const exIds = await page.evaluate(async ids => {
 }, lessons);
 
 const routes = ['#/today', '#/course', '#/library', '#/trainer', '#/settings', '#/reports', '#/games', '#/games/crossword', '#/games/memory', '#/games/forms',
-  ...lessons.flatMap(id => [`#/lesson/${id}`, `#/explain/${id}`, `#/story/${id}`])];
+  ...lessons.flatMap(id => [`#/lesson/${id}`, `#/explain/${id}`, `#/story/${id}`, `#/session/teach/${id}`, `#/session/test/${id}`, `#/session/lesson/${id}`])];
 const concepts = await page.evaluate(async () => (await import('./js/concepts.js')).allConcepts((await import('./js/app-context.js')).getApp()).filter(c => !c.planned).map(c => c.id));
 routes.push(...concepts.map(c => `#/concept/${c}`));
 routes.push(...exIds.map(x => { const [l, e] = x.split('|'); return `#/dev/exercise?lesson=${l}&ex=${e}`; }));

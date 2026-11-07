@@ -61,7 +61,7 @@ test('todayStats: Form und Wochenpunkte', () => {
   assert.equal(t.week.length, 7); assert.equal(t.week[0].label, 'Mo');
   assert.equal(t.week.find(w => w.isToday).day, '2026-10-21');
   assert.equal(t.weekGoal.target, 5); assert.equal(t.weekGoal.daysMet, 1);
-  assert.equal(t.newAvailable, 5, 'min(5 pro Session, Tageslimit 10-5)');
+  assert.equal(t.newAvailable, 4, 'nur noch 4 neue Wörter in Lektion 1 (Lektion 2 erst nach Prüfung frei)');
   setDay('2026-10-22');
   assert.equal(P.todayStats(app).streak.atRisk, true);
 });
@@ -101,6 +101,9 @@ test('Freischaltung, nächste Lektion, Meisterschaft, Wortliste', () => {
   assert.equal(P.nextLesson(app).id, 'a1-1-01');
   assert.equal(P.lessonMastery(app, 'a1-1-01').level, 0);
   play(createLessonSession(app, 'a1-1-01', { seed: 1 }));
+  assert.equal(P.isUnlocked(app, 'a1-1-02'), false, 'nach einer Übungsrunde noch nicht frei (Prüfung fehlt)');
+  assert.equal(P.nextLesson(app).id, 'a1-1-01');
+  app.store.state.lessons['a1-1-01'].completedAt = new Date().toISOString(); // Prüfung bestanden
   assert.equal(P.isUnlocked(app, 'a1-1-02'), true);
   assert.equal(P.nextLesson(app).id, 'a1-1-02');
   const m = P.lessonMastery(app, 'a1-1-01');

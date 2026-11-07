@@ -1,5 +1,5 @@
 // Zentrale Konstanten. APP_VERSION muss mit VERSION in sw.js übereinstimmen.
-export const APP_VERSION = '1.3.0';
+export const APP_VERSION = '1.4.0';
 export const APP_NAME = 'Мова';
 export const DB_NAME = 'mova';
 export const LS_KEY = 'mova.state.v1';

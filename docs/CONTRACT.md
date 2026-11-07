@@ -95,6 +95,11 @@ Alle Wörter darin müssen über `glossary-common.json` auflösbar sein.
 ### Leittext (`story`, Pflicht)
 `{ "title_uk", "title_de", "scene_de", "characters":[{"name","emoji"}], "lines":[{"who","uk","de"} | {"scene":"☕","uk":"Кафе́","de":"Café"}] }` – Zeile für Zeile übersetzt. Grundlage für die Geschichten-Ansicht und die stille Rückübersetzung.
 
+### Lektionspfad (App, für jede Lektion gleich)
+1. **Lernen**: Leittext, dann die `explanation` Abschnitt für Abschnitt als Lehrkarten; nach jedem Abschnitt 1–2 Prüffragen aus dessen `examples` (Verstehen uk→de, eigenes Bilden de→uk). Jeder Abschnitt braucht daher mind. 2 aussagekräftige Beispiele.
+2. **Üben**: Übungsrunden à ~15 Aufgaben, bis alle Aufgaben der Lektion bearbeitet sind (Anzeige „Runde x von y“). Reine Wiedererkennungs-Typen (`picture_choice`, `match_pairs`) höchstens 1× je Runde.
+3. **Prüfung**: ~20 Aufgaben über alle Vokabeln und Konzepte (Vorrang: Lesen, Chat, Bedeutung aus der Form, Lückentext, Satzbau, Rückübersetzung), keine Zusatzversuche; bestanden ab 80 % → nächste Lektion frei. Nicht bestanden → schwache Wörter werden angezeigt, Prüfung beliebig wiederholbar.
+
 ### Lernmethoden (lektionsunabhängig, jede Lektion nutzt alle)
 Die App erzeugt automatisch aus den Daten jeder Lektion: **Erschließen vor dem Lernen** (`infer`, aus `vocab[].example`, nur wenn genug bekannter Kontext vorhanden ist), **stille Rückübersetzung** (`back_translation`, aus `story.lines`, frühestens am Folgetag), dazu Wortschatz-Wiederholung und Mini-Spiele. Jede Lektion liefert außerdem: mind. eine `structured_input`-Aufgabe mit `reasons` (Bedeutung aus der Form + „Чому́?“-Nachfrage, gemischte Kontrastpaare), mind. einen Verständnis-Lesetext (`reading` mit `mode: comprehension`), mind. einen verzweigten Chat und optional `form_pairs` für das Formen-Memory: `[{ "title_de", "tag_a", "tag_b", "pairs": [["…","…"]] }]`.
 

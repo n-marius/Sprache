@@ -32,7 +32,8 @@ export function paragraphs(text) {
 /** Text mit gemischtem Deutsch/Ukrainisch: ukrainische Abschnitte antippbar. */
 export function mixed(txt) {
   const frag = document.createDocumentFragment();
-  for (const seg of txt.split(/([Ѐ-ӿ][Ѐ-ӿ́’'ʼ\- ]*[Ѐ-ӿ́]|[Ѐ-ӿ])/)) {
+  // führender Bindestrich gehört zum Segment, damit Endungen wie „-єш“ als Wortteil erkannt werden
+  for (const seg of txt.split(/(-?[Ѐ-ӿ][Ѐ-ӿ́’'ʼ\- ]*[Ѐ-ӿ́]|-?[Ѐ-ӿ])/)) {
     if (!seg) continue;
     frag.append(CYR.test(seg) ? ukText(seg) : document.createTextNode(seg));
   }

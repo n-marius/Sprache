@@ -211,3 +211,24 @@ a.v-tool:active { background: var(--surface-3); }
   .v-sum-stage { height: 220px; }
 }
 .lib-seg { margin: 0 0 12px; } .lib-seg .segmented { width: 100%; } .lib-foot { text-align: center; margin: 8px 16px 20px; color: var(--label-2); }
+
+/* Lektionspfad: Lernen → Üben → Prüfung */
+.v-path { padding: 6px 14px; }
+.v-path-step { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--separator); }
+.v-path-step:last-child { border-bottom: 0; }
+.v-path-num { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; background: var(--surface-2); color: var(--label-2); }
+.v-path-num svg { width: 18px; height: 18px; }
+.v-path-step.is-current .v-path-num { background: var(--sel-bg); color: var(--sel-ink, var(--blue)); box-shadow: inset 0 0 0 2px var(--sel-border); }
+.v-path-step.is-done .v-path-num { background: var(--ok-bg); color: var(--ok-ink); box-shadow: inset 0 0 0 2px var(--ok-border); }
+.v-path-title { font-weight: 700; }
+.v-path-sub { font-size: var(--fs-sub); color: var(--label-2); margin-top: 2px; }
+.v-path-btn { grid-column: 2; margin-top: 8px; justify-self: start; }
+.sess-teach-card { padding: 18px; }
+.v-sum-test { padding: 16px; border: 1.5px solid; margin-bottom: 12px; }
+.v-sum-test.is-pass { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-ink); }
+.v-sum-test.is-fail { background: var(--bad-bg); border-color: var(--bad-border); color: var(--bad-ink); }
+.v-sum-test-head { display: flex; gap: 8px; align-items: center; font-weight: 800; font-size: var(--fs-title3); }
+.v-sum-test-head svg { width: 22px; height: 22px; }
+.v-sum-test-score { font-size: 2rem; font-weight: 800; margin: 6px 0; }
+.v-sum-test-weak ul { margin: 6px 0 0; padding-left: 18px; }
+.v-sum-test .de, .v-sum-test .ui-de { color: inherit; opacity: .85; }

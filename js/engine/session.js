@@ -8,6 +8,7 @@ import * as srs from './srs.js';
 import { now, mulberry32, hashStr, shuffle, clamp } from './util.js';
 import { generate, generateForStage, defaultPool, stageForCard, adaptForAudio, audioModeOf } from './review-gen.js';
 import { makeInfer, makeBackTranslation, knownKeyTest } from './methods.js';
+import { LOW_VALUE, PASS_MARK, teachItems, testExercises } from './lesson-path.js';
 import { dayKey, lessonMastery, applyStreak, nextLesson, MAX_NEW_PER_DAY, REVIEW_DAY_THRESHOLD } from './progress.js';
 
 export const STAGES = ['recognize', 'recall', 'produce'];
@@ -189,7 +190,8 @@ export function createLessonSession(app, lessonId, opts = {}) {
   for (const it of old) typeCount[it.ex.type] = (typeCount[it.ex.type] || 0) + 1;
   // Höraufgaben ~20–25 % (Research §6.1), alle anderen Typen höchstens ~35 %
   const listenCap = Math.max(2, Math.floor(0.25 * cfg.size));
-  const capped = t => (typeCount[t] || 0) >= (t === 'listening' ? listenCap : typeCap);
+  // Reines Wiedererkennen (Bildwahl, Paare) höchstens 1× je Session – Vorrang für Kontext und eigene Produktion
+  const capped = t => (typeCount[t] || 0) >= (LOW_VALUE.has(t) ? 1 : t === 'listening' ? listenCap : typeCap);
   const score = (e, stage) => e.seen * 10 - (e.dueEx ? 4 : 0) + (e.ex.difficulty || 1) * 1.5
     + (stage === 'recognize' && HEAVY.has(e.ex.type) ? 4 : 0) + e.r * 4 + (typeCount[e.ex.type] || 0) * 3;
   /** Generierte Aufgabe mit möglichst seltenem Typ (Stufe, sonst leichtere Stufen). */
@@ -373,6 +375,37 @@ export function createReviewSession(app, opts = {}) {
   });
 }
 
+/** Lernschritt: Erklärung Abschnitt für Abschnitt, nach jedem Abschnitt Prüffragen aus dessen Beispielen. */
+export function createTeachSession(app, lessonId, opts = {}) {
+  const lesson = app.content.getLesson(lessonId);
+  if (!lesson) throw new Error(`Lektion nicht geladen: ${lessonId}`);
+  const today = dayKey();
+  const cfg = cfgOf(app, opts);
+  const seed = opts.seed ?? hashStr(`teach:${lessonId}:${now()}`);
+  const rng = mulberry32(seed);
+  return runtime(app, {
+    kind: 'teach', lessonId, theme: lesson.theme, title_uk: lesson.title_uk, title_de: lesson.title_de,
+    items: teachItems(lesson, rng), rng, today, cfg, seed, audioMode: opts.audioMode,
+  });
+}
+
+/** Prüfung: ~20 Aufgaben über die ganze Lektion, keine Zusatzversuche; bestanden ab PASS_MARK → nächste Lektion frei. */
+export function createTestSession(app, lessonId, opts = {}) {
+  const lesson = app.content.getLesson(lessonId);
+  if (!lesson) throw new Error(`Lektion nicht geladen: ${lessonId}`);
+  const today = dayKey();
+  const cfg = cfgOf(app, opts);
+  const seed = opts.seed ?? hashStr(`test:${lessonId}:${now()}`);
+  const rng = mulberry32(seed);
+  const items = testExercises(lesson, rng).map(ex => exItem(ex, lessonId));
+  const bt = makeBackTranslation(lesson, rng);
+  if (bt) items.push(exItem({ ...bt, noSrs: false }, lessonId, 'produce'));
+  return runtime(app, {
+    kind: 'test', lessonId, theme: lesson.theme, title_uk: lesson.title_uk, title_de: lesson.title_de,
+    items: spread(items), rng, today, cfg, seed, pool: vocabOfLesson(app, lessonId), audioMode: opts.audioMode,
+  });
+}
+
 // ---------------- Laufzeit (gemeinsam) ----------------
 function runtime(app, m) {
   const { kind, lessonId, rng, today, cfg } = m;
@@ -479,7 +512,9 @@ function runtime(app, m) {
       const introducedNow = new Set(newWords.map(v => v.id));
       for (const id of Object.keys(out?.ratings || {})) if (!introducedNow.has(id)) reviewed.add(id);
       let requeued = null;
-      if (!result.correct && !item.ex.noSrs) { wrongKeys.add(item.baseKey || item.key); requeued = requeue(item); }
+      if (!result.correct && !item.ex.noSrs) wrongKeys.add(item.baseKey || item.key);
+      // In der Prüfung keine Zusatzversuche; im Lernschritt kommt eine falsch beantwortete Prüffrage einmal wieder
+      if (!result.correct && kind !== 'test' && (!item.ex.noSrs || kind === 'teach')) requeued = requeue(item);
       return { requeued, ratings: out?.ratings || {}, goalReached };
     },
     progress() {
@@ -511,9 +546,16 @@ function runtime(app, m) {
         if (stats.total > 0) day.sessions++;
         if (lessonId && (stats.total > 0 || complete)) {
           const L = ensureLesson(s, lessonId);
-          L.sessions++;
+          if (kind === 'lesson') L.sessions++;
           L.lastAt = iso;
-          if (complete && !L.completedAt) { L.completedAt = iso; firstCompletion = true; }
+          if (kind === 'teach' && complete) L.taughtAt ||= iso;
+          if (kind === 'test' && complete) {
+            const score = stats.total ? stats.correct / stats.total : 0;
+            L.testAttempts = (L.testAttempts || 0) + 1;
+            L.testLast = score;
+            L.testBest = Math.max(L.testBest || 0, score);
+            if (score >= PASS_MARK && !L.completedAt) { L.completedAt = iso; firstCompletion = true; }
+          }
         }
         if (stats.total > 0 && applyStreak(s, today).extended) extended = true;
       });
@@ -530,6 +572,10 @@ function runtime(app, m) {
         masteryBefore: masteryBefore ? masteryBefore.fraction : 0, masteryAfter: masteryAfter ? masteryAfter.fraction : 0,
         masteryLevelBefore: masteryBefore, masteryLevelAfter: masteryAfter,
         complete, firstCompletion,
+        passed: kind === 'test' ? (stats.total ? stats.correct / stats.total : 0) >= PASS_MARK : undefined,
+        passMark: kind === 'test' ? PASS_MARK : undefined,
+        weakWords: kind === 'test' ? [...wrongKeys].map(k => queue.find(q => (q.baseKey || q.key) === k)?.ex).filter(Boolean).flatMap(ex => ex.vocab || [])
+          .filter((v, i, a) => a.indexOf(v) === i).map(id => app.content.vocabById.get(id)).filter(Boolean) : undefined,
         streak: { current: s.streak?.current || 0, best: s.streak?.best || 0, freezes: s.streak?.freezes || 0, extended },
         dayGoal: { done: day.tasks || 0, goal, met: (day.tasks || 0) >= goal },
       };

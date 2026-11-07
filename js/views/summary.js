@@ -3,7 +3,7 @@ import { h, icon, ukText, deText } from '../ui/dom.js';
 import { listGroup } from '../ui/shell.js';
 import { anim } from '../ui/anim.js';
 import { speakerButton } from '../ui/audio-button.js';
-import { startLesson } from '../engine/flow.js';
+import { startLesson, startTest } from '../engine/flow.js';
 import { MASTERY_LABELS } from '../engine/progress.js';
 import { ringSvg, sty } from './today.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
@@ -88,7 +88,18 @@ export function render(params, app) {
     })),
   }) : null;
 
-  const again = () => { if (isLesson) startLesson(app, s.lessonId); else app.navigate('#/session/review'); };
+  const again = () => {
+    if (s.kind === 'test') startTest(app, s.lessonId);
+    else if (isLesson || s.kind === 'teach') startLesson(app, s.lessonId);
+    else app.navigate('#/session/review');
+  };
+  // Prüfung: bestanden/nicht bestanden, Ergebnis, schwache Wörter
+  const pct = x => `${Math.round((x || 0) * 100)} %`;
+  const testCard = s.kind === 'test' ? h('section', { class: ['card', 'v-sum-test', s.passed ? 'is-pass' : 'is-fail'] },
+    h('div', { class: 'v-sum-test-head' }, icon(s.passed ? 'check' : 'bulb'), uiLabel(s.passed ? 'test_passed' : 'test_failed', { layout: 'inline' })),
+    h('div', { class: 'v-sum-test-score num' }, `${pct(s.accuracy)}`, h('span', { class: 't-foot' }, ` / ${pct(s.passMark)}`)),
+    s.weakWords?.length ? h('div', { class: 'v-sum-test-weak' }, uiLabel('weak_words', { layout: 'inline' }),
+      h('ul', s.weakWords.map(v => h('li', ukText(v.uk), ' – ', deText(v.de))))) : null) : null;
   const storyBtn = lesson?.story
     ? h('a', { class: 'btn btn-secondary btn-block', href: `#/story/${encodeURIComponent(s.lessonId)}?review=1` }, icon('book'), holdLabel('read_again'))
     : null;
@@ -100,6 +111,7 @@ export function render(params, app) {
         ukText(head.uk, { cls: 'v-sum-title', tag: 'h1' }),
         head.de ? h('p', { class: 'v-sum-sub ui-de', lang: 'de' }, head.de) : null,
         h('p', { class: 'v-sum-sub' }, uiLabel(sub))),
+      testCard,
       tiles,
       h('section', { class: 'card v-sum-card' }, rows),
       wordList ? h('div', { class: 'v-sum-words' }, wordList) : null,

@@ -172,7 +172,7 @@ export function render(params, app) {
   const voiceRegion = region(() => {
     const voices = tts?.supported ? (tts.voices?.() || []) : [];
     const sel = h('select', { class: 's-select', 'aria-label': 'Stimme' },
-      h('option', { value: '' }, `${uiT('auto_option').uk} (${uiT('auto_option').de})`),
+      h('option', { value: '' }, 'Auto'),
       voices.map(v => h('option', { value: v.voiceURI }, v.name + (v.localService === false ? ' (online)' : ''))));
     sel.value = voices.some(v => v.voiceURI === S().voiceURI) ? S().voiceURI : '';
     sel.addEventListener('change', () => { set('voiceURI', sel.value || null); try { tts.init?.(S()); } catch {} });
@@ -180,13 +180,13 @@ export function render(params, app) {
     const warn = noVoice ? h('div', { class: 's-warn' },
       h('div', { class: 's-warn-head' }, h('span', { class: 's-warn-icon' }, '!'), h('strong', uiLabel(tts?.supported ? 'no_uk_voice' : 'no_voice'))),
       tts?.supported ? [
-        h('p', 'Ohne ukrainische Stimme bleiben Hörübungen stumm. So lädst du sie auf dem iPhone/iPad:'),
-        h('ol', { class: 's-steps' },
+        h('p', { class: 'de', lang: 'de' }, 'Ohne ukrainische Stimme bleiben Hörübungen stumm. So lädst du sie auf dem iPhone/iPad:'),
+        h('ol', { class: 's-steps de', lang: 'de' },
           h('li', h('b', 'Einstellungen'), ' öffnen'),
           h('li', h('b', 'Bedienungshilfen'), ' → ', h('b', 'Gesprochene Inhalte')),
           h('li', h('b', 'Stimmen'), ' → ', h('b', 'Ukrainisch'), ' → Stimme laden (z. B. „Lesya“)'),
           h('li', 'Diese App ', h('b', 'ganz schließen'), ' und neu öffnen')),
-      ] : h('p', 'Dieser Browser unterstützt keine Sprachausgabe. Bitte Safari auf iPhone/iPad verwenden.')) : null;
+      ] : h('p', { class: 'de', lang: 'de' }, 'Dieser Browser unterstützt keine Sprachausgabe. Bitte Safari auf iPhone/iPad verwenden.')) : null;
     const testBtn = h('button', { type: 'button', class: 'btn btn-blue btn-sm s-test', disabled: !tts?.supported, on: { click: async () => {
       testBtn.classList.add('is-playing');
       const r = await tts.speak(TEST_PHRASE, { rate: S().rate });
@@ -278,7 +278,7 @@ export function render(params, app) {
         }),
         h('div', { class: 's-caution' }, icon('info'),
           h('span', h('strong', uiLabel('attention', { layout: 'inline' })), ' ',
-            h('span', { lang: 'de' }, 'Nutzung eigenverantwortlich – der Token wird nur lokal auf diesem Gerät gespeichert und ausschließlich an api.github.com gesendet. Er landet nie im Backup. Verwende einen Token nur mit dem Scope „gist“ und widerrufe ihn bei Verlust des Geräts. '),
+            h('span', { class: 'de', lang: 'de' }, 'Nutzung eigenverantwortlich – der Token wird nur lokal auf diesem Gerät gespeichert und ausschließlich an api.github.com gesendet. Er landet nie im Backup. Verwende einen Token nur mit dem Scope „gist“ und widerrufe ihn bei Verlust des Geräts. '),
             h('a', { href: TOKEN_URL, target: '_blank', rel: 'noopener' }, holdLabel('create_token', { layout: 'inline' }))))),
       rows: [
         h('div', { class: 'list-row has-icon s-token-row' },
@@ -369,7 +369,7 @@ export function render(params, app) {
       h('div', { class: 's-install-icon' }, icon('share')),
       h('div', { class: 's-install-main' },
         h('strong', uiLabel('install_app')),
-        h('p', 'In Safari unten auf ', h('b', 'Teilen'), ' tippen und ', h('b', '„Zum Home-Bildschirm“'), ' wählen. Dann läuft Мо́ва wie eine App – im Vollbild, offline, und deine Daten bleiben dauerhaft gespeichert.'))),
+        h('p', { class: 'de', lang: 'de' }, 'In Safari unten auf ', h('b', 'Teilen'), ' tippen und ', h('b', '„Zum Home-Bildschirm“'), ' wählen. Dann läuft Мо́ва wie eine App – im Vollbild, offline, und deine Daten bleiben dauerhaft gespeichert.'))),
     listGroup({
       header: HDR('info'),
       rows: [

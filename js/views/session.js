@@ -8,7 +8,8 @@ import { speakerButton } from '../ui/audio-button.js';
 import { openReportSheet } from '../ui/report-sheet.js';
 import { getExercise, instructionFor } from '../exercises/index.js';
 import { makeCtx } from '../exercises/ctx.js';
-import { createLessonSession, createReviewSession } from '../engine/session.js';
+import { createLessonSession, createReviewSession, createTeachSession, createTestSession } from '../engine/session.js';
+import { paragraphs, table, examples as exampleList } from './explain.js';
 import { isListenOff, isSpeakOff, autoplayAllowed } from '../audio-mode.js';
 import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
@@ -44,7 +45,10 @@ export function render(params, app) {
   const mode = params.mode || (params.id ? 'lesson' : 'review');
   let session;
   try {
-    session = mode === 'review' ? createReviewSession(app) : createLessonSession(app, params.id);
+    session = mode === 'review' ? createReviewSession(app)
+      : mode === 'teach' ? createTeachSession(app, params.id)
+      : mode === 'test' ? createTestSession(app, params.id)
+      : createLessonSession(app, params.id);
   } catch (e) {
     console.error('Session konnte nicht erstellt werden', e);
     return errorView(e);
@@ -145,6 +149,7 @@ export function render(params, app) {
     try {
       if (item.kind === 'intro') await showIntro(item, my);
       else if (item.kind === 'tip') await showTip(item, my);
+      else if (item.kind === 'teach') await showTeach(item, my);
       else if (item.kind === 'exercise') await showExercise(item, my);
       else throw new Error('Unbekannte Item-Art: ' + item.kind);
     } catch (e) {
@@ -177,6 +182,22 @@ export function render(params, app) {
           h('div', { class: 't-cap t-2' }, uiLabel('forms', { layout: 'inline' })),
           h('div', { class: 'sess-form-list' }, forms.map(f => h('span', { class: 'sess-form' },
             ukText(f.uk, { tap: false }), f.info ? h('span', { class: 'sess-form-info' }, f.info) : null)))) : null));
+    if (my !== token) return;
+    itemEl = el;
+    phase = 'info';
+    setAction(T('continue'), 'btn-primary');
+    await swapStage(el);
+  }
+
+  // Lernschritt: ein Abschnitt der Erklärung als Lehrkarte (Text, Tabelle, Beispiele mit Audio), danach Prüffragen
+  async function showTeach(it, my) {
+    const sec = it.section || {};
+    const el = h('section', { class: 'sess-item sess-teach' },
+      h('div', { class: 'sess-kicker is-tip' }, icon('book'),
+        uiLabel({ uk: `${uiT('teach_step').uk} ${it.index + 1} / ${it.count}`, de: `${uiT('teach_step').de} ${it.index + 1} von ${it.count}` }, { layout: 'inline' })),
+      h('article', { class: 'card sess-teach-card xp-article' },
+        h('h2', { class: 'xp-h2' }, sec.heading_de || ''),
+        ...paragraphs(sec.body_de), table(sec.table), exampleList(app, sec.examples, it.lessonId)));
     if (my !== token) return;
     itemEl = el;
     phase = 'info';
@@ -228,7 +249,7 @@ export function render(params, app) {
     const el = h('section', { class: ['sess-item', 'sess-exercise', `sess-ex-${ex.type}`], dataset: { type: ex.type } },
       h('div', { class: 'sess-instr' },
         h('h2', { class: 'sess-instr-uk' }, ukText(instr.uk)),
-        settings().showGermanHints !== false && instr.de ? h('div', { class: 'sess-instr-de' }, instr.de) : null),
+        settings().showGermanHints !== false && instr.de ? h('div', { class: 'sess-instr-de ui-de', lang: 'de' }, instr.de) : null),
       h('div', { class: 'sess-ex-body' }, ctrl.el),
       AUDIO_TYPES[ex.type] ? noSoundLink() : null);
     itemEl = el;
@@ -311,7 +332,7 @@ export function render(params, app) {
     if (phase === 'answer') return doCheck();
     if (phase === 'info') {
       const res = { correct: true, userAnswer: '', durationMs: Math.round(now() - t0) };
-      if (item?.kind === 'tip') res.skipped = true;
+      if (item?.kind === 'tip' || item?.kind === 'teach') res.skipped = true;
       phase = 'idle';
       try { session.record(item, res); } catch (e) { console.error('session.record fehlgeschlagen', e); }
       return advance();

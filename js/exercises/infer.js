@@ -11,7 +11,7 @@ export function render(ex, ctx) {
   const sentence = ukText(ex.sentence_uk || '', { cls: 'inf-sentence' });
   // Zielwort hervorheben und nicht antippbar machen (sonst wäre die Lösung sichtbar)
   for (const w of sentence.querySelectorAll('.w')) {
-    if (targets.has(w.dataset.k)) { w.classList.add('inf-target'); w.classList.remove('w'); }
+    if (targets.has(w.dataset.k)) { w.classList.add('inf-target', 'no-tap'); w.classList.remove('w'); }
   }
   const items = shuffledOptions(ex.options || [], ctx);
   const choice = singleChoice({ items, cls: 'exd-mc', renderItem: it => deText(it.value), onSelect: () => ctx.setReady(true) });

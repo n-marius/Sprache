@@ -5,7 +5,8 @@ import { anim } from '../ui/anim.js';
 import { speakerButton } from '../ui/audio-button.js';
 import { lessonMastery, isUnlocked, dayKey } from '../engine/progress.js';
 import { strengthLevel, STRENGTH_LABEL } from '../engine/srs.js';
-import { startLesson } from '../engine/flow.js';
+import { startLesson, startTeach, startTest } from '../engine/flow.js';
+import { pathState, PASS_MARK } from '../engine/lesson-path.js';
 import { ringSvg, sty } from './today.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
 import { uiN } from '../ui-text-g1.js';
@@ -137,12 +138,34 @@ export function render(params, app) {
     }),
   });
 
+  // ---- Lektionspfad: 1 Lernen → 2 Üben (Runden) → 3 Prüfung
+  const ps = pathState(app, id);
+  const guard = async fn => { if (!unlocked) { await start(); return; } fn(); };
+  const stepRow = (n, key, state, sub, action) => h('div', { class: ['v-path-step', `is-${state}`] },
+    h('span', { class: 'v-path-num' }, state === 'done' ? icon('check') : String(n)),
+    h('div', { class: 'v-path-main' }, uiLabel(key, { cls: 'v-path-title', layout: 'inline' }), sub ? h('div', { class: 'v-path-sub' }, sub) : null),
+    action);
+  const btn = (label, onClick, cls = 'btn-secondary') => h('button', { type: 'button', class: `btn ${cls} v-path-btn`, on: { click: onClick } }, holdLabel(label));
+  const pct = x => `${Math.round((x || 0) * 100)} %`;
+  const path = h('section', { class: 'card v-path' },
+    stepRow(1, 'path_learn', ps.learned ? 'done' : 'current',
+      null, btn(ps.learned ? 'learn_again' : 'start_learn', () => guard(() => (ps.learned ? startTeach(app, id) : startLesson(app, id))), ps.learned ? 'btn-secondary' : 'btn-primary')),
+    stepRow(2, 'path_practice', ps.practice.done ? 'done' : ps.learned ? 'current' : 'todo',
+      uiLabel({ uk: `${uiT('practice_round').uk} ${ps.practice.round} / ${ps.practice.rounds} · ${ps.practice.seen} / ${ps.practice.total}`,
+        de: `${uiT('practice_round').de} ${ps.practice.round} von ${ps.practice.rounds} · ${ps.practice.seen} von ${ps.practice.total} Aufgaben` }, { layout: 'inline' }),
+      ps.learned ? btn('practice_go', () => guard(() => startLesson(app, id)), ps.step === 'practice' ? 'btn-primary' : 'btn-secondary') : null),
+    stepRow(3, 'path_test', ps.test.passed ? 'done' : ps.step === 'test' ? 'current' : 'todo',
+      uiLabel(ps.test.attempts
+        ? { uk: `${uiT('test_best').uk}: ${pct(ps.test.best)} (${pct(PASS_MARK)})`, de: `Bestes Ergebnis ${pct(ps.test.best)}, nötig ${pct(PASS_MARK)}` }
+        : (ps.practice.done ? 'test_hint' : 'practice_first'), { layout: 'stack' }),
+      ps.learned ? btn('start_test', () => guard(() => startTest(app, id)), ps.step === 'test' ? 'btn-primary' : 'btn-secondary') : null));
+
   return page({
     title: { uk: lesson.title_uk || meta.title_uk, de: lesson.title_de || meta.title_de }, largeTitle: false,
     back: COURSE_BACK, cls: 'v-lesson',
     children: [
       h('div', { class: 'v-lesson-grid' },
-        h('div', { class: 'v-stack' }, hero, links, concepts, goalsCard(lesson.goals_de || meta.goals_de), grammar),
+        h('div', { class: 'v-stack' }, hero, path, links, concepts, goalsCard(lesson.goals_de || meta.goals_de), grammar),
         h('div', { class: 'v-stack' }, vocab)),
     ],
   });

@@ -39,8 +39,8 @@ export function openReportSheet({ lessonId, ex, userAnswer } = {}) {
     },
       h('span', { class: 'r-cat-glyph emoji' }, m.emoji),
       h('span', { class: 'r-cat-text' },
-        h('span', { class: 'r-cat-label' }, holdLabel(categoryUi(label), { de: false })),
-        h('span', { class: 'r-cat-hint ui-de', lang: 'de' }, `${label.replace('/', '/\u200b')} – ${m.hint}`)));
+        h('span', { class: 'r-cat-label' }, holdLabel(categoryUi(label))),
+        h('span', { class: 'r-cat-hint ui-de', lang: 'de' }, m.hint)));
     return b;
   });
   const catGroup = h('div', { class: 'r-section' },

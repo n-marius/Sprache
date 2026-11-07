@@ -63,7 +63,6 @@ export const UI_G3 = {
   no_target_date: { uk: 'Нема́є да́ти', de: 'Kein Zieldatum' },
   days_ago: { uk: 'тому́', de: 'Tage drüber' },
   temporarily: { uk: 'Тимчасо́во', de: 'zeitweise' },
-  auto_option: { uk: 'Автомати́чно', de: 'Automatisch' },
   no_uk_voice: { uk: 'Нема́є украї́нського го́лосу', de: 'Keine ukrainische Stimme installiert' },
   no_voice: { uk: 'Нема́є го́лосу', de: 'Sprachausgabe nicht verfügbar' },
   not_synced_n: { uk: 'Не синхронізо́вано', de: 'nicht synchronisiert' },

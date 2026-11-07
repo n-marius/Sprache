@@ -33,7 +33,7 @@ test('Lektions-Session: Größe, Intro direkt vor erster Übung, max. neue Wört
   assert.equal(summary.total, 15);
   assert.equal(summary.newWords.length, 5);
   assert.equal(summary.complete, true);
-  assert.ok(app.store.state.lessons['a1-1-01'].completedAt);
+  assert.ok(!app.store.state.lessons['a1-1-01'].completedAt, 'abgeschlossen wird eine Lektion erst durch die Prüfung');
   assert.equal(app.store.state.lessons['a1-1-01'].sessions, 1);
   const day = app.store.state.days['2026-10-21'];
   assert.equal(day.tasks, 15); assert.equal(day.correct, 15); assert.equal(day.newWords, 5); assert.equal(day.sessions, 1);

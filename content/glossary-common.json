@@ -2070,5 +2070,1881 @@
   "de": "(man) nennt",
   "pos": "verb",
   "info": "3. Pl. von зва́ти; Мене́ звуть … – Ich heiße …"
+ },
+ {
+  "uk": "дні",
+  "lemma": "день",
+  "de": "Tage",
+  "pos": "noun",
+  "info": "Nom. Pl. (nach 2–4) · Nom. Sg. день, m."
+ },
+ {
+  "uk": "днів",
+  "lemma": "день",
+  "de": "Tage",
+  "pos": "noun",
+  "info": "Gen. Pl. (nach 5+ und „з“) · Nom. Sg. день, m."
+ },
+ {
+  "uk": "дня",
+  "lemma": "день",
+  "de": "Tag(es)",
+  "pos": "noun",
+  "info": "Gen. Sg. · Nom. день, m."
+ },
+ {
+  "uk": "уро́ків",
+  "lemma": "уро́к",
+  "de": "Lektionen",
+  "pos": "noun",
+  "info": "Gen. Pl. (nach 5+ und „з“) · Nom. Sg. уро́к, m."
+ },
+ {
+  "uk": "уро́ку",
+  "lemma": "уро́к",
+  "de": "Lektion",
+  "pos": "noun",
+  "info": "Gen./Lok. Sg. · Nom. уро́к, m."
+ },
+ {
+  "uk": "уро́ці",
+  "lemma": "уро́к",
+  "de": "in der Lektion",
+  "pos": "noun",
+  "info": "Lok. Sg. (в уро́ці) · Nom. уро́к, m."
+ },
+ {
+  "uk": "завда́ння",
+  "lemma": "завда́ння",
+  "de": "Aufgabe(n)",
+  "pos": "noun",
+  "info": "n. · Nom./Akk. Sg. und Pl."
+ },
+ {
+  "uk": "завда́нь",
+  "lemma": "завда́ння",
+  "de": "Aufgaben",
+  "pos": "noun",
+  "info": "Gen. Pl. (nach 5+ und „з“) · Nom. Sg. завда́ння, n."
+ },
+ {
+  "uk": "се́сія",
+  "lemma": "се́сія",
+  "de": "Session, Lerneinheit",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "се́сій",
+  "lemma": "се́сія",
+  "de": "Sessions",
+  "pos": "noun",
+  "info": "Gen. Pl. (nach 5+) · Nom. Sg. се́сія, f."
+ },
+ {
+  "uk": "се́сію",
+  "lemma": "се́сія",
+  "de": "Session",
+  "pos": "noun",
+  "info": "Akk. Sg. · Nom. се́сія, f."
+ },
+ {
+  "uk": "вівто́рок",
+  "lemma": "вівто́рок",
+  "de": "Dienstag",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "середа́",
+  "lemma": "середа́",
+  "de": "Mittwoch",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "четве́р",
+  "lemma": "четве́р",
+  "de": "Donnerstag",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "п’я́тниця",
+  "lemma": "п’я́тниця",
+  "de": "Freitag",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "субо́та",
+  "lemma": "субо́та",
+  "de": "Samstag",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "неді́ля",
+  "lemma": "неді́ля",
+  "de": "Sonntag",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "пн",
+  "lemma": "понеді́лок",
+  "de": "Mo (Montag)",
+  "pos": "noun",
+  "info": "Abkürzung von понеді́лок"
+ },
+ {
+  "uk": "вт",
+  "lemma": "вівто́рок",
+  "de": "Di (Dienstag)",
+  "pos": "noun",
+  "info": "Abkürzung von вівто́рок"
+ },
+ {
+  "uk": "ср",
+  "lemma": "середа́",
+  "de": "Mi (Mittwoch)",
+  "pos": "noun",
+  "info": "Abkürzung von середа́"
+ },
+ {
+  "uk": "чт",
+  "lemma": "четве́р",
+  "de": "Do (Donnerstag)",
+  "pos": "noun",
+  "info": "Abkürzung von четве́р"
+ },
+ {
+  "uk": "пт",
+  "lemma": "п’я́тниця",
+  "de": "Fr (Freitag)",
+  "pos": "noun",
+  "info": "Abkürzung von п’я́тниця"
+ },
+ {
+  "uk": "сб",
+  "lemma": "субо́та",
+  "de": "Sa (Samstag)",
+  "pos": "noun",
+  "info": "Abkürzung von субо́та"
+ },
+ {
+  "uk": "нд",
+  "lemma": "неді́ля",
+  "de": "So (Sonntag)",
+  "pos": "noun",
+  "info": "Abkürzung von неді́ля"
+ },
+ {
+  "uk": "сі́чня",
+  "lemma": "сі́чень",
+  "de": "Januar",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum: 5 сі́чня) · Nom. сі́чень, m."
+ },
+ {
+  "uk": "лю́того",
+  "lemma": "лю́тий",
+  "de": "Februar",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. лю́тий, m."
+ },
+ {
+  "uk": "бе́резня",
+  "lemma": "бе́резень",
+  "de": "März",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. бе́резень, m."
+ },
+ {
+  "uk": "кві́тня",
+  "lemma": "кві́тень",
+  "de": "April",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. кві́тень, m."
+ },
+ {
+  "uk": "тра́вня",
+  "lemma": "тра́вень",
+  "de": "Mai",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. тра́вень, m."
+ },
+ {
+  "uk": "че́рвня",
+  "lemma": "че́рвень",
+  "de": "Juni",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. че́рвень, m."
+ },
+ {
+  "uk": "ли́пня",
+  "lemma": "ли́пень",
+  "de": "Juli",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. ли́пень, m."
+ },
+ {
+  "uk": "се́рпня",
+  "lemma": "се́рпень",
+  "de": "August",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. се́рпень, m."
+ },
+ {
+  "uk": "ве́ресня",
+  "lemma": "ве́ресень",
+  "de": "September",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. ве́ресень, m."
+ },
+ {
+  "uk": "жо́втня",
+  "lemma": "жо́втень",
+  "de": "Oktober",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. жо́втень, m."
+ },
+ {
+  "uk": "листопа́да",
+  "lemma": "листопа́д",
+  "de": "November",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. листопа́д, m."
+ },
+ {
+  "uk": "гру́дня",
+  "lemma": "гру́день",
+  "de": "Dezember",
+  "pos": "noun",
+  "info": "Gen. Sg. (Datum) · Nom. гру́день, m."
+ },
+ {
+  "uk": "за́хист",
+  "lemma": "за́хист",
+  "de": "Schutz",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "се́рія",
+  "lemma": "се́рія",
+  "de": "Serie (Lerntage in Folge)",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "се́рії",
+  "lemma": "се́рія",
+  "de": "der Serie; Serien",
+  "pos": "noun",
+  "info": "Gen./Dat./Lok. Sg. bzw. Nom. Pl. · Nom. се́рія, f."
+ },
+ {
+  "uk": "се́рію",
+  "lemma": "се́рія",
+  "de": "Serie",
+  "pos": "noun",
+  "info": "Akk. Sg. · Nom. се́рія, f."
+ },
+ {
+  "uk": "вряту́й",
+  "lemma": "врятува́ти",
+  "de": "rette!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. врятува́ти (pf.)"
+ },
+ {
+  "uk": "почни́",
+  "lemma": "поча́ти",
+  "de": "beginne!, starte!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. поча́ти (pf.)"
+ },
+ {
+  "uk": "учи́ся",
+  "lemma": "учи́тися",
+  "de": "lerne!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. учи́тися"
+ },
+ {
+  "uk": "збережи́",
+  "lemma": "зберегти́",
+  "de": "bewahre!, speichere!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. зберегти́ (pf.)"
+ },
+ {
+  "uk": "по́спіль",
+  "lemma": "по́спіль",
+  "de": "in Folge, hintereinander",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "доста́тньо",
+  "lemma": "доста́тньо",
+  "de": "genug, ausreichend",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "одніє́ї",
+  "lemma": "оди́н",
+  "de": "einer (eine)",
+  "pos": "num",
+  "info": "Gen. Sg. f. · Nom. одна́"
+ },
+ {
+  "uk": "спе́ршу",
+  "lemma": "спе́ршу",
+  "de": "zuerst",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "старе́",
+  "lemma": "стари́й",
+  "de": "das Alte",
+  "pos": "adj",
+  "info": "Nom./Akk. Sg. n. · m. стари́й"
+ },
+ {
+  "uk": "усе́",
+  "lemma": "уве́сь",
+  "de": "alles",
+  "pos": "pron",
+  "info": "Nom./Akk. Sg. n. · m. уве́сь (весь); Variante von все"
+ },
+ {
+  "uk": "повто́рено",
+  "lemma": "повтори́ти",
+  "de": "wiederholt (ist wiederholt)",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. повтори́ти (pf.)"
+ },
+ {
+  "uk": "мо́жеш",
+  "lemma": "могти́",
+  "de": "du kannst",
+  "pos": "verb",
+  "info": "2. Sg. Präsens · Inf. могти́"
+ },
+ {
+  "uk": "потренува́ти",
+  "lemma": "потренува́ти",
+  "de": "(ein wenig) üben, trainieren",
+  "pos": "verb",
+  "info": "Inf. (pf.) · ipf. тренува́ти"
+ },
+ {
+  "uk": "слабкі́",
+  "lemma": "слабки́й",
+  "de": "schwach",
+  "pos": "adj",
+  "info": "Nom./Akk. Pl. · m. слабки́й"
+ },
+ {
+  "uk": "план",
+  "lemma": "план",
+  "de": "Plan",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "рекомендо́вано",
+  "lemma": "рекомендува́ти",
+  "de": "empfohlen",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. рекомендува́ти"
+ },
+ {
+  "uk": "наді́йно",
+  "lemma": "наді́йно",
+  "de": "sicher, zuverlässig",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "оста́нні",
+  "lemma": "оста́нній",
+  "de": "letzte",
+  "pos": "adj",
+  "info": "Nom./Akk. Pl. · m. оста́нній"
+ },
+ {
+  "uk": "тре́ба",
+  "lemma": "тре́ба",
+  "de": "man muss, es ist nötig",
+  "pos": "adv",
+  "info": "unpersönlich (+ Inf.)"
+ },
+ {
+  "uk": "зро́блено",
+  "lemma": "зроби́ти",
+  "de": "erledigt, gemacht",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. зроби́ти (pf.)"
+ },
+ {
+  "uk": "впізнає́ш",
+  "lemma": "впізнава́ти",
+  "de": "du erkennst (wieder)",
+  "pos": "verb",
+  "info": "2. Sg. Präsens · Inf. впізнава́ти (ipf.)"
+ },
+ {
+  "uk": "них",
+  "lemma": "вони́",
+  "de": "ihnen, ihrer",
+  "pos": "pron",
+  "info": "Gen./Lok. von вони́ nach Präposition (з них = davon)"
+ },
+ {
+  "uk": "сказа́ти",
+  "lemma": "сказа́ти",
+  "de": "sagen",
+  "pos": "verb",
+  "info": "Inf. (pf.) · ipf. каза́ти"
+ },
+ {
+  "uk": "чека́ють",
+  "lemma": "чека́ти",
+  "de": "sie warten",
+  "pos": "verb",
+  "info": "3. Pl. Präsens · Inf. чека́ти"
+ },
+ {
+  "uk": "ка́ртки",
+  "lemma": "ка́ртка",
+  "de": "Karten",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. · Nom. Sg. ка́ртка, f."
+ },
+ {
+  "uk": "слу́хання",
+  "lemma": "слу́хання",
+  "de": "Hören, Hörübung",
+  "pos": "noun",
+  "info": "n."
+ },
+ {
+  "uk": "цей",
+  "lemma": "цей",
+  "de": "dieser",
+  "pos": "pron",
+  "info": "Nom. Sg. m. · f. ця, n. це"
+ },
+ {
+  "uk": "бу́де",
+  "lemma": "бу́ти",
+  "de": "(er/sie/es) wird sein",
+  "pos": "verb",
+  "info": "3. Sg. Futur · Inf. бу́ти"
+ },
+ {
+  "uk": "гото́вий",
+  "lemma": "гото́вий",
+  "de": "fertig, bereit",
+  "pos": "adj",
+  "info": "Nom. Sg. m."
+ },
+ {
+  "uk": "відо́мі",
+  "lemma": "відо́мий",
+  "de": "bekannt",
+  "pos": "adj",
+  "info": "Nom. Pl. · m. відо́мий"
+ },
+ {
+  "uk": "зна́йдено",
+  "lemma": "знайти́",
+  "de": "gefunden",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. знайти́ (pf.)"
+ },
+ {
+  "uk": "закри́тий",
+  "lemma": "закри́тий",
+  "de": "geschlossen, gesperrt",
+  "pos": "adj",
+  "info": "Nom. Sg. m."
+ },
+ {
+  "uk": "закінчи́",
+  "lemma": "закінчи́ти",
+  "de": "beende!, schließe ab!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. закінчи́ти (pf.)"
+ },
+ {
+  "uk": "попере́дній",
+  "lemma": "попере́дній",
+  "de": "vorherige(r)",
+  "pos": "adj",
+  "info": "Nom./Akk. Sg. m."
+ },
+ {
+  "uk": "одно́",
+  "lemma": "одно́",
+  "de": "Teil von „усе́ одно́“ (trotzdem)",
+  "pos": "phrase",
+  "info": "усе́ одно́ = trotzdem, egal"
+ },
+ {
+  "uk": "скасува́ти",
+  "lemma": "скасува́ти",
+  "de": "abbrechen, absagen",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "ви́вчено",
+  "lemma": "ви́вчити",
+  "de": "gelernt (ist gelernt)",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. ви́вчити (pf.)"
+ },
+ {
+  "uk": "сму́жки",
+  "lemma": "сму́жка",
+  "de": "Streifen, Balken",
+  "pos": "noun",
+  "info": "Nom. Pl. · Nom. Sg. сму́жка, f."
+ },
+ {
+  "uk": "па́м’яті",
+  "lemma": "па́м’ять",
+  "de": "Gedächtnis",
+  "pos": "noun",
+  "info": "Gen./Lok. Sg. · Nom. па́м’ять, f."
+ },
+ {
+  "uk": "трива́є",
+  "lemma": "трива́ти",
+  "de": "dauert an, geht weiter",
+  "pos": "verb",
+  "info": "3. Sg. Präsens · Inf. трива́ти"
+ },
+ {
+  "uk": "за́втра",
+  "lemma": "за́втра",
+  "de": "morgen",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "зарахо́вано",
+  "lemma": "зарахува́ти",
+  "de": "gezählt, angerechnet",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. зарахува́ти (pf.)"
+ },
+ {
+  "uk": "цьо́му",
+  "lemma": "цей",
+  "de": "diesem",
+  "pos": "pron",
+  "info": "Lok./Dat. Sg. m./n. · Nom. цей"
+ },
+ {
+  "uk": "істо́рії",
+  "lemma": "істо́рія",
+  "de": "Geschichte",
+  "pos": "noun",
+  "info": "Gen./Dat./Lok. Sg. bzw. Nom. Pl. · Nom. істо́рія, f."
+ },
+ {
+  "uk": "істо́рію",
+  "lemma": "істо́рія",
+  "de": "Geschichte",
+  "pos": "noun",
+  "info": "Akk. Sg. · Nom. істо́рія, f."
+ },
+ {
+  "uk": "збере́жено",
+  "lemma": "зберегти́",
+  "de": "gespeichert",
+  "pos": "verb",
+  "info": "unpersönliche Form auf -но · Inf. зберегти́ (pf.)"
+ },
+ {
+  "uk": "повто́рюй",
+  "lemma": "повто́рювати",
+  "de": "wiederhole!, sprich nach!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. повто́рювати (ipf.)"
+ },
+ {
+  "uk": "слу́хай",
+  "lemma": "слу́хати",
+  "de": "hör zu!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. слу́хати"
+ },
+ {
+  "uk": "підкре́слені",
+  "lemma": "підкре́слений",
+  "de": "unterstrichen",
+  "pos": "adj",
+  "info": "Nom. Pl. · m. підкре́слений (Partizip von підкре́слити)"
+ },
+ {
+  "uk": "вгада́й",
+  "lemma": "вгада́ти",
+  "de": "rate!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. вгада́ти (pf.)"
+ },
+ {
+  "uk": "тепе́р",
+  "lemma": "тепе́р",
+  "de": "jetzt",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "перекла́ду",
+  "lemma": "перекла́д",
+  "de": "Übersetzung",
+  "pos": "noun",
+  "info": "Gen. Sg. · Nom. перекла́д, m."
+ },
+ {
+  "uk": "впра́ви",
+  "lemma": "впра́ва",
+  "de": "Übungen",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. · Nom. Sg. впра́ва, f."
+ },
+ {
+  "uk": "зрозумі́ло",
+  "lemma": "зрозумі́лий",
+  "de": "verständlich, klar",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "ма́йже",
+  "lemma": "ма́йже",
+  "de": "fast",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "бі́льшість",
+  "lemma": "бі́льшість",
+  "de": "das meiste, Mehrheit",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "ма́ло",
+  "lemma": "ма́ло",
+  "de": "wenig",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "кра́ще",
+  "lemma": "кра́ще",
+  "de": "besser",
+  "pos": "adv",
+  "info": "Komparativ von до́бре"
+ },
+ {
+  "uk": "тренува́ти",
+  "lemma": "тренува́ти",
+  "de": "üben, trainieren",
+  "pos": "verb",
+  "info": "Inf. (ipf.)"
+ },
+ {
+  "uk": "вимо́ва",
+  "lemma": "вимо́ва",
+  "de": "Aussprache",
+  "pos": "noun",
+  "info": "f. Nom. Sg."
+ },
+ {
+  "uk": "письмо́",
+  "lemma": "письмо́",
+  "de": "Schrift, Schreiben",
+  "pos": "noun",
+  "info": "n. Nom. Sg."
+ },
+ {
+  "uk": "відмі́нки",
+  "lemma": "відмі́нок",
+  "de": "Fälle (Kasus)",
+  "pos": "noun",
+  "info": "Nom. Pl. · Sg. відмі́нок (m.)"
+ },
+ {
+  "uk": "іме́нники",
+  "lemma": "іме́нник",
+  "de": "Nomen, Substantive",
+  "pos": "noun",
+  "info": "Nom. Pl. · Sg. іме́нник (m.)"
+ },
+ {
+  "uk": "прикме́тники",
+  "lemma": "прикме́тник",
+  "de": "Adjektive",
+  "pos": "noun",
+  "info": "Nom. Pl. · Sg. прикме́тник (m.)"
+ },
+ {
+  "uk": "займе́нники",
+  "lemma": "займе́нник",
+  "de": "Pronomen",
+  "pos": "noun",
+  "info": "Nom. Pl. · Sg. займе́нник (m.)"
+ },
+ {
+  "uk": "зверта́ння",
+  "lemma": "зверта́ння",
+  "de": "Anrede",
+  "pos": "noun",
+  "info": "n. Nom. Sg."
+ },
+ {
+  "uk": "фра́зи",
+  "lemma": "фра́за",
+  "de": "Sätze, Wendungen",
+  "pos": "noun",
+  "info": "Nom. Pl. · Sg. фра́за (f.)"
+ },
+ {
+  "uk": "розмо́ви",
+  "lemma": "розмо́ва",
+  "de": "Gespräch",
+  "pos": "noun",
+  "info": "Gen. Sg. f. · Nom. розмо́ва"
+ },
+ {
+  "uk": "будо́ва",
+  "lemma": "будо́ва",
+  "de": "Aufbau, Bau",
+  "pos": "noun",
+  "info": "f. Nom. Sg."
+ },
+ {
+  "uk": "дієсло́ва",
+  "lemma": "дієсло́во",
+  "de": "Verben",
+  "pos": "noun",
+  "info": "Nom. Pl. · Sg. дієсло́во (n.)"
+ },
+ {
+  "uk": "кросво́рда",
+  "lemma": "кросво́рд",
+  "de": "Kreuzworträtsel",
+  "pos": "noun",
+  "info": "Gen. Sg. m. · Nom. кросво́рд"
+ },
+ {
+  "uk": "лі́теру",
+  "lemma": "лі́тера",
+  "de": "Buchstabe",
+  "pos": "noun",
+  "info": "Akk. Sg. f. · Nom. лі́тера"
+ },
+ {
+  "uk": "відкри́ється",
+  "lemma": "відкри́тися",
+  "de": "wird sich öffnen, wird freigeschaltet",
+  "pos": "verb",
+  "info": "3. Pers. Sg. Futur · Inf. відкри́тися"
+ },
+ {
+  "uk": "коли́",
+  "lemma": "коли́",
+  "de": "wenn, sobald; wann",
+  "pos": "conj",
+  "info": "Konjunktion/Fragewort"
+ },
+ {
+  "uk": "почне́ш",
+  "lemma": "поча́ти",
+  "de": "(du) wirst beginnen",
+  "pos": "verb",
+  "info": "2. Pers. Sg. Futur · Inf. поча́ти"
+ },
+ {
+  "uk": "підка́зками",
+  "lemma": "підка́зка",
+  "de": "Hinweis, Tipp",
+  "pos": "noun",
+  "info": "Instr. Pl. f. · Nom. підка́зка"
+ },
+ {
+  "uk": "форм",
+  "lemma": "фо́рма",
+  "de": "Formen",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. фо́рма"
+ },
+ {
+  "uk": "відкри́тих",
+  "lemma": "відкри́тий",
+  "de": "offen, freigeschaltet",
+  "pos": "adj",
+  "info": "Gen. Pl. · Nom. відкри́тий"
+ },
+ {
+  "uk": "лише́",
+  "lemma": "лише́",
+  "de": "nur",
+  "pos": "part",
+  "info": "Partikel"
+ },
+ {
+  "uk": "уро́ках",
+  "lemma": "уро́к",
+  "de": "Lektionen",
+  "pos": "noun",
+  "info": "Lok. Pl. m. · Nom. уро́к"
+ },
+ {
+  "uk": "грай",
+  "lemma": "гра́ти",
+  "de": "spiel!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. гра́ти"
+ },
+ {
+  "uk": "повто́рювати",
+  "lemma": "повто́рювати",
+  "de": "wiederholen",
+  "pos": "verb",
+  "info": "Infinitiv (unvollendet)"
+ },
+ {
+  "uk": "складни́х",
+  "lemma": "складни́й",
+  "de": "schwierig",
+  "pos": "adj",
+  "info": "Gen. Pl. · Nom. складни́й"
+ },
+ {
+  "uk": "збира́й",
+  "lemma": "збира́ти",
+  "de": "sammle!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. збира́ти"
+ },
+ {
+  "uk": "те́кстах",
+  "lemma": "текст",
+  "de": "Texte",
+  "pos": "noun",
+  "info": "Lok. Pl. m. · Nom. текст"
+ },
+ {
+  "uk": "те́кстів",
+  "lemma": "текст",
+  "de": "Texte",
+  "pos": "noun",
+  "info": "Gen. Pl. m. · Nom. текст"
+ },
+ {
+  "uk": "істо́ріях",
+  "lemma": "істо́рія",
+  "de": "Geschichten",
+  "pos": "noun",
+  "info": "Lok. Pl. f. · Nom. істо́рія"
+ },
+ {
+  "uk": "істо́рій",
+  "lemma": "істо́рія",
+  "de": "Geschichten",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. істо́рія"
+ },
+ {
+  "uk": "зайди́",
+  "lemma": "зайти́",
+  "de": "komm vorbei!, schau rein!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. зайти́"
+ },
+ {
+  "uk": "чого́",
+  "lemma": "що",
+  "de": "was",
+  "pos": "pron",
+  "info": "Gen. · Nom. що; нема́є чого́ … = es gibt nichts zu …"
+ },
+ {
+  "uk": "головне́",
+  "lemma": "головни́й",
+  "de": "das Wichtigste",
+  "pos": "adj",
+  "info": "n. Nom. Sg. (substantiviert) · головни́й"
+ },
+ {
+  "uk": "ця",
+  "lemma": "цей",
+  "de": "diese",
+  "pos": "pron",
+  "info": "f. Nom. Sg. · m. цей"
+ },
+ {
+  "uk": "цього́",
+  "lemma": "цей",
+  "de": "dieses, dieser",
+  "pos": "pron",
+  "info": "Gen. Sg. m./n. · Nom. цей"
+ },
+ {
+  "uk": "поя́снень",
+  "lemma": "поя́снення",
+  "de": "Erklärungen",
+  "pos": "noun",
+  "info": "Gen. Pl. n. · Nom. поя́снення"
+ },
+ {
+  "uk": "поя́сненні",
+  "lemma": "поя́снення",
+  "de": "Erklärung",
+  "pos": "noun",
+  "info": "Lok. Sg. n. · Nom. поя́снення"
+ },
+ {
+  "uk": "насту́пних",
+  "lemma": "насту́пний",
+  "de": "nächste",
+  "pos": "adj",
+  "info": "Lok. Pl. · Nom. насту́пний"
+ },
+ {
+  "uk": "насту́пна",
+  "lemma": "насту́пний",
+  "de": "nächste",
+  "pos": "adj",
+  "info": "f. Nom. Sg. · m. насту́пний"
+ },
+ {
+  "uk": "карто́к",
+  "lemma": "ка́ртка",
+  "de": "Karten",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. ка́ртка"
+ },
+ {
+  "uk": "гра",
+  "lemma": "гра",
+  "de": "Spiel",
+  "pos": "noun",
+  "info": "f. Nom. Sg."
+ },
+ {
+  "uk": "і́нші",
+  "lemma": "і́нший",
+  "de": "andere",
+  "pos": "adj",
+  "info": "Nom./Akk. Pl. · m. і́нший"
+ },
+ {
+  "uk": "оці́нок",
+  "lemma": "оці́нка",
+  "de": "Bewertungen",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. оці́нка"
+ },
+ {
+  "uk": "відкри́ти",
+  "lemma": "відкри́ти",
+  "de": "öffnen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "хвили́на",
+  "lemma": "хвили́на",
+  "de": "Minute",
+  "pos": "noun",
+  "info": "f. Nom. Sg."
+ },
+ {
+  "uk": "хвили́н",
+  "lemma": "хвили́на",
+  "de": "Minuten",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. хвили́на"
+ },
+ {
+  "uk": "мі́сяць",
+  "lemma": "мі́сяць",
+  "de": "Monat",
+  "pos": "noun",
+  "info": "m. Nom. Sg."
+ },
+ {
+  "uk": "місяці́в",
+  "lemma": "мі́сяць",
+  "de": "Monate",
+  "pos": "noun",
+  "info": "Gen. Pl. m. · Nom. мі́сяць"
+ },
+ {
+  "uk": "хід",
+  "lemma": "хід",
+  "de": "Zug (im Spiel)",
+  "pos": "noun",
+  "info": "m. Nom. Sg."
+ },
+ {
+  "uk": "хо́ди",
+  "lemma": "хід",
+  "de": "Züge (im Spiel)",
+  "pos": "noun",
+  "info": "Nom. Pl. m. · Sg. хід"
+ },
+ {
+  "uk": "ході́в",
+  "lemma": "хід",
+  "de": "Züge (im Spiel)",
+  "pos": "noun",
+  "info": "Gen. Pl. m. · Nom. хід"
+ },
+ {
+  "uk": "па́ра",
+  "lemma": "па́ра",
+  "de": "Paar",
+  "pos": "noun",
+  "info": "f. Nom. Sg."
+ },
+ {
+  "uk": "пар",
+  "lemma": "па́ра",
+  "de": "Paare",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. па́ра"
+ },
+ {
+  "uk": "ча́сто",
+  "lemma": "ча́сто",
+  "de": "oft",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "забу́ті",
+  "lemma": "забу́тий",
+  "de": "vergessen",
+  "pos": "adj",
+  "info": "Nom. Pl. (Partizip) · забу́тий"
+ },
+ {
+  "uk": "позна́чені",
+  "lemma": "позна́чений",
+  "de": "markiert",
+  "pos": "adj",
+  "info": "Nom. Pl. (Partizip) · позна́чений"
+ },
+ {
+  "uk": "ре́чень",
+  "lemma": "ре́чення",
+  "de": "Sätze",
+  "pos": "noun",
+  "info": "Gen. Pl. n. · Nom. ре́чення"
+ },
+ {
+  "uk": "по́шук",
+  "lemma": "по́шук",
+  "de": "Suche",
+  "pos": "noun",
+  "info": "m. Nom. Sg."
+ },
+ {
+  "uk": "сла́бко",
+  "lemma": "сла́бко",
+  "de": "schwach",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "відмі́нно",
+  "lemma": "відмі́нно",
+  "de": "ausgezeichnet",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "вправ",
+  "lemma": "впра́ва",
+  "de": "Übungen",
+  "pos": "noun",
+  "info": "Gen. Pl. f. · Nom. впра́ва"
+ },
+ {
+  "uk": "те́му",
+  "lemma": "те́ма",
+  "de": "Thema",
+  "pos": "noun",
+  "info": "Akk. Sg. f. · Nom. те́ма"
+ },
+ {
+  "uk": "трену́й",
+  "lemma": "тренува́ти",
+  "de": "übe!, trainiere!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. тренува́ти"
+ },
+ {
+  "uk": "зна́чить",
+  "lemma": "зна́чити",
+  "de": "bedeutet",
+  "pos": "verb",
+  "info": "3. Pers. Sg. Präsens · Inf. зна́чити"
+ },
+ {
+  "uk": "фі́льтри",
+  "lemma": "фільтр",
+  "de": "Filter",
+  "pos": "noun",
+  "info": "Nom. Pl. m. · Sg. фільтр"
+ },
+ {
+  "uk": "весь",
+  "lemma": "весь",
+  "de": "ganz",
+  "pos": "pron",
+  "info": "m. Nom./Akk. Sg."
+ },
+ {
+  "uk": "і́нше",
+  "lemma": "і́нший",
+  "de": "anderes, Sonstiges",
+  "pos": "adj",
+  "info": "Nom. Sg. n. · Nom. m. і́нший"
+ },
+ {
+  "uk": "ви́далено",
+  "lemma": "ви́далити",
+  "de": "gelöscht",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. ви́далити (pf.)"
+ },
+ {
+  "uk": "встанови́",
+  "lemma": "встанови́ти",
+  "de": "installiere!",
+  "pos": "verb",
+  "info": "Imp. 2. Sg. · Inf. встанови́ти (pf.)"
+ },
+ {
+  "uk": "ві́дповіді",
+  "lemma": "ві́дповідь",
+  "de": "Antworten",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. f. · Nom. Sg. ві́дповідь"
+ },
+ {
+  "uk": "доста́влено",
+  "lemma": "доста́вити",
+  "de": "zugestellt",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. доста́вити (pf.)"
+ },
+ {
+  "uk": "діало́г",
+  "lemma": "діало́г",
+  "de": "Dialog",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "завда́ннях",
+  "lemma": "завда́ння",
+  "de": "(in) Aufgaben",
+  "pos": "noun",
+  "info": "Lok. Pl. n. · Nom. завда́ння"
+ },
+ {
+  "uk": "закі́нчити",
+  "lemma": "закі́нчити",
+  "de": "beenden",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "закі́нчено",
+  "lemma": "закі́нчити",
+  "de": "beendet",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. закі́нчити (pf.)"
+ },
+ {
+  "uk": "закі́нчиться",
+  "lemma": "закі́нчитися",
+  "de": "wird enden",
+  "pos": "verb",
+  "info": "3. Sg. Fut. · Inf. закі́нчитися (pf.)"
+ },
+ {
+  "uk": "наза́вжди",
+  "lemma": "наза́вжди",
+  "de": "für immer, dauerhaft",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "недосту́пно",
+  "lemma": "недосту́пний",
+  "de": "nicht verfügbar",
+  "pos": "adv",
+  "info": "Adv. / Prädikativ"
+ },
+ {
+  "uk": "недосту́пне",
+  "lemma": "недосту́пний",
+  "de": "nicht verfügbar",
+  "pos": "adj",
+  "info": "Nom. Sg. n. · Nom. m. недосту́пний"
+ },
+ {
+  "uk": "оста́ння",
+  "lemma": "оста́нній",
+  "de": "letzte",
+  "pos": "adj",
+  "info": "Nom. Sg. f. · Nom. m. оста́нній"
+ },
+ {
+  "uk": "оста́ннє",
+  "lemma": "оста́нній",
+  "de": "letzte(s)",
+  "pos": "adj",
+  "info": "Nom. Sg. n. · Nom. m. оста́нній"
+ },
+ {
+  "uk": "поми́лка",
+  "lemma": "поми́лка",
+  "de": "Fehler",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "поми́лки",
+  "lemma": "поми́лка",
+  "de": "Fehler (Pl.)",
+  "pos": "noun",
+  "info": "Nom. Pl. f. (auch Gen. Sg.) · Nom. поми́лка"
+ },
+ {
+  "uk": "розмо́ву",
+  "lemma": "розмо́ва",
+  "de": "Gespräch",
+  "pos": "noun",
+  "info": "Akk. Sg. f. · Nom. розмо́ва"
+ },
+ {
+  "uk": "скопійо́вано",
+  "lemma": "скопіюва́ти",
+  "de": "kopiert",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. скопіюва́ти (pf.)"
+ },
+ {
+  "uk": "слу́хаю",
+  "lemma": "слу́хати",
+  "de": "(ich) höre",
+  "pos": "verb",
+  "info": "1. Sg. Präs. · Inf. слу́хати"
+ },
+ {
+  "uk": "споча́тку",
+  "lemma": "споча́тку",
+  "de": "zuerst",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "ста́тус",
+  "lemma": "ста́тус",
+  "de": "Status",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "схова́ти",
+  "lemma": "схова́ти",
+  "de": "ausblenden, verstecken",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "тимчасо́во",
+  "lemma": "тимчасо́во",
+  "de": "vorübergehend, zeitweise",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "то́кен",
+  "lemma": "то́кен",
+  "de": "Token (Zugangsschlüssel)",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "то́кена",
+  "lemma": "то́кен",
+  "de": "Token",
+  "pos": "noun",
+  "info": "Gen. Sg. m. · Nom. то́кен"
+ },
+ {
+  "uk": "ті́льки",
+  "lemma": "ті́льки",
+  "de": "nur",
+  "pos": "part",
+  "info": "Partikel"
+ },
+ {
+  "uk": "ува́га",
+  "lemma": "ува́га",
+  "de": "Achtung, Aufmerksamkeit",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "уве́сь",
+  "lemma": "уве́сь",
+  "de": "ganz, gesamt",
+  "pos": "pron",
+  "info": "Nom./Akk. Sg. m. (= весь)"
+ },
+ {
+  "uk": "чита́ння",
+  "lemma": "чита́ння",
+  "de": "Lesen",
+  "pos": "noun",
+  "info": "n."
+ },
+ {
+  "uk": "автомати́чне",
+  "lemma": "автомати́чний",
+  "de": "automatisch (erzeugt)",
+  "pos": "adj",
+  "info": "Nom. Sg. n. · Nom. m. автомати́чний"
+ },
+ {
+  "uk": "вдало́ся",
+  "lemma": "вда́тися",
+  "de": "gelang",
+  "pos": "verb",
+  "info": "Prät. n. (unpersönl.: не вдало́ся – es gelang nicht) · Inf. вда́тися (pf.)"
+ },
+ {
+  "uk": "ви́гук",
+  "lemma": "ви́гук",
+  "de": "Ausruf, Interjektion",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "ви́слів",
+  "lemma": "ви́слів",
+  "de": "Wendung, Ausdruck",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "відно́влено",
+  "lemma": "віднови́ти",
+  "de": "wiederhergestellt",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. віднови́ти (pf.)"
+ },
+ {
+  "uk": "го́лосу",
+  "lemma": "го́лос",
+  "de": "Stimme",
+  "pos": "noun",
+  "info": "Gen. Sg. m. · Nom. го́лос"
+ },
+ {
+  "uk": "годи́ну",
+  "lemma": "годи́на",
+  "de": "Stunde",
+  "pos": "noun",
+  "info": "Akk. Sg. f. · Nom. годи́на"
+ },
+ {
+  "uk": "до́дано",
+  "lemma": "дода́ти",
+  "de": "hinzugefügt, angehängt",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. дода́ти (pf.)"
+ },
+ {
+  "uk": "дієсло́во",
+  "lemma": "дієсло́во",
+  "de": "Verb",
+  "pos": "noun",
+  "info": "n."
+ },
+ {
+  "uk": "заванта́жено",
+  "lemma": "заванта́жити",
+  "de": "geladen, importiert",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. заванта́жити (pf.)"
+ },
+ {
+  "uk": "займе́нник",
+  "lemma": "займе́нник",
+  "de": "Pronomen",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "застосу́нок",
+  "lemma": "застосу́нок",
+  "de": "App, Anwendung",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "зо́всім",
+  "lemma": "зо́всім",
+  "de": "ganz, völlig (не зо́всім – nicht ganz)",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "мо́жу",
+  "lemma": "могти́",
+  "de": "(ich) kann",
+  "pos": "verb",
+  "info": "1. Sg. Präs. · Inf. могти́"
+ },
+ {
+  "uk": "на́голос",
+  "lemma": "на́голос",
+  "de": "Betonung",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "ніко́ли",
+  "lemma": "ніко́ли",
+  "de": "nie",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "означа́є",
+  "lemma": "означа́ти",
+  "de": "bedeutet",
+  "pos": "verb",
+  "info": "3. Sg. Präs. · Inf. означа́ти"
+ },
+ {
+  "uk": "оці́нка",
+  "lemma": "оці́нка",
+  "de": "Bewertung",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "оці́нки",
+  "lemma": "оці́нка",
+  "de": "Bewertung",
+  "pos": "noun",
+  "info": "Gen. Sg. f. (auch Nom. Pl.) · Nom. оці́нка"
+ },
+ {
+  "uk": "пита́нь",
+  "lemma": "пита́ння",
+  "de": "Fragen",
+  "pos": "noun",
+  "info": "Gen. Pl. n. · Nom. пита́ння"
+ },
+ {
+  "uk": "сполу́чник",
+  "lemma": "сполу́чник",
+  "de": "Konjunktion",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "те́хніка",
+  "lemma": "те́хніка",
+  "de": "Technik",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "тому́",
+  "lemma": "тому́",
+  "de": "vor (zeitlich, nachgestellt: два дні тому́ – vor zwei Tagen)",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "хвили́ну",
+  "lemma": "хвили́на",
+  "de": "Minute",
+  "pos": "noun",
+  "info": "Akk. Sg. f. · Nom. хвили́на"
+ },
+ {
+  "uk": "части́нка",
+  "lemma": "части́нка",
+  "de": "Partikel",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "числі́вник",
+  "lemma": "числі́вник",
+  "de": "Zahlwort",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "чу́ти",
+  "lemma": "чу́ти",
+  "de": "hören; zu hören (нічо́го не чу́ти – nichts zu hören)",
+  "pos": "verb",
+  "info": "Inf."
+ },
+ {
+  "uk": "чі́тко",
+  "lemma": "чі́тко",
+  "de": "deutlich",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "що́йно",
+  "lemma": "що́йно",
+  "de": "gerade eben",
+  "pos": "adv",
+  "info": "Adv."
+ },
+ {
+  "uk": "іме́нник",
+  "lemma": "іме́нник",
+  "de": "Substantiv",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "відкри́то",
+  "lemma": "відкри́ти",
+  "de": "geöffnet",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -то (Passiv) · Inf. відкри́ти (pf.)"
+ },
+ {
+  "uk": "при́строї",
+  "lemma": "при́стрій",
+  "de": "(auf dem) Gerät",
+  "pos": "noun",
+  "info": "Lok. Sg. m. · Nom. при́стрій"
+ },
+ {
+  "uk": "при́стрій",
+  "lemma": "при́стрій",
+  "de": "Gerät",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "синхроніза́ції",
+  "lemma": "синхроніза́ція",
+  "de": "Synchronisierung",
+  "pos": "noun",
+  "info": "Gen. Sg. f. · Nom. синхроніза́ція"
+ },
+ {
+  "uk": "украї́нського",
+  "lemma": "украї́нський",
+  "de": "ukrainisch(en)",
+  "pos": "adj",
+  "info": "Gen. Sg. m. · Nom. украї́нський"
+ },
+ {
+  "uk": "украї́нській",
+  "lemma": "украї́нський",
+  "de": "(im) Ukrainischen",
+  "pos": "adj",
+  "info": "Lok. Sg. f. (украї́нська мо́ва) · Nom. m. украї́нський"
+ },
+ {
+  "uk": "створи́ти",
+  "lemma": "створи́ти",
+  "de": "erstellen",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "зберіга́ти",
+  "lemma": "зберіга́ти",
+  "de": "sichern, speichern",
+  "pos": "verb",
+  "info": "Inf. (ipf.)"
+ },
+ {
+  "uk": "збере́ження",
+  "lemma": "збере́ження",
+  "de": "Sicherung, Speichern",
+  "pos": "noun",
+  "info": "n."
+ },
+ {
+  "uk": "коментаря́",
+  "lemma": "комента́р",
+  "de": "Kommentar",
+  "pos": "noun",
+  "info": "Gen. Sg. m. · Nom. комента́р"
+ },
+ {
+  "uk": "комента́р",
+  "lemma": "комента́р",
+  "de": "Kommentar",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "катего́рію",
+  "lemma": "катего́рія",
+  "de": "Kategorie",
+  "pos": "noun",
+  "info": "Akk. Sg. f. · Nom. катего́рія"
+ },
+ {
+  "uk": "непра́вильний",
+  "lemma": "непра́вильний",
+  "de": "falsch",
+  "pos": "adj",
+  "info": "Nom. Sg. m."
+ },
+ {
+  "uk": "непра́вильна",
+  "lemma": "непра́вильний",
+  "de": "falsch",
+  "pos": "adj",
+  "info": "Nom. Sg. f. · Nom. m. непра́вильний"
+ },
+ {
+  "uk": "незрозумі́ле",
+  "lemma": "незрозумі́лий",
+  "de": "unklar",
+  "pos": "adj",
+  "info": "Nom. Sg. n. · Nom. m. незрозумі́лий"
+ },
+ {
+  "uk": "говорі́ння",
+  "lemma": "говорі́ння",
+  "de": "Sprechen",
+  "pos": "noun",
+  "info": "n."
+ },
+ {
+  "uk": "карти́нки",
+  "lemma": "карти́нка",
+  "de": "Bilder",
+  "pos": "noun",
+  "info": "Nom. Pl. f. · Nom. Sg. карти́нка"
+ },
+ {
+  "uk": "фо́рма",
+  "lemma": "фо́рма",
+  "de": "Form",
+  "pos": "noun",
+  "info": "f."
+ },
+ {
+  "uk": "пропу́щено",
+  "lemma": "пропусти́ти",
+  "de": "übersprungen",
+  "pos": "verb",
+  "info": "unpersönl. Form auf -но (Passiv) · Inf. пропусти́ти (pf.)"
+ },
+ {
+  "uk": "прикме́тник",
+  "lemma": "прикме́тник",
+  "de": "Adjektiv",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "прислі́вник",
+  "lemma": "прислі́вник",
+  "de": "Adverb",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "прийме́нник",
+  "lemma": "прийме́нник",
+  "de": "Präposition",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "ім’я́",
+  "lemma": "ім’я́",
+  "de": "Name, Vorname",
+  "pos": "noun",
+  "info": "n."
+ },
+ {
+  "uk": "спро́буй",
+  "lemma": "спро́бувати",
+  "de": "versuch!",
+  "pos": "verb",
+  "info": "Imp. 2. Sg. · Inf. спро́бувати (pf.)"
+ },
+ {
+  "uk": "мікрофо́на",
+  "lemma": "мікрофо́н",
+  "de": "Mikrofon",
+  "pos": "noun",
+  "info": "Gen. Sg. m. · Nom. мікрофо́н"
+ },
+ {
+  "uk": "говори́",
+  "lemma": "говори́ти",
+  "de": "sprich!",
+  "pos": "verb",
+  "info": "Imp. 2. Sg. · Inf. говори́ти"
+ },
+ {
+  "uk": "розпізна́ти",
+  "lemma": "розпізна́ти",
+  "de": "erkennen",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "зарахува́ти",
+  "lemma": "зарахува́ти",
+  "de": "anrechnen, akzeptieren",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "порівня́ти",
+  "lemma": "порівня́ти",
+  "de": "vergleichen",
+  "pos": "verb",
+  "info": "Inf. (pf.)"
+ },
+ {
+  "uk": "варіа́нт",
+  "lemma": "варіа́нт",
+  "de": "Variante, Version",
+  "pos": "noun",
+  "info": "m."
+ },
+ {
+  "uk": "прокида́тися",
+  "lemma": "прокида́тися",
+  "de": "aufwachen",
+  "pos": "verb",
+  "info": "Infinitiv (reflexiv)"
+ },
+ {
+  "uk": "вмива́тися",
+  "lemma": "вмива́тися",
+  "de": "sich waschen",
+  "pos": "verb",
+  "info": "Infinitiv (reflexiv)"
+ },
+ {
+  "uk": "пів",
+  "lemma": "пів",
+  "de": "halb",
+  "pos": "num",
+  "info": "unveränderlich; пів на дру́гу – halb zwei"
+ },
+ {
+  "uk": "чверть",
+  "lemma": "чверть",
+  "de": "Viertel",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "гото́во",
+  "lemma": "гото́вий",
+  "de": "fertig, erledigt",
+  "pos": "adv",
+  "info": "Kurzform n. von гото́вий; Гото́во! – Fertig!"
+ },
+ {
+  "uk": "крок",
+  "lemma": "крок",
+  "de": "Schritt",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "найкра́щий",
+  "lemma": "найкра́щий",
+  "de": "beste",
+  "pos": "adj",
+  "info": "m. Nom. Sg.; Superlativ von до́брий"
+ },
+ {
+  "uk": "повтори́",
+  "lemma": "повтори́ти",
+  "de": "wiederhole!",
+  "pos": "verb",
+  "info": "Imperativ (ти) von повтори́ти"
+ },
+ {
+  "uk": "ра́унд",
+  "lemma": "ра́унд",
+  "de": "Runde",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "зроби́",
+  "lemma": "зроби́ти",
+  "de": "mach!",
+  "pos": "verb",
+  "info": "Imperativ (ти) von зроби́ти (machen, vollendet)"
+ },
+ {
+  "uk": "насту́пний",
+  "lemma": "насту́пний",
+  "de": "nächste",
+  "pos": "adj",
+  "info": "m. Nom./Akk. Sg."
+ },
+ {
+  "uk": "результа́т",
+  "lemma": "результа́т",
+  "de": "Ergebnis",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "скла́дено",
+  "lemma": "скла́сти",
+  "de": "bestanden",
+  "pos": "verb",
+  "info": "unpersönliche Partizipform von скла́сти (тест скла́дено – Prüfung bestanden)"
+ },
+ {
+  "uk": "ці",
+  "lemma": "цей",
+  "de": "diese",
+  "pos": "pron",
+  "info": "Demonstrativ, Pl."
  }
 ]
