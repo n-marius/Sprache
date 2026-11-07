@@ -1664,5 +1664,19 @@
   "de": "Senkrechte",
   "pos": "noun",
   "info": "Lok. Sg. f.; по вертика́лі – senkrecht"
+ },
+ {
+  "uk": "здогада́йся",
+  "lemma": "здогада́тися",
+  "de": "errate!, komm drauf!",
+  "pos": "verb",
+  "info": "Imperativ (ти) von здогада́тися (erraten)"
+ },
+ {
+  "uk": "чому́",
+  "lemma": "чому́",
+  "de": "warum",
+  "pos": "adv",
+  "info": "Fragewort"
  }
 ]

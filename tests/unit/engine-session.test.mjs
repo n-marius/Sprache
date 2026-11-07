@@ -5,7 +5,7 @@ import { exVocab } from '../../js/engine/srs.js';
 import { makeApp, setDay, play } from './engine-fake-app.mjs';
 
 const ok = () => ({ correct: true, userAnswer: 'x', durationMs: 4000 });
-const exercises = items => items.filter(i => i.kind === 'exercise');
+const exercises = items => items.filter(i => i.kind === 'exercise' && !i.ex.noSrs);
 
 test('Lektions-Session: Größe, Intro direkt vor erster Übung, max. neue Wörter, Tipp-Karte', () => {
   setDay('2026-10-21');
@@ -18,7 +18,7 @@ test('Lektions-Session: Größe, Intro direkt vor erster Übung, max. neue Wört
   assert.equal(intros.length, 5);
   for (const intro of intros) {
     const idx = all.indexOf(intro);
-    const first = all.findIndex(i => i.kind === 'exercise' && exVocab(i.ex).includes(intro.vocab.id));
+    const first = all.findIndex(i => i.kind === 'exercise' && !i.ex.noSrs && exVocab(i.ex).includes(intro.vocab.id));
     assert.ok(first > idx, `Übung zu ${intro.vocab.id} vor der Einführung`);
     const between = all.slice(idx + 1, first);
     assert.ok(between.every(i => i.kind !== 'exercise'), `Intro ${intro.vocab.id} nicht direkt vor der ersten Übung`);
@@ -61,9 +61,9 @@ test('Fehler → Wiederholung nach 3–5 Aufgaben, max. 2 Zusatzversuche', () =>
   let target = null;
   for (let it = s.next(); it; it = s.next()) {
     seq.push(it);
-    if (it.kind !== 'exercise') continue;
+    if (it.kind !== 'exercise' || it.ex.noSrs) { if (it.kind === 'exercise') s.record(it, ok()); continue; }
     const base = it.baseKey || it.key;
-    if (!target && seq.filter(i => i.kind === 'exercise').length === 2) target = base;
+    if (!target && seq.filter(i => i.kind === 'exercise' && !i.ex.noSrs).length === 2) target = base;
     s.record(it, base === target ? { correct: false, userAnswer: '?' } : ok());
   }
   const pos = seq.map((it, i) => ((it.baseKey || it.key) === target && it.kind === 'exercise' ? i : -1)).filter(i => i >= 0);

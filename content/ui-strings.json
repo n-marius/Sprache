@@ -134,5 +134,13 @@
  "structured_input": {
   "uk": "Чита́й ува́жно",
   "de": "Lies genau – achte auf die Form"
+ },
+ "infer": {
+  "uk": "Здогада́йся",
+  "de": "Errate die Bedeutung"
+ },
+ "back_translation": {
+  "uk": "Переклади́ наза́д",
+  "de": "Übersetze zurück"
  }
 }

@@ -296,11 +296,13 @@ function checkExercise(ex, where, ukTexts, deTexts) {
       if (!isArr(ex.choices) || ex.choices.length < 2 || ex.choices.length > 4) { err(where, 'choices: 2–4'); break; }
       const ids = new Set(ex.choices.map((c) => c.id));
       ex.choices.forEach((c, i) => U(c.uk, `${where}.choices[${i}].uk`));
+      if (ex.reasons !== undefined) { if (!isArr(ex.reasons) || ex.reasons.length < 3) err(where, 'reasons: mind. 3'); else ex.reasons.forEach((r, i) => D(r.de, `${where}.reasons[${i}].de`)); }
       if (!isArr(ex.items) || ex.items.length < 4) { err(where, 'items: mind. 4'); break; }
       ex.items.forEach((it, i) => {
         const w = `${where}.items[${i}]`;
         U(it.uk, `${w}.uk`); D(it.de, `${w}.de`); D(it.why_de, `${w}.why_de`);
         if (!ids.has(it.answer)) err(w, `answer „${it.answer}“ ist keine choice-id`);
+        if (ex.reasons && it.reason !== undefined && !ex.reasons.some((r) => r.id === it.reason)) err(w, `reason „${it.reason}“ unbekannt`);
       });
       break;
     }
@@ -393,6 +395,21 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds, global
   const deTexts = [];
   const mixedTexts = [];
   if (isStr(lesson.title_uk)) ukTexts.push([lesson.title_uk, `${W}.title_uk`]);
+
+  // Leittext (story) mit Zeilenübersetzung – Grundlage für Geschichten-Ansicht und stille Rückübersetzung
+  if (!lesson.story) warn(W, 'story (Leittext mit Zeilenübersetzung) fehlt – Rückübersetzung nicht möglich');
+  else {
+    const sw0 = `${W}.story`;
+    if (!isArr(lesson.story.lines) || lesson.story.lines.length < 4) err(sw0, 'lines: mind. 4');
+    else lesson.story.lines.forEach((l, i) => { ukTexts.push([l.uk || '', `${sw0}.lines[${i}].uk`]); if (!isStr(l.uk)) err(`${sw0}.lines[${i}]`, 'uk fehlt'); if (!isStr(l.de)) err(`${sw0}.lines[${i}]`, 'de fehlt'); if (isStr(l.who)) ukTexts.push([l.who, `${sw0}.lines[${i}].who`]); });
+  }
+  // Methoden je Lektion (Pflicht laut Vertrag; als Warnung, solange ältere Lektionen überarbeitet werden)
+  const si = (lesson.exercises || []).filter((e) => e.type === 'structured_input');
+  if (!si.length) warn(W, 'keine structured_input-Aufgabe (Bedeutung aus der Form)');
+  else if (!si.some((e) => isArr(e.reasons))) warn(W, 'structured_input ohne reasons („Чому́?“-Nachfrage)');
+  if (!(lesson.exercises || []).some((e) => e.type === 'reading' && e.mode === 'comprehension')) warn(W, 'kein Verständnis-Lesetext (mode comprehension)');
+  if (!(lesson.exercises || []).some((e) => e.type === 'chat' && e.nodes)) warn(W, 'kein verzweigter Chat');
+  if (!(lesson.vocab || []).filter((v) => v.example?.uk).length) warn(W, 'keine Beispielsätze für Erschließen (Pretesting)');
 
   // Konzepte
   const ownConcepts = [];

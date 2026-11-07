@@ -7,6 +7,7 @@
 import * as srs from './srs.js';
 import { now, mulberry32, hashStr, shuffle, clamp } from './util.js';
 import { generate, generateForStage, defaultPool, stageForCard, adaptForAudio, audioModeOf } from './review-gen.js';
+import { makeInfer, makeBackTranslation, knownKeyTest } from './methods.js';
 import { dayKey, lessonMastery, applyStreak, nextLesson, MAX_NEW_PER_DAY, REVIEW_DAY_THRESHOLD } from './progress.js';
 
 export const STAGES = ['recognize', 'recall', 'produce'];
@@ -294,10 +295,15 @@ export function createLessonSession(app, lessonId, opts = {}) {
   // ---- Einführungen direkt vor der ersten Übung des Worts
   const items = [];
   const introduced = new Set();
+  let pretests = 0;
+  const isKnown = knownKeyTest(app);
   for (const it of seq) {
     for (const id of srs.exVocab(it.ex)) {
       if (newRank.has(id) && !introduced.has(id)) {
         introduced.add(id);
+        // Erschließen vor dem Lernen (Pretesting): höchstens 2 je Session, nicht im Typ-Testmodus
+        const inf = !opts.type && pretests < 2 ? makeInfer(newVocab[newRank.get(id)], lessonVocab, rng, isKnown) : null;
+        if (inf) { pretests++; items.push(exItem(inf, lessonId, 'recognize')); }
         items.push({ key: `intro:${id}`, kind: 'intro', vocab: newVocab[newRank.get(id)], lessonId });
       }
     }
@@ -310,6 +316,12 @@ export function createLessonSession(app, lessonId, opts = {}) {
     let at = Math.max(1, Math.round(items.length / 3));
     while (at < items.length && items[at - 1]?.kind === 'intro') at++;
     items.splice(at, 0, { key: `tip:${lessonId}:${gi}`, kind: 'tip', grammar: lesson.grammar[gi], lessonId });
+  }
+  // ---- Stille Rückübersetzung des Leittexts: frühestens am Tag nach dem ersten Kontakt
+  const lastDay = lst.lastAt ? dayKey(new Date(lst.lastAt)) : null;
+  if (!opts.type && lastDay && lastDay < today) {
+    const bt = makeBackTranslation(lesson, rng);
+    if (bt) items.splice(Math.max(0, items.length - 2), 0, exItem(bt, lessonId, 'produce'));
   }
   for (const it of items) delete it._p;
 
@@ -346,6 +358,12 @@ export function createReviewSession(app, opts = {}) {
   const n = cap > 0 ? cfg.size : Math.min(cfg.size, 10);
   let items = oldItems(app, { n, lessonIds, today, rng });
   items = spread(shuffle(items, rng));
+  const started = app.content.readyLessons().filter(l => st.lessons[l.id]?.lastAt && dayKey(new Date(st.lessons[l.id].lastAt)) < today);
+  if (started.length) {
+    const L = started[Math.floor(rng() * started.length)];
+    const bt = makeBackTranslation(app.content.getLesson(L.id), rng);
+    if (bt) items.splice(Math.floor(items.length / 2), 0, exItem(bt, L.id, 'produce'));
+  }
   const counts = {};
   for (const it of items) { const th = app.content.getLesson(it.lessonId)?.theme; if (th) counts[th] = (counts[th] || 0) + 1; }
   const theme = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || app.content.readyLessons()[0]?.theme || 'greetings';
@@ -446,9 +464,8 @@ function runtime(app, m) {
       let goalReached = false;
       app.store.update(s => {
         const day = ensureDay(s, today);
-        out = srs.recordResult(s.srs, item, result, today, ts);
-        day.tasks++;
-        if (result.correct) day.correct++;
+        out = item.ex.noSrs ? { ratings: {} } : srs.recordResult(s.srs, item, result, today, ts);
+        if (!item.ex.noSrs) { day.tasks++; if (result.correct) day.correct++; }
         day.ms += ms;
         if (out.reviewed) day.reviews = (day.reviews || 0) + out.reviewed;
         if (!item.generated && !item.ex.generated && item.lessonId) {
@@ -458,12 +475,11 @@ function runtime(app, m) {
         }
         if (day.tasks >= (s.settings?.dailyGoal || cfg.goal)) { goalReached = true; if (applyStreak(s, today).extended) extended = true; }
       });
-      stats.total++;
-      if (result.correct) stats.correct++;
+      if (!item.ex.noSrs) { stats.total++; if (result.correct) stats.correct++; }
       const introducedNow = new Set(newWords.map(v => v.id));
       for (const id of Object.keys(out?.ratings || {})) if (!introducedNow.has(id)) reviewed.add(id);
       let requeued = null;
-      if (!result.correct) { wrongKeys.add(item.baseKey || item.key); requeued = requeue(item); }
+      if (!result.correct && !item.ex.noSrs) { wrongKeys.add(item.baseKey || item.key); requeued = requeue(item); }
       return { requeued, ratings: out?.ratings || {}, goalReached };
     },
     progress() {

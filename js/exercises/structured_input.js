@@ -13,7 +13,7 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
 export function render(ex, ctx) {
   const items = (ctx.shuffle || (a => a))((ex.items || []).slice());
   const listen = !!ex.listen && !ctx.listenOff && !!ctx.app?.tts?.speak;
-  let alive = true, idx = 0, right = 0;
+  let alive = true, idx = 0, right = 0, reasonsAsked = 0, reasonsRight = 0;
   const wrong = [];
 
   const counter = h('div', { class: 'si-count t-foot' });
@@ -56,6 +56,13 @@ export function render(ex, ctx) {
     const btn = buttons.find(b => b.dataset.id === id);
     if (ok) anim.correct(btn, { sparks: false }); else anim.wrong(btn);
     const t = sentence.querySelector('.si-uk'); if (t) t.hidden = false;
+    // Selbsterklärung: „Чому́?“ – woran erkennt man es? (nur wenn die Aufgabe Gründe definiert)
+    if (ex.reasons && it.reason) {
+      const why = await askReason(it);
+      if (!alive) return;
+      if (!why) wrong.push(`${it.uk} (Begründung)`); else reasonsRight++;
+      reasonsAsked++;
+    }
     feedback.replaceChildren(h('div', { class: ['si-why', ok ? 'is-ok' : 'is-bad'] },
       icon(ok ? 'check' : 'bulb'), h('div', it.de ? deText(it.de, { cls: 'si-de' }) : null, it.why_de ? deText(it.why_de, { tag: 'p' }) : null)));
     await wait(reducedMotion() ? 700 : ok ? 1300 : 2600);
@@ -64,9 +71,25 @@ export function render(ex, ctx) {
     if (idx < items.length) { show(); return; }
     ctx.complete({
       correct: wrong.length === 0,
-      score: items.length ? right / items.length : 1,
-      userAnswer: `${right} / ${items.length} richtig`,
+      score: (items.length + reasonsAsked) ? (right + reasonsRight) / (items.length + reasonsAsked) : 1,
+      userAnswer: `${right} / ${items.length} richtig` + (reasonsAsked ? `, Begründung ${reasonsRight} / ${reasonsAsked}` : ''),
       explanation_de: wrong.length ? `Nochmals ansehen: ${wrong.join(' · ')}` : undefined,
+    });
+  }
+
+  function askReason(it) {
+    return new Promise(resolve => {
+      const correct = ex.reasons.find(r => r.id === it.reason);
+      const others = (ctx.shuffle || (a => a))(ex.reasons.filter(r => r.id !== it.reason)).slice(0, 2);
+      const opts = (ctx.shuffle || (a => a))([correct, ...others].filter(Boolean));
+      const btns = opts.map(r => h('button', { type: 'button', class: 'option si-reason', on: { click: () => {
+        btns.forEach(b => b.classList.add('is-disabled'));
+        const ok = r.id === it.reason;
+        btns.forEach((b, i) => { if (opts[i].id === it.reason) b.classList.add('is-correct'); else if (opts[i] === r) b.classList.add('is-wrong'); else b.classList.add('is-dimmed'); });
+        haptic(ok ? 'success' : 'error');
+        setTimeout(() => resolve(ok), reducedMotion() ? 300 : ok ? 700 : 1400);
+      } } }, deText(r.de)));
+      feedback.replaceChildren(h('div', { class: 'si-reasons' }, h('div', { class: 'si-reasons-q' }, ukText('Чому́?'), deText(' Woran erkennst du es?')), btns));
     });
   }
 

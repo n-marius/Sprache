@@ -92,6 +92,12 @@ Alle Wörter darin müssen über `glossary-common.json` auflösbar sein.
 - `vocab[].forms` und `glossary` müssen zusammen mit früheren Lektionen und `glossary-common.json` **jedes** ukrainische Wort der Lektion abdecken (Validator prüft).
 - `emoji` optional, nur wenn eindeutig.
 
+### Leittext (`story`, Pflicht)
+`{ "title_uk", "title_de", "scene_de", "characters":[{"name","emoji"}], "lines":[{"who","uk","de"} | {"scene":"☕","uk":"Кафе́","de":"Café"}] }` – Zeile für Zeile übersetzt. Grundlage für die Geschichten-Ansicht und die stille Rückübersetzung.
+
+### Lernmethoden (lektionsunabhängig, jede Lektion nutzt alle)
+Die App erzeugt automatisch aus den Daten jeder Lektion: **Erschließen vor dem Lernen** (`infer`, aus `vocab[].example`, nur wenn genug bekannter Kontext vorhanden ist), **stille Rückübersetzung** (`back_translation`, aus `story.lines`, frühestens am Folgetag), dazu Wortschatz-Wiederholung und Mini-Spiele. Jede Lektion liefert außerdem: mind. eine `structured_input`-Aufgabe mit `reasons` (Bedeutung aus der Form + „Чому́?“-Nachfrage, gemischte Kontrastpaare), mind. einen Verständnis-Lesetext (`reading` mit `mode: comprehension`), mind. einen verzweigten Chat und optional `form_pairs` für das Formen-Memory: `[{ "title_de", "tag_a", "tag_b", "pairs": [["…","…"]] }]`.
+
 ### Aufgaben (`exercises[]`)
 Gemeinsame Felder: `id` (eindeutig in Lektion, z. B. `e01`), `type`, `vocab` (Array von vocab-ids, die geübt werden), `difficulty` (1–3), optional `hint_de`.
 Bei Auswahl-Optionen steht die **richtige Option immer an Index 0**; die App mischt. Distraktoren plausibel, eindeutig falsch.
@@ -110,6 +116,7 @@ Bei Auswahl-Optionen steht die **richtige Option immer an Index 0**; die App mis
 | `true_false` | `statement_uk`, `context_uk` (optional, kurzer Text/Situation), `context_de`, `answer` (bool), `explanation_de` |
 | `chat` (verzweigt) | statt `turns`: `start` + `nodes`: `{ "n1": {"bot":[{"uk","de"}], "options":[{"uk","de","tone":"good"|"ok"|"bad","note_de","next":"n2"}]}, "end_ok": {"bot":[…], "end":"success"|"neutral"|"fail", "summary_de":"…"} }`. Jede Wahl führt weiter, die Figur reagiert darauf; `bad` zeigt kurz `note_de`, am Ende Auswertung. |
 | `reading` (Verständnis) | zusätzlich `"mode":"comprehension"`: längerer Text (bis 30 Sätze), zu ca. 60–80 % mit bekanntem Wortschatz verständlich, Rest aus dem Kontext erschließbar (glossiert); Fragen prüfen Textverständnis/Schlussfolgern, nicht das Wiedererkennen eines einzelnen Wortes; Optionen nur mit bekanntem Wortschatz. Fragen erscheinen erst nach „Gelesen“, Übersetzung erst nach dem Prüfen. |
+| `structured_input` | `prompt_uk`, `prompt_de`, `choices` (2–4 × `{id, uk, emoji}`), `items` (≥4 × `{uk, de, answer, why_de, reason}`), optional `reasons` (≥3 × `{id, de}`), optional `listen: true` |
 | `order_dialog` | `lines`: 3–5 × `{"uk":"…","de":"…"}` in richtiger Reihenfolge |
 
 Jede Lektion: **mind. 45 Aufgaben**, alle Typen vertreten, je Vokabel mehrere Aufgaben in verschiedenen Formen/Kontexten (Konzept statt Auswendiglernen), mind. 3 `chat`, 2 `reading`, 5 `speak`, 6 `listening`. Aufgaben greifen bewusst auch Wortschatz früherer Lektionen auf (Interleaving).

@@ -3154,61 +3154,89 @@
      "uk": "А ти?",
      "de": "Und du?",
      "answer": "t",
-     "why_de": "ти-Form → zu Taras (man duzt sich)."
+     "why_de": "ти-Form → zu Taras (man duzt sich).",
+     "reason": "ty"
     },
     {
      "uk": "А ви?",
      "de": "Und Sie?",
      "answer": "n",
-     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich).",
+     "reason": "vy"
     },
     {
      "uk": "Як ви?",
      "de": "Wie geht es Ihnen?",
      "answer": "n",
-     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich).",
+     "reason": "vy"
     },
     {
      "uk": "Бува́й!",
      "de": "Tschüss!",
      "answer": "t",
-     "why_de": "Бува́й ist der lockere Abschied unter Leuten, die sich duzen."
+     "why_de": "Бува́й ist der lockere Abschied unter Leuten, die sich duzen.",
+     "reason": "casual"
     },
     {
      "uk": "Приві́т!",
      "de": "Hallo!",
      "answer": "t",
-     "why_de": "Приві́т ist informell – für Leute, die man duzt."
+     "why_de": "Приві́т ist informell – für Leute, die man duzt.",
+     "reason": "casual"
     },
     {
      "uk": "Ви́бачте!",
      "de": "Entschuldigen Sie!",
      "answer": "n",
-     "why_de": "Die Endung -те zeigt die ви-Form."
+     "why_de": "Die Endung -те zeigt die ви-Form.",
+     "reason": "te"
     },
     {
      "uk": "Як спра́ви?",
      "de": "Wie geht’s?",
      "answer": "t",
-     "why_de": "Як спра́ви? ist locker. Zu Frau Natalija: Як ви?"
+     "why_de": "Як спра́ви? ist locker. Zu Frau Natalija: Як ви?",
+     "reason": "casual"
     },
     {
      "uk": "До́брий день! Як ви?",
      "de": "Guten Tag! Wie geht es Ihnen?",
      "answer": "n",
-     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich).",
+     "reason": "vy"
     },
     {
      "uk": "Норма́льно, а ти?",
      "de": "Ganz gut, und dir?",
      "answer": "t",
-     "why_de": "ти-Form → zu Taras (man duzt sich)."
+     "why_de": "ти-Form → zu Taras (man duzt sich).",
+     "reason": "ty"
     },
     {
      "uk": "Теж до́бре, дя́кую. А ви?",
      "de": "Auch gut, danke. Und Ihnen?",
      "answer": "n",
-     "why_de": "ви-Form → zu Frau Natalija (man siezt sich)."
+     "why_de": "ви-Form → zu Frau Natalija (man siezt sich).",
+     "reason": "vy"
+    }
+   ],
+   "reasons": [
+    {
+     "id": "ty",
+     "de": "Es steht ти (du)."
+    },
+    {
+     "id": "vy",
+     "de": "Es steht ви (Sie)."
+    },
+    {
+     "id": "te",
+     "de": "Endung -те: Sie-Form."
+    },
+    {
+     "id": "casual",
+     "de": "Lockere Wendung unter Duzenden."
     }
    ]
   },
@@ -3308,5 +3336,90 @@
     ]
    ]
   }
- ]
+ ],
+ "story": {
+  "title_uk": "Пе́рший день",
+  "title_de": "Der erste Tag",
+  "scene_de": "Markus’ erster Tag in Kyjiw: morgens im Hauseingang, dann im Café, dann im Büro.",
+  "characters": [
+   {
+    "name": "Ма́ркус",
+    "emoji": "🧔"
+   },
+   {
+    "name": "Па́ні Ната́лія",
+    "emoji": "👵"
+   },
+   {
+    "name": "Тара́с",
+    "emoji": "🧑"
+   },
+   {
+    "name": "Окса́на",
+    "emoji": "👩"
+   }
+  ],
+  "lines": [
+   {
+    "scene": "🏠",
+    "uk": "Під’ї́зд",
+    "de": "Hauseingang"
+   },
+   {
+    "who": "Па́ні Ната́лія",
+    "uk": "До́брий ра́нок, як ви?",
+    "de": "Guten Morgen, wie geht es Ihnen?"
+   },
+   {
+    "who": "Ма́ркус",
+    "uk": "Ду́же до́бре, дя́кую, а ви?",
+    "de": "Sehr gut, danke, und Ihnen?"
+   },
+   {
+    "who": "Па́ні Ната́лія",
+    "uk": "Теж до́бре.",
+    "de": "Auch gut."
+   },
+   {
+    "scene": "☕",
+    "uk": "Кафе́",
+    "de": "Café"
+   },
+   {
+    "who": "Тара́с",
+    "uk": "Приві́т, як спра́ви?",
+    "de": "Hallo, wie geht’s?"
+   },
+   {
+    "who": "Ма́ркус",
+    "uk": "Норма́льно, а ти?",
+    "de": "Ganz gut, und dir?"
+   },
+   {
+    "who": "Тара́с",
+    "uk": "Теж норма́льно!",
+    "de": "Auch ganz gut!"
+   },
+   {
+    "scene": "💼",
+    "uk": "О́фіс",
+    "de": "Büro"
+   },
+   {
+    "who": "Окса́на",
+    "uk": "До́брий день, як ви?",
+    "de": "Guten Tag, wie geht es Ihnen?"
+   },
+   {
+    "who": "Ма́ркус",
+    "uk": "До́бре, дя́кую, а ви?",
+    "de": "Gut, danke, und Ihnen?"
+   },
+   {
+    "who": "Окса́на",
+    "uk": "Теж до́бре, дя́кую.",
+    "de": "Auch gut, danke."
+   }
+  ]
+ }
 }

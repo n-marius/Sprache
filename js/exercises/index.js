@@ -14,6 +14,8 @@ const MODULES = {
   reading: () => import('./reading.js'),
   speak: () => import('./speak.js'),
   structured_input: () => import('./structured_input.js'),
+  infer: () => import('./infer.js'),
+  back_translation: () => import('./back_translation.js'),
 };
 
 export const EXERCISE_TYPES = Object.keys(MODULES);

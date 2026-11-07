@@ -1,7 +1,7 @@
 // Ukrainische UI-Strings aus content/ui-strings.json, mit Fallbacks (falls ein Key fehlt).
 const FALLBACK = {
-  translate_to_uk: { uk: 'Перекладі́ украї́нською', de: 'Übersetze ins Ukrainische' },
-  translate_to_de: { uk: 'Перекладі́ німе́цькою', de: 'Übersetze ins Deutsche' },
+  translate_to_uk: { uk: 'Переклади́ украї́нською', de: 'Übersetze ins Ukrainische' },
+  translate_to_de: { uk: 'Переклади́ німе́цькою', de: 'Übersetze ins Deutsche' },
   choose_translation: { uk: 'Обери́ пра́вильний пере́клад', de: 'Wähle die richtige Übersetzung' },
   build_sentence: { uk: 'Склади́ ре́чення', de: 'Bilde den Satz' },
   fill_gap: { uk: 'Запо́вни про́пуск', de: 'Fülle die Lücke' },
@@ -30,7 +30,9 @@ const FALLBACK = {
   slow: { uk: 'Пові́льніше', de: 'Langsamer' },
   // optionale Keys (nicht im Pflichtumfang des Vertrags)
   order_dialog: { uk: 'Розта́в ре́пліки в пра́вильному поря́дку', de: 'Bringe den Dialog in die richtige Reihenfolge' },
-  structured_input: { uk: 'Слу́хай і чита́й ува́жно', de: 'Achte genau auf die Form' },
+  structured_input: { uk: 'Чита́й ува́жно', de: 'Lies genau – achte auf die Form' },
+  infer: { uk: 'Здогада́йся', de: 'Errate die Bedeutung' },
+  back_translation: { uk: 'Переклади́ наза́д', de: 'Übersetze zurück' },
 };
 
 let strings = {};

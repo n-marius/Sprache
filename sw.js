@@ -1,6 +1,6 @@
 // Service Worker: Offline-Cache für App + Inhalte, Versionierung mit Update-Hinweis.
 // VERSION muss mit APP_VERSION in js/config.js übereinstimmen.
-const VERSION = '1.2.0';
+const VERSION = '1.3.0';
 const APP_CACHE = `mova-app-${VERSION}`;
 const CONTENT_CACHE = 'mova-content';
 const RUNTIME_CACHE = 'mova-runtime';
@@ -81,6 +81,9 @@ const APP_ASSETS = [
   './js/exercises/reading.js',
   './js/exercises/speak.js',
   './js/exercises/structured_input.js',
+  './js/exercises/infer.js',
+  './js/exercises/back_translation.js',
+  './js/engine/methods.js',
   './js/views/today.js',
   './js/views/course.js',
   './js/views/lesson.js',
