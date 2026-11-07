@@ -80,7 +80,7 @@ export const UI_G2 = {
   g2_cat_nomen: { uk: 'Іме́нники і прикме́тники', de: 'Nomen und Adjektive' },
   g2_cat_zahlen: { uk: 'Чи́сла і час', de: 'Zahlen und Zeit' },
   g2_cat_satzbau: { uk: 'Будо́ва ре́чення', de: 'Satzbau' },
-  g2_lesson_n: { uk: 'Уро́к {n}', de: 'Lektion {n}' },
+  g2_lesson_n: { uk: 'Уро́к\u00a0{n}', de: 'Lektion\u00a0{n}' },
   g2_more_topics_soon: { uk: 'Нові́ те́ми в насту́пних уро́ках: {n}', de: '{n} weitere Themen folgen mit den nächsten Lektionen.' },
   g2_mined_sub: { uk: 'З істо́рій, те́кстів і поя́снень', de: 'Aus Geschichten, Texten und Erklärungen' },
   g2_topic: { uk: 'Те́ма', de: 'Thema' },

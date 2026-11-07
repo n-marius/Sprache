@@ -123,7 +123,7 @@ export function render(params, app) {
   if (unlocked && x && !start) markExplained(app, id);
 
   return page({
-    title: x?.title_de || uiT('explanation'), largeTitle: false, cls: 'xp-page',
+    title: { uk: lesson.title_uk || uiT('explanation').uk, de: x?.title_de || lesson.title_de }, largeTitle: false, cls: 'xp-page',
     back: start ? { href: `#/lesson/${encodeURIComponent(id)}`, label: uiT('lesson') } : true,
     children: [h('article', { class: 'xp-article' }, hero, ...body, actions)],
   });

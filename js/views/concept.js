@@ -38,6 +38,6 @@ export function render(params, app) {
     same[j + 1] ? h('a', { class: 'btn btn-secondary btn-block', href: `#/concept/${encodeURIComponent(same[j + 1].id)}` }, holdLabel(uiF('next_topic', { t: same[j + 1].title_de }))) : null,
     h('a', { class: 'btn btn-secondary btn-block', href: `#/explain/${encodeURIComponent(c.lessonId)}` }, icon('book'), holdLabel(uiF('read_whole_lesson'))));
 
-  return page({ title: c.title_de, largeTitle: false, cls: 'xp-page', back,
+  return page({ title: { uk: cat?.uk || uiF('topic').uk, de: c.title_de }, largeTitle: false, cls: 'xp-page', back,
     children: [h('article', { class: 'xp-article' }, hero, ...body, nav)] });
 }
