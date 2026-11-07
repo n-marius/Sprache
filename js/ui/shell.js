@@ -1,48 +1,56 @@
 // App-Hülle: Tabbar, iOS-Seite mit Large Title, gruppierte Listen, Sheets, Toasts, Alerts.
-import { h, icon, clear } from './dom.js';
+import { h, icon, clear, ukText } from './dom.js';
+import { uiLabel, uiT } from './ui-label.js';
 
+// Tab „vocab“ (früher „Trainer“) = Bereich „Слова́ / Vokabeln“; Route bleibt #/trainer (Alias #/vocab).
 export const TABS = [
-  { id: 'today', label: 'Heute', icon: 'today', href: '#/today' },
-  { id: 'course', label: 'Kurs', icon: 'course', href: '#/course' },
-  { id: 'trainer', label: 'Trainer', icon: 'words', href: '#/trainer' },
-  { id: 'library', label: 'Wissen', icon: 'book', href: '#/library' },
-  { id: 'settings', label: 'Mehr', icon: 'settings', href: '#/settings' },
+  { id: 'today', label: 'tab_today', icon: 'today', href: '#/today' },
+  { id: 'course', label: 'tab_course', icon: 'course', href: '#/course' },
+  { id: 'vocab', label: 'tab_vocab', icon: 'words', href: '#/trainer' },
+  { id: 'library', label: 'tab_library', icon: 'book', href: '#/library' },
+  { id: 'settings', label: 'tab_more', icon: 'settings', href: '#/settings' },
 ];
+
+/** Text, {uk,de} oder UI-Key → Element. Strings bleiben Strings (deutsch), {uk,de} werden ukrainisch gerendert. */
+const isUi = v => v && typeof v === 'object' && !(v instanceof Node) && 'uk' in v;
 
 export function renderTabbar(active, badges = {}) {
   const bar = document.getElementById('tabbar');
   clear(bar);
   for (const t of TABS) {
     const b = badges[t.id];
+    const lbl = uiT(t.label);
     bar.append(h('a', {
       class: ['tab', t.id === active && 'is-active'], href: t.href,
-      'aria-current': t.id === active ? 'page' : null,
+      'aria-current': t.id === active ? 'page' : null, title: lbl.de,
     },
       h('span', { class: 'tab-icon' }, icon(t.icon), b ? h('span', { class: 'tab-badge' }, String(b)) : null),
-      h('span', { class: 'tab-label' }, t.label)));
+      h('span', { class: 'tab-label' }, ukText(lbl.uk, { hold: true }))));
   }
 }
 
 /**
  * iOS-Seite: kompakte Navbar (Titel erscheint beim Scrollen) + Large Title.
- * back: {label, href} | true (history.back)
+ * title: String (deutsch) | {uk, de} (ukrainisch, Deutsch dezent daneben)
+ * back: {label, href} | true (history.back); label: String | {uk, de}
  */
 export function page({ title, subtitle, largeTitle = true, back, trailing, leading, children = [], cls = '' } = {}) {
-  const navTitle = h('div', { class: 'navbar-title' }, title || '');
+  const ukTitle = isUi(title);
+  const navTitle = h('div', { class: 'navbar-title' }, ukTitle ? ukText(title.uk) : (title || ''));
   const lead = h('div', { class: 'navbar-leading' });
   if (back) {
-    const label = back === true ? 'Zurück' : (back.label || 'Zurück');
+    const label = back === true || !back.label ? uiT('back') : back.label;
     lead.append(h('button', {
-      class: 'nav-back', type: 'button',
+      class: 'nav-back', type: 'button', title: isUi(label) ? label.de : null,
       on: { click: () => { if (back === true || !back.href) history.back(); else location.hash = back.href; } },
-    }, icon('chevron-left'), h('span', label)));
+    }, icon('chevron-left'), isUi(label) ? ukText(label.uk, { hold: true }) : h('span', label)));
   }
   if (leading) lead.append(leading);
   const trail = h('div', { class: 'navbar-trailing' }, trailing || null);
   const navbar = h('header', { class: ['navbar', !largeTitle && 'always-title'] }, lead, navTitle, trail);
   const sentinel = h('div', { class: 'page-sentinel', style: { height: '1px', marginTop: '-1px' } });
   const header = largeTitle ? h('div', { class: 'page-header' },
-    h('h1', { class: 't-largetitle' }, title || ''),
+    h('h1', { class: 't-largetitle' }, ukTitle ? uiLabel(title, { layout: 'inline' }) : (title || '')),
     subtitle ? (subtitle instanceof Node ? subtitle : h('div', { class: 'page-subtitle' }, subtitle)) : null) : null;
   const body = h('div', { class: 'page-body' }, children);
   const el = h('div', { class: ['page', cls] }, navbar, sentinel, header, body);
@@ -97,7 +105,7 @@ export function switchEl({ checked = false, onChange, label } = {}) {
   return h('label', { class: 'switch' }, input, h('span', { class: 'switch-track' }));
 }
 
-/** Segmented Control: segmented({options:[{value,label}], value, onChange}) */
+/** Segmented Control: segmented({options:[{value,label}], value, onChange}); label: String | {uk,de} | Node */
 export function segmented({ options, value, onChange }) {
   const el = h('div', { class: 'segmented', role: 'tablist' });
   const render = v => {
@@ -105,8 +113,9 @@ export function segmented({ options, value, onChange }) {
     for (const o of options) {
       el.append(h('button', {
         type: 'button', class: o.value === v ? 'is-active' : '', role: 'tab', 'aria-selected': String(o.value === v),
+        title: isUi(o.label) ? o.label.de : null,
         on: { click: () => { render(o.value); onChange?.(o.value); } },
-      }, o.label));
+      }, isUi(o.label) ? ukText(o.label.uk, { hold: true }) : o.label));
     }
   };
   render(value);
@@ -132,11 +141,11 @@ export function sheet({ title = '', content, actions, onClose, cancelLabel } = {
   const onKey = e => { if (e.key === 'Escape') close(); };
   const header = h('div', { class: 'sheet-header' },
     cancelLabel ? h('button', { class: 'sheet-cancel', type: 'button', on: { click: close } }, cancelLabel) : h('span'),
-    h('div', { class: 'sheet-title' }, title),
+    h('div', { class: 'sheet-title' }, isUi(title) ? uiLabel(title, { layout: 'inline' }) : title),
     h('button', { class: 'icon-btn filled sheet-close', type: 'button', 'aria-label': 'Schließen', on: { click: close } }, icon('close')));
   const body = h('div', { class: 'sheet-body' }, content);
   const acts = actions && actions.length ? h('div', { class: 'sheet-actions' }, actions) : null;
-  const panel = h('div', { class: 'sheet', role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
+  const panel = h('div', { class: 'sheet', role: 'dialog', 'aria-modal': 'true', 'aria-label': isUi(title) ? title.de : title },
     h('div', { class: 'sheet-grabber' }), header, body, acts);
   scrim.addEventListener('click', close);
   // Wischen nach unten auf Griff/Kopf schließt (iPhone)

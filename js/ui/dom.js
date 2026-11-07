@@ -46,10 +46,11 @@ export function clear(el) { while (el.firstChild) el.firstChild.remove(); return
 /**
  * Ukrainischer Text; jedes Wort als <span class="w" data-k="key">.
  * tap:false → nicht antippbar (Antwortoptionen, reine Vokabelabfragen).
+ * hold:true → Übersetzung per langem Druck (für Text in Buttons/Links/Tabs, wo Antippen die Aktion auslöst).
  */
-export function ukText(text, { tap = true, cls = '', tag = 'span' } = {}) {
+export function ukText(text, { tap = true, hold = false, cls = '', tag = 'span' } = {}) {
   const el = document.createElement(tag);
-  el.className = ['uk', tap ? 'uk-tap' : 'uk-notap', cls].filter(Boolean).join(' ');
+  el.className = ['uk', hold ? 'uk-hold' : tap ? 'uk-tap' : 'uk-notap', cls].filter(Boolean).join(' ');
   el.lang = 'uk';
   for (const p of tokenize(String(text ?? ''))) {
     if (p.word) {

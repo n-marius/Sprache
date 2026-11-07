@@ -859,5 +859,782 @@
   "de": "Barsyk (Katzenname)",
   "pos": "name",
   "info": "Name eines Katers"
+ },
+ {
+  "uk": "чита́й",
+  "lemma": "чита́ти",
+  "de": "lies!",
+  "pos": "verb",
+  "info": "Imperativ (ти) von чита́ти (lesen)"
+ },
+ {
+  "uk": "ува́жно",
+  "lemma": "ува́жно",
+  "de": "aufmerksam, genau",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "сього́дні",
+  "lemma": "сього́дні",
+  "de": "heute",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "знання́",
+  "lemma": "знання́",
+  "de": "Wissen",
+  "pos": "noun",
+  "info": "n., Nom./Akk. Sg."
+ },
+ {
+  "uk": "наза́д",
+  "lemma": "наза́д",
+  "de": "zurück",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "налаштува́ння",
+  "lemma": "налаштува́ння",
+  "de": "Einstellungen",
+  "pos": "noun",
+  "info": "n., Nom. Sg./Pl."
+ },
+ {
+  "uk": "повідо́млення",
+  "lemma": "повідо́млення",
+  "de": "Meldung, Nachricht",
+  "pos": "noun",
+  "info": "n., Nom. Sg./Pl."
+ },
+ {
+  "uk": "повідо́млень",
+  "lemma": "повідо́млення",
+  "de": "Meldungen, Nachrichten",
+  "pos": "noun",
+  "info": "Gen. Pl. · Nom. повідо́млення"
+ },
+ {
+  "uk": "спи́сок",
+  "lemma": "спи́сок",
+  "de": "Liste",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "слів",
+  "lemma": "сло́во",
+  "de": "Wörter",
+  "pos": "noun",
+  "info": "Gen. Pl. · Nom. сло́во"
+ },
+ {
+  "uk": "поя́снення",
+  "lemma": "поя́снення",
+  "de": "Erklärung",
+  "pos": "noun",
+  "info": "n., Nom. Sg./Pl."
+ },
+ {
+  "uk": "дося́гнуто",
+  "lemma": "досягти́",
+  "de": "erreicht",
+  "pos": "verb",
+  "info": "unpersönliche Form (es wurde erreicht) · Inf. досягти́"
+ },
+ {
+  "uk": "ти́ждень",
+  "lemma": "ти́ждень",
+  "de": "Woche",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "поча́ти",
+  "lemma": "поча́ти",
+  "de": "beginnen, starten",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "учи́тися",
+  "lemma": "учи́тися",
+  "de": "lernen",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "пла́ном",
+  "lemma": "план",
+  "de": "Plan",
+  "pos": "noun",
+  "info": "Instr. Sg. · за пла́ном = nach Plan"
+ },
+ {
+  "uk": "пла́ні",
+  "lemma": "план",
+  "de": "Plan",
+  "pos": "noun",
+  "info": "Lok. Sg. · у пла́ні = geplant"
+ },
+ {
+  "uk": "поза́ду",
+  "lemma": "поза́ду",
+  "de": "hinten, im Rückstand",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "попе́реду",
+  "lemma": "попе́реду",
+  "de": "vorne, voraus",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "ета́п",
+  "lemma": "ета́п",
+  "de": "Phase, Etappe",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "темп",
+  "lemma": "темп",
+  "de": "Tempo",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "ви́вчені",
+  "lemma": "ви́вчений",
+  "de": "gelernt",
+  "pos": "adj",
+  "info": "Partizip, Nom. Pl."
+ },
+ {
+  "uk": "то́чність",
+  "lemma": "то́чність",
+  "de": "Genauigkeit",
+  "pos": "noun",
+  "info": "f., Nom./Akk. Sg."
+ },
+ {
+  "uk": "хвили́ни",
+  "lemma": "хвили́на",
+  "de": "Minuten",
+  "pos": "noun",
+  "info": "Nom. Pl. · Nom. Sg. хвили́на"
+ },
+ {
+  "uk": "звук",
+  "lemma": "звук",
+  "de": "Ton, Klang",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "зву́ку",
+  "lemma": "звук",
+  "de": "Ton, Klang",
+  "pos": "noun",
+  "info": "Gen. Sg. · без зву́ку = ohne Ton"
+ },
+ {
+  "uk": "уві́мкнено",
+  "lemma": "увімкну́ти",
+  "de": "eingeschaltet",
+  "pos": "verb",
+  "info": "unpersönliche Form · Inf. увімкну́ти"
+ },
+ {
+  "uk": "ви́мкнено",
+  "lemma": "ви́мкнути",
+  "de": "ausgeschaltet",
+  "pos": "verb",
+  "info": "unpersönliche Form · Inf. ви́мкнути"
+ },
+ {
+  "uk": "увімкну́ти",
+  "lemma": "увімкну́ти",
+  "de": "einschalten",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "пізні́ше",
+  "lemma": "пізні́ше",
+  "de": "später",
+  "pos": "adv",
+  "info": "Komparativ von пі́зно"
+ },
+ {
+  "uk": "рі́вень",
+  "lemma": "рі́вень",
+  "de": "Stufe, Niveau",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "те́ма",
+  "lemma": "те́ма",
+  "de": "Thema; Design",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "те́ми",
+  "lemma": "те́ма",
+  "de": "Themen",
+  "pos": "noun",
+  "info": "Nom. Pl. · Nom. Sg. те́ма"
+ },
+ {
+  "uk": "те́мами",
+  "lemma": "те́ма",
+  "de": "Themen",
+  "pos": "noun",
+  "info": "Instr. Pl. · за те́мами = nach Themen"
+ },
+ {
+  "uk": "складни́й",
+  "lemma": "складни́й",
+  "de": "schwierig",
+  "pos": "adj",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "складні́",
+  "lemma": "складни́й",
+  "de": "schwierig",
+  "pos": "adj",
+  "info": "Nom. Pl."
+ },
+ {
+  "uk": "складне́",
+  "lemma": "складни́й",
+  "de": "schwierig",
+  "pos": "adj",
+  "info": "n., Nom./Akk. Sg."
+ },
+ {
+  "uk": "які́",
+  "lemma": "яки́й",
+  "de": "welche",
+  "pos": "pron",
+  "info": "Nom. Pl."
+ },
+ {
+  "uk": "режи́м",
+  "lemma": "режи́м",
+  "de": "Modus",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "оби́два",
+  "lemma": "оби́два",
+  "de": "beide",
+  "pos": "num",
+  "info": "m./n., Nom."
+ },
+ {
+  "uk": "слу́хати",
+  "lemma": "слу́хати",
+  "de": "hören, zuhören",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "усі́",
+  "lemma": "уве́сь",
+  "de": "alle",
+  "pos": "pron",
+  "info": "Nom. Pl."
+ },
+ {
+  "uk": "си́ла",
+  "lemma": "си́ла",
+  "de": "Stärke, Kraft",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "позна́чити",
+  "lemma": "позна́чити",
+  "de": "markieren",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "позна́чено",
+  "lemma": "позна́чити",
+  "de": "markiert",
+  "pos": "verb",
+  "info": "unpersönliche Form · Inf. позна́чити"
+ },
+ {
+  "uk": "поба́чити",
+  "lemma": "поба́чити",
+  "de": "sehen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "показа́ти",
+  "lemma": "показа́ти",
+  "de": "zeigen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "наскі́льки",
+  "lemma": "наскі́льки",
+  "de": "wie (sehr)",
+  "pos": "adv",
+  "info": "Fragewort"
+ },
+ {
+  "uk": "ле́гко",
+  "lemma": "ле́гко",
+  "de": "leicht",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "ва́жко",
+  "lemma": "ва́жко",
+  "de": "schwer",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "нема́є",
+  "lemma": "нема́є",
+  "de": "es gibt nicht, keine",
+  "pos": "verb",
+  "info": "verneintes „є“, + Gen."
+ },
+ {
+  "uk": "кіне́ць",
+  "lemma": "кіне́ць",
+  "de": "Ende",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "навча́ння",
+  "lemma": "навча́ння",
+  "de": "Lernen",
+  "pos": "noun",
+  "info": "n., Nom. Sg."
+ },
+ {
+  "uk": "го́лос",
+  "lemma": "го́лос",
+  "de": "Stimme",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "ви́гляд",
+  "lemma": "ви́гляд",
+  "de": "Aussehen, Darstellung",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "да́ні",
+  "lemma": "да́ні",
+  "de": "Daten",
+  "pos": "noun",
+  "info": "Pl., Nom./Akk."
+ },
+ {
+  "uk": "довжина́",
+  "lemma": "довжина́",
+  "de": "Länge",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "се́сії",
+  "lemma": "се́сія",
+  "de": "Session",
+  "pos": "noun",
+  "info": "Gen. Sg. · Nom. се́сія"
+ },
+ {
+  "uk": "да́та",
+  "lemma": "да́та",
+  "de": "Datum",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "мети́",
+  "lemma": "мета́",
+  "de": "Ziel",
+  "pos": "noun",
+  "info": "Gen. Sg. · Nom. мета́"
+ },
+ {
+  "uk": "німе́цькі",
+  "lemma": "німе́цький",
+  "de": "deutsch",
+  "pos": "adj",
+  "info": "Nom. Pl."
+ },
+ {
+  "uk": "підка́зки",
+  "lemma": "підка́зка",
+  "de": "Hinweise, Hilfen",
+  "pos": "noun",
+  "info": "Nom. Pl. · Nom. Sg. підка́зка"
+ },
+ {
+  "uk": "тест",
+  "lemma": "тест",
+  "de": "Test",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "мо́влення",
+  "lemma": "мо́влення",
+  "de": "Sprechen, Rede",
+  "pos": "noun",
+  "info": "n., Nom./Gen. Sg."
+ },
+ {
+  "uk": "пові́льний",
+  "lemma": "пові́льний",
+  "de": "langsam",
+  "pos": "adj",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "автомати́чно",
+  "lemma": "автомати́чно",
+  "de": "automatisch",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "розпізнава́ння",
+  "lemma": "розпізнава́ння",
+  "de": "Erkennung",
+  "pos": "noun",
+  "info": "n., Nom. Sg."
+ },
+ {
+  "uk": "сві́тла",
+  "lemma": "сві́тлий",
+  "de": "hell",
+  "pos": "adj",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "те́мна",
+  "lemma": "те́мний",
+  "de": "dunkel",
+  "pos": "adj",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "систе́мна",
+  "lemma": "систе́мний",
+  "de": "System-, wie im System",
+  "pos": "adj",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "віднови́ти",
+  "lemma": "віднови́ти",
+  "de": "wiederherstellen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "файл",
+  "lemma": "файл",
+  "de": "Datei",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "заванта́жити",
+  "lemma": "заванта́жити",
+  "de": "laden",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "нуля́",
+  "lemma": "нуль",
+  "de": "null",
+  "pos": "noun",
+  "info": "Gen. Sg. · з нуля́ = von vorn"
+ },
+ {
+  "uk": "зміст",
+  "lemma": "зміст",
+  "de": "Inhalt",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "словни́к",
+  "lemma": "словни́к",
+  "de": "Wörterbuch",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "копіюва́ти",
+  "lemma": "копіюва́ти",
+  "de": "kopieren",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "ви́далити",
+  "lemma": "ви́далити",
+  "de": "löschen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "лока́льно",
+  "lemma": "лока́льно",
+  "de": "lokal",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "час",
+  "lemma": "час",
+  "de": "Zeit",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "стоп",
+  "lemma": "стоп",
+  "de": "stopp",
+  "pos": "interj",
+  "info": ""
+ },
+ {
+  "uk": "курс",
+  "lemma": "курс",
+  "de": "Kurs",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "уро́ки",
+  "lemma": "уро́к",
+  "de": "Lektionen",
+  "pos": "noun",
+  "info": "Nom. Pl. · Nom. Sg. уро́к"
+ },
+ {
+  "uk": "істо́рія",
+  "lemma": "істо́рія",
+  "de": "Geschichte",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "мета́",
+  "lemma": "мета́",
+  "de": "Ziel",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "мету́",
+  "lemma": "мета́",
+  "de": "Ziel",
+  "pos": "noun",
+  "info": "Akk. Sg. · Nom. мета́"
+ },
+ {
+  "uk": "тренува́тися",
+  "lemma": "тренува́тися",
+  "de": "üben, trainieren",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "тренува́ння",
+  "lemma": "тренува́ння",
+  "de": "Training",
+  "pos": "noun",
+  "info": "n., Nom./Akk. Sg."
+ },
+ {
+  "uk": "повтори́ти",
+  "lemma": "повтори́ти",
+  "de": "wiederholen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "старт",
+  "lemma": "старт",
+  "de": "Start",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "ско́ро",
+  "lemma": "ско́ро",
+  "de": "bald",
+  "pos": "adv",
+  "info": "Adverb"
+ },
+ {
+  "uk": "на́прямок",
+  "lemma": "на́прямок",
+  "de": "Richtung",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "ка́ртка",
+  "lemma": "ка́ртка",
+  "de": "Karte",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "ви́бір",
+  "lemma": "ви́бір",
+  "de": "Auswahl",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "фо́рми",
+  "lemma": "фо́рма",
+  "de": "Formen",
+  "pos": "noun",
+  "info": "Nom. Pl. · Nom. Sg. фо́рма"
+ },
+ {
+  "uk": "прикла́д",
+  "lemma": "прикла́д",
+  "de": "Beispiel",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "торкни́ся",
+  "lemma": "торкну́тися",
+  "de": "tippe an!",
+  "pos": "verb",
+  "info": "Imperativ 2. Sg. · Inf. торкну́тися"
+ },
+ {
+  "uk": "збі́рка",
+  "lemma": "збі́рка",
+  "de": "Sammlung",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "синхроніза́ція",
+  "lemma": "синхроніза́ція",
+  "de": "Synchronisierung",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "інформа́ція",
+  "lemma": "інформа́ція",
+  "de": "Information",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "говори́ти",
+  "lemma": "говори́ти",
+  "de": "sprechen",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "переві́рити",
+  "lemma": "переві́рити",
+  "de": "prüfen, testen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "вібра́ція",
+  "lemma": "вібра́ція",
+  "de": "Vibration",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "синхронізува́ти",
+  "lemma": "синхронізува́ти",
+  "de": "synchronisieren",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "синхронізо́вано",
+  "lemma": "синхронізува́ти",
+  "de": "synchronisiert",
+  "pos": "verb",
+  "info": "unpersönliche Form · Inf. синхронізува́ти"
+ },
+ {
+  "uk": "зберегти́",
+  "lemma": "зберегти́",
+  "de": "speichern, sichern",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
+ },
+ {
+  "uk": "прогре́с",
+  "lemma": "прогре́с",
+  "de": "Fortschritt",
+  "pos": "noun",
+  "info": "m., Nom./Akk. Sg."
+ },
+ {
+  "uk": "ве́рсія",
+  "lemma": "ве́рсія",
+  "de": "Version",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "па́м’ять",
+  "lemma": "па́м’ять",
+  "de": "Speicher, Gedächtnis",
+  "pos": "noun",
+  "info": "f., Nom./Akk. Sg."
+ },
+ {
+  "uk": "майсте́рність",
+  "lemma": "майсте́рність",
+  "de": "Meisterschaft",
+  "pos": "noun",
+  "info": "f., Nom./Akk. Sg."
+ },
+ {
+  "uk": "прочита́ти",
+  "lemma": "прочита́ти",
+  "de": "lesen",
+  "pos": "verb",
+  "info": "Infinitiv (vollendet)"
  }
 ]

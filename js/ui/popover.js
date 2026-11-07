@@ -1,4 +1,7 @@
 // Antipp-Übersetzungsblase für ukrainische Wörter (.uk-tap .w), globale Delegation.
+// In Bedienelementen (.uk-hold .w – Buttons, Links, Tabs, Segmente) öffnet LANGER DRUCK (~450 ms) die Blase;
+// der anschließende Klick wird geschluckt, kurzes Antippen löst wie gewohnt die Aktion aus.
+// Antwortoptionen (.uk-notap) bleiben bewusst unübersetzbar.
 //  initPopover(app)      einmal beim Boot (main.js)
 //  showPopoverFor(wordEl) programmatisch öffnen (z. B. Tastatur, Tutorial)
 //  hidePopover()          schließen
@@ -12,6 +15,9 @@ import { normalizeWord, STRESS } from '../lib/uk-text.js';
 import { getApp } from '../app-context.js';
 
 const WORD_SEL = '.uk-tap .w';
+const HOLD_SEL = '.uk-hold .w';
+const HOLD_MS = 450;
+const HOLD_HOST = 'a, button, [role="button"], [role="tab"], label, .tab';
 const MOVE_TOL = 8;
 const MARGIN = 8;
 const GAP = 10;          // Abstand Wort ↔ Blase (inkl. Pfeil)
@@ -31,6 +37,8 @@ let activeWord = null;
 let tap = null;          // laufender Tap {x, y, word, moved, scrolled, id}
 let suppressClick = 0;   // Zeitstempel bis zu dem Klicks auf Wörter geschluckt werden
 let safe = null;
+let hold = null;         // laufender langer Druck {x, y, word, id, timer}
+let holdFired = 0;       // Zeitstempel: Blase per langem Druck geöffnet → folgenden Klick schlucken
 
 // ---------------------------------------------------------------- Init / Ereignisse
 export function initPopover(a) {
@@ -46,16 +54,33 @@ export function initPopover(a) {
     const word = t?.closest?.(WORD_SEL) || null;
     if (pop && !pop.contains(t) && !word) hidePopover();
     tap = word ? { x: e.clientX, y: e.clientY, word, moved: false, scrolled: false, id: e.pointerId } : null;
+    cancelHold();
+    holdFired = 0;
+    const hw = !word && t ? holdWordAt(t, e.clientX, e.clientY) : null;
+    if (hw) {
+      hold = { x: e.clientX, y: e.clientY, word: hw, id: e.pointerId };
+      hold.timer = setTimeout(() => {
+        const hd = hold; hold = null;
+        if (!hd || !hd.word.isConnected) return;
+        holdFired = Date.now();
+        tapPoint = { x: hd.x, y: hd.y };
+        try { navigator.vibrate?.(10); } catch {}
+        showPopoverFor(hd.word);
+      }, HOLD_MS);
+    }
   }, capP);
 
   document.addEventListener('pointermove', e => {
+    if (hold && e.pointerId === hold.id && Math.hypot(e.clientX - hold.x, e.clientY - hold.y) > MOVE_TOL) cancelHold();
     if (!tap || e.pointerId !== tap.id) return;
     if (Math.hypot(e.clientX - tap.x, e.clientY - tap.y) > MOVE_TOL) tap.moved = true;
   }, capP);
 
-  document.addEventListener('pointercancel', () => { tap = null; }, capP);
+  document.addEventListener('pointercancel', () => { tap = null; cancelHold(); }, capP);
 
   document.addEventListener('pointerup', e => {
+    cancelHold();
+    if (holdFired) holdFired = Date.now();   // Klick dieser Geste (folgt direkt) schlucken
     const tp = tap; tap = null;
     if (!tp || e.pointerId !== tp.id || tp.moved || tp.scrolled) return;
     if (Math.hypot(e.clientX - tp.x, e.clientY - tp.y) > MOVE_TOL) return;
@@ -70,6 +95,14 @@ export function initPopover(a) {
   // Klick auf ein Wort darf keine Aktion eines Elternelements auslösen.
   document.addEventListener('click', e => {
     const t = e.target instanceof Element ? e.target : e.target?.parentElement;
+    // Nach langem Druck: die Aktion des Bedienelements unterdrücken.
+    if (holdFired && Date.now() - holdFired < 700) {
+      holdFired = 0;
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    holdFired = 0;
     const w = t?.closest?.(WORD_SEL);
     if (!w) return;
     e.preventDefault();
@@ -78,9 +111,16 @@ export function initPopover(a) {
     if (Date.now() > suppressClick) showPopoverFor(w);
   }, cap);
 
+  // Langer Druck: kein Kontextmenü / keine Link-Vorschau.
+  document.addEventListener('contextmenu', e => {
+    const t = e.target instanceof Element ? e.target : e.target?.parentElement;
+    if (hold || holdFired || (t && holdWordAt(t, e.clientX, e.clientY))) e.preventDefault();
+  }, cap);
+
   // Scrollen: laufenden Tap verwerfen und Blase schließen (nicht bei Scroll in der Blase selbst).
   document.addEventListener('scroll', e => {
     if (tap) tap.scrolled = true;
+    cancelHold();
     if (pop && !(e.target instanceof Node && pop.contains(e.target))) hidePopover();
   }, capP);
   addEventListener('resize', () => hidePopover(), { passive: true });
@@ -89,6 +129,30 @@ export function initPopover(a) {
   window.visualViewport?.addEventListener('resize', () => hidePopover(), { passive: true });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && pop) { hidePopover(); e.stopPropagation(); } }, cap);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState !== 'visible') hidePopover(true); });
+}
+
+function cancelHold() {
+  if (hold) { clearTimeout(hold.timer); hold = null; }
+}
+
+/** Wort für langen Druck: direkt getroffenes .uk-hold-Wort, sonst das nächstgelegene im selben Bedienelement. */
+function holdWordAt(t, x, y) {
+  if (t.closest('.uk-notap')) return null;
+  const direct = t.closest(HOLD_SEL);
+  if (direct) return direct;
+  const host = t.closest(HOLD_HOST);
+  if (!host) return null;
+  const words = [...host.querySelectorAll(HOLD_SEL)];
+  if (!words.length) return null;
+  if (words.length === 1) return words[0];
+  let best = null, bd = Infinity;
+  for (const w of words) {
+    const r = w.getBoundingClientRect();
+    const dx = Math.max(r.left - x, 0, x - r.right), dy = Math.max(r.top - y, 0, y - r.bottom);
+    const d = dx * dx + dy * dy;
+    if (d < bd) { bd = d; best = w; }
+  }
+  return best;
 }
 
 // ---------------------------------------------------------------- Öffnen / Schließen

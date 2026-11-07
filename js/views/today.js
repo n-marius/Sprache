@@ -7,6 +7,9 @@ import { addDays } from '../engine/util.js';
 import { startLesson } from '../engine/flow.js';
 import { audioMode } from '../audio-mode.js';
 import { openAudioModeSheet } from '../ui/audio-mode-sheet.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+
+const PACE_KEY = { ahead: 'ahead', behind: 'behind', on_track: 'on_track' };
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
@@ -78,7 +81,7 @@ function streakBlock(st) {
 function weekStrip(stats) {
   return h('div', { class: 'v-week' },
     h('div', { class: 'v-week-head' },
-      h('span', { class: 'v-week-title' }, 'Wochenziel'),
+      h('span', { class: 'v-week-title' }, uiLabel('week_goal', { layout: 'inline' })),
       h('span', { class: 'v-week-count num' }, `${stats.weekGoal.daysMet} von ${stats.weekGoal.target} Tagen`)),
     h('div', { class: 'v-week-days' }, stats.week.map(d => {
       const part = !d.met && d.done > 0 ? Math.min(1, d.done / stats.goal) : 0;
@@ -101,7 +104,7 @@ function heroCard(stats) {
     h('div', { class: 'v-hero-top' },
       ring,
       h('div', { class: 'v-hero-text' },
-        h('div', { class: 'v-hero-cap' }, 'Tagesziel'),
+        h('div', { class: 'v-hero-cap' }, uiLabel('daily_goal', { layout: 'inline' })),
         h('div', { class: 'v-hero-msg' }, msg))),
     streakBlock(stats.streak),
     weekStrip(stats));
@@ -120,13 +123,13 @@ function ctaCard(app, stats) {
       h('a', { class: 'v-cta-lesson', href: `#/lesson/${encodeURIComponent(meta.id)}`, style: sty({ '--theme-c': color }) },
         h('span', { class: 'v-cta-glyph emoji' }, anim.themeGlyph(meta.theme)),
         h('span', { class: 'v-cta-info' },
-          h('span', { class: 'v-cta-cap' }, `${fresh ? 'Als Nächstes' : 'Weiter mit'} · Lektion ${n}`),
-          ukText(meta.title_uk, { tap: false, cls: 'v-cta-title' }),
+          h('span', { class: 'v-cta-cap' }, holdLabel({ uk: `Да́лі · Уро́к ${n}`, de: `${fresh ? 'Als Nächstes' : 'Weiter mit'} · Lektion ${n}` }, { layout: 'inline' })),
+          ukText(meta.title_uk, { hold: true, cls: 'v-cta-title' }),
           h('span', { class: 'v-cta-de' }, meta.title_de),
           h('span', { class: 'progress is-thin v-cta-bar' }, h('span', { class: 'progress-fill', style: sty({ '--p': `${Math.round(m.fraction * 100)}%` }) }))),
         icon('chevron-right', { cls: 'v-cta-chev' })),
       h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block v-cta-go', on: { click: () => startLesson(app, meta.id) } },
-        icon('play', { fill: true }), stats.newAvailable > 0 ? (fresh ? 'Lektion starten' : 'Weiterlernen') : 'Weiter üben'),
+        icon('play', { fill: true }), holdLabel(stats.newAvailable > 0 ? (fresh ? 'start_lesson' : 'keep_learning') : 'keep_practicing')),
       ...(stats.reviewDay ? [h('p', { class: 'v-cta-hint' }, 'Heute ist Wiederholungstag – erst das Fällige, dann Neues.')] : []));
   }
   const learned = vocabStats(app).introduced;
@@ -135,7 +138,7 @@ function ctaCard(app, stats) {
     type: 'button', class: ['btn btn-lg btn-block v-cta-review', due > 0 ? 'btn-blue' : 'btn-secondary'],
     disabled: learned === 0,
     on: { click: () => app.navigate('#/session/review') },
-  }, icon('refresh'), due > 0 ? `Wiederholen · ${due} fällig` : 'Wiederholen'));
+  }, icon('refresh'), holdLabel(due > 0 ? { uk: `${uiT('review').uk} · ${due}`, de: `Wiederholen · ${due} fällig` } : 'review')));
   if (learned > 0 && due === 0) el.append(h('p', { class: 'v-cta-hint' }, 'Nichts fällig – eine Runde festigt die schwächsten Wörter.'));
   return el;
 }
@@ -145,14 +148,15 @@ function fmtDate(iso) { return iso ? formatDateDE(iso.length === 10 ? iso + 'T12
 function pacingCard(p) {
   if (!p) return null;
   const cls = p.status === 'ahead' ? 'green' : p.status === 'behind' ? 'yellow' : 'green';
-  const statusText = p.status === 'on_track' ? 'im Plan' : p.label;
+  const st = uiT(PACE_KEY[p.status] || 'on_track');
+  const statusText = h('span', { title: p.status === 'on_track' ? st.de : p.label }, ukText(st.uk));
   const ph = p.currentPhase;
   return h('section', { class: 'card v-pace' },
     h('div', { class: 'v-pace-head' },
       h('span', { class: 'v-pace-icon' }, icon('target')),
       h('div', { class: 'v-pace-title' },
-        h('div', { class: 't-headline' }, `Ziel A1 · ${fmtDate(p.targetDate)}`),
-        h('div', { class: 't-foot t-2' }, `noch ${p.daysLeft} Tage`)),
+        h('div', { class: 't-headline' }, uiLabel({ uk: `${uiT('goal').uk} A1`, de: 'Ziel' }, { layout: 'inline' })),
+        h('div', { class: 't-foot t-2' }, `bis ${fmtDate(p.targetDate)} · noch ${p.daysLeft} Tage`)),
       h('span', { class: ['badge', cls, 'v-pace-badge'] }, statusText)),
     h('div', { class: 'v-pace-bar' },
       h('div', { class: 'progress' }, h('div', { class: 'progress-fill', style: sty({ '--p': `${(p.fraction * 100).toFixed(1)}%` }) })),
@@ -161,9 +165,9 @@ function pacingCard(p) {
       h('span', h('strong', { class: 'num' }, `${p.lessonsDone}`), ` von ${p.lessonsTotal} Lektionen`),
       h('span', `Soll heute: ${p.lessonsExpected}`)),
     h('div', { class: 'v-pace-facts' },
-      ph ? h('div', { class: 'v-fact' }, h('span', { class: 'v-fact-k' }, 'Phase'),
+      ph ? h('div', { class: 'v-fact' }, h('span', { class: 'v-fact-k' }, uiLabel('phase', { layout: 'inline' })),
         h('span', { class: 'v-fact-v' }, `${ph.id} · ${ph.title_de}`), h('span', { class: 'v-fact-s' }, `bis ${fmtDate(ph.end)}`)) : null,
-      h('div', { class: 'v-fact' }, h('span', { class: 'v-fact-k' }, 'Tempo'),
+      h('div', { class: 'v-fact' }, h('span', { class: 'v-fact-k' }, uiLabel('tempo', { layout: 'inline' })),
         h('span', { class: 'v-fact-v num' }, `${String(p.recommendedPerWeek).replace('.', ',')} Lektionen/Woche`),
         h('span', { class: 'v-fact-s' }, 'empfohlen'))));
 }
@@ -172,16 +176,16 @@ function statTile(label, value, sub, color, ic) {
   return h('div', { class: 'v-stat', style: sty({ '--c': color }) },
     h('span', { class: 'v-stat-icon' }, icon(ic)),
     h('span', { class: 'v-stat-val num' }, value),
-    h('span', { class: 'v-stat-label' }, label),
+    h('span', { class: 'v-stat-label' }, uiLabel(label)),
     sub ? h('span', { class: 'v-stat-sub' }, sub) : null);
 }
 
 function audioRow(app) {
   const m = audioMode(app);
   const off = m.listen || m.speak;
-  const txt = !off ? 'Ton an' : m.listen && m.speak ? 'Hören & Sprechen aus' : m.listen ? 'Hören aus' : 'Sprechen aus';
-  return h('button', { type: 'button', class: ['v-chiprow', off && 'is-off'], on: { click: () => openAudioModeSheet(app) } },
-    icon(off ? 'ear' : 'speaker'), h('span', txt));
+  const txt = !off ? uiT('sound_on') : { uk: uiT('sound_off').uk, de: m.listen && m.speak ? 'Hören & Sprechen aus' : m.listen ? 'Hören aus' : 'Sprechen aus' };
+  return h('button', { type: 'button', class: ['v-chiprow', off && 'is-off'], title: txt.de, on: { click: () => openAudioModeSheet(app) } },
+    icon(off ? 'ear' : 'speaker'), ukText(txt.uk, { hold: true }));
 }
 
 export function render(params, app) {
@@ -204,25 +208,25 @@ export function render(params, app) {
     : 'Deine ersten Wörter warten in Lektion 1.';
 
   const stats4 = h('section', { class: 'v-stats' },
-    statTile('Wörter gelernt', String(vs.introduced), `${vs.strong} sicher`, 'var(--green)', 'words'),
-    statTile('Genauigkeit', acc == null ? '–' : `${acc} %`, 'letzte 7 Tage', 'var(--blue)', 'target'),
-    statTile('Fällig', String(stats.dueCount), stats.dueCount ? 'zum Wiederholen' : 'alles erledigt', 'var(--purple)', 'refresh'),
-    statTile('Minuten', String(minutes7(app.store.state, today)), 'diese 7 Tage', 'var(--orange)', 'clock'));
+    statTile('learned_words', String(vs.introduced), `${vs.strong} sicher`, 'var(--green)', 'words'),
+    statTile('accuracy', acc == null ? '–' : `${acc} %`, 'letzte 7 Tage', 'var(--blue)', 'target'),
+    statTile('due', String(stats.dueCount), stats.dueCount ? 'zum Wiederholen' : 'alles erledigt', 'var(--purple)', 'refresh'),
+    statTile('minutes', String(minutes7(app.store.state, today)), 'diese 7 Tage', 'var(--orange)', 'clock'));
 
   const tools = h('section', { class: 'card v-tools' },
     h('a', { class: 'v-tool', href: '#/trainer' },
       h('span', { class: 'v-tool-icon', style: { background: 'var(--purple)' } }, icon('words')),
-      h('span', { class: 'v-tool-main' }, h('span', { class: 'v-tool-title' }, 'Vokabeltrainer'),
+      h('span', { class: 'v-tool-main' }, h('span', { class: 'v-tool-title' }, holdLabel('tab_vocab', { layout: 'inline' })),
         h('span', { class: 'v-tool-sub' }, 'Karten, Hören, schwierige Wörter')),
       icon('chevron-right', { cls: 'chevron' })),
     h('div', { class: 'v-tool' },
       h('span', { class: 'v-tool-icon', style: { background: 'var(--blue)' } }, icon('ear')),
-      h('span', { class: 'v-tool-main' }, h('span', { class: 'v-tool-title' }, 'Ton'),
+      h('span', { class: 'v-tool-main' }, h('span', { class: 'v-tool-title' }, uiLabel('sound', { layout: 'inline' })),
         h('span', { class: 'v-tool-sub' }, 'Gerade nicht hören oder sprechen?')),
       audioSlot));
 
   const el = page({
-    title: 'Heute',
+    title: uiT('tab_today'),
     subtitle: weekdayLong(today),
     trailing: pill,
     cls: 'v-today',

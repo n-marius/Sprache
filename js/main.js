@@ -12,6 +12,7 @@ import { banner, toast } from './ui/shell.js';
 import { tts } from './services/tts.js';
 import { stt } from './services/stt.js';
 import { initPopover } from './ui/popover.js';
+import { applyHints } from './ui/ui-label.js';
 
 const query = new URLSearchParams(location.search);
 
@@ -64,6 +65,8 @@ async function registerSW(app) {
 async function boot() {
   await store.init();
   applyTheme(store.state.settings.theme);
+  applyHints(store.state.settings);
+  store.subscribe(s => applyHints(s.settings));
   matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => applyTheme(store.state.settings.theme));
 
   try { await content.load(); } catch (e) { fatal(e); return; }
