@@ -25,6 +25,7 @@ const warn = (where, msg) => push(warnings, `${where}: ${msg}`);
 
 const THEMES = new Set('greetings people family home food cafe city transport time numbers shopping work law body weather hobby travel school colors clothes health calendar office'.split(' '));
 const POS = new Set('noun verb adj adv pron num prep conj part interj name phrase'.split(' '));
+const CATEGORIES = ['redemittel', 'aussprache', 'pronomen', 'verben', 'kasus', 'nomen', 'zahlen', 'satzbau'];
 const TYPES = ['mc_translate', 'build_sentence', 'cloze', 'chat', 'reading', 'listening', 'speak', 'match_pairs', 'picture_choice', 'true_false', 'order_dialog'];
 const UI_KEYS = 'translate_to_uk translate_to_de choose_translation build_sentence fill_gap read_and_answer listen_and_choose listen_and_build say_aloud match_pairs choose_picture chat true_false true false check continue correct incorrect correct_answer new_word review lesson_done well_done skip report tap_to_listen slow'.split(' ');
 const VOWELS = new Set('аеєиіїоуюя');
@@ -167,6 +168,40 @@ function loadPlan() {
 }
 
 // ---------- Aufgaben ----------
+// Verzweigter Chat: { start, nodes: { id: { bot:[{uk,de}], options:[{uk,de,next,tone,note_de}] } | { bot, end, summary_de } } }
+function checkChatGraph(ex, where, U, D) {
+  const nodes = ex.nodes;
+  if (!nodes || typeof nodes !== 'object') { err(where, 'nodes muss Objekt sein'); return; }
+  if (!isStr(ex.start) || !nodes[ex.start]) err(where, `start „${ex.start}“ ist kein Knoten`);
+  const ENDS = ['success', 'neutral', 'fail'];
+  let success = 0;
+  for (const [id, n] of Object.entries(nodes)) {
+    const w = `${where}.nodes.${id}`;
+    (n.bot || []).forEach((b, i) => { U(b.uk, `${w}.bot[${i}].uk`); D(b.de, `${w}.bot[${i}].de`); });
+    if (n.end) {
+      if (!ENDS.includes(n.end)) err(w, `end muss ${ENDS.join('/')} sein`);
+      if (n.end === 'success') success++;
+      D(n.summary_de, `${w}.summary_de`);
+      continue;
+    }
+    if (!isArr(n.options) || n.options.length < 2 || n.options.length > 4) { err(w, 'options: 2–4 (oder end)'); continue; }
+    n.options.forEach((o, j) => {
+      const ow = `${w}.options[${j}]`;
+      U(o.uk, `${ow}.uk`); D(o.de, `${ow}.de`);
+      if (!['good', 'ok', 'bad'].includes(o.tone)) err(ow, 'tone muss good/ok/bad sein');
+      if (o.tone !== 'good') D(o.note_de, `${ow}.note_de`);
+      if (!isStr(o.next) || !nodes[o.next]) err(ow, `next „${o.next}“ ist kein Knoten`);
+    });
+    if (!n.options.some((o) => o.tone === 'good')) err(w, 'mind. eine Option mit tone good');
+    optsDistinct(n.options.map((o) => o.uk || ''), `${w}.options`);
+  }
+  if (!success) err(where, 'kein Knoten mit end: success');
+  // Erreichbarkeit
+  const seen = new Set(); const stack = [ex.start];
+  while (stack.length) { const id = stack.pop(); if (seen.has(id) || !nodes[id]) continue; seen.add(id); for (const o of nodes[id].options || []) stack.push(o.next); }
+  for (const id of Object.keys(nodes)) if (!seen.has(id)) warn(where, `Knoten „${id}“ unerreichbar`);
+}
+
 function optsDistinct(opts, where, key = (o) => (typeof o === 'string' ? o : JSON.stringify(o))) {
   const seen = new Set();
   for (const o of opts) {
@@ -237,6 +272,7 @@ function checkExercise(ex, where, ukTexts, deTexts) {
       if (!ex.partner || !isStr(ex.partner.name)) err(where, 'partner.name fehlt');
       else ukTexts.push([ex.partner.name, `${where}.partner.name`]);
       if (!ex.partner || !isStr(ex.partner.emoji)) err(where, 'partner.emoji fehlt');
+      if (ex.nodes) { checkChatGraph(ex, where, U, D); break; }
       if (!isArr(ex.turns) || ex.turns.length < 3) { err(where, 'turns: mind. 3'); break; }
       let me = 0;
       ex.turns.forEach((t, i) => {
@@ -259,7 +295,7 @@ function checkExercise(ex, where, ukTexts, deTexts) {
       U(ex.title_uk, `${where}.title_uk`);
       U(ex.text_uk, `${where}.text_uk`);
       D(ex.text_de, `${where}.text_de`);
-      if (isStr(ex.text_uk)) { const n = sentenceCount(ex.text_uk); if (n < 3 || n > 8) err(where, `text_uk hat ${n} Sätze (3–8)`); }
+      if (isStr(ex.text_uk)) { const n = sentenceCount(ex.text_uk); const max = ex.mode === 'comprehension' ? 30 : 8; if (n < 3 || n > max) err(where, `text_uk hat ${n} Sätze (3–${max})`); }
       if (!isArr(ex.questions) || ex.questions.length < 3 || ex.questions.length > 5) { err(where, 'questions: 3–5'); break; }
       ex.questions.forEach((q, i) => {
         const w = `${where}.questions[${i}]`;
@@ -355,6 +391,7 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds, global
       if (!c || !isStr(c.id) || !/^[a-z0-9][a-z0-9-]*$/.test(c.id)) err(w, 'id fehlt oder nicht [a-z0-9-]');
       if (!c || !isStr(c.title_de)) err(w, 'title_de fehlt');
       else mixedTexts.push([c.title_de, `${w}.title_de`]);
+      if (c && c.category !== undefined && !CATEGORIES.includes(c.category)) err(w, `category „${c.category}“ ungültig (${CATEGORIES.join(', ')})`);
       if (c && isStr(c.id)) {
         if (globalConceptIds.has(c.id)) err(w, `concept-id „${c.id}“ schon in ${globalConceptIds.get(c.id)} vergeben`);
         globalConceptIds.set(c.id, meta.id);
@@ -375,6 +412,7 @@ function checkLesson(lesson, meta, file, lex, knownVocab, globalVocabIds, global
     else ex0.sections.forEach((sec, i) => {
       const sw = `${w}.sections[${i}]`;
       if (!isStr(sec.heading_de)) err(sw, 'heading_de fehlt'); else mixedTexts.push([sec.heading_de, `${sw}.heading_de`]);
+      if (sec.concept !== undefined && !(lesson.concepts || []).some((c) => c.id === sec.concept)) err(sw, `concept „${sec.concept}“ nicht in concepts dieser Lektion`);
       if (!isStr(sec.body_de)) err(sw, 'body_de fehlt'); else { mixedTexts.push([sec.body_de, `${sw}.body_de`]); count(sec.body_de); }
       if (sec.table !== undefined) {
         const t = sec.table;

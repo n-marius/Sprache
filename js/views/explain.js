@@ -12,7 +12,7 @@ import { toast } from '../ui/shell.js';
 const CYR = /[Ѐ-ӿ]/;
 
 /** Absätze (\n\n) mit **fett**; ukrainische Wörter im Fließtext antippbar. */
-function paragraphs(text) {
+export function paragraphs(text) {
   return String(text || '').split(/\n\s*\n/).filter(Boolean).map(par => {
     const p = h('p', { class: 'xp-p' });
     for (const part of par.split(/(\*\*[^*]+\*\*|\n)/)) {
@@ -28,7 +28,7 @@ function paragraphs(text) {
 }
 
 /** Text mit gemischtem Deutsch/Ukrainisch: ukrainische Abschnitte antippbar. */
-function mixed(txt) {
+export function mixed(txt) {
   const frag = document.createDocumentFragment();
   for (const seg of txt.split(/([Ѐ-ӿ][Ѐ-ӿ́’'ʼ\- ]*[Ѐ-ӿ́]|[Ѐ-ӿ])/)) {
     if (!seg) continue;
@@ -43,7 +43,7 @@ function cell(text, tag) {
   return c;
 }
 
-function table(t) {
+export function table(t) {
   if (!t || !Array.isArray(t.rows)) return null;
   return h('div', { class: 'xp-table-wrap' },
     h('table', { class: 'xp-table' },
@@ -51,7 +51,7 @@ function table(t) {
       h('tbody', t.rows.map(r => h('tr', r.map(x => cell(x, 'td')))))));
 }
 
-function examples(app, list, lessonId) {
+export function examples(app, list, lessonId) {
   if (!list?.length) return null;
   return h('ul', { class: 'xp-examples' }, list.map(ex => {
     const mineBtn = h('button', {

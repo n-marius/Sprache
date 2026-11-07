@@ -25,15 +25,33 @@
      "concepts": [
       {
        "id": "ty-vy",
-       "title_de": "Duzen und Siezen: ти und ви"
+       "title_de": "Duzen und Siezen: ти und ви",
+       "category": "pronomen"
       },
       {
        "id": "grussformeln",
-       "title_de": "Grußformeln nach Tageszeit und Register"
+       "title_de": "Grüßen nach Tageszeit",
+       "category": "redemittel"
+      },
+      {
+       "id": "abschied",
+       "title_de": "Sich verabschieden",
+       "category": "redemittel"
+      },
+      {
+       "id": "yak-spravy",
+       "title_de": "Wie geht’s? – fragen und antworten",
+       "category": "redemittel"
+      },
+      {
+       "id": "hoeflichkeit",
+       "title_de": "Danke, bitte, Entschuldigung, ja, nein",
+       "category": "redemittel"
       },
       {
        "id": "betonung-lesen",
-       "title_de": "Betonungszeichen lesen (nur Lesehilfe)"
+       "title_de": "Betonungszeichen lesen (nur Lesehilfe)",
+       "category": "aussprache"
       }
      ]
     },

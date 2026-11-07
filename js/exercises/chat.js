@@ -139,8 +139,87 @@ export function render(ex, ctx) {
     ], { duration: 340, easing: 'cubic-bezier(.34,1.3,.64,1)' });
   }
 
+  // ---------- Verzweigter Chat (ex.nodes) ----------
+  // Jede Wahl führt weiter; der Gesprächspartner reagiert darauf. tone: good (grün) / ok (blau) / bad (rot + kurzer Hinweis).
+  const choices = [];
+  function askGraph(node) {
+    return new Promise(resolve => {
+      meTurns++;
+      const items = (ctx.shuffle || (a => a))(node.options.map(value => ({ value })));
+      choice?.destroy();
+      choice = singleChoice({
+        items,
+        cls: 'exd-chat-options',
+        renderItem: it => ukText(it.value.uk, { tap: false }),
+        onSelect: (it, i) => {
+          choice.lock();
+          const btn = choice.buttons[i];
+          const tone = it.value.tone || 'good';
+          btn.classList.remove('is-selected');
+          btn.classList.add(tone === 'good' ? 'is-correct' : tone === 'bad' ? 'is-wrong' : 'is-neutral');
+          haptic(tone === 'bad' ? 'error' : 'success');
+          if (tone === 'bad') anim.wrong(btn);
+          if (tone === 'good') firstTry++;
+          choices.push(it.value);
+          sent.push(it.value.uk);
+          if (tone === 'bad') wrongPicks.push(it.value.uk);
+          const from = btn.getBoundingClientRect();
+          setTimeout(() => {
+            if (!alive) return;
+            reply.hidden = true;
+            reply.replaceChildren();
+            const m = push(meBubble(it.value));
+            flyIn(m.querySelector('.exd-bubble'), from);
+            resolve(it.value);
+          }, reducedMotion() ? 120 : 420);
+        },
+      });
+      reply.replaceChildren(h('div', { class: 'exd-reply-label t-foot' }, 'Deine Antwort'), choice.el);
+      reply.hidden = false;
+      scrollToEnd(reply);
+    });
+  }
+
+  function debrief(node) {
+    const ok = node.end === 'success';
+    const notes = choices.filter(c => c.tone !== 'good' && c.note_de);
+    const card = h('div', { class: ['exd-msg', 'is-hint', 'exd-outcome', `is-${node.end}`], role: 'status' },
+      h('div', { class: 'exd-hint-bubble' },
+        h('strong', ok ? 'Ziel erreicht' : node.end === 'neutral' ? 'Gespräch beendet' : 'Ziel nicht erreicht'),
+        node.summary_de ? deText(node.summary_de, { tag: 'p' }) : null,
+        notes.length ? h('ul', { class: 'exd-outcome-notes' }, notes.map(c => h('li', ukText(c.uk, { tap: false }), ' – ', deText(c.note_de)))) : null));
+    push(card);
+  }
+
+  async function runGraph() {
+    const nodes = ex.nodes;
+    let id = ex.start, guard = 0;
+    while (alive && nodes[id] && guard++ < 40) {
+      const node = nodes[id];
+      for (const b of node.bot || []) { if (!alive) return; await showBot(b); }
+      if (node.end) {
+        await wait(reducedMotion() ? 100 : 300);
+        if (!alive) return;
+        debrief(node);
+        const success = node.end === 'success';
+        const good = choices.filter(c => c.tone === 'good').length;
+        ctx.complete({
+          correct: success && !wrongPicks.length,
+          score: meTurns ? (good + 0.5 * choices.filter(c => c.tone === 'ok').length) / meTurns : 1,
+          userAnswer: sent.join(' · '),
+          explanation_de: [node.summary_de, ...choices.filter(c => c.tone !== 'good' && c.note_de).map(c => `„${c.uk}“: ${c.note_de}`)].filter(Boolean).join('\n'),
+        });
+        return;
+      }
+      const pick = await askGraph(node);
+      if (pick.tone === 'bad' && pick.note_de) push(hintBubble(pick.note_de));
+      id = pick.next;
+    }
+  }
+
   async function run() {
     await wait(120);
+    if (ex.nodes) return runGraph();
     for (const turn of turns) {
       if (!alive) return;
       if (turn.who === 'me') await askMe(turn);

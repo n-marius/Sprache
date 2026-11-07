@@ -84,6 +84,10 @@ Lektion ≈ 3–5 Lerntage inkl. Wiederholung (A1.1: 15 Lektionen in ca. 10 Woch
 
 Grundsatz: Jede Form, die eine Aufgabe **produktiv** verlangt (Antwort wählen/bilden, Lücke, Satzbau, Sprechen), ist in dieser oder einer früheren Lektion in `explanation` erklärt. Vorgriffe sind nur als **ausdrücklich benannte Chunks** erlaubt: Sie werden als Ganzes gelernt (auch gesprochen und gebaut), aber nie grammatisch abgefragt (keine Endungslücke, keine Kasus-Distraktoren, keine Übertragung auf andere Wörter).
 
+### Feinschrittigkeit (Nutzervorgabe vom 07.11.2026, verbindlich für die Überarbeitung ab Lektion 2)
+
+Jede Lektion führt nur **einen kleinen grammatischen Schritt** ein, der in der Lektion gründlich geübt wird. Paradigmen werden nicht als Ganzes eingeführt, sondern zerlegt, z. B. Präsens I. Konjugation: 1. Sg. und 2. Sg. (я/ти) → 3. Sg. (він/вона́) → 1./2. Pl. (ми/ви) → 3. Pl. (вони́) – jeweils mit Wiederholung der vorigen Formen; die II. Konjugation folgt erst, wenn die I. sicher sitzt. Kasus ebenso nach Genus/Numerus gestaffelt (z. B. Akkusativ f. -а → -у zuerst, m./n. unbelebt danach). Die Lektionen 2–15 und die Pläne für A1.2/A1.3 werden nach diesem Grundsatz neu zugeschnitten, bevor sie überarbeitet werden; die Lektionszahl steigt dadurch.
+
 ### Kasus – Reihenfolge der Einführung
 
 | Kasus / Struktur | Chunk-Phase (nur feste Wendungen) | systematisch eingeführt |

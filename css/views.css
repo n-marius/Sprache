@@ -210,3 +210,4 @@ a.v-tool:active { background: var(--surface-3); }
   .v-sum-actions-inner .btn:first-child { order: 2; }
   .v-sum-stage { height: 220px; }
 }
+.lib-seg { margin: 0 0 12px; } .lib-seg .segmented { width: 100%; } .lib-foot { text-align: center; margin: 8px 16px 20px; color: var(--label-2); }

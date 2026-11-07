@@ -13,6 +13,7 @@ const ROUTES = [
   { pattern: '/story/:id', load: () => import('./views/story.js'), tab: 'course' },
   { pattern: '/library', load: () => import('./views/library.js'), tab: 'library' },
   { pattern: '/explain/:id', load: () => import('./views/explain.js'), tab: 'library' },
+  { pattern: '/concept/:id', load: () => import('./views/concept.js'), tab: 'library' },
   { pattern: '/session/lesson/:id', load: () => import('./views/session.js'), tab: null, mode: 'lesson' },
   { pattern: '/session/review', load: () => import('./views/session.js'), tab: null, mode: 'review' },
   { pattern: '/summary', load: () => import('./views/summary.js'), tab: null },

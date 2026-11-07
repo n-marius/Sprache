@@ -253,3 +253,16 @@
   .exd-mic.is-listening .exd-mic-pulse { animation: none; box-shadow: 0 0 0 6px color-mix(in srgb, var(--red) 35%, transparent); }
   :where(.anim-typing) i { animation: none; opacity: .6; }
 }
+
+/* Verzweigter Chat: neutrale Wahl und Gesprächsergebnis */
+.option.is-neutral { --o-bg: var(--sel-bg); --o-border: var(--sel-border, var(--blue)); --o-edge: var(--sel-border, var(--blue)); }
+.exd-outcome { max-width: 100%; align-self: stretch; }
+.exd-outcome .exd-hint-bubble { display: block; }
+.exd-outcome strong { display: block; margin-bottom: 4px; }
+.exd-outcome.is-success .exd-hint-bubble { background: var(--ok-bg); border: 1.5px solid var(--ok-border); color: var(--ok-ink); }
+.exd-outcome.is-fail .exd-hint-bubble { background: var(--bad-bg); border: 1.5px solid var(--bad-border); color: var(--bad-ink); }
+.exd-outcome p { margin: 0 0 6px; }
+.exd-outcome-notes { margin: 6px 0 0; padding-left: 18px; }
+.exd-outcome-notes li { margin: 3px 0; }
+.exd-outcome.is-neutral .exd-hint-bubble { background: var(--surface-2); border: 1.5px solid var(--separator); color: var(--label); }
+.exd-read-gate { margin: 16px 0; } .exd-read-tip { font-size: var(--fs-sub); margin: 0 0 10px; }

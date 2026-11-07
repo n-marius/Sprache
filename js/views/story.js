@@ -17,7 +17,7 @@ const MAX_GUESS = 4;
 /** Story aus lesson.story oder Fallback (erste reading-Aufgabe bzw. erster chat). */
 function storyOf(lesson) {
   if (lesson.story?.lines?.length) return { ...lesson.story, real: true };
-  const rd = lesson.exercises.find(e => e.type === 'reading' && /\n/.test(e.text_uk)) || lesson.exercises.find(e => e.type === 'reading');
+  const rd = lesson.exercises.find(e => e.type === 'reading' && e.mode !== 'comprehension' && /\n/.test(e.text_uk)) || lesson.exercises.find(e => e.type === 'reading');
   if (rd) {
     // Format der Inhalte: Zeilen „Name: Text“, Szenenmarker „🏠 Ort“, sonst Fließtext
     const lines = [];
@@ -36,7 +36,7 @@ function storyOf(lesson) {
     }
     return { title_uk: rd.title_uk, title_de: lesson.title_de, lines, text_de: rd.text_de, characters: [...cast.values()] };
   }
-  const ch = lesson.exercises.find(e => e.type === 'chat');
+  const ch = lesson.exercises.find(e => e.type === 'chat' && Array.isArray(e.turns));
   if (ch) {
     const me = 'Ти';
     return {

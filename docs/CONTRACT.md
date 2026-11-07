@@ -83,6 +83,7 @@ Alle Wörter darin müssen über `glossary-common.json` auflösbar sein.
   "exercises": [ ]
 }
 ```
+- `concepts[].category` ∈ `redemittel, aussprache, pronomen, verben, kasus, nomen, zahlen, satzbau`; jeder Erklärungsabschnitt nennt mit `sections[].concept` das Konzept, das er erklärt. „Wissen“ zeigt jedes Konzept als eigenes Thema.
 - `concepts`: in dieser Lektion NEU eingeführte Grammatik-/Strukturkonzepte (ids eindeutig über alle Lektionen).
 - `explanation` (Pflicht): kurze, übersichtliche, verständliche, aber VOLLSTÄNDIGE und zusammenhängende deutsche Erklärung aller neuen Konzepte und Redemittel der Lektion (ca. 250–600 Wörter, Tabellen für Paradigmen, Beispiele mit Übersetzung). Wird vor der Lektion gezeigt und bleibt danach in der Erklärungsbibliothek abrufbar. `table` und `examples` optional je Abschnitt. Ukrainische Wörter in Tabellen/Beispielen ebenfalls glossiert.
 - `grammar`: knappe Merkhilfen, die die App während der Session als Tipp-Karten zeigt.
@@ -107,6 +108,8 @@ Bei Auswahl-Optionen steht die **richtige Option immer an Index 0**; die App mis
 | `match_pairs` | `pairs`: 4–6 × `{"uk":"…","de":"…"}` |
 | `picture_choice` | `prompt_uk` (Wort/Satz), `options`: `[{"emoji":"☕","de":"Kaffee"}, …]` (3–4) |
 | `true_false` | `statement_uk`, `context_uk` (optional, kurzer Text/Situation), `context_de`, `answer` (bool), `explanation_de` |
+| `chat` (verzweigt) | statt `turns`: `start` + `nodes`: `{ "n1": {"bot":[{"uk","de"}], "options":[{"uk","de","tone":"good"|"ok"|"bad","note_de","next":"n2"}]}, "end_ok": {"bot":[…], "end":"success"|"neutral"|"fail", "summary_de":"…"} }`. Jede Wahl führt weiter, die Figur reagiert darauf; `bad` zeigt kurz `note_de`, am Ende Auswertung. |
+| `reading` (Verständnis) | zusätzlich `"mode":"comprehension"`: längerer Text (bis 30 Sätze), zu ca. 60–80 % mit bekanntem Wortschatz verständlich, Rest aus dem Kontext erschließbar (glossiert); Fragen prüfen Textverständnis/Schlussfolgern, nicht das Wiedererkennen eines einzelnen Wortes; Optionen nur mit bekanntem Wortschatz. Fragen erscheinen erst nach „Gelesen“, Übersetzung erst nach dem Prüfen. |
 | `order_dialog` | `lines`: 3–5 × `{"uk":"…","de":"…"}` in richtiger Reihenfolge |
 
 Jede Lektion: **mind. 45 Aufgaben**, alle Typen vertreten, je Vokabel mehrere Aufgaben in verschiedenen Formen/Kontexten (Konzept statt Auswendiglernen), mind. 3 `chat`, 2 `reading`, 5 `speak`, 6 `listening`. Aufgaben greifen bewusst auch Wortschatz früherer Lektionen auf (Interleaving).

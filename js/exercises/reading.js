@@ -18,7 +18,7 @@ export function render(ex, ctx) {
         ctx.speaker(ex.text_uk, { size: 'm' }),
         ctx.speaker(ex.text_uk, { size: 'm', slow: true }))),
     h('p', { class: 'exd-read-text' }, ukText(ex.text_uk || '')),
-    reveal?.el);
+    ex.mode === 'comprehension' ? null : reveal?.el);
 
   // ---------- Fragen ----------
   const qs = questions.map((q, n) => {
@@ -43,8 +43,17 @@ export function render(ex, ctx) {
     return { q, choice, box, items };
   });
 
-  const el = h('div', { class: 'exd-read' }, card,
-    h('div', { class: 'exd-questions' }, qs.map(x => x.box)));
+  // Verständnis-Modus: erst lesen (Tipp: nicht jedes Wort nötig), dann erscheinen die Fragen.
+  const qWrap = h('div', { class: 'exd-questions' }, qs.map(x => x.box));
+  const gist = ex.mode === 'comprehension';
+  let gate = null;
+  if (gist) {
+    qWrap.hidden = true;
+    gate = h('div', { class: 'exd-read-gate' },
+      deText('Lies den ganzen Text. Du musst nicht jedes Wort kennen – erschließe den Sinn aus dem Zusammenhang. Unbekanntes kannst du antippen.', { tag: 'p', cls: 'exd-read-tip' }),
+      h('button', { type: 'button', class: 'btn btn-blue btn-block', on: { click: () => { gate.remove(); qWrap.hidden = false; try { qWrap.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch {} } } }, 'Gelesen – zu den Fragen'));
+  }
+  const el = h('div', { class: ['exd-read', gist && 'is-gist'] }, card, gate, qWrap);
 
   function update() { ctx.setReady(qs.length > 0 && qs.every(x => x.choice.selected)); }
   update();
@@ -64,6 +73,7 @@ export function render(ex, ctx) {
         x.box.classList.add(ok ? 'is-correct' : 'is-wrong');
         if (ok) anim.correct(x.box, { sparks: false }); else anim.wrong(x.box);
       }
+      if (gist && reveal) card.append(reveal.el); // Übersetzung erst nach dem Beantworten
       const wrong = qs.filter(x => !x.choice.selected?.correct);
       return {
         correct: right === qs.length,
