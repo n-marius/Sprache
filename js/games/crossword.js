@@ -22,7 +22,7 @@ export function crossword(app, words, { onDone } = {}) {
     const c = cw.cells.get(`${x},${y}`);
     if (!c) { gridEl.append(h('div', { class: 'cw-cell is-void', 'aria-hidden': 'true' })); continue; }
     const num = cw.slots.find(s => s.x === x && s.y === y)?.num;
-    const el = h('button', { type: 'button', class: 'cw-cell', on: { click: () => select(c.slots.find(s => s !== active) || c.slots[0]) } },
+    const el = h('button', { type: 'button', class: 'cw-cell no-tap', on: { click: () => select(c.slots.find(s => s !== active) || c.slots[0]) } },
       num ? h('span', { class: 'cw-num' }, String(num)) : null, h('span', { class: 'cw-letter' }));
     cellEls.set(`${x},${y}`, el);
     gridEl.append(el);
@@ -69,7 +69,7 @@ export function crossword(app, words, { onDone } = {}) {
     const free = new Set(Array.from(s.answer));
     const extra = ALPHABET.split('').filter(l => !free.has(l)).sort(() => Math.random() - 0.5).slice(0, Math.max(3, 8 - free.size));
     tiles.replaceChildren(...[...free, ...extra].sort(() => Math.random() - 0.5)
-      .map(l => h('button', { type: 'button', class: 'cw-tile', on: { click: () => type(l) } }, l)), back);
+      .map(l => h('button', { type: 'button', class: 'cw-tile no-tap', on: { click: () => type(l) } }, l)), back);
     current.replaceChildren(...[h('span', { class: 'cw-clue-num' }, String(s.num)), s.emoji ? h('span', { class: 'cw-clue-emoji' }, s.emoji) : null, h('span', s.de)].filter(Boolean));
     paint();
   }

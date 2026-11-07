@@ -140,7 +140,7 @@ export function sheet({ title = '', content, actions, onClose, cancelLabel } = {
   };
   const onKey = e => { if (e.key === 'Escape') close(); };
   const header = h('div', { class: 'sheet-header' },
-    cancelLabel ? h('button', { class: 'sheet-cancel', type: 'button', on: { click: close } }, cancelLabel) : h('span'),
+    cancelLabel ? h('button', { class: 'sheet-cancel', type: 'button', on: { click: close } }, isUi(cancelLabel) ? uiLabel(cancelLabel, { hold: true, de: false }) : cancelLabel) : h('span'),
     h('div', { class: 'sheet-title' }, isUi(title) ? uiLabel(title, { layout: 'inline' }) : title),
     h('button', { class: 'icon-btn filled sheet-close', type: 'button', 'aria-label': 'Schließen', on: { click: close } }, icon('close')));
   const body = h('div', { class: 'sheet-body' }, content);
@@ -159,17 +159,21 @@ export function sheet({ title = '', content, actions, onClose, cancelLabel } = {
 }
 
 let toastTimer = null;
+/** Text für Dialoge/Toasts: {uk, de} → ukrainisch + dezent Deutsch; String (deutsch) / Node bleiben. */
+const uiNode = (v, opts) => (isUi(v) ? uiLabel(v, opts) : v);
+
+/** toast(text): text = {uk, de} (bevorzugt, ukrainisch mit deutschem Zusatz) | String | Node */
 export function toast(text, { kind = '', ms = 2200 } = {}) {
   document.querySelectorAll('.toast').forEach(t => t.remove());
-  const el = h('div', { class: ['toast', kind], role: 'status' }, text);
+  const el = h('div', { class: ['toast', kind], role: 'status' }, uiNode(text));
   overlayRoot().append(el);
   requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('is-open')));
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => { el.classList.remove('is-open'); setTimeout(() => el.remove(), 300); }, ms);
 }
 
-/** iOS-Alert. Promise<boolean> */
-export function confirmDialog({ title, message, ok = 'OK', cancel = 'Abbrechen', destructive = false } = {}) {
+/** iOS-Alert. Promise<boolean>. title/message/ok/cancel: {uk, de} | String (deutsch). */
+export function confirmDialog({ title, message, ok = uiT('ok'), cancel = uiT('cancel'), destructive = false } = {}) {
   return new Promise(resolve => {
     const scrim = h('div', { class: 'scrim alert-scrim' });
     const done = v => {
@@ -177,13 +181,14 @@ export function confirmDialog({ title, message, ok = 'OK', cancel = 'Abbrechen',
       setTimeout(() => { scrim.remove(); box.remove(); }, 220);
       resolve(v);
     };
-    const box = h('div', { class: 'alert', role: 'alertdialog', 'aria-label': title },
+    const btnLabel = v => (isUi(v) ? uiLabel(v, { hold: true }) : v);
+    const box = h('div', { class: 'alert', role: 'alertdialog', 'aria-label': isUi(title) ? title.de : title },
       h('div', { class: 'alert-body' },
-        h('div', { class: 'alert-title' }, title || ''),
-        message ? h('div', { class: 'alert-message' }, message) : null),
+        h('div', { class: 'alert-title' }, uiNode(title, { layout: 'stack' }) || ''),
+        message ? h('div', { class: 'alert-message' }, uiNode(message)) : null),
       h('div', { class: 'alert-actions' },
-        cancel ? h('button', { type: 'button', on: { click: () => done(false) } }, cancel) : null,
-        h('button', { type: 'button', class: ['is-default', destructive && 'is-destructive'], on: { click: () => done(true) } }, ok)));
+        cancel ? h('button', { type: 'button', on: { click: () => done(false) } }, btnLabel(cancel)) : null,
+        h('button', { type: 'button', class: ['is-default', destructive && 'is-destructive'], on: { click: () => done(true) } }, btnLabel(ok))));
     overlayRoot().append(scrim, box);
     requestAnimationFrame(() => requestAnimationFrame(() => { scrim.classList.add('is-open'); box.classList.add('is-open'); }));
   });

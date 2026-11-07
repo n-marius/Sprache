@@ -15,7 +15,7 @@ export function memory(app, pairs, { onDone } = {}) {
     const face = h('div', { class: 'mm-face' },
       c.tag ? h('span', { class: 'mm-tag' }, c.tag) : null,
       c.lang === 'uk' ? ukText(c.text, { tap: false }) : deText(c.text));
-    return h('button', { type: 'button', class: 'mm-card', 'aria-label': 'Karte', on: { click: () => flip(i) } },
+    return h('button', { type: 'button', class: 'mm-card no-tap', 'aria-label': 'Karte', on: { click: () => flip(i) } },
       h('div', { class: 'mm-back', 'aria-hidden': 'true' }, '?'), face);
   });
   const status = h('div', { class: 'mm-status t-foot' });

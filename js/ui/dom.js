@@ -1,5 +1,5 @@
 // DOM-Helfer: h(), ukText() (antippbare Wörter), Icons (SF-Symbols-ähnliche Inline-SVGs).
-import { tokenize } from '../lib/uk-text.js';
+import { tokenize, isFragment } from '../lib/uk-text.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
@@ -52,8 +52,9 @@ export function ukText(text, { tap = true, hold = false, cls = '', tag = 'span' 
   const el = document.createElement(tag);
   el.className = ['uk', hold ? 'uk-hold' : tap ? 'uk-tap' : 'uk-notap', cls].filter(Boolean).join(' ');
   el.lang = 'uk';
-  for (const p of tokenize(String(text ?? ''))) {
-    if (p.word) {
+  const parts = tokenize(String(text ?? ''));
+  for (const [i, p] of parts.entries()) {
+    if (p.word && !isFragment(parts, i)) {
       const s = document.createElement('span');
       s.className = 'w';
       s.dataset.k = p.key;

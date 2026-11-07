@@ -1678,5 +1678,397 @@
   "de": "warum",
   "pos": "adv",
   "info": "Fragewort"
+ },
+ {
+  "uk": "пе́рші",
+  "lemma": "пе́рший",
+  "de": "erste",
+  "pos": "adj",
+  "info": "Nom. Pl. von пе́рший (erster)"
+ },
+ {
+  "uk": "кро́ки",
+  "lemma": "крок",
+  "de": "Schritte",
+  "pos": "noun",
+  "info": "Nom. Pl. von крок (Schritt, m.)"
+ },
+ {
+  "uk": "лю́биш",
+  "lemma": "люби́ти",
+  "de": "(du) magst, liebst",
+  "pos": "verb",
+  "info": "2. Sg. Präsens von люби́ти"
+ },
+ {
+  "uk": "ко́штує",
+  "lemma": "ко́штувати",
+  "de": "kostet",
+  "pos": "verb",
+  "info": "3. Sg. Präsens von ко́штувати"
+ },
+ {
+  "uk": "кварти́ра",
+  "lemma": "кварти́ра",
+  "de": "Wohnung",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "кварти́ри",
+  "lemma": "кварти́ра",
+  "de": "Wohnung",
+  "pos": "noun",
+  "info": "Gen. Sg. von кварти́ра (f.)"
+ },
+ {
+  "uk": "апте́ка",
+  "lemma": "апте́ка",
+  "de": "Apotheke",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "апте́ці",
+  "lemma": "апте́ка",
+  "de": "Apotheke",
+  "pos": "noun",
+  "info": "Lok. Sg. von апте́ка: в апте́ці – in der Apotheke"
+ },
+ {
+  "uk": "котра́",
+  "lemma": "котри́й",
+  "de": "welche (Stunde)",
+  "pos": "pron",
+  "info": "f. Nom. Sg.; Котра́ годи́на? – Wie spät ist es?"
+ },
+ {
+  "uk": "годи́на",
+  "lemma": "годи́на",
+  "de": "Stunde; Uhr",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "понеді́лок",
+  "lemma": "понеді́лок",
+  "de": "Montag",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "робо́та",
+  "lemma": "робо́та",
+  "de": "Arbeit, Beruf",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "о́фісі",
+  "lemma": "о́фіс",
+  "de": "Büro",
+  "pos": "noun",
+  "info": "Lok. Sg. von о́фіс: в о́фісі – im Büro"
+ },
+ {
+  "uk": "ва́ші",
+  "lemma": "ваш",
+  "de": "Ihre, eure",
+  "pos": "pron",
+  "info": "Possessiv, Nom. Pl."
+ },
+ {
+  "uk": "докуме́нти",
+  "lemma": "докуме́нт",
+  "de": "Dokumente",
+  "pos": "noun",
+  "info": "Nom./Akk. Pl. von докуме́нт (m.)"
+ },
+ {
+  "uk": "повсякде́нне",
+  "lemma": "повсякде́нний",
+  "de": "alltäglich",
+  "pos": "adj",
+  "info": "n. Nom. Sg."
+ },
+ {
+  "uk": "життя́",
+  "lemma": "життя́",
+  "de": "Leben",
+  "pos": "noun",
+  "info": "n., Nom. Sg."
+ },
+ {
+  "uk": "роби́в",
+  "lemma": "роби́ти",
+  "de": "(er/du m.) machte, hast gemacht",
+  "pos": "verb",
+  "info": "Präteritum m. Sg. von роби́ти (machen)"
+ },
+ {
+  "uk": "учо́ра",
+  "lemma": "учо́ра",
+  "de": "gestern",
+  "pos": "adv",
+  "info": "Adverb; auch вчо́ра"
+ },
+ {
+  "uk": "тра́нспорт",
+  "lemma": "тра́нспорт",
+  "de": "Verkehr, Verkehrsmittel",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "пого́да",
+  "lemma": "пого́да",
+  "de": "Wetter",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "хо́бі",
+  "lemma": "хо́бі",
+  "de": "Hobby, Hobbys",
+  "pos": "noun",
+  "info": "n., unveränderlich"
+ },
+ {
+  "uk": "ко́лір",
+  "lemma": "ко́лір",
+  "de": "Farbe",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "о́дяг",
+  "lemma": "о́дяг",
+  "de": "Kleidung",
+  "pos": "noun",
+  "info": "m., Nom. Sg. (Sammelbegriff)"
+ },
+ {
+  "uk": "роди́на",
+  "lemma": "роди́на",
+  "de": "Familie",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "рестора́ні",
+  "lemma": "рестора́н",
+  "de": "Restaurant",
+  "pos": "noun",
+  "info": "Lok. Sg. von рестора́н: у рестора́ні – im Restaurant"
+ },
+ {
+  "uk": "здоро́в’я",
+  "lemma": "здоро́в’я",
+  "de": "Gesundheit",
+  "pos": "noun",
+  "info": "n., Nom. Sg."
+ },
+ {
+  "uk": "да́ти",
+  "lemma": "да́та",
+  "de": "Daten (Kalender)",
+  "pos": "noun",
+  "info": "Nom. Pl. von да́та (Datum, f.)"
+ },
+ {
+  "uk": "мі́сяці",
+  "lemma": "мі́сяць",
+  "de": "Monate",
+  "pos": "noun",
+  "info": "Nom. Pl. von мі́сяць (Monat, m.)"
+ },
+ {
+  "uk": "вчи́телем",
+  "lemma": "вчи́тель",
+  "de": "(als) Lehrer",
+  "pos": "noun",
+  "info": "Instr. Sg. von вчи́тель: працю́ю вчи́телем – ich arbeite als Lehrer"
+ },
+ {
+  "uk": "робо́чий",
+  "lemma": "робо́чий",
+  "de": "Arbeits-",
+  "pos": "adj",
+  "info": "m. Nom. Sg.; робо́чий день – Arbeitstag"
+ },
+ {
+  "uk": "банк",
+  "lemma": "банк",
+  "de": "Bank",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "по́шта",
+  "lemma": "по́шта",
+  "de": "Post",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "свята́",
+  "lemma": "свя́то",
+  "de": "Feste, Feiertage",
+  "pos": "noun",
+  "info": "Nom. Pl. von свя́то (n.)"
+ },
+ {
+  "uk": "устано́ві",
+  "lemma": "устано́ва",
+  "de": "Behörde, Einrichtung",
+  "pos": "noun",
+  "info": "Lok. Sg. von устано́ва: в устано́ві – auf dem Amt"
+ },
+ {
+  "uk": "упе́внені",
+  "lemma": "упе́внений",
+  "de": "sichere, selbstbewusste",
+  "pos": "adj",
+  "info": "Nom. Pl. von упе́внений"
+ },
+ {
+  "uk": "пла́ни",
+  "lemma": "план",
+  "de": "Pläne",
+  "pos": "noun",
+  "info": "Nom. Pl. von план (m.)"
+ },
+ {
+  "uk": "вихідні́",
+  "lemma": "вихідні́",
+  "de": "Wochenende",
+  "pos": "noun",
+  "info": "Pl.; на вихідні́ – fürs Wochenende"
+ },
+ {
+  "uk": "по́дорож",
+  "lemma": "по́дорож",
+  "de": "Reise",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "готе́лі",
+  "lemma": "готе́ль",
+  "de": "Hotel",
+  "pos": "noun",
+  "info": "Lok. Sg. von готе́ль: у готе́лі – im Hotel"
+ },
+ {
+  "uk": "оре́нда",
+  "lemma": "оре́нда",
+  "de": "Miete, Mieten",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "ха́тні",
+  "lemma": "ха́тній",
+  "de": "häusliche",
+  "pos": "adj",
+  "info": "Nom. Pl.; ха́тні спра́ви – Hausarbeit"
+ },
+ {
+  "uk": "запро́шення",
+  "lemma": "запро́шення",
+  "de": "Einladung(en)",
+  "pos": "noun",
+  "info": "n., Nom. Sg./Pl."
+ },
+ {
+  "uk": "ку́рсі",
+  "lemma": "курс",
+  "de": "Kurs",
+  "pos": "noun",
+  "info": "Lok. Sg. von курс: на ку́рсі – im Kurs"
+ },
+ {
+  "uk": "співбе́сіда",
+  "lemma": "співбе́сіда",
+  "de": "Vorstellungsgespräch",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "телефо́нна",
+  "lemma": "телефо́нний",
+  "de": "Telefon-",
+  "pos": "adj",
+  "info": "f. Nom. Sg.; телефо́нна розмо́ва – Telefonat"
+ },
+ {
+  "uk": "полі́ції",
+  "lemma": "полі́ція",
+  "de": "Polizei",
+  "pos": "noun",
+  "info": "Lok. Sg. von полі́ція: у полі́ції – bei der Polizei"
+ },
+ {
+  "uk": "культу́ра",
+  "lemma": "культу́ра",
+  "de": "Kultur",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "приро́да",
+  "lemma": "приро́да",
+  "de": "Natur",
+  "pos": "noun",
+  "info": "f., Nom. Sg."
+ },
+ {
+  "uk": "порівня́ння",
+  "lemma": "порівня́ння",
+  "de": "Vergleich(e)",
+  "pos": "noun",
+  "info": "n., Nom. Sg./Pl."
+ },
+ {
+  "uk": "пі́дсумок",
+  "lemma": "пі́дсумок",
+  "de": "Abschluss, Zusammenfassung",
+  "pos": "noun",
+  "info": "m., Nom. Sg."
+ },
+ {
+  "uk": "до́чки",
+  "lemma": "дочка́",
+  "de": "Töchter",
+  "pos": "noun",
+  "info": "Nom. Pl. von дочка́ (f.)"
+ },
+ {
+  "uk": "се́стри",
+  "lemma": "сестра́",
+  "de": "Schwestern",
+  "pos": "noun",
+  "info": "Nom. Pl. von сестра́ (f.)"
+ },
+ {
+  "uk": "кота́",
+  "lemma": "кіт",
+  "de": "Kater, Katze",
+  "pos": "noun",
+  "info": "Gen./Akk. Sg. von кіт (m.)"
+ },
+ {
+  "uk": "бу́ти",
+  "lemma": "бу́ти",
+  "de": "sein",
+  "pos": "verb",
+  "info": "Infinitiv"
+ },
+ {
+  "uk": "звуть",
+  "lemma": "зва́ти",
+  "de": "(man) nennt",
+  "pos": "verb",
+  "info": "3. Pl. von зва́ти; Мене́ звуть … – Ich heiße …"
  }
 ]

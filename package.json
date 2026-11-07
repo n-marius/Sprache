@@ -7,6 +7,8 @@
     "start": "http-server -p 8080 -c-1 .",
     "test": "node --test tests/unit/*.test.mjs",
     "e2e": "node tests/e2e/smoke.mjs",
-    "icons": "node tools/render-icons.mjs"
+    "icons": "node tools/render-icons.mjs",
+    "audit": "node tests/e2e/audit-immersion.mjs",
+    "check": "node tools/validate-content.mjs && node tools/check-ui-text.mjs && npm test"
   }
 }

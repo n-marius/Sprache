@@ -3,6 +3,10 @@
 // Jedes Wort muss im Lexikon auflösbar sein (glossary-common/Lektionen) → Prüfung: node tools/check-ui-text.mjs
 // Rendern: js/ui/ui-label.js (uiLabel) – Ukrainisch antippbar bzw. per langem Druck übersetzbar,
 // darunter/daneben dezent Deutsch, solange „Deutsche Hilfen“ an ist.
+import { UI_G1 } from './ui-text-g1.js';
+import { UI_G2 } from './ui-text-g2.js';
+import { UI_G3 } from './ui-text-g3.js';
+
 export const UI = {
   // Tabs & Seiten
   tab_today: { uk: 'Сього́дні', de: 'Heute' },
@@ -162,6 +166,8 @@ export const UI = {
   listen_all: { uk: 'Слу́хати все', de: 'Alles anhören' },
   stop: { uk: 'Стоп', de: 'Stopp' },
 };
+
+Object.assign(UI, UI_G1, UI_G2, UI_G3);
 
 /** {uk, de} zu einem Key (unbekannt → Key als Text). */
 export function ui(key) {

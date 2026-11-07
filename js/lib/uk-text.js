@@ -35,3 +35,14 @@ export function words(text) {
 export function normalizeSentence(s) {
   return words(s).join(' ');
 }
+
+// Einbuchstabige ukrainische Wörter; andere Einzelbuchstaben sind Abkürzungen/Wortteile.
+const ONE_LETTER = new Set(['я', 'і', 'й', 'у', 'в', 'з', 'а', 'о', 'ж', 'б', 'с']);
+/** Ist parts[i] ein Wortteil (Endung „-єш“, Stamm „чотир-“) oder ein einzelner Nicht-Wort-Buchstabe? */
+export function isFragment(parts, i) {
+  const p = parts[i];
+  if (!p?.word) return false;
+  if (p.key.length === 1 && !ONE_LETTER.has(p.key)) return true;
+  const prev = parts[i - 1], next = parts[i + 1];
+  return (!!prev && !prev.word && /-$/.test(prev.text)) || (!!next && !next.word && /^-/.test(next.text));
+}

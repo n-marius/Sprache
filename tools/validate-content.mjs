@@ -581,6 +581,23 @@ if (ui) {
   }
   for (const [kk, w] of unresolved) err(w, `Wort nicht über glossary-common auflösbar: „${kk}“`);
 }
+// Kurs- und Lektionstitel erscheinen überall in der App (auch für geplante Lektionen) → über glossary-common auflösbar
+if (cur && isArr(cur.phases)) {
+  const unresolved = new Map();
+  const allLex = new Lexicon();
+  if (isArr(common)) common.forEach((g) => allLex.add(g.uk, 'common'));
+  for (const ph of cur.phases) for (const l of ph.lessons || []) {
+    if (l.status !== 'ready' || !isStr(l.file)) continue;
+    let data = null; try { data = JSON.parse(readFileSync(C(l.file), 'utf8')); } catch { continue; }
+    for (const v of data.vocab || []) { allLex.add(v.uk, l.id); for (const f of v.forms || []) allLex.add(f.uk, l.id); }
+    for (const g of data.glossary || []) allLex.add(g.uk, l.id);
+  }
+  cur.phases.forEach((ph, i) => {
+    if (isStr(ph.title_uk)) checkResolvable(ph.title_uk, `curriculum.phases[${i}].title_uk`, allLex, unresolved);
+    (ph.lessons || []).forEach((l, j) => { if (isStr(l.title_uk)) checkResolvable(l.title_uk, `curriculum.phases[${i}].lessons[${j}].title_uk`, allLex, unresolved); });
+  });
+  for (const [kk, w] of unresolved) err(w, `Titelwort nicht über glossary-common auflösbar: „${kk}“`);
+}
 
 const lessonsMeta = [];
 if (cur) {

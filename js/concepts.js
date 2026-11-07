@@ -2,17 +2,20 @@
 // Quelle: concepts der Lektionsdateien (bzw. curriculum.json für noch nicht fertige Lektionen).
 // Erklärungsabschnitte mit `concept` werden dem Thema zugeordnet.
 import { isUnlocked } from './engine/progress.js';
+import { uiF } from './ui-text-g2.js';
 
+// label = deutsch (Hilfe), uk = ukrainische Bezeichnung (Oberfläche); Texte in js/ui-text-g2.js (g2_cat_*).
+const CAT = id => uiF(`cat_${id}`);
 export const CATEGORIES = [
-  { id: 'redemittel', label: 'Redemittel', emoji: '💬' },
-  { id: 'aussprache', label: 'Aussprache und Schrift', emoji: '🔤' },
-  { id: 'pronomen', label: 'Pronomen und Anrede', emoji: '👥' },
-  { id: 'verben', label: 'Verben', emoji: '⚙️' },
-  { id: 'kasus', label: 'Fälle (Kasus)', emoji: '🧩' },
-  { id: 'nomen', label: 'Nomen und Adjektive', emoji: '🏷️' },
-  { id: 'zahlen', label: 'Zahlen und Zeit', emoji: '🔢' },
-  { id: 'satzbau', label: 'Satzbau', emoji: '🧱' },
-];
+  { id: 'redemittel', emoji: '💬' },
+  { id: 'aussprache', emoji: '🔤' },
+  { id: 'pronomen', emoji: '👥' },
+  { id: 'verben', emoji: '⚙️' },
+  { id: 'kasus', emoji: '🧩' },
+  { id: 'nomen', emoji: '🏷️' },
+  { id: 'zahlen', emoji: '🔢' },
+  { id: 'satzbau', emoji: '🧱' },
+].map(c => ({ ...c, uk: CAT(c.id).uk, label: CAT(c.id).de }));
 
 // Fallback, solange eine Lektion ihren Konzepten noch keine Kategorie gibt.
 function guessCategory(title) {

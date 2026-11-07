@@ -11,10 +11,19 @@ import { backupJSON, backupFilename, parseBackup, backupSummary, applyBackup, sh
 import { syncReports, backupProgress, restoreProgress, testToken, errorMessage, gistUrl, TOKEN_URL } from '../services/gist.js';
 import { DEFAULT_TARGET_DATE } from '../config.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+import { ukWord, syncedToast } from '../ui-text-g3.js';
 
 /** Zeilentitel ukrainisch (+ Deutsch daneben); hold für antippbare Zeilen (Aktion). */
 const RT = (k, hold = false) => uiLabel(k, { cls: 'row-title', hold });
 const HDR = k => uiLabel(k, { layout: 'inline' });
+/** Deutsche Erläuterung (Hilfe) unter einer Zeile – per „Deutsche Hilfen“ abschaltbar. */
+const DE = text => h('span', { class: 'row-subtitle ui-de', lang: 'de' }, text);
+/** Ukrainischer Status/Untertitel (+ Deutsch) */
+const SUB = label => uiLabel(label, { cls: 'row-subtitle', layout: 'inline' });
+/** Deutscher Fußtext als Hilfe */
+const FOOT = text => h('span', { class: 'ui-de', lang: 'de' }, text);
+const pad2 = n => String(n).padStart(2, '0');
+const numDate = d => `${pad2(d.getDate())}.${pad2(d.getMonth() + 1)}.${d.getFullYear()}`;
 
 const TEST_PHRASE = 'Приві́т! Мене́ звуть Окса́на. Як спра́ви?';
 
@@ -24,13 +33,18 @@ function daysUntil(dateStr) {
   const now = new Date(); now.setHours(0, 0, 0, 0);
   return Math.round((t - now) / 864e5);
 }
+/** „zeitweise bis …“ → {uk, de} */
 function untilLabel(u) {
-  if (!u || u === 'forever') return '';
+  if (!u || u === 'forever') return { uk: '', de: '' };
   const d = new Date(u);
   const t = d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-  return d.toDateString() === new Date().toDateString() ? `bis ${t} Uhr` : `bis morgen, ${t} Uhr`;
+  const today = d.toDateString() === new Date().toDateString();
+  const tmp = uiT('temporarily'), until = uiT('until'), tom = uiT('tomorrow');
+  return today
+    ? { uk: `${tmp.uk} ${until.uk} ${t}`, de: `${tmp.de} bis ${t} Uhr` }
+    : { uk: `${tmp.uk}: ${tom.uk} ${until.uk} ${t}`, de: `${tmp.de} bis morgen, ${t} Uhr` };
 }
-function relOrNever(iso) { return iso ? fmtDateTime(iso) : 'noch nie'; }
+function relOrNever(iso) { return iso ? { uk: fmtDateTime(iso), de: '' } : uiT('never'); }
 const isStandalone = () => { try { return matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; } catch { return false; } };
 
 export function render(params, app) {
@@ -96,11 +110,14 @@ export function render(params, app) {
     return h('div', { class: 's-hero' },
       h('div', { class: 's-hero-logo', 'aria-hidden': 'true' }, h('span', 'М')),
       h('div', { class: 's-hero-main' },
-        h('div', { class: 's-hero-title' }, 'Мова · Ukrainisch A1'),
-        h('div', { class: 's-hero-sub' }, isNaN(target) ? 'Kein Zieldatum' : `Ziel: ${target.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })}`)),
+        h('div', { class: 's-hero-title' }, uiLabel('app_title', { layout: 'inline' })),
+        h('div', { class: 's-hero-sub' }, isNaN(target) ? uiLabel('no_target_date', { layout: 'inline' })
+          : uiLabel({ uk: `${uiT('goal').uk}: ${numDate(target)}`, de: `Ziel: ${target.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })}` }, { layout: 'inline' }))),
       d != null ? h('div', { class: ['s-hero-count', d < 0 && 'is-past'] },
         h('div', { class: 's-hero-num num' }, String(Math.abs(d))),
-        h('div', { class: 's-hero-unit' }, d < 0 ? 'Tage drüber' : (d === 1 ? 'Tag' : 'Tage'))) : null);
+        h('div', { class: 's-hero-unit' }, d < 0
+          ? uiLabel({ uk: `${ukWord(-d, 'day').uk} ${uiT('ago').uk}`, de: uiT('days_ago').de })
+          : uiLabel(ukWord(d, 'day')))) : null);
   });
 
   // ---------- Lernen ----------
@@ -108,13 +125,13 @@ export function render(params, app) {
   dateInput.addEventListener('change', () => { if (dateInput.value) { set('targetDate', dateInput.value); heroRegion.refresh(); } });
   const learn = listGroup({
     header: HDR('learning'),
-    footer: 'Das Tagesziel zählt bewertete Aufgaben. Eine Session hat so viele Aufgaben wie die Session-Länge.',
+    footer: FOOT('Das Tagesziel zählt bewertete Aufgaben. Eine Session hat so viele Aufgaben wie die Session-Länge.'),
     rows: [
-      { title: RT('daily_goal'), subtitle: 'Aufgaben pro Tag', icon: tile('target', 'var(--green)'), accessory: stepper({ key: 'dailyGoal', min: 5, max: 60, step: 5 }) },
-      { title: RT('new_words'), subtitle: 'pro Session', icon: tile('sparkles', 'var(--yellow)'), accessory: stepper({ key: 'newWordsPerSession', min: 2, max: 10 }) },
-      { title: RT('session_length'), subtitle: 'Aufgaben (10–20)', icon: tile('clock', 'var(--blue)'), accessory: stepper({ key: 'sessionSize', min: 10, max: 20 }) },
+      { title: RT('daily_goal'), subtitle: DE('Aufgaben pro Tag'), icon: tile('target', 'var(--green)'), accessory: stepper({ key: 'dailyGoal', min: 5, max: 60, step: 5 }) },
+      { title: RT('new_words'), subtitle: DE('pro Session'), icon: tile('sparkles', 'var(--yellow)'), accessory: stepper({ key: 'newWordsPerSession', min: 2, max: 10 }) },
+      { title: RT('session_length'), subtitle: DE('Aufgaben (10–20)'), icon: tile('clock', 'var(--blue)'), accessory: stepper({ key: 'sessionSize', min: 10, max: 20 }) },
       { title: RT('target_date'), icon: tile('calendar', 'var(--red)'), accessory: dateInput },
-      { title: RT('german_hints'), subtitle: 'Deutsche Übersetzungen unter ukrainischen Texten und Hinweise anzeigen', icon: tile('bulb', 'var(--orange)'), accessory: sw('showGermanHints') },
+      { title: RT('german_hints'), subtitle: DE('Deutsche Übersetzungen unter ukrainischen Texten und Hinweise anzeigen'), icon: tile('bulb', 'var(--orange)'), accessory: sw('showGermanHints') },
     ],
   });
 
@@ -126,7 +143,7 @@ export function render(params, app) {
       const u = m[k + 'Until'];
       if (u && u !== 'forever') {
         tempRows.push({
-          title: RT(label), subtitle: `zeitweise ${untilLabel(u)}`, icon: tile(k === 'listen' ? 'ear' : 'mic', 'var(--label-3)'), cls: 's-temp',
+          title: RT(label), subtitle: SUB(untilLabel(u)), icon: tile(k === 'listen' ? 'ear' : 'mic', 'var(--label-3)'), cls: 's-temp',
           accessory: h('button', { type: 'button', class: 'btn btn-sm btn-secondary', on: { click: () => { setAudioOff(app, { [k]: true, duration: 'on' }); haptic('select'); } } }, holdLabel('turn_on', { de: false })),
         });
       }
@@ -137,13 +154,13 @@ export function render(params, app) {
     });
     return listGroup({
       header: HDR('sound'),
-      footer: 'Aus: Hör- und Sprechaufgaben werden ausgelassen oder durch Textvarianten ersetzt – ohne Nachteil für die Wiederholung.',
+      footer: FOOT('Aus: Hör- und Sprechaufgaben werden ausgelassen oder durch Textvarianten ersetzt – ohne Nachteil für die Wiederholung.'),
       rows: [
-        { title: RT('no_sound_now', true), subtitle: 'Für 1 Stunde oder bis morgen ausschalten', icon: tile('headphones', 'var(--purple)'), accessory: 'chevron',
+        { title: RT('no_sound_now', true), subtitle: DE('Für 1 Stunde oder bis morgen ausschalten'), icon: tile('headphones', 'var(--purple)'), accessory: 'chevron',
           onClick: () => openAudioModeSheet(app).then(() => toneRegion.refresh()) },
         ...tempRows,
-        { title: RT('no_listening'), subtitle: 'dauerhaft', icon: tile('ear', 'var(--pink)'), accessory: permanent('listen') },
-        { title: RT('no_speaking'), subtitle: 'dauerhaft', icon: tile('mic', 'var(--orange)'), accessory: permanent('speak') },
+        { title: RT('no_listening'), subtitle: SUB('forever'), icon: tile('ear', 'var(--pink)'), accessory: permanent('listen') },
+        { title: RT('no_speaking'), subtitle: SUB('forever'), icon: tile('mic', 'var(--orange)'), accessory: permanent('speak') },
       ],
     });
   });
@@ -155,13 +172,13 @@ export function render(params, app) {
   const voiceRegion = region(() => {
     const voices = tts?.supported ? (tts.voices?.() || []) : [];
     const sel = h('select', { class: 's-select', 'aria-label': 'Stimme' },
-      h('option', { value: '' }, 'Automatisch'),
+      h('option', { value: '' }, `${uiT('auto_option').uk} (${uiT('auto_option').de})`),
       voices.map(v => h('option', { value: v.voiceURI }, v.name + (v.localService === false ? ' (online)' : ''))));
     sel.value = voices.some(v => v.voiceURI === S().voiceURI) ? S().voiceURI : '';
     sel.addEventListener('change', () => { set('voiceURI', sel.value || null); try { tts.init?.(S()); } catch {} });
     const noVoice = typeof tts?.needsVoiceHint === 'function' ? tts.needsVoiceHint() : (!tts?.supported || !voices.length);
     const warn = noVoice ? h('div', { class: 's-warn' },
-      h('div', { class: 's-warn-head' }, h('span', { class: 's-warn-icon' }, '!'), h('strong', tts?.supported ? 'Keine ukrainische Stimme installiert' : 'Sprachausgabe nicht verfügbar')),
+      h('div', { class: 's-warn-head' }, h('span', { class: 's-warn-icon' }, '!'), h('strong', uiLabel(tts?.supported ? 'no_uk_voice' : 'no_voice'))),
       tts?.supported ? [
         h('p', 'Ohne ukrainische Stimme bleiben Hörübungen stumm. So lädst du sie auf dem iPhone/iPad:'),
         h('ol', { class: 's-steps' },
@@ -174,18 +191,18 @@ export function render(params, app) {
       testBtn.classList.add('is-playing');
       const r = await tts.speak(TEST_PHRASE, { rate: S().rate });
       testBtn.classList.remove('is-playing');
-      if (r && r.ok === false && r.reason !== 'interrupted') toast(r.reason === 'no-voice' ? 'Keine ukrainische Stimme gefunden' : 'Wiedergabe nicht möglich', { kind: 'bad' });
+      if (r && r.ok === false && r.reason !== 'interrupted') toast(uiT(r.reason === 'no-voice' ? 'no_uk_voice' : 'playback_error'), { kind: 'bad' });
     } } }, icon('play'), holdLabel('test', { de: false }));
     return h('div', { class: 's-stack' }, warn, listGroup({
       header: HDR('voice'),
-      footer: stt?.supported ? 'Spracherkennung (uk-UA) bewertet deine Aussprache in Sprechaufgaben.' : 'Spracherkennung ist auf diesem Gerät nicht verfügbar – Sprechaufgaben nutzen dann die Selbstbewertung.',
+      footer: FOOT(stt?.supported ? 'Spracherkennung (uk-UA) bewertet deine Aussprache in Sprechaufgaben.' : 'Spracherkennung ist auf diesem Gerät nicht verfügbar – Sprechaufgaben nutzen dann die Selbstbewertung.'),
       rows: [
         { title: RT('voice'), icon: tile('speaker', 'var(--blue)'), accessory: h('span', { class: 's-select-wrap' }, sel, icon('chevron-down', { cls: 's-select-chev' })) },
         { title: RT('test_voice'), subtitle: TEST_PHRASE, icon: tile('play', 'var(--green)'), accessory: testBtn, cls: 's-testrow' },
         sliderRow({ key: 'rate', title: 'speech_rate', min: 0.5, max: 1.2, step: 0.05, fmt: v => `${Math.round(v * 100)} %`, ic: tile('speaker', 'var(--purple)') }),
         sliderRow({ key: 'slowRate', title: 'slow_rate', min: 0.3, max: 0.9, step: 0.05, fmt: v => `${Math.round(v * 100)} %`, ic: tile('turtle', 'var(--green)') }),
-        { title: RT('autoplay'), subtitle: 'Audio beim Anzeigen einer Aufgabe abspielen', icon: tile('play', 'var(--orange)'), accessory: sw('autoplay') },
-        { title: RT('speech_recognition'), subtitle: stt?.supported ? null : 'Nicht unterstützt', icon: tile('mic', 'var(--red)'),
+        { title: RT('autoplay'), subtitle: DE('Audio beim Anzeigen einer Aufgabe abspielen'), icon: tile('play', 'var(--orange)'), accessory: sw('autoplay') },
+        { title: RT('speech_recognition'), subtitle: stt?.supported ? null : SUB('unavailable'), icon: tile('mic', 'var(--red)'),
           accessory: stt?.supported ? sw('stt') : switchEl({ checked: false, label: 'stt' }), cls: !stt?.supported && 's-disabled' },
       ],
     }));
@@ -209,7 +226,7 @@ export function render(params, app) {
           value: S().theme || 'auto',
           onChange: v => { set('theme', v); applyTheme(v); haptic('select'); },
         })),
-      { title: RT('vibration'), subtitle: 'Vibration bei Antworten (wo unterstützt)', icon: tile('sparkles', 'var(--pink)'), accessory: sw('haptics') },
+      { title: RT('vibration'), subtitle: DE('Vibration bei Antworten (wo unterstützt)'), icon: tile('sparkles', 'var(--pink)'), accessory: sw('haptics') },
     ],
   });
 
@@ -221,9 +238,9 @@ export function render(params, app) {
     return listGroup({
       header: HDR('collection'),
       rows: [
-        { title: RT('reports', true), subtitle: n ? (open ? `${open} nicht synchronisiert` : 'alle synchronisiert') : 'Fehler in Aufgaben melden (Flagge)', icon: tile('flag', 'var(--red)'),
+        { title: RT('reports', true), subtitle: n ? SUB(open ? { uk: `${uiT('not_synced_n').uk}: ${open}`, de: `${open} ${uiT('not_synced_n').de}` } : 'all_synced') : DE('Fehler in Aufgaben melden (Flagge)'), icon: tile('flag', 'var(--red)'),
           detail: String(n), accessory: 'chevron', href: '#/reports' },
-        { title: RT('my_sentences', true), subtitle: 'Unter „Слова́“ (Vokabeln) üben', icon: tile('book', 'var(--green)'),
+        { title: RT('my_sentences', true), subtitle: DE('Unter „Vokabeln“ üben'), icon: tile('book', 'var(--green)'),
           detail: String(mined), accessory: 'chevron', href: '#/trainer' },
       ],
     });
@@ -240,7 +257,7 @@ export function render(params, app) {
       const v = token.value.trim();
       if (v === (S().gistToken || '')) return;
       set('gistToken', v);
-      toast(v ? 'Token gespeichert (nur auf diesem Gerät)' : 'Token entfernt');
+      toast(uiT(v ? 'token_saved' : 'token_removed'));
       syncRegion.refresh();
     });
     const action = (id, title, ic, fn, sub) => ({
@@ -251,49 +268,55 @@ export function render(params, app) {
     });
     const gistRow = s.gistId
       ? { title: 'Gist', icon: tile('github', '#24292F'), detail: h('a', { class: 's-gist-link', href: gistUrl(s.gistId), target: '_blank', rel: 'noopener' }, s.gistId.slice(0, 8) + '…', icon('share')) }
-      : { title: 'Gist', icon: tile('github', '#24292F'), detail: 'wird beim ersten Sync angelegt' };
+      : { title: 'Gist', icon: tile('github', '#24292F'), detail: uiLabel('gist_later', { cls: 'row-detail' }) };
     return listGroup({
       header: h('span', { id: 's-sync' }, HDR('sync')),
       footer: h('div', { class: 's-footnote' },
-        h('div', `Letzter Sync: ${relOrNever(store.state.meta.lastSyncAt)} · Letzte Sicherung: ${relOrNever(store.state.meta.lastBackupAt)}`),
+        [['last_sync', store.state.meta.lastSyncAt], ['last_backup', store.state.meta.lastBackupAt]].map(([k, iso]) => {
+          const v = relOrNever(iso), l = uiT(k);
+          return h('div', uiLabel({ uk: `${l.uk}: ${v.uk}`, de: `${l.de}: ${v.de || v.uk}` }, { layout: 'inline' }));
+        }),
         h('div', { class: 's-caution' }, icon('info'),
-          h('span', 'Nutzung eigenverantwortlich – der Token wird nur lokal auf diesem Gerät gespeichert und ausschließlich an api.github.com gesendet. Er landet nie im Backup. Verwende einen Token nur mit dem Scope „gist“ und widerrufe ihn bei Verlust des Geräts. ',
-            h('a', { href: TOKEN_URL, target: '_blank', rel: 'noopener' }, 'Token erstellen')))),
+          h('span', h('strong', uiLabel('attention', { layout: 'inline' })), ' ',
+            h('span', { lang: 'de' }, 'Nutzung eigenverantwortlich – der Token wird nur lokal auf diesem Gerät gespeichert und ausschließlich an api.github.com gesendet. Er landet nie im Backup. Verwende einen Token nur mit dem Scope „gist“ und widerrufe ihn bei Verlust des Geräts. '),
+            h('a', { href: TOKEN_URL, target: '_blank', rel: 'noopener' }, holdLabel('create_token', { layout: 'inline' }))))),
       rows: [
         h('div', { class: 'list-row has-icon s-token-row' },
           h('span', { class: 'row-icon', style: { background: 'var(--label)' } }, icon('lock')),
-          h('span', { class: 'row-title s-token-label' }, 'Token'), token, eye),
+          uiLabel('token', { cls: 'row-title s-token-label', de: false }), token, eye),
         gistRow,
-        { title: 'Meldungen automatisch syncen', subtitle: 'nach jeder neuen Meldung', icon: tile('flag', 'var(--orange)'), accessory: sw('gistAutoSync') },
-        { title: 'Fortschritt automatisch sichern', subtitle: 'nach jeder Session', icon: tile('cloud', 'var(--blue)'), accessory: sw('gistBackup') },
+        { title: RT('auto_sync_reports'), subtitle: DE('nach jeder neuen Meldung'), icon: tile('flag', 'var(--orange)'), accessory: sw('gistAutoSync') },
+        { title: RT('auto_save_progress'), subtitle: DE('nach jeder Session'), icon: tile('cloud', 'var(--blue)'), accessory: sw('gistBackup') },
         action('sync', 'sync_now', tile('refresh', 'var(--green)'), async () => {
           const r = await syncReports(app);
-          toast(r.created ? 'Privater Gist angelegt – Meldungen synchronisiert' : `${r.count} ${r.count === 1 ? 'Meldung' : 'Meldungen'} synchronisiert`, { kind: 'ok' });
+          toast(syncedToast(r), { kind: 'ok' });
         }),
         action('backup', 'save_progress', tile('cloud', 'var(--blue)'), async () => {
           await backupProgress(app);
-          toast('Fortschritt im Gist gesichert', { kind: 'ok' });
+          toast(uiT('progress_saved'), { kind: 'ok' });
         }),
         action('restore', 'restore_progress', tile('download', 'var(--purple)'), async () => {
           const r = await restoreProgress(app, {
-            confirm: f => confirmDialog({ title: 'Fortschritt wiederherstellen?', message: `Backup: ${f.summary}. Der aktuelle Fortschritt auf diesem Gerät wird ersetzt. Token und Gist bleiben.`, ok: 'Wiederherstellen', destructive: true }),
+            confirm: f => confirmDialog({ title: uiT('restore_q'), message: `Backup: ${f.summary}. Der aktuelle Fortschritt auf diesem Gerät wird ersetzt. Token und Gist bleiben.`, ok: uiT('restore'), destructive: true }),
           });
-          if (r.restored) { applyTheme(S().theme); toast('Fortschritt wiederhergestellt', { kind: 'ok' }); rebuild(); }
+          if (r.restored) { applyTheme(S().theme); toast(uiT('progress_restored'), { kind: 'ok' }); rebuild(); }
         }),
-        hasToken ? { title: 'Token prüfen', icon: tile('check', 'var(--label-2)'), cls: 's-action s-action-quiet', accessory: syncBusy === 'test' ? h('span', { class: 's-spinner' }) : null,
+        hasToken ? { title: uiLabel('check_token', { cls: 'row-title', hold: true }), icon: tile('check', 'var(--label-2)'), cls: 's-action s-action-quiet', accessory: syncBusy === 'test' ? h('span', { class: 's-spinner' }) : null,
           onClick: () => run('test', async () => {
             const r = await testToken(app);
-            toast(r.hasGistScope === false ? `Angemeldet als ${r.login} – aber Scope „gist“ fehlt!` : `Token gültig – ${r.login}`, { kind: r.hasGistScope === false ? 'bad' : 'ok', ms: 3200 });
+            toast(r.hasGistScope === false
+              ? { uk: `${uiT('attention').uk}: ${r.login} – «gist»`, de: `Angemeldet als ${r.login} – aber Scope „gist“ fehlt!` }
+              : { uk: `${uiT('token_ok').uk} – ${r.login}`, de: `${uiT('token_ok').de} – ${r.login}` }, { kind: r.hasGistScope === false ? 'bad' : 'ok', ms: 3200 });
           }) } : null,
       ],
     });
   });
   async function run(id, fn) {
     if (syncBusy) return;
-    if (!String(S().gistToken || '').trim()) { toast('Bitte zuerst einen GitHub-Token eintragen', { kind: 'bad' }); return; }
+    if (!String(S().gistToken || '').trim()) { toast({ uk: uiT('no_token').uk, de: 'Bitte zuerst einen GitHub-Token eintragen' }, { kind: 'bad' }); return; }
     syncBusy = id; syncRegion.refresh();
     try { await fn(); haptic('success'); }
-    catch (e) { haptic('error'); toast(errorMessage(e), { kind: 'bad', ms: 4200 }); }
+    catch (e) { haptic('error'); toast({ uk: uiT('error').uk, de: errorMessage(e) }, { kind: 'bad', ms: 4200 }); }
     finally { syncBusy = ''; syncRegion.refresh(); collectRegion.refresh(); }
   }
 
@@ -307,32 +330,32 @@ export function render(params, app) {
       const raw = await readFileText(f);
       const state = parseBackup(raw);
       let exportedAt = null; try { exportedAt = JSON.parse(raw).exportedAt; } catch {}
-      const ok = await confirmDialog({ title: 'Backup importieren?', message: `${backupSummary(state, exportedAt)}. Der aktuelle Fortschritt wird ersetzt. Token und Gist bleiben.`, ok: 'Importieren', destructive: true });
+      const ok = await confirmDialog({ title: uiT('import_q'), message: `${backupSummary(state, exportedAt)}. Der aktuelle Fortschritt wird ersetzt. Token und Gist bleiben.`, ok: uiT('import'), destructive: true });
       if (!ok) return;
       applyBackup(store, state);
       applyTheme(S().theme);
-      toast('Backup importiert', { kind: 'ok' });
+      toast(uiT('file_loaded'), { kind: 'ok' });
       rebuild();
-    } catch (e) { toast(errorMessage(e), { kind: 'bad', ms: 4000 }); }
+    } catch (e) { toast({ uk: uiT('error').uk, de: errorMessage(e) }, { kind: 'bad', ms: 4000 }); }
   });
   const data = listGroup({
     header: HDR('data'),
-    footer: 'Das Backup enthält Fortschritt, Wiederholungen, Meldungen, gesammelte Sätze und Einstellungen – aber keinen Token.',
+    footer: FOOT('Das Backup enthält Fortschritt, Wiederholungen, Meldungen, gesammelte Sätze und Einstellungen – aber keinen Token.'),
     rows: [
-      { title: RT('export_file', true), subtitle: 'JSON-Datei teilen oder sichern', icon: tile('share', 'var(--blue)'), accessory: 'chevron',
+      { title: RT('export_file', true), subtitle: DE('JSON-Datei teilen oder sichern'), icon: tile('share', 'var(--blue)'), accessory: 'chevron',
         onClick: async () => {
           const r = await shareOrDownload(backupFilename(), backupJSON(store, { appVersion: app.version }), 'application/json');
-          if (r === 'downloaded') toast('Backup heruntergeladen', { kind: 'ok' });
+          if (r === 'downloaded') toast({ uk: uiT('file_saved').uk, de: 'Backup heruntergeladen' }, { kind: 'ok' });
         } },
-      { title: RT('import_file', true), subtitle: 'aus einer JSON-Datei', icon: tile('download', 'var(--green)'), accessory: 'chevron', onClick: () => fileInput.click() },
+      { title: RT('import_file', true), subtitle: DE('aus einer JSON-Datei'), icon: tile('download', 'var(--green)'), accessory: 'chevron', onClick: () => fileInput.click() },
       { title: uiLabel('reset', { cls: 'row-title s-danger', hold: true }), icon: tile('trash', 'var(--red)'), cls: 's-action',
         onClick: async () => {
-          const ok = await confirmDialog({ title: 'Wirklich alles zurücksetzen?', message: 'Fortschritt, Wiederholungen, Serie, Meldungen und Einstellungen werden gelöscht. Token und Gist bleiben. Das kann nicht rückgängig gemacht werden.', ok: 'Zurücksetzen', destructive: true });
+          const ok = await confirmDialog({ title: uiT('reset_q'), message: 'Fortschritt, Wiederholungen, Serie, Meldungen und Einstellungen werden gelöscht. Token und Gist bleiben. Das kann nicht rückgängig gemacht werden.', ok: uiT('reset_ok'), destructive: true });
           if (!ok) return;
           store.reset();
           applyTheme(S().theme);
           haptic('medium');
-          toast('Fortschritt zurückgesetzt');
+          toast({ uk: uiT('all_deleted').uk, de: 'Fortschritt zurückgesetzt' });
           rebuild();
         } },
     ],
@@ -345,8 +368,8 @@ export function render(params, app) {
     isStandalone() ? null : h('div', { class: 's-install' },
       h('div', { class: 's-install-icon' }, icon('share')),
       h('div', { class: 's-install-main' },
-        h('strong', 'Zum Home-Bildschirm hinzufügen'),
-        h('p', 'In Safari unten auf ', h('b', 'Teilen'), ' tippen und ', h('b', '„Zum Home-Bildschirm“'), ' wählen. Dann läuft Мова wie eine App – im Vollbild, offline, und deine Daten bleiben dauerhaft gespeichert.'))),
+        h('strong', uiLabel('install_app')),
+        h('p', 'In Safari unten auf ', h('b', 'Teilen'), ' tippen und ', h('b', '„Zum Home-Bildschirm“'), ' wählen. Dann läuft Мо́ва wie eine App – im Vollbild, offline, und deine Daten bleiben dauerhaft gespeichert.'))),
     listGroup({
       header: HDR('info'),
       rows: [
@@ -355,7 +378,7 @@ export function render(params, app) {
         { title: RT('lessons'), icon: tile('course', 'var(--green)'), detail: String(lessonsReady) },
         { title: RT('dictionary'), icon: tile('words', 'var(--purple)'), detail: String(app.lexicon?.size ?? 0) },
         { title: RT('storage'), icon: tile('lock', store.persisted ? 'var(--green)' : 'var(--orange)'), detail: uiLabel(store.persisted ? 'yes' : 'no', { layout: 'inline', cls: 'row-detail' }),
-          subtitle: store.persisted ? null : 'Als Home-Bildschirm-App wird der Speicher nicht automatisch geleert.' },
+          subtitle: store.persisted ? null : DE('Als Home-Bildschirm-App wird der Speicher nicht automatisch geleert.') },
       ],
     }));
 

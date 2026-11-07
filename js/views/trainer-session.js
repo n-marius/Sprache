@@ -8,13 +8,22 @@ import { autoplayAllowed } from '../audio-mode.js';
 import { createTrainerRound, cardFaces, RATING_LABELS, isMarked, toggleMarked } from '../engine/trainer.js';
 import { shuffle } from '../engine/util.js';
 import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
+import { uiF, countUk, pluralUk } from '../ui-text-g2.js';
 
 const RATE_KEY = { 1: 'rate_again', 2: 'rate_hard', 3: 'rate_good', 4: 'rate_easy' };
 const rateUk = G => uiT(RATE_KEY[G]).uk;
 const badgeUk = (key, cls) => h('span', { class: ['badge', cls], title: uiT(key).de }, ukText(uiT(key).uk));
 
 const RATE_CLS = { 1: 'tr-rate-again', 2: 'tr-rate-hard', 3: 'tr-rate-good', 4: 'tr-rate-easy' };
-const DIR_LABEL = { 'de-uk': 'Deutsch → Ukrainisch', 'uk-de': 'Ukrainisch → Deutsch', mixed: 'Gemischt' };
+const DIR_LABEL = { 'de-uk': uiF('dir_de_uk'), 'uk-de': uiF('dir_uk_de'), mixed: uiT('both') };
+
+/** Intervall ukrainisch: „сього́дні“, „3 дні“, „2 мі́сяці“, „1 рік“. */
+function intervalUk(days) {
+  if (days <= 0) return uiF('today_again').uk;
+  if (days < 30) return countUk(days, 'day');
+  if (days < 365) return countUk(Math.max(1, Math.round(days / 30.4)), 'month');
+  return countUk(Math.max(1, Math.round(days / 365)), 'year');
+}
 
 function gapNode(gap, reveal = false) {
   return h('span', { class: 'uk tr-gap-sentence' }, gap.before,
@@ -137,7 +146,7 @@ export function render(params, app) {
           type: 'button', class: ['btn', 'tr-rate', RATE_CLS[G]], on: { click: () => rateNow(G) },
           'aria-label': `${RATING_LABELS[G]}, nächstes Mal in ${pv[G].label}`,
           title: RATING_LABELS[G],
-        }, h('span', { class: 'tr-rate-label' }, ukText(rateUk(G), { hold: true })), h('span', { class: 'tr-rate-iv' }, pv[G].label))))));
+        }, h('span', { class: 'tr-rate-label' }, holdLabel(RATE_KEY[G])), h('span', { class: 'tr-rate-iv', title: pv[G].label }, ukText(intervalUk(G === 1 ? 0 : pv[G].days), { hold: true })))))));
     }
     card._reveal = reveal;
   }
@@ -160,7 +169,7 @@ export function render(params, app) {
     const options = shuffle(c.options, Math.random);
     const listen = round.mode === 'listen';
     const prompt = listen
-      ? h('div', { class: 'tr-face-main tr-listen' }, speakerButton(c.audio, { size: 'l', autoplay: autoplayAllowed(app) }), speakerButton(c.audio, { size: 's', slow: true }), h('div', { class: 'tr-tap-hint' }, 'Was bedeutet das?'))
+      ? h('div', { class: 'tr-face-main tr-listen' }, speakerButton(c.audio, { size: 'l', autoplay: autoplayAllowed(app) }), speakerButton(c.audio, { size: 's', slow: true }), h('div', { class: 'tr-tap-hint' }, uiLabel(uiF('what_means'))))
       : h('div', { class: 'tr-face-main' },
         c.emoji ? h('div', { class: 'tr-emoji', 'aria-hidden': 'true' }, c.emoji) : null,
         h('div', { class: ['tr-word', c.promptLang === 'de' && 'tr-de', item.entry.kind === 'sentence' && 'is-sentence'] },
@@ -211,8 +220,8 @@ export function render(params, app) {
       stage.append(h('div', { class: 'tr-card tr-summary tr-empty' },
         h('div', { class: 'tr-sum-emoji', 'aria-hidden': 'true' }, '🎉'),
         h('h2', { class: 'tr-sum-title' }, uiLabel(total0 ? 'round_done' : 'nothing_to_practice', { cls: 'tr-sum-l' })),
-        h('p', { class: 'tr-sum-sub' }, total0 ? 'Keine Karte bewertet.' : 'Für diese Auswahl gibt es gerade keine Karten. Wähle einen anderen Umfang.')));
-      foot.append(h('div', { class: 'tr-foot-inner' }, h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, holdLabel({ uk: uiT('back').uk, de: 'Zurück zu den Vokabeln' }))));
+        h('p', { class: 'tr-sum-sub' }, uiLabel(uiF(total0 ? 'no_ratings' : 'no_cards_here')))));
+      foot.append(h('div', { class: 'tr-foot-inner' }, h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, holdLabel(uiF('back_to_vocab')))));
       return;
     }
     const segs = [1, 2, 3, 4].filter(G => s.counts[G]).map(G => h('span', { class: ['tr-dist-seg', RATE_CLS[G]], style: `flex:${s.counts[G]}`, title: `${RATING_LABELS[G]}: ${s.counts[G]}` }));
@@ -222,15 +231,15 @@ export function render(params, app) {
     stage.append(h('div', { class: 'tr-card tr-summary' },
       h('div', { class: 'tr-sum-emoji', 'aria-hidden': 'true' }, s.accuracy >= 0.8 ? '🌟' : '💪'),
       h('h2', { class: 'tr-sum-title' }, uiLabel(app.t('well_done'), { cls: 'tr-sum-l' })),
-      h('p', { class: 'tr-sum-sub' }, num, ` ${s.total === 1 ? 'Karte' : 'Karten'} geübt · ${DIR_LABEL[s.dir] || ''}`),
+      h('p', { class: 'tr-sum-sub' }, num, ' ', uiLabel({ uk: `${pluralUk(s.total, 'card')} · ${DIR_LABEL[s.dir]?.uk || ''}`, de: `${s.total === 1 ? 'Karte' : 'Karten'} geübt · ${DIR_LABEL[s.dir]?.de || ''}` }, { layout: 'inline' })),
       h('div', { class: 'tr-dist' }, segs),
       h('div', { class: 'tr-legend' }, legend),
-      s.newCards ? h('p', { class: 'tr-sum-note' }, `${s.newCards} ${s.newCards === 1 ? 'neue Karte' : 'neue Karten'} unter Vokabeln`) : null,
-      h('p', { class: 'tr-sum-note' }, `Tagesziel: ${Math.min(s.dayGoal.done, s.dayGoal.goal)} / ${s.dayGoal.goal}${s.dayGoal.met ? ' ✓' : ''}`)));
+      s.newCards ? h('p', { class: 'tr-sum-note' }, uiLabel(uiF('new_cards_n', { n: s.newCards }), { layout: 'inline' })) : null,
+      h('p', { class: 'tr-sum-note' }, uiLabel(uiT('daily_goal'), { layout: 'inline' }), `: ${Math.min(s.dayGoal.done, s.dayGoal.goal)} / ${s.dayGoal.goal}${s.dayGoal.met ? ' ✓' : ''}`)));
     anim.countUp(num, s.total);
     foot.append(h('div', { class: 'tr-foot-inner tr-sum-actions' },
       h('button', { type: 'button', class: 'btn btn-primary btn-lg btn-block btn-caps', on: { click: () => restart() } }, holdLabel('again')),
-      h('button', { type: 'button', class: 'btn btn-secondary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, holdLabel({ uk: uiT('back').uk, de: 'Zurück zu den Vokabeln' }))));
+      h('button', { type: 'button', class: 'btn btn-secondary btn-lg btn-block btn-caps', on: { click: () => app.navigate('#/trainer') } }, holdLabel(uiF('back_to_vocab')))));
   }
 
   function restart() {

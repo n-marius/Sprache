@@ -18,6 +18,9 @@ const PRECOMPOSED = /[À-ɏ]/;
 const keys = new Set();
 const addKey = uk => { if (uk) keys.add(normalizeWord(uk)); };
 for (const g of read('glossary-common.json')) addKey(g.uk);
+// Zusätzliche Glossar-Dateien (z. B. Entwürfe von Subagenten): --extra=a.json,b.json (absolute Pfade)
+const extra = process.argv.find(a => a.startsWith('--extra='))?.slice(8).split(',').filter(Boolean) || [];
+for (const f of extra) for (const g of JSON.parse(fs.readFileSync(f, 'utf8'))) addKey(g.uk);
 const cur = read('curriculum.json');
 let lessons = 0;
 for (const p of cur.phases || []) for (const l of p.lessons || []) {

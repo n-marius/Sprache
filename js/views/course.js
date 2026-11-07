@@ -1,9 +1,10 @@
 // „Kurs“: Lernpfad nach Phasen (A1.1–A1.3), Knoten in geschwungener Linie, Meisterschaftsring, geplante Lektionen sichtbar.
 import { page } from '../ui/shell.js';
-import { h, icon, ukText, formatDateDE } from '../ui/dom.js';
+import { h, icon, ukText } from '../ui/dom.js';
 import { anim } from '../ui/anim.js';
 import { sty } from './today.js';
-import { uiT } from '../ui/ui-label.js';
+import { uiT, uiLabel } from '../ui/ui-label.js';
+import { uiN, dateUk } from '../ui-text-g1.js';
 import { lessonMastery, isUnlocked, nextLesson, dueCount, pacing } from '../engine/progress.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -25,9 +26,11 @@ export function lessonStatus(app, meta, currentId) {
   return isUnlocked(app, meta.id) ? 'open' : 'locked';
 }
 
+/** „21 жо́втня – 31 гру́дня 2026“ (+ deutsch) */
 function fmtRange(p) {
-  const f = d => d ? formatDateDE(d + 'T12:00:00').slice(0, 6) : '';
-  return p.start && p.end ? `${f(p.start)} – ${formatDateDE(p.end + 'T12:00:00')}` : '';
+  if (!p.start || !p.end) return null;
+  const a = dateUk(p.start, { weekday: false }), b = dateUk(p.end, { weekday: false, year: true });
+  return { uk: `${a.uk} – ${b.uk}`, de: `${a.de} – ${b.de}` };
 }
 
 function nodeRing(fraction, color) {
@@ -73,7 +76,7 @@ function lessonNode(app, meta, i, status, phaseColor) {
   return h('a', {
     class: ['v-node', `is-${status}`], href: `#/lesson/${encodeURIComponent(meta.id)}`,
     style: sty({ '--x': `${x}px`, '--theme-c': color, top: `${i * ROW}px` }),
-    'aria-label': `Lektion ${meta.index + 1}: ${meta.title_de}${status === 'planned' ? (prep ? ' (in Vorbereitung)' : ' (geplant)') : ''}`,
+    'aria-label': `${uiN('lesson_num', { a: meta.index + 1 }).uk}: ${meta.title_uk}${status === 'planned' ? ` (${uiT(prep ? 'soon' : 'planned').uk})` : ''}`,
     dataset: { id: meta.id },
   },
     bubble,
@@ -83,7 +86,7 @@ function lessonNode(app, meta, i, status, phaseColor) {
       badge),
     h('span', { class: 'v-node-label' },
       ukText(meta.title_uk, { hold: true, cls: 'v-node-uk' }),
-      h('span', { class: 'v-node-de' }, `${meta.index + 1} · ${meta.title_de}`)));
+      h('span', { class: 'v-node-de' }, h('span', { class: 'num' }, `${meta.index + 1}`), h('span', { class: 'ui-de', lang: 'de' }, ` · ${meta.title_de}`))));
 }
 
 function phaseInfo(app, p, idx, color) {
@@ -94,15 +97,27 @@ function phaseInfo(app, p, idx, color) {
   return h('div', { class: 'v-phase-info', style: sty({ '--phase-c': color }) },
     h('div', { class: 'v-phase-top' },
       h('span', { class: 'v-phase-id' }, p.id),
-      h('span', { class: 'v-phase-dates' }, icon('calendar'), fmtRange(p))),
+      h('span', { class: 'v-phase-dates' }, icon('calendar'), fmtRange(p) ? uiLabel(fmtRange(p), { layout: 'inline' }) : null)),
     ukText(p.title_uk, { cls: 'v-phase-uk', tag: 'h2' }),
-    h('div', { class: 'v-phase-de' }, p.title_de),
-    p.summary_de ? h('p', { class: 'v-phase-sum' }, p.summary_de) : null,
+    h('div', { class: 'v-phase-de ui-de', lang: 'de' }, p.title_de),
+    p.summary_de ? h('p', { class: 'v-phase-sum ui-de', lang: 'de' }, p.summary_de) : null,
     h('div', { class: 'v-phase-progress' },
       h('div', { class: 'progress is-thin' }, h('div', { class: 'progress-fill', style: sty({ '--p': `${Math.round(frac * 100)}%`, background: '#fff' }) })),
       h('div', { class: 'v-phase-stats' },
-        h('span', h('strong', { class: 'num' }, String(done)), ` / ${p.lessons.length} Lektionen`),
-        ready.length < p.lessons.length ? h('span', p.lessons.some(l => !app.content.getLesson(l.id) && (l.status === 'error' || l.status === 'ready')) ? `${p.lessons.length - ready.length} in Vorbereitung` : `${p.lessons.length - ready.length} geplant`) : h('span', `${Math.round(mast * 100)} % Meisterschaft`))));
+        h('span', h('strong', { class: 'num' }, String(done)), ' ', uiLabel(uiN('lessons_of', { b: p.lessons.length }), { layout: 'inline' })),
+        h('span', uiLabel(ready.length < p.lessons.length
+          ? uiN(p.lessons.some(l => !app.content.getLesson(l.id) && (l.status === 'error' || l.status === 'ready')) ? 'phase_soon_n' : 'phase_planned_n', { a: p.lessons.length - ready.length })
+          : uiN('mastery_pct', { a: Math.round(mast * 100) }), { layout: 'inline' })))));
+}
+
+function courseSubtitle(pace) {
+  const d = pace.targetDate ? dateUk(pace.targetDate, { weekday: false, year: true }) : { uk: '–', de: '–' };
+  const t = uiN('course_sub', { a: pace.lessonsDone, b: pace.lessonsTotal });
+  const st = uiT(pace.status === 'ahead' || pace.status === 'behind' ? pace.status : 'on_track');
+  return h('div', { class: 'page-subtitle' }, uiLabel({
+    uk: `${t.uk.replace('{date}', d.uk)} · ${st.uk}`,
+    de: `${t.de.replace('{date}', d.de)} · ${pace.status === 'on_track' ? 'im Plan' : pace.label || st.de}`,
+  }, { layout: 'inline' }));
 }
 
 export function render(params, app) {
@@ -123,7 +138,7 @@ export function render(params, app) {
   });
   const el = page({
     title: uiT('tab_course'),
-    subtitle: `A1 bis ${pace.targetDate ? formatDateDE(pace.targetDate + 'T12:00:00') : '–'} · ${pace.lessonsDone} von ${pace.lessonsTotal} Lektionen · ${pace.status === 'on_track' ? 'im Plan' : pace.label}`,
+    subtitle: courseSubtitle(pace),
     cls: 'v-course',
     children: sections,
   });

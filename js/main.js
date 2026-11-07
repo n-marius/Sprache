@@ -12,6 +12,7 @@ import { banner, toast } from './ui/shell.js';
 import { tts } from './services/tts.js';
 import { stt } from './services/stt.js';
 import { initPopover } from './ui/popover.js';
+import { initAutoTap } from './ui/auto-tap.js';
 import { applyHints } from './ui/ui-label.js';
 
 const query = new URLSearchParams(location.search);
@@ -85,6 +86,7 @@ async function boot() {
 
   try { tts.init?.(store.state.settings); } catch (e) { console.warn(e); }
   try { initPopover(app); } catch (e) { console.warn(e); }
+  try { initAutoTap(document.body); } catch (e) { console.warn(e); }
 
   app.router = new Router(app);
   await app.router.resolve();
