@@ -93,7 +93,7 @@ export function render(params, app) {
       h('section', { class: 'tr-section' }, h('div', { class: 'section-header' }, uiLabel('mode', { layout: 'inline' })), modeSeg,
         listenOff ? h('button', { type: 'button', class: 'tr-muted-note', on: { click: () => openAudioModeSheet(app) } }, icon('speaker'), holdLabel(uiF('listen_is_off'))) : null),
       h('div', { class: 'tr-start-wrap' }, startBtn, hint),
-      listGroup({ rows: [{ title: holdLabel('word_list', { cls: 'row-title' }), subtitle: holdLabel(uiF('word_list_sub')), icon: { name: 'search', color: 'var(--blue)' }, href: '#/words', accessory: 'chevron' }] }),
+      listGroup({ rows: [{ title: holdLabel('word_list', { cls: 'row-title' }), subtitle: subLabel(uiF('word_list_sub')), icon: { name: 'search', color: 'var(--blue)' }, href: '#/words', accessory: 'chevron' }] }),
     );
   }
 

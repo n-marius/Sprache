@@ -72,7 +72,7 @@ export function render(params, app) {
       const ok = await confirmDialog({
         title: uiLabel('lesson_locked'),
         message: uiLabel('lesson_locked_msg'),
-        ok: holdLabel('start_anyway'), cancel: holdLabel('cancel'),
+        ok: holdLabel('start_anyway'), cancel: holdLabel('lesson_cancel'),
       });
       if (!ok) return;
     }

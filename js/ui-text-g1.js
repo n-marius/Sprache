@@ -68,7 +68,7 @@ export const UI_G1 = {
   lesson_locked: { uk: 'Уро́к ще закри́тий', de: 'Noch nicht freigeschaltet' },
   lesson_locked_msg: { uk: 'Спе́ршу закінчи́ попере́дній уро́к. Усе́ одно́ поча́ти?', de: 'Empfohlen ist, zuerst die vorherige Lektion einmal abzuschließen. Trotzdem starten?' },
   start_anyway: { uk: 'Усе́ одно́ поча́ти', de: 'Trotzdem starten' },
-  cancel: { uk: 'Скасува́ти', de: 'Abbrechen' },
+  lesson_cancel: { uk: 'Скасува́ти', de: 'Abbrechen' },
   words_learned_of: { uk: 'Ви́вчено {a} з {b} {words@b:gen}', de: '{a} von {b} Wörtern eingeführt' },
   sessions_n: { uk: '{a} {sessions@a}', de: '{a} {Session|Sessions@a}' },
   level_n: { uk: 'Рі́вень {a}', de: 'Stufe {a}' },

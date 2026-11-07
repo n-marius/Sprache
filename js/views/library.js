@@ -1,6 +1,6 @@
 // Wissen (#/library): Einzelthemen nach Kategorie (Standard) oder Gesamterklärungen je Lektion.
 // Freigeschaltet ist, was zu erreichten Lektionen gehört; Gesperrtes bleibt sichtbar.
-import { h, ukText, deText, icon } from '../ui/dom.js';
+import { h, ukText, icon } from '../ui/dom.js';
 import { page, listGroup, segmented } from '../ui/shell.js';
 import { anim } from '../ui/anim.js';
 import { listMined } from '../services/mining.js';
@@ -34,7 +34,7 @@ export function render(params, app) {
         header: h('span', { class: 'lib-cat' }, `${cat.emoji} `, uiLabel({ uk: cat.uk, de: cat.label }, { layout: 'inline' })),
         rows: list.map(c => ({
           icon: { emoji: anim.themeGlyph(c.meta.theme), color: c.open ? anim.themeColor(c.meta.theme) : 'var(--surface-3)' },
-          title: deText(c.title_de, { cls: 'row-title' }),
+          title: h('span', { class: 'row-title lang-de', lang: 'de' }, c.title_de),
           subtitle: h('span', { class: 'row-subtitle lib-sub' }, ukText(`${uiF('lesson_n', { n: c.meta.index + 1 }).uk} · ${c.meta.title_uk}`, { hold: true })),
           detail: statusBadge(c.open, false, !!st.lessons[c.lessonId]?.explainedAt),
           accessory: c.open ? 'chevron' : null,
@@ -57,7 +57,7 @@ export function render(params, app) {
         if (term && !hay.includes(term)) continue;
         rows.push({
           icon: { emoji: anim.themeGlyph(meta.theme), color: open ? anim.themeColor(meta.theme) : 'var(--surface-3)' },
-          title: deText(lesson.explanation?.title_de || meta.title_de, { cls: 'row-title' }),
+          title: h('span', { class: 'row-title lang-de', lang: 'de' }, lesson.explanation?.title_de || meta.title_de),
           subtitle: h('span', { class: 'row-subtitle lib-sub' }, ukText(`${uiF('lesson_n', { n: meta.index + 1 }).uk} · ${meta.title_uk}`, { hold: true })),
           detail: statusBadge(open, false, !!st.lessons[meta.id]?.explainedAt),
           accessory: open ? 'chevron' : null,
