@@ -3,6 +3,7 @@ import { page } from '../ui/shell.js';
 import { h, icon, ukText, formatDateDE } from '../ui/dom.js';
 import { anim } from '../ui/anim.js';
 import { sty } from './today.js';
+import { uiT } from '../ui/ui-label.js';
 import { lessonMastery, isUnlocked, nextLesson, dueCount, pacing } from '../engine/progress.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -63,9 +64,10 @@ function lessonNode(app, meta, i, status, phaseColor) {
   const x = WAVE[i % WAVE.length] * AMP;
   const st = app.store.state.lessons?.[meta.id];
   const bubble = status === 'current'
-    ? h('span', { class: 'v-node-bubble' }, st?.sessions ? 'Weiter' : 'Start') : null;
+    ? h('span', { class: 'v-node-bubble', title: uiT(st?.sessions ? 'node_continue' : 'node_start').de },
+      ukText(uiT(st?.sessions ? 'node_continue' : 'node_start').uk, { hold: true })) : null;
   const prep = meta.status === 'error' || meta.status === 'ready' || (meta.status === 'planned' && !!meta.file);
-  const badge = status === 'planned' ? h('span', { class: 'badge v-node-badge' }, prep ? 'in Vorbereitung' : 'geplant')
+  const badge = status === 'planned' ? h('span', { class: 'badge v-node-badge', title: uiT(prep ? 'soon' : 'planned').de }, ukText(uiT(prep ? 'soon' : 'planned').uk, { hold: true }))
     : status === 'locked' ? h('span', { class: 'v-node-lock' }, icon('lock'))
       : m.level >= 4 ? h('span', { class: 'v-node-crown' }, icon('star', { fill: true })) : null;
   return h('a', {
@@ -80,7 +82,7 @@ function lessonNode(app, meta, i, status, phaseColor) {
       h('span', { class: 'v-node-disc' }, h('span', { class: 'v-node-glyph emoji' }, anim.themeGlyph(meta.theme))),
       badge),
     h('span', { class: 'v-node-label' },
-      ukText(meta.title_uk, { tap: false, cls: 'v-node-uk' }),
+      ukText(meta.title_uk, { hold: true, cls: 'v-node-uk' }),
       h('span', { class: 'v-node-de' }, `${meta.index + 1} · ${meta.title_de}`)));
 }
 
@@ -120,7 +122,7 @@ export function render(params, app) {
       h('div', { class: 'v-path-wrap' }, path));
   });
   const el = page({
-    title: 'Kurs',
+    title: uiT('tab_course'),
     subtitle: `A1 bis ${pace.targetDate ? formatDateDE(pace.targetDate + 'T12:00:00') : '–'} · ${pace.lessonsDone} von ${pace.lessonsTotal} Lektionen · ${pace.status === 'on_track' ? 'im Plan' : pace.label}`,
     cls: 'v-course',
     children: sections,

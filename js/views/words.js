@@ -7,12 +7,13 @@ import { isHard, isMarked, toggleMarked, unlockedVocab } from '../engine/trainer
 import { STRENGTH_LABEL } from '../engine/srs.js';
 import { stripStress } from '../lib/uk-text.js';
 import { haptic } from '../ui/haptics.js';
+import { uiLabel, holdLabel, uiT } from '../ui/ui-label.js';
 
 const FILTERS = [
-  { value: 'all', label: 'Alle' },
-  { value: 'learned', label: 'Gelernt' },
-  { value: 'hard', label: 'Schwierig' },
-  { value: 'new', label: 'Neu' },
+  { value: 'all', label: uiT('all') },
+  { value: 'learned', label: uiT('learned') },
+  { value: 'hard', label: uiT('hard') },
+  { value: 'new', label: uiT('new') },
 ];
 const fold = s => stripStress(String(s || '')).toLowerCase().replace(/[ʼ'`´‘’]/g, '’');
 
@@ -87,9 +88,9 @@ export function render(params, app) {
       on: { click: () => openDetail(w), keydown: e => { if (e.key === 'Enter') openDetail(w); } } },
     h('span', { class: 'tr-word-emoji', 'aria-hidden': 'true' }, v.emoji || ''),
     h('span', { class: 'row-main' },
-      h('span', { class: 'row-title' }, ukText(v.uk, { tap: false })),
+      h('span', { class: 'row-title' }, ukText(v.uk, { hold: true })),
       h('span', { class: 'row-subtitle' }, v.de)),
-    w.hard ? h('span', { class: 'badge yellow tr-hard-badge' }, w.marked ? '★ schwierig' : 'schwierig') : null,
+    w.hard ? h('span', { class: 'badge yellow tr-hard-badge', title: uiT('hard_badge').de }, w.marked ? '★ ' : null, ukText(uiT('hard_badge').uk, { hold: true })) : null,
     strengthBars(w.level),
     speakerButton(v.uk, { size: 's' }));
     return row;
@@ -98,8 +99,8 @@ export function render(params, app) {
   function openDetail(w) {
     const v = w.vocab;
     const markBtn = h('button', { type: 'button', class: ['btn', 'btn-block', isMarked(app, v.id) ? 'btn-yellow' : 'btn-secondary'],
-      on: { click: () => { const on = toggleMarked(app, v.id); haptic('light'); markBtn.className = ['btn', 'btn-block', on ? 'btn-yellow' : 'btn-secondary'].join(' '); markBtn.lastChild.textContent = on ? 'Als schwierig markiert' : 'Als schwierig markieren'; draw(); } } },
-    icon('target'), h('span', isMarked(app, v.id) ? 'Als schwierig markiert' : 'Als schwierig markieren'));
+      on: { click: () => { const on = toggleMarked(app, v.id); haptic('light'); markBtn.className = ['btn', 'btn-block', on ? 'btn-yellow' : 'btn-secondary'].join(' '); markBtn.lastChild.replaceWith(holdLabel(on ? 'marked_hard' : 'mark_hard')); draw(); } } },
+    icon('target'), holdLabel(isMarked(app, v.id) ? 'marked_hard' : 'mark_hard'));
     const due = w.card?.due;
     const content = h('div', { class: 'tr-detail' },
       h('div', { class: 'tr-detail-head' },
@@ -108,20 +109,20 @@ export function render(params, app) {
         h('div', { class: 'tr-audio-row' }, speakerButton(v.uk, { size: 'l' }), speakerButton(v.uk, { size: 's', slow: true })),
         h('div', { class: 'tr-meaning' }, deText(v.de)),
         v.info ? h('div', { class: 'tr-info' }, v.info) : null),
-      v.forms?.length ? h('div', { class: 'tr-detail-block' }, h('div', { class: 'section-header' }, 'Formen'),
+      v.forms?.length ? h('div', { class: 'tr-detail-block' }, h('div', { class: 'section-header' }, uiLabel('forms', { layout: 'inline' })),
         h('div', { class: 'tr-forms' }, v.forms.map(f => h('div', { class: 'tr-form' }, ukText(f.uk, { tap: false }), h('span', { class: 'tr-form-info' }, f.info || ''))))) : null,
-      v.example ? h('div', { class: 'tr-detail-block' }, h('div', { class: 'section-header' }, 'Beispiel'),
+      v.example ? h('div', { class: 'tr-detail-block' }, h('div', { class: 'section-header' }, uiLabel('example', { layout: 'inline' })),
         h('div', { class: 'tr-example' }, h('div', { class: 'tr-example-uk' }, ukText(v.example.uk), speakerButton(v.example.uk, { size: 's' })), h('div', { class: 'tr-example-de' }, v.example.de))) : null,
       h('div', { class: 'tr-detail-block tr-detail-stats' },
-        h('div', h('span', { class: 'tr-detail-k' }, 'Stärke'), strengthBars(w.level), h('span', { class: 'tr-detail-v' }, STRENGTH_LABEL[w.level])),
-        due ? h('div', h('span', { class: 'tr-detail-k' }, 'Nächste Wiederholung'), h('span', { class: 'tr-detail-v' }, new Date(w.due).toLocaleDateString('de-DE', { day: 'numeric', month: 'short' }))) : null,
-        w.lesson ? h('div', h('span', { class: 'tr-detail-k' }, 'Lektion'), h('span', { class: 'tr-detail-v' }, w.lesson.title_de)) : null),
+        h('div', h('span', { class: 'tr-detail-k' }, uiLabel('strength', { layout: 'inline' })), strengthBars(w.level), h('span', { class: 'tr-detail-v' }, STRENGTH_LABEL[w.level])),
+        due ? h('div', h('span', { class: 'tr-detail-k' }, uiLabel('next_review', { layout: 'inline' })), h('span', { class: 'tr-detail-v' }, new Date(w.due).toLocaleDateString('de-DE', { day: 'numeric', month: 'short' }))) : null,
+        w.lesson ? h('div', h('span', { class: 'tr-detail-k' }, uiLabel('lesson', { layout: 'inline' })), h('span', { class: 'tr-detail-v' }, w.lesson.title_de)) : null),
       markBtn);
-    sheet({ title: 'Wort', content });
+    sheet({ title: uiT('word'), content });
   }
 
   draw();
-  const el = page({ title: 'Wortliste', back: { label: 'Trainer', href: '#/trainer' }, cls: 'tr-page',
+  const el = page({ title: uiT('word_list'), back: { label: uiT('tab_vocab'), href: '#/trainer' }, cls: 'tr-page',
     children: [h('div', { class: 'tr-words-tools' }, searchBox, seg, countEl), listEl] });
   return { el, onShow() { draw(); } };
 }
