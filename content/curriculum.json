@@ -20,17 +20,23 @@
      "goals_de": [
       "Ich kann Menschen formell und informell begrüßen und mich verabschieden.",
       "Ich kann fragen, wie es jemandem geht, und kurz antworten.",
-      "Ich kann mich bedanken, um etwas bitten und mich entschuldigen."
+      "Ich kann mich bedanken, auf Dank reagieren, um etwas bitten und mich entschuldigen.",
+      "Ich kann jemanden höflich ansprechen und sagen, dass ich nicht verstehe."
      ],
      "concepts": [
+      {
+       "id": "grussformeln",
+       "title_de": "Grüßen nach Tageszeit",
+       "category": "redemittel"
+      },
       {
        "id": "ty-vy",
        "title_de": "Duzen und Siezen: ти und ви",
        "category": "pronomen"
       },
       {
-       "id": "grussformeln",
-       "title_de": "Grüßen nach Tageszeit",
+       "id": "yak-spravy",
+       "title_de": "Wie geht’s? – fragen und antworten",
        "category": "redemittel"
       },
       {
@@ -39,13 +45,18 @@
        "category": "redemittel"
       },
       {
-       "id": "yak-spravy",
-       "title_de": "Wie geht’s? – fragen und antworten",
+       "id": "hoeflichkeit",
+       "title_de": "Danke, bitte, keine Ursache, ja, nein",
        "category": "redemittel"
       },
       {
-       "id": "hoeflichkeit",
-       "title_de": "Danke, bitte, Entschuldigung, ja, nein",
+       "id": "entschuldigen-ansprechen",
+       "title_de": "Sich entschuldigen und jemanden ansprechen",
+       "category": "redemittel"
+      },
+      {
+       "id": "nicht-verstehen",
+       "title_de": "Wenn man nicht versteht: nachfragen",
        "category": "redemittel"
       },
       {
