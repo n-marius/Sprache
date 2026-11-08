@@ -737,12 +737,32 @@ Wird aus derselben Quelle wie die Tabellen erzeugt; nicht von Hand ändern.
    "theme": "greetings",
    "concepts": [
     {
+     "id": "grussformeln",
+     "title_de": "Grüßen nach Tageszeit"
+    },
+    {
      "id": "ty-vy",
      "title_de": "Duzen und Siezen: ти und ви"
     },
     {
-     "id": "grussformeln",
-     "title_de": "Grußformeln nach Tageszeit und Register"
+     "id": "yak-spravy",
+     "title_de": "Wie geht’s? – fragen und antworten"
+    },
+    {
+     "id": "abschied",
+     "title_de": "Sich verabschieden"
+    },
+    {
+     "id": "hoeflichkeit",
+     "title_de": "Danke, bitte, keine Ursache, ja, nein"
+    },
+    {
+     "id": "entschuldigen-ansprechen",
+     "title_de": "Sich entschuldigen und jemanden ansprechen"
+    },
+    {
+     "id": "nicht-verstehen",
+     "title_de": "Wenn man nicht versteht: nachfragen"
     },
     {
      "id": "betonung-lesen",
@@ -752,141 +772,123 @@ Wird aus derselben Quelle wie die Tabellen erzeugt; nicht von Hand ändern.
    "vocab": [
     {
      "id": "pryvit",
-     "uk": "приві́т",
-     "de": "hallo (informell)",
-     "pos": "interj"
+     "uk": "приві́т"
     },
     {
      "id": "dobryi_den",
-     "uk": "до́брий день",
-     "de": "guten Tag",
-     "pos": "phrase"
+     "uk": "до́брий день"
     },
     {
      "id": "dobryi_ranok",
-     "uk": "до́брий ра́нок",
-     "de": "guten Morgen",
-     "pos": "phrase"
+     "uk": "до́брий ра́нок"
     },
     {
      "id": "dobryi_vechir",
-     "uk": "до́брий ве́чір",
-     "de": "guten Abend",
-     "pos": "phrase"
+     "uk": "до́брий ве́чір"
     },
     {
      "id": "na_dobranich",
-     "uk": "на добра́ніч",
-     "de": "gute Nacht",
-     "pos": "phrase"
+     "uk": "на добра́ніч"
     },
     {
      "id": "do_pobachennia",
-     "uk": "до поба́чення",
-     "de": "auf Wiedersehen",
-     "pos": "phrase"
+     "uk": "до поба́чення"
     },
     {
      "id": "buvai",
-     "uk": "бува́й",
-     "de": "tschüss (zu einer Person, informell)",
-     "pos": "interj"
+     "uk": "бува́й"
     },
     {
      "id": "yak",
-     "uk": "як",
-     "de": "wie (Fragewort)",
-     "pos": "adv"
+     "uk": "як"
     },
     {
      "id": "yak_spravy",
-     "uk": "Як спра́ви?",
-     "de": "Wie geht’s?",
-     "pos": "phrase"
+     "uk": "Як спра́ви?"
     },
     {
      "id": "dobre",
-     "uk": "до́бре",
-     "de": "gut",
-     "pos": "adv"
+     "uk": "до́бре"
     },
     {
      "id": "normalno",
-     "uk": "норма́льно",
-     "de": "ganz gut, okay",
-     "pos": "adv"
+     "uk": "норма́льно"
     },
     {
      "id": "pohano",
-     "uk": "пога́но",
-     "de": "schlecht",
-     "pos": "adv"
+     "uk": "пога́но"
     },
     {
      "id": "duzhe",
-     "uk": "ду́же",
-     "de": "sehr",
-     "pos": "adv"
+     "uk": "ду́же"
     },
     {
      "id": "diakuiu",
-     "uk": "дя́кую",
-     "de": "danke",
-     "pos": "phrase"
+     "uk": "дя́кую"
     },
     {
      "id": "bud_laska",
-     "uk": "будь ла́ска",
-     "de": "bitte",
-     "pos": "phrase"
+     "uk": "будь ла́ска"
     },
     {
      "id": "vybachte",
-     "uk": "ви́бачте",
-     "de": "Entschuldigung (Sie/ihr)",
-     "pos": "phrase"
+     "uk": "ви́бачте"
     },
     {
      "id": "tak",
-     "uk": "так",
-     "de": "ja",
-     "pos": "part"
+     "uk": "так"
     },
     {
      "id": "ni",
-     "uk": "ні",
-     "de": "nein",
-     "pos": "part"
+     "uk": "ні"
     },
     {
      "id": "ya",
-     "uk": "я",
-     "de": "ich",
-     "pos": "pron"
+     "uk": "я"
     },
     {
      "id": "ty",
-     "uk": "ти",
-     "de": "du",
-     "pos": "pron"
+     "uk": "ти"
     },
     {
      "id": "vy",
-     "uk": "ви",
-     "de": "Sie; ihr",
-     "pos": "pron"
+     "uk": "ви"
     },
     {
      "id": "tezh",
-     "uk": "теж",
-     "de": "auch",
-     "pos": "adv"
+     "uk": "теж"
     },
     {
      "id": "a_ty",
-     "uk": "А ти?",
-     "de": "Und du?",
-     "pos": "phrase"
+     "uk": "А ти?"
+    },
+    {
+     "id": "nema_za_shcho",
+     "uk": "нема́ за що"
+    },
+    {
+     "id": "pereproshuiu",
+     "uk": "перепро́шую"
+    },
+    {
+     "id": "ne_rozumiiu",
+     "uk": "я не розумі́ю"
+    },
+    {
+     "id": "shche_raz",
+     "uk": "ще раз"
+    },
+    {
+     "id": "povilnishe",
+     "uk": "пові́льніше"
+    },
+    {
+     "id": "do_zustrichi",
+     "uk": "до зу́стрічі"
+    },
+    {
+     "id": "vse_dobre",
+     "uk": "все до́бре"
     }
    ]
   },

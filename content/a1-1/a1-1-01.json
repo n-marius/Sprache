@@ -59,7 +59,7 @@
    {
     "heading_de": "Grüßen nach Tageszeit",
     "concept": "grussformeln",
-    "body_de": "**Приві́т!** (Hallo!) sagt man zu Leuten, die man duzt. Höflich grüßt man nach der Tageszeit – das passt immer und zu allen: im Laden, im Büro, im Hausflur. **до́брий** heißt „gut“.",
+    "body_de": "**Приві́т!** (Hallo!) sagt man zu Leuten, die man duzt. Höflich grüßt man nach der Tageszeit – das passt immer und zu allen. **до́брий** heißt „gut“.",
     "table": {
      "head": [
       "Gruß",
@@ -107,7 +107,7 @@
    {
     "heading_de": "ти oder ви: du oder Sie?",
     "concept": "ty-vy",
-    "body_de": "**ти** (du) gilt für Freunde, Familie und Kollegen, mit denen man sich duzt. **ви** (Sie) gilt für Unbekannte, Ältere, Nachbarn, Kunden und Vorgesetzte – und heißt zugleich „ihr“ (mehrere Personen). Im Zweifel ist **ви** richtig. Die Anrede steckt in vielen Wendungen, z. B. in der Frage nach dem Befinden: **Як ти?** / **Як ви?** (**як** = wie). **я** = ich.",
+    "body_de": "**ти** (du) gilt für Freunde, Familie und Kollegen, mit denen man sich duzt. **ви** (Sie) gilt für Unbekannte, Ältere, Nachbarn, Kunden und Vorgesetzte – und heißt zugleich „ihr“ (mehrere Personen). Im Zweifel ist **ви** richtig. Sie steckt auch in **Як ти?** / **Як ви?** (**як** = wie). **я** = ich.",
     "table": {
      "head": [
       "",
@@ -126,7 +126,7 @@
        "Як ви?"
       ],
       [
-       "Und du? / Und Sie?",
+       "Und dir? / Und Ihnen?",
        "А ти?",
        "А ви?"
       ]
@@ -142,15 +142,15 @@
       "de": "Guten Tag! Wie geht es Ihnen?"
      },
      {
-      "uk": "До́брий ве́чір! А ви?",
-      "de": "Guten Abend! Und Sie?"
+      "uk": "До́брий ве́чір! Як ви?",
+      "de": "Guten Abend! Wie geht es Ihnen?"
      }
     ]
    },
    {
     "heading_de": "Wie geht’s? – fragen und antworten",
     "concept": "yak-spravy",
-    "body_de": "**Як спра́ви?** (wörtl. „Wie stehen die Dinge?“) ist die übliche Frage, eher locker, aber auch unter Gesiezten normal. Nach der Antwort fragt man zurück: **А ти?** / **А ви?** **ду́же** (sehr) und **теж** (auch) stehen vor dem Wort: **ду́же до́бре**, **теж до́бре** – aber **Я теж.** (Ich auch.)",
+    "body_de": "**Як спра́ви?** (wörtl. „Wie stehen die Dinge?“) ist die übliche Frage, eher locker, aber auch unter Gesiezten normal. Nach der Antwort (oft mit **дя́кую** = danke) fragt man zurück: **А ти?** / **А ви?** **ду́же** (sehr) und **теж** (auch) stehen vor dem Wort: **ду́же до́бре**, **теж до́бре** – aber **Я теж.** (Ich auch.)",
     "table": {
      "head": [
       "Antwort",
@@ -177,8 +177,8 @@
     },
     "examples": [
      {
-      "uk": "Як спра́ви? – Все до́бре, дя́кую.",
-      "de": "Wie geht’s? – Alles gut, danke."
+      "uk": "Як ти? – Все до́бре, дя́кую.",
+      "de": "Wie geht’s dir? – Alles gut, danke."
      },
      {
       "uk": "Як ви? – Ду́же до́бре. А ви?",
@@ -193,7 +193,7 @@
    {
     "heading_de": "Sich verabschieden",
     "concept": "abschied",
-    "body_de": "**До поба́чення!** (Auf Wiedersehen!) passt immer. **До зу́стрічі!** (Bis bald! – wörtl. „bis zum Treffen“) sagt man, wenn man sich wiedersieht, zu du und Sie. **Бува́й!** ist das lockere „Tschüss“ zu einer Person, die man duzt; zu mehreren: **Бува́йте!** **На добра́ніч!** (Gute Nacht!) nur spät abends zum Abschied, nie als Gruß. Oft beginnt der Abschied mit **Ну, …** (Na dann, …).",
+    "body_de": "**До поба́чення!** (Auf Wiedersehen!) passt immer. **До зу́стрічі!** (Bis bald! – wörtl. „bis zum Treffen“) sagt man, wenn man sich wiedersieht, zu du und Sie. **Бува́й!** ist das lockere „Tschüss“ zu einer Person, die man duzt; zu mehreren: **Бува́йте!** **На добра́ніч!** (Gute Nacht!) nur zum Abschied spät abends oder vor dem Schlafen, nie als Gruß. Oft beginnt der Abschied mit **Ну, …** (Na dann, …).",
     "examples": [
      {
       "uk": "Ну, до поба́чення!",
@@ -235,15 +235,15 @@
    {
     "heading_de": "Entschuldigung! – sich entschuldigen und jemanden ansprechen",
     "concept": "entschuldigen-ansprechen",
-    "body_de": "**Ви́бачте!** (zu ви) bzw. **Ви́бач!** (zu ти) sagt man, wenn man jemanden anrempelt oder etwas falsch macht, und zum Ansprechen. **Перепро́шую** (wörtl. „ich bitte um Verzeihung“) hat nur eine Form – für du und Sie. Man hört es ständig: zum Ansprechen, zum Vorbeigehen in der vollen Straßenbahn und als Nachfrage **Перепро́шую?** (Wie bitte?). Antwort auf eine Entschuldigung: **Нічо́го.** (Macht nichts.) oder **Все до́бре.**",
+    "body_de": "**Ви́бачте!** (zu ви) bzw. **Ви́бач!** (zu ти) sagt man, wenn man jemanden anrempelt oder etwas falsch macht (oft mit **Ой!** = Oh!), und zum Ansprechen. **Перепро́шую** (wörtl. „ich bitte um Verzeihung“) hat nur eine Form – für du und Sie. Man hört es ständig: zum Ansprechen (**Перепро́шую, тут ві́льно?** – Ist hier frei?), zum Vorbeigehen in der vollen Straßenbahn und als Nachfrage **Перепро́шую?** (Wie bitte?). Antwort auf eine Entschuldigung: **Нічо́го.** (Macht nichts.) oder **Все до́бре.** In den Übungen steht „Entschuldigen Sie“ für **Ви́бачте**, „Verzeihung“ für **Перепро́шую**.",
     "examples": [
      {
       "uk": "Ой, ви́бачте! – Нічо́го, все до́бре.",
-      "de": "Oh, Entschuldigung! – Macht nichts, alles gut."
+      "de": "Oh, entschuldigen Sie! – Macht nichts, alles gut."
      },
      {
       "uk": "Перепро́шую, тут ві́льно? – Так.",
-      "de": "Entschuldigung, ist hier frei? – Ja."
+      "de": "Verzeihung, ist hier frei? – Ja."
      },
      {
       "uk": "Ви́бач! – Нічо́го.",
@@ -254,11 +254,11 @@
    {
     "heading_de": "Wenn man nicht versteht",
     "concept": "nicht-verstehen",
-    "body_de": "Am Anfang versteht man vieles nicht – dafür gibt es feste Sätze: **Я не розумі́ю.** (Ich verstehe nicht; **не** = nicht), **Ще раз, будь ла́ска.** (Noch einmal, bitte.), **Пові́льніше, будь ла́ска.** (Langsamer, bitte.). Davor passt **Перепро́шую** oder **Ви́бачте**. Diese Sätze werden als Ganzes gelernt; Verneinung und Verbformen folgen in den nächsten Lektionen.",
+    "body_de": "Dafür gibt es feste Sätze: **Я не розумі́ю.** (Ich verstehe nicht; **не** = nicht), **Ще раз, будь ла́ска.** (Noch einmal, bitte.), **Пові́льніше, будь ла́ска.** (Langsamer, bitte.). Davor passt **Перепро́шую** oder **Ви́бачте**. Diese Sätze werden als Ganzes gelernt; Verneinung und Verbformen folgen in den nächsten Lektionen.",
     "examples": [
      {
-      "uk": "Перепро́шую, я не розумі́ю.",
-      "de": "Entschuldigung, ich verstehe nicht."
+      "uk": "Перепро́шую? Я не розумі́ю.",
+      "de": "Wie bitte? Ich verstehe nicht."
      },
      {
       "uk": "Ще раз, будь ла́ска.",
@@ -266,14 +266,14 @@
      },
      {
       "uk": "Ви́бачте, пові́льніше, будь ла́ска.",
-      "de": "Entschuldigung, langsamer, bitte."
+      "de": "Entschuldigen Sie, langsamer, bitte."
      }
     ]
    },
    {
     "heading_de": "Das Betonungszeichen",
     "concept": "betonung-lesen",
-    "body_de": "Der Strich über einem Vokal (**до́бре**, **приві́т**) zeigt die betonte Silbe. Die Betonung ist frei und wird mit jedem Wort gelernt. Das Zeichen ist nur eine **Lesehilfe** im Lehrmaterial – in normalen Texten steht es nicht. Einsilbige Wörter (**так**, **ні**, **ще**, **раз**) tragen keins. Unbetontes **о** bleibt ein klares o: **пога́но**, **до поба́чення**.",
+    "body_de": "Der Strich über einem Vokal (**до́бре**, **приві́т**) zeigt die betonte Silbe. Das Zeichen ist nur eine **Lesehilfe** im Lehrmaterial – in normalen Texten steht es nicht. Einsilbige Wörter (**так**, **ні**, **ще**, **раз**) tragen keins. Unbetontes **о** bleibt ein klares o: **пога́но**, **до поба́чення**.",
     "examples": [
      {
       "uk": "Норма́льно, дя́кую.",
@@ -293,9 +293,9 @@
   "summary_de": [
    "**ти** für vertraute Personen; **ви** für Unbekannte, Ältere, Kunden – und für mehrere.",
    "**Приві́т!** ist informell; **До́брий ра́нок / день / ве́чір!** passen immer.",
+   "**Як спра́ви?** – **До́бре / Норма́льно / Пога́но, дя́кую. А ти? / А ви?**",
    "Abschied: **До поба́чення!**, **До зу́стрічі!**, locker **Бува́й!**; **На добра́ніч!** nur spät abends.",
-   "**Дя́кую!** – **Будь ла́ска!** / **Нема́ за що!**",
-   "**Ви́бачте!** (Sie) / **Ви́бач!** (du); **Перепро́шую** für beide – Antwort: **Нічо́го.**",
+   "**Дя́кую!** – **Нема́ за що!** · **Ви́бачте!** (Sie), **Ви́бач!** (du), **Перепро́шую** (beide) – **Нічо́го.**",
    "Nicht verstanden? **Я не розумі́ю. Ще раз / Пові́льніше, будь ла́ска.**"
   ]
  },
@@ -395,12 +395,12 @@
    {
     "who": "Ма́ркус",
     "uk": "Перепро́шую, я не розумі́ю. Ще раз, пові́льніше, будь ла́ска.",
-    "de": "Entschuldigung, ich verstehe nicht. Noch einmal, langsamer, bitte."
+    "de": "Verzeihung, ich verstehe nicht. Noch einmal, langsamer, bitte."
    },
    {
     "who": "Окса́на",
     "uk": "Ой, ви́бачте! Як ви? Все до́бре?",
-    "de": "Oh, Entschuldigung! Wie geht es Ihnen? Alles gut?"
+    "de": "Oh, entschuldigen Sie! Wie geht es Ihnen? Alles gut?"
    },
    {
     "who": "Ма́ркус",
@@ -448,7 +448,7 @@
   },
   {
    "title_de": "Danke – bitte – Entschuldigung",
-   "body_de": "**Дя́кую!** – Antwort: **Будь ла́ска!** oder **Нема́ за що!** **Будь ла́ска** heißt auch „bitte“ bei einer Bitte. **Ви́бачте!** / **Перепро́шую!** – Antwort: **Нічо́го, все до́бре.**",
+   "body_de": "**Дя́кую!** – Antwort: **Будь ла́ска!** oder **Нема́ за що!** **Будь ла́ска** heißt auch „bitte“ bei einer Bitte. Nach einem Missgeschick **Ви́бачте!** / **Перепро́шую!** – Antwort: **Нічо́го, все до́бре.**",
    "examples": [
     {
      "uk": "Ду́же дя́кую! – Нема́ за що!",
@@ -603,8 +603,8 @@
    "pos": "adv",
    "info": "Adverb; neutrale Antwort auf Як спра́ви?",
    "example": {
-    "uk": "Норма́льно, дя́кую. А ти?",
-    "de": "Ganz gut, danke. Und dir?"
+    "uk": "Як спра́ви? – Норма́льно, дя́кую.",
+    "de": "Wie geht’s? – Ganz gut, danke."
    }
   },
   {
@@ -710,8 +710,8 @@
    "pos": "pron",
    "info": "Personalpronomen, 2. Person Sg.; vertraut (Duzen)",
    "example": {
-    "uk": "Приві́т! А ти як?",
-    "de": "Hallo! Und wie geht’s dir?"
+    "uk": "Норма́льно, дя́кую. А ти як?",
+    "de": "Ganz gut, danke. Und wie geht’s dir?"
    }
   },
   {
@@ -806,7 +806,7 @@
   {
    "id": "do_zustrichi",
    "uk": "до зу́стрічі",
-   "de": "bis bald, bis dann",
+   "de": "bis bald, bis später",
    "pos": "phrase",
    "info": "feste Wendung (wörtl. „bis zum Treffen“); zu du und Sie",
    "example": {
@@ -1073,8 +1073,8 @@
    "info": "3. Sg. Präsens von пи́ти (trinken)"
   },
   {
-   "uk": "клі́єнт",
-   "lemma": "клі́єнт",
+   "uk": "кліє́нт",
+   "lemma": "кліє́нт",
    "de": "Kunde, Gast",
    "pos": "noun",
    "info": "m., Nom. Sg."
@@ -1143,7 +1143,7 @@
    "info": "3. Sg. Präsens von розумі́ти (verstehen)"
   },
   {
-   "uk": "смі́ється",
+   "uk": "сміє́ться",
    "lemma": "смія́тися",
    "de": "lacht",
    "pos": "verb",
@@ -1448,10 +1448,6 @@
     [
      "Бува́й!",
      "До поба́чення!"
-    ],
-    [
-     "Норма́льно, а ти?",
-     "До́бре, дя́кую. А ви?"
     ]
    ]
   },
@@ -1857,7 +1853,7 @@
     "diakuiu"
    ],
    "prompt_uk": "Коли́ це ка́жуть?",
-   "prompt_de": "Wann sagt man das: morgens, tagsüber, abends oder nachts?",
+   "prompt_de": "Wann sagt man das: morgens, tagsüber, abends – oder zum Abschied vor der Nacht?",
    "choices": [
     {
      "id": "r",
@@ -1953,7 +1949,7 @@
     },
     {
      "id": "n",
-     "de": "На добра́ніч ist der Abschied für die Nacht."
+     "de": "На добра́ніч = Abschied spät abends / vor dem Schlafen."
     }
    ]
   },
@@ -2154,7 +2150,7 @@
      "Теж"
     ]
    ],
-   "translation_de": "– Entschuldigung, ist hier frei? – Ja, frei. Bitte."
+   "translation_de": "– Verzeihung, ist hier frei? – Ja, ist frei. Bitte (setzen Sie sich)."
   },
   {
    "id": "e27",
@@ -2186,8 +2182,8 @@
    "difficulty": 1,
    "audio_uk": "Перепро́шую, я не розумі́ю.",
    "options": [
-    "Entschuldigung, ich verstehe nicht.",
-    "Entschuldigung, noch einmal, bitte.",
+    "Verzeihung, ich verstehe nicht.",
+    "Verzeihung, noch einmal, bitte.",
     "Danke, alles gut.",
     "Keine Ursache."
    ]
@@ -2524,6 +2520,9 @@
    "difficulty": 2,
    "prompt": "Entschuldigen Sie, ich verstehe nicht.",
    "answer": "Ви́бачте, я не розумі́ю.",
+   "accept": [
+    "Я не розумі́ю, ви́бачте."
+   ],
    "distractors": [
     "ти",
     "дя́кую"
@@ -2539,11 +2538,11 @@
     "povilnishe"
    ],
    "difficulty": 2,
-   "prompt": "Noch einmal, bitte. Langsamer.",
-   "answer": "Ще раз, будь ла́ска. Пові́льніше.",
+   "prompt": "Noch einmal, langsamer, bitte.",
+   "answer": "Ще раз, пові́льніше, будь ла́ска.",
    "accept": [
-    "Пові́льніше. Ще раз, будь ла́ска.",
-    "Ще раз, пові́льніше, будь ла́ска."
+    "Пові́льніше, ще раз, будь ла́ска.",
+    "Ще раз, будь ла́ска, пові́льніше."
    ],
    "distractors": [
     "теж",
@@ -2574,7 +2573,7 @@
     "pereproshuiu"
    ],
    "difficulty": 2,
-   "prompt": "Entschuldigung, ist hier frei? (im Café, zu einer unbekannten Person)",
+   "prompt": "Verzeihung, ist hier frei? (im Café, zu einer unbekannten Person)",
    "answer": "Перепро́шую, тут ві́льно?",
    "accept": [
     "Ви́бачте, тут ві́льно?"
@@ -2596,6 +2595,9 @@
    "difficulty": 2,
    "prompt": "Danke, alles gut. Bis bald!",
    "answer": "Дя́кую, все до́бре. До зу́стрічі!",
+   "accept": [
+    "Все до́бре, дя́кую. До зу́стрічі!"
+   ],
    "distractors": [
     "поба́чення",
     "ду́же"
@@ -2660,7 +2662,7 @@
    ],
    "difficulty": 1,
    "uk": "Перепро́шую, тут ві́льно?",
-   "de": "Entschuldigung, ist hier frei?"
+   "de": "Verzeihung, ist hier frei?"
   },
   {
    "id": "e105",
@@ -2674,7 +2676,7 @@
    ],
    "difficulty": 2,
    "uk": "Ви́бачте, я не розумі́ю. Пові́льніше, будь ла́ска.",
-   "de": "Entschuldigung, ich verstehe nicht. Langsamer, bitte. (Sie)"
+   "de": "Entschuldigen Sie, ich verstehe nicht. Langsamer, bitte."
   },
   {
    "id": "e106",
@@ -3064,8 +3066,8 @@
     "n3c": {
      "bot": [
       {
-       "uk": "Пога́но? Ой, як шкода́… Бережі́ть себе́! До поба́чення!",
-       "de": "Schlecht? Oh, wie schade … Passen Sie auf sich auf! Auf Wiedersehen!"
+       "uk": "Пога́но? Ой… Бережі́ть себе́! До поба́чення!",
+       "de": "Schlecht? Oh … Passen Sie auf sich auf! Auf Wiedersehen!"
       }
      ],
      "options": [
@@ -3196,7 +3198,7 @@
        "uk": "Пога́но.",
        "de": "Schlecht.",
        "tone": "ok",
-       "note_de": "Ehrlich, aber knapp – ohne а ти? fragt man nicht zurück.",
+       "note_de": "Ehrlich, aber knapp – ohne А ти? fehlt die Rückfrage.",
        "next": "n1p"
       }
      ]
@@ -3204,7 +3206,7 @@
     "n1f": {
      "bot": [
       {
-       "uk": "«Ви»? (смі́ється) Про́сто «ти»! Як спра́ви?",
+       "uk": "«Ви»? (сміє́ться) Про́сто «ти»! Як спра́ви?",
        "de": "„Sie“? (lacht) Einfach „du“! Wie geht’s?"
       }
      ],
@@ -3330,7 +3332,7 @@
     "n3b": {
      "bot": [
       {
-       "uk": "(смі́ється) Ні, ні: ти – «дя́кую», я – «нема́ за що»!",
+       "uk": "(сміє́ться) Ні, ні: ти – «дя́кую», я – «нема́ за що»!",
        "de": "(lacht) Nein, nein: du sagst „danke“, ich „keine Ursache“!"
       }
      ],
@@ -3417,7 +3419,7 @@
     "end_odd": {
      "bot": [
       {
-       "uk": "(смі́ється) Ну… бува́й!",
+       "uk": "(сміє́ться) Ну… бува́й!",
        "de": "(lacht) Na ja … tschüss!"
       }
      ],
@@ -3444,7 +3446,7 @@
     "vse_dobre",
     "pohano"
    ],
-   "scenario_de": "Erster Morgen im Büro. Oksana, die neue Kollegin, siezt und spricht sehr schnell. Ziel: nachfragen statt raten, höflich antworten, ihr Angebot annehmen oder ablehnen, sich bedanken.",
+   "scenario_de": "Erster Morgen im Büro. Die Kollegin Oksana siezt und spricht sehr schnell. Ziel: nachfragen statt raten, höflich antworten, ihr Angebot annehmen oder ablehnen, sich bedanken.",
    "partner": {
     "name": "Окса́на",
     "emoji": "👩"
@@ -3588,7 +3590,7 @@
      "bot": [
       {
        "uk": "Ось чай, будь ла́ска.",
-       "de": "Hier ist der Tee, bitte."
+       "de": "Bitte schön, Ihr Tee."
       }
      ],
      "options": [
@@ -3626,7 +3628,7 @@
        "uk": "Так, все до́бре, дя́кую.",
        "de": "Ja, alles gut, danke.",
        "tone": "good",
-       "next": "n4"
+       "next": "n5"
       },
       {
        "uk": "Ні, пога́но.",
@@ -3640,30 +3642,53 @@
     "n4p": {
      "bot": [
       {
-       "uk": "Пога́но? Ой… Ось чай, будь ла́ска.",
-       "de": "Schlecht? Oh … Hier ist ein Tee, bitte."
+       "uk": "Пога́но? Ой… Бережі́ть себе́!",
+       "de": "Schlecht? Oh … Passen Sie auf sich auf!"
       }
      ],
      "options": [
       {
-       "uk": "Ду́же дя́кую!",
-       "de": "Vielen Dank!",
+       "uk": "Дя́кую! До зу́стрічі!",
+       "de": "Danke! Bis später!",
        "tone": "good",
-       "next": "n4"
+       "next": "end_ok"
       },
       {
        "uk": "Нема́ за що.",
        "de": "Keine Ursache.",
        "tone": "bad",
        "note_de": "Нема́ за що ist die Antwort auf Dank – hier dankt man selbst: Дя́кую!",
-       "next": "n4b"
+       "next": "end_mixed"
+      }
+     ]
+    },
+    "n5": {
+     "bot": [
+      {
+       "uk": "До́бре! Ну, до зу́стрічі!",
+       "de": "Gut! Na dann, bis später!"
+      }
+     ],
+     "options": [
+      {
+       "uk": "До зу́стрічі!",
+       "de": "Bis später!",
+       "tone": "good",
+       "next": "end_ok"
+      },
+      {
+       "uk": "Бува́й!",
+       "de": "Tschüss!",
+       "tone": "bad",
+       "note_de": "Бува́й sagt man nur zu Leuten, die man duzt.",
+       "next": "end_mixed"
       }
      ]
     },
     "n4b": {
      "bot": [
       {
-       "uk": "(смі́ється) Ні, ні: ви – «дя́кую», я – «нема́ за що»!",
+       "uk": "(сміє́ться) Ні, ні: ви – «дя́кую», я – «нема́ за що»!",
        "de": "(lacht) Nein, nein: Sie sagen „danke“, ich „keine Ursache“!"
       }
      ],
@@ -3868,7 +3893,7 @@
      "bot": [
       {
        "uk": "До́бре. Ось, будь ла́ска.",
-       "de": "Gut. Hier, bitte."
+       "de": "Gut. Bitte schön."
       }
      ],
      "options": [
@@ -3966,7 +3991,7 @@
      "answer": false
     },
     {
-     "q_uk": "Тара́с не клі́єнт.",
+     "q_uk": "Тара́с не кліє́нт.",
      "q_de": "Taras ist kein Gast.",
      "kind": "tf",
      "answer": true
@@ -4039,8 +4064,8 @@
     "vy"
    ],
    "title_uk": "У трамва́ї",
-   "text_uk": "Ра́нок. Ма́ркус у трамва́ї. Трамва́й по́вний.\nЖі́нка: Перепро́шую, ви вихо́дите?\nМа́ркус: Ви́бачте, я не розумі́ю.\nЖі́нка: Ви вихо́дите? За́раз?\nВона́ пока́зує на две́рі.\nМа́ркус: А! Ні, ні.\nЖі́нка: Тоді́ перепро́шую!\nМа́ркус: Так, так, будь ла́ска.\nЖі́нка: Дя́кую!\nМа́ркус: Нема́ за що.",
-   "text_de": "Morgen. Markus ist in der Straßenbahn. Die Straßenbahn ist voll. – Eine Frau: Entschuldigung, steigen Sie aus? – Markus: Entschuldigung, ich verstehe nicht. – Frau: Steigen Sie aus? Jetzt? – Sie zeigt auf die Tür. – Markus: Ah! Nein, nein. – Frau: Dann – Entschuldigung (darf ich vorbei)! – Markus: Ja, ja, bitte. – Frau: Danke! – Markus: Keine Ursache.",
+   "text_uk": "Ра́нок. Ма́ркус у трамва́ї. Трамва́й по́вний.\nЖі́нка: Перепро́шую, ви вихо́дите?\nМа́ркус: Ви́бачте, я не розумі́ю.\nЖі́нка: Ви вихо́дите? За́раз?\nВона́ пока́зує на две́рі.\nМа́ркус: А! Ні, ні.\nЖі́нка: Перепро́шую, перепро́шую…\nМа́ркус: Будь ла́ска, будь ла́ска.\nЖі́нка: Дя́кую!\nМа́ркус: Нема́ за що.",
+   "text_de": "Morgen. Markus ist in der Straßenbahn. Die Straßenbahn ist voll. – Eine Frau: Entschuldigung, steigen Sie aus? – Markus: Entschuldigung, ich verstehe nicht. – Frau: Steigen Sie aus? Jetzt? – Sie zeigt auf die Tür. – Markus: Ah! Nein, nein. – Frau (drängt sich vorbei): Verzeihung, Verzeihung … – Markus: Bitte, bitte. – Frau: Danke! – Markus: Keine Ursache.",
    "questions": [
     {
      "q_uk": "Ма́ркус і жі́нка ка́жуть «ви».",
